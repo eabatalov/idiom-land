@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>foxy_quest</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2e9vaq5rsmqjv</unique-id>
+    <saved-with-version>16300</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>800</width>
+        <height>600</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">Off</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">CocoonJS native</prop>
+        <prop name="Preview browser">Internet Explorer</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder expanded="1">
+        <object-type name="Solid" sid="4953709274886707">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="3098875208953429">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2643380629033321" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Player" sid="8621335217109994">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="7152931101685983">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="2939332653825192">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2901499393671354" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.175" y="0.175" />
+                            <point x="0.5" y="0" />
+                            <point x="0.875" y="0.125" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.175" y="0.825" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="zoomInTrigger" sid="2782968637981095">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9811514813943194" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145161" y="0.0114796" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854839" y="0.0114796" />
+                            <point x="0.596774" y="0.5" />
+                            <point x="0.596774" y="0.968112" />
+                            <point x="0.5" y="0.992347" />
+                            <point x="0.403226" y="0.968112" />
+                            <point x="0.403226" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="zoomOutTrigger" sid="7773943983720072">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4502027959983943" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145161" y="0.0114796" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854839" y="0.0114796" />
+                            <point x="0.596774" y="0.5" />
+                            <point x="0.596774" y="0.968112" />
+                            <point x="0.5" y="0.992347" />
+                            <point x="0.403226" y="0.968112" />
+                            <point x="0.403226" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="camera" sid="9187985528866087">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="4832837699325293">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3983940894448423" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0519481" y="0.0689655" />
+                            <point x="0.493506" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.493506" y="1" />
+                            <point x="0.0519481" y="0.931035" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tilemap" sid="2074853727300221">
+            <plugin id="Tilemap" />
+            <texture />
+            <tiles />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder expanded="1">
+        <layout>main.xml</layout>
+    </layout-folder>
+    <event-folder expanded="1">
+        <event-sheet>main_sheet.xml</event-sheet>
+    </event-folder>
+    <global-instances />
+    <sounds-folder expanded="1" />
+    <music-folder expanded="1" />
+    <files-folder expanded="1">
+        <file-folder expanded="0" name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
