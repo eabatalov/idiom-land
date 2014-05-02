@@ -13,6 +13,12 @@
                 <action id="3" name="Setup quest script URL." sid="8826336374758966" type="QuestEngine">
                     <param id="0" name="Quest script file URL">&quot;story_script.js&quot;</param>
                 </action>
+                <action id="-1" name="Set X" sid="8962906453398515" type="Scooter">
+                    <param id="0" name="X">random(0, LayoutWidth)</param>
+                </action>
+                <action id="-1" name="Set X" sid="6571635526009744" type="CabMoveBack">
+                    <param id="0" name="X">random(0, LayoutWidth)</param>
+                </action>
             </actions>
         </event-block>
         <comment>Zoom camera&#x0D;&#x0A;Disable as we haven&apos;t made it work without bugs yet.</comment>
@@ -51,6 +57,61 @@
                     <param id="1" name="Y">lerp(Self.Y, Player.Y-160, 0.02)</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="4480163315802423">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1346505064553407" type="ExitBus">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Alert" sid="5641945424055659" type="Browser">
+                    <param id="0" name="Message">&quot;Congratulations! You&apos;re getting to the city center! See you here soon!&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6082278866778529">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="3960544492139121" type="System">
+                            <param id="0" name="Count">10000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="7184120286949726" type="System">
+                            <param id="0" name="Seconds">0.001*loopindex</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1727920849093833">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5972380517783936" type="System">
+                                    <param id="0" name="First value">LayoutScale</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set layout angle" sid="5638733102437184" type="System">
+                                    <param id="0" name="Angle">LayoutAngle + 1</param>
+                                </action>
+                                <action id="-20" name="Set layout scale" sid="9275004083728039" type="System">
+                                    <param id="0" name="Scale">LayoutScale-0.0005</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3129819401359976">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9033891658103967" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="5277979701498282" type="System">
+                                    <param id="0" name="Layout">&quot;foxy_ok&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

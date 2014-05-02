@@ -22,12 +22,14 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Eugene/learzing" id="TextAutoResize" version="1">TextAutoResize</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -38,6 +40,7 @@
         <height>1200</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
+    <first-layout>stage15</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -1547,13 +1550,163 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="KebabBack1" sid="8109267157040734">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6057063004169301" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.159259" y="0.111111" />
+                            <point x="0.5" y="0.0645995" />
+                            <point x="0.814815" y="0.129199" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.82037" y="0.874677" />
+                            <point x="0.5" y="0.992248" />
+                            <point x="0.177778" y="0.875969" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="KebabBack2" sid="4387271215827085">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7122027905847939" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.198148" y="0.138243" />
+                            <point x="0.5" y="0" />
+                            <point x="0.796296" y="0.142119" />
+                            <point x="0.95" y="0.5" />
+                            <point x="0.777778" y="0.844961" />
+                            <point x="0.5" y="0.996124" />
+                            <point x="0.159259" y="0.888889" />
+                            <point x="0.0166667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Scooter" sid="7594091444558742">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Wrap" sid="5050012613863746">
+                    <behavior id="wrap" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="8761332276909687">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7719715425112805" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.837079" y="0.5" />
+                            <point x="0.938202" y="0.932927" />
+                            <point x="0.5" y="0.914634" />
+                            <point x="0.0617977" y="0.932927" />
+                            <point x="0.286517" y="0.310976" />
+                            <point x="0.5" y="0.0365854" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CabMoveBack" sid="8519769150848418">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Wrap" sid="9340806182828217">
+                    <behavior id="wrap" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="9094105950407974">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9589268096103335" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.899498" y="0.5" />
+                            <point x="0.904523" y="0.784091" />
+                            <point x="0.0829146" y="0.8125" />
+                            <point x="0.0879397" y="0.5" />
+                            <point x="0.193467" y="0.4375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.839196" y="0.363636" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CabMoveFw" sid="7502475923674573">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="5297188528471124">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="8730199917791139">
+                    <behavior id="wrap" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="417237106068335" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.160804" y="0.363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.806533" y="0.4375" />
+                            <point x="0.91206" y="0.5" />
+                            <point x="0.917085" y="0.8125" />
+                            <point x="0.0954774" y="0.784091" />
+                            <point x="0.100503" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ExitBus" sid="8507818832723008">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8414774843866936" speed="5">
+                    <frame duration="1" hotspotX="0.500606" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0787879" y="0.106908" />
+                            <point x="0.499394" y="0.0131579" />
+                            <point x="0.921212" y="0.106908" />
+                            <point x="0.928485" y="0.902961" />
+                            <point x="0.070303" y="0.904605" />
+                            <point x="0.00363636" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Foxy" sid="4330101678906835">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4763184827659966" speed="5">
+                    <frame duration="1" hotspotX="0.502283" hotspotY="0.502024">
+                        <collision-poly>
+                            <point x="0.260274" y="0.230769" />
+                            <point x="0.497717" y="0.165992" />
+                            <point x="0.712329" y="0.255061" />
+                            <point x="0.986301" y="0.497976" />
+                            <point x="0.497717" y="0.935223" />
+                            <point x="0.232877" y="0.793522" />
+                            <point x="0.0228311" y="0.497976" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>stage15.xml</layout>
+        <layout>foxy_ok.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="Quest">
+        <event-folder expanded="0" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Initialization.xml</event-sheet>
             <event-sheet>PlayerInput.xml</event-sheet>
@@ -1565,6 +1718,7 @@
         </event-folder>
         <event-sheet>SCMLSpriteBindings.xml</event-sheet>
         <event-sheet>Main.xml</event-sheet>
+        <event-sheet>FoxyOk.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="10" />
