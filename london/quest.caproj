@@ -52,7 +52,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="Quest">
+        <object-folder expanded="0" name="Quest">
             <object-folder expanded="0" name="NPC">
                 <object-type name="NPC" sid="2782814196772796">
                     <plugin id="Sprite" />
@@ -77,34 +77,7 @@
                         <type>NPCAns4Txt</type>
                     </container>
                     <animation-folder expanded="1">
-                        <animation framecount="1" loop="0" name="NPCYellow" pingpong="0" repeatcount="1" repeatto="0" sid="869471652042187" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.360283" y="0.0828938" />
-                                    <point x="0.438272" y="0" />
-                                    <point x="0.546447" y="0.0974575" />
-                                    <point x="0.555556" y="0.719021" />
-                                    <point x="0.592593" y="0.949544" />
-                                    <point x="0.377296" y="0.939005" />
-                                    <point x="0.380156" y="0.584746" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="NPCRed" pingpong="0" repeatcount="1" repeatto="0" sid="9418400557438036" speed="5">
-                            <frame duration="1" hotspotX="0.505882" hotspotY="0.5">
-                                <image-point name="SpeechOrigin" x="-0.0117647" y="0.0357143" />
-                                <collision-poly>
-                                    <point x="0.141176" y="0.0357147" />
-                                    <point x="0.588235" y="0.00892855" />
-                                    <point x="0.952941" y="0.098214" />
-                                    <point x="1" y="0.446428" />
-                                    <point x="0.764706" y="0.991071" />
-                                    <point x="0.270588" y="1" />
-                                    <point x="0.0235294" y="0.348215" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="NPCBlue" pingpong="0" repeatcount="1" repeatto="0" sid="2670400311105635" speed="5">
+                        <animation framecount="1" loop="0" name="default" pingpong="0" repeatcount="1" repeatto="0" sid="2670400311105635" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="SpeechOrigin" x="0.221154" y="0.0517241" />
                                 <collision-poly>
@@ -114,40 +87,6 @@
                                     <point x="0.875" y="0.982758" />
                                     <point x="0.365384" y="1" />
                                     <point x="0.00961538" y="0.62069" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="3" loop="1" name="DemoAnimation" pingpong="0" repeatcount="1" repeatto="0" sid="3940545415722682" speed="5">
-                            <frame duration="3" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.378049" y="0" />
-                                    <point x="0.487805" y="0" />
-                                    <point x="0.560976" y="0.512605" />
-                                    <point x="0.591463" y="0.936975" />
-                                    <point x="0.378048" y="0.945379" />
-                                    <point x="0.335366" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="3" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.317073" y="0.218487" />
-                                    <point x="0.5" y="0.0714286" />
-                                    <point x="0.737805" y="0.5" />
-                                    <point x="0.5" y="0.655462" />
-                                    <point x="0.5" y="0.953781" />
-                                    <point x="0.439024" y="0.697479" />
-                                    <point x="0.207317" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="3" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.317073" y="0.218487" />
-                                    <point x="0.5" y="0.0714286" />
-                                    <point x="0.737805" y="0.5" />
-                                    <point x="0.5" y="0.655462" />
-                                    <point x="0.5" y="0.953781" />
-                                    <point x="0.439024" y="0.697479" />
-                                    <point x="0.207317" y="0.5" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -601,21 +540,21 @@
                             </behavior-type>
                         </behaviors>
                         <container>
-                            <type>PlayerPinPoint</type>
-                            <type>Player</type>
-                            <type>PlayerAns1Bg</type>
-                            <type>PlayerAns1Txt</type>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
-                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns3Txt</type>
+                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns4Bg</type>
                             <type>PlayerAns4Txt</type>
                             <type>PlayerAnsBg</type>
                             <type>PlayerPhraseBg</type>
                             <type>PlayerPhraseTxt</type>
                             <type>PlayerSpeechBg</type>
+                            <type>Player</type>
+                            <type>PlayerPinPoint</type>
                             <type>PlayerSCML</type>
+                            <type>PlayerAns1Bg</type>
+                            <type>PlayerAns1Txt</type>
                         </container>
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3213293281862042" speed="5">
@@ -640,21 +579,21 @@
                             </behavior-type>
                         </behaviors>
                         <container>
-                            <type>PlayerPinPoint</type>
-                            <type>Player</type>
-                            <type>PlayerAns1Bg</type>
-                            <type>PlayerAns1Txt</type>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
-                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns3Txt</type>
+                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns4Bg</type>
                             <type>PlayerAns4Txt</type>
                             <type>PlayerAnsBg</type>
                             <type>PlayerPhraseBg</type>
                             <type>PlayerPhraseTxt</type>
                             <type>PlayerSpeechBg</type>
+                            <type>Player</type>
+                            <type>PlayerPinPoint</type>
                             <type>PlayerSCML</type>
+                            <type>PlayerAns1Bg</type>
+                            <type>PlayerAns1Txt</type>
                         </container>
                     </object-type>
                     <object-type name="PlayerAns2Bg" sid="981179967951609">
@@ -665,21 +604,21 @@
                             </behavior-type>
                         </behaviors>
                         <container>
-                            <type>PlayerPinPoint</type>
-                            <type>Player</type>
-                            <type>PlayerAns1Bg</type>
-                            <type>PlayerAns1Txt</type>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
-                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns3Txt</type>
+                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns4Bg</type>
                             <type>PlayerAns4Txt</type>
                             <type>PlayerAnsBg</type>
                             <type>PlayerPhraseBg</type>
                             <type>PlayerPhraseTxt</type>
                             <type>PlayerSpeechBg</type>
+                            <type>Player</type>
+                            <type>PlayerPinPoint</type>
                             <type>PlayerSCML</type>
+                            <type>PlayerAns1Bg</type>
+                            <type>PlayerAns1Txt</type>
                         </container>
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4402831604063313" speed="5">
@@ -704,21 +643,21 @@
                             </behavior-type>
                         </behaviors>
                         <container>
-                            <type>PlayerPinPoint</type>
-                            <type>Player</type>
-                            <type>PlayerAns1Bg</type>
-                            <type>PlayerAns1Txt</type>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
-                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns3Txt</type>
+                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns4Bg</type>
                             <type>PlayerAns4Txt</type>
                             <type>PlayerAnsBg</type>
                             <type>PlayerPhraseBg</type>
                             <type>PlayerPhraseTxt</type>
                             <type>PlayerSpeechBg</type>
+                            <type>Player</type>
+                            <type>PlayerPinPoint</type>
                             <type>PlayerSCML</type>
+                            <type>PlayerAns1Bg</type>
+                            <type>PlayerAns1Txt</type>
                         </container>
                     </object-type>
                     <object-type name="PlayerAns3Txt" sid="7128241683588556">
@@ -729,21 +668,21 @@
                             </behavior-type>
                         </behaviors>
                         <container>
-                            <type>PlayerPinPoint</type>
-                            <type>Player</type>
-                            <type>PlayerAns1Bg</type>
-                            <type>PlayerAns1Txt</type>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
-                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns3Txt</type>
+                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns4Bg</type>
                             <type>PlayerAns4Txt</type>
                             <type>PlayerAnsBg</type>
                             <type>PlayerPhraseBg</type>
                             <type>PlayerPhraseTxt</type>
                             <type>PlayerSpeechBg</type>
+                            <type>Player</type>
+                            <type>PlayerPinPoint</type>
                             <type>PlayerSCML</type>
+                            <type>PlayerAns1Bg</type>
+                            <type>PlayerAns1Txt</type>
                         </container>
                     </object-type>
                     <object-type name="PlayerAns3Bg" sid="108568565687126">
@@ -754,21 +693,21 @@
                             </behavior-type>
                         </behaviors>
                         <container>
-                            <type>PlayerPinPoint</type>
-                            <type>Player</type>
-                            <type>PlayerAns1Bg</type>
-                            <type>PlayerAns1Txt</type>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
-                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns3Txt</type>
+                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns4Bg</type>
                             <type>PlayerAns4Txt</type>
                             <type>PlayerAnsBg</type>
                             <type>PlayerPhraseBg</type>
                             <type>PlayerPhraseTxt</type>
                             <type>PlayerSpeechBg</type>
+                            <type>Player</type>
+                            <type>PlayerPinPoint</type>
                             <type>PlayerSCML</type>
+                            <type>PlayerAns1Bg</type>
+                            <type>PlayerAns1Txt</type>
                         </container>
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4914723057507207" speed="5">
@@ -793,21 +732,21 @@
                             </behavior-type>
                         </behaviors>
                         <container>
-                            <type>PlayerPinPoint</type>
-                            <type>Player</type>
-                            <type>PlayerAns1Bg</type>
-                            <type>PlayerAns1Txt</type>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
-                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns3Txt</type>
+                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns4Bg</type>
                             <type>PlayerAns4Txt</type>
                             <type>PlayerAnsBg</type>
                             <type>PlayerPhraseBg</type>
                             <type>PlayerPhraseTxt</type>
                             <type>PlayerSpeechBg</type>
+                            <type>Player</type>
+                            <type>PlayerPinPoint</type>
                             <type>PlayerSCML</type>
+                            <type>PlayerAns1Bg</type>
+                            <type>PlayerAns1Txt</type>
                         </container>
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9899613098915002" speed="5">
@@ -832,21 +771,21 @@
                             </behavior-type>
                         </behaviors>
                         <container>
-                            <type>PlayerPinPoint</type>
-                            <type>Player</type>
-                            <type>PlayerAns1Bg</type>
-                            <type>PlayerAns1Txt</type>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
-                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns3Txt</type>
+                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns4Bg</type>
                             <type>PlayerAns4Txt</type>
                             <type>PlayerAnsBg</type>
                             <type>PlayerPhraseBg</type>
                             <type>PlayerPhraseTxt</type>
                             <type>PlayerSpeechBg</type>
+                            <type>Player</type>
+                            <type>PlayerPinPoint</type>
                             <type>PlayerSCML</type>
+                            <type>PlayerAns1Bg</type>
+                            <type>PlayerAns1Txt</type>
                         </container>
                     </object-type>
                     <object-type name="PlayerAnsBg" sid="3577120867528994">
@@ -857,21 +796,21 @@
                             </behavior-type>
                         </behaviors>
                         <container>
-                            <type>PlayerPinPoint</type>
-                            <type>Player</type>
-                            <type>PlayerAns1Bg</type>
-                            <type>PlayerAns1Txt</type>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
-                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns3Txt</type>
+                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns4Bg</type>
                             <type>PlayerAns4Txt</type>
                             <type>PlayerAnsBg</type>
                             <type>PlayerPhraseBg</type>
                             <type>PlayerPhraseTxt</type>
                             <type>PlayerSpeechBg</type>
+                            <type>Player</type>
+                            <type>PlayerPinPoint</type>
                             <type>PlayerSCML</type>
+                            <type>PlayerAns1Bg</type>
+                            <type>PlayerAns1Txt</type>
                         </container>
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7926407920898488" speed="5">
@@ -896,21 +835,21 @@
                             </behavior-type>
                         </behaviors>
                         <container>
-                            <type>PlayerPinPoint</type>
-                            <type>Player</type>
-                            <type>PlayerAns1Bg</type>
-                            <type>PlayerAns1Txt</type>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
-                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns3Txt</type>
+                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns4Bg</type>
                             <type>PlayerAns4Txt</type>
                             <type>PlayerAnsBg</type>
                             <type>PlayerPhraseBg</type>
                             <type>PlayerPhraseTxt</type>
                             <type>PlayerSpeechBg</type>
+                            <type>Player</type>
+                            <type>PlayerPinPoint</type>
                             <type>PlayerSCML</type>
+                            <type>PlayerAns1Bg</type>
+                            <type>PlayerAns1Txt</type>
                         </container>
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4240597158861611" speed="5">
@@ -929,21 +868,21 @@
                             </behavior-type>
                         </behaviors>
                         <container>
-                            <type>PlayerPinPoint</type>
-                            <type>Player</type>
-                            <type>PlayerAns1Bg</type>
-                            <type>PlayerAns1Txt</type>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
-                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns3Txt</type>
+                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns4Bg</type>
                             <type>PlayerAns4Txt</type>
                             <type>PlayerAnsBg</type>
                             <type>PlayerPhraseBg</type>
                             <type>PlayerPhraseTxt</type>
                             <type>PlayerSpeechBg</type>
+                            <type>Player</type>
+                            <type>PlayerPinPoint</type>
                             <type>PlayerSCML</type>
+                            <type>PlayerAns1Bg</type>
+                            <type>PlayerAns1Txt</type>
                         </container>
                     </object-type>
                     <object-type name="PlayerSpeechBg" sid="7274300587374179">
@@ -954,21 +893,21 @@
                             </behavior-type>
                         </behaviors>
                         <container>
-                            <type>PlayerPinPoint</type>
-                            <type>Player</type>
-                            <type>PlayerAns1Bg</type>
-                            <type>PlayerAns1Txt</type>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
-                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns3Txt</type>
+                            <type>PlayerAns3Bg</type>
                             <type>PlayerAns4Bg</type>
                             <type>PlayerAns4Txt</type>
                             <type>PlayerAnsBg</type>
                             <type>PlayerPhraseBg</type>
                             <type>PlayerPhraseTxt</type>
                             <type>PlayerSpeechBg</type>
+                            <type>Player</type>
+                            <type>PlayerPinPoint</type>
                             <type>PlayerSCML</type>
+                            <type>PlayerAns1Bg</type>
+                            <type>PlayerAns1Txt</type>
                         </container>
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Speak" pingpong="0" repeatcount="1" repeatto="0" sid="3527017001319702" speed="5">
@@ -1020,21 +959,21 @@
                         </behavior-type>
                     </behaviors>
                     <container>
-                        <type>PlayerPinPoint</type>
-                        <type>Player</type>
-                        <type>PlayerAns1Bg</type>
-                        <type>PlayerAns1Txt</type>
                         <type>PlayerAns2Bg</type>
                         <type>PlayerAns2Txt</type>
-                        <type>PlayerAns3Bg</type>
                         <type>PlayerAns3Txt</type>
+                        <type>PlayerAns3Bg</type>
                         <type>PlayerAns4Bg</type>
                         <type>PlayerAns4Txt</type>
                         <type>PlayerAnsBg</type>
                         <type>PlayerPhraseBg</type>
                         <type>PlayerPhraseTxt</type>
                         <type>PlayerSpeechBg</type>
+                        <type>Player</type>
+                        <type>PlayerPinPoint</type>
                         <type>PlayerSCML</type>
+                        <type>PlayerAns1Bg</type>
+                        <type>PlayerAns1Txt</type>
                     </container>
                     <animation-folder expanded="1">
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8749109394941585" speed="5">
@@ -1053,21 +992,21 @@
                         </behavior-type>
                     </behaviors>
                     <container>
-                        <type>PlayerPinPoint</type>
-                        <type>Player</type>
-                        <type>PlayerAns1Bg</type>
-                        <type>PlayerAns1Txt</type>
                         <type>PlayerAns2Bg</type>
                         <type>PlayerAns2Txt</type>
-                        <type>PlayerAns3Bg</type>
                         <type>PlayerAns3Txt</type>
+                        <type>PlayerAns3Bg</type>
                         <type>PlayerAns4Bg</type>
                         <type>PlayerAns4Txt</type>
                         <type>PlayerAnsBg</type>
                         <type>PlayerPhraseBg</type>
                         <type>PlayerPhraseTxt</type>
                         <type>PlayerSpeechBg</type>
+                        <type>Player</type>
+                        <type>PlayerPinPoint</type>
                         <type>PlayerSCML</type>
+                        <type>PlayerAns1Bg</type>
+                        <type>PlayerAns1Txt</type>
                     </container>
                     <animation-folder expanded="1">
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5657753322977948" speed="5">
@@ -1078,21 +1017,21 @@
                 <object-type name="PlayerSCML" sid="1927627028127503">
                     <plugin id="Spriter" />
                     <container>
-                        <type>PlayerPinPoint</type>
-                        <type>Player</type>
-                        <type>PlayerAns1Bg</type>
-                        <type>PlayerAns1Txt</type>
                         <type>PlayerAns2Bg</type>
                         <type>PlayerAns2Txt</type>
-                        <type>PlayerAns3Bg</type>
                         <type>PlayerAns3Txt</type>
+                        <type>PlayerAns3Bg</type>
                         <type>PlayerAns4Bg</type>
                         <type>PlayerAns4Txt</type>
                         <type>PlayerAnsBg</type>
                         <type>PlayerPhraseBg</type>
                         <type>PlayerPhraseTxt</type>
                         <type>PlayerSpeechBg</type>
+                        <type>Player</type>
+                        <type>PlayerPinPoint</type>
                         <type>PlayerSCML</type>
+                        <type>PlayerAns1Bg</type>
+                        <type>PlayerAns1Txt</type>
                     </container>
                 </object-type>
             </object-folder>
@@ -1240,8 +1179,8 @@
     <layout-folder expanded="1">
         <layout>stage15.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
-        <event-folder expanded="0" name="Quest">
+    <event-folder expanded="1">
+        <event-folder expanded="1" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Initialization.xml</event-sheet>
             <event-sheet>PlayerInput.xml</event-sheet>
@@ -1267,8 +1206,8 @@
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="0">
-        <file-folder expanded="1" name="Icons">
+    <files-folder expanded="1">
+        <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />
@@ -1277,5 +1216,6 @@
             <file name="loading-logo.png" />
         </file-folder>
         <file-folder expanded="1" name="SpriterAnimations" />
+        <file name="story_script.js" />
     </files-folder>
 </c2project>

@@ -5,11 +5,13 @@
     <events>
         <variable constant="0" name="PLAYER_ANIM_SCALING_DEFAULT" sid="4744348570009192" static="0" type="number">0</variable>
         <variable comment="Leave it zero. != condition will force recomputation of this var." constant="0" name="PLAYER_ANIM_SCALING_CURRENT" sid="7409917232449734" static="0" type="number">0</variable>
-        <event-group collapsed="1" description="" sid="5020068825746262" title="Initialization">
+        <event-group description="" sid="5020068825746262" title="Initialization">
             <sub-events>
                 <event-block sid="9016563247743718">
                     <conditions>
-                        <condition id="666" name="On initialised" sid="2482119295865044" type="PlayerSCML" />
+                        <condition id="0" name="On function" sid="2482119295865044" type="Function">
+                            <param id="0" name="Name">&quot;initAnimation&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="7957489834149249" type="System">

@@ -4,11 +4,22 @@
     <name>SCMLSpriteBindings</name>
     <events>
         <comment>Define animation sprite bindings of your script here</comment>
-        <event-block sid="9016563247743718">
+        <comment>TODO compute all the scalings properly here</comment>
+        <event-block any="1" sid="9016563247743718">
             <conditions>
                 <condition id="666" name="On initialised" sid="2482119295865044" type="PlayerSCML" />
+                <condition id="-2" name="On start of layout" sid="9173978759396456" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-9" name="Set value" sid="4750262322611851" type="System">
+                    <param id="0" name="Variable">PLAYER_ANIM_SCALING_DEFAULT</param>
+                    <param id="1" name="Value">0.6</param>
+                </action>
+                <action id="0" name="Call function" sid="4820897915361507" type="Function">
+                    <param id="0" name="Name">&quot;initAnimation&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
