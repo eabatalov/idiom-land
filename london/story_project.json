@@ -1,0 +1,598 @@
+{
+	"script": {
+		"ver": 1,
+		"name": "story",
+		"stages": [
+			{
+				"ver": 1,
+				"stageNodeId": 8,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 8,
+						"type": 9,
+						"label": "Airport taxi",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							0
+						],
+						"props": {
+							"name": "airport_taxi",
+							"objs": [
+								"Player",
+								"driver1",
+								"driver2",
+								"driver3"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 9,
+						"type": 8,
+						"label": "Main storyline",
+						"continue": false,
+						"inCondIds": [
+							0
+						],
+						"outCondIds": [],
+						"props": {
+							"objs": [
+								"Player",
+								"driver1",
+								"driver2",
+								"driver3"
+							]
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 0,
+						"type": 1,
+						"props": {}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 10,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 10,
+						"type": 9,
+						"label": "Funny carousel",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							1
+						],
+						"props": {
+							"name": "carousel",
+							"objs": [
+								"Player",
+								"cap"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 11,
+						"type": 8,
+						"label": "Main storyline",
+						"continue": false,
+						"inCondIds": [
+							1
+						],
+						"outCondIds": [],
+						"props": {
+							"objs": [
+								"Player",
+								"cap"
+							]
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 1,
+						"type": 1,
+						"props": {}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 12,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 12,
+						"type": 9,
+						"label": "Pedestrian cross",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							2
+						],
+						"props": {
+							"name": "pedestrian_cross",
+							"objs": [
+								"Player",
+								"aman"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 13,
+						"type": 8,
+						"label": "Main storyline",
+						"continue": false,
+						"inCondIds": [
+							2
+						],
+						"outCondIds": [],
+						"props": {
+							"objs": [
+								"Player",
+								"aman"
+							]
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 2,
+						"type": 1,
+						"props": {}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 14,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 14,
+						"type": 9,
+						"label": "Street balloon",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							3
+						],
+						"props": {
+							"name": "street_bs",
+							"objs": [
+								"Player",
+								"seller"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 15,
+						"type": 8,
+						"label": "Main storyline",
+						"continue": false,
+						"inCondIds": [
+							3
+						],
+						"outCondIds": [],
+						"props": {
+							"objs": [
+								"Player",
+								"seller"
+							]
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 3,
+						"type": 1,
+						"props": {}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 16,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 16,
+						"type": 9,
+						"label": "Stree police",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							4
+						],
+						"props": {
+							"name": "street_police",
+							"objs": [
+								"Player",
+								"policeman"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 17,
+						"type": 8,
+						"label": "Main storyline",
+						"continue": false,
+						"inCondIds": [
+							4
+						],
+						"outCondIds": [],
+						"props": {
+							"objs": [
+								"Player",
+								"policeman"
+							]
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 4,
+						"type": 1,
+						"props": {}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 18,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 18,
+						"type": 9,
+						"label": "Kebab kiosk",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							5
+						],
+						"props": {
+							"name": "kebab",
+							"objs": [
+								"Player",
+								"seller",
+								"child"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 19,
+						"type": 8,
+						"label": "Main storyline",
+						"continue": false,
+						"inCondIds": [
+							5
+						],
+						"outCondIds": [],
+						"props": {
+							"objs": [
+								"Player",
+								"child",
+								"seller"
+							]
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 5,
+						"type": 1,
+						"props": {}
+					}
+				]
+			}
+		]
+	},
+	"scriptEditor": {
+		"ver": 1,
+		"currentStageId": 18,
+		"stageEditors": [
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 8,
+						"x": 206,
+						"y": 71
+					},
+					{
+						"ver": 1,
+						"nodeId": 9,
+						"x": 430,
+						"y": 75
+					}
+				],
+				"nodeIds": [
+					8,
+					9
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 0,
+						"points": {
+							"src": {
+								"x": 286,
+								"y": 151
+							},
+							"dst": {
+								"x": 510,
+								"y": 155
+							}
+						}
+					}
+				],
+				"condIds": [
+					0
+				],
+				"scale": 1,
+				"pos": {
+					"x": 0,
+					"y": 0
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 10,
+						"x": 146,
+						"y": 68
+					},
+					{
+						"ver": 1,
+						"nodeId": 11,
+						"x": 402,
+						"y": 67
+					}
+				],
+				"nodeIds": [
+					10,
+					11
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 1,
+						"points": {
+							"src": {
+								"x": 226,
+								"y": 148
+							},
+							"dst": {
+								"x": 482,
+								"y": 147
+							}
+						}
+					}
+				],
+				"condIds": [
+					1
+				],
+				"scale": 1,
+				"pos": {
+					"x": 76,
+					"y": 57
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 12,
+						"x": 173,
+						"y": 60
+					},
+					{
+						"ver": 1,
+						"nodeId": 13,
+						"x": 411,
+						"y": 57
+					}
+				],
+				"nodeIds": [
+					12,
+					13
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 2,
+						"points": {
+							"src": {
+								"x": 253,
+								"y": 140
+							},
+							"dst": {
+								"x": 491,
+								"y": 137
+							}
+						}
+					}
+				],
+				"condIds": [
+					2
+				],
+				"scale": 1,
+				"pos": {
+					"x": 0,
+					"y": 0
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 14,
+						"x": 174,
+						"y": 76
+					},
+					{
+						"ver": 1,
+						"nodeId": 15,
+						"x": 452,
+						"y": 71
+					}
+				],
+				"nodeIds": [
+					14,
+					15
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 3,
+						"points": {
+							"src": {
+								"x": 254,
+								"y": 156
+							},
+							"dst": {
+								"x": 532,
+								"y": 151
+							}
+						}
+					}
+				],
+				"condIds": [
+					3
+				],
+				"scale": 1,
+				"pos": {
+					"x": 0,
+					"y": 0
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 16,
+						"x": 156,
+						"y": 51
+					},
+					{
+						"ver": 1,
+						"nodeId": 17,
+						"x": 384,
+						"y": 52
+					}
+				],
+				"nodeIds": [
+					16,
+					17
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 4,
+						"points": {
+							"src": {
+								"x": 236,
+								"y": 131
+							},
+							"dst": {
+								"x": 464,
+								"y": 132
+							}
+						}
+					}
+				],
+				"condIds": [
+					4
+				],
+				"scale": 1,
+				"pos": {
+					"x": 0,
+					"y": 0
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 18,
+						"x": 170,
+						"y": 60
+					},
+					{
+						"ver": 1,
+						"nodeId": 19,
+						"x": 395,
+						"y": 55
+					}
+				],
+				"nodeIds": [
+					18,
+					19
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 5,
+						"points": {
+							"src": {
+								"x": 250,
+								"y": 140
+							},
+							"dst": {
+								"x": 475,
+								"y": 135
+							}
+						}
+					}
+				],
+				"condIds": [
+					5
+				],
+				"scale": 1,
+				"pos": {
+					"x": 0,
+					"y": 0
+				}
+			}
+		],
+		"stageIds": [
+			8,
+			10,
+			12,
+			14,
+			16,
+			18
+		]
+	}
+}
