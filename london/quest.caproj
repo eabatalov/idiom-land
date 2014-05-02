@@ -80,6 +80,7 @@
                     <animation-folder expanded="1">
                         <animation framecount="1" loop="0" name="balloon_seller" pingpong="0" repeatcount="1" repeatto="0" sid="2960639667595226" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="SpeechOrigin" x="0.713333" y="0.387037" />
                                 <collision-poly>
                                     <point x="0.276667" y="0.153704" />
                                     <point x="0.553333" y="0.157407" />
@@ -94,6 +95,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="captain_carousel" pingpong="0" repeatcount="1" repeatto="0" sid="3248972151380653" speed="5">
                             <frame duration="1" hotspotX="0.502488" hotspotY="0.5">
+                                <image-point name="SpeechOrigin" x="0.0696517" y="0.117647" />
                                 <collision-poly>
                                     <point x="0.179104" y="0.0264706" />
                                     <point x="0.542289" y="0.0411765" />
@@ -108,6 +110,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="kebab_seller" pingpong="0" repeatcount="1" repeatto="0" sid="9326474329333388" speed="5">
                             <frame duration="1" hotspotX="0.502488" hotspotY="0.5">
+                                <image-point name="SpeechOrigin" x="0.960199" y="0.0676471" />
                                 <collision-poly>
                                     <point x="0.159204" y="0.0941176" />
                                     <point x="0.497512" y="0" />
@@ -122,6 +125,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="kebab_son" pingpong="0" repeatcount="1" repeatto="0" sid="9531740403944049" speed="5">
                             <frame duration="1" hotspotX="0.504274" hotspotY="0.503185">
+                                <image-point name="SpeechOrigin" x="0.0598291" y="0.0828025" />
                                 <collision-poly>
                                     <point x="0.34188" y="0" />
                                     <point x="0.495726" y="0" />
@@ -136,6 +140,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="policeman" pingpong="0" repeatcount="1" repeatto="0" sid="4505102490080671" speed="5">
                             <frame duration="1" hotspotX="0.502488" hotspotY="0.5">
+                                <image-point name="SpeechOrigin" x="0.104478" y="0.111765" />
                                 <collision-poly>
                                     <point x="0.20398" y="0.0911765" />
                                     <point x="0.482587" y="0" />
@@ -150,6 +155,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="taxi_driver1" pingpong="0" repeatcount="1" repeatto="0" sid="8438642372233206" speed="5">
                             <frame duration="1" hotspotX="0.502488" hotspotY="0.5">
+                                <image-point name="SpeechOrigin" x="0.0298507" y="0.102941" />
                                 <collision-poly>
                                     <point x="0.0945273" y="0.0941176" />
                                     <point x="0.502488" y="0.0264706" />
@@ -164,6 +170,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="taxi_driver2" pingpong="0" repeatcount="1" repeatto="0" sid="4077695234714473" speed="5">
                             <frame duration="1" hotspotX="0.502488" hotspotY="0.5">
+                                <image-point name="SpeechOrigin" x="0.965174" y="0.0735294" />
                                 <collision-poly>
                                     <point x="0.0199005" y="0.152941" />
                                     <point x="0.497512" y="0.0588235" />
@@ -178,6 +185,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="taxi_driver3" pingpong="0" repeatcount="1" repeatto="0" sid="6926131253992446" speed="5">
                             <frame duration="1" hotspotX="0.502488" hotspotY="0.5">
+                                <image-point name="SpeechOrigin" x="0.0199005" y="0.152941" />
                                 <collision-poly>
                                     <point x="0.109453" y="0.0794118" />
                                     <point x="0.497512" y="0.0823529" />
@@ -191,6 +199,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="zombie" pingpong="0" repeatcount="1" repeatto="0" sid="9619678968407945" speed="5">
                             <frame duration="1" hotspotX="0.502488" hotspotY="0.5">
+                                <image-point name="SpeechOrigin" x="0.880597" y="0.0705882" />
                                 <collision-poly>
                                     <point x="0.109453" y="0" />
                                     <point x="0.517413" y="0" />
@@ -206,6 +215,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="post_office" pingpong="0" repeatcount="1" repeatto="0" sid="271534870118773" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.501247">
+                                <image-point name="SpeechOrigin" x="-0.05625" y="0.0523691" />
                                 <collision-poly>
                                     <point x="0.08125" y="0.032419" />
                                     <point x="0.5" y="0" />
@@ -1233,7 +1243,7 @@
         <object-folder expanded="0" name="Animation">
             <object-folder expanded="1" name="Player" />
         </object-folder>
-        <object-type name="Sprite" sid="9109209147233701">
+        <object-type name="Platforms" sid="9109209147233701">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="8896202203832967">
@@ -1376,6 +1386,96 @@
         <object-type name="Clouds" sid="6692103663691251">
             <plugin id="TiledBg" />
             <texture />
+        </object-type>
+        <object-type name="CarouselBack" sid="2687950701864817">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7809690875075555" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.171701" y="0.251163" />
+                            <point x="0.782194" y="0.318605" />
+                            <point x="0.934022" y="0.903488" />
+                            <point x="0.5" y="0.987209" />
+                            <point x="0.0310016" y="0.954651" />
+                            <point x="0.0429253" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TicketDesk" sid="1424277318818602">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4339330128626732" speed="5">
+                    <frame duration="1" hotspotX="0.501916" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0881226" y="0.0410714" />
+                            <point x="0.498084" y="0.00178571" />
+                            <point x="0.911877" y="0.0410714" />
+                            <point x="0.923372" y="0.5" />
+                            <point x="0.984674" y="0.992857" />
+                            <point x="0.00766284" y="0.996429" />
+                            <point x="0.0727969" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Carousel" sid="8672846457645546">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="672592488283537" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.154246" y="0.139498" />
+                            <point x="0.5" y="0" />
+                            <point x="0.847487" y="0.137931" />
+                            <point x="0.9974" y="0.5" />
+                            <point x="0.825823" y="0.842476" />
+                            <point x="0.5" y="0.999216" />
+                            <point x="0.20364" y="0.815831" />
+                            <point x="0.00953206" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BalloonBack" sid="5767881937177868">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5762534655890592" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0518248" y="0.0648995" />
+                            <point x="0.5" y="0.333638" />
+                            <point x="0.879562" y="0.150823" />
+                            <point x="0.964963" y="0.5" />
+                            <point x="0.973723" y="0.967093" />
+                            <point x="0.5" y="0.978976" />
+                            <point x="0.0386861" y="0.951554" />
+                            <point x="0.0291971" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Zabor" sid="856090690368867">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5305591460566833" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0382294" y="0.234568" />
+                            <point x="0.5" y="0.0802469" />
+                            <point x="0.985915" y="0.0864198" />
+                            <point x="0.985915" y="0.91358" />
+                            <point x="0.5" y="0.820988" />
+                            <point x="0.0291751" y="0.820988" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
