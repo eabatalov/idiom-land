@@ -1477,13 +1477,64 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Benches" sid="4870667590189457">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7403641876796995" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.015873" y="0.0615385" />
+                            <point x="0.978175" y="0.0846154" />
+                            <point x="0.994048" y="0.976923" />
+                            <point x="0.00595238" y="0.976923" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PolicemanBack" sid="5285463747415382">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5460470700093386" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0987654" y="0.302326" />
+                            <point x="0.5" y="0.372093" />
+                            <point x="0.92735" y="0.222384" />
+                            <point x="0.917379" y="0.5" />
+                            <point x="0.977208" y="0.930233" />
+                            <point x="0.5" y="0.959302" />
+                            <point x="0.0132953" y="0.959302" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="KebabBackground" sid="1105690208403213">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5898448883263069" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0945378" y="0.0581395" />
+                            <point x="0.5" y="0.0465116" />
+                            <point x="0.823529" y="0.108527" />
+                            <point x="0.745798" y="0.5" />
+                            <point x="0.771008" y="0.859173" />
+                            <point x="0.5" y="0.994832" />
+                            <point x="0.0609244" y="0.962532" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>stage15.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="Quest">
+        <event-folder expanded="0" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Initialization.xml</event-sheet>
             <event-sheet>PlayerInput.xml</event-sheet>
