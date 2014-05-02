@@ -110,7 +110,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="kebab_seller" pingpong="0" repeatcount="1" repeatto="0" sid="9326474329333388" speed="5">
                             <frame duration="1" hotspotX="0.502488" hotspotY="0.5">
-                                <image-point name="SpeechOrigin" x="0.960199" y="0.0676471" />
+                                <image-point name="SpeechOrigin" x="-0.00995025" y="-0.0529412" />
                                 <collision-poly>
                                     <point x="0.159204" y="0.0941176" />
                                     <point x="0.497512" y="0" />
@@ -125,7 +125,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="kebab_son" pingpong="0" repeatcount="1" repeatto="0" sid="9531740403944049" speed="5">
                             <frame duration="1" hotspotX="0.504274" hotspotY="0.503185">
-                                <image-point name="SpeechOrigin" x="0.0598291" y="0.0828025" />
+                                <image-point name="SpeechOrigin" x="0.974359" y="-0.0318471" />
                                 <collision-poly>
                                     <point x="0.34188" y="0" />
                                     <point x="0.495726" y="0" />
@@ -1528,13 +1528,32 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="KebabShop" sid="8187431686909286">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3464349970430286" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.108333" y="0.109551" />
+                            <point x="0.5" y="0" />
+                            <point x="0.788889" y="0.213483" />
+                            <point x="0.716667" y="0.5" />
+                            <point x="0.830556" y="0.828652" />
+                            <point x="0.5" y="0.912921" />
+                            <point x="0.0666667" y="0.932584" />
+                            <point x="0.122222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>stage15.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="0" name="Quest">
+        <event-folder expanded="1" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Initialization.xml</event-sheet>
             <event-sheet>PlayerInput.xml</event-sheet>

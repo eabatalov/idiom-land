@@ -442,7 +442,7 @@
         <event-group description="" sid="6702021473764103" title="PlayerUI">
             <sub-events>
                 <comment>XXX Due to defered &quot;TextAutoResize new text was drawn&quot; here we have race. If &quot;continue&quot; is triggered as next ui event then we loose QuestRuntimeInterface fileds values. Thus we should readl all the QuestRuntimeInterface values before &quot;continue&quot; can be generated.</comment>
-                <event-block sid="566202086767859">
+                <event-block collapsed="1" sid="566202086767859">
                     <conditions>
                         <condition id="0" name="On function" sid="1757451801164955" type="Function">
                             <param id="0" name="Name">&quot;ShowPlayerPhrase&quot;</param>
@@ -489,7 +489,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2153683620744093">
+                <event-block collapsed="1" sid="2153683620744093">
                     <conditions>
                         <condition behavior="TextAutoResize" id="0" name="New text redrawn" sid="5342987844029183" type="PlayerPhraseTxt" />
                     </conditions>
