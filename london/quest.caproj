@@ -2609,15 +2609,28 @@
                 <behavior-type name="Pin" sid="9864341012748301">
                     <behavior id="Pin" />
                 </behavior-type>
-                <behavior-type name="Jumpthru" sid="7628265152092817">
-                    <behavior id="jumpthru" />
-                </behavior-type>
                 <behavior-type name="Solid" sid="8150542901781491">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Jumpthru" sid="9121656772408063">
+                    <behavior id="jumpthru" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6304769732323036" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CarouselCapsulInTrigger" sid="7087302656594157">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="678907813106268">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9892563082945165" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -2646,7 +2659,7 @@
         <layout>foxy_ok.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="0" name="Quest">
+        <event-folder expanded="1" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Initialization.xml</event-sheet>
             <event-sheet>PlayerInput.xml</event-sheet>

@@ -2009,14 +2009,14 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -2044,22 +2044,22 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
-                        <behavior-instance type="Jumpthru">
+                        <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Solid">
+                        <behavior-instance type="Jumpthru">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2611</x>
-                        <y>651.5</y>
+                        <x>2567</x>
+                        <y>652</y>
                         <z>0</z>
                         <width>422</width>
                         <height>29</height>
@@ -2079,22 +2079,22 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
-                        <behavior-instance type="Jumpthru">
+                        <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Solid">
+                        <behavior-instance type="Jumpthru">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2868</x>
-                        <y>658</y>
+                        <x>2917</x>
+                        <y>660</y>
                         <z>0</z>
                         <width>417</width>
                         <height>29</height>
@@ -2114,14 +2114,14 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
-                        <behavior-instance type="Jumpthru">
+                        <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Solid">
+                        <behavior-instance type="Jumpthru">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -2133,6 +2133,31 @@
                         <z>0</z>
                         <width>250</width>
                         <height>29</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CarouselCapsulInTrigger" uid="103">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2740</x>
+                        <y>562</y>
+                        <z>0</z>
+                        <width>25</width>
+                        <height>34</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

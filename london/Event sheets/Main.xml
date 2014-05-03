@@ -27,6 +27,10 @@
                     <param id="0" name="Pin to">CarouselCapsul</param>
                     <param id="1" name="Mode">1</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="5099720998656089" type="CarouselCapsulInTrigger">
+                    <param id="0" name="Pin to">CarouselCapsul</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
             </actions>
         </event-block>
         <comment>Zoom camera&#x0D;&#x0A;Disable as we haven&apos;t made it work without bugs yet.</comment>
@@ -131,6 +135,9 @@
                 <action behavior="Rotate" id="0" name="Set speed" sid="7407959211759154" type="CarouselCircle">
                     <param id="0" name="Speed">90</param>
                 </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="9798439385847955" type="CarouselPlatform">
+                    <param id="0" name="State">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3031655749653993">
@@ -143,14 +150,35 @@
                 <action behavior="Rotate" id="0" name="Set speed" sid="2991547290386167" type="CarouselCircle">
                     <param id="0" name="Speed">0</param>
                 </action>
-                <action behavior="Jumpthru" id="0" name="Set enabled" sid="3443926459326885" type="CarouselPlatform">
+                <action behavior="Solid" id="0" name="Set enabled" sid="3495815539748387" type="CarouselPlatform">
                     <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Platform" id="12" name="Fall through" sid="5334274331385032" type="Player" />
+                <action id="0" name="Call function" sid="1636134093638237" type="Function">
+                    <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
+                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;shock&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="4271169311423032" type="System">
                     <param id="0" name="Seconds">4.0</param>
                 </action>
-                <action behavior="Jumpthru" id="0" name="Set enabled" sid="125864000148974" type="CarouselPlatform">
+                <action behavior="Solid" id="0" name="Set enabled" sid="9034172760323789" type="CarouselPlatform">
                     <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9463305893869666">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1529980216069495" type="CarouselCapsulInTrigger">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set current stage" sid="2246066550211404" type="QuestRuntimeInterface">
+                    <param id="0" name="Value">Player.CurrentStage</param>
+                </action>
+                <action id="0" name="Call function" sid="8117737682235166" type="Function">
+                    <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;&quot;{###}&quot;foxy_in_carousel&quot;</param>
                 </action>
             </actions>
         </event-block>
