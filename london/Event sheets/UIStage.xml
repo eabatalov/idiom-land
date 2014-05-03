@@ -82,6 +82,53 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="7775000575531708">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="5673119112561938" type="System">
+                                            <param id="0" name="First value">NPC.UID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">19</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set animation" sid="2537117629083115" type="taxiHindiSCML">
+                                            <param id="0" name="Animation">&quot;speak&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="312148172080282">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="8263146764610855" type="System">
+                                            <param id="0" name="First value">NPC.UID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">41</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set animation" sid="7118504261933472" type="captainSCML">
+                                            <param id="0" name="Animation">&quot;speak&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4714951444151175">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="674395940042073" type="System">
+                                            <param id="0" name="First value">NPC.UID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">49</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set animation" sid="6794635922703084" type="veiderSCML">
+                                            <param id="0" name="Animation">&quot;speak&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="6315473732246069">
                             <conditions>
