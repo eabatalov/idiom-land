@@ -20,7 +20,7 @@
 		<!-- site thumbnail -->
 		<link rel="image_src" href="thumbnail.png" />
 		<!-- favicon -->
-		<link rel="icon" type="image/ico" href="favicon.ico">
+        <link rel="icon" type="image/ico" href="favicon.ico">
 	</head>
 	<body data-spy="scroll" data-target=".navbar" data-offset="61">
 		<div class="preloader">
@@ -143,14 +143,14 @@
                     <div class="col-sm-8 col-sm-offset-2 divide-bottom text-center">
                         <h1>Enter your email<br>to get early access</h1>
                     </div>
-					<form action="sendmail.php" class="form-inline flowuplabels" role="form" method="post" id="contactForm">
+					<form action="" class="form-inline flowuplabels" role="form" method="post" id="contactForm">
 						<div class="form-group col-md-4 col-sm-6 fl_wrap">
 							<label class="fl_label" for="name">Name:</label>
 							<input type="text" name="name" value="" id="name" class="form-control fl_input">
 						</div>
 						<div class="form-group col-md-4 col-sm-6 fl_wrap">
 							<label class="fl_label" for="email">Your email:</label>
-							<input type="text" name="email" value="" id="email" class="form-control fl_input">
+							<input type="email" name="email" value="" id="email" class="form-control fl_input">
 						</div>
 						<div class="form-group col-md-4 col-sm-6">
 							<button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">Notify me</button>
@@ -184,5 +184,25 @@
 	<!-- custom scripts and triggers -->
 		<script src="js/custom.js"></script>
 	<!--end scripts-->
-	</body>
+    <script type="text/javascript">
+        $(function() {
+                var formId = "contactForm";
+                var jqForm = $("#" + formId);
+                var url = "sendmail.php";
+                jqForm.submit(function() {
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: jqForm.serialize(),
+                        success: function(data)
+                        {
+                            alert(data);
+                        }
+                    });
+
+                return false;
+            });
+        });
+    </script>
+    </body>
 </html>
