@@ -34,7 +34,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Animation logic which is not changing during the game." sid="5129574936545948" title="Static">
+        <event-group description="Animation logic which is not changing during the game." sid="5129574936545948" title="Static">
             <sub-events>
                 <event-block sid="8984455808387501">
                     <conditions>
@@ -64,7 +64,7 @@
                     </actions>
                 </event-block>
                 <comment>Animation sequences</comment>
-                <event-block collapsed="1" sid="9751026908280847">
+                <event-block sid="9751026908280847">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="4039202312754226" type="Player">
                             <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
@@ -73,7 +73,7 @@
                     <actions />
                     <sub-events>
                         <comment>flip spriter object based on direction moving</comment>
-                        <event-block collapsed="1" sid="3008209258546219">
+                        <event-block sid="3008209258546219">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="7908367217684909" type="System">
                                     <param id="0" name="First value">Player.Platform.VectorX</param>
@@ -95,7 +95,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set animation" sid="1351177413420692" type="PlayerSCML">
-                                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                                            <param id="0" name="Animation">&quot;main&quot;</param>
                                             <param id="1" name="Where to start playing this animation">2</param>
                                         </action>
                                         <action id="1" name="Set playback speed ratio" sid="8099747811586332" type="PlayerSCML">
@@ -105,7 +105,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block collapsed="1" sid="5406357282426264">
+                        <event-block sid="5406357282426264">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="5846899248192532" type="System">
                                     <param id="0" name="First value">Player.Platform.VectorX</param>
@@ -127,7 +127,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set animation" sid="204193904746895" type="PlayerSCML">
-                                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                                            <param id="0" name="Animation">&quot;main&quot;</param>
                                             <param id="1" name="Where to start playing this animation">2</param>
                                         </action>
                                         <action id="1" name="Set playback speed ratio" sid="9458531368943897" type="PlayerSCML">
@@ -177,7 +177,7 @@
                             <param id="0" name="Speed Ratio">1.0</param>
                         </action>
                         <action id="0" name="Set animation" sid="2055527444399265" type="PlayerSCML">
-                            <param id="0" name="Animation">&quot;jump_start&quot;</param>
+                            <param id="0" name="Animation">&quot;jumpup&quot;</param>
                             <param id="1" name="Where to start playing this animation">0</param>
                         </action>
                     </actions>
@@ -194,18 +194,18 @@
                             <param id="0" name="Speed Ratio">1.0</param>
                         </action>
                         <action id="0" name="Set animation" sid="3254273849936148" type="PlayerSCML">
-                            <param id="0" name="Animation">&quot;jump_loop&quot;</param>
+                            <param id="0" name="Animation">&quot;flight&quot;</param>
                             <param id="1" name="Where to start playing this animation">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="2457611269634257">
+                <event-block sid="2457611269634257">
                     <conditions>
                         <condition id="1" name="On any finished" sid="2249154323573507" type="PlayerSCML" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block collapsed="1" sid="8904165612258694">
+                        <event-block sid="8904165612258694">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="960461809927165" type="Player">
                                     <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
@@ -260,7 +260,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Animation logic which can be enabled/disabled on external demand." sid="8278518111259733" title="Dynamic">
+        <event-group description="Animation logic which can be enabled/disabled on external demand." sid="8278518111259733" title="Dynamic">
             <sub-events>
                 <event-block sid="8945119670845163">
                     <conditions>
@@ -303,7 +303,7 @@
                             <param id="0" name="Speed Ratio">1.0</param>
                         </action>
                         <action id="0" name="Set animation" sid="2583387249732618" type="PlayerSCML">
-                            <param id="0" name="Animation">&quot;say&quot;</param>
+                            <param id="0" name="Animation">&quot;speak&quot;</param>
                             <param id="1" name="Where to start playing this animation">0</param>
                         </action>
                     </actions>

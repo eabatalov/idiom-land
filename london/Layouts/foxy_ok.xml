@@ -29,7 +29,7 @@
             <instances>
                 <instance type="Foxy" uid="83">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -37,8 +37,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>111</x>
-                        <y>124</y>
+                        <x>335</x>
+                        <y>122</y>
                         <z>0</z>
                         <width>219</width>
                         <height>247</height>
@@ -47,6 +47,26 @@
                         <hotspotY>0.502024293</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerSCML" uid="84">
+                    <properties>
+                        <scml-file>foxy_simple.scml</scml-file>
+                        <starting-entity>player</starting-entity>
+                        <starting-animation>idle</starting-animation>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>105</x>
+                        <y>246</y>
+                        <z>0</z>
+                        <width>50</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
                     </world>
                 </instance>
             </instances>
