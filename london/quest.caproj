@@ -26,7 +26,9 @@
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Eugene/learzing" id="TextAutoResize" version="1">TextAutoResize</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
@@ -56,7 +58,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="Quest">
+        <object-folder expanded="0" name="Quest">
             <object-folder expanded="0" name="NPC">
                 <object-type name="NPC" sid="2782814196772796">
                     <plugin id="Sprite" />
@@ -2281,25 +2283,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Carousel" sid="8672846457645546">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="672592488283537" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.154246" y="0.139498" />
-                            <point x="0.5" y="0" />
-                            <point x="0.847487" y="0.137931" />
-                            <point x="0.9974" y="0.5" />
-                            <point x="0.825823" y="0.842476" />
-                            <point x="0.5" y="0.999216" />
-                            <point x="0.20364" y="0.815831" />
-                            <point x="0.00953206" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="BalloonBack" sid="5767881937177868">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -2558,6 +2541,87 @@
         <object-type name="foxy_simple" sid="9369184994762402">
             <plugin id="Spriter" />
         </object-type>
+        <object-type name="CarouselBottom" sid="8939126371207301">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7018917901112319" speed="5">
+                    <frame duration="1" hotspotX="0.500703" hotspotY="0.500724">
+                        <collision-poly>
+                            <point x="0.499297" y="0.00144718" />
+                            <point x="0.995781" y="0.995658" />
+                            <point x="0.00421941" y="0.995658" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CarouselCircle" sid="5077204227109772">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="2548510933982852">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8074636111256954" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.146536" y="0.146536" />
+                            <point x="0.5" y="0" />
+                            <point x="0.853464" y="0.146536" />
+                            <point x="1" y="0.5" />
+                            <point x="0.853464" y="0.853464" />
+                            <point x="0.5" y="1" />
+                            <point x="0.146536" y="0.853464" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CarouselCapsul" sid="2332581593681945">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="5931456479342583">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4449942681996644" speed="5">
+                    <frame duration="1" hotspotX="0.501706" hotspotY="0.503704">
+                        <collision-poly>
+                            <point x="0.0170648" y="0.037037" />
+                            <point x="0.498294" y="0.348148" />
+                            <point x="0.982935" y="0.037037" />
+                            <point x="1" y="0.496296" />
+                            <point x="0.955631" y="0.903704" />
+                            <point x="0.498294" y="1" />
+                            <point x="0.0443686" y="0.903704" />
+                            <point x="0" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CarouselPlatform" sid="1194102321930865">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="9864341012748301">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Jumpthru" sid="7628265152092817">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="8150542901781491">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6304769732323036" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="foxy_simpleFamily" plugin-id="Sprite" sid="3940617487415505">
@@ -2582,7 +2646,7 @@
         <layout>foxy_ok.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="Quest">
+        <event-folder expanded="0" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Initialization.xml</event-sheet>
             <event-sheet>PlayerInput.xml</event-sheet>
