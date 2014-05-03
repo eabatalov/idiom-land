@@ -140,27 +140,32 @@
 		<section id="contact">
 			<div class="container">
 				<div class="row divide">
-                    <div class="col-sm-8 col-sm-offset-2 divide-bottom text-center">
-                        <h1>Enter your email<br>to get early access</h1>
-                    </div>
-					<form action="" class="form-inline flowuplabels" role="form" method="post" id="contactForm">
-						<div class="form-group col-md-4 col-sm-6 fl_wrap">
-							<label class="fl_label" for="name">Name:</label>
-							<input type="text" name="name" value="" id="name" class="form-control fl_input">
-						</div>
-						<div class="form-group col-md-4 col-sm-6 fl_wrap">
-							<label class="fl_label" for="email">Your email:</label>
-							<input type="email" name="email" value="" id="email" class="form-control fl_input">
-						</div>
-						<div class="form-group col-md-4 col-sm-6">
-							<button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">Notify me</button>
-						</div>
-						<div class="form-group col-xs-12">
-							<div class="message">
-								<div class="alert"></div>
+					<div id="submitElems">
+	                		    <div class="col-sm-8 col-sm-offset-2 divide-bottom text-center">
+			                        <h1>Enter your email<br>to get early access</h1>
+			                    </div>
+						<form class="form-inline flowuplabels" role="form" id="contactForm">
+							<div class="form-group col-md-4 col-sm-6 fl_wrap">
+								<label class="fl_label" for="name">Name:</label>
+								<input type="text" name="name" value="" id="name" class="form-control fl_input">
 							</div>
-						</div>
-					</form>
+							<div class="form-group col-md-4 col-sm-6 fl_wrap">
+								<label class="fl_label" for="email">Your email:</label>
+								<input type="email" name="email" value="" id="email" class="form-control fl_input">
+							</div>
+							<div class="form-group col-md-4 col-sm-6">
+								<button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">Notify me</button>
+							</div>
+							<div class="form-group col-xs-12">
+								<div class="message">
+									<div class="alert"></div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div id="submitSuccessElems" style="display:none;">
+						<h1>Thank you for your submission. We'll contact you soon!</h1>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -188,15 +193,17 @@
         $(function() {
                 var formId = "contactForm";
                 var jqForm = $("#" + formId);
-                var url = "sendmail.php";
-                jqForm.submit(function() {
+                var url = "http://idiomland.com/sendmail.php";
+                jqForm.submit(function(e) {
+                    e.preventDefault();
                     $.ajax({
                         type: "POST",
                         url: url,
                         data: jqForm.serialize(),
                         success: function(data)
                         {
-                            alert(data);
+                            $("#submitElems").hide();
+                            $("#submitSuccessElems").show();
                         }
                     });
 
