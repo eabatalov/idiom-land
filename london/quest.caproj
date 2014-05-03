@@ -57,7 +57,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="0" name="Quest">
             <object-folder expanded="0" name="NPC">
                 <object-type name="NPC" sid="2782814196772796">
@@ -65,6 +65,7 @@
                     <instance-variables>
                         <instance-variable comment="If you change this tou should also change id in quest script" name="Stage" sid="319509391048857" type="string" />
                         <instance-variable comment="If you change this you should also change id in quest script" name="NpcIDInStage" sid="9260969409441419" type="string" />
+                        <instance-variable name="AnimUID" sid="4502007640760632" type="number" />
                     </instance-variables>
                     <container>
                         <type>NPC</type>
@@ -86,6 +87,7 @@
                         <animation framecount="1" loop="0" name="balloon_seller" pingpong="0" repeatcount="1" repeatto="0" sid="2960639667595226" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="SpeechOrigin" x="0.713333" y="0.387037" />
+                                <image-point name="AnimationPoint" x="0.526667" y="1.00185" />
                                 <collision-poly>
                                     <point x="0.276667" y="0.153704" />
                                     <point x="0.553333" y="0.157407" />
@@ -101,6 +103,7 @@
                         <animation framecount="1" loop="0" name="captain_carousel" pingpong="0" repeatcount="1" repeatto="0" sid="3248972151380653" speed="5">
                             <frame duration="1" hotspotX="0.502488" hotspotY="0.5">
                                 <image-point name="SpeechOrigin" x="0.0696517" y="0.117647" />
+                                <image-point name="AnimationPoint" x="0.527363" y="1.00588" />
                                 <collision-poly>
                                     <point x="0.179104" y="0.0264706" />
                                     <point x="0.542289" y="0.0411765" />
@@ -176,6 +179,7 @@
                         <animation framecount="1" loop="0" name="taxi_driver2" pingpong="0" repeatcount="1" repeatto="0" sid="4077695234714473" speed="5">
                             <frame duration="1" hotspotX="0.502488" hotspotY="0.5">
                                 <image-point name="SpeechOrigin" x="0.965174" y="0.0735294" />
+                                <image-point name="AnimationPoint" x="0.512438" y="1" />
                                 <collision-poly>
                                     <point x="0.0199005" y="0.152941" />
                                     <point x="0.497512" y="0.0588235" />
@@ -1291,19 +1295,6 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="9985068033458242" speed="5">
-                            <frame duration="1" hotspotX="0.502283" hotspotY="0.502024">
-                                <collision-poly>
-                                    <point x="0.260274" y="0.230769" />
-                                    <point x="0.497717" y="0.165992" />
-                                    <point x="0.712329" y="0.255061" />
-                                    <point x="0.986301" y="0.497976" />
-                                    <point x="0.497717" y="0.935223" />
-                                    <point x="0.232877" y="0.793522" />
-                                    <point x="0.0228311" y="0.497976" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="PlayerPinPoint" sid="7544638137289643">
@@ -2104,6 +2095,934 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder expanded="0" name="hindu sprites">
+            <object-type name="hindu_hand" sid="3255092294784727">
+                <plugin id="Sprite" />
+                <container>
+                    <type>taxiHindiSCML</type>
+                    <type>hindu_hand</type>
+                    <type>hindu_eye1_000</type>
+                    <type>hindu_body</type>
+                    <type>hindu_head</type>
+                    <type>hindu_mustache</type>
+                    <type>hindu_eye1</type>
+                    <type>hindu_brows</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6042939708058843" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.387755" y="0.306452" />
+                                <point x="0.489796" y="0.225806" />
+                                <point x="0.979592" y="0.016129" />
+                                <point x="0.714286" y="0.5" />
+                                <point x="0.571429" y="0.66129" />
+                                <point x="0.489796" y="0.725806" />
+                                <point x="0.0612245" y="0.951613" />
+                                <point x="0.183673" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="hindu_eye1_000" sid="6750034342632411">
+                <plugin id="Sprite" />
+                <container>
+                    <type>taxiHindiSCML</type>
+                    <type>hindu_hand</type>
+                    <type>hindu_eye1_000</type>
+                    <type>hindu_body</type>
+                    <type>hindu_head</type>
+                    <type>hindu_mustache</type>
+                    <type>hindu_eye1</type>
+                    <type>hindu_brows</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7859403115154734" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.121212" y="0.190476" />
+                                <point x="0.484848" y="0" />
+                                <point x="0.818182" y="0.285714" />
+                                <point x="0.939394" y="0.47619" />
+                                <point x="0.878788" y="0.809524" />
+                                <point x="0.484848" y="1" />
+                                <point x="0.181818" y="0.714286" />
+                                <point x="0.0606061" y="0.47619" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.151515" y="0.238095" />
+                                <point x="0.484848" y="0.047619" />
+                                <point x="0.818182" y="0.285714" />
+                                <point x="0.909091" y="0.47619" />
+                                <point x="0.484848" y="0.190476" />
+                                <point x="0.515152" y="0.190476" />
+                                <point x="0.818182" y="0.47619" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="hindu_body" sid="8810629359873962">
+                <plugin id="Sprite" />
+                <container>
+                    <type>taxiHindiSCML</type>
+                    <type>hindu_hand</type>
+                    <type>hindu_eye1_000</type>
+                    <type>hindu_body</type>
+                    <type>hindu_head</type>
+                    <type>hindu_mustache</type>
+                    <type>hindu_eye1</type>
+                    <type>hindu_brows</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4854519078743123" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.12987" y="0.0714286" />
+                                <point x="0.493506" y="0.0357143" />
+                                <point x="0.792208" y="0.114286" />
+                                <point x="0.948052" y="0.5" />
+                                <point x="0.779221" y="0.878571" />
+                                <point x="0.493506" y="0.792857" />
+                                <point x="0.207792" y="0.885714" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="hindu_head" sid="4833758613981667">
+                <plugin id="Sprite" />
+                <container>
+                    <type>taxiHindiSCML</type>
+                    <type>hindu_hand</type>
+                    <type>hindu_eye1_000</type>
+                    <type>hindu_body</type>
+                    <type>hindu_head</type>
+                    <type>hindu_mustache</type>
+                    <type>hindu_eye1</type>
+                    <type>hindu_brows</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8694399040098796" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.128655" y="0.108374" />
+                                <point x="0.497076" y="0.00985222" />
+                                <point x="0.883041" y="0.0985222" />
+                                <point x="0.953216" y="0.497537" />
+                                <point x="0.777778" y="0.812808" />
+                                <point x="0.497076" y="1" />
+                                <point x="0.222222" y="0.812808" />
+                                <point x="0.0409357" y="0.497537" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="hindu_mustache" sid="4470543562326887">
+                <plugin id="Sprite" />
+                <container>
+                    <type>taxiHindiSCML</type>
+                    <type>hindu_hand</type>
+                    <type>hindu_eye1_000</type>
+                    <type>hindu_body</type>
+                    <type>hindu_head</type>
+                    <type>hindu_mustache</type>
+                    <type>hindu_eye1</type>
+                    <type>hindu_brows</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="98015827253758" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.157895" y="0.409091" />
+                                <point x="0.491228" y="0.0454545" />
+                                <point x="0.842105" y="0.409091" />
+                                <point x="0.859649" y="0.5" />
+                                <point x="0.964912" y="0.909091" />
+                                <point x="0.491228" y="0.5" />
+                                <point x="0.0526316" y="0.863636" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="hindu_eye1" sid="3106044510358555">
+                <plugin id="Sprite" />
+                <container>
+                    <type>taxiHindiSCML</type>
+                    <type>hindu_hand</type>
+                    <type>hindu_eye1_000</type>
+                    <type>hindu_body</type>
+                    <type>hindu_head</type>
+                    <type>hindu_mustache</type>
+                    <type>hindu_eye1</type>
+                    <type>hindu_brows</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5163359340491244" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.121212" y="0.190476" />
+                                <point x="0.484848" y="0" />
+                                <point x="0.818182" y="0.285714" />
+                                <point x="0.939394" y="0.47619" />
+                                <point x="0.878788" y="0.809524" />
+                                <point x="0.484848" y="1" />
+                                <point x="0.181818" y="0.714286" />
+                                <point x="0.0606061" y="0.47619" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.151515" y="0.238095" />
+                                <point x="0.484848" y="0.047619" />
+                                <point x="0.818182" y="0.285714" />
+                                <point x="0.909091" y="0.47619" />
+                                <point x="0.484848" y="0.190476" />
+                                <point x="0.515152" y="0.190476" />
+                                <point x="0.818182" y="0.47619" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="hindu_brows" sid="83577064214165">
+                <plugin id="Sprite" />
+                <container>
+                    <type>taxiHindiSCML</type>
+                    <type>hindu_hand</type>
+                    <type>hindu_eye1_000</type>
+                    <type>hindu_body</type>
+                    <type>hindu_head</type>
+                    <type>hindu_mustache</type>
+                    <type>hindu_eye1</type>
+                    <type>hindu_brows</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4504724170456323" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.0549451" y="0.208333" />
+                                <point x="0.923077" y="0.291667" />
+                                <point x="0.967033" y="0.5" />
+                                <point x="0.901099" y="0.625" />
+                                <point x="0.120879" y="0.541667" />
+                                <point x="0.010989" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="0" name="veider sprites">
+            <object-type name="veider_body" sid="6939939786769256">
+                <plugin id="Sprite" />
+                <container>
+                    <type>veiderSCML</type>
+                    <type>veider_body</type>
+                    <type>veider_head</type>
+                    <type>veider_eye2</type>
+                    <type>veider_eye1</type>
+                    <type>veider_balloons</type>
+                    <type>veider_hand2</type>
+                    <type>veider_hand1</type>
+                    <type>veider_mouth4</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1258598299354084" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.114035" y="0.0577778" />
+                                <point x="0.5" y="0.00444444" />
+                                <point x="0.780702" y="0.111111" />
+                                <point x="0.850877" y="0.497778" />
+                                <point x="0.745614" y="0.871111" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0263158" y="0.986667" />
+                                <point x="0.0438596" y="0.497778" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="veider_head" sid="2548207973034156">
+                <plugin id="Sprite" />
+                <container>
+                    <type>veiderSCML</type>
+                    <type>veider_body</type>
+                    <type>veider_head</type>
+                    <type>veider_eye2</type>
+                    <type>veider_eye1</type>
+                    <type>veider_balloons</type>
+                    <type>veider_hand2</type>
+                    <type>veider_hand1</type>
+                    <type>veider_mouth4</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8303354629011707" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.186667" y="0.194444" />
+                                <point x="0.5" y="0.00694444" />
+                                <point x="0.833333" y="0.173611" />
+                                <point x="0.92" y="0.5" />
+                                <point x="0.966667" y="0.965278" />
+                                <point x="0.5" y="0.986111" />
+                                <point x="0.04" y="0.958333" />
+                                <point x="0.1" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="veider_eye2" sid="8347807314064615">
+                <plugin id="Sprite" />
+                <container>
+                    <type>veiderSCML</type>
+                    <type>veider_body</type>
+                    <type>veider_head</type>
+                    <type>veider_eye2</type>
+                    <type>veider_eye1</type>
+                    <type>veider_balloons</type>
+                    <type>veider_hand2</type>
+                    <type>veider_hand1</type>
+                    <type>veider_mouth4</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2866578922026505" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.243902" y="0.243902" />
+                                <point x="0.487805" y="0.146341" />
+                                <point x="0.97561" y="0.0243902" />
+                                <point x="0.97561" y="0.487805" />
+                                <point x="0.731707" y="0.731707" />
+                                <point x="0.487805" y="0.829268" />
+                                <point x="0.0731707" y="0.926829" />
+                                <point x="0.0243902" y="0.487805" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="veider_eye1" sid="7632788043233757">
+                <plugin id="Sprite" />
+                <container>
+                    <type>veiderSCML</type>
+                    <type>veider_body</type>
+                    <type>veider_head</type>
+                    <type>veider_eye2</type>
+                    <type>veider_eye1</type>
+                    <type>veider_balloons</type>
+                    <type>veider_hand2</type>
+                    <type>veider_hand1</type>
+                    <type>veider_mouth4</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1884584617713864" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.0731707" y="0.0731707" />
+                                <point x="0.487805" y="0.170732" />
+                                <point x="0.731707" y="0.268293" />
+                                <point x="0.97561" y="0.487805" />
+                                <point x="0.926829" y="0.926829" />
+                                <point x="0.487805" y="0.829268" />
+                                <point x="0.292683" y="0.707317" />
+                                <point x="0.0243902" y="0.487805" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="veider_balloons" sid="2156158323830987">
+                <plugin id="Sprite" />
+                <container>
+                    <type>veiderSCML</type>
+                    <type>veider_body</type>
+                    <type>veider_head</type>
+                    <type>veider_eye2</type>
+                    <type>veider_eye1</type>
+                    <type>veider_balloons</type>
+                    <type>veider_hand2</type>
+                    <type>veider_hand1</type>
+                    <type>veider_mouth4</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7398159025589442" speed="0">
+                        <frame duration="1" hotspotX="0.505263" hotspotY="0.907975">
+                            <collision-poly>
+                                <point x="0.218085" y="0.126543" />
+                                <point x="0.5" y="0.00308642" />
+                                <point x="0.776596" y="0.12963" />
+                                <point x="0.755319" y="0.5" />
+                                <point x="0.452128" y="0.682099" />
+                                <point x="0.5" y="0.972222" />
+                                <point x="0.43617" y="0.746914" />
+                                <point x="0.202128" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="veider_hand2" sid="254077013541321">
+                <plugin id="Sprite" />
+                <container>
+                    <type>veiderSCML</type>
+                    <type>veider_body</type>
+                    <type>veider_head</type>
+                    <type>veider_eye2</type>
+                    <type>veider_eye1</type>
+                    <type>veider_balloons</type>
+                    <type>veider_hand2</type>
+                    <type>veider_hand1</type>
+                    <type>veider_mouth4</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9636671977777836" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.0714286" y="0.103448" />
+                                <point x="0.5" y="0.37931" />
+                                <point x="0.654762" y="0.5" />
+                                <point x="0.678571" y="0.5" />
+                                <point x="0.940476" y="0.913793" />
+                                <point x="0.5" y="0.706897" />
+                                <point x="0.297619" y="0.568965" />
+                                <point x="0.214286" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="veider_hand1" sid="5632521314574097">
+                <plugin id="Sprite" />
+                <container>
+                    <type>veiderSCML</type>
+                    <type>veider_body</type>
+                    <type>veider_head</type>
+                    <type>veider_eye2</type>
+                    <type>veider_eye1</type>
+                    <type>veider_balloons</type>
+                    <type>veider_hand2</type>
+                    <type>veider_hand1</type>
+                    <type>veider_mouth4</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5577078385151294" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0.116667" />
+                                <point x="0.7" y="0.25" />
+                                <point x="0.88" y="0.5" />
+                                <point x="0.92" y="0.933333" />
+                                <point x="0.5" y="0.483333" />
+                                <point x="0.54" y="0.55" />
+                                <point x="0.52" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="veider_mouth4" sid="839970793214207">
+                <plugin id="Sprite" />
+                <container>
+                    <type>veiderSCML</type>
+                    <type>veider_body</type>
+                    <type>veider_head</type>
+                    <type>veider_eye2</type>
+                    <type>veider_eye1</type>
+                    <type>veider_balloons</type>
+                    <type>veider_hand2</type>
+                    <type>veider_hand1</type>
+                    <type>veider_mouth4</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5078299352308945" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.25" y="0.458333" />
+                                <point x="0.5" y="0.0208333" />
+                                <point x="0.738636" y="0.479167" />
+                                <point x="0.738636" y="0.5" />
+                                <point x="0.988636" y="0.979167" />
+                                <point x="0.0681818" y="0.875" />
+                                <point x="0.25" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.25" y="0.458333" />
+                                <point x="0.5" y="0.0208333" />
+                                <point x="0.738636" y="0.479167" />
+                                <point x="0.738636" y="0.5" />
+                                <point x="0.988636" y="0.979167" />
+                                <point x="0.0681818" y="0.875" />
+                                <point x="0.25" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.25" y="0.458333" />
+                                <point x="0.5" y="0.0208333" />
+                                <point x="0.738636" y="0.479167" />
+                                <point x="0.738636" y="0.5" />
+                                <point x="0.988636" y="0.979167" />
+                                <point x="0.0681818" y="0.875" />
+                                <point x="0.25" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.25" y="0.458333" />
+                                <point x="0.5" y="0.0208333" />
+                                <point x="0.738636" y="0.479167" />
+                                <point x="0.738636" y="0.5" />
+                                <point x="0.988636" y="0.979167" />
+                                <point x="0.0681818" y="0.875" />
+                                <point x="0.25" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="0" name="captain sprites">
+            <object-type name="captain_feet1" sid="1876159266587217">
+                <plugin id="Sprite" />
+                <container>
+                    <type>captainSCML</type>
+                    <type>captain_feet1</type>
+                    <type>captain_eye1_000</type>
+                    <type>captain_broun_000</type>
+                    <type>captain_head</type>
+                    <type>captain_body</type>
+                    <type>captain_mustache</type>
+                    <type>captain_feet2</type>
+                    <type>captain_tube</type>
+                    <type>captain_hand</type>
+                    <type>captain_hat</type>
+                    <type>captain_eye1</type>
+                    <type>captain_broun</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4564823698898654" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.45679" y="0.528571" />
+                                <point x="0.493827" y="0.0857143" />
+                                <point x="0.925926" y="0.0857143" />
+                                <point x="0.950617" y="0.5" />
+                                <point x="0.876543" y="0.857143" />
+                                <point x="0.493827" y="1" />
+                                <point x="0.0493827" y="0.942857" />
+                                <point x="0.45679" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="captain_eye1_000" sid="5592339655274236">
+                <plugin id="Sprite" />
+                <container>
+                    <type>captainSCML</type>
+                    <type>captain_feet1</type>
+                    <type>captain_eye1_000</type>
+                    <type>captain_broun_000</type>
+                    <type>captain_head</type>
+                    <type>captain_body</type>
+                    <type>captain_mustache</type>
+                    <type>captain_feet2</type>
+                    <type>captain_tube</type>
+                    <type>captain_hand</type>
+                    <type>captain_hat</type>
+                    <type>captain_eye1</type>
+                    <type>captain_broun</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1831982501943052" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.142857" y="0.166667" />
+                                <point x="0.5" y="0" />
+                                <point x="0.857143" y="0.166667" />
+                                <point x="1" y="0.5" />
+                                <point x="0.857143" y="0.833333" />
+                                <point x="0.5" y="1" />
+                                <point x="0.142857" y="0.833333" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.214286" y="0.25" />
+                                <point x="0.5" y="0.25" />
+                                <point x="0.714286" y="0.333333" />
+                                <point x="1" y="0.5" />
+                                <point x="0.785714" y="0.75" />
+                                <point x="0.214286" y="0.75" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="captain_broun_000" sid="4919162863809349">
+                <plugin id="Sprite" />
+                <container>
+                    <type>captainSCML</type>
+                    <type>captain_feet1</type>
+                    <type>captain_eye1_000</type>
+                    <type>captain_broun_000</type>
+                    <type>captain_head</type>
+                    <type>captain_body</type>
+                    <type>captain_mustache</type>
+                    <type>captain_feet2</type>
+                    <type>captain_tube</type>
+                    <type>captain_hand</type>
+                    <type>captain_hat</type>
+                    <type>captain_eye1</type>
+                    <type>captain_broun</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="171219234045173" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.166667" y="0.285714" />
+                                <point x="0.5" y="0.0714286" />
+                                <point x="0.916667" y="0.142857" />
+                                <point x="0.958333" y="0.5" />
+                                <point x="0.833333" y="0.714286" />
+                                <point x="0.5" y="0.928571" />
+                                <point x="0.0833333" y="0.857143" />
+                                <point x="0.0416667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="captain_head" sid="9069117875464853">
+                <plugin id="Sprite" />
+                <container>
+                    <type>captainSCML</type>
+                    <type>captain_feet1</type>
+                    <type>captain_eye1_000</type>
+                    <type>captain_broun_000</type>
+                    <type>captain_head</type>
+                    <type>captain_body</type>
+                    <type>captain_mustache</type>
+                    <type>captain_feet2</type>
+                    <type>captain_tube</type>
+                    <type>captain_hand</type>
+                    <type>captain_hat</type>
+                    <type>captain_eye1</type>
+                    <type>captain_broun</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9302285480146236" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.140351" y="0.118227" />
+                                <point x="0.497076" y="0.00492611" />
+                                <point x="0.812865" y="0.157635" />
+                                <point x="0.97076" y="0.497537" />
+                                <point x="0.783626" y="0.817734" />
+                                <point x="0.497076" y="0.990148" />
+                                <point x="0.122807" y="0.896552" />
+                                <point x="0.00584795" y="0.497537" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="captain_body" sid="3894717692737879">
+                <plugin id="Sprite" />
+                <container>
+                    <type>captainSCML</type>
+                    <type>captain_feet1</type>
+                    <type>captain_eye1_000</type>
+                    <type>captain_broun_000</type>
+                    <type>captain_head</type>
+                    <type>captain_body</type>
+                    <type>captain_mustache</type>
+                    <type>captain_feet2</type>
+                    <type>captain_tube</type>
+                    <type>captain_hand</type>
+                    <type>captain_hat</type>
+                    <type>captain_eye1</type>
+                    <type>captain_broun</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5308468975629372" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.107692" y="0.160305" />
+                                <point x="0.907692" y="0.137405" />
+                                <point x="0.984615" y="0.496183" />
+                                <point x="0.887179" y="0.832061" />
+                                <point x="0.497436" y="1" />
+                                <point x="0.0871795" y="0.870229" />
+                                <point x="0" y="0.496183" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="captain_mustache" sid="6540484347222707">
+                <plugin id="Sprite" />
+                <container>
+                    <type>captainSCML</type>
+                    <type>captain_feet1</type>
+                    <type>captain_eye1_000</type>
+                    <type>captain_broun_000</type>
+                    <type>captain_head</type>
+                    <type>captain_body</type>
+                    <type>captain_mustache</type>
+                    <type>captain_feet2</type>
+                    <type>captain_tube</type>
+                    <type>captain_hand</type>
+                    <type>captain_hat</type>
+                    <type>captain_eye1</type>
+                    <type>captain_broun</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4140651035800048" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.0491803" y="0.0441176" />
+                                <point x="0.5" y="0.161765" />
+                                <point x="0.934426" y="0.0588235" />
+                                <point x="0.95082" y="0.5" />
+                                <point x="0.762295" y="0.786765" />
+                                <point x="0.5" y="0.919118" />
+                                <point x="0.188525" y="0.830882" />
+                                <point x="0.00819672" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="captain_feet2" sid="6833530674367513">
+                <plugin id="Sprite" />
+                <container>
+                    <type>captainSCML</type>
+                    <type>captain_feet1</type>
+                    <type>captain_eye1_000</type>
+                    <type>captain_broun_000</type>
+                    <type>captain_head</type>
+                    <type>captain_body</type>
+                    <type>captain_mustache</type>
+                    <type>captain_feet2</type>
+                    <type>captain_tube</type>
+                    <type>captain_hand</type>
+                    <type>captain_hat</type>
+                    <type>captain_eye1</type>
+                    <type>captain_broun</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1329620325159144" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.225" y="0.116883" />
+                                <point x="0.5" y="0.025974" />
+                                <point x="0.875" y="0.0649351" />
+                                <point x="0.875" y="0.493506" />
+                                <point x="0.675" y="0.831169" />
+                                <point x="0.5" y="0.987013" />
+                                <point x="0.4" y="0.792208" />
+                                <point x="0.15" y="0.493506" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="captain_tube" sid="9180167477420797">
+                <plugin id="Sprite" />
+                <container>
+                    <type>captainSCML</type>
+                    <type>captain_feet1</type>
+                    <type>captain_eye1_000</type>
+                    <type>captain_broun_000</type>
+                    <type>captain_head</type>
+                    <type>captain_body</type>
+                    <type>captain_mustache</type>
+                    <type>captain_feet2</type>
+                    <type>captain_tube</type>
+                    <type>captain_hand</type>
+                    <type>captain_hat</type>
+                    <type>captain_eye1</type>
+                    <type>captain_broun</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2982153953293135" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.0701754" y="0.193548" />
+                                <point x="0.497076" y="0.193548" />
+                                <point x="0.883041" y="0.322581" />
+                                <point x="0.994152" y="0.5" />
+                                <point x="0.982456" y="0.951613" />
+                                <point x="0.263158" y="0.274194" />
+                                <point x="0.526316" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="captain_hand" sid="3310171608214768">
+                <plugin id="Sprite" />
+                <container>
+                    <type>captainSCML</type>
+                    <type>captain_feet1</type>
+                    <type>captain_eye1_000</type>
+                    <type>captain_broun_000</type>
+                    <type>captain_head</type>
+                    <type>captain_body</type>
+                    <type>captain_mustache</type>
+                    <type>captain_feet2</type>
+                    <type>captain_tube</type>
+                    <type>captain_hand</type>
+                    <type>captain_hat</type>
+                    <type>captain_eye1</type>
+                    <type>captain_broun</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9128211025235136" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.190476" y="0.0689655" />
+                                <point x="0.5" y="0.00862069" />
+                                <point x="0.904762" y="0.0344828" />
+                                <point x="0.880952" y="0.5" />
+                                <point x="0.761905" y="0.913793" />
+                                <point x="0.5" y="1" />
+                                <point x="0.142857" y="0.948276" />
+                                <point x="0.261905" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="captain_hat" sid="9121320076948629">
+                <plugin id="Sprite" />
+                <container>
+                    <type>captainSCML</type>
+                    <type>captain_feet1</type>
+                    <type>captain_eye1_000</type>
+                    <type>captain_broun_000</type>
+                    <type>captain_head</type>
+                    <type>captain_body</type>
+                    <type>captain_mustache</type>
+                    <type>captain_feet2</type>
+                    <type>captain_tube</type>
+                    <type>captain_hand</type>
+                    <type>captain_hat</type>
+                    <type>captain_eye1</type>
+                    <type>captain_broun</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6001114431122815" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.118182" y="0.206349" />
+                                <point x="0.5" y="0.206349" />
+                                <point x="0.763636" y="0.412698" />
+                                <point x="0.8" y="0.492063" />
+                                <point x="0.981818" y="0.968254" />
+                                <point x="0.5" y="0.761905" />
+                                <point x="0.181818" y="0.68254" />
+                                <point x="0.0181818" y="0.492063" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="captain_eye1" sid="6258041750690595">
+                <plugin id="Sprite" />
+                <container>
+                    <type>captainSCML</type>
+                    <type>captain_feet1</type>
+                    <type>captain_eye1_000</type>
+                    <type>captain_broun_000</type>
+                    <type>captain_head</type>
+                    <type>captain_body</type>
+                    <type>captain_mustache</type>
+                    <type>captain_feet2</type>
+                    <type>captain_tube</type>
+                    <type>captain_hand</type>
+                    <type>captain_hat</type>
+                    <type>captain_eye1</type>
+                    <type>captain_broun</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5135906327540237" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.142857" y="0.166667" />
+                                <point x="0.5" y="0" />
+                                <point x="0.857143" y="0.166667" />
+                                <point x="1" y="0.5" />
+                                <point x="0.857143" y="0.833333" />
+                                <point x="0.5" y="1" />
+                                <point x="0.142857" y="0.833333" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.214286" y="0.25" />
+                                <point x="0.5" y="0.25" />
+                                <point x="0.714286" y="0.333333" />
+                                <point x="1" y="0.5" />
+                                <point x="0.785714" y="0.75" />
+                                <point x="0.214286" y="0.75" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="captain_broun" sid="2170890620358071">
+                <plugin id="Sprite" />
+                <container>
+                    <type>captainSCML</type>
+                    <type>captain_feet1</type>
+                    <type>captain_eye1_000</type>
+                    <type>captain_broun_000</type>
+                    <type>captain_head</type>
+                    <type>captain_body</type>
+                    <type>captain_mustache</type>
+                    <type>captain_feet2</type>
+                    <type>captain_tube</type>
+                    <type>captain_hand</type>
+                    <type>captain_hat</type>
+                    <type>captain_eye1</type>
+                    <type>captain_broun</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2078212401753978" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.166667" y="0.285714" />
+                                <point x="0.5" y="0.0714286" />
+                                <point x="0.916667" y="0.142857" />
+                                <point x="0.958333" y="0.5" />
+                                <point x="0.833333" y="0.714286" />
+                                <point x="0.5" y="0.928571" />
+                                <point x="0.0833333" y="0.857143" />
+                                <point x="0.0416667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Platforms" sid="9109209147233701">
             <plugin id="Sprite" />
             <behaviors>
@@ -2538,9 +3457,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="foxy_simple" sid="9369184994762402">
-            <plugin id="Spriter" />
-        </object-type>
         <object-type name="CarouselBottom" sid="8939126371207301">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -2635,6 +3551,51 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="taxiHindiSCML" sid="3033148047907549">
+            <plugin id="Spriter" />
+            <container>
+                <type>taxiHindiSCML</type>
+                <type>hindu_hand</type>
+                <type>hindu_eye1_000</type>
+                <type>hindu_body</type>
+                <type>hindu_head</type>
+                <type>hindu_mustache</type>
+                <type>hindu_eye1</type>
+                <type>hindu_brows</type>
+            </container>
+        </object-type>
+        <object-type name="veiderSCML" sid="2985628545070497">
+            <plugin id="Spriter" />
+            <container>
+                <type>veiderSCML</type>
+                <type>veider_body</type>
+                <type>veider_head</type>
+                <type>veider_eye2</type>
+                <type>veider_eye1</type>
+                <type>veider_balloons</type>
+                <type>veider_hand2</type>
+                <type>veider_hand1</type>
+                <type>veider_mouth4</type>
+            </container>
+        </object-type>
+        <object-type name="captainSCML" sid="2731104537637613">
+            <plugin id="Spriter" />
+            <container>
+                <type>captainSCML</type>
+                <type>captain_feet1</type>
+                <type>captain_eye1_000</type>
+                <type>captain_broun_000</type>
+                <type>captain_head</type>
+                <type>captain_body</type>
+                <type>captain_mustache</type>
+                <type>captain_feet2</type>
+                <type>captain_tube</type>
+                <type>captain_hand</type>
+                <type>captain_hat</type>
+                <type>captain_eye1</type>
+                <type>captain_broun</type>
+            </container>
+        </object-type>
     </object-folder>
     <families>
         <family name="foxy_simpleFamily" plugin-id="Sprite" sid="3940617487415505">
@@ -2653,8 +3614,47 @@
                 <member>foxy_simple_tail</member>
             </members>
         </family>
+        <family name="hinduFamily" plugin-id="Sprite" sid="3943177301803966">
+            <members>
+                <member>hindu_body</member>
+                <member>hindu_brows</member>
+                <member>hindu_eye1</member>
+                <member>hindu_eye1_000</member>
+                <member>hindu_hand</member>
+                <member>hindu_head</member>
+                <member>hindu_mustache</member>
+            </members>
+        </family>
+        <family name="veiderFamily" plugin-id="Sprite" sid="7986604224002253">
+            <members>
+                <member>veider_balloons</member>
+                <member>veider_body</member>
+                <member>veider_eye1</member>
+                <member>veider_eye2</member>
+                <member>veider_hand1</member>
+                <member>veider_hand2</member>
+                <member>veider_head</member>
+                <member>veider_mouth4</member>
+            </members>
+        </family>
+        <family name="captainFamily" plugin-id="Sprite" sid="3914954384912337">
+            <members>
+                <member>captain_body</member>
+                <member>captain_broun</member>
+                <member>captain_broun_000</member>
+                <member>captain_eye1</member>
+                <member>captain_eye1_000</member>
+                <member>captain_feet1</member>
+                <member>captain_feet2</member>
+                <member>captain_hand</member>
+                <member>captain_hat</member>
+                <member>captain_head</member>
+                <member>captain_mustache</member>
+                <member>captain_tube</member>
+            </members>
+        </family>
     </families>
-    <layout-folder expanded="1">
+    <layout-folder expanded="0">
         <layout>stage15.xml</layout>
         <layout>foxy_ok.xml</layout>
     </layout-folder>
@@ -2686,7 +3686,7 @@
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="1">
+    <files-folder expanded="0">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
@@ -2695,9 +3695,15 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
-        <file-folder expanded="1" name="Spriter animations">
+        <file-folder expanded="0" name="Spriter animations">
             <file name="foxy_simple.scml" />
             <file name="foxy_simple.scon" />
+            <file name="hindu.scml" />
+            <file name="hindu.scon" />
+            <file name="veider.scml" />
+            <file name="veider.scon" />
+            <file name="captain.scml" />
+            <file name="captain.scon" />
         </file-folder>
         <file name="story_script.js" />
     </files-folder>
