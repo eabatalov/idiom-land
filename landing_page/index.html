@@ -140,11 +140,12 @@
 			<div class="container">
 				<div class="row divide">
 					<div id="submitElems">
-	                		    <div class="col-sm-8 col-sm-offset-2 divide-bottom text-center">
-			                        <h1>Enter your email</h1>
-                                    <p>TO GET EARLY ACCESS</p>
-			                    </div>
-						<form class="form-inline flowuplabels" role="form" id="contactForm">
+	                	<div class="col-sm-8 col-sm-offset-2 divide-bottom text-center">
+			                <h1>Enter your email</h1>
+                            <p>TO GET EARLY ACCESS</p>
+			            </div>
+						<form class="form-inline flowuplabels" role="form" id="contactForm" onsubmit="return submitContacts(event)"
+                            method="post" action="http://idiomland.com/sendmail.php">
 							<div class="form-group col-md-4 col-sm-6 fl_wrap">
 								<label class="fl_label" for="name">Name:</label>
 								<input type="text" name="name" value="" id="name" class="form-control fl_input">
@@ -154,7 +155,7 @@
 								<input type="email" name="email" value="" id="email" class="form-control fl_input">
 							</div>
 							<div class="form-group col-md-4 col-sm-6">
-								<button type="submit" value="Send" id="submit" class="btn btn-fancy btn-block">Notify me</button>
+								<button type="submit" class="btn btn-fancy btn-block">Notify me</button>
 							</div>
 							<div class="form-group col-xs-12">
 								<div class="message">
@@ -163,8 +164,9 @@
 							</div>
 						</form>
 					</div>
-					<div id="submitSuccessElems" style="display:none;">
-						<h1>Thank you for your submission. We'll contact you soon!</h1>
+					<div id="submitSuccessElems" style="display:none;" class="col-sm-8 col-sm-offset-2 divide-bottom text-center">
+						<h1>Thank you for your submission.</h1>
+                        <h1>We'll contact you soon!</h1>
 					</div>
 				</div>
 			</div>
@@ -190,26 +192,22 @@
 		<script src="js/custom.js"></script>
 	<!--end scripts-->
     <script type="text/javascript">
-        $(function() {
-                var formId = "contactForm";
-                var jqForm = $("#" + formId);
-                var url = "http://idiomland.com/sendmail.php";
-                jqForm.submit(function(e) {
-                    e.preventDefault();
-                    $.ajax({
-                        type: "POST",
-                        url: url,
-                        data: jqForm.serialize(),
-                        success: function(data)
-                        {
-                            $("#submitElems").hide();
-                            $("#submitSuccessElems").show();
-                        }
-                    });
-
-                return false;
+        function submitContacts(e) {
+            e.preventDefault()
+            var formId = "contactForm";
+            var jqForm = $("#" + formId);
+            $.ajax({
+                type: e.currentTarget.method,
+                url: e.currentTarget.action,
+                data: jqForm.serialize(),
+                success: function(data)
+                {
+                    $("#submitElems").hide();
+                    $("#submitSuccessElems").show();
+                }
             });
-        });
+            return false;
+        };
     </script>
     </body>
 </html>
