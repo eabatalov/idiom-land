@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Carousel</name>
+    <events>
+        <event-block sid="6846032540796081">
+            <conditions>
+                <condition id="0" name="On function" sid="349314946943016" type="Function">
+                    <param id="0" name="Name">&quot;CarouselInit&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="5539290554989486" type="CarouselCapsul">
+                    <param id="0" name="Pin to">CarouselCircle</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="2534919747994077" type="CarouselPlatform">
+                    <param id="0" name="Pin to">CarouselCapsul</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6815095545891505" type="CarouselCapsulInTrigger">
+                    <param id="0" name="Pin to">CarouselCapsul</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5113616760562259">
+            <conditions>
+                <condition id="0" name="On function" sid="8234169792051273" type="Function">
+                    <param id="0" name="Name">&quot;CarouselStart&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="6316030957838913" type="CarouselCircle">
+                    <param id="0" name="Speed">90</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="9907166917114387" type="CarouselPlatform">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="588756972212031">
+            <conditions>
+                <condition id="0" name="On function" sid="8092328016986388" type="Function">
+                    <param id="0" name="Name">&quot;CarouselStop&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="9098046710771301" type="CarouselCircle">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="1233094854184156" type="CarouselPlatform">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Platform" id="12" name="Fall through" sid="7262831694657317" type="Player" />
+                <action id="0" name="Call function" sid="1308449537391064" type="Function">
+                    <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
+                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;shock&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="6664608446249873" type="System">
+                    <param id="0" name="Seconds">4.0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="6330912724838687" type="CarouselCircle">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8607284003925758">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4815685902653782" type="CarouselCapsulInTrigger">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set current stage" sid="8701483809127061" type="QuestRuntimeInterface">
+                    <param id="0" name="Value">Player.CurrentStage</param>
+                </action>
+                <action id="0" name="Call function" sid="4028133563182772" type="Function">
+                    <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;&quot;{###}&quot;foxy_in_carousel&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Bus</name>
+    <events>
+        <event-block sid="4200352952330127">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4916277523974075" type="ExitBus">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4568897959923274">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="9944040273496858" type="System">
+                            <param id="0" name="Count">10000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="2561525383474291" type="System">
+                            <param id="0" name="Seconds">0.001*loopindex</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4483913008866882">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2584566285981989" type="System">
+                                    <param id="0" name="First value">LayoutScale</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set layout angle" sid="6691653137072549" type="System">
+                                    <param id="0" name="Angle">LayoutAngle + 1</param>
+                                </action>
+                                <action id="-20" name="Set layout scale" sid="4141092590685559" type="System">
+                                    <param id="0" name="Scale">LayoutScale-0.0005</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3416399197380208">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6418906699259216" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="486452202658662" type="System">
+                                    <param id="0" name="Layout">&quot;foxy_ok&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

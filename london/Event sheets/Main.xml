@@ -6,6 +6,8 @@
         <include>SCMLSpriteBindings</include>
         <include>NPCAnimation</include>
         <include>Quest</include>
+        <include>Carousel</include>
+        <include>Bus</include>
         <event-block sid="3704540223976062">
             <conditions>
                 <condition id="-25" name="On loader layout complete" sid="1002490218619657" type="System" />
@@ -20,17 +22,9 @@
                 <action id="-1" name="Set X" sid="6571635526009744" type="CabMoveBack">
                     <param id="0" name="X">random(0, LayoutWidth)</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="4903309068526086" type="CarouselCapsul">
-                    <param id="0" name="Pin to">CarouselCircle</param>
-                    <param id="1" name="Mode">1</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="2047974023911546" type="CarouselPlatform">
-                    <param id="0" name="Pin to">CarouselCapsul</param>
-                    <param id="1" name="Mode">1</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="5099720998656089" type="CarouselCapsulInTrigger">
-                    <param id="0" name="Pin to">CarouselCapsul</param>
-                    <param id="1" name="Mode">1</param>
+                <action id="0" name="Call function" sid="9688480019624415" type="Function">
+                    <param id="0" name="Name">&quot;CarouselInit&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -68,118 +62,6 @@
                 <action id="-3" name="Set position" sid="1559922197643707" type="camera">
                     <param id="0" name="X">lerp(Self.X, Player.X, 0.02)</param>
                     <param id="1" name="Y">lerp(Self.Y, Player.Y-160, 0.02)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="4480163315802423">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="1346505064553407" type="ExitBus">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action disabled="1" id="0" name="Alert" sid="5641945424055659" type="Browser">
-                    <param id="0" name="Message">&quot;Congratulations! You&apos;re getting to the city center! See you here soon!&quot;</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="6082278866778529">
-                    <conditions>
-                        <condition id="-12" name="Repeat" sid="3960544492139121" type="System">
-                            <param id="0" name="Count">10000</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="7184120286949726" type="System">
-                            <param id="0" name="Seconds">0.001*loopindex</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="1727920849093833">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="5972380517783936" type="System">
-                                    <param id="0" name="First value">LayoutScale</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-22" name="Set layout angle" sid="5638733102437184" type="System">
-                                    <param id="0" name="Angle">LayoutAngle + 1</param>
-                                </action>
-                                <action id="-20" name="Set layout scale" sid="9275004083728039" type="System">
-                                    <param id="0" name="Scale">LayoutScale-0.0005</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3129819401359976">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="9033891658103967" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-25" name="Go to layout (by name)" sid="5277979701498282" type="System">
-                                    <param id="0" name="Layout">&quot;foxy_ok&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="1725482926755653">
-            <conditions>
-                <condition id="0" name="On function" sid="1019218664590274" type="Function">
-                    <param id="0" name="Name">&quot;CarouselStart&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Rotate" id="0" name="Set speed" sid="7407959211759154" type="CarouselCircle">
-                    <param id="0" name="Speed">90</param>
-                </action>
-                <action behavior="Solid" id="0" name="Set enabled" sid="9798439385847955" type="CarouselPlatform">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3031655749653993">
-            <conditions>
-                <condition id="0" name="On function" sid="9631598452079435" type="Function">
-                    <param id="0" name="Name">&quot;CarouselStop&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Rotate" id="0" name="Set speed" sid="2991547290386167" type="CarouselCircle">
-                    <param id="0" name="Speed">0</param>
-                </action>
-                <action behavior="Solid" id="0" name="Set enabled" sid="3495815539748387" type="CarouselPlatform">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="Platform" id="12" name="Fall through" sid="5334274331385032" type="Player" />
-                <action id="0" name="Call function" sid="1636134093638237" type="Function">
-                    <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
-                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;shock&quot;</param>
-                </action>
-                <action id="-16" name="Wait" sid="4271169311423032" type="System">
-                    <param id="0" name="Seconds">4.0</param>
-                </action>
-                <action id="-8" name="Set angle" sid="9065943565530009" type="CarouselCircle">
-                    <param id="0" name="Angle">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="9463305893869666">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="1529980216069495" type="CarouselCapsulInTrigger">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Set current stage" sid="2246066550211404" type="QuestRuntimeInterface">
-                    <param id="0" name="Value">Player.CurrentStage</param>
-                </action>
-                <action id="0" name="Call function" sid="8117737682235166" type="Function">
-                    <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;&quot;{###}&quot;foxy_in_carousel&quot;</param>
                 </action>
             </actions>
         </event-block>
