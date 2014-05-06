@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>NPCAnimation</name>
+    <events>
+        <event-block sid="5390601958740021">
+            <conditions>
+                <condition id="1" name="On any finished" sid="5763478026745865" type="captainSCML" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set animation" sid="147464087992433" type="captainSCML">
+                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                    <param id="1" name="Where to start playing this animation">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8407917826499422">
+            <conditions>
+                <condition id="1" name="On any finished" sid="6167749969755002" type="taxiHindiSCML" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set animation" sid="3876469960523393" type="taxiHindiSCML">
+                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                    <param id="1" name="Where to start playing this animation">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="82910125858042">
+            <conditions>
+                <condition id="1" name="On any finished" sid="7169600318998648" type="veiderSCML" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set animation" sid="3638829272512974" type="veiderSCML">
+                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                    <param id="1" name="Where to start playing this animation">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4868196413119031">
+            <conditions>
+                <condition id="0" name="On function" sid="9581007049566467" type="Function">
+                    <param id="0" name="Name">&quot;NPCAnimSay&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="3621518036507127" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6880604695338348">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3208075362910026" type="System">
+                            <param id="0" name="First value">NPC.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">19</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="6478250428748928" type="taxiHindiSCML">
+                            <param id="0" name="Animation">&quot;speak&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6354548322282467">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5366699400613126" type="System">
+                            <param id="0" name="First value">NPC.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">41</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="6459624490092357" type="captainSCML">
+                            <param id="0" name="Animation">&quot;speak&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6029021131133303">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="4337997012038744" type="System">
+                            <param id="0" name="First value">NPC.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">49</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="6405677206296529" type="veiderSCML">
+                            <param id="0" name="Animation">&quot;speak&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="494425058978546">
+            <conditions>
+                <condition id="0" name="On function" sid="8193652473157725" type="Function">
+                    <param id="0" name="Name">&quot;NPCAnimThink&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="2941586402129285" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="2690262683075">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="2980260130262995" type="System">
+                            <param id="0" name="First value">NPC.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">19</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="379571650069083" type="taxiHindiSCML">
+                            <param id="0" name="Animation">&quot;speak&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="7896535353929736">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3022006235332686" type="System">
+                            <param id="0" name="First value">NPC.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">41</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="5212529477874348" type="captainSCML">
+                            <param id="0" name="Animation">&quot;speak&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="2228358537705427">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="4150779274749982" type="System">
+                            <param id="0" name="First value">NPC.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">49</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="7149659245758219" type="veiderSCML">
+                            <param id="0" name="Animation">&quot;speak&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

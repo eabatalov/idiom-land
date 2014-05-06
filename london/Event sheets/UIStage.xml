@@ -81,54 +81,11 @@
                                     <param id="0" name="Animation">&quot;Speak&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="1704179595407417" type="Function">
+                                    <param id="0" name="Name">&quot;NPCAnimSay&quot;</param>
+                                    <param id="1" name="Parameter {n}">NPC.UID</param>
+                                </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="7775000575531708">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="5673119112561938" type="System">
-                                            <param id="0" name="First value">NPC.UID</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">19</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set animation" sid="2537117629083115" type="taxiHindiSCML">
-                                            <param id="0" name="Animation">&quot;speak&quot;</param>
-                                            <param id="1" name="Where to start playing this animation">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="312148172080282">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="8263146764610855" type="System">
-                                            <param id="0" name="First value">NPC.UID</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">41</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set animation" sid="7118504261933472" type="captainSCML">
-                                            <param id="0" name="Animation">&quot;speak&quot;</param>
-                                            <param id="1" name="Where to start playing this animation">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="4714951444151175">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="674395940042073" type="System">
-                                            <param id="0" name="First value">NPC.UID</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">49</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set animation" sid="6794635922703084" type="veiderSCML">
-                                            <param id="0" name="Animation">&quot;speak&quot;</param>
-                                            <param id="1" name="Where to start playing this animation">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                         <event-block sid="6315473732246069">
                             <conditions>
@@ -142,6 +99,10 @@
                                 <action id="4" name="Set animation" sid="7118728048350618" type="NPCSpeechBg">
                                     <param id="0" name="Animation">&quot;Think&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6467516756852917" type="Function">
+                                    <param id="0" name="Name">&quot;NPCAnimThink&quot;</param>
+                                    <param id="1" name="Parameter {n}">NPC.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -489,7 +450,7 @@
         <event-group description="" sid="6702021473764103" title="PlayerUI">
             <sub-events>
                 <comment>XXX Due to defered &quot;TextAutoResize new text was drawn&quot; here we have race. If &quot;continue&quot; is triggered as next ui event then we loose QuestRuntimeInterface fileds values. Thus we should readl all the QuestRuntimeInterface values before &quot;continue&quot; can be generated.</comment>
-                <event-block collapsed="1" sid="566202086767859">
+                <event-block sid="566202086767859">
                     <conditions>
                         <condition id="0" name="On function" sid="1757451801164955" type="Function">
                             <param id="0" name="Name">&quot;ShowPlayerPhrase&quot;</param>
@@ -517,6 +478,10 @@
                                     <param id="0" name="Animation">&quot;Speak&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="7067417842225699" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerSay&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="5047793466862367">
@@ -536,7 +501,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="2153683620744093">
+                <event-block sid="2153683620744093">
                     <conditions>
                         <condition behavior="TextAutoResize" id="0" name="New text redrawn" sid="5342987844029183" type="PlayerPhraseTxt" />
                     </conditions>
@@ -586,10 +551,6 @@
                                 </action>
                                 <action id="-15" name="Set visible" sid="1056599444429625" type="PlayerSpeechBg">
                                     <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="7067417842225699" type="Function">
-                                    <param id="0" name="Name">&quot;AnimPlayerSay&quot;</param>
-                                    <param id="1" name="Parameter {n}">Player.UID</param>
                                 </action>
                             </actions>
                         </event-block>
