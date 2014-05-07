@@ -10,12 +10,11 @@
         <include>Bus</include>
         <event-block sid="3704540223976062">
             <conditions>
-                <condition id="-25" name="On loader layout complete" sid="1002490218619657" type="System" />
+                <condition id="0" name="On function" sid="1002490218619657" type="Function">
+                    <param id="0" name="Name">&quot;InitGame&quot;</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="3" name="Setup quest script URL." sid="8826336374758966" type="QuestEngine">
-                    <param id="0" name="Quest script file URL">&quot;story_script.js&quot;</param>
-                </action>
                 <action id="-1" name="Set X" sid="8962906453398515" type="Scooter">
                     <param id="0" name="X">random(0, LayoutWidth)</param>
                 </action>
@@ -25,6 +24,10 @@
                 <action id="0" name="Call function" sid="9688480019624415" type="Function">
                     <param id="0" name="Name">&quot;CarouselInit&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="8930605218157595" type="Function">
+                    <param id="0" name="Name">&quot;StartGame&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;story_script.js&quot;</param>
                 </action>
             </actions>
         </event-block>

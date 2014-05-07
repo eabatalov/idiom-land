@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>SCMLSpriteBindings</name>
     <events>
+        <variable constant="0" name="ANIMS_TO_INIT" sid="4649144461304401" static="0" type="number">4</variable>
         <comment>Define animation sprite bindings of your script here</comment>
         <event-block any="1" sid="9016563247743718">
             <conditions>
@@ -61,8 +62,8 @@
                     <param id="0" name="Object">foxy_simple_hand1</param>
                     <param id="1" name="Name">&quot;hand1&quot;</param>
                 </action>
-                <action id="0" name="Call function" sid="4820897915361507" type="Function">
-                    <param id="0" name="Name">&quot;initAnimation&quot;</param>
+                <action id="0" name="Call function" sid="6059002918967175" type="Function">
+                    <param id="0" name="Name">&quot;AnimInited&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
@@ -106,6 +107,10 @@
                 <action id="-4" name="Set position to another object" sid="3971297747776503" type="taxiHindiSCML">
                     <param id="0" name="Object">NPC</param>
                     <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="9720405317845086" type="Function">
+                    <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -152,6 +157,10 @@
                 <action id="-4" name="Set position to another object" sid="9465450781200583" type="veiderSCML">
                     <param id="0" name="Object">NPC</param>
                     <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="2917882733864812" type="Function">
+                    <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -214,6 +223,10 @@
                 <action id="-4" name="Set position to another object" sid="9329464008465579" type="captainSCML">
                     <param id="0" name="Object">NPC</param>
                     <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="5096084481424379" type="Function">
+                    <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>

@@ -677,7 +677,7 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-folder expanded="1" name="Player">
+            <object-folder expanded="0" name="Player">
                 <object-folder expanded="0" name="Speech">
                     <object-type name="PlayerAns1Bg" sid="1149573424460968">
                         <plugin id="Sprite" />
@@ -1414,6 +1414,9 @@
             </object-type>
             <object-type name="Touch" sid="3923997852658944">
                 <plugin id="Touch" />
+            </object-type>
+            <object-type name="LayoutLoadingLabel" sid="8753478987758558">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="Animation">
@@ -3654,14 +3657,14 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout>stage15.xml</layout>
         <layout>foxy_ok.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-folder expanded="1" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
-            <event-sheet>Initialization.xml</event-sheet>
+            <event-sheet>Bootstrap.xml</event-sheet>
             <event-sheet>PlayerInput.xml</event-sheet>
             <event-sheet>UInit.xml</event-sheet>
             <event-sheet>ActionProc.xml</event-sheet>
