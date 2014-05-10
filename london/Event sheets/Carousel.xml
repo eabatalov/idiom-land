@@ -3,83 +3,136 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Carousel</name>
     <events>
-        <event-block sid="6846032540796081">
-            <conditions>
-                <condition id="0" name="On function" sid="349314946943016" type="Function">
-                    <param id="0" name="Name">&quot;CarouselInit&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="5539290554989486" type="CarouselCapsul">
-                    <param id="0" name="Pin to">CarouselCircle</param>
-                    <param id="1" name="Mode">1</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="2534919747994077" type="CarouselPlatform">
-                    <param id="0" name="Pin to">CarouselCapsul</param>
-                    <param id="1" name="Mode">1</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="6815095545891505" type="CarouselCapsulInTrigger">
-                    <param id="0" name="Pin to">CarouselCapsul</param>
-                    <param id="1" name="Mode">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5113616760562259">
-            <conditions>
-                <condition id="0" name="On function" sid="8234169792051273" type="Function">
-                    <param id="0" name="Name">&quot;CarouselStart&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Rotate" id="0" name="Set speed" sid="6316030957838913" type="CarouselCircle">
-                    <param id="0" name="Speed">90</param>
-                </action>
-                <action behavior="Solid" id="0" name="Set enabled" sid="9907166917114387" type="CarouselPlatform">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="588756972212031">
-            <conditions>
-                <condition id="0" name="On function" sid="8092328016986388" type="Function">
-                    <param id="0" name="Name">&quot;CarouselStop&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Rotate" id="0" name="Set speed" sid="9098046710771301" type="CarouselCircle">
-                    <param id="0" name="Speed">0</param>
-                </action>
-                <action behavior="Solid" id="0" name="Set enabled" sid="1233094854184156" type="CarouselPlatform">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="Platform" id="12" name="Fall through" sid="7262831694657317" type="Player" />
-                <action id="0" name="Call function" sid="1308449537391064" type="Function">
-                    <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
-                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;shock&quot;</param>
-                </action>
-                <action id="-16" name="Wait" sid="6664608446249873" type="System">
-                    <param id="0" name="Seconds">4.0</param>
-                </action>
-                <action id="-8" name="Set angle" sid="6330912724838687" type="CarouselCircle">
-                    <param id="0" name="Angle">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8607284003925758">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="4815685902653782" type="CarouselCapsulInTrigger">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Set current stage" sid="8701483809127061" type="QuestRuntimeInterface">
-                    <param id="0" name="Value">Player.CurrentStage</param>
-                </action>
-                <action id="0" name="Call function" sid="4028133563182772" type="Function">
-                    <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;&quot;{###}&quot;foxy_in_carousel&quot;</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="7166246526774973" title="Group">
+            <sub-events>
+                <variable constant="0" name="IS_CAROUSEL_RUNNING" sid="8253679122803156" static="1" type="number">0</variable>
+                <event-block sid="6846032540796081">
+                    <conditions>
+                        <condition id="0" name="On function" sid="349314946943016" type="Function">
+                            <param id="0" name="Name">&quot;CarouselInit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5539290554989486" type="CarouselCapsul">
+                            <param id="0" name="Pin to">CarouselCircle</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="2534919747994077" type="CarouselCapsulWalls">
+                            <param id="0" name="Pin to">CarouselCapsul</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="6815095545891505" type="CarouselCapsulInTrigger">
+                            <param id="0" name="Pin to">CarouselCapsul</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="7141334246174271" type="CarouselCapsulFloor">
+                            <param id="0" name="Pin to">CarouselCapsul</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5338006892177045" type="CarouselCapsulRoof">
+                            <param id="0" name="Pin to">CarouselCapsul</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5113616760562259">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8234169792051273" type="Function">
+                            <param id="0" name="Name">&quot;CarouselStart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Rotate" id="0" name="Set speed" sid="6316030957838913" type="CarouselCircle">
+                            <param id="0" name="Speed">90</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="9907166917114387" type="CarouselCapsulWalls">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="905652677744202" type="CarouselCapsulFloor">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="304466431460136" type="System">
+                            <param id="0" name="Variable">IS_CAROUSEL_RUNNING</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="588756972212031">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8092328016986388" type="Function">
+                            <param id="0" name="Name">&quot;CarouselStop&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Rotate" id="0" name="Set speed" sid="9098046710771301" type="CarouselCircle">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="733988860859249" type="System">
+                            <param id="0" name="Variable">IS_CAROUSEL_RUNNING</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="1233094854184156" type="CarouselCapsulWalls">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="8491239951149981" type="CarouselCapsulFloor">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="5710367243930116" type="CarouselCapsulFloor">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="5962851909023277" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1308449537391064" type="Function">
+                            <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
+                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;shock&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6664608446249873" type="System">
+                            <param id="0" name="Seconds">4.0</param>
+                        </action>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="9789226126006955" type="CarouselCapsulFloor">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="6330912724838687" type="CarouselCircle">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8607284003925758">
+                    <conditions>
+                        <condition disabled="1" id="0" name="On collision with another object" sid="1104970755460449" type="CarouselCapsulInTrigger">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="5562444160196426" type="CarouselCapsulInTrigger">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4028133563182772" type="Function">
+                            <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;&quot;{###}&quot;foxy_in_carousel&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4447199429573666">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5021307423494691" type="System">
+                            <param id="0" name="Variable">IS_CAROUSEL_RUNNING</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="691102079211822" type="Player">
+                            <param id="0" name="Object">CarouselCapsul</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="1081618723780826" type="Player">
+                            <param id="0" name="Object">CarouselCapsul</param>
+                            <param id="1" name="Image point (optional)">&quot;FoxyIdealPoint&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

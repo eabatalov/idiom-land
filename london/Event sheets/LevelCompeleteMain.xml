@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelCompeleteMain</name>
+    <events>
+        <include>UIStage</include>
+        <include>SCMLSpriteBindings</include>
+        <event-block sid="6071663212213">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7380802923572911" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="2571247644791632" type="System">
+                    <param id="0" name="Width">400</param>
+                    <param id="1" name="Height">300</param>
+                </action>
+                <action id="0" name="Call function" sid="7973502782543051" type="Function">
+                    <param id="0" name="Name">&quot;HidePlayerUI&quot;</param>
+                    <param id="1" name="Parameter {n}">Player.UID</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

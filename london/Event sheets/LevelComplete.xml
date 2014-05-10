@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelComplete</name>
+    <events>
+        <event-block sid="7656592145797783">
+            <conditions>
+                <condition id="0" name="On function" sid="7928718213369863" type="Function">
+                    <param id="0" name="Name">&quot;LevelComplete&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1990080099523016">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="6498566207823473" type="System">
+                            <param id="0" name="Count">10000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="2945186729297469" type="System">
+                            <param id="0" name="Seconds">0.001*loopindex</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2173874177028295">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="6641148668407682" type="System">
+                                    <param id="0" name="First value">LayoutScale</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set layout angle" sid="2108442055159802" type="System">
+                                    <param id="0" name="Angle">LayoutAngle + 1</param>
+                                </action>
+                                <action id="-20" name="Set layout scale" sid="9742712761311933" type="System">
+                                    <param id="0" name="Scale">LayoutScale-0.0005</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1937136687106889">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5131814035236663" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="7832584601920943" type="System">
+                                    <param id="0" name="Layout">&quot;LevelComplete&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

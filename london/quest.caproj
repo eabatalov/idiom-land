@@ -42,7 +42,7 @@
         <height>1200</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
-    <first-layout>stage15</first-layout>
+    <first-layout>Main</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -57,7 +57,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-folder expanded="0" name="Quest">
             <object-folder expanded="0" name="NPC">
                 <object-type name="NPC" sid="2782814196772796">
@@ -3508,6 +3508,7 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4449942681996644" speed="5">
                     <frame duration="1" hotspotX="0.501706" hotspotY="0.503704">
+                        <image-point name="FoxyIdealPoint" x="0.494881" y="-0.281481" />
                         <collision-poly>
                             <point x="0.0170648" y="0.037037" />
                             <point x="0.498294" y="0.348148" />
@@ -3522,7 +3523,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="CarouselPlatform" sid="1194102321930865">
+        <object-type name="CarouselCapsulWalls" sid="1194102321930865">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Pin" sid="9864341012748301">
@@ -3530,9 +3531,6 @@
                 </behavior-type>
                 <behavior-type name="Solid" sid="8150542901781491">
                     <behavior id="solid" />
-                </behavior-type>
-                <behavior-type name="Jumpthru" sid="9121656772408063">
-                    <behavior id="jumpthru" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -3599,6 +3597,74 @@
                 <type>captain_broun</type>
             </container>
         </object-type>
+        <object-type name="FoxySpeech" sid="8092447796273613">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2049339548762781" speed="5">
+                    <frame duration="1" hotspotX="0.500998" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0558882" y="0.0804598" />
+                            <point x="0.499002" y="0.0172414" />
+                            <point x="0.922156" y="0.112069" />
+                            <point x="0.998004" y="0.5" />
+                            <point x="0.914172" y="0.876437" />
+                            <point x="0.499002" y="0.876437" />
+                            <point x="0.0239521" y="0.965517" />
+                            <point x="0.00199601" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="2509880314560422">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="FoxySpeechText" sid="56095791430872">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite" sid="4753475989987774">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1162504087776161" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CarouselCapsulFloor" sid="3230987187143853">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="41350905977455">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Jumpthru" sid="1855644666032532">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="3324694611138566">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1355127026646299" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CarouselCapsulRoof" sid="4961900654075226">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="4966613924472568">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="9199815593323228">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5145011675507065" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="foxy_simpleFamily" plugin-id="Sprite" sid="3940617487415505">
@@ -3658,8 +3724,8 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout>stage15.xml</layout>
-        <layout>foxy_ok.xml</layout>
+        <layout>Main.xml</layout>
+        <layout>LevelComplete.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-folder expanded="1" name="Quest">
@@ -3675,10 +3741,13 @@
         <event-folder expanded="0" name="Stages">
             <event-sheet>Carousel.xml</event-sheet>
             <event-sheet>Bus.xml</event-sheet>
+            <event-sheet>LevelComplete.xml</event-sheet>
+        </event-folder>
+        <event-folder expanded="0" name="LevelComplete">
+            <event-sheet>LevelCompeleteMain.xml</event-sheet>
         </event-folder>
         <event-sheet>SCMLSpriteBindings.xml</event-sheet>
         <event-sheet>Main.xml</event-sheet>
-        <event-sheet>FoxyOk.xml</event-sheet>
         <event-sheet>NPCAnimation.xml</event-sheet>
     </event-folder>
     <global-instances>
