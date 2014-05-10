@@ -2576,12 +2576,217 @@
 						"props": {}
 					}
 				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 488,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 488,
+						"type": 9,
+						"label": "intro",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							574
+						],
+						"props": {
+							"name": "intro",
+							"objs": [
+								"Player"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 489,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							574,
+							580
+						],
+						"outCondIds": [
+							575,
+							582
+						],
+						"props": {
+							"objs": [
+								"Player"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 490,
+						"type": 1,
+						"label": "1",
+						"continue": true,
+						"inCondIds": [
+							575,
+							581
+						],
+						"outCondIds": [
+							576
+						],
+						"props": {
+							"id": "Player",
+							"text": "So my editor told me to perform an interview with Shmittles band",
+							"phraseType": "THINK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 491,
+						"type": 6,
+						"label": "7 sec",
+						"continue": true,
+						"inCondIds": [
+							576
+						],
+						"outCondIds": [
+							577
+						],
+						"props": {
+							"secs": 7
+						}
+					},
+					{
+						"ver": 1,
+						"id": 492,
+						"type": 1,
+						"label": "2",
+						"continue": true,
+						"inCondIds": [
+							577
+						],
+						"outCondIds": [
+							578
+						],
+						"props": {
+							"id": "Player",
+							"text": "They play a gig in the city center this night. So I need to get their some way.",
+							"phraseType": "THINK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 493,
+						"type": 6,
+						"label": "7 sec",
+						"continue": true,
+						"inCondIds": [
+							578
+						],
+						"outCondIds": [
+							579
+						],
+						"props": {
+							"secs": 7
+						}
+					},
+					{
+						"ver": 1,
+						"id": 494,
+						"type": 1,
+						"label": "3",
+						"continue": false,
+						"inCondIds": [
+							579
+						],
+						"outCondIds": [
+							580
+						],
+						"props": {
+							"id": "Player",
+							"text": "I have 200 coins for my traveling expenses. Need to spend them wisely. Maybe take a taxi?",
+							"phraseType": "THINK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 495,
+						"type": -1,
+						"label": "Player click",
+						"continue": true,
+						"inCondIds": [
+							582
+						],
+						"outCondIds": [
+							581
+						],
+						"props": {}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 574,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 575,
+						"type": 10,
+						"props": {
+							"name": "show_intro"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 576,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 577,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 578,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 579,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 580,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 581,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 582,
+						"type": 2,
+						"props": {
+							"id": "Player"
+						}
+					}
+				]
 			}
 		]
 	},
 	"scriptEditor": {
 		"ver": 1,
-		"currentStageId": 10,
+		"currentStageId": 488,
 		"stageEditors": [
 			{
 				"ver": 1,
@@ -4006,7 +4211,7 @@
 					91,
 					92
 				],
-				"scale": 0.40000000000000013,
+				"scale": 0.10000000000000014,
 				"pos": {
 					"x": 144,
 					"y": 248
@@ -4235,7 +4440,7 @@
 					180,
 					181
 				],
-				"scale": 0.5000000000000001,
+				"scale": 0.10000000000000014,
 				"pos": {
 					"x": 68,
 					"y": 109
@@ -4523,7 +4728,7 @@
 					130,
 					131
 				],
-				"scale": 0.5000000000000001,
+				"scale": 0.10000000000000014,
 				"pos": {
 					"x": 170,
 					"y": 147
@@ -5083,10 +5288,217 @@
 					168,
 					169
 				],
-				"scale": 0.5000000000000001,
+				"scale": 0.10000000000000014,
 				"pos": {
 					"x": 139,
 					"y": 57
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 488,
+						"x": 473.5,
+						"y": -194.5
+					},
+					{
+						"ver": 1,
+						"nodeId": 489,
+						"x": 484,
+						"y": 85
+					},
+					{
+						"ver": 1,
+						"nodeId": 490,
+						"x": 784,
+						"y": 78
+					},
+					{
+						"ver": 1,
+						"nodeId": 491,
+						"x": 793.0000000000001,
+						"y": 511
+					},
+					{
+						"ver": 1,
+						"nodeId": 492,
+						"x": 465.25,
+						"y": 504.25000000000006
+					},
+					{
+						"ver": 1,
+						"nodeId": 493,
+						"x": 175.99999999999994,
+						"y": 509.25000000000006
+					},
+					{
+						"ver": 1,
+						"nodeId": 494,
+						"x": 174.60714285714283,
+						"y": 78.1785714285715
+					},
+					{
+						"ver": 1,
+						"nodeId": 495,
+						"x": 775.7142857142854,
+						"y": -178.57142857142858
+					}
+				],
+				"nodeIds": [
+					488,
+					489,
+					490,
+					491,
+					492,
+					493,
+					494,
+					495
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 574,
+						"points": {
+							"src": {
+								"x": 553.5,
+								"y": -114.5
+							},
+							"dst": {
+								"x": 564,
+								"y": 165
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 575,
+						"points": {
+							"src": {
+								"x": 564,
+								"y": 165
+							},
+							"dst": {
+								"x": 864,
+								"y": 158
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 576,
+						"points": {
+							"src": {
+								"x": 864,
+								"y": 158
+							},
+							"dst": {
+								"x": 873.0000000000001,
+								"y": 591
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 577,
+						"points": {
+							"src": {
+								"x": 873.0000000000001,
+								"y": 591
+							},
+							"dst": {
+								"x": 545.25,
+								"y": 584.25
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 578,
+						"points": {
+							"src": {
+								"x": 545.25,
+								"y": 584.25
+							},
+							"dst": {
+								"x": 255.99999999999994,
+								"y": 589.25
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 579,
+						"points": {
+							"src": {
+								"x": 255.99999999999994,
+								"y": 589.25
+							},
+							"dst": {
+								"x": 254.60714285714283,
+								"y": 158.1785714285715
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 580,
+						"points": {
+							"src": {
+								"x": 254.60714285714283,
+								"y": 158.1785714285715
+							},
+							"dst": {
+								"x": 564,
+								"y": 165
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 581,
+						"points": {
+							"src": {
+								"x": 855.7142857142854,
+								"y": -98.57142857142858
+							},
+							"dst": {
+								"x": 864,
+								"y": 158
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 582,
+						"points": {
+							"src": {
+								"x": 564,
+								"y": 165
+							},
+							"dst": {
+								"x": 855.7142857142854,
+								"y": -98.57142857142858
+							}
+						}
+					}
+				],
+				"condIds": [
+					574,
+					575,
+					576,
+					577,
+					578,
+					579,
+					580,
+					581,
+					582
+				],
+				"scale": 0.7000000000000001,
+				"pos": {
+					"x": 164,
+					"y": 206
 				}
 			}
 		],
@@ -5096,7 +5508,8 @@
 			12,
 			14,
 			16,
-			18
+			18,
+			488
 		]
 	}
 }
