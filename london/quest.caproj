@@ -57,7 +57,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="0" name="Quest">
             <object-folder expanded="0" name="NPC">
                 <object-type name="NPC" sid="2782814196772796">
@@ -1417,6 +1417,70 @@
             </object-type>
             <object-type name="LayoutLoadingLabel" sid="8753478987758558">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="ControlUp" sid="8380257387059013">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="2924382812522525" speed="5">
+                        <frame duration="1" hotspotX="0.584158" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.277228" y="0.25" />
+                                <point x="0.00990107" y="0.242063" />
+                                <point x="0.475247" y="0.00396825" />
+                                <point x="0.970297" y="0.218254" />
+                                <point x="0.683168" y="0.242064" />
+                                <point x="0.683168" y="0.996032" />
+                                <point x="0.277228" y="0.996032" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="9950322753922481" speed="5">
+                        <frame duration="1" hotspotX="0.584158" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.277228" y="0.25" />
+                                <point x="0.00990107" y="0.242063" />
+                                <point x="0.475247" y="0.00396825" />
+                                <point x="0.970297" y="0.218254" />
+                                <point x="0.683168" y="0.242064" />
+                                <point x="0.683168" y="0.996032" />
+                                <point x="0.277228" y="0.996032" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ControlRight" sid="348121376701765">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="6306938369007922" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.566265" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="971839466639553" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.566265" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ControlLeft" sid="5845369277048468">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="253882372003514" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.705357">
+                            <collision-poly>
+                                <point x="0.206349" y="0.0089286" />
+                                <point x="0.228175" y="0.0267857" />
+                                <point x="0.234127" y="0.361607" />
+                                <point x="0.990079" y="0.352678" />
+                                <point x="0.994048" y="0.647321" />
+                                <point x="0.232143" y="0.665179" />
+                                <point x="0.206349" y="1" />
+                                <point x="0" y="0.540179" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="6103354380601405" speed="5">
+                        <frame duration="1" hotspotX="0.496032" hotspotY="1.11607" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="Animation">
@@ -3723,12 +3787,12 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout>Main.xml</layout>
         <layout>LevelComplete.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="0" name="Quest">
+        <event-folder expanded="1" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Bootstrap.xml</event-sheet>
             <event-sheet>PlayerInput.xml</event-sheet>
@@ -3738,7 +3802,7 @@
             <event-sheet>UIMisc.xml</event-sheet>
             <event-sheet>PlayerAnimation.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="1" name="Stages">
+        <event-folder expanded="0" name="Stages">
             <event-sheet>Carousel.xml</event-sheet>
             <event-sheet>Bus.xml</event-sheet>
             <event-sheet>LevelComplete.xml</event-sheet>
