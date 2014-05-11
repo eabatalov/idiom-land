@@ -72,12 +72,12 @@
             </actions>
         </event-block>
         <comment>Smooth camera&#x0D;&#x0A;Disable as we haven&apos;t made it work without bugs yet.</comment>
-        <event-block disabled="1" sid="1129006647175923">
+        <event-block sid="1129006647175923">
             <conditions>
                 <condition id="-1" name="Every tick" sid="1149080068650859" type="System" />
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="1559922197643707" type="camera">
+                <action disabled="1" id="-3" name="Set position" sid="1559922197643707" type="camera">
                     <param id="0" name="X">lerp(Self.X, Player.X, 0.02)</param>
                     <param id="1" name="Y">lerp(Self.Y, Player.Y-160, 0.02)</param>
                 </action>
