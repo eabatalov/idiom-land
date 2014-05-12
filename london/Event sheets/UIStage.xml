@@ -52,6 +52,29 @@
         </event-block>
         <event-group description="" sid="6888331275258145" title="NPCUI">
             <sub-events>
+                <comment>XXX: this every tick &quot;pinning&quot; is needed because construct has some bugs in computation of special sprite points.&#x0D;&#x0A;Construct return invalid values and we pin to them. But almost all the time Construct returns good values. This everytick pinning allows us to use this valid values.</comment>
+                <event-block sid="2604798924698626">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="5358555757550481" type="System" />
+                        <condition id="-11" name="For Each" sid="410733425483563" type="System">
+                            <param id="0" name="Object">NPC</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="9466955404616293" type="NPCSpeechBg">
+                            <param id="0" name="X">NPC.ImagePointX(&quot;SpeechOrigin&quot;) - (NPCSpeechBg.ImagePointX(&quot;Cock&quot;) - NPCSpeechBg.X)</param>
+                            <param id="1" name="Y">NPC.ImagePointY(&quot;SpeechOrigin&quot;) - (NPCSpeechBg.ImagePointY(&quot;Cock&quot;) - NPCSpeechBg.Y)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="9066857514652703" type="NPCPhraseBg">
+                            <param id="0" name="X">NPCSpeechBg.X + NPC_PHRASE_BG_X</param>
+                            <param id="1" name="Y">NPCSpeechBg.Y + NPC_PHRASE_BG_Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="5651104778948605" type="NPCPhraseTxt">
+                            <param id="0" name="X">NPCSpeechBg.X + NPC_PHRASE_TXT_X</param>
+                            <param id="1" name="Y">NPCSpeechBg.Y + NPC_PHRASE_TXT_Y</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="2078795932936655">
                     <conditions>
                         <condition id="0" name="On function" sid="6830635473425752" type="Function">
@@ -65,33 +88,9 @@
                         <action id="0" name="Set text" sid="9312399705115263" type="NPCPhraseTxt">
                             <param id="0" name="Text">QuestRuntimeInterface.getText</param>
                         </action>
-                        <action id="-3" name="Set position" sid="7868530102362104" type="NPCSpeechBg">
-                            <param id="0" name="X">NPC.ImagePointX(&quot;SpeechOrigin&quot;) - (NPCSpeechBg.ImagePointX(&quot;Cock&quot;) - NPCSpeechBg.X)</param>
-                            <param id="1" name="Y">NPC.ImagePointY(&quot;SpeechOrigin&quot;) - (NPCSpeechBg.ImagePointY(&quot;Cock&quot;) - NPCSpeechBg.Y)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="90978099077454" type="NPCPhraseBg">
-                            <param id="0" name="X">NPCSpeechBg.X + NPC_PHRASE_BG_X</param>
-                            <param id="1" name="Y">NPCSpeechBg.Y + NPC_PHRASE_BG_Y</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="9578602202423217" type="NPCPhraseTxt">
-                            <param id="0" name="X">NPCSpeechBg.X + NPC_PHRASE_TXT_X</param>
-                            <param id="1" name="Y">NPCSpeechBg.Y + NPC_PHRASE_TXT_Y</param>
-                        </action>
                         <action id="-25" name="Move to bottom" sid="4487465092045365" type="NPCPhraseTxt" />
                         <action id="-25" name="Move to bottom" sid="3260745429109428" type="NPCPhraseBg" />
                         <action id="-25" name="Move to bottom" sid="4021589683031011" type="NPCSpeechBg" />
-                        <action behavior="Pin" id="0" name="Pin to object" sid="4014684390570518" type="NPCSpeechBg">
-                            <param id="0" name="Pin to">NPCPinPoint</param>
-                            <param id="1" name="Mode">1</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="6683498061665812" type="NPCPhraseTxt">
-                            <param id="0" name="Pin to">NPCPinPoint</param>
-                            <param id="1" name="Mode">1</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="1668378846270355" type="NPCPhraseBg">
-                            <param id="0" name="Pin to">NPCPinPoint</param>
-                            <param id="1" name="Mode">1</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="839835481329796" type="NPCPhraseBg">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -428,6 +427,9 @@
                 <event-block sid="5619469661584902">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="9925005728499669" type="System" />
+                        <condition id="-11" name="For Each" sid="6294710473393525" type="System">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="2978384373826769" type="PlayerSpeechBg">
