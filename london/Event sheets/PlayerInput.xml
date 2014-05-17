@@ -5,7 +5,7 @@
     <events>
         <comment>Block player input on start until game was inited</comment>
         <variable constant="0" name="BlockPlayerInput" sid="4976819164673977" static="0" type="number">1</variable>
-        <event-group description="" sid="545184742850449" title="Touch">
+        <event-group collapsed="1" description="" sid="545184742850449" title="Touch">
             <sub-events>
                 <event-block sid="2646781791677467">
                     <conditions>
@@ -94,9 +94,23 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="2473913933558351">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="3301879435694193" type="Touch">
+                                            <param id="0" name="Object">NPCSpeechBg</param>
+                                        </condition>
+                                        <condition id="-9" name="Is visible" sid="521834540177322" type="NPCSpeechBg" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3409483948389904" type="Function">
+                                            <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;NEXT&quot;{###}NPC.NpcIDInStage</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="2379961360243928" title="Player">
+                        <event-group collapsed="1" description="" sid="2379961360243928" title="Player">
                             <sub-events>
                                 <event-block sid="9325264978992444">
                                     <conditions>
@@ -165,6 +179,20 @@
                                         <action id="0" name="Call function" sid="7422782588932453" type="Function">
                                             <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;ANSWER4_CLICKED&quot;{###}&quot;Player&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4061100796901881">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="6688434562641269" type="Touch">
+                                            <param id="0" name="Object">PlayerSpeechBg</param>
+                                        </condition>
+                                        <condition id="-9" name="Is visible" sid="5947093244957658" type="PlayerSpeechBg" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="5407902195624245" type="Function">
+                                            <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;NEXT&quot;{###}&quot;Player&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
