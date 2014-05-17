@@ -53,12 +53,12 @@
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">CocoonJS native</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="0" name="Quest">
+        <object-folder expanded="1" name="Quest">
             <object-folder expanded="0" name="NPC">
                 <object-type name="NPC" sid="2782814196772796">
                     <plugin id="Sprite" />
@@ -662,7 +662,7 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-folder expanded="0" name="Player">
+            <object-folder expanded="1" name="Player">
                 <object-folder expanded="0" name="Speech">
                     <object-type name="PlayerAns1Bg" sid="1149573424460968">
                         <plugin id="Sprite" />
@@ -3974,12 +3974,12 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="1">
+    <layout-folder expanded="0">
         <layout>Main.xml</layout>
         <layout>LevelComplete.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
-        <event-folder expanded="1" name="Quest">
+    <event-folder expanded="0">
+        <event-folder expanded="0" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Bootstrap.xml</event-sheet>
             <event-sheet>PlayerInput.xml</event-sheet>
