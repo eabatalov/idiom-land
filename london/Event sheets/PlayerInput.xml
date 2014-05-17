@@ -5,7 +5,7 @@
     <events>
         <comment>Block player input on start until game was inited</comment>
         <variable constant="0" name="BlockPlayerInput" sid="4976819164673977" static="0" type="number">1</variable>
-        <event-group collapsed="1" description="" sid="545184742850449" title="Touch">
+        <event-group description="" sid="545184742850449" title="Touch">
             <sub-events>
                 <event-block sid="2646781791677467">
                     <conditions>
@@ -17,7 +17,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-group collapsed="1" description="" sid="1401962210358661" title="NPC">
+                        <event-group description="" sid="1401962210358661" title="NPC">
                             <sub-events>
                                 <event-block sid="3455966220737066">
                                     <conditions>
@@ -94,15 +94,15 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="2473913933558351">
+                                <event-block sid="1729379983185067">
                                     <conditions>
-                                        <condition id="3" name="On touched object" sid="3301879435694193" type="Touch">
+                                        <condition id="3" name="On touched object" sid="222880269130967" type="Touch">
                                             <param id="0" name="Object">NPCSpeechBg</param>
                                         </condition>
-                                        <condition id="-9" name="Is visible" sid="521834540177322" type="NPCSpeechBg" />
+                                        <condition id="-9" name="Is visible" sid="281866823687443" type="NPCSpeechBg" />
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="3409483948389904" type="Function">
+                                        <action id="0" name="Call function" sid="3186624153274705" type="Function">
                                             <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;NEXT&quot;{###}NPC.NpcIDInStage</param>
                                         </action>
@@ -110,7 +110,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group collapsed="1" description="" sid="2379961360243928" title="Player">
+                        <event-group description="" sid="2379961360243928" title="Player">
                             <sub-events>
                                 <event-block sid="9325264978992444">
                                     <conditions>
@@ -182,15 +182,30 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="4061100796901881">
+                                <event-block sid="7678653556197929">
                                     <conditions>
-                                        <condition id="3" name="On touched object" sid="6688434562641269" type="Touch">
+                                        <condition id="3" name="On touched object" sid="2731049911583237" type="Touch">
                                             <param id="0" name="Object">PlayerSpeechBg</param>
                                         </condition>
-                                        <condition id="-9" name="Is visible" sid="5947093244957658" type="PlayerSpeechBg" />
+                                        <condition id="-9" name="Is visible" sid="3350811337496926" type="PlayerSpeechBg" />
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="5407902195624245" type="Function">
+                                        <action id="0" name="Call function" sid="2739702537374694" type="Function">
+                                            <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;NEXT&quot;{###}&quot;Player&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Global notification object can only be managed from the main storyline containing player</comment>
+                                <event-block sid="8980695286078322">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="2185397778219742" type="Touch">
+                                            <param id="0" name="Object">NotificationBg</param>
+                                        </condition>
+                                        <condition id="-9" name="Is visible" sid="8669286359530577" type="NotificationBg" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8332285634666075" type="Function">
                                             <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;NEXT&quot;{###}&quot;Player&quot;</param>
                                         </action>
@@ -200,7 +215,7 @@
                         </event-group>
                     </sub-events>
                 </event-block>
-                <event-group collapsed="1" description="" sid="250549967090056" title="Controls">
+                <event-group collapsed="1" description="" sid="9404869788081012" title="Controls">
                     <sub-events>
                         <event-block sid="3121774701855956">
                             <conditions>
