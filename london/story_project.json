@@ -186,7 +186,7 @@
 						"props": {
 							"id": "Player",
 							"text": "\"Backseat driver\" is:",
-							"phraseType": "SPEAK",
+							"phraseType": "THINK",
 							"ans1": "A passenger who never pays",
 							"ans2": "A passenger who tells the driver how to drive",
 							"ans3": "A passenger who doesn't use a seat belt",
@@ -568,7 +568,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "\"Dunno\" means:",
+							"text": "\"Dunno\" means...",
 							"phraseType": "THINK",
 							"ans1": "Downtown",
 							"ans2": "I don’t know",
@@ -1274,53 +1274,17 @@
 						"continue": false,
 						"inCondIds": [
 							574,
-							795
+							1602
 						],
 						"outCondIds": [
 							582,
-							599
+							1596
 						],
 						"props": {
 							"objs": [
 								"Player",
 								"policeman"
 							]
-						}
-					},
-					{
-						"ver": 1,
-						"id": 492,
-						"type": 1,
-						"label": "2",
-						"continue": false,
-						"inCondIds": [
-							601
-						],
-						"outCondIds": [
-							1164
-						],
-						"props": {
-							"id": "Player",
-							"text": "They play a gig in the city center this night. So I need to get their some way.",
-							"phraseType": "THINK"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 494,
-						"type": 1,
-						"label": "3",
-						"continue": false,
-						"inCondIds": [
-							1164
-						],
-						"outCondIds": [
-							1165
-						],
-						"props": {
-							"id": "Player",
-							"text": "I have 200 coins for my traveling expenses. Spend them wisely!",
-							"phraseType": "THINK"
 						}
 					},
 					{
@@ -1333,49 +1297,455 @@
 							582
 						],
 						"outCondIds": [
-							598
+							1595
 						],
 						"props": {}
 					},
 					{
 						"ver": 1,
-						"id": 504,
-						"type": 3,
-						"label": "intro start",
+						"id": 1012,
+						"type": 11,
+						"label": "Intro notif-n #1",
 						"continue": false,
 						"inCondIds": [
-							598,
-							599
+							1597
 						],
 						"outCondIds": [
-							601
+							1598
 						],
 						"props": {
-							"id": "Player",
-							"text": "So my editor told me to perform an interview with Shmittles band",
-							"phraseType": "THINK",
-							"ans1": "Continue introduction...",
-							"ans2": "",
-							"ans3": "",
-							"ans4": ""
+							"text": "Foxy is a journalist. She’s arrived to London to collect English idioms and slang words.\n\nUse left and right arrows to walk, up arrow to jump. Use arrow keys on your keyboard or click/tap on arrow icons on the screen.\n\nTap this notification to continue. Playing the game you'll do it many times."
 						}
 					},
 					{
 						"ver": 1,
-						"id": 661,
-						"type": 1,
-						"label": "4",
+						"id": 1013,
+						"type": 10,
+						"label": "Show contr helper",
 						"continue": true,
 						"inCondIds": [
-							1165
+							1595,
+							1596
 						],
 						"outCondIds": [
-							795
+							1597
+						],
+						"props": {
+							"name": "ShowControlsHelpers"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1015,
+						"type": 10,
+						"label": "Hide contrl helper",
+						"continue": true,
+						"inCondIds": [
+							1598
+						],
+						"outCondIds": [
+							1539
+						],
+						"props": {
+							"name": "HideControlsHelpers"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1016,
+						"type": 11,
+						"label": "Intro notif-n #2",
+						"continue": false,
+						"inCondIds": [
+							1539,
+							1542
+						],
+						"outCondIds": [
+							1540,
+							1546
+						],
+						"props": {
+							"text": "Talk to London people and when they use an idiom or a slang word, try to guess the right meaning of it.\n\nNow tap on policeman to ask a way to the city center."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1017,
+						"type": 11,
+						"label": "Tap him!",
+						"continue": false,
+						"inCondIds": [
+							1540
+						],
+						"outCondIds": [
+							1541
+						],
+						"props": {
+							"text": "Tap the policeman to ask the road"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1018,
+						"type": -1,
+						"label": "Connection",
+						"continue": false,
+						"inCondIds": [
+							1541
+						],
+						"outCondIds": [
+							1542
+						],
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1021,
+						"type": 1,
+						"label": "Good day, sir.",
+						"continue": false,
+						"inCondIds": [
+							1547
+						],
+						"outCondIds": [
+							1549
 						],
 						"props": {
 							"id": "Player",
-							"text": "Let's find a bus or a taxi!",
+							"text": "Good day, sir.",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1022,
+						"type": 10,
+						"label": "Show balln helper",
+						"continue": true,
+						"inCondIds": [
+							1546
+						],
+						"outCondIds": [
+							1547
+						],
+						"props": {
+							"name": "ShowBalloonHelper"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1024,
+						"type": 10,
+						"label": "Hide balln helper",
+						"continue": true,
+						"inCondIds": [
+							1549
+						],
+						"outCondIds": [
+							1550
+						],
+						"props": {
+							"name": "HideBalloonHelper"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1025,
+						"type": 1,
+						"label": "Policeman ...",
+						"continue": false,
+						"inCondIds": [
+							1550
+						],
+						"outCondIds": [
+							1551
+						],
+						"props": {
+							"id": "policeman",
+							"text": "...",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1026,
+						"type": 1,
+						"label": "Excs me, MrPlcm",
+						"continue": false,
+						"inCondIds": [
+							1551
+						],
+						"outCondIds": [
+							1552
+						],
+						"props": {
+							"id": "Player",
+							"text": "Excuse me, Mr. Policeman.",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1027,
+						"type": 1,
+						"label": "Policeman ...",
+						"continue": false,
+						"inCondIds": [
+							1552
+						],
+						"outCondIds": [
+							1553
+						],
+						"props": {
+							"id": "policeman",
+							"text": "...",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1028,
+						"type": 1,
+						"label": "Hey, man!",
+						"continue": false,
+						"inCondIds": [
+							1553
+						],
+						"outCondIds": [
+							1554
+						],
+						"props": {
+							"id": "Player",
+							"text": "Hey, man!",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1029,
+						"type": 1,
+						"label": "WHAT???",
+						"continue": false,
+						"inCondIds": [
+							1554
+						],
+						"outCondIds": [
+							1555
+						],
+						"props": {
+							"id": "policeman",
+							"text": "WHAT???",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1030,
+						"type": 1,
+						"label": "Hot to downtown?",
+						"continue": false,
+						"inCondIds": [
+							1555
+						],
+						"outCondIds": [
+							1556
+						],
+						"props": {
+							"id": "Player",
+							"text": "How can I get to the downtown?",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1031,
+						"type": 1,
+						"label": "Need the gen?",
+						"continue": false,
+						"inCondIds": [
+							1556
+						],
+						"outCondIds": [
+							1587
+						],
+						"props": {
+							"id": "policeman",
+							"text": "Need the gen?\nTry Internet.",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1033,
+						"type": 3,
+						"label": "\"The gen\" is",
+						"continue": false,
+						"inCondIds": [
+							1586
+						],
+						"outCondIds": [
+							1589,
+							1590
+						],
+						"props": {
+							"id": "Player",
+							"text": "\"The gen\" is...",
+							"phraseType": "THINK",
+							"ans1": "Friend",
+							"ans2": "Sightseeing",
+							"ans3": "Information",
+							"ans4": "Relaxation"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1034,
+						"type": 1,
+						"label": "Wrong",
+						"continue": false,
+						"inCondIds": [
+							1591
+						],
+						"outCondIds": [
+							1561
+						],
+						"props": {
+							"id": "Player",
+							"text": "Not correct",
 							"phraseType": "THINK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1035,
+						"type": 1,
+						"label": "Right",
+						"continue": false,
+						"inCondIds": [
+							1588
+						],
+						"outCondIds": [
+							1562
+						],
+						"props": {
+							"id": "Player",
+							"text": "Correct!",
+							"phraseType": "THINK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1036,
+						"type": 1,
+						"label": "\"The gen\" is",
+						"continue": false,
+						"inCondIds": [
+							1561,
+							1562
+						],
+						"outCondIds": [
+							1599
+						],
+						"props": {
+							"id": "Player",
+							"text": "\"The gen\" is informal synonym for information.",
+							"phraseType": "THINK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1056,
+						"type": 10,
+						"label": "Show quizz help",
+						"continue": true,
+						"inCondIds": [
+							1587
+						],
+						"outCondIds": [
+							1586
+						],
+						"props": {
+							"name": "ShowQuizzHelper"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1057,
+						"type": 10,
+						"label": "Hide quizz helper",
+						"continue": true,
+						"inCondIds": [
+							1589
+						],
+						"outCondIds": [
+							1588
+						],
+						"props": {
+							"name": "HideQuizzHelper"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1058,
+						"type": 10,
+						"label": "Hide quizz helper",
+						"continue": true,
+						"inCondIds": [
+							1590
+						],
+						"outCondIds": [
+							1591
+						],
+						"props": {
+							"name": "HideQuizzHelper"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1059,
+						"type": 11,
+						"label": "First idiom!",
+						"continue": false,
+						"inCondIds": [
+							1600
+						],
+						"outCondIds": [
+							1601
+						],
+						"props": {
+							"text": "You’ve just collected the first idiom!\n\nOk, Foxy, now you’re on your own! Talk to people, collect 5 idioms to complete the level and try to find a way to the downtown!"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1062,
+						"type": 10,
+						"label": "TODO",
+						"continue": true,
+						"inCondIds": [
+							1599
+						],
+						"outCondIds": [
+							1600
+						],
+						"props": {
+							"name": "ShowNewIdiomCongrats"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1063,
+						"type": 10,
+						"label": "TODO",
+						"continue": true,
+						"inCondIds": [
+							1601
+						],
+						"outCondIds": [
+							1602
+						],
+						"props": {
+							"name": "HideNewIdiomCongrats"
 						}
 					}
 				],
@@ -1396,40 +1766,186 @@
 					},
 					{
 						"ver": 1,
-						"id": 598,
+						"id": 1539,
 						"type": 8,
 						"props": {}
 					},
 					{
 						"ver": 1,
-						"id": 599,
-						"type": 10,
-						"props": {
-							"name": "show_intro"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 601,
-						"type": 3,
+						"id": 1540,
+						"type": 11,
 						"props": {}
 					},
 					{
 						"ver": 1,
-						"id": 795,
+						"id": 1541,
 						"type": 1,
 						"props": {}
 					},
 					{
 						"ver": 1,
-						"id": 1164,
+						"id": 1542,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1546,
+						"type": 2,
+						"props": {
+							"id": "policeman"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1547,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1549,
 						"type": 11,
 						"props": {}
 					},
 					{
 						"ver": 1,
-						"id": 1165,
+						"id": 1550,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1551,
 						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1552,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1553,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1554,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1555,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1556,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1561,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1562,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1586,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1587,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1588,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1589,
+						"type": 5,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1590,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1591,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1595,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1596,
+						"type": 10,
+						"props": {
+							"name": "stage_activate"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1597,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1598,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1599,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1600,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1601,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1602,
+						"type": 8,
 						"props": {}
 					}
 				]
@@ -1905,7 +2421,7 @@
 	},
 	"scriptEditor": {
 		"ver": 1,
-		"currentStageId": 8,
+		"currentStageId": 488,
 		"stageEditors": [
 			{
 				"ver": 1,
@@ -2309,8 +2825,8 @@
 				],
 				"scale": 0.5000000000000001,
 				"pos": {
-					"x": 190.9999913951079,
-					"y": 125.00822878842766
+					"x": 72.99999139510791,
+					"y": 145.00822878842766
 				}
 			},
 			{
@@ -2757,7 +3273,7 @@
 					1388,
 					1389
 				],
-				"scale": 0.7000000000000001,
+				"scale": 0.5000000000000001,
 				"pos": {
 					"x": 249.99823599709885,
 					"y": 249.0029314463704
@@ -3163,7 +3679,7 @@
 					1392,
 					1393
 				],
-				"scale": 0.6000000000000001,
+				"scale": 0.40000000000000013,
 				"pos": {
 					"x": 250,
 					"y": 233
@@ -3175,54 +3691,208 @@
 					{
 						"ver": 1,
 						"nodeId": 488,
-						"x": 73.83333333333348,
-						"y": -274.16666666666686
+						"x": 1965.833333333333,
+						"y": -240.1666666666669
 					},
 					{
 						"ver": 1,
 						"nodeId": 489,
-						"x": 493.3333333333336,
-						"y": -276.66666666666663
-					},
-					{
-						"ver": 1,
-						"nodeId": 492,
-						"x": 788.5833333333335,
-						"y": 345.91666666666674
-					},
-					{
-						"ver": 1,
-						"nodeId": 494,
-						"x": 813.2738095238094,
-						"y": 612.8452380952377
+						"x": 1507.3333333333328,
+						"y": 3.333333333333144
 					},
 					{
 						"ver": 1,
 						"nodeId": 495,
-						"x": 784.0476190476189,
-						"y": -273.9047619047619
+						"x": 1532.0476190476181,
+						"y": 234.09523809523807
 					},
 					{
 						"ver": 1,
-						"nodeId": 504,
-						"x": 789.7619047619057,
-						"y": 44.28571428571405
+						"nodeId": 1012,
+						"x": 1181.9999999999993,
+						"y": 514.0000000000002
 					},
 					{
 						"ver": 1,
-						"nodeId": 661,
-						"x": 494.33333333333405,
-						"y": 608.6666666666669
+						"nodeId": 1013,
+						"x": 1167.9999999999995,
+						"y": 152
+					},
+					{
+						"ver": 1,
+						"nodeId": 1015,
+						"x": 1191.9999999999993,
+						"y": 891.9999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 1016,
+						"x": 1195.9999999999995,
+						"y": 1313.9999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 1017,
+						"x": 1187.999999999999,
+						"y": 1601.9999999999986
+					},
+					{
+						"ver": 1,
+						"nodeId": 1018,
+						"x": 1485.9999999999993,
+						"y": 1592
+					},
+					{
+						"ver": 1,
+						"nodeId": 1021,
+						"x": 525.9999999999997,
+						"y": 1309.999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 1022,
+						"x": 851.9999999999997,
+						"y": 1315.9999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 1024,
+						"x": 221.99999999999966,
+						"y": 1313.999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 1025,
+						"x": 218.0000000000001,
+						"y": 1031.9999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 1026,
+						"x": 535.9999999999999,
+						"y": 1037.9999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 1027,
+						"x": 855.9999999999998,
+						"y": 1037.9999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 1028,
+						"x": 853.9999999999997,
+						"y": 719.9999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 1029,
+						"x": 531.9999999999999,
+						"y": 727.9999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 1030,
+						"x": 222.0000000000001,
+						"y": 729.9999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 1031,
+						"x": 223.9999999999999,
+						"y": 414
+					},
+					{
+						"ver": 1,
+						"nodeId": 1033,
+						"x": 865.9999999999999,
+						"y": 420
+					},
+					{
+						"ver": 1,
+						"nodeId": 1034,
+						"x": 533.9999999999997,
+						"y": -47.999999999999886
+					},
+					{
+						"ver": 1,
+						"nodeId": 1035,
+						"x": 209.9999999999999,
+						"y": -54.000000000000455
+					},
+					{
+						"ver": 1,
+						"nodeId": 1036,
+						"x": 241.99999999999966,
+						"y": -371.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 1056,
+						"x": 531.9999999999999,
+						"y": 427.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 1057,
+						"x": 533.9999999999999,
+						"y": 197.99999999999977
+					},
+					{
+						"ver": 1,
+						"nodeId": 1058,
+						"x": 873.9999999999999,
+						"y": 122
+					},
+					{
+						"ver": 1,
+						"nodeId": 1059,
+						"x": 907.9999999999993,
+						"y": -373.99999999999983
+					},
+					{
+						"ver": 1,
+						"nodeId": 1062,
+						"x": 569.9999999999999,
+						"y": -369.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 1063,
+						"x": 1257.9999999999993,
+						"y": -373.9999999999999
 					}
 				],
 				"nodeIds": [
 					488,
 					489,
-					492,
-					494,
 					495,
-					504,
-					661
+					1012,
+					1013,
+					1015,
+					1016,
+					1017,
+					1018,
+					1021,
+					1022,
+					1024,
+					1025,
+					1026,
+					1027,
+					1028,
+					1029,
+					1030,
+					1031,
+					1033,
+					1034,
+					1035,
+					1036,
+					1056,
+					1057,
+					1058,
+					1059,
+					1062,
+					1063
 				],
 				"condViews": [
 					{
@@ -3230,12 +3900,12 @@
 						"condId": 574,
 						"points": {
 							"src": {
-								"x": 153.83333333333348,
-								"y": -194.16666666666686
+								"x": 2045.833333333333,
+								"y": -160.1666666666669
 							},
 							"dst": {
-								"x": 573.3333333333336,
-								"y": -196.66666666666663
+								"x": 1587.3333333333328,
+								"y": 83.33333333333314
 							}
 						}
 					},
@@ -3244,96 +3914,432 @@
 						"condId": 582,
 						"points": {
 							"src": {
-								"x": 573.3333333333336,
-								"y": -196.66666666666663
+								"x": 1587.3333333333328,
+								"y": 83.33333333333314
 							},
 							"dst": {
-								"x": 864.0476190476189,
-								"y": -193.90476190476193
+								"x": 1612.0476190476181,
+								"y": 314.0952380952381
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 598,
+						"condId": 1539,
 						"points": {
 							"src": {
-								"x": 864.0476190476189,
-								"y": -193.90476190476193
+								"x": 1271.9999999999993,
+								"y": 971.9999999999993
 							},
 							"dst": {
-								"x": 869.7619047619057,
-								"y": 124.28571428571405
+								"x": 1275.9999999999995,
+								"y": 1393.9999999999993
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 599,
+						"condId": 1540,
 						"points": {
 							"src": {
-								"x": 573.3333333333336,
-								"y": -196.66666666666663
+								"x": 1275.9999999999995,
+								"y": 1393.9999999999993
 							},
 							"dst": {
-								"x": 869.7619047619057,
-								"y": 124.28571428571405
+								"x": 1267.999999999999,
+								"y": 1681.9999999999986
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 601,
+						"condId": 1541,
 						"points": {
 							"src": {
-								"x": 869.7619047619057,
-								"y": 124.28571428571405
+								"x": 1267.999999999999,
+								"y": 1681.9999999999986
 							},
 							"dst": {
-								"x": 868.5833333333335,
-								"y": 425.91666666666674
+								"x": 1565.9999999999993,
+								"y": 1672
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 795,
+						"condId": 1542,
 						"points": {
 							"src": {
-								"x": 574.333333333334,
-								"y": 688.6666666666669
+								"x": 1565.9999999999993,
+								"y": 1672
 							},
 							"dst": {
-								"x": 573.3333333333336,
-								"y": -196.66666666666663
+								"x": 1275.9999999999995,
+								"y": 1393.9999999999993
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 1164,
+						"condId": 1546,
 						"points": {
 							"src": {
-								"x": 868.5833333333335,
-								"y": 425.91666666666674
+								"x": 1275.9999999999995,
+								"y": 1393.9999999999993
 							},
 							"dst": {
-								"x": 893.2738095238094,
-								"y": 692.8452380952377
+								"x": 931.9999999999997,
+								"y": 1395.9999999999993
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 1165,
+						"condId": 1547,
 						"points": {
 							"src": {
-								"x": 893.2738095238094,
-								"y": 692.8452380952377
+								"x": 931.9999999999997,
+								"y": 1395.9999999999993
 							},
 							"dst": {
-								"x": 574.333333333334,
-								"y": 688.6666666666669
+								"x": 605.9999999999997,
+								"y": 1389.999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1549,
+						"points": {
+							"src": {
+								"x": 605.9999999999997,
+								"y": 1389.999999999999
+							},
+							"dst": {
+								"x": 301.99999999999966,
+								"y": 1393.999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1550,
+						"points": {
+							"src": {
+								"x": 301.99999999999966,
+								"y": 1393.999999999999
+							},
+							"dst": {
+								"x": 298.0000000000001,
+								"y": 1111.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1551,
+						"points": {
+							"src": {
+								"x": 298.0000000000001,
+								"y": 1111.9999999999998
+							},
+							"dst": {
+								"x": 615.9999999999999,
+								"y": 1117.9999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1552,
+						"points": {
+							"src": {
+								"x": 615.9999999999999,
+								"y": 1117.9999999999995
+							},
+							"dst": {
+								"x": 935.9999999999998,
+								"y": 1117.9999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1553,
+						"points": {
+							"src": {
+								"x": 935.9999999999998,
+								"y": 1117.9999999999995
+							},
+							"dst": {
+								"x": 933.9999999999997,
+								"y": 799.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1554,
+						"points": {
+							"src": {
+								"x": 933.9999999999997,
+								"y": 799.9999999999998
+							},
+							"dst": {
+								"x": 611.9999999999999,
+								"y": 807.9999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1555,
+						"points": {
+							"src": {
+								"x": 611.9999999999999,
+								"y": 807.9999999999995
+							},
+							"dst": {
+								"x": 302.0000000000001,
+								"y": 809.9999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1556,
+						"points": {
+							"src": {
+								"x": 302.0000000000001,
+								"y": 809.9999999999995
+							},
+							"dst": {
+								"x": 303.9999999999999,
+								"y": 494
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1561,
+						"points": {
+							"src": {
+								"x": 613.9999999999997,
+								"y": 32.000000000000114
+							},
+							"dst": {
+								"x": 321.99999999999966,
+								"y": -291.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1562,
+						"points": {
+							"src": {
+								"x": 289.9999999999999,
+								"y": 25.999999999999545
+							},
+							"dst": {
+								"x": 321.99999999999966,
+								"y": -291.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1586,
+						"points": {
+							"src": {
+								"x": 611.9999999999999,
+								"y": 507.9999999999999
+							},
+							"dst": {
+								"x": 945.9999999999999,
+								"y": 500
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1587,
+						"points": {
+							"src": {
+								"x": 303.9999999999999,
+								"y": 494
+							},
+							"dst": {
+								"x": 611.9999999999999,
+								"y": 507.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1588,
+						"points": {
+							"src": {
+								"x": 613.9999999999999,
+								"y": 277.9999999999998
+							},
+							"dst": {
+								"x": 289.9999999999999,
+								"y": 25.999999999999545
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1589,
+						"points": {
+							"src": {
+								"x": 945.9999999999999,
+								"y": 500
+							},
+							"dst": {
+								"x": 613.9999999999999,
+								"y": 277.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1590,
+						"points": {
+							"src": {
+								"x": 945.9999999999999,
+								"y": 500
+							},
+							"dst": {
+								"x": 953.9999999999999,
+								"y": 202
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1591,
+						"points": {
+							"src": {
+								"x": 953.9999999999999,
+								"y": 202
+							},
+							"dst": {
+								"x": 613.9999999999997,
+								"y": 32.000000000000114
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1595,
+						"points": {
+							"src": {
+								"x": 1612.0476190476181,
+								"y": 314.0952380952381
+							},
+							"dst": {
+								"x": 1247.9999999999995,
+								"y": 232
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1596,
+						"points": {
+							"src": {
+								"x": 1587.3333333333328,
+								"y": 83.33333333333314
+							},
+							"dst": {
+								"x": 1247.9999999999995,
+								"y": 232
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1597,
+						"points": {
+							"src": {
+								"x": 1247.9999999999995,
+								"y": 232
+							},
+							"dst": {
+								"x": 1261.9999999999993,
+								"y": 594.0000000000002
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1598,
+						"points": {
+							"src": {
+								"x": 1261.9999999999993,
+								"y": 594.0000000000002
+							},
+							"dst": {
+								"x": 1271.9999999999993,
+								"y": 971.9999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1599,
+						"points": {
+							"src": {
+								"x": 321.99999999999966,
+								"y": -291.9999999999999
+							},
+							"dst": {
+								"x": 649.9999999999999,
+								"y": -289.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1600,
+						"points": {
+							"src": {
+								"x": 649.9999999999999,
+								"y": -289.9999999999999
+							},
+							"dst": {
+								"x": 987.9999999999993,
+								"y": -293.99999999999983
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1601,
+						"points": {
+							"src": {
+								"x": 987.9999999999993,
+								"y": -293.99999999999983
+							},
+							"dst": {
+								"x": 1337.9999999999993,
+								"y": -293.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1602,
+						"points": {
+							"src": {
+								"x": 1337.9999999999993,
+								"y": -293.9999999999999
+							},
+							"dst": {
+								"x": 1587.3333333333328,
+								"y": 83.33333333333314
 							}
 						}
 					}
@@ -3341,17 +4347,41 @@
 				"condIds": [
 					574,
 					582,
-					598,
-					599,
-					601,
-					795,
-					1164,
-					1165
+					1539,
+					1540,
+					1541,
+					1542,
+					1546,
+					1547,
+					1549,
+					1550,
+					1551,
+					1552,
+					1553,
+					1554,
+					1555,
+					1556,
+					1561,
+					1562,
+					1586,
+					1587,
+					1588,
+					1589,
+					1590,
+					1591,
+					1595,
+					1596,
+					1597,
+					1598,
+					1599,
+					1600,
+					1601,
+					1602
 				],
 				"scale": 0.5000000000000001,
 				"pos": {
 					"x": 250,
-					"y": 249
+					"y": 104
 				}
 			},
 			{
@@ -3820,7 +4850,7 @@
 					1390,
 					1391
 				],
-				"scale": 0.7000000000000001,
+				"scale": 0.5000000000000001,
 				"pos": {
 					"x": -56,
 					"y": 149
