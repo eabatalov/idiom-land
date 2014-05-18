@@ -16,5 +16,288 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="6869420682188312">
+            <conditions>
+                <condition id="0" name="On function" sid="417314998819277" type="Function">
+                    <param id="0" name="Name">&quot;onStageintroInactive&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="8636277273504871" type="JumpHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6690646893951045" type="WalkHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2157958195847298" type="TapToContinueLeftHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3622843070802135" type="TapToContinueRightHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7630814102953574" type="TapToAskHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3104795103770746" type="TapQuizzHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3502489721726792">
+            <conditions>
+                <condition id="0" name="On function" sid="3078887151823637" type="Function">
+                    <param id="0" name="Name">&quot;ShowNotificationHelper&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="293469248458139" type="TapToContinueLeftHelper">
+                    <param id="0" name="Layer">NotificationBg.LayerName</param>
+                </action>
+                <action id="-3" name="Set position" sid="9698590537500937" type="TapToContinueLeftHelper">
+                    <param id="0" name="X">NotificationBg.X + NotificationBg.Width + 100</param>
+                    <param id="1" name="Y">NotificationBg.Y</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6485001683853257" type="TapToContinueLeftHelper">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5978642077757722">
+            <conditions>
+                <condition id="0" name="On function" sid="7581113646454976" type="Function">
+                    <param id="0" name="Name">&quot;HideNotificationHelper&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="5077464110038167" type="TapToContinueLeftHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3520103476712296">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="6107456856328831" type="NPC">
+                    <param id="0" name="Unique ID">52</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="88665293893831" type="System">
+                    <param id="0" name="First value">distance(Player.X, Player.Y, NPC.X, NPC.Y)</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">400</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="2572865449266502" type="Function">
+                    <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;foxy_near_policeman&quot;{###}&quot;Player&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1469985823134677">
+            <conditions>
+                <condition id="0" name="On function" sid="4828036408162631" type="Function">
+                    <param id="0" name="Name">&quot;ShowControlsHelpers&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6340809894119451" type="JumpHelper">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3703850830632513" type="WalkHelper">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8948690394251446">
+            <conditions>
+                <condition id="0" name="On function" sid="9417800071778754" type="Function">
+                    <param id="0" name="Name">&quot;HideControlsHelpers&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="534836912227634" type="JumpHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8570305674546621" type="WalkHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3997826454793024">
+            <conditions>
+                <condition id="0" name="On function" sid="8539531400793125" type="Function">
+                    <param id="0" name="Name">&quot;ShowPolicemanBalloonHelper&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="4803509375627586" type="NPC">
+                    <param id="0" name="Unique ID">52</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="2533867766110922" type="TapToContinueRightHelper">
+                    <param id="0" name="Layer">NPCPhraseBg.LayerName</param>
+                </action>
+                <action id="-3" name="Set position" sid="5721556842895961" type="TapToContinueRightHelper">
+                    <param id="0" name="X">NPCPhraseBg.X - TapToContinueRightHelper.Width - 20</param>
+                    <param id="1" name="Y">NPCPhraseBg.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="8930193911012899" type="TapToContinueRightHelper">
+                    <param id="0" name="Pin to">NPCPhraseBg</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9065426871197116" type="TapToContinueRightHelper">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9286526282743166">
+            <conditions>
+                <condition id="0" name="On function" sid="8627291494905341" type="Function">
+                    <param id="0" name="Name">&quot;HidePolicemanBalloonHelper&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="4002992033732195" type="NPC">
+                    <param id="0" name="Unique ID">52</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="855809473114246" type="TapToContinueRightHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="4091108765144546" type="TapToContinueRightHelper" />
+            </actions>
+        </event-block>
+        <event-block sid="9987107342166314">
+            <conditions>
+                <condition id="0" name="On function" sid="1790620730908641" type="Function">
+                    <param id="0" name="Name">&quot;ShowPlayerBalloonHelper&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="5942415419053255" type="TapToContinueRightHelper">
+                    <param id="0" name="Layer">PlayerPhraseBg.LayerName</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6631595620615274" type="TapToContinueRightHelper">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="8285616677487911" type="TapToContinueRightHelper">
+                    <param id="0" name="X">PlayerPhraseBg.X - TapToContinueLeftHelper.Width - 20</param>
+                    <param id="1" name="Y">PlayerPhraseBg.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="1169100516190898" type="TapToContinueRightHelper">
+                    <param id="0" name="Pin to">PlayerPhraseBg</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3795824499071879">
+            <conditions>
+                <condition id="0" name="On function" sid="8359436962851981" type="Function">
+                    <param id="0" name="Name">&quot;HidePlayerBalloonHelper&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4826285741746231" type="TapToContinueRightHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="276395844582118" type="TapToContinueRightHelper" />
+            </actions>
+        </event-block>
+        <event-block sid="8369839863674356">
+            <conditions>
+                <condition id="0" name="On function" sid="1111025567908213" type="Function">
+                    <param id="0" name="Name">&quot;ShowQuizzHelper&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="1852455390107423" type="TapQuizzHelper">
+                    <param id="0" name="Layer">PlayerAnsBg.LayerName</param>
+                </action>
+                <action id="-3" name="Set position" sid="7442534722946283" type="TapQuizzHelper">
+                    <param id="0" name="X">PlayerAnsBg.X + PlayerAnsBg.Width</param>
+                    <param id="1" name="Y">PlayerAnsBg.Y</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8601286533578236" type="TapQuizzHelper">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3546195305213494">
+            <conditions>
+                <condition id="0" name="On function" sid="8962222317136815" type="Function">
+                    <param id="0" name="Name">&quot;HideQuizzHelper&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6393107482820635" type="TapQuizzHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8143031984160501">
+            <conditions>
+                <condition id="0" name="On function" sid="5132135630917985" type="Function">
+                    <param id="0" name="Name">&quot;ShowNewIdiomCongrats&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="7303986725780349" type="Browser">
+                    <param id="0" name="Type">2</param>
+                    <param id="1" name="Message">&quot;Not implemented  Construct 2 side function&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8784206970284958">
+            <conditions>
+                <condition id="0" name="On function" sid="4234723595757082" type="Function">
+                    <param id="0" name="Name">&quot;HideNewIdiomCongrats&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="9140484957978325" type="Browser">
+                    <param id="0" name="Type">2</param>
+                    <param id="1" name="Message">&quot;Not implemented  Construct 2 side function&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1198608668841483">
+            <conditions>
+                <condition id="0" name="On function" sid="2831580699577529" type="Function">
+                    <param id="0" name="Name">&quot;ShowAskPolicemanHelper&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="4781640832418085" type="NPC">
+                    <param id="0" name="Unique ID">52</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="6672239447622631" type="TapToAskHelper">
+                    <param id="0" name="Layer">NPC.LayerName</param>
+                </action>
+                <action id="-3" name="Set position" sid="4372592600505083" type="TapToAskHelper">
+                    <param id="0" name="X">NPC.X - TapToAskHelper.Width - 20</param>
+                    <param id="1" name="Y">NPC.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6949767421253554" type="TapToAskHelper">
+                    <param id="0" name="Pin to">NPCPinPoint</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2665068954682653" type="TapToAskHelper">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3152051915546614">
+            <conditions>
+                <condition id="0" name="On function" sid="5375560744342252" type="Function">
+                    <param id="0" name="Name">&quot;HideAskPolicemanHelper&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="8730805072888969" type="NPC">
+                    <param id="0" name="Unique ID">52</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="1995937315939472" type="TapToAskHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="5075786318448821" type="TapToAskHelper" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

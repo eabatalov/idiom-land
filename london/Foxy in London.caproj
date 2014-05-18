@@ -58,7 +58,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="0" name="Quest">
+        <object-folder expanded="1" name="Quest">
             <object-folder expanded="0" name="NPC">
                 <object-folder expanded="0" name="Speech">
                     <object-type name="NPCAns1Bg" sid="1347035969697416">
@@ -3106,6 +3106,84 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder expanded="1" name="Stages">
+            <object-folder expanded="1" name="Intro">
+                <object-folder expanded="1" name="Helpers">
+                    <object-type name="JumpHelper" sid="3052283865919932">
+                        <plugin id="Sprite" />
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7003393356780393" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="WalkHelper" sid="4520049005203235">
+                        <plugin id="Sprite" />
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8062338428186369" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="TapToContinueLeftHelper" sid="4884040201538329">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Pin" sid="7229210052077383">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2831167001092476" speed="5">
+                                <frame duration="1" hotspotX="0" hotspotY="0" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="TapToContinueRightHelper" sid="9560818838651901">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Pin" sid="1295347209941606">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="17044148059576" speed="5">
+                                <frame duration="1" hotspotX="0" hotspotY="0" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="TapToAskHelper" sid="5377732697373312">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Pin" sid="849963171316876">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5413305033502644" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="TapQuizzHelper" sid="7825077689784289">
+                        <plugin id="Sprite" />
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6888201209251428" speed="5">
+                                <frame duration="1" hotspotX="0" hotspotY="0">
+                                    <collision-poly>
+                                        <point x="0.0333333" y="0.0444444" />
+                                        <point x="0.966667" y="0.0444444" />
+                                        <point x="0.995833" y="0.5" />
+                                        <point x="0.991667" y="0.988889" />
+                                        <point x="0.00416667" y="0.994444" />
+                                        <point x="0" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+            </object-folder>
+        </object-folder>
         <object-type name="Platforms" sid="9109209147233701">
             <plugin id="Sprite" />
             <behaviors>
@@ -4017,7 +4095,7 @@
             <event-sheet>UIMisc.xml</event-sheet>
             <event-sheet>PlayerAnimation.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="1" name="Stages">
+        <event-folder expanded="0" name="Stages">
             <event-sheet>Carousel.xml</event-sheet>
             <event-sheet>Bus.xml</event-sheet>
             <event-sheet>LevelComplete.xml</event-sheet>
