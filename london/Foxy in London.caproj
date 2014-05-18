@@ -57,7 +57,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-folder expanded="0" name="Quest">
             <object-folder expanded="0" name="NPC">
                 <object-folder expanded="0" name="Speech">
@@ -1475,6 +1475,26 @@
             </object-type>
             <object-type name="NotificationTxt" sid="5283496776941307">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="CrankyStageChanger" sid="4199881370430458">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Stage" sid="1367162418293814" type="string" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3454741756061622" speed="5">
+                        <frame duration="1" hotspotX="0.515152" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.030303" y="0.00297619" />
+                                <point x="0.909091" y="0.00892857" />
+                                <point x="0.151515" y="0.5" />
+                                <point x="0.151515" y="0.916667" />
+                                <point x="0.484848" y="0.077381" />
+                                <point x="0.030303" y="0.997024" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="Animation">
@@ -3995,7 +4015,7 @@
             <event-sheet>UIMisc.xml</event-sheet>
             <event-sheet>PlayerAnimation.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="1" name="Stages">
+        <event-folder expanded="0" name="Stages">
             <event-sheet>Carousel.xml</event-sheet>
             <event-sheet>Bus.xml</event-sheet>
             <event-sheet>LevelComplete.xml</event-sheet>
