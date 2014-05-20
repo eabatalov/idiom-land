@@ -58,7 +58,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="Quest">
+        <object-folder expanded="0" name="Quest">
             <object-folder expanded="0" name="NPC">
                 <object-folder expanded="0" name="Speech">
                     <object-type name="NPCAns1Bg" sid="1347035969697416">
@@ -2402,7 +2402,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="veider sprites">
+        <object-folder expanded="1" name="veider sprites">
             <object-type name="veider_body" sid="6939939786769256">
                 <plugin id="Sprite" />
                 <container>
@@ -3106,14 +3106,25 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Stages">
+        <object-folder expanded="0" name="Stages">
             <object-folder expanded="1" name="Intro">
                 <object-folder expanded="1" name="Helpers">
                     <object-type name="JumpHelper" sid="3052283865919932">
                         <plugin id="Sprite" />
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7003393356780393" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.343156" y="0.352539" />
+                                        <point x="0.5" y="0.269531" />
+                                        <point x="0.677757" y="0.331055" />
+                                        <point x="0.738593" y="0.5" />
+                                        <point x="0.670152" y="0.661133" />
+                                        <point x="0.5" y="0.757813" />
+                                        <point x="0.309886" y="0.681641" />
+                                        <point x="0.243346" y="0.5" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -3121,7 +3132,18 @@
                         <plugin id="Sprite" />
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8062338428186369" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.329848" y="0.338867" />
+                                        <point x="0.5" y="0.242188" />
+                                        <point x="0.690114" y="0.318359" />
+                                        <point x="0.748099" y="0.5" />
+                                        <point x="0.656844" y="0.647461" />
+                                        <point x="0.5" y="0.730469" />
+                                        <point x="0.322243" y="0.668945" />
+                                        <point x="0.260456" y="0.5" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
