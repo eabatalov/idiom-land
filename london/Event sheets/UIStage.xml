@@ -4,7 +4,7 @@
     <name>UIStage</name>
     <events>
         <comment>p1: Stage</comment>
-        <event-block collapsed="1" sid="8060985393539423">
+        <event-block sid="8060985393539423">
             <conditions>
                 <condition id="0" name="On function" sid="6870888253004275" type="Function">
                     <param id="0" name="Name">&quot;HideStageUI&quot;</param>
@@ -59,7 +59,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group collapsed="1" description="" sid="6888331275258145" title="NPCUI">
+        <event-group description="" sid="6888331275258145" title="NPCUI">
             <sub-events>
                 <comment>XXX: this every tick &quot;pinning&quot; is needed because construct has some bugs in computation of special sprite points.&#x0D;&#x0A;Construct return invalid values and we pin to them. But almost all the time Construct returns good values. This everytick pinning allows us to use this valid values.</comment>
                 <event-block sid="2604798924698626">
@@ -430,7 +430,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6702021473764103" title="PlayerUI">
+        <event-group description="" sid="6702021473764103" title="PlayerUI">
             <sub-events>
                 <comment>XXX: this every tick &quot;pinning&quot; is needed because construct has some bugs in computation of special sprite points.&#x0D;&#x0A;Construct return invalid values and we pin to them. But almost all the time Construct returns good values. This everytick pinning allows us to use this valid values.</comment>
                 <event-block sid="5619469661584902">
