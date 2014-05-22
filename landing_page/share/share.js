@@ -1,9 +1,11 @@
+(function SocialSharing() {
+
 function init() {
     /* When you change supported services list fix this list too */
     socialSharing.shareButtonToService = {
         ".share-button-facebook" : "facebook",
         ".share-button-twitter" : "twitter",
-        ".share-button-gplus" : "googleplus",
+        ".share-button-gplus" : "google_plusone_share",
         ".share-button-vkontakte" : "vk"
     };
     socialSharing.serviceToShareButton = {};
@@ -53,7 +55,16 @@ function shareCountToInt(count) {
 }
 
 function downloadCounters() {
-    socialSharing.totalCounter.reset();
+    jQuery(".button-total .counter").fadeTo(0, 0);
+    jQuery.getJSON("http://api-public.addthis.com/url/shares.json?callback=?",
+        { url : socialSharing.dataToShare.url },
+        function(data) {
+            socialSharing.totalCounter.reset();
+            socialSharing.totalCounter.add(data.shares);
+            jQuery(".button-total .counter").fadeTo(400, 1);
+        }
+    );
+
     jQuery.each(socialSharing.services, function(ix, service) {
         addthis.sharecounters.getShareCounts({
                 service : service,
@@ -70,7 +81,6 @@ function downloadCounters() {
                 counterElem.show();
                 var count = shareCountToInt(counter.count);
                 jQuery(counterButtonClassSelector).text(count);
-                socialSharing.totalCounter.add(service, count);
             }
         );
     });
@@ -97,10 +107,13 @@ socialSharing = {
         value : 0,
         reset : function() {
             this.value = 0;
+            jQuery(".button-total > .counter").text(this.value);
         },
-        add : function(service, count) {
+        add : function(count) {
             this.value += count;
             jQuery(".button-total > .counter").text(this.value);
         }
     }
 }
+
+})();
