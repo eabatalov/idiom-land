@@ -1,26 +1,40 @@
 (function SocialSharing() {
 
-function init() {
-    /* When you change supported services list fix this list too */
-    socialSharing.shareButtonToService = {
-        ".share-button-facebook" : "facebook",
-        ".share-button-twitter" : "twitter",
-        ".share-button-gplus" : "google_plusone_share",
-        ".share-button-vkontakte" : "vk"
+function configure() {
+    socialSharing.services = {
+        "fb" : {
+            name : "Facebook",
+            code : "facebook",
+            shareButtonClass : "share-button-facebook",
+            getCounter : addThisApiGetDynCounter
+        },
+        "tw" : {
+            name : "Twitter",
+            code : "twitter",
+            shareButtonClass : "share-button-twitter",
+            getCounter : addThisApiGetDynCounter
+        },
+        "gp" : {
+            name : "Google Plus",
+            code : "google_plusone_share",
+            shareButtonClass : "share-button-gplus",
+            getCounter : gPlusGetCounterTweak
+        },
+        "vk" : {
+            name : "Vkontakte",
+            code : "vk",
+            shareButtonClass : "share-button-vkontakte",
+            getCounter : addThisApiGetDynCounter
+        }
     };
-    socialSharing.serviceToShareButton = {};
-    socialSharing.services =
-        jQuery.map(socialSharing.shareButtonToService, function(value) { return value; });
-    jQuery.each(socialSharing.shareButtonToService, function(shareBtnClass, service) {
-        socialSharing.serviceToShareButton[service] = shareBtnClass;
-    });
+
     /* Setting up content user shares here */
-    socialSharing.dataToShare.url = "http://idiomland.com";
+    socialSharing.dataToShare.url = "http://idiomland.com/";
     socialSharing.dataToShare.title = "Idiom Land";
     socialSharing.dataToShare.description =
         "Step into the world of adventure in English";
     socialSharing.dataToShare.pubid = "ra-537a67027f7a7a93";
-    socialSharing.dataToShare.ct = "1";
+    socialSharing.dataToShare.ct = "0";
 }
 
 function showShareButtons() {
@@ -29,22 +43,55 @@ function showShareButtons() {
     jQuery(".share-button").show(400);
 }
 
-function initUI() {
-    var buttonTotal = jQuery(".button-total").click(showShareButtons);
-    /* Needed in order to make show() animation visible */
-    jQuery(".share-button").hide();
-    /* Create links to share  */
-    jQuery.each(socialSharing.services, function(ix, service) {
+function init() {
+    /* Create share button for each service */
+    var shareButtonsContainer = jQuery(".share-buttons-container");
+    //shareButtonsContainer.hide();
+    jQuery.each(socialSharing.services, function(id, service) {
+
         var shareURL = "http://api.addthis.com/oexchange/0.8/forward/"
-            + service + "/offer?"
+            + service.code + "/offer?"
             + "url=" + socialSharing.dataToShare.url + "&"
             + "title=" + socialSharing.dataToShare.title + "&"
             + "description=" + socialSharing.dataToShare.description + "&"
             + "pubid=" + socialSharing.dataToShare.pubid + "&"
             + "ct=" + socialSharing.dataToShare.ct;
-        var button = jQuery(socialSharing.serviceToShareButton[service]);
-        button.find("a").attr('href', shareURL);
+
+        var serviceShareButtonHtml = ""
+        + "<div class='share-button " + service.shareButtonClass + "'>"
+            + "<a href='" + shareURL + "' rel='nofollow' target='_blank'><div class='button'></div></a>"
+            + "<div class='counter'>&nbsp;</div>"
+        + "</div>";
+        shareButtonsContainer.append(serviceShareButtonHtml);
+
     });
+    /* */
+    var buttonTotal = jQuery(".button-total").click(showShareButtons);
+    /* Needed in order to make show() animation visible */
+    jQuery(".share-button").hide();
+    /* Misc stuff */
+    socialSharing.totalCounter.reset();
+    /* */
+    jQuery.each(socialSharing.services, function(id, service) {
+        ++socialSharing.serviceCount;
+    });
+}
+
+function counterReady(service, count) {
+    var counterButtonClassSelector =
+        "." + service.shareButtonClass + " .counter";
+    var counterElem = jQuery(counterButtonClassSelector);
+    counterElem.show();
+    jQuery(counterButtonClassSelector).text(count);
+    socialSharing.totalCounter.addCounter(count);
+}
+
+function counterError(service) {
+    var counterButtonClassSelector =
+        "." + service.shareButtonClass + " .counter";
+    var counterElem = jQuery(counterButtonClassSelector);
+    counterElem.hide();
+    socialSharing.totalCounter.addCounter(0);
 }
 
 function shareCountToInt(count) {
@@ -54,44 +101,66 @@ function shareCountToInt(count) {
     return result;
 }
 
-function downloadCounters() {
-    jQuery(".button-total .counter").fadeTo(0, 0);
-    jQuery.getJSON("http://api-public.addthis.com/url/shares.json?callback=?",
-        { url : socialSharing.dataToShare.url },
-        function(data) {
-            socialSharing.totalCounter.reset();
-            socialSharing.totalCounter.add(data.shares);
-            jQuery(".button-total .counter").fadeTo(400, 1);
+function addThisApiGetDynCounter(service) {
+    addthis.sharecounters.getShareCounts({
+            service : service.code,
+            countUrl : socialSharing.dataToShare.url
+        },
+        function(counter) {
+            if (counter.error) {
+                counterError();        
+                return;
+            }
+            var count = shareCountToInt(counter.count);
+            counterReady(service, count);
         }
     );
+}
 
-    jQuery.each(socialSharing.services, function(ix, service) {
-        addthis.sharecounters.getShareCounts({
-                service : service,
-                countUrl : socialSharing.dataToShare.url
-            },
-            function(counter) {
-                var counterButtonClassSelector =
-                    socialSharing.serviceToShareButton[service] + " .counter";
-                var counterElem = jQuery(counterButtonClassSelector);
-                if (counter.error) {
-                    counterElem.hide();
-                    return;
-                }
-                counterElem.show();
-                var count = shareCountToInt(counter.count);
-                jQuery(counterButtonClassSelector).text(count);
-            }
-        );
+function gPlusGetCounterTweak(service) {
+    var apiUrl = "http://share.yandex.ru/gpp.xml?url=" +
+        socialSharing.dataToShare.url;
+
+    function cb(counterStr) {
+        counterReady(service, shareCountToInt(counterStr));
+    };
+    window.services = { gplus : { cb : cb } };
+
+    jQuery.getJSON(apiUrl + "&callback=?", null, null);
+}
+
+function downloadCounters() {
+    jQuery.each(socialSharing.services, function(id, service) {
+        service.getCounter(service);
     });
 }
 
+function TotalCounter() {
+    this.value = 0;
+    this.countersAdded = 0;
+    this.reset  = function() {
+        this.value = 0;
+        this.countersAdded = 0;
+        jQuery(".button-total .counter").fadeTo(0, 0);
+        jQuery(".button-total .counter").text(this.value);
+    };
+    this.addCounter = function(count) {
+        this.value += count;
+        ++this.countersAdded;
+        jQuery(".button-total .counter").text(this.value);
+        if (this.countersAdded >= socialSharing.serviceCount) {
+            jQuery(".button-total .counter").fadeTo(400, 1);
+        }
+    };
+}
+
 jQuery(function() {
+    configure();
     init();
-    initUI();
     addthis.addEventListener('addthis.ready', downloadCounters);
 });
 
+/* Config + social sharing global state */
 socialSharing = {
     dataToShare : {
         url : null,
@@ -100,20 +169,9 @@ socialSharing = {
         pubid : null,
         ct : null
     },
-    shareButtonToService : null,
-    serviceToShareButton : null,
     services : null,
-    totalCounter : {
-        value : 0,
-        reset : function() {
-            this.value = 0;
-            jQuery(".button-total > .counter").text(this.value);
-        },
-        add : function(count) {
-            this.value += count;
-            jQuery(".button-total > .counter").text(this.value);
-        }
-    }
+    serviceCount : 0,
+    totalCounter : new TotalCounter()
 }
 
 })();
