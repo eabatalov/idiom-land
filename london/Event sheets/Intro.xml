@@ -74,24 +74,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3520103476712296">
-            <conditions>
-                <condition id="-14" name="Pick by unique ID" sid="6107456856328831" type="NPC">
-                    <param id="0" name="Unique ID">52</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="88665293893831" type="System">
-                    <param id="0" name="First value">distance(Player.X, Player.Y, NPC.X, NPC.Y)</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Second value">400</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="2572865449266502" type="Function">
-                    <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;foxy_near_policeman&quot;{###}&quot;Player&quot;</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="1469985823134677">
             <conditions>
                 <condition id="0" name="On function" sid="4828036408162631" type="Function">

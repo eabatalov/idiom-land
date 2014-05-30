@@ -40,10 +40,9 @@
 						],
 						"outCondIds": [
 							1440,
-							1443,
-							1446,
 							1459,
-							1460
+							1460,
+							1719
 						],
 						"props": {
 							"objs": [
@@ -77,11 +76,13 @@
 						"id": 411,
 						"type": 10,
 						"label": "See you in center",
-						"continue": false,
+						"continue": true,
 						"inCondIds": [
 							1462
 						],
-						"outCondIds": [],
+						"outCondIds": [
+							1720
+						],
 						"props": {
 							"name": "LevelComplete"
 						}
@@ -94,7 +95,7 @@
 						"continue": false,
 						"inCondIds": [
 							1440,
-							1458
+							1739
 						],
 						"outCondIds": [
 							1441
@@ -121,27 +122,12 @@
 					},
 					{
 						"ver": 1,
-						"id": 943,
-						"type": -1,
-						"label": "\"Next\" event",
-						"continue": false,
-						"inCondIds": [
-							1443
-						],
-						"outCondIds": [
-							1447
-						],
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 944,
 						"type": 1,
 						"label": "Hi need to get",
 						"continue": false,
 						"inCondIds": [
-							1446,
-							1447
+							1718
 						],
 						"outCondIds": [
 							1448
@@ -259,7 +245,7 @@
 							1461
 						],
 						"outCondIds": [
-							1458
+							1738
 						],
 						"props": {}
 					},
@@ -274,6 +260,50 @@
 						],
 						"outCondIds": [
 							1461
+						],
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1124,
+						"type": 12,
+						"label": "Controls disable",
+						"continue": true,
+						"inCondIds": [
+							1719
+						],
+						"outCondIds": [
+							1718
+						],
+						"props": {
+							"enabled": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1125,
+						"type": 12,
+						"label": "Controls enable",
+						"continue": false,
+						"inCondIds": [
+							1720
+						],
+						"outCondIds": [],
+						"props": {
+							"enabled": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1134,
+						"type": -1,
+						"label": "driver2 clicked",
+						"continue": true,
+						"inCondIds": [
+							1738
+						],
+						"outCondIds": [
+							1739
 						],
 						"props": {}
 					}
@@ -303,26 +333,6 @@
 						"ver": 1,
 						"id": 1442,
 						"type": 1,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1443,
-						"type": 1,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1446,
-						"type": 2,
-						"props": {
-							"id": "driver2"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 1447,
-						"type": 11,
 						"props": {}
 					},
 					{
@@ -369,12 +379,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 1458,
-						"type": 8,
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 1459,
 						"type": 2,
 						"props": {
@@ -399,6 +403,38 @@
 						"ver": 1,
 						"id": 1462,
 						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1718,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1719,
+						"type": 10,
+						"props": {
+							"name": "auto_talk_start_driver2"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1720,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1738,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1739,
+						"type": 8,
 						"props": {}
 					}
 				]
@@ -438,8 +474,8 @@
 						],
 						"outCondIds": [
 							1173,
-							1176,
-							1325
+							1721,
+							1744
 						],
 						"props": {
 							"objs": [
@@ -455,7 +491,8 @@
 						"label": "Veider greeting",
 						"continue": false,
 						"inCondIds": [
-							1173
+							1173,
+							1743
 						],
 						"outCondIds": [
 							1174
@@ -487,8 +524,7 @@
 						"label": "OMG! Darth Veid",
 						"continue": false,
 						"inCondIds": [
-							1176,
-							1326
+							1722
 						],
 						"outCondIds": [
 							1177
@@ -623,7 +659,7 @@
 							1184
 						],
 						"outCondIds": [
-							1186
+							1723
 						],
 						"props": {
 							"id": "Player",
@@ -638,7 +674,6 @@
 						"label": "Veider idle",
 						"continue": false,
 						"inCondIds": [
-							1186,
 							1189
 						],
 						"outCondIds": [
@@ -682,29 +717,62 @@
 					},
 					{
 						"ver": 1,
-						"id": 849,
+						"id": 898,
 						"type": -1,
-						"label": "\"Next\" event",
-						"continue": false,
+						"label": "Connection",
+						"continue": true,
 						"inCondIds": [
-							1325
+							1388,
+							1733
 						],
 						"outCondIds": [
-							1326
+							1389
 						],
 						"props": {}
 					},
 					{
 						"ver": 1,
-						"id": 898,
-						"type": -1,
-						"label": "Connection",
-						"continue": false,
+						"id": 1126,
+						"type": 12,
+						"label": "Controls disable",
+						"continue": true,
 						"inCondIds": [
-							1388
+							1721
 						],
 						"outCondIds": [
-							1389
+							1722
+						],
+						"props": {
+							"enabled": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1127,
+						"type": 12,
+						"label": "Controls enable",
+						"continue": true,
+						"inCondIds": [
+							1723
+						],
+						"outCondIds": [
+							1733
+						],
+						"props": {
+							"enabled": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1137,
+						"type": -1,
+						"label": "Connection",
+						"continue": true,
+						"inCondIds": [
+							1744
+						],
+						"outCondIds": [
+							1743
 						],
 						"props": {}
 					}
@@ -735,14 +803,6 @@
 						"id": 1175,
 						"type": 1,
 						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1176,
-						"type": 2,
-						"props": {
-							"id": "veider"
-						}
 					},
 					{
 						"ver": 1,
@@ -794,12 +854,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 1186,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 1187,
 						"type": 2,
 						"props": {
@@ -820,18 +874,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 1325,
-						"type": 1,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1326,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 1388,
 						"type": 10,
 						"props": {
@@ -841,8 +883,48 @@
 					{
 						"ver": 1,
 						"id": 1389,
-						"type": 1,
+						"type": 8,
 						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1721,
+						"type": 10,
+						"props": {
+							"name": "auto_talk_start_veider"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1722,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1723,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1733,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1743,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1744,
+						"type": 2,
+						"props": {
+							"id": "veider"
+						}
 					}
 				]
 			},
@@ -882,8 +964,8 @@
 						],
 						"outCondIds": [
 							132,
-							1379,
-							1380
+							1726,
+							1742
 						],
 						"props": {
 							"objs": [
@@ -900,14 +982,15 @@
 						"label": "Seller greeeting",
 						"continue": false,
 						"inCondIds": [
-							132
+							132,
+							1741
 						],
 						"outCondIds": [
 							1377
 						],
 						"props": {
 							"id": "seller",
-							"text": "Fresh kebab! Made from the best lamb meat!",
+							"text": "Hot kebab! Hot kebab!",
 							"phraseType": "SPEAK"
 						}
 					},
@@ -918,8 +1001,7 @@
 						"label": "Mommy told",
 						"continue": false,
 						"inCondIds": [
-							1380,
-							1381
+							1746
 						],
 						"outCondIds": [
 							1160
@@ -1023,20 +1105,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 893,
-						"type": -1,
-						"label": "\"Next\" event",
-						"continue": false,
-						"inCondIds": [
-							1379
-						],
-						"outCondIds": [
-							1381
-						],
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 894,
 						"type": 1,
 						"label": "Idiom means",
@@ -1046,7 +1114,7 @@
 							1383
 						],
 						"outCondIds": [
-							1384
+							1728
 						],
 						"props": {
 							"id": "Player",
@@ -1061,7 +1129,6 @@
 						"label": "Seller idle",
 						"continue": false,
 						"inCondIds": [
-							1384,
 							1387
 						],
 						"outCondIds": [
@@ -1108,14 +1175,79 @@
 						"id": 900,
 						"type": -1,
 						"label": "Connection",
-						"continue": false,
+						"continue": true,
 						"inCondIds": [
-							1393
+							1393,
+							1734
 						],
 						"outCondIds": [
 							1392
 						],
 						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1128,
+						"type": 12,
+						"label": "Controls disable",
+						"continue": true,
+						"inCondIds": [
+							1726
+						],
+						"outCondIds": [
+							1745
+						],
+						"props": {
+							"enabled": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1129,
+						"type": 12,
+						"label": "Controls enable",
+						"continue": true,
+						"inCondIds": [
+							1728
+						],
+						"outCondIds": [
+							1734
+						],
+						"props": {
+							"enabled": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1136,
+						"type": -1,
+						"label": "Connection",
+						"continue": true,
+						"inCondIds": [
+							1742
+						],
+						"outCondIds": [
+							1741
+						],
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1138,
+						"type": 1,
+						"label": "Seller offers",
+						"continue": false,
+						"inCondIds": [
+							1745
+						],
+						"outCondIds": [
+							1746
+						],
+						"props": {
+							"id": "seller",
+							"text": "Fresh kebab! Made from the best lamb meat!",
+							"phraseType": "SPEAK"
+						}
 					}
 				],
 				"conds": [
@@ -1171,26 +1303,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 1379,
-						"type": 1,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1380,
-						"type": 2,
-						"props": {
-							"id": "seller"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 1381,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 1382,
 						"type": 11,
 						"props": {}
@@ -1198,12 +1310,6 @@
 					{
 						"ver": 1,
 						"id": 1383,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1384,
 						"type": 11,
 						"props": {}
 					},
@@ -1230,7 +1336,7 @@
 					{
 						"ver": 1,
 						"id": 1392,
-						"type": 1,
+						"type": 8,
 						"props": {}
 					},
 					{
@@ -1240,6 +1346,52 @@
 						"props": {
 							"name": "stage_activate"
 						}
+					},
+					{
+						"ver": 1,
+						"id": 1726,
+						"type": 10,
+						"props": {
+							"name": "auto_talk_start_seller"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1728,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1734,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1741,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1742,
+						"type": 2,
+						"props": {
+							"id": "seller"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1745,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1746,
+						"type": 11,
+						"props": {}
 					}
 				]
 			},
@@ -1273,12 +1425,10 @@
 						"label": "",
 						"continue": false,
 						"inCondIds": [
-							574,
-							1623
+							574
 						],
 						"outCondIds": [
-							582,
-							1596
+							1678
 						],
 						"props": {
 							"objs": [
@@ -1294,7 +1444,7 @@
 						"label": "Player click",
 						"continue": true,
 						"inCondIds": [
-							582
+							1677
 						],
 						"outCondIds": [
 							1595
@@ -1325,7 +1475,8 @@
 						"continue": true,
 						"inCondIds": [
 							1595,
-							1596
+							1676,
+							1679
 						],
 						"outCondIds": [
 							1597
@@ -1357,46 +1508,14 @@
 						"label": "Intro notif-n #2",
 						"continue": false,
 						"inCondIds": [
-							1542,
-							1625
+							1706
 						],
 						"outCondIds": [
-							1540,
 							1627
 						],
 						"props": {
-							"text": "Talk to London people and when they use an idiom or a slang word, try to guess the right meaning of it.\n\nNow tap on policeman to ask a way to the city center."
+							"text": "Talk to London people and when they use an idiom or a slang word, try to guess the right meaning of it."
 						}
-					},
-					{
-						"ver": 1,
-						"id": 1017,
-						"type": 11,
-						"label": "Tap him!",
-						"continue": false,
-						"inCondIds": [
-							1540
-						],
-						"outCondIds": [
-							1541
-						],
-						"props": {
-							"text": "Tap the policeman to ask the road"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 1018,
-						"type": -1,
-						"label": "Connection",
-						"continue": false,
-						"inCondIds": [
-							1541
-						],
-						"outCondIds": [
-							1542
-						],
-						"props": {}
 					},
 					{
 						"ver": 1,
@@ -1532,7 +1651,7 @@
 						"label": "Wrong",
 						"continue": false,
 						"inCondIds": [
-							1591
+							1713
 						],
 						"outCondIds": [
 							1561
@@ -1550,7 +1669,7 @@
 						"label": "Right",
 						"continue": false,
 						"inCondIds": [
-							1588
+							1715
 						],
 						"outCondIds": [
 							1562
@@ -1572,7 +1691,7 @@
 							1562
 						],
 						"outCondIds": [
-							1599
+							1717
 						],
 						"props": {
 							"id": "Player",
@@ -1606,7 +1725,7 @@
 							1589
 						],
 						"outCondIds": [
-							1588
+							1714
 						],
 						"props": {
 							"name": "HideQuizzHelper"
@@ -1622,7 +1741,7 @@
 							1590
 						],
 						"outCondIds": [
-							1591
+							1712
 						],
 						"props": {
 							"name": "HideQuizzHelper"
@@ -1651,7 +1770,7 @@
 						"label": "Show new idiom",
 						"continue": true,
 						"inCondIds": [
-							1599
+							1716
 						],
 						"outCondIds": [
 							1618
@@ -1670,7 +1789,7 @@
 							1601
 						],
 						"outCondIds": [
-							1620
+							1709
 						],
 						"props": {
 							"name": "HideNewIdiomCongrats"
@@ -1779,7 +1898,7 @@
 						"label": "Learn move",
 						"continue": false,
 						"inCondIds": [
-							1614
+							1681
 						],
 						"outCondIds": [
 							1615
@@ -1814,7 +1933,7 @@
 							1616
 						],
 						"outCondIds": [
-							1614
+							1680
 						],
 						"props": {
 							"name": "ShowControlsHelpers"
@@ -1843,10 +1962,10 @@
 						"label": "Hide notif helper",
 						"continue": true,
 						"inCondIds": [
-							1620
+							1710
 						],
 						"outCondIds": [
-							1622
+							1711
 						],
 						"props": {
 							"name": "HideNotificationHelper"
@@ -1859,10 +1978,10 @@
 						"label": "On your own",
 						"continue": false,
 						"inCondIds": [
-							1622
+							1708
 						],
 						"outCondIds": [
-							1623
+							1710
 						],
 						"props": {
 							"text": "Ok, Foxy, now you’re on your own! Talk to people, collect 5 idioms to complete the level and try to find a way to the downtown!"
@@ -1872,23 +1991,23 @@
 						"ver": 1,
 						"id": 1076,
 						"type": 10,
-						"label": "Show ask helper",
+						"label": "Show notif helper",
 						"continue": true,
 						"inCondIds": [
 							1624
 						],
 						"outCondIds": [
-							1625
+							1705
 						],
 						"props": {
-							"name": "ShowAskPolicemanHelper"
+							"name": "ShowNotificationHelper"
 						}
 					},
 					{
 						"ver": 1,
 						"id": 1077,
 						"type": 10,
-						"label": "Hide ask helper",
+						"label": "Hide notif helper",
 						"continue": true,
 						"inCondIds": [
 							1627
@@ -1897,7 +2016,134 @@
 							1626
 						],
 						"props": {
-							"name": "HideAskPolicemanHelper"
+							"name": "HideNotificationHelper"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1097,
+						"type": -1,
+						"label": "Tutorial start",
+						"continue": false,
+						"inCondIds": [
+							1711
+						],
+						"outCondIds": [
+							1676,
+							1677
+						],
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1098,
+						"type": 12,
+						"label": "Disable controls",
+						"continue": true,
+						"inCondIds": [
+							1678
+						],
+						"outCondIds": [
+							1679
+						],
+						"props": {
+							"enabled": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1099,
+						"type": 12,
+						"label": "Enable controls",
+						"continue": true,
+						"inCondIds": [
+							1680
+						],
+						"outCondIds": [
+							1681
+						],
+						"props": {
+							"enabled": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1119,
+						"type": 12,
+						"label": "Disable controls",
+						"continue": true,
+						"inCondIds": [
+							1705
+						],
+						"outCondIds": [
+							1706
+						],
+						"props": {
+							"enabled": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1120,
+						"type": 12,
+						"label": "Controls enable",
+						"continue": true,
+						"inCondIds": [
+							1709
+						],
+						"outCondIds": [
+							1708
+						],
+						"props": {
+							"enabled": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1121,
+						"type": 10,
+						"label": "Show balln helper",
+						"continue": true,
+						"inCondIds": [
+							1714
+						],
+						"outCondIds": [
+							1715
+						],
+						"props": {
+							"name": "ShowPlayerBalloonHelper"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1122,
+						"type": 10,
+						"label": "Hide balln helper",
+						"continue": true,
+						"inCondIds": [
+							1717
+						],
+						"outCondIds": [
+							1716
+						],
+						"props": {
+							"name": "HidePlayerBalloonHelper"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1123,
+						"type": 10,
+						"label": "Show balln helper",
+						"continue": true,
+						"inCondIds": [
+							1712
+						],
+						"outCondIds": [
+							1713
+						],
+						"props": {
+							"name": "ShowPlayerBalloonHelper"
 						}
 					}
 				],
@@ -1905,32 +2151,6 @@
 					{
 						"ver": 1,
 						"id": 574,
-						"type": 1,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 582,
-						"type": 2,
-						"props": {
-							"id": "Player"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 1540,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1541,
-						"type": 1,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1542,
 						"type": 1,
 						"props": {}
 					},
@@ -1966,12 +2186,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 1588,
-						"type": 8,
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 1589,
 						"type": 5,
 						"props": {}
@@ -1984,23 +2198,9 @@
 					},
 					{
 						"ver": 1,
-						"id": 1591,
-						"type": 8,
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 1595,
 						"type": 8,
 						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1596,
-						"type": 10,
-						"props": {
-							"name": "stage_activate"
-						}
 					},
 					{
 						"ver": 1,
@@ -2011,12 +2211,6 @@
 					{
 						"ver": 1,
 						"id": 1598,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1599,
 						"type": 11,
 						"props": {}
 					},
@@ -2082,16 +2276,10 @@
 					},
 					{
 						"ver": 1,
-						"id": 1614,
-						"type": 1,
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 1615,
 						"type": 10,
 						"props": {
-							"name": "foxy_near_policeman"
+							"name": "auto_talk_start_policeman"
 						}
 					},
 					{
@@ -2114,31 +2302,7 @@
 					},
 					{
 						"ver": 1,
-						"id": 1620,
-						"type": 8,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1622,
-						"type": 8,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1623,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 1624,
-						"type": 8,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1625,
 						"type": 8,
 						"props": {}
 					},
@@ -2151,15 +2315,127 @@
 					{
 						"ver": 1,
 						"id": 1627,
-						"type": 2,
-						"props": {
-							"id": "policeman"
-						}
+						"type": 11,
+						"props": {}
 					},
 					{
 						"ver": 1,
 						"id": 1651,
 						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1676,
+						"type": 10,
+						"props": {
+							"name": "stage_activate"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1677,
+						"type": 2,
+						"props": {
+							"id": "Player"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1678,
+						"type": 10,
+						"props": {
+							"name": "stage_activate"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1679,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1680,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1681,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1705,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1706,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1708,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1709,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1710,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1711,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1712,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1713,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1714,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1715,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1716,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1717,
+						"type": 11,
 						"props": {}
 					}
 				]
@@ -2199,8 +2475,8 @@
 						],
 						"outCondIds": [
 							1191,
-							1323,
-							1328
+							1729,
+							1737
 						],
 						"props": {
 							"objs": [
@@ -2216,7 +2492,8 @@
 						"label": "Try a carousel!",
 						"continue": false,
 						"inCondIds": [
-							1191
+							1191,
+							1736
 						],
 						"outCondIds": [
 							1321
@@ -2234,8 +2511,7 @@
 						"label": "Cap speech",
 						"continue": false,
 						"inCondIds": [
-							1323,
-							1327
+							1730
 						],
 						"outCondIds": [
 							1193
@@ -2388,7 +2664,7 @@
 							1201
 						],
 						"outCondIds": [
-							1329
+							1731
 						],
 						"props": {
 							"id": "Player",
@@ -2412,26 +2688,11 @@
 					},
 					{
 						"ver": 1,
-						"id": 850,
-						"type": -1,
-						"label": "\"Next\" event",
-						"continue": false,
-						"inCondIds": [
-							1328
-						],
-						"outCondIds": [
-							1327
-						],
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 851,
 						"type": -1,
 						"label": "Cap idle",
 						"continue": false,
 						"inCondIds": [
-							1329,
 							1332
 						],
 						"outCondIds": [
@@ -2478,12 +2739,59 @@
 						"id": 899,
 						"type": -1,
 						"label": "Connection",
-						"continue": false,
+						"continue": true,
 						"inCondIds": [
-							1390
+							1390,
+							1735
 						],
 						"outCondIds": [
 							1391
+						],
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1130,
+						"type": 12,
+						"label": "Controls disable",
+						"continue": true,
+						"inCondIds": [
+							1729
+						],
+						"outCondIds": [
+							1730
+						],
+						"props": {
+							"enabled": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1131,
+						"type": 12,
+						"label": "Controls enable",
+						"continue": true,
+						"inCondIds": [
+							1731
+						],
+						"outCondIds": [
+							1735
+						],
+						"props": {
+							"enabled": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1133,
+						"type": -1,
+						"label": "Connection",
+						"continue": true,
+						"inCondIds": [
+							1737
+						],
+						"outCondIds": [
+							1736
 						],
 						"props": {}
 					}
@@ -2571,32 +2879,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 1323,
-						"type": 2,
-						"props": {
-							"id": "cap"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 1327,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1328,
-						"type": 1,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1329,
-						"type": 1,
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 1330,
 						"type": 2,
 						"props": {
@@ -2626,8 +2908,48 @@
 					{
 						"ver": 1,
 						"id": 1391,
-						"type": 1,
+						"type": 8,
 						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1729,
+						"type": 10,
+						"props": {
+							"name": "auto_talk_start_cap"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 1730,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1731,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1735,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1736,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1737,
+						"type": 2,
+						"props": {
+							"id": "cap"
+						}
 					}
 				]
 			}
@@ -2635,7 +2957,7 @@
 	},
 	"scriptEditor": {
 		"ver": 1,
-		"currentStageId": 488,
+		"currentStageId": 18,
 		"stageEditors": [
 			{
 				"ver": 1,
@@ -2667,26 +2989,20 @@
 					{
 						"ver": 1,
 						"nodeId": 940,
-						"x": 1692.0000172097843,
-						"y": 181.9835424231449
+						"x": 1788.0000172097846,
+						"y": 105.98354242314491
 					},
 					{
 						"ver": 1,
 						"nodeId": 942,
-						"x": 1554.0000172097843,
-						"y": -106.01645757685532
-					},
-					{
-						"ver": 1,
-						"nodeId": 943,
-						"x": 1432.0000172097841,
-						"y": 835.9835424231446
+						"x": 1566.0000172097846,
+						"y": -178.01645757685526
 					},
 					{
 						"ver": 1,
 						"nodeId": 944,
-						"x": 1056.0000172097841,
-						"y": 835.9835424231444
+						"x": 1128.0000172097843,
+						"y": 1021.9835424231443
 					},
 					{
 						"ver": 1,
@@ -2721,14 +3037,32 @@
 					{
 						"ver": 1,
 						"nodeId": 952,
-						"x": 1928.0000172097843,
-						"y": 507.98354242314485
+						"x": 1840.0000172097843,
+						"y": 679.9835424231449
 					},
 					{
 						"ver": 1,
 						"nodeId": 953,
-						"x": 1758.0000172097846,
-						"y": 779.9835424231446
+						"x": 1646.0000172097846,
+						"y": 975.9835424231446
+					},
+					{
+						"ver": 1,
+						"nodeId": 1124,
+						"x": 1132.0000172097843,
+						"y": 681.9835424231444
+					},
+					{
+						"ver": 1,
+						"nodeId": 1125,
+						"x": 1370.000017209784,
+						"y": 1997.9835424231444
+					},
+					{
+						"ver": 1,
+						"nodeId": 1134,
+						"x": 1916.0000172097837,
+						"y": 399.98354242314457
 					}
 				],
 				"nodeIds": [
@@ -2738,7 +3072,6 @@
 					411,
 					940,
 					942,
-					943,
 					944,
 					945,
 					946,
@@ -2746,7 +3079,10 @@
 					948,
 					949,
 					952,
-					953
+					953,
+					1124,
+					1125,
+					1134
 				],
 				"condViews": [
 					{
@@ -2772,8 +3108,8 @@
 								"y": 484.26190476190465
 							},
 							"dst": {
-								"x": 1772.0000172097843,
-								"y": 261.9835424231449
+								"x": 1868.0000172097846,
+								"y": 185.9835424231449
 							}
 						}
 					},
@@ -2782,12 +3118,12 @@
 						"condId": 1441,
 						"points": {
 							"src": {
-								"x": 1772.0000172097843,
-								"y": 261.9835424231449
+								"x": 1868.0000172097846,
+								"y": 185.9835424231449
 							},
 							"dst": {
-								"x": 1634.0000172097843,
-								"y": -26.016457576855316
+								"x": 1646.0000172097846,
+								"y": -98.01645757685526
 							}
 						}
 					},
@@ -2796,54 +3132,12 @@
 						"condId": 1442,
 						"points": {
 							"src": {
-								"x": 1634.0000172097843,
-								"y": -26.016457576855316
+								"x": 1646.0000172097846,
+								"y": -98.01645757685526
 							},
 							"dst": {
 								"x": 1210.2857142857138,
 								"y": 484.26190476190465
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1443,
-						"points": {
-							"src": {
-								"x": 1210.2857142857138,
-								"y": 484.26190476190465
-							},
-							"dst": {
-								"x": 1512.0000172097841,
-								"y": 915.9835424231446
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1446,
-						"points": {
-							"src": {
-								"x": 1210.2857142857138,
-								"y": 484.26190476190465
-							},
-							"dst": {
-								"x": 1136.0000172097841,
-								"y": 915.9835424231444
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1447,
-						"points": {
-							"src": {
-								"x": 1512.0000172097841,
-								"y": 915.9835424231446
-							},
-							"dst": {
-								"x": 1136.0000172097841,
-								"y": 915.9835424231444
 							}
 						}
 					},
@@ -2852,8 +3146,8 @@
 						"condId": 1448,
 						"points": {
 							"src": {
-								"x": 1136.0000172097841,
-								"y": 915.9835424231444
+								"x": 1208.0000172097843,
+								"y": 1101.9835424231442
 							},
 							"dst": {
 								"x": 806.0000172097846,
@@ -2947,20 +3241,6 @@
 					},
 					{
 						"ver": 1,
-						"condId": 1458,
-						"points": {
-							"src": {
-								"x": 2008.0000172097843,
-								"y": 587.9835424231449
-							},
-							"dst": {
-								"x": 1772.0000172097843,
-								"y": 261.9835424231449
-							}
-						}
-					},
-					{
-						"ver": 1,
 						"condId": 1459,
 						"points": {
 							"src": {
@@ -2968,8 +3248,8 @@
 								"y": 484.26190476190465
 							},
 							"dst": {
-								"x": 2008.0000172097843,
-								"y": 587.9835424231449
+								"x": 1920.0000172097843,
+								"y": 759.9835424231449
 							}
 						}
 					},
@@ -2982,8 +3262,8 @@
 								"y": 484.26190476190465
 							},
 							"dst": {
-								"x": 1838.0000172097846,
-								"y": 859.9835424231446
+								"x": 1726.0000172097846,
+								"y": 1055.9835424231446
 							}
 						}
 					},
@@ -2992,12 +3272,12 @@
 						"condId": 1461,
 						"points": {
 							"src": {
-								"x": 1838.0000172097846,
-								"y": 859.9835424231446
+								"x": 1726.0000172097846,
+								"y": 1055.9835424231446
 							},
 							"dst": {
-								"x": 2008.0000172097843,
-								"y": 587.9835424231449
+								"x": 1920.0000172097843,
+								"y": 759.9835424231449
 							}
 						}
 					},
@@ -3014,6 +3294,76 @@
 								"y": 2074.999999999999
 							}
 						}
+					},
+					{
+						"ver": 1,
+						"condId": 1718,
+						"points": {
+							"src": {
+								"x": 1212.0000172097843,
+								"y": 761.9835424231444
+							},
+							"dst": {
+								"x": 1208.0000172097843,
+								"y": 1101.9835424231442
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1719,
+						"points": {
+							"src": {
+								"x": 1210.2857142857138,
+								"y": 484.26190476190465
+							},
+							"dst": {
+								"x": 1212.0000172097843,
+								"y": 761.9835424231444
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1720,
+						"points": {
+							"src": {
+								"x": 1142.4999999999995,
+								"y": 2074.999999999999
+							},
+							"dst": {
+								"x": 1450.000017209784,
+								"y": 2077.983542423144
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1738,
+						"points": {
+							"src": {
+								"x": 1920.0000172097843,
+								"y": 759.9835424231449
+							},
+							"dst": {
+								"x": 1996.0000172097837,
+								"y": 479.98354242314457
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1739,
+						"points": {
+							"src": {
+								"x": 1996.0000172097837,
+								"y": 479.98354242314457
+							},
+							"dst": {
+								"x": 1868.0000172097846,
+								"y": 185.9835424231449
+							}
+						}
 					}
 				],
 				"condIds": [
@@ -3021,9 +3371,6 @@
 					1440,
 					1441,
 					1442,
-					1443,
-					1446,
-					1447,
 					1448,
 					1449,
 					1450,
@@ -3031,16 +3378,20 @@
 					1452,
 					1453,
 					1455,
-					1458,
 					1459,
 					1460,
 					1461,
-					1462
+					1462,
+					1718,
+					1719,
+					1720,
+					1738,
+					1739
 				],
 				"scale": 0.5000000000000001,
 				"pos": {
-					"x": 72.99999139510791,
-					"y": 145.00822878842766
+					"x": 130.9999913951079,
+					"y": 168.00822878842766
 				}
 			},
 			{
@@ -3061,20 +3412,20 @@
 					{
 						"ver": 1,
 						"nodeId": 720,
-						"x": -77.85420285230805,
-						"y": -295.2429809820466
+						"x": 90.47913048102527,
+						"y": -185.24298098204667
 					},
 					{
 						"ver": 1,
 						"nodeId": 721,
-						"x": 345.24103524293025,
-						"y": -294.29060002966537
+						"x": 476.9077019095969,
+						"y": -174.29060002966543
 					},
 					{
 						"ver": 1,
 						"nodeId": 722,
-						"x": 418.81246381435903,
-						"y": 131.6617809227156
+						"x": 787.1457971476927,
+						"y": 376.6617809227155
 					},
 					{
 						"ver": 1,
@@ -3115,20 +3466,20 @@
 					{
 						"ver": 1,
 						"nodeId": 729,
-						"x": 1506.6696066715026,
-						"y": 449.9951142560492
+						"x": 1493.3362733381696,
+						"y": 268.3284475893827
 					},
 					{
 						"ver": 1,
 						"nodeId": 730,
-						"x": 1435.0029400048356,
-						"y": 793.3284475893824
+						"x": 1456.6696066715024,
+						"y": 798.3284475893827
 					},
 					{
 						"ver": 1,
 						"nodeId": 731,
-						"x": 1416.6696066715024,
-						"y": 1051.661780922716
+						"x": 1436.6696066715024,
+						"y": 1053.328447589383
 					},
 					{
 						"ver": 1,
@@ -3138,15 +3489,27 @@
 					},
 					{
 						"ver": 1,
-						"nodeId": 849,
-						"x": 766.6696066715019,
-						"y": 375.23320949414443
-					},
-					{
-						"ver": 1,
 						"nodeId": 898,
 						"x": 1121.6696066715024,
 						"y": 1046.6617809227162
+					},
+					{
+						"ver": 1,
+						"nodeId": 1126,
+						"x": 411.66960667150187,
+						"y": 379.9951142560493
+					},
+					{
+						"ver": 1,
+						"nodeId": 1127,
+						"x": 1483.3362733381693,
+						"y": 508.32844758938245
+					},
+					{
+						"ver": 1,
+						"nodeId": 1137,
+						"x": -158.33039332849808,
+						"y": -175.0048857439507
 					}
 				],
 				"nodeIds": [
@@ -3165,8 +3528,10 @@
 					730,
 					731,
 					732,
-					849,
-					898
+					898,
+					1126,
+					1127,
+					1137
 				],
 				"condViews": [
 					{
@@ -3192,8 +3557,8 @@
 								"y": 444.66666666666663
 							},
 							"dst": {
-								"x": 2.145797147691951,
-								"y": -215.24298098204662
+								"x": 170.47913048102527,
+								"y": -105.24298098204667
 							}
 						}
 					},
@@ -3202,12 +3567,12 @@
 						"condId": 1174,
 						"points": {
 							"src": {
-								"x": 2.145797147691951,
-								"y": -215.24298098204662
+								"x": 170.47913048102527,
+								"y": -105.24298098204667
 							},
 							"dst": {
-								"x": 425.24103524293025,
-								"y": -214.29060002966537
+								"x": 556.9077019095969,
+								"y": -94.29060002966543
 							}
 						}
 					},
@@ -3216,26 +3581,12 @@
 						"condId": 1175,
 						"points": {
 							"src": {
-								"x": 425.24103524293025,
-								"y": -214.29060002966537
+								"x": 556.9077019095969,
+								"y": -94.29060002966543
 							},
 							"dst": {
 								"x": 157.00000000000006,
 								"y": 444.66666666666663
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1176,
-						"points": {
-							"src": {
-								"x": 157.00000000000006,
-								"y": 444.66666666666663
-							},
-							"dst": {
-								"x": 498.81246381435903,
-								"y": 211.6617809227156
 							}
 						}
 					},
@@ -3244,8 +3595,8 @@
 						"condId": 1177,
 						"points": {
 							"src": {
-								"x": 498.81246381435903,
-								"y": 211.6617809227156
+								"x": 867.1457971476927,
+								"y": 456.6617809227155
 							},
 							"dst": {
 								"x": 867.383892385788,
@@ -3332,8 +3683,8 @@
 								"y": 34.99511425604925
 							},
 							"dst": {
-								"x": 1586.6696066715026,
-								"y": 529.9951142560492
+								"x": 1573.3362733381696,
+								"y": 348.3284475893827
 							}
 						}
 					},
@@ -3346,22 +3697,8 @@
 								"y": -223.33821907728407
 							},
 							"dst": {
-								"x": 1586.6696066715026,
-								"y": 529.9951142560492
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1186,
-						"points": {
-							"src": {
-								"x": 1586.6696066715026,
-								"y": 529.9951142560492
-							},
-							"dst": {
-								"x": 1515.0029400048356,
-								"y": 873.3284475893824
+								"x": 1573.3362733381696,
+								"y": 348.3284475893827
 							}
 						}
 					},
@@ -3370,12 +3707,12 @@
 						"condId": 1187,
 						"points": {
 							"src": {
-								"x": 1515.0029400048356,
-								"y": 873.3284475893824
+								"x": 1536.6696066715024,
+								"y": 878.3284475893827
 							},
 							"dst": {
-								"x": 1496.6696066715024,
-								"y": 1131.661780922716
+								"x": 1516.6696066715024,
+								"y": 1133.328447589383
 							}
 						}
 					},
@@ -3384,8 +3721,8 @@
 						"condId": 1188,
 						"points": {
 							"src": {
-								"x": 1496.6696066715024,
-								"y": 1131.661780922716
+								"x": 1516.6696066715024,
+								"y": 1133.328447589383
 							},
 							"dst": {
 								"x": 1836.669606671503,
@@ -3402,36 +3739,8 @@
 								"y": 1121.6617809227164
 							},
 							"dst": {
-								"x": 1515.0029400048356,
-								"y": 873.3284475893824
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1325,
-						"points": {
-							"src": {
-								"x": 157.00000000000006,
-								"y": 444.66666666666663
-							},
-							"dst": {
-								"x": 846.6696066715019,
-								"y": 455.23320949414443
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1326,
-						"points": {
-							"src": {
-								"x": 846.6696066715019,
-								"y": 455.23320949414443
-							},
-							"dst": {
-								"x": 498.81246381435903,
-								"y": 211.6617809227156
+								"x": 1536.6696066715024,
+								"y": 878.3284475893827
 							}
 						}
 					},
@@ -3440,8 +3749,8 @@
 						"condId": 1388,
 						"points": {
 							"src": {
-								"x": 1515.0029400048356,
-								"y": 873.3284475893824
+								"x": 1536.6696066715024,
+								"y": 878.3284475893827
 							},
 							"dst": {
 								"x": 1201.6696066715024,
@@ -3458,8 +3767,92 @@
 								"y": 1126.6617809227162
 							},
 							"dst": {
-								"x": 1496.6696066715024,
-								"y": 1131.661780922716
+								"x": 1516.6696066715024,
+								"y": 1133.328447589383
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1721,
+						"points": {
+							"src": {
+								"x": 157.00000000000006,
+								"y": 444.66666666666663
+							},
+							"dst": {
+								"x": 491.66960667150187,
+								"y": 459.9951142560493
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1722,
+						"points": {
+							"src": {
+								"x": 491.66960667150187,
+								"y": 459.9951142560493
+							},
+							"dst": {
+								"x": 867.1457971476927,
+								"y": 456.6617809227155
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1723,
+						"points": {
+							"src": {
+								"x": 1573.3362733381696,
+								"y": 348.3284475893827
+							},
+							"dst": {
+								"x": 1563.3362733381693,
+								"y": 588.3284475893824
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1733,
+						"points": {
+							"src": {
+								"x": 1563.3362733381693,
+								"y": 588.3284475893824
+							},
+							"dst": {
+								"x": 1201.6696066715024,
+								"y": 1126.6617809227162
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1743,
+						"points": {
+							"src": {
+								"x": -78.33039332849808,
+								"y": -95.0048857439507
+							},
+							"dst": {
+								"x": 170.47913048102527,
+								"y": -105.24298098204667
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1744,
+						"points": {
+							"src": {
+								"x": 157.00000000000006,
+								"y": 444.66666666666663
+							},
+							"dst": {
+								"x": -78.33039332849808,
+								"y": -95.0048857439507
 							}
 						}
 					}
@@ -3469,7 +3862,6 @@
 					1173,
 					1174,
 					1175,
-					1176,
 					1177,
 					1178,
 					1179,
@@ -3478,16 +3870,19 @@
 					1182,
 					1183,
 					1184,
-					1186,
 					1187,
 					1188,
 					1189,
-					1325,
-					1326,
 					1388,
-					1389
+					1389,
+					1721,
+					1722,
+					1723,
+					1733,
+					1743,
+					1744
 				],
-				"scale": 0.5000000000000001,
+				"scale": 0.6000000000000001,
 				"pos": {
 					"x": 249.99823599709885,
 					"y": 249.0029314463704
@@ -3505,26 +3900,26 @@
 					{
 						"ver": 1,
 						"nodeId": 19,
-						"x": 342.9999999999997,
-						"y": 45.00000000000006
+						"x": 342.9999999999998,
+						"y": 49.000000000000114
 					},
 					{
 						"ver": 1,
 						"nodeId": 127,
-						"x": 141.99999999999966,
-						"y": -283.9999999999998
+						"x": 363.99999999999955,
+						"y": -277.9999999999998
 					},
 					{
 						"ver": 1,
 						"nodeId": 129,
-						"x": 830.4999999999987,
-						"y": 128.5000000000001
+						"x": 1224.4999999999982,
+						"y": 42.500000000000114
 					},
 					{
 						"ver": 1,
 						"nodeId": 131,
-						"x": 1291.9999999999993,
-						"y": 119.99999999999991
+						"x": 1599.9999999999993,
+						"y": 185.9999999999999
 					},
 					{
 						"ver": 1,
@@ -3547,20 +3942,14 @@
 					{
 						"ver": 1,
 						"nodeId": 892,
-						"x": 517.9999999999994,
-						"y": -283.9999999999999
-					},
-					{
-						"ver": 1,
-						"nodeId": 893,
-						"x": 449.9999999999999,
-						"y": 364
+						"x": 727.9999999999994,
+						"y": -269.9999999999999
 					},
 					{
 						"ver": 1,
 						"nodeId": 894,
 						"x": 1315.9999999999995,
-						"y": 1048
+						"y": 1052
 					},
 					{
 						"ver": 1,
@@ -3585,6 +3974,30 @@
 						"nodeId": 900,
 						"x": 993.9999999999995,
 						"y": 1688
+					},
+					{
+						"ver": 1,
+						"nodeId": 1128,
+						"x": 627.9999999999999,
+						"y": 126.00000000000011
+					},
+					{
+						"ver": 1,
+						"nodeId": 1129,
+						"x": 1011.9999999999998,
+						"y": 1221.9999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 1136,
+						"x": 68,
+						"y": -289.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 1138,
+						"x": 923.9999999999997,
+						"y": 70
 					}
 				],
 				"nodeIds": [
@@ -3597,12 +4010,15 @@
 					134,
 					135,
 					892,
-					893,
 					894,
 					895,
 					896,
 					897,
-					900
+					900,
+					1128,
+					1129,
+					1136,
+					1138
 				],
 				"condViews": [
 					{
@@ -3614,8 +4030,8 @@
 								"y": 128
 							},
 							"dst": {
-								"x": 422.9999999999997,
-								"y": 125.00000000000006
+								"x": 422.9999999999998,
+								"y": 129.0000000000001
 							}
 						}
 					},
@@ -3624,12 +4040,12 @@
 						"condId": 132,
 						"points": {
 							"src": {
-								"x": 422.9999999999997,
-								"y": 125.00000000000006
+								"x": 422.9999999999998,
+								"y": 129.0000000000001
 							},
 							"dst": {
-								"x": 221.99999999999966,
-								"y": -203.99999999999977
+								"x": 443.99999999999955,
+								"y": -197.99999999999977
 							}
 						}
 					},
@@ -3666,12 +4082,12 @@
 						"condId": 1160,
 						"points": {
 							"src": {
-								"x": 910.4999999999987,
-								"y": 208.5000000000001
+								"x": 1304.4999999999982,
+								"y": 122.50000000000011
 							},
 							"dst": {
-								"x": 1371.9999999999993,
-								"y": 199.99999999999991
+								"x": 1679.9999999999993,
+								"y": 265.9999999999999
 							}
 						}
 					},
@@ -3680,8 +4096,8 @@
 						"condId": 1161,
 						"points": {
 							"src": {
-								"x": 1371.9999999999993,
-								"y": 199.99999999999991
+								"x": 1679.9999999999993,
+								"y": 265.9999999999999
 							},
 							"dst": {
 								"x": 1355.9999999999993,
@@ -3694,12 +4110,12 @@
 						"condId": 1377,
 						"points": {
 							"src": {
-								"x": 221.99999999999966,
-								"y": -203.99999999999977
+								"x": 443.99999999999955,
+								"y": -197.99999999999977
 							},
 							"dst": {
-								"x": 597.9999999999994,
-								"y": -203.9999999999999
+								"x": 807.9999999999994,
+								"y": -189.9999999999999
 							}
 						}
 					},
@@ -3708,54 +4124,12 @@
 						"condId": 1378,
 						"points": {
 							"src": {
-								"x": 597.9999999999994,
-								"y": -203.9999999999999
+								"x": 807.9999999999994,
+								"y": -189.9999999999999
 							},
 							"dst": {
-								"x": 422.9999999999997,
-								"y": 125.00000000000006
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1379,
-						"points": {
-							"src": {
-								"x": 422.9999999999997,
-								"y": 125.00000000000006
-							},
-							"dst": {
-								"x": 529.9999999999999,
-								"y": 444
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1380,
-						"points": {
-							"src": {
-								"x": 422.9999999999997,
-								"y": 125.00000000000006
-							},
-							"dst": {
-								"x": 910.4999999999987,
-								"y": 208.5000000000001
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1381,
-						"points": {
-							"src": {
-								"x": 529.9999999999999,
-								"y": 444
-							},
-							"dst": {
-								"x": 910.4999999999987,
-								"y": 208.5000000000001
+								"x": 422.9999999999998,
+								"y": 129.0000000000001
 							}
 						}
 					},
@@ -3769,7 +4143,7 @@
 							},
 							"dst": {
 								"x": 1395.9999999999995,
-								"y": 1128
+								"y": 1132
 							}
 						}
 					},
@@ -3783,21 +4157,7 @@
 							},
 							"dst": {
 								"x": 1395.9999999999995,
-								"y": 1128
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1384,
-						"points": {
-							"src": {
-								"x": 1395.9999999999995,
-								"y": 1128
-							},
-							"dst": {
-								"x": 1373.9999999999984,
-								"y": 1447.999999999999
+								"y": 1132
 							}
 						}
 					},
@@ -3870,6 +4230,104 @@
 								"y": 1768
 							}
 						}
+					},
+					{
+						"ver": 1,
+						"condId": 1726,
+						"points": {
+							"src": {
+								"x": 422.9999999999998,
+								"y": 129.0000000000001
+							},
+							"dst": {
+								"x": 707.9999999999999,
+								"y": 206.0000000000001
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1728,
+						"points": {
+							"src": {
+								"x": 1395.9999999999995,
+								"y": 1132
+							},
+							"dst": {
+								"x": 1091.9999999999998,
+								"y": 1301.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1734,
+						"points": {
+							"src": {
+								"x": 1091.9999999999998,
+								"y": 1301.9999999999998
+							},
+							"dst": {
+								"x": 1073.9999999999995,
+								"y": 1768
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1741,
+						"points": {
+							"src": {
+								"x": 148,
+								"y": -209.9999999999999
+							},
+							"dst": {
+								"x": 443.99999999999955,
+								"y": -197.99999999999977
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1742,
+						"points": {
+							"src": {
+								"x": 422.9999999999998,
+								"y": 129.0000000000001
+							},
+							"dst": {
+								"x": 148,
+								"y": -209.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1745,
+						"points": {
+							"src": {
+								"x": 707.9999999999999,
+								"y": 206.0000000000001
+							},
+							"dst": {
+								"x": 1003.9999999999997,
+								"y": 150
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1746,
+						"points": {
+							"src": {
+								"x": 1003.9999999999997,
+								"y": 150
+							},
+							"dst": {
+								"x": 1304.4999999999982,
+								"y": 122.50000000000011
+							}
+						}
 					}
 				],
 				"condIds": [
@@ -3881,22 +4339,25 @@
 					1161,
 					1377,
 					1378,
-					1379,
-					1380,
-					1381,
 					1382,
 					1383,
-					1384,
 					1385,
 					1386,
 					1387,
 					1392,
-					1393
+					1393,
+					1726,
+					1728,
+					1734,
+					1741,
+					1742,
+					1745,
+					1746
 				],
-				"scale": 0.40000000000000013,
+				"scale": 0.5000000000000001,
 				"pos": {
-					"x": 250,
-					"y": 233
+					"x": 237,
+					"y": 250
 				}
 			},
 			{
@@ -3905,20 +4366,20 @@
 					{
 						"ver": 1,
 						"nodeId": 488,
-						"x": 1965.833333333333,
-						"y": -240.1666666666669
+						"x": 1981.8333333333326,
+						"y": -356.16666666666686
 					},
 					{
 						"ver": 1,
 						"nodeId": 489,
-						"x": 1507.3333333333328,
-						"y": 3.333333333333144
+						"x": 1493.333333333332,
+						"y": -350.66666666666674
 					},
 					{
 						"ver": 1,
 						"nodeId": 495,
-						"x": 1532.0476190476181,
-						"y": 234.09523809523807
+						"x": 1406.0476190476184,
+						"y": 506.09523809523796
 					},
 					{
 						"ver": 1,
@@ -3930,31 +4391,19 @@
 						"ver": 1,
 						"nodeId": 1013,
 						"x": 1955.9999999999995,
-						"y": 8
+						"y": 6.000000000000028
 					},
 					{
 						"ver": 1,
 						"nodeId": 1015,
-						"x": 1973.9999999999993,
-						"y": 609.999999999999
+						"x": 2003.9999999999995,
+						"y": 607.9999999999989
 					},
 					{
 						"ver": 1,
 						"nodeId": 1016,
-						"x": 1441.9999999999995,
-						"y": 1305.999999999999
-					},
-					{
-						"ver": 1,
-						"nodeId": 1017,
-						"x": 1449.999999999999,
-						"y": 1601.9999999999986
-					},
-					{
-						"ver": 1,
-						"nodeId": 1018,
-						"x": 1757.999999999999,
-						"y": 1612
+						"x": 1181.9999999999993,
+						"y": 1321.999999999999
 					},
 					{
 						"ver": 1,
@@ -4001,14 +4450,14 @@
 					{
 						"ver": 1,
 						"nodeId": 1034,
-						"x": 387.99999999999966,
-						"y": 531.9999999999999
+						"x": 323.9999999999998,
+						"y": 399.99999999999983
 					},
 					{
 						"ver": 1,
 						"nodeId": 1035,
-						"x": 93.99999999999989,
-						"y": 639.9999999999993
+						"x": -136.0000000000001,
+						"y": 463.9999999999991
 					},
 					{
 						"ver": 1,
@@ -4025,14 +4474,14 @@
 					{
 						"ver": 1,
 						"nodeId": 1057,
-						"x": 96,
-						"y": 973.9999999999995
+						"x": 94,
+						"y": 971.9999999999995
 					},
 					{
 						"ver": 1,
 						"nodeId": 1058,
-						"x": 383.99999999999966,
-						"y": 811.9999999999998
+						"x": 475.9999999999998,
+						"y": 855.9999999999998
 					},
 					{
 						"ver": 1,
@@ -4043,8 +4492,8 @@
 					{
 						"ver": 1,
 						"nodeId": 1062,
-						"x": 110,
-						"y": -31.999999999999915
+						"x": -142,
+						"y": -325.9999999999999
 					},
 					{
 						"ver": 1,
@@ -4091,14 +4540,14 @@
 					{
 						"ver": 1,
 						"nodeId": 1070,
-						"x": 2013.9999999999986,
-						"y": 1331.9999999999995
+						"x": 2017.9999999999986,
+						"y": 1587.9999999999993
 					},
 					{
 						"ver": 1,
 						"nodeId": 1071,
-						"x": 1739.9999999999995,
-						"y": 1303.9999999999995
+						"x": 1751.9999999999995,
+						"y": 1593.9999999999995
 					},
 					{
 						"ver": 1,
@@ -4115,26 +4564,74 @@
 					{
 						"ver": 1,
 						"nodeId": 1074,
-						"x": 983.9999999999989,
-						"y": -337.99999999999983
+						"x": 969.9999999999975,
+						"y": 197.99999999999966
 					},
 					{
 						"ver": 1,
 						"nodeId": 1075,
-						"x": 1003.9999999999995,
-						"y": 2
+						"x": 967.9999999999984,
+						"y": -89.99999999999994
 					},
 					{
 						"ver": 1,
 						"nodeId": 1076,
-						"x": 1739.9999999999993,
-						"y": 967.9999999999997
+						"x": 1753.9999999999995,
+						"y": 1307.9999999999998
 					},
 					{
 						"ver": 1,
 						"nodeId": 1077,
-						"x": 1181.9999999999995,
-						"y": 1405.9999999999995
+						"x": 1183.9999999999993,
+						"y": 1575.9999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 1097,
+						"x": 1407.9999999999995,
+						"y": 187.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 1098,
+						"x": 1483.9999999999989,
+						"y": -108
+					},
+					{
+						"ver": 1,
+						"nodeId": 1099,
+						"x": 2021.9999999999995,
+						"y": 1303.9999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 1119,
+						"x": 1449.9999999999989,
+						"y": 1321.9999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 1120,
+						"x": 979.9999999999995,
+						"y": -353.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 1121,
+						"x": -61.99999999999994,
+						"y": 721.9999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 1122,
+						"x": -142.00000000000023,
+						"y": -42
+					},
+					{
+						"ver": 1,
+						"nodeId": 1123,
+						"x": 529.9999999999997,
+						"y": 605.9999999999998
 					}
 				],
 				"nodeIds": [
@@ -4145,8 +4642,6 @@
 					1013,
 					1015,
 					1016,
-					1017,
-					1018,
 					1021,
 					1022,
 					1024,
@@ -4176,7 +4671,15 @@
 					1074,
 					1075,
 					1076,
-					1077
+					1077,
+					1097,
+					1098,
+					1099,
+					1119,
+					1120,
+					1121,
+					1122,
+					1123
 				],
 				"condViews": [
 					{
@@ -4184,68 +4687,12 @@
 						"condId": 574,
 						"points": {
 							"src": {
-								"x": 2045.833333333333,
-								"y": -160.1666666666669
+								"x": 2061.8333333333326,
+								"y": -276.16666666666686
 							},
 							"dst": {
-								"x": 1587.3333333333328,
-								"y": 83.33333333333314
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 582,
-						"points": {
-							"src": {
-								"x": 1587.3333333333328,
-								"y": 83.33333333333314
-							},
-							"dst": {
-								"x": 1612.0476190476181,
-								"y": 314.0952380952381
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1540,
-						"points": {
-							"src": {
-								"x": 1521.9999999999995,
-								"y": 1385.999999999999
-							},
-							"dst": {
-								"x": 1529.999999999999,
-								"y": 1681.9999999999986
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1541,
-						"points": {
-							"src": {
-								"x": 1529.999999999999,
-								"y": 1681.9999999999986
-							},
-							"dst": {
-								"x": 1837.999999999999,
-								"y": 1692
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1542,
-						"points": {
-							"src": {
-								"x": 1837.999999999999,
-								"y": 1692
-							},
-							"dst": {
-								"x": 1521.9999999999995,
-								"y": 1385.999999999999
+								"x": 1573.333333333332,
+								"y": -270.66666666666674
 							}
 						}
 					},
@@ -4282,8 +4729,8 @@
 						"condId": 1561,
 						"points": {
 							"src": {
-								"x": 467.99999999999966,
-								"y": 611.9999999999999
+								"x": 403.9999999999998,
+								"y": 479.99999999999983
 							},
 							"dst": {
 								"x": 181.99999999999966,
@@ -4296,8 +4743,8 @@
 						"condId": 1562,
 						"points": {
 							"src": {
-								"x": 173.9999999999999,
-								"y": 719.9999999999993
+								"x": -56.000000000000114,
+								"y": 543.9999999999991
 							},
 							"dst": {
 								"x": 181.99999999999966,
@@ -4321,20 +4768,6 @@
 					},
 					{
 						"ver": 1,
-						"condId": 1588,
-						"points": {
-							"src": {
-								"x": 176,
-								"y": 1053.9999999999995
-							},
-							"dst": {
-								"x": 173.9999999999999,
-								"y": 719.9999999999993
-							}
-						}
-					},
-					{
-						"ver": 1,
 						"condId": 1589,
 						"points": {
 							"src": {
@@ -4342,8 +4775,8 @@
 								"y": 1198
 							},
 							"dst": {
-								"x": 176,
-								"y": 1053.9999999999995
+								"x": 174,
+								"y": 1051.9999999999995
 							}
 						}
 					},
@@ -4356,22 +4789,8 @@
 								"y": 1198
 							},
 							"dst": {
-								"x": 463.99999999999966,
-								"y": 891.9999999999998
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1591,
-						"points": {
-							"src": {
-								"x": 463.99999999999966,
-								"y": 891.9999999999998
-							},
-							"dst": {
-								"x": 467.99999999999966,
-								"y": 611.9999999999999
+								"x": 555.9999999999998,
+								"y": 935.9999999999998
 							}
 						}
 					},
@@ -4380,26 +4799,12 @@
 						"condId": 1595,
 						"points": {
 							"src": {
-								"x": 1612.0476190476181,
-								"y": 314.0952380952381
+								"x": 1486.0476190476184,
+								"y": 586.095238095238
 							},
 							"dst": {
 								"x": 2035.9999999999995,
-								"y": 88
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1596,
-						"points": {
-							"src": {
-								"x": 1587.3333333333328,
-								"y": 83.33333333333314
-							},
-							"dst": {
-								"x": 2035.9999999999995,
-								"y": 88
+								"y": 86.00000000000003
 							}
 						}
 					},
@@ -4409,7 +4814,7 @@
 						"points": {
 							"src": {
 								"x": 2035.9999999999995,
-								"y": 88
+								"y": 86.00000000000003
 							},
 							"dst": {
 								"x": 2053.999999999999,
@@ -4426,22 +4831,8 @@
 								"y": 394.0000000000001
 							},
 							"dst": {
-								"x": 2053.999999999999,
-								"y": 689.999999999999
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1599,
-						"points": {
-							"src": {
-								"x": 181.99999999999966,
-								"y": 359.99999999999994
-							},
-							"dst": {
-								"x": 190,
-								"y": 48.000000000000085
+								"x": 2083.9999999999995,
+								"y": 687.9999999999989
 							}
 						}
 					},
@@ -4587,29 +4978,15 @@
 					},
 					{
 						"ver": 1,
-						"condId": 1614,
-						"points": {
-							"src": {
-								"x": 2093.9999999999995,
-								"y": 1055.9999999999998
-							},
-							"dst": {
-								"x": 2093.9999999999986,
-								"y": 1411.9999999999995
-							}
-						}
-					},
-					{
-						"ver": 1,
 						"condId": 1615,
 						"points": {
 							"src": {
-								"x": 2093.9999999999986,
-								"y": 1411.9999999999995
+								"x": 2097.9999999999986,
+								"y": 1667.9999999999993
 							},
 							"dst": {
-								"x": 1819.9999999999995,
-								"y": 1383.9999999999995
+								"x": 1831.9999999999995,
+								"y": 1673.9999999999995
 							}
 						}
 					},
@@ -4618,8 +4995,8 @@
 						"condId": 1616,
 						"points": {
 							"src": {
-								"x": 2053.999999999999,
-								"y": 689.999999999999
+								"x": 2083.9999999999995,
+								"y": 687.9999999999989
 							},
 							"dst": {
 								"x": 2093.9999999999995,
@@ -4632,8 +5009,8 @@
 						"condId": 1618,
 						"points": {
 							"src": {
-								"x": 190,
-								"y": 48.000000000000085
+								"x": -62,
+								"y": -245.9999999999999
 							},
 							"dst": {
 								"x": 189.99999999999983,
@@ -4657,71 +5034,15 @@
 					},
 					{
 						"ver": 1,
-						"condId": 1620,
-						"points": {
-							"src": {
-								"x": 773.9999999999991,
-								"y": -261.99999999999994
-							},
-							"dst": {
-								"x": 1063.9999999999989,
-								"y": -257.99999999999983
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1622,
-						"points": {
-							"src": {
-								"x": 1063.9999999999989,
-								"y": -257.99999999999983
-							},
-							"dst": {
-								"x": 1083.9999999999995,
-								"y": 82
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1623,
-						"points": {
-							"src": {
-								"x": 1083.9999999999995,
-								"y": 82
-							},
-							"dst": {
-								"x": 1587.3333333333328,
-								"y": 83.33333333333314
-							}
-						}
-					},
-					{
-						"ver": 1,
 						"condId": 1624,
 						"points": {
 							"src": {
-								"x": 1819.9999999999995,
-								"y": 1383.9999999999995
+								"x": 1831.9999999999995,
+								"y": 1673.9999999999995
 							},
 							"dst": {
-								"x": 1819.9999999999993,
-								"y": 1047.9999999999995
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1625,
-						"points": {
-							"src": {
-								"x": 1819.9999999999993,
-								"y": 1047.9999999999995
-							},
-							"dst": {
-								"x": 1521.9999999999995,
-								"y": 1385.999999999999
+								"x": 1833.9999999999995,
+								"y": 1387.9999999999998
 							}
 						}
 					},
@@ -4730,8 +5051,8 @@
 						"condId": 1626,
 						"points": {
 							"src": {
-								"x": 1261.9999999999995,
-								"y": 1485.9999999999995
+								"x": 1263.9999999999993,
+								"y": 1655.9999999999995
 							},
 							"dst": {
 								"x": 1005.9999999999997,
@@ -4744,12 +5065,12 @@
 						"condId": 1627,
 						"points": {
 							"src": {
-								"x": 1521.9999999999995,
-								"y": 1385.999999999999
+								"x": 1261.9999999999993,
+								"y": 1401.999999999999
 							},
 							"dst": {
-								"x": 1261.9999999999995,
-								"y": 1485.9999999999995
+								"x": 1263.9999999999993,
+								"y": 1655.9999999999995
 							}
 						}
 					},
@@ -4766,28 +5087,272 @@
 								"y": 1383.9999999999995
 							}
 						}
+					},
+					{
+						"ver": 1,
+						"condId": 1676,
+						"points": {
+							"src": {
+								"x": 1487.9999999999995,
+								"y": 267.9999999999999
+							},
+							"dst": {
+								"x": 2035.9999999999995,
+								"y": 86.00000000000003
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1677,
+						"points": {
+							"src": {
+								"x": 1487.9999999999995,
+								"y": 267.9999999999999
+							},
+							"dst": {
+								"x": 1486.0476190476184,
+								"y": 586.095238095238
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1678,
+						"points": {
+							"src": {
+								"x": 1573.333333333332,
+								"y": -270.66666666666674
+							},
+							"dst": {
+								"x": 1563.9999999999989,
+								"y": -28
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1679,
+						"points": {
+							"src": {
+								"x": 1563.9999999999989,
+								"y": -28
+							},
+							"dst": {
+								"x": 2035.9999999999995,
+								"y": 86.00000000000003
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1680,
+						"points": {
+							"src": {
+								"x": 2093.9999999999995,
+								"y": 1055.9999999999998
+							},
+							"dst": {
+								"x": 2101.9999999999995,
+								"y": 1383.9999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1681,
+						"points": {
+							"src": {
+								"x": 2101.9999999999995,
+								"y": 1383.9999999999993
+							},
+							"dst": {
+								"x": 2097.9999999999986,
+								"y": 1667.9999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1705,
+						"points": {
+							"src": {
+								"x": 1833.9999999999995,
+								"y": 1387.9999999999998
+							},
+							"dst": {
+								"x": 1529.9999999999989,
+								"y": 1401.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1706,
+						"points": {
+							"src": {
+								"x": 1529.9999999999989,
+								"y": 1401.9999999999998
+							},
+							"dst": {
+								"x": 1261.9999999999993,
+								"y": 1401.999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1708,
+						"points": {
+							"src": {
+								"x": 1059.9999999999995,
+								"y": -273.9999999999999
+							},
+							"dst": {
+								"x": 1047.9999999999984,
+								"y": -9.999999999999943
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1709,
+						"points": {
+							"src": {
+								"x": 773.9999999999991,
+								"y": -261.99999999999994
+							},
+							"dst": {
+								"x": 1059.9999999999995,
+								"y": -273.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1710,
+						"points": {
+							"src": {
+								"x": 1047.9999999999984,
+								"y": -9.999999999999943
+							},
+							"dst": {
+								"x": 1049.9999999999975,
+								"y": 277.99999999999966
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1711,
+						"points": {
+							"src": {
+								"x": 1049.9999999999975,
+								"y": 277.99999999999966
+							},
+							"dst": {
+								"x": 1487.9999999999995,
+								"y": 267.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1712,
+						"points": {
+							"src": {
+								"x": 555.9999999999998,
+								"y": 935.9999999999998
+							},
+							"dst": {
+								"x": 609.9999999999997,
+								"y": 685.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1713,
+						"points": {
+							"src": {
+								"x": 609.9999999999997,
+								"y": 685.9999999999998
+							},
+							"dst": {
+								"x": 403.9999999999998,
+								"y": 479.99999999999983
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1714,
+						"points": {
+							"src": {
+								"x": 174,
+								"y": 1051.9999999999995
+							},
+							"dst": {
+								"x": 18.000000000000057,
+								"y": 801.9999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1715,
+						"points": {
+							"src": {
+								"x": 18.000000000000057,
+								"y": 801.9999999999995
+							},
+							"dst": {
+								"x": -56.000000000000114,
+								"y": 543.9999999999991
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1716,
+						"points": {
+							"src": {
+								"x": -62.00000000000023,
+								"y": 38
+							},
+							"dst": {
+								"x": -62,
+								"y": -245.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1717,
+						"points": {
+							"src": {
+								"x": 181.99999999999966,
+								"y": 359.99999999999994
+							},
+							"dst": {
+								"x": -62.00000000000023,
+								"y": 38
+							}
+						}
 					}
 				],
 				"condIds": [
 					574,
-					582,
-					1540,
-					1541,
-					1542,
 					1547,
 					1549,
 					1561,
 					1562,
 					1586,
-					1588,
 					1589,
 					1590,
-					1591,
 					1595,
-					1596,
 					1597,
 					1598,
-					1599,
 					1601,
 					1603,
 					1604,
@@ -4798,24 +5363,37 @@
 					1610,
 					1611,
 					1612,
-					1614,
 					1615,
 					1616,
 					1618,
 					1619,
-					1620,
-					1622,
-					1623,
 					1624,
-					1625,
 					1626,
 					1627,
-					1651
+					1651,
+					1676,
+					1677,
+					1678,
+					1679,
+					1680,
+					1681,
+					1705,
+					1706,
+					1708,
+					1709,
+					1710,
+					1711,
+					1712,
+					1713,
+					1714,
+					1715,
+					1716,
+					1717
 				],
 				"scale": 0.5000000000000001,
 				"pos": {
-					"x": 245,
-					"y": -250
+					"x": 224,
+					"y": 136
 				}
 			},
 			{
@@ -4901,33 +5479,45 @@
 					},
 					{
 						"ver": 1,
-						"nodeId": 850,
-						"x": 1403.8888888888896,
-						"y": 887.7777777777784
-					},
-					{
-						"ver": 1,
 						"nodeId": 851,
-						"x": 1510,
-						"y": -203.33333333333348
+						"x": 1023.3333333333337,
+						"y": -291.66666666666697
 					},
 					{
 						"ver": 1,
 						"nodeId": 852,
-						"x": 1353.333333333333,
-						"y": 88.33333333333314
+						"x": 1008.333333333334,
+						"y": 91.66666666666612
 					},
 					{
 						"ver": 1,
 						"nodeId": 853,
-						"x": 1681.6666666666667,
-						"y": 86.66666666666646
+						"x": 631.6666666666671,
+						"y": 68.33333333333309
 					},
 					{
 						"ver": 1,
 						"nodeId": 899,
-						"x": 1030,
-						"y": 90
+						"x": 1355.0000000000005,
+						"y": 83.33333333333343
+					},
+					{
+						"ver": 1,
+						"nodeId": 1130,
+						"x": 1279.9999999999998,
+						"y": 804.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 1131,
+						"x": 1645.0000000000002,
+						"y": -198.33333333333334
+					},
+					{
+						"ver": 1,
+						"nodeId": 1133,
+						"x": 729.9999999999999,
+						"y": 1016.6666666666672
 					}
 				],
 				"nodeIds": [
@@ -4944,11 +5534,13 @@
 					743,
 					744,
 					848,
-					850,
 					851,
 					852,
 					853,
-					899
+					899,
+					1130,
+					1131,
+					1133
 				],
 				"condViews": [
 					{
@@ -5135,71 +5727,15 @@
 					},
 					{
 						"ver": 1,
-						"condId": 1323,
-						"points": {
-							"src": {
-								"x": 970.6666666666666,
-								"y": 692.0000000000003
-							},
-							"dst": {
-								"x": 1866.8888888888894,
-								"y": 962.555555555556
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1327,
-						"points": {
-							"src": {
-								"x": 1483.8888888888896,
-								"y": 967.7777777777784
-							},
-							"dst": {
-								"x": 1866.8888888888894,
-								"y": 962.555555555556
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1328,
-						"points": {
-							"src": {
-								"x": 970.6666666666666,
-								"y": 692.0000000000003
-							},
-							"dst": {
-								"x": 1483.8888888888896,
-								"y": 967.7777777777784
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1329,
-						"points": {
-							"src": {
-								"x": 2020.5555555555568,
-								"y": -125.00000000000003
-							},
-							"dst": {
-								"x": 1590,
-								"y": -123.33333333333348
-							}
-						}
-					},
-					{
-						"ver": 1,
 						"condId": 1330,
 						"points": {
 							"src": {
-								"x": 1590,
-								"y": -123.33333333333348
+								"x": 1103.3333333333337,
+								"y": -211.66666666666697
 							},
 							"dst": {
-								"x": 1433.333333333333,
-								"y": 168.33333333333314
+								"x": 1088.333333333334,
+								"y": 171.66666666666612
 							}
 						}
 					},
@@ -5208,12 +5744,12 @@
 						"condId": 1331,
 						"points": {
 							"src": {
-								"x": 1433.333333333333,
-								"y": 168.33333333333314
+								"x": 1088.333333333334,
+								"y": 171.66666666666612
 							},
 							"dst": {
-								"x": 1761.6666666666667,
-								"y": 166.66666666666646
+								"x": 711.6666666666671,
+								"y": 148.3333333333331
 							}
 						}
 					},
@@ -5222,12 +5758,12 @@
 						"condId": 1332,
 						"points": {
 							"src": {
-								"x": 1761.6666666666667,
-								"y": 166.66666666666646
+								"x": 711.6666666666671,
+								"y": 148.3333333333331
 							},
 							"dst": {
-								"x": 1590,
-								"y": -123.33333333333348
+								"x": 1103.3333333333337,
+								"y": -211.66666666666697
 							}
 						}
 					},
@@ -5236,12 +5772,12 @@
 						"condId": 1390,
 						"points": {
 							"src": {
-								"x": 1590,
-								"y": -123.33333333333348
+								"x": 1103.3333333333337,
+								"y": -211.66666666666697
 							},
 							"dst": {
-								"x": 1110,
-								"y": 170
+								"x": 1435.0000000000005,
+								"y": 163.33333333333343
 							}
 						}
 					},
@@ -5250,12 +5786,96 @@
 						"condId": 1391,
 						"points": {
 							"src": {
-								"x": 1110,
-								"y": 170
+								"x": 1435.0000000000005,
+								"y": 163.33333333333343
 							},
 							"dst": {
-								"x": 1433.333333333333,
-								"y": 168.33333333333314
+								"x": 1088.333333333334,
+								"y": 171.66666666666612
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1729,
+						"points": {
+							"src": {
+								"x": 970.6666666666666,
+								"y": 692.0000000000003
+							},
+							"dst": {
+								"x": 1359.9999999999998,
+								"y": 884.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1730,
+						"points": {
+							"src": {
+								"x": 1359.9999999999998,
+								"y": 884.9999999999999
+							},
+							"dst": {
+								"x": 1866.8888888888894,
+								"y": 962.555555555556
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1731,
+						"points": {
+							"src": {
+								"x": 2020.5555555555568,
+								"y": -125.00000000000003
+							},
+							"dst": {
+								"x": 1725.0000000000002,
+								"y": -118.33333333333334
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1735,
+						"points": {
+							"src": {
+								"x": 1725.0000000000002,
+								"y": -118.33333333333334
+							},
+							"dst": {
+								"x": 1435.0000000000005,
+								"y": 163.33333333333343
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1736,
+						"points": {
+							"src": {
+								"x": 809.9999999999999,
+								"y": 1096.6666666666672
+							},
+							"dst": {
+								"x": 492.4444444444445,
+								"y": 983.1111111111115
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1737,
+						"points": {
+							"src": {
+								"x": 970.6666666666666,
+								"y": 692.0000000000003
+							},
+							"dst": {
+								"x": 809.9999999999999,
+								"y": 1096.6666666666672
 							}
 						}
 					}
@@ -5274,20 +5894,22 @@
 					1201,
 					1321,
 					1322,
-					1323,
-					1327,
-					1328,
-					1329,
 					1330,
 					1331,
 					1332,
 					1390,
-					1391
+					1391,
+					1729,
+					1730,
+					1731,
+					1735,
+					1736,
+					1737
 				],
-				"scale": 0.5000000000000001,
+				"scale": 0.6000000000000001,
 				"pos": {
-					"x": -56,
-					"y": 149
+					"x": 89,
+					"y": 249
 				}
 			}
 		],
