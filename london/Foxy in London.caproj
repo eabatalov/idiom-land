@@ -4091,30 +4091,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="MarkerNPC" sid="4599352889465725">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="3217436670067432">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="852432572850767" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.506024">
-                        <collision-poly>
-                            <point x="0.078125" y="0.060241" />
-                            <point x="0.5" y="0" />
-                            <point x="0.921875" y="0.060241" />
-                            <point x="1" y="0.493976" />
-                            <point x="0.765625" y="0.819277" />
-                            <point x="0.5" y="1" />
-                            <point x="0.234375" y="0.819277" />
-                            <point x="0" y="0.493976" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="foxy_simpleFamily" plugin-id="Sprite" sid="3940617487415505">
@@ -4178,7 +4154,7 @@
         <layout>LevelComplete.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="Quest">
+        <event-folder expanded="0" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Bootstrap.xml</event-sheet>
             <event-sheet>UInit.xml</event-sheet>
@@ -4188,7 +4164,7 @@
             <event-sheet>PlayerAnimation.xml</event-sheet>
             <event-sheet>PlayerInput.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="1" name="Stages">
+        <event-folder expanded="0" name="Stages">
             <event-sheet>Carousel.xml</event-sheet>
             <event-sheet>LevelComplete.xml</event-sheet>
             <event-sheet>Intro.xml</event-sheet>
