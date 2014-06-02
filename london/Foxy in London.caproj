@@ -3153,7 +3153,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="Stages">
+        <object-folder expanded="0" name="Stages">
             <object-folder expanded="1" name="Intro">
                 <object-folder expanded="0" name="Helpers">
                     <object-type name="JumpHelper" sid="3052283865919932">
@@ -3710,7 +3710,19 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="IdiomLand" />
+        <object-folder expanded="1" name="IdiomLand">
+            <object-type name="IdiomCounterTxt" sid="5244611748275736">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="IdiomCounterBg" sid="6657483908058606">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1529448433622732" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Platforms" sid="9109209147233701">
             <plugin id="Sprite" />
             <behaviors>
@@ -4183,9 +4195,15 @@
         <event-folder expanded="0" name="LevelComplete">
             <event-sheet>LevelCompeleteMain.xml</event-sheet>
         </event-folder>
+        <event-folder expanded="0" name="IdiomLand">
+            <event-sheet>IdiomCounter.xml</event-sheet>
+            <event-sheet>IdiomDialogCompletion.xml</event-sheet>
+            <event-sheet>IdiomLand.xml</event-sheet>
+        </event-folder>
         <event-sheet>SCMLSpriteBindings.xml</event-sheet>
         <event-sheet>Main.xml</event-sheet>
         <event-sheet>NPCAnimation.xml</event-sheet>
+        <event-sheet>GameConstants.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="10" />
