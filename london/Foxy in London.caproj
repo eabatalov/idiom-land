@@ -1530,10 +1530,16 @@
                 <instance-variables>
                     <instance-variable name="NpcIDInStage" sid="2825221887980929" type="string" />
                     <instance-variable name="ExpandToLayoutHeight" sid="9190528577776294" type="number" />
+                    <instance-variable name="Highlight" sid="9221403238171095" type="number" />
                 </instance-variables>
+                <container>
+                    <type>TalkStartTrigger</type>
+                    <type>TalkStartHighlight</type>
+                </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2416716789871564" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0">
+                            <image-point name="TalkStartHighlightOrigin" x="1.0303" y="1" />
                             <collision-poly>
                                 <point x="0.030303" y="0.00297619" />
                                 <point x="0.909091" y="0.00892857" />
@@ -1543,6 +1549,20 @@
                                 <point x="0.030303" y="0.997024" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TalkStartHighlight" sid="9167649442424211">
+                <plugin id="Sprite" />
+                <container>
+                    <type>TalkStartTrigger</type>
+                    <type>TalkStartHighlight</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1919068225865451" speed="1">
+                        <frame duration="1" hotspotX="1" hotspotY="0.505882" />
+                        <frame duration="1" hotspotX="1" hotspotY="0.505882" />
+                        <frame duration="1" hotspotX="1" hotspotY="0.505882" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -3711,7 +3731,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="IdiomLand">
+        <object-folder expanded="0" name="IdiomLand">
             <object-type name="IdiomCounterTxt" sid="5244611748275736">
                 <plugin id="Text" />
             </object-type>
@@ -4191,7 +4211,7 @@
         <layout>LevelComplete.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="0" name="Quest">
+        <event-folder expanded="1" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Bootstrap.xml</event-sheet>
             <event-sheet>UInit.xml</event-sheet>
@@ -4212,7 +4232,7 @@
         <event-folder expanded="0" name="LevelComplete">
             <event-sheet>LevelCompeleteMain.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="1" name="IdiomLand">
+        <event-folder expanded="0" name="IdiomLand">
             <event-sheet>IdiomCounter.xml</event-sheet>
             <event-sheet>IdiomDialogCompletion.xml</event-sheet>
             <event-sheet>IdiomLand.xml</event-sheet>

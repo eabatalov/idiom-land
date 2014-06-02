@@ -531,6 +531,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-15" name="Set visible" sid="8097163933482469" type="TalkStartHighlight">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action id="0" name="Call function" sid="8550995941394823" type="Function">
                             <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;auto_talk_start_&quot;  &amp; TalkStartTrigger.NpcIDInStage{###}&quot;Player&quot;</param>
