@@ -23,6 +23,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -3722,6 +3723,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="GoForwardHint" sid="673420047858757">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="7325489864245119">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="3800282182716496">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8797580979136669" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Platforms" sid="9109209147233701">
             <plugin id="Sprite" />
@@ -4195,7 +4212,7 @@
         <event-folder expanded="0" name="LevelComplete">
             <event-sheet>LevelCompeleteMain.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="IdiomLand">
+        <event-folder expanded="1" name="IdiomLand">
             <event-sheet>IdiomCounter.xml</event-sheet>
             <event-sheet>IdiomDialogCompletion.xml</event-sheet>
             <event-sheet>IdiomLand.xml</event-sheet>
