@@ -3,31 +3,113 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameHelp</name>
     <events>
-        <event-block sid="2687005477221463">
-            <conditions>
-                <condition id="0" name="On function" sid="4972558468966423" type="Function">
-                    <param id="0" name="Name">&quot;procSpecialControls&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="1" name="Set return value" sid="2045904024279319" type="Function">
-                    <param id="0" name="Value">0</param>
-                </action>
-            </actions>
+        <event-group description="" sid="891276307685036" title="Game help">
             <sub-events>
-                <event-block sid="5909063017299305">
+                <variable constant="0" name="GameHelpPopupIsShowing" sid="1995553290489002" static="1" type="number">0</variable>
+                <event-block sid="271157263218143">
                     <conditions>
-                        <condition id="4" name="Is touching object" sid="3126790444267676" type="Touch">
-                            <param id="0" name="Object">GameHelpBtn</param>
+                        <condition id="0" name="On function" sid="9999837698902666" type="Function">
+                            <param id="0" name="Name">&quot;procPopupClick&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set return value" sid="4320796054635882" type="Function">
-                            <param id="0" name="Value">1</param>
+                        <action id="1" name="Set return value" sid="5739528071912284" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3266101979065587">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9337660718735297" type="System">
+                                    <param id="0" name="First value">GameHelpPopupIsShowing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="7290470773003809" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="4317112993350333" type="GameHelpBg">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="1537466527261392" type="GameHelpTxt">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5573613136474208" type="System">
+                                    <param id="0" name="Variable">GameHelpPopupIsShowing</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3151641684089686">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6484288338287208" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9595633752726059">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="3901201064373827" type="Touch">
+                                            <param id="0" name="Object">GameHelpBtn</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="4853474664474248" type="System">
+                                            <param id="0" name="First value">GameHelpPopupIsShowing</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="6963519969728551" type="Function">
+                                            <param id="0" name="Value">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="4486965649350631" type="GameHelpBg">
+                                            <param id="0" name="X">1600 / 2 - GameHelpBg.Width / 2</param>
+                                            <param id="1" name="Y">1000 / 2 - GameHelpBg.Height / 2</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="9819448618380588" type="GameHelpTxt">
+                                            <param id="0" name="X">GameHelpBg.X + ((GameHelpBg.Width - GameHelpTxt.Width) / 2)</param>
+                                            <param id="1" name="Y">GameHelpBg.Y + ((GameHelpBg.Height - GameHelpTxt.Height) / 2)</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="2343357262994581" type="GameHelpBg">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1676613740963342" type="GameHelpTxt">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3741094900428018" type="System">
+                                            <param id="0" name="Variable">GameHelpPopupIsShowing</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2687005477221463">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4972558468966423" type="Function">
+                            <param id="0" name="Name">&quot;procSpecialControls&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="2045904024279319" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7224671346053024">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="1747606006850771" type="GameHelpTxt" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="6344967101229111" type="GameHelpTxt">
+                            <param id="0" name="Text">&quot;Level objective:&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Collect &quot; &amp; IDIOMS_ON_LEVEL_COUNT &amp; &quot; idioms from London people.&quot; &amp; newline &amp; newline &amp;&#x0D;&#x0A;&quot;Hint:&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Get close to them and talk!&quot;</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>
