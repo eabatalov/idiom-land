@@ -3731,7 +3731,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="0" name="IdiomLand">
+        <object-folder expanded="1" name="IdiomLand">
             <object-type name="IdiomCounterTxt" sid="5244611748275736">
                 <plugin id="Text" />
             </object-type>
@@ -3755,6 +3755,14 @@
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8797580979136669" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GameHelpBtn" sid="9235764985122567">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5065942684153493" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0" />
                     </animation>
                 </animation-folder>
@@ -4211,7 +4219,7 @@
         <layout>LevelComplete.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="Quest">
+        <event-folder expanded="0" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Bootstrap.xml</event-sheet>
             <event-sheet>UInit.xml</event-sheet>
