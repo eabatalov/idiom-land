@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameHelp</name>
+    <events>
+        <event-block sid="2687005477221463">
+            <conditions>
+                <condition id="0" name="On function" sid="4972558468966423" type="Function">
+                    <param id="0" name="Name">&quot;procSpecialControls&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="2045904024279319" type="Function">
+                    <param id="0" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5909063017299305">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="3126790444267676" type="Touch">
+                            <param id="0" name="Object">GameHelpBtn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="4320796054635882" type="Function">
+                            <param id="0" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
