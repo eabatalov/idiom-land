@@ -1,213 +1,312 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<!-- set the title of you site -->
-		<title>Idiom Land</title>
-		<!-- encoding -->
-		<meta charset="utf-8">
-		<!-- responsiveness, scaling... -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<!-- IE compatibility modes -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<!-- modernizr -->
-		<script src="js/modernizr.js"></script>
-		<!-- main Bootstrap styling -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<!-- custom styling -->
-		<link href="css/style.css" rel="stylesheet">
-		<!-- Google font -->
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-		<!-- site thumbnail -->
-		<link rel="image_src" href="thumbnail.png" />
-		<!-- favicon -->
-        <link rel="icon" type="image/ico" href="favicon.ico">
-	</head>
-	<body data-spy="scroll" data-target=".navbar" data-offset="61">
-		<div class="preloader">
-			<div class="spinner">
-				<div class="bounce1"></div>
-				<div class="bounce2"></div>
-				<div class="bounce3"></div>
-			</div>
-		</div>
-	<!--start navigation-->
-		<div class="navbar navbar-default navbar-fixed-top" role="navigation" data-start="background: rgba(255, 255, 255, .0); padding: 20px 0px;" data-90p="background: rgba(255, 255, 255, 1); padding: 5px 0px;">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#intro">
-						<img src="img/logo.png" alt="" class="img-responsive" />
-					</a>
-				</div>
-				<div class="collapse navbar-collapse" id="navbar-collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#" data-start="color: rgb(255, 255, 255);" data-90p="color: rgb(37, 39, 43);">Facebook</a></li>
-                        <li><a href="#" data-start="color: rgb(255, 255, 255);" data-90p="color: rgb(37, 39, 43);">Twitter</a></li>
-                        <li><a href="#" data-start="color: rgb(255, 255, 255);" data-90p="color: rgb(37, 39, 43);">Facebook</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<section id="intro" data-start="background-position: 50% 0px;" data-90p="background-position: 50% 200px;">
-			<div class="container-fluid text-center">
-				<div class="row">
-					<div class="col-xs-8 col-xs-offset-2">
-						<div id="carousel_fade_intro" class="carousel slide">
-							<div class="carousel-inner">
-								<div class="active item">
-									<h1>Play to learn</h1>
-								</div>
-								<div class="item">
-									<h1>Incredible worlds</h1>
-								</div>
-								<div class="item">
-									<h1>Easy to customize</h1>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<span class="scroll-btn hidden-xs">
-				<a href="#services">
-					<span class="mouse"><span></span></span>
-				</a>
-			</span>
-		</section>
-        <section id="gallery">
-            <div class="container">
-                <div class="row divide">
-                    <div class="col-sm-8 col-sm-offset-2 divide-bottom text-center">
-                        <h1>Step into the world of adventure in English</h1>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 gallery-item">
-                        <div class="thumbnail">
-                            <a href="img/works/works_1.jpg" data-toggle="lightbox">
-                                <img src="img/works/works_1.jpg" alt="">
-                                <div class="gallery-overlay">
-                                    <div class="myway-icon-gallery">
-                                        <svg viewBox="0 0 32 32">
-                                            <use xlink:href="#picture"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 gallery-item">
-                        <div class="thumbnail">
-                            <a href="img/works/works_2.jpg" data-toggle="lightbox">
-                                <img src="img/works/works_2.jpg" alt="">
-                                <div class="gallery-overlay">
-                                    <div class="myway-icon-gallery">
-                                        <svg viewBox="0 0 32 32">
-                                            <use xlink:href="#painting-pallet"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 gallery-item">
-                        <div class="thumbnail">
-                            <a href="img/works/works_3.jpg" data-toggle="lightbox">
-                                <img src="img/works/works_3.jpg" alt="">
-                                <div class="gallery-overlay">
-                                    <div class="myway-icon-gallery">
-                                        <svg viewBox="0 0 32 32">
-                                            <use xlink:href="#painting-pallet"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>Hype - Mobile App Landing Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- CSS Files comes here -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="css/animate.css" rel="stylesheet" media="screen">
+    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen">
+    <link href="css/nivo-lightbox.css" rel="stylesheet" media="screen">
+    <link href="css/nivo_lightbox_themes/default/default.css" rel="stylesheet" media="screen">
+    <link href="css/colors.css" rel="stylesheet" media="screen">
+    <link href="css/responsive.css" rel="stylesheet" media="screen">
+    
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic"
+          rel="stylesheet" type="text/css">
+    
+    <!-- Modernizer and IE specyfic files -->  
+    <script src="js/modernizr.custom.js"></script>
+      
+  </head>
+  
+  <body>
+    
+    <!--###############################-->
+    <!--PRELOADER #####################-->
+    <!--###############################-->
+    
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--###############################-->
+    <!--HOME ##########################-->
+    <!--###############################-->
+
+    <section id="home">
+    <div class="container">
+        <div class="row">
+            <div id="homescreen" class="col-sm-12 col-md-12 col-lg-12">
+                 <div id="logo" class="crown"><a href="#home"><img src="images/logo.svg" width="230" height="100" alt="logo"></a></div>
+                 <div id="logo_header"></div>
+                 <div id="slogan"><h2>Get involved with an adventure game that educates you about English.</h2></div>
+                 <a href="#" class="cta2 crown" id="button_more">Try to play demo</a>
+                 <a href="#" class="cta1 crown" id="button_more">Share</a>
+                 <img src="images/homescreen.png" class="img-responsive" id="home_image" alt="img">
+            </div> <div class="clearfix"></div>
+        </div>
+    </div>
+    </section>
+    
+    <!--###############################-->
+    <!--Features 1 ####################-->
+    <!--###############################-->
+    
+    <section id="features_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6  col-lg-6">
+                  <img src="images/features1b.png" class="img-responsive image_back" id="features1a_image" alt="img">
+                  <img src="images/features1a.png" class="img-responsive image_front" id="features1b_image" alt="img">
+                </div>
+                
+                <div class="col-sm-6 col-md-6 col-lg-6" id="features_1_content">
+                    <h2>Special report from London</h2>
+                    <p>An incredible journey from the outskirts to the center of London.<br>
+                        Unbelievable characters encountered on the way foxy. Simple and<br>
+                        fun adventure..
+                    </p>
+                    <div class="feature">
+                        <img class="feature_icon" src="images/flag.svg" alt="flag">
+                        <div>
+                            <h4>Talk in city</h4>
+                            <p>Using idioms that are often used by local.<br>Wiggle communication skills in the city..</p>
                         </div>
                     </div>
                     
+                    <div class="feature">
+                        <img class="feature_icon" src="images/feather.svg" alt="feather">
+                        <div>
+                            <h4>Easy to memorize</h4>
+                            <p>Foxy is a journalist. Like all journalists<br>she writes all new and unknown.</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+            
+        </div>
+       
+    </section>
+    
+
+    <!--###############################-->
+    <!--Features 2 ####################-->
+    <!--###############################-->
+
+    <section id="features_3">
+        <div class="container">
+            <div class="row" id="features_3_intro">
+                <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" >
+                    <h2>Great Features</h2>
                 </div>
             </div>
-        </section>
-        <div id="works-top" data-bottom-top="background-position: 50% -150px;" data-top-bottom="background-position: 50% 50px;">
-            <a href="game"><h1 class="header">Try to play demo</h1></a>
-            <p class="header">How awesome is it?</p>
-        </div>
-	<!--start contact-->
-		<section id="contact">
-			<div class="container">
-				<div class="row divide">
-					<div id="submitElems">
-	                	<div class="col-sm-8 col-sm-offset-2 divide-bottom text-center">
-			                <h1>Enter your email</h1>
-                            <p>TO GET EARLY ACCESS</p>
-			            </div>
-						<form class="form-inline flowuplabels" role="form" id="contactForm" onsubmit="return submitContacts(event)"
-                            method="post" action="http://idiomland.com/sendmail.php">
-							<div class="form-group col-md-4 col-sm-6 fl_wrap">
-								<label class="fl_label" for="name">Name:</label>
-								<input type="text" name="name" value="" id="name" class="form-control fl_input">
-							</div>
-							<div class="form-group col-md-4 col-sm-6 fl_wrap">
-								<label class="fl_label" for="email">Your email:</label>
-								<input type="email" name="email" value="" id="email" class="form-control fl_input">
-							</div>
-							<div class="form-group col-md-4 col-sm-6">
-								<button type="submit" class="btn btn-fancy btn-block">Notify me</button>
-							</div>
-							<div class="form-group col-xs-12">
-								<div class="message">
-									<div class="alert"></div>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div id="submitSuccessElems" style="display:none;" class="col-sm-8 col-sm-offset-2 divide-bottom text-center">
-						<h1>Thank you for your submission.</h1>
-                        <h1>We'll contact you soon!</h1>
-					</div>
-				</div>
-			</div>
-		</section>
+            
+            <div class="row" >
+                <div class="col-sm-4 col-md-4 ol-lg-4" id="features_3_content_left">
+                    
+                    <div class="feature feature_3">
+                        <img class="feature_3_icon" src="images/gamepad.svg" alt="flag">
+                        <h4>Play to learn</h4>
+                        <p>Test in the gaming environment.<br>
+                            Addition to traditional courses.
+                        </p>
+                    </div>
+                    
+                    <div class="feature feature_3">
+                        <img class="feature_3_icon" src="images/box.svg" alt="flag">
+                        <h4>Advanced technology</h4>
+                        <p>Independent educational product<br>
+                            using it’s own technology for scripting.
+                        </p>
+                    </div>
+                    
+                </div>
+            
+                <div class="col-sm-4 col-md-4 ol-lg-4" id="features_3_content_center">
+                    <img src="images/features3.png" class="img-responsive" id="features3_image" alt="img">
+                </div>
 
-	<!-- jQuery -->
-		<script src="js/jquery.min.js"></script>
-	<!-- main bootstrap js -->
-		<script src="js/bootstrap.min.js"></script>
-	<!-- retina support -->
-		<script src="js/retina.js"></script>
-	<!-- custom scrollbar and smooth scroll -->
-		<script src="js/smoothscroll.js"></script>                  
-	<!-- animated elements -->
-		<script src="js/imagesloaded.min.js"></script>
-		<script src="js/skrollr.js"></script>
-	<!-- gallery lightbox -->
-		<script src="js/ekko-lightbox.min.js"></script>
-	<!-- background stretch and slide -->
-		<script src="js/jquery.form.js"></script>
-		<script src="js/jquery.flowuplabels.js"></script>
-	<!-- custom scripts and triggers -->
-		<script src="js/custom.js"></script>
-	<!--end scripts-->
+                <div class="col-sm-4 col-md-4 ol-lg-4" id="features_3_content_right">
+                    
+                    <div class="feature feature_3">
+                        <img class="feature_3_icon" src="images/earth.svg" alt="flag">
+                        <h4>Share &  Publish</h4>
+                        <p>With the ease of sharing the game through<br>
+                            social networks and blogs.
+                        </p>
+                    </div>
+                    
+                    <div class="feature feature_3">
+                        <img class="feature_3_icon" src="images/cross.svg" alt="flag">
+                        <h4>Cross-platform</h4>
+                        <p>Is available on any mobile operating system<br>
+                            and support any web browsers with support<br>
+                            for HTML5 and JS.
+                        </p>
+                    </div>
+                    
+                </div>
+           
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!--###############################-->
+    <!--Gallery #######################-->
+    <!--###############################-->
+
+    <section id="gallery">
+        <div class="container">
+            <div class="row" id="gallery_intro">
+                <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" >
+                    
+                    <h2>Screenshots Gallery</h2>
+                    
+                </div>
+            </div>
+            
+            <div class="row" id="gallery_carousel">
+                <div class="col-sm-12 col-md-12 col-lg-12" >
+                    <div id="owl-gallery" class="owl-carousel">
+                        <div class="item"><a href="images/gallery1.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="images/gallery1@2x.jpg">
+                            <img src="images/gallery1.jpg" class="img-responsive img-rounded" alt="img"></a></div>
+                        <div class="item"><a href="images/gallery2.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="images/gallery2@2x.jpg">
+                            <img src="images/gallery2.jpg" class="img-responsive img-rounded" alt="img"></a></div>
+                        <div class="item"><a href="images/gallery3.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="images/gallery3@2x.jpg">
+                            <img src="images/gallery3.jpg" class="img-responsive img-rounded" alt="img"></a></div>
+                        <div class="item"><a href="images/gallery4.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="images/gallery4@2x.jpg">
+                            <img src="images/gallery4.jpg" class="img-responsive img-rounded" alt="img"></a></div>
+                        <div class="item"><a href="images/gallery5.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="images/gallery5@2x.jpg">
+                            <img src="images/gallery5.jpg" class="img-responsive img-rounded" alt="img"></a></div>
+                        <div class="item"><a href="images/gallery1.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="images/gallery6@2x.jpg">
+                            <img src="images/gallery1.jpg" class="img-responsive img-rounded" alt="img"></a></div>
+                        <div class="item"><a href="images/gallery2.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="images/gallery7@2x.jpg">
+                            <img src="images/gallery2.jpg" class="img-responsive img-rounded" alt="img"></a></div>
+                        <div class="item"><a href="images/gallery3.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="images/gallery8@2x.jpg">
+                            <img src="images/gallery3.jpg" class="img-responsive img-rounded" alt="img"></a></div>
+                        <div class="item"><a href="images/gallery4.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="images/gallery9@2x.jpg">
+                            <img src="images/gallery4.jpg" class="img-responsive img-rounded" alt="img"></a></div>
+                        <div class="item"><a href="images/gallery5.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="images/gallery10@2x.jpg">
+                            <img src="images/gallery5.jpg" class="img-responsive img-rounded" alt="img"></a></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    
+    <!--###############################-->
+    <!--Newsletter and Footer #########-->
+    <!--###############################-->
+    
+    <section id="footer">
+        <div class="container">
+            <div class="row" id="newsletter">
+                <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" >
+                    
+                    <h2>Subscribe to our newsletter</h2>
+                    <p>Very soon we will release the final game.<br>
+                        Read about the event first.
+                    </p>
+                    
+                    <div id="newsletter_form">
+                        <form action="sendmail.php" method="post" class="subscribe-form" id="subscribe-form">
+                            <input type="email" name="email" class="subscribe-input" placeholder="Enter your e-mail address..."  required>
+                                <button type="submit" class="subscribe-submit">Notify Me</button>
+                        </form>
+                    </div>
+                    <div id="preview"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" id="contact">
+                    <h2>Contact us</h2>
+                    <p>We'll be very grateful for the detailed feedback on the functionality<br>
+                        and user quality games. The game is in constant development and<br>
+                        we are  working on improving it every day.
+                    </p>
+
+                    <div id="contact_form">
+                        <form action="#" method="post" class="contact-us" id="contact-us">
+                            <div class="form-group name">
+                                <label class="sr-only" for="name">Name</label>
+                                <input id="name" type="text" class="contact-us-input" placeholder="Name:">
+                            </div><!--//form-group-->
+                            <div class="form-group email">
+                                <label class="sr-only" for="email">Email</label>
+                                <input id="email" type="email" class="contact-us-input" placeholder="Email:">
+                            </div><!--//form-group-->
+                            <div class="form-group message">
+                                <label class="sr-only" for="message">Message</label>
+                                <textarea id="message" class="contact-us-input" rows="6" placeholder="Message:"></textarea>
+                            </div><!--//form-group-->
+                            <button type="submit" class="sm" id="send">Send Message</button>
+                        </form>
+                    </div>
+                    <div id="contact-preview"></div>
+                </div>
+            </div>
+           <div class="row">
+               <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" id="share">
+                   
+                   <div id="social_icons">
+                       <ul>
+                           <li><a href="#"><img src="images/facebook.svg" width="58" height="58" alt="facebook"></a></li>
+                           <li><a href="#"><img src="images/twitter.svg" width="58" height="58" alt="twitter"></a></li>
+                           <li><a href="#"><img src="images/instagram.svg" width="58" height="58" alt="instagram"></a></li>
+                           <li><a href="#"><img src="images/gplus.svg" width="58" height="58" alt="gplus"></a></li>
+                           <li><a href="#"><img src="images/pinterest.svg" width="58" height="58" alt="pinterest"></a></li>
+                           <li><a href="#"><img src="images/vk.svg" width="58" height="58" alt="vk"></a></li>
+                       </ul>
+                   </div>
+                   
+                   <p>Copyright &copy; 2014 Idiom Land</p>
+     
+               </div>
+           </div>
+           
+        </div>
+    </section>    
+
+    <!-- JavaScript plugins comes here -->
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/nivo-lightbox.min.js"></script>
     <script type="text/javascript">
-        function submitContacts(e) {
-            e.preventDefault()
-            var formId = "contactForm";
-            var jqForm = $("#" + formId);
-            $.ajax({
-                type: e.currentTarget.method,
-                url: e.currentTarget.action,
-                data: jqForm.serialize(),
-                success: function(data)
-                {
-                    $("#submitElems").hide();
-                    $("#submitSuccessElems").show();
-                }
+        $('document').ready(function(){
+                $('#subscribe-form').ajaxForm( {
+                target: '#preview',
+                success: function() { 
+                      $('#subscribe-form').slideUp('slow');
+                      $('#preview').css({"opacity":"1"});
+                    }
+                });
             });
-            return false;
-        };
     </script>
-    </body>
+  </body>
+
 </html>
