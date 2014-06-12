@@ -270,18 +270,18 @@
                     </p>
 
                     <div id="contact_form">
-                        <form action="#" method="post" class="contact-us" id="contact-us">
+                        <form action="contactus.php" method="post" class="contact-us" id="contact-us">
                             <div class="form-group name">
                                 <label class="sr-only" for="name">Name</label>
-                                <input id="name" type="text" class="contact-us-input" placeholder="Name:">
+                                <input id="name" name="name" type="text" class="contact-us-input" placeholder="Name:">
                             </div><!--//form-group-->
                             <div class="form-group email">
                                 <label class="sr-only" for="email">Email</label>
-                                <input id="email" type="email" class="contact-us-input" placeholder="Email:">
+                                <input id="email" name="email" type="email" class="contact-us-input" placeholder="Email:">
                             </div><!--//form-group-->
                             <div class="form-group message">
                                 <label class="sr-only" for="message">Message</label>
-                                <textarea id="message" class="contact-us-input" rows="6" placeholder="Message:"></textarea>
+                                <textarea id="message" name="message" class="contact-us-input" rows="6" placeholder="Message:" required></textarea>
                             </div><!--//form-group-->
                             <button type="submit" class="sm" id="send">Send Message</button>
                         </form>
@@ -332,6 +332,19 @@
                         $('#subscribe-form').slideUp('slow');
                         $("#preview").text("Sorry. Error occurred.");
                         $('#preview').css({"opacity":"1"});                                       
+                    }
+                });
+
+                $('#contact-us').ajaxForm( {
+                    success: function() {
+                        $('#contact-us').slideUp('slow');
+                        $("#contact-preview").text("Success!");
+                        $('#contact-preview').css({"opacity":"1"});
+                    },
+                    error: function() {
+                        $('#contact-us').slideUp('slow');
+                        $("#contact-preview").text("Sorry. Error occurred.");
+                        $('#contact-preview').css({"opacity":"1"});                                       
                     }
                 });
             });
