@@ -38,7 +38,9 @@ function configure() {
 }
 
 function showShareButtons() {
-    jQuery(".share-button-container").css("display", "block").show();
+    jQuery(".share-buttons-container")
+        .removeClass("share-buttons-container-inactive")
+        .addClass("share-buttons-container-active");
     jQuery(".button-total").hide();
     jQuery(".share-button").show(400);
 }
@@ -154,12 +156,6 @@ function TotalCounter() {
     };
 }
 
-jQuery(function() {
-    configure();
-    init();
-    addthis.addEventListener('addthis.ready', downloadCounters);
-});
-
 /* Config + social sharing global state */
 socialSharing = {
     dataToShare : {
@@ -173,5 +169,11 @@ socialSharing = {
     serviceCount : 0,
     totalCounter : new TotalCounter()
 }
+
+jQuery(document).ready(function() {
+    configure();
+    init();
+    addthis.addEventListener('addthis.ready', downloadCounters);
+});
 
 })();

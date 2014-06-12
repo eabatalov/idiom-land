@@ -18,6 +18,7 @@
     <link href="css/responsive.css" rel="stylesheet" media="screen">
     <link rel="icon" type="image/ico" href="favicon.ico">
     <link rel="image_src" href="thumbnail.png">
+    <link rel="stylesheet" href="share/share.css"/>
 
     <!-- Google fonts -->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic"
@@ -54,12 +55,31 @@
     <div class="container">
         <div class="row"><div class="radius_home"></div>
             <div id="homescreen" class="col-sm-12 col-md-12 col-lg-12">
-                 <div id="logo" class="crown"><a href="#home"><img src="images/logo.svg" width="230" height="100" alt="logo"></a></div>
-                 <div id="logo_header"></div>
-                 <div id="slogan"><h2>Get involved with an adventure game that educates you about English.</h2></div>
-                 <a href="#" class="cta2 crown" id="button_more">Try to play demo</a>
-                 <a href="#" class="cta1 crown" id="button_more">Share</a>
-                 <img src="images/homescreen.png" class="img-responsive" id="home_image" alt="img">
+                <div id="logo" class="crown"><a href="#home"><img src="images/logo.svg" width="230" height="100" alt="logo"></a></div>
+                <div id="logo_header"></div>
+                <div id="slogan"><h2>Get involved with an adventure game that educates you about English.</h2></div>
+                <a href="game/" class="cta2 crown">Try to play demo</a>
+                <!-- SHARE BEGIN -->
+                <div class="share-container">
+                    <a href="#" class="cta1 crown button-total">
+                        <span class="button">Share&nbsp;&nbsp;&nbsp;</span>
+                        <span class="counter">&nbsp;</span>
+                    </a>
+                    <div class="share-buttons-container share-buttons-container-inactive">
+                    </div>
+                </div>
+                <!-- addThis scripts -->
+                <script type="text/javascript">
+                    var addthis_config = {
+                        "data_track_addressbar" : true,
+                        "data_track_clickback" : true
+                    };
+                </script>
+                <script type="text/javascript"
+                    src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-537a67027f7a7a93">
+                </script>
+                <!-- SHARE END -->
+                <img src="images/homescreen.png" class="img-responsive" id="home_image" alt="img">
             </div> <div class="clearfix"></div>
         </div>
     </div>
@@ -311,6 +331,7 @@
                 });
             });
     </script>
+    <script src="share/share.js"></script>
   </body>
 
 </html>
