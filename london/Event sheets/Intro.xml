@@ -54,8 +54,8 @@
                     <param id="0" name="Layer">NotificationBg.LayerName</param>
                 </action>
                 <action id="-3" name="Set position" sid="9698590537500937" type="TapToContinueLeftHelper">
-                    <param id="0" name="X">NotificationBg.X + NotificationBg.Width + 100</param>
-                    <param id="1" name="Y">NotificationBg.Y</param>
+                    <param id="0" name="X">NotificationBg.X + NotificationBg.Width - (TapToContinueLeftHelper.ImagePointX(&quot;ArrowPointer&quot;) - TapToContinueLeftHelper.X) + 60</param>
+                    <param id="1" name="Y">NotificationNextBtn.Y - (TapToContinueLeftHelper.ImagePointY(&quot;ArrowPointer&quot;) - TapToContinueLeftHelper.Y)</param>
                 </action>
                 <action id="-15" name="Set visible" sid="6485001683853257" type="TapToContinueLeftHelper">
                     <param id="0" name="Visibility">1</param>
@@ -118,8 +118,8 @@
                     <param id="0" name="Layer">NPCPhraseBg.LayerName</param>
                 </action>
                 <action id="-3" name="Set position" sid="5721556842895961" type="TapToContinueRightHelper">
-                    <param id="0" name="X">NPCPhraseBg.X - TapToContinueRightHelper.Width - 20</param>
-                    <param id="1" name="Y">NPCPhraseBg.Y</param>
+                    <param id="0" name="X">NPCPhraseBg.X - (TapToContinueRightHelper.ImagePointX(&quot;ArrowPointer&quot;) - TapToContinueRightHelper.X) - 100</param>
+                    <param id="1" name="Y">NPCPhraseBg.Y - (TapToContinueRightHelper.ImagePointY(&quot;ArrowPointer&quot;) - TapToContinueRightHelper.Y) + NPCPhraseBg.Height/2</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="8930193911012899" type="TapToContinueRightHelper">
                     <param id="0" name="Pin to">NPCPhraseBg</param>
@@ -160,8 +160,8 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-3" name="Set position" sid="8285616677487911" type="TapToContinueRightHelper">
-                    <param id="0" name="X">PlayerPhraseBg.X - TapToContinueLeftHelper.Width - 20</param>
-                    <param id="1" name="Y">PlayerPhraseBg.Y</param>
+                    <param id="0" name="X">PlayerPhraseBg.X - (TapToContinueRightHelper.ImagePointX(&quot;ArrowPointer&quot;) - TapToContinueRightHelper.X) - 100</param>
+                    <param id="1" name="Y">PlayerPhraseBg.Y - (TapToContinueRightHelper.ImagePointY(&quot;ArrowPointer&quot;) - TapToContinueRightHelper.Y) + PlayerPhraseBg.Height/2</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="1169100516190898" type="TapToContinueRightHelper">
                     <param id="0" name="Pin to">PlayerPhraseBg</param>
