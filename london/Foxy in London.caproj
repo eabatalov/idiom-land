@@ -480,6 +480,11 @@
                     </object-type>
                     <object-type name="NPCSpeechNextBtn" sid="6254220261413758">
                         <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Sine" sid="9362370924485768">
+                                <behavior id="Sin" />
+                            </behavior-type>
+                        </behaviors>
                         <container>
                             <type>NPC</type>
                             <type>NPCSpeechBg</type>
@@ -499,10 +504,24 @@
                         </container>
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Think" pingpong="0" repeatcount="1" repeatto="0" sid="3209746598368362" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.584071" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.54">
+                                    <collision-poly>
+                                        <point x="0.485" y="0.23375" />
+                                        <point x="0.8725" y="0.2325" />
+                                        <point x="0.8725" y="0.6875" />
+                                        <point x="0.485" y="0.68875" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                             <animation framecount="1" loop="0" name="Speak" pingpong="0" repeatcount="1" repeatto="0" sid="7787590387579493" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.584071" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.54">
+                                    <collision-poly>
+                                        <point x="0.385" y="0.375" />
+                                        <point x="0.925" y="0.375" />
+                                        <point x="0.925" y="0.91" />
+                                        <point x="0.385" y="0.91" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -1246,6 +1265,11 @@
                     </object-type>
                     <object-type name="PlayerSpeechNextBtn" sid="7560532498981539">
                         <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Sine" sid="1974507856258891">
+                                <behavior id="Sin" />
+                            </behavior-type>
+                        </behaviors>
                         <container>
                             <type>PlayerAns2Bg</type>
                             <type>PlayerAns2Txt</type>
@@ -1278,10 +1302,24 @@
                         </container>
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Speak" pingpong="0" repeatcount="1" repeatto="0" sid="6622350663759345" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.584071" />
+                                <frame duration="1" hotspotX="0.435" hotspotY="0.555">
+                                    <collision-poly>
+                                        <point x="0.445" y="0.4" />
+                                        <point x="0.445" y="0.87" />
+                                        <point x="0.915" y="0.8725" />
+                                        <point x="0.915" y="0.4" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                             <animation framecount="1" loop="0" name="Think" pingpong="0" repeatcount="1" repeatto="0" sid="4717339014082959" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.584071" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.555">
+                                    <collision-poly>
+                                        <point x="0.435" y="0.1875" />
+                                        <point x="0.8675" y="0.185" />
+                                        <point x="0.8675" y="0.69" />
+                                        <point x="0.435" y="0.69" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -1666,9 +1704,21 @@
             </object-type>
             <object-type name="NotificationNextBtn" sid="5142399536996931">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="6197119397764339">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="49974521428852" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.584071" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.577778">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.99375" y="1" />
+                                <point x="0" y="0.988889" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
