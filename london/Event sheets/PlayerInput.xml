@@ -8,7 +8,7 @@
         <event-group description="" sid="2830842349648749" title="PlayerInput">
             <sub-events>
                 <variable constant="0" name="INPUT_STATE" sid="3003482212209299" static="1" type="text">IDLE</variable>
-                <event-group collapsed="1" description="" sid="2039030482302605" title="InputControls">
+                <event-group description="" sid="2039030482302605" title="InputControls">
                     <sub-events>
                         <event-block sid="2460676147359561">
                             <conditions>
@@ -26,7 +26,7 @@
                                     <param id="0" name="Animation">&quot;Active&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="7465338080434785" type="Player">
+                                <action behavior="Platform" id="7" name="Simulate control" sid="7465338080434785" type="PlayerPlatform">
                                     <param id="0" name="Control">0</param>
                                 </action>
                             </actions>
@@ -58,7 +58,7 @@
                                     <param id="0" name="Animation">&quot;Active&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="1678550358678336" type="Player">
+                                <action behavior="Platform" id="7" name="Simulate control" sid="1678550358678336" type="PlayerPlatform">
                                     <param id="0" name="Control">2</param>
                                 </action>
                             </actions>
@@ -90,7 +90,7 @@
                                     <param id="0" name="Animation">&quot;Active&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="3347820634585081" type="Player">
+                                <action behavior="Platform" id="7" name="Simulate control" sid="3347820634585081" type="PlayerPlatform">
                                     <param id="0" name="Control">1</param>
                                 </action>
                             </actions>
@@ -485,7 +485,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="332469586418499" title="Stage changer">
+        <event-group description="" sid="332469586418499" title="Stage changer">
             <sub-events>
                 <event-block sid="9949365663832994">
                     <conditions>
@@ -597,7 +597,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="11" name="Set enabled" sid="2156812102459905" type="Player">
+                <action behavior="Platform" id="11" name="Set enabled" sid="2156812102459905" type="PlayerPlatform">
                     <param id="0" name="State">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="8450681033080737" type="ControlLeft">
@@ -622,10 +622,10 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="8" name="Set vector X" sid="6313459378318555" type="Player">
+                <action behavior="Platform" id="8" name="Set vector X" sid="6313459378318555" type="PlayerPlatform">
                     <param id="0" name="Vector X">0</param>
                 </action>
-                <action behavior="Platform" id="11" name="Set enabled" sid="2121347383591089" type="Player">
+                <action behavior="Platform" id="11" name="Set enabled" sid="2121347383591089" type="PlayerPlatform">
                     <param id="0" name="State">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="6869784657833364" type="ControlLeft">
