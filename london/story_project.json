@@ -60,7 +60,7 @@
 						"label": "Ok",
 						"continue": false,
 						"inCondIds": [
-							1455
+							2503
 						],
 						"outCondIds": [
 							2350
@@ -134,7 +134,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "Hi, I need to go to the downtown.",
+							"text": "Hi, I need to go to the downtown",
 							"phraseType": "SPEAK"
 						}
 					},
@@ -219,18 +219,18 @@
 						"ver": 1,
 						"id": 949,
 						"type": 1,
-						"label": "Backset dr is",
+						"label": "Backset dr is 1",
 						"continue": false,
 						"inCondIds": [
 							1452,
 							1453
 						],
 						"outCondIds": [
-							1455
+							2502
 						],
 						"props": {
 							"id": "Player",
-							"text": "Backseat driver is an annoying passenger who tells the driver how to drive.",
+							"text": "Backseat driver is an annoying passenger..",
 							"phraseType": "THINK"
 						}
 					},
@@ -395,6 +395,24 @@
 						"props": {
 							"name": "IdiomDialogCompleted"
 						}
+					},
+					{
+						"ver": 1,
+						"id": 1753,
+						"type": 1,
+						"label": "Backset dr is 2",
+						"continue": false,
+						"inCondIds": [
+							2502
+						],
+						"outCondIds": [
+							2503
+						],
+						"props": {
+							"id": "Player",
+							"text": "who tells the driver how to drive.",
+							"phraseType": "THINK"
+						}
 					}
 				],
 				"conds": [
@@ -451,12 +469,6 @@
 					{
 						"ver": 1,
 						"id": 1453,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1455,
 						"type": 11,
 						"props": {}
 					},
@@ -568,6 +580,18 @@
 						"ver": 1,
 						"id": 2351,
 						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 2502,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 2503,
+						"type": 11,
 						"props": {}
 					}
 				]
@@ -1303,7 +1327,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "\"Put a sock in it\" means a request to be quiet.",
+							"text": "\"Put a sock in it\" means a request to be quiet",
 							"phraseType": "THINK"
 						}
 					},
@@ -1942,7 +1966,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "\"The gen\" is informal synonym for information.",
+							"text": "\"The gen\" is informal synonym for information",
 							"phraseType": "THINK"
 						}
 					},
@@ -2886,7 +2910,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "What is \"The Circle of Life\"?...",
+							"text": "What is \"The Circle of Life\"?",
 							"phraseType": "THINK",
 							"ans1": "A dance",
 							"ans2": "Stages every living thing passes through",
@@ -2945,7 +2969,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "'The Circle of Life' is ...",
+							"text": "'The Circle of Life' is a sequence of stages...",
 							"phraseType": "THINK"
 						}
 					},
@@ -2963,7 +2987,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "a sequence of stages every living thing passes through.",
+							"text": "every living thing passes through",
 							"phraseType": "THINK"
 						}
 					},
@@ -2981,7 +3005,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "The major stages of the circle are: birth, growth, maturity and death.",
+							"text": "The major stages of the circle are: birth, growth, maturity and death",
 							"phraseType": "THINK"
 						}
 					},
@@ -3396,8 +3420,8 @@
 					{
 						"ver": 1,
 						"nodeId": 949,
-						"x": 712.0000172097842,
-						"y": 1711.9835424231449
+						"x": 462.00001720978423,
+						"y": 1703.9835424231453
 					},
 					{
 						"ver": 1,
@@ -3458,6 +3482,12 @@
 						"nodeId": 1640,
 						"x": 602.0000172097841,
 						"y": 1993.9835424231444
+					},
+					{
+						"ver": 1,
+						"nodeId": 1753,
+						"x": 158.000017209784,
+						"y": 1713.9835424231453
 					}
 				],
 				"nodeIds": [
@@ -3482,7 +3512,8 @@
 					1423,
 					1424,
 					1530,
-					1640
+					1640,
+					1753
 				],
 				"condViews": [
 					{
@@ -3592,8 +3623,8 @@
 								"y": 1467.9835424231444
 							},
 							"dst": {
-								"x": 792.0000172097842,
-								"y": 1791.9835424231449
+								"x": 542.0000172097842,
+								"y": 1783.9835424231453
 							}
 						}
 					},
@@ -3606,22 +3637,8 @@
 								"y": 1775.9835424231446
 							},
 							"dst": {
-								"x": 792.0000172097842,
-								"y": 1791.9835424231449
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1455,
-						"points": {
-							"src": {
-								"x": 792.0000172097842,
-								"y": 1791.9835424231449
-							},
-							"dst": {
-								"x": 235.76255012882012,
-								"y": 2077.8626333273864
+								"x": 542.0000172097842,
+								"y": 1783.9835424231453
 							}
 						}
 					},
@@ -3848,6 +3865,34 @@
 								"y": 2074.999999999999
 							}
 						}
+					},
+					{
+						"ver": 1,
+						"condId": 2502,
+						"points": {
+							"src": {
+								"x": 542.0000172097842,
+								"y": 1783.9835424231453
+							},
+							"dst": {
+								"x": 238.000017209784,
+								"y": 1793.9835424231453
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 2503,
+						"points": {
+							"src": {
+								"x": 238.000017209784,
+								"y": 1793.9835424231453
+							},
+							"dst": {
+								"x": 235.76255012882012,
+								"y": 2077.8626333273864
+							}
+						}
 					}
 				],
 				"condIds": [
@@ -3860,7 +3905,6 @@
 					1451,
 					1452,
 					1453,
-					1455,
 					1459,
 					1460,
 					1461,
@@ -3876,12 +3920,14 @@
 					2229,
 					2230,
 					2350,
-					2351
+					2351,
+					2502,
+					2503
 				],
 				"scale": 0.5000000000000001,
 				"pos": {
-					"x": 187.9999913951079,
-					"y": -244.99177121157234
+					"x": 210.9999913951079,
+					"y": -199.99177121157234
 				}
 			},
 			{
@@ -4467,8 +4513,8 @@
 					{
 						"ver": 1,
 						"nodeId": 894,
-						"x": 1315.9999999999995,
-						"y": 1052
+						"x": 1313.4999999999995,
+						"y": 1054.4999999999998
 					},
 					{
 						"ver": 1,
@@ -4668,8 +4714,8 @@
 								"y": 831.9999999999989
 							},
 							"dst": {
-								"x": 1395.9999999999995,
-								"y": 1132
+								"x": 1393.4999999999995,
+								"y": 1134.4999999999998
 							}
 						}
 					},
@@ -4682,8 +4728,8 @@
 								"y": 935.9999999999997
 							},
 							"dst": {
-								"x": 1395.9999999999995,
-								"y": 1132
+								"x": 1393.4999999999995,
+								"y": 1134.4999999999998
 							}
 						}
 					},
@@ -4888,8 +4934,8 @@
 						"condId": 2355,
 						"points": {
 							"src": {
-								"x": 1395.9999999999995,
-								"y": 1132
+								"x": 1393.4999999999995,
+								"y": 1134.4999999999998
 							},
 							"dst": {
 								"x": 1619.9999999999998,
@@ -4926,8 +4972,8 @@
 				],
 				"scale": 0.40000000000000013,
 				"pos": {
-					"x": -29.99999143653463,
-					"y": -250
+					"x": 172.00000856346537,
+					"y": 86
 				}
 			},
 			{
@@ -5991,8 +6037,8 @@
 				],
 				"scale": 0.6000000000000001,
 				"pos": {
-					"x": 161,
-					"y": -79
+					"x": 250,
+					"y": 250
 				}
 			},
 			{
@@ -6536,8 +6582,8 @@
 				],
 				"scale": 0.5000000000000001,
 				"pos": {
-					"x": 239,
-					"y": 168
+					"x": 11,
+					"y": 219
 				}
 			}
 		],
