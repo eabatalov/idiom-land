@@ -68,7 +68,7 @@
                             <button type="submit" class="subscribe-submit subscribe-submit-home">Notify Me</button>
                         </form>
                     </div>
-                    <div id="preview" class="subscribe-form-home"></div>
+                    <div id="preview" class="subscribe-form-home subscribe-form-success"></div>
                 <!-- SHARE BEGIN -->
                 <div class="share-container">
                     <a href="#" class="cta1 button-total">
@@ -276,7 +276,7 @@
                             <button type="submit" class="subscribe-submit subscribe-submit-footer">Notify Me</button>
                         </form>
                     </div>
-                    <div id="preview" class="subscribe-form-footer"></div>
+                    <div id="preview" class="subscribe-form-footer subscribe-form-success"></div>
                 </div>
             </div>
             <div class="row">
@@ -337,18 +337,19 @@
     <script src="js/nivo-lightbox.min.js"></script>
     <script type="text/javascript">
         $('document').ready(function(){
-            $('.subscribe-form').each(function(formKey, form) {
+            $('.subscribe-form').each(function(formIx, form) {
                 var jqForm = $(form);
-               jqForm.ajaxForm({
+                var jqFormSuccess = $($(".subscribe-form-success").get(formIx))
+                jqForm.ajaxForm({
                     success: function () {
                         jqForm.slideUp('slow');
-                        $("#preview").text("Success!");
-                        $('#preview').css({"opacity": "1"});
+                        jqFormSuccess.text("Success!");
+                        jqFormSuccess.css({"opacity": "1"});
                     },
                     error: function () {
                         jqForm.slideUp('slow');
-                        $("#preview").text("Sorry. Error occurred.");
-                        $('#preview').css({"opacity": "1"});
+                        jqFormSuccess.text("Sorry. Error occurred.");
+                        jqFormSuccess.css({"opacity": "1"});
                     }
                 });
             });
