@@ -15,7 +15,7 @@
                     <param id="1" name="Value">TICKETS_OVERALL + 1</param>
                 </action>
                 <action id="0" name="Set text" sid="9920624997865343" type="TicketsCounterTxt">
-                    <param id="0" name="Text">&quot;Tickets: &quot; &amp; TICKETS_COLLECTED &amp; &quot;/&quot; &amp; TICKETS_OVERALL</param>
+                    <param id="0" name="Text">&quot;Ticket: &quot; &amp; TICKETS_COLLECTED &amp; &quot;/&quot; &amp; TICKETS_OVERALL</param>
                 </action>
             </actions>
         </event-block>
@@ -35,7 +35,11 @@
                     <param id="1" name="Value">TICKETS_COLLECTED + 1</param>
                 </action>
                 <action id="0" name="Set text" sid="7342377968102071" type="TicketsCounterTxt">
-                    <param id="0" name="Text">&quot;Tickets: &quot; &amp; TICKETS_COLLECTED &amp; &quot;/&quot; &amp; TICKETS_OVERALL</param>
+                    <param id="0" name="Text">&quot;Ticket: &quot; &amp; TICKETS_COLLECTED &amp; &quot;/&quot; &amp; TICKETS_OVERALL</param>
+                </action>
+                <action id="0" name="Call function" sid="8517277183558699" type="Function">
+                    <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;ticket_collected&quot;{###}&quot;Player&quot;</param>
                 </action>
             </actions>
         </event-block>

@@ -59,7 +59,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="Quest">
+        <object-folder expanded="0" name="Quest">
             <object-folder expanded="0" name="NPC">
                 <object-folder expanded="0" name="Speech">
                     <object-type name="NPCAns1Bg" sid="1347035969697416">
@@ -3529,13 +3529,13 @@
                         </behaviors>
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2831167001092476" speed="5">
-                                <frame duration="1" hotspotX="0" hotspotY="0">
-                                    <image-point name="ArrowPointer" x="0.27619" y="0.554391" />
+                                <frame duration="1" hotspotX="0" hotspotY="1">
+                                    <image-point name="ArrowPointer" x="0.272619" y="0.549148" />
                                     <collision-poly>
                                         <point x="0.339286" y="0.373526" />
                                         <point x="0.5" y="0.301442" />
                                         <point x="0.659524" y="0.374836" />
-                                        <point x="0.728571" y="0.499345" />
+                                        <point x="0.79881" y="0.499345" />
                                         <point x="0.660714" y="0.626474" />
                                         <point x="0.5" y="0.698558" />
                                         <point x="0.340476" y="0.625164" />
@@ -3606,6 +3606,88 @@
                                         <point x="0.499628" y="0.834131" />
                                         <point x="0.377513" y="0.595694" />
                                         <point x="0.568876" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="TicketHelper" sid="434108885742568">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Pin" sid="9108384760143063">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder expanded="1">
+                            <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6438173901334436" speed="1">
+                                <frame duration="1" hotspotX="0" hotspotY="0">
+                                    <image-point name="ArrowPointer" x="0.27619" y="0.554391" />
+                                    <collision-poly>
+                                        <point x="0.339286" y="0.373526" />
+                                        <point x="0.5" y="0.301442" />
+                                        <point x="0.659524" y="0.374836" />
+                                        <point x="0.728571" y="0.499345" />
+                                        <point x="0.660714" y="0.626474" />
+                                        <point x="0.5" y="0.698558" />
+                                        <point x="0.340476" y="0.625164" />
+                                        <point x="0.296429" y="0.499345" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0" hotspotY="0">
+                                    <image-point name="ArrowPointer" x="0.27619" y="0.554391" />
+                                    <collision-poly>
+                                        <point x="0.339286" y="0.373526" />
+                                        <point x="0.5" y="0.301442" />
+                                        <point x="0.659524" y="0.374836" />
+                                        <point x="0.728571" y="0.499345" />
+                                        <point x="0.660714" y="0.626474" />
+                                        <point x="0.5" y="0.698558" />
+                                        <point x="0.340476" y="0.625164" />
+                                        <point x="0.296429" y="0.499345" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="IdiomCounterHelper" sid="9887583720046034">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Pin" sid="8665778743478599">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="41830544008186" speed="5">
+                                <frame duration="1" hotspotX="0" hotspotY="0">
+                                    <image-point name="ArrowPointer" x="0.725" y="0.469201" />
+                                    <collision-poly>
+                                        <point x="0.339286" y="0.373526" />
+                                        <point x="0.5" y="0.301442" />
+                                        <point x="0.659524" y="0.374836" />
+                                        <point x="0.503571" y="0.453473" />
+                                        <point x="0.496429" y="0.453473" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="TIcketCounterHelper" sid="6269623346602621">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Pin" sid="5828733524377693">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1092650811402289" speed="5">
+                                <frame duration="1" hotspotX="0" hotspotY="0">
+                                    <image-point name="ArrowPointer" x="0.725" y="0.469201" />
+                                    <collision-poly>
+                                        <point x="0.339286" y="0.373526" />
+                                        <point x="0.5" y="0.301442" />
+                                        <point x="0.659524" y="0.374836" />
+                                        <point x="0.503571" y="0.453473" />
+                                        <point x="0.496429" y="0.453473" />
                                     </collision-poly>
                                 </frame>
                             </animation>
@@ -4562,7 +4644,7 @@
         <layout>LevelComplete.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="Quest">
+        <event-folder expanded="0" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Bootstrap.xml</event-sheet>
             <event-sheet>UInit.xml</event-sheet>
@@ -4583,7 +4665,7 @@
         <event-folder expanded="0" name="LevelComplete">
             <event-sheet>LevelCompeleteMain.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="IdiomLand">
+        <event-folder expanded="1" name="IdiomLand">
             <event-sheet>IdiomCounter.xml</event-sheet>
             <event-sheet>IdiomDialogCompletion.xml</event-sheet>
             <event-sheet>IdiomLand.xml</event-sheet>

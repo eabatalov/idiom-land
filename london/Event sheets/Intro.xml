@@ -216,26 +216,108 @@
         <event-block sid="8143031984160501">
             <conditions>
                 <condition id="0" name="On function" sid="5132135630917985" type="Function">
-                    <param id="0" name="Name">&quot;ShowNewIdiomCongrats&quot;</param>
+                    <param id="0" name="Name">&quot;ShowNewIdiomHelper&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="14" name="Log" sid="7303986725780349" type="Browser">
-                    <param id="0" name="Type">2</param>
-                    <param id="1" name="Message">&quot;Not implemented  Construct 2 side function&quot;</param>
+                <action id="-26" name="Move to layer" sid="1145716991523785" type="IdiomCounterHelper">
+                    <param id="0" name="Layer">IdiomCounterBg.LayerName</param>
+                </action>
+                <action id="-3" name="Set position" sid="6301266965801196" type="IdiomCounterHelper">
+                    <param id="0" name="X">IdiomCounterBg.X - (IdiomCounterHelper.ImagePointX(&quot;ArrowPointer&quot;) - IdiomCounterHelper.X) + IdiomCounterBg.Width / 2</param>
+                    <param id="1" name="Y">IdiomCounterBg.Y - (IdiomCounterHelper.ImagePointY(&quot;ArrowPointer&quot;) - IdiomCounterHelper.Y)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1335013270755848" type="IdiomCounterHelper">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9288408600161229" type="IdiomCounterBg">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4056381786467033" type="IdiomCounterTxt">
+                    <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="8784206970284958">
             <conditions>
                 <condition id="0" name="On function" sid="4234723595757082" type="Function">
-                    <param id="0" name="Name">&quot;HideNewIdiomCongrats&quot;</param>
+                    <param id="0" name="Name">&quot;HideNewIdiomHelper&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="14" name="Log" sid="9140484957978325" type="Browser">
-                    <param id="0" name="Type">2</param>
-                    <param id="1" name="Message">&quot;Not implemented  Construct 2 side function&quot;</param>
+                <action id="-15" name="Set visible" sid="6927967553255938" type="IdiomCounterHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1689485073768038">
+            <conditions>
+                <condition id="0" name="On function" sid="1153427252199131" type="Function">
+                    <param id="0" name="Name">&quot;ShowTicketHelper&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="9915663641704553" type="Ticket">
+                    <param id="0" name="Unique ID">233</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="9489430068627018" type="TicketHelper">
+                    <param id="0" name="Layer">Ticket.LayerName</param>
+                </action>
+                <action id="-3" name="Set position" sid="7725278522542604" type="TicketHelper">
+                    <param id="0" name="X">Ticket.X + Ticket.Width / 2 - (TicketHelper.ImagePointX(&quot;ArrowPointer&quot;) - TicketHelper.X) + 60</param>
+                    <param id="1" name="Y">Ticket.Y - (TicketHelper.ImagePointY(&quot;ArrowPointer&quot;) - TicketHelper.Y)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8708879133444199" type="TicketHelper">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3222239879228411">
+            <conditions>
+                <condition id="0" name="On function" sid="6691372146598866" type="Function">
+                    <param id="0" name="Name">&quot;HideTicketHelper&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="7553203707331893" type="Ticket">
+                    <param id="0" name="Unique ID">233</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="284963755098424" type="TicketHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6955187779759266">
+            <conditions>
+                <condition id="0" name="On function" sid="3974516868680465" type="Function">
+                    <param id="0" name="Name">&quot;ShowTicketCounterHelper&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="5811787582669735" type="TIcketCounterHelper">
+                    <param id="0" name="Layer">TicketsCounterTxt.LayerName</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5721626641907052" type="TIcketCounterHelper">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="8257330747219817" type="TIcketCounterHelper">
+                    <param id="0" name="X">TicketsCounterTxt.X - (TIcketCounterHelper.ImagePointX(&quot;ArrowPointer&quot;) - TIcketCounterHelper.X) + TicketsCounterTxt.Width / 2</param>
+                    <param id="1" name="Y">TicketsCounterTxt.Y - (TIcketCounterHelper.ImagePointY(&quot;ArrowPointer&quot;) - TIcketCounterHelper.Y)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3741395235618238" type="TicketsCounterTxt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8211605406235132">
+            <conditions>
+                <condition id="0" name="On function" sid="1433452937096979" type="Function">
+                    <param id="0" name="Name">&quot;HideTicketCounterHelper&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="9670245467069661" type="TIcketCounterHelper">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
