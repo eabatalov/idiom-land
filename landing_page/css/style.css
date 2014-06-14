@@ -318,7 +318,7 @@ body {
 }
 
 #home {
-    height: 47.125rem;
+    padding-bottom: 8rem;
     position:relative;
     z-index:0;
     overflow:hidden;
@@ -347,10 +347,7 @@ body {
 }
 #home_image {
     position:absolute;
-    top:13rem;
-    right:0;
-    z-index:0;
-    max-width: 110%;
+    z-index:-5;
 }
 
 #homescreen {
@@ -367,8 +364,8 @@ body {
 }
 
 #logo {
-    margin-top: 5rem;
-    margin-bottom: 0.4rem;
+    margin-top: 4rem;
+    margin-bottom: 1.4rem;
     opacity:1;
 }
 
@@ -376,14 +373,24 @@ body {
     margin-bottom:4.3rem
 }
 
-#slogan {
+.slogan-home {
     color:white;
     margin:0px;
     pading:0px;
     opacity:0;
     position:relative;
+    width:100%;
+}
+
+#slogan {
+    color:white;
+    margin:0px;
+    pading:0px;
+    opacity:0;
+    display: flex;
+    position:relative;
     z-index:1;
-    width:50%;
+    width:100%;
 }
 
 .cta1, .cta2 {
@@ -750,10 +757,37 @@ body {
     height: 3.25rem;
 }
 
+#newsletter_form p{
+    padding-bottom: 0.2rem;
+    color: white;
+    float: right;
+    position: inherit;
+}
+
+.subscribe-form-home{
+    width: 19rem;
+    float: left;
+}
+.subscribe-submit-home{
+    width: 6rem;
+}
+.subscribe-input-home{
+    width: 13rem;
+}
+
+.subscribe-form-footer{
+    width: 27rem;
+}
+.subscribe-submit-footer{
+    width: 8rem;
+}
+.subscribe-input-footer{
+    width: 19rem;
+}
+
 .subscribe-form {
     margin-left:auto;
     margin-right:auto;
-    width:27rem;
     position: relative;
     z-index:10;
 }
@@ -762,7 +796,6 @@ body {
     float:left;
     padding-left: 1.2rem;
     padding-top: 0.1rem;
-    width:20rem;
     height: 2.64rem;
     font-family: 'Source Sans Pro', sans-serif;
     font-size:1rem;
@@ -795,7 +828,6 @@ body {
 	font-weight:700;
 	font-style:normal;
     height:2.64rem;
-    width:8rem;
     line-height:1rem;
 	text-decoration:none;
 	text-align:center;
@@ -827,7 +859,7 @@ body {
     height: 3.25rem;
 }
 #preview {
-    width:27rem;
+
     height: 2.64rem;
     border-radius: 28px;
     border:none;
@@ -995,4 +1027,20 @@ body {
     display:inline;
     padding-left:0.4rem;
     padding-right:0.4rem;
+}
+#social_icons_home {
+    text-align:center;
+    margin-bottom:3.6rem;
+    margin-top: 4.8rem;
+}
+
+#social_icons_home li {
+    display:inline;
+    padding-left:0.4rem;
+    padding-bottom:0.4rem;
+    padding-right:0.4rem;
+}
+#social_icons_home:hover li {
+    display:inline;
+    opacity: 0.5;
 }
