@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Carousel</name>
     <events>
-        <event-group collapsed="1" description="" sid="7166246526774973" title="Carousel">
+        <event-group description="" sid="7166246526774973" title="Carousel">
             <sub-events>
                 <comment>NEW_SPIN-&gt;ON_SPIN-&gt;NEW_SPIN-&gt;ON_SPIN-&gt;STOPPING-&gt;STOPPED</comment>
                 <variable constant="0" name="CAROUSEL_STATE" sid="8890120325113025" static="1" type="text">STOPPED</variable>
@@ -18,10 +18,6 @@
                     <actions>
                         <action behavior="Pin" id="0" name="Pin to object" sid="5539290554989486" type="CarouselCapsul">
                             <param id="0" name="Pin to">CarouselCircle</param>
-                            <param id="1" name="Mode">1</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="2534919747994077" type="CarouselCapsulWalls">
-                            <param id="0" name="Pin to">CarouselCapsul</param>
                             <param id="1" name="Mode">1</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="6815095545891505" type="CarouselCapsulInTrigger">
@@ -41,14 +37,24 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Rotate" id="0" name="Set speed" sid="6316030957838913" type="CarouselCircle">
-                            <param id="0" name="Speed">90</param>
+                        <action id="-4" name="Set position to another object" sid="3441730105853616" type="PlayerPlatform">
+                            <param id="0" name="Object">CarouselCapsul</param>
+                            <param id="1" name="Image point (optional)">&quot;FoxyIdealPoint&quot;</param>
                         </action>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="9907166917114387" type="CarouselCapsulWalls">
-                            <param id="0" name="State">1</param>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="4284727133410101" type="PlayerPlatform">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="507239522797856" type="PlayerPlatform">
+                            <param id="0" name="Vector Y">0</param>
+                        </action>
+                        <action behavior="Rotate" id="0" name="Set speed" sid="6316030957838913" type="CarouselCircle">
+                            <param id="0" name="Speed">68</param>
                         </action>
                         <action behavior="Solid" id="0" name="Set enabled" sid="905652677744202" type="CarouselCapsulFloor">
                             <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="2381164588799351" type="CarouselCapsulFloor">
+                            <param id="0" name="State">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="304466431460136" type="System">
                             <param id="0" name="Variable">CAROUSEL_SPINS_LEFT</param>
@@ -77,30 +83,55 @@
                         <action id="-8" name="Set angle" sid="7864138855681806" type="CarouselCircle">
                             <param id="0" name="Angle">0</param>
                         </action>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="8101915782142478" type="CarouselCapsulWalls">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="1391906413797439" type="CarouselCapsulFloor">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="6519670008960682" type="CarouselCapsulFloor">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="5769856805067633" type="Function">
-                            <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
-                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;shock&quot;</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="748700198614605" type="System">
-                            <param id="0" name="Seconds">4</param>
-                        </action>
-                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="8346297284218517" type="CarouselCapsulFloor">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="3312034884082808" type="System">
-                            <param id="0" name="Variable">CAROUSEL_STATE</param>
-                            <param id="1" name="Value">&quot;STOPPED&quot;</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block any="1" sid="7364004229177793">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="4483456743531767" type="Player">
+                                    <param id="0" name="Object">CarouselCapsulInTrigger</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="3247157937883918" type="CarouselCapsulFloor">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="8980932916205917" type="PlayerPlatform">
+                                    <param id="0" name="Vector Y">-PlayerPlatform.Platform.JumpStrength/2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9204212422257663" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;shock&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="2537988906597546" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="5362320390677367" type="CarouselCapsulFloor">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1087646918566539" type="System">
+                                    <param id="0" name="Variable">CAROUSEL_STATE</param>
+                                    <param id="1" name="Value">&quot;STOPPED&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3831962416647283">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5350048041243716" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="1589863351277535" type="CarouselCapsulFloor">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="9406270621412489" type="CarouselCapsulFloor">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1851208950417302" type="System">
+                                    <param id="0" name="Variable">CAROUSEL_STATE</param>
+                                    <param id="1" name="Value">&quot;STOPPED&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="6007458426737438">
                     <conditions>
@@ -193,7 +224,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set position to another object" sid="1081618723780826" type="Player">
+                        <action disabled="1" id="-4" name="Set position to another object" sid="1081618723780826" type="Player">
                             <param id="0" name="Object">CarouselCapsul</param>
                             <param id="1" name="Image point (optional)">&quot;FoxyIdealPoint&quot;</param>
                         </action>
