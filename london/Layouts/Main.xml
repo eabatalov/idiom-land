@@ -764,8 +764,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>11218</x>
-                        <y>765</y>
+                        <x>11921</x>
+                        <y>793</y>
                         <z>0</z>
                         <width>825</width>
                         <height>608</height>
@@ -800,7 +800,7 @@
                 </instance>
                 <instance type="Ticket" uid="233">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1561,6 +1561,33 @@
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>-0.012113946</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="276">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>bus_driver</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>exit_bus</Stage>
+                        <NpcIDInStage>driver</NpcIDInStage>
+                        <AnimUID>0</AnimUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>11895</x>
+                        <y>968</y>
+                        <z>0</z>
+                        <width>201</width>
+                        <height>340</height>
+                        <depth>0</depth>
+                        <hotspotX>0.50248754</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -2360,8 +2387,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>11235</x>
-                        <y>-271</y>
+                        <x>12090</x>
+                        <y>-264</y>
                         <z>0</z>
                         <width>1765</width>
                         <height>18</height>
@@ -5349,6 +5376,72 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="StageChanger" uid="275">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>exit_bus</Stage>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>10040</x>
+                        <y>833</y>
+                        <z>0</z>
+                        <width>33</width>
+                        <height>336</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Platforms" uid="278">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>11265</x>
+                        <y>1169</y>
+                        <z>0</z>
+                        <width>1765</width>
+                        <height>18</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -6277,6 +6370,7 @@
                         <NpcIDInStage>policeman</NpcIDInStage>
                         <ExpandToLayoutHeight>1</ExpandToLayoutHeight>
                         <Highlight>1</Highlight>
+                        <FireOnce>1</FireOnce>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6304,6 +6398,7 @@
                         <NpcIDInStage>veider</NpcIDInStage>
                         <ExpandToLayoutHeight>0</ExpandToLayoutHeight>
                         <Highlight>1</Highlight>
+                        <FireOnce>1</FireOnce>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6331,6 +6426,7 @@
                         <NpcIDInStage>cap</NpcIDInStage>
                         <ExpandToLayoutHeight>0</ExpandToLayoutHeight>
                         <Highlight>1</Highlight>
+                        <FireOnce>1</FireOnce>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6358,6 +6454,7 @@
                         <NpcIDInStage>seller</NpcIDInStage>
                         <ExpandToLayoutHeight>0</ExpandToLayoutHeight>
                         <Highlight>1</Highlight>
+                        <FireOnce>1</FireOnce>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6385,6 +6482,7 @@
                         <NpcIDInStage>driver2</NpcIDInStage>
                         <ExpandToLayoutHeight>0</ExpandToLayoutHeight>
                         <Highlight>1</Highlight>
+                        <FireOnce>1</FireOnce>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6468,6 +6566,34 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>1.018879771</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TalkStartTrigger" uid="277">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <NpcIDInStage>driver</NpcIDInStage>
+                        <ExpandToLayoutHeight>0</ExpandToLayoutHeight>
+                        <Highlight>1</Highlight>
+                        <FireOnce>0</FireOnce>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>11740</x>
+                        <y>1165</y>
+                        <z>0</z>
+                        <width>50</width>
+                        <height>33</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

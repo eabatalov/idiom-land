@@ -703,6 +703,21 @@
                                 </collision-poly>
                             </frame>
                         </animation>
+                        <animation framecount="1" loop="0" name="bus_driver" pingpong="0" repeatcount="1" repeatto="0" sid="5161652397612776" speed="5">
+                            <frame duration="1" hotspotX="0.502488" hotspotY="0.5">
+                                <image-point name="SpeechOrigin" x="0.925373" y="0.532353" />
+                                <collision-poly>
+                                    <point x="0.20398" y="0.0911765" />
+                                    <point x="0.482587" y="0" />
+                                    <point x="0.79602" y="0.0852941" />
+                                    <point x="0.945274" y="0.452941" />
+                                    <point x="0.706468" y="1" />
+                                    <point x="0.293532" y="1" />
+                                    <point x="0.169154" y="0.87353" />
+                                    <point x="0.0298507" y="0.411765" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="NPCPinPoint" sid="464837581351033">
@@ -1782,6 +1797,7 @@
                     <instance-variable name="NpcIDInStage" sid="2825221887980929" type="string" />
                     <instance-variable name="ExpandToLayoutHeight" sid="9190528577776294" type="number" />
                     <instance-variable name="Highlight" sid="9221403238171095" type="number" />
+                    <instance-variable name="FireOnce" sid="4310207077899836" type="number" />
                 </instance-variables>
                 <container>
                     <type>TalkStartTrigger</type>
@@ -3979,7 +3995,7 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-folder expanded="0" name="LevelComplete">
+            <object-folder expanded="1" name="Bus">
                 <object-type name="Foxy" sid="4330101678906835">
                     <plugin id="Sprite" />
                     <animation-folder expanded="1">
@@ -4019,6 +4035,23 @@
                 </object-type>
                 <object-type name="FoxySpeechText" sid="56095791430872">
                     <plugin id="Text" />
+                </object-type>
+                <object-type name="ExitBus" sid="8507818832723008">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8414774843866936" speed="5">
+                            <frame duration="1" hotspotX="0.500606" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.0787879" y="0.106908" />
+                                    <point x="0.499394" y="0.0131579" />
+                                    <point x="0.921212" y="0.106908" />
+                                    <point x="0.928485" y="0.902961" />
+                                    <point x="0.070303" y="0.904605" />
+                                    <point x="0.00363636" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
                 </object-type>
             </object-folder>
             <object-folder expanded="0" name="Veider">
@@ -4099,25 +4132,6 @@
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
                                     <point x="0" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-folder expanded="1" name="Bus">
-                <object-type name="ExitBus" sid="8507818832723008">
-                    <plugin id="Sprite" />
-                    <animation-folder expanded="1">
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8414774843866936" speed="5">
-                            <frame duration="1" hotspotX="0.500606" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.0787879" y="0.106908" />
-                                    <point x="0.499394" y="0.0131579" />
-                                    <point x="0.921212" y="0.106908" />
-                                    <point x="0.928485" y="0.902961" />
-                                    <point x="0.070303" y="0.904605" />
-                                    <point x="0.00363636" y="0.5" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -4645,7 +4659,7 @@
         <layout>Main.xml</layout>
         <layout>LevelComplete.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
+    <event-folder expanded="1">
         <event-folder expanded="0" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Bootstrap.xml</event-sheet>
@@ -4658,13 +4672,13 @@
         </event-folder>
         <event-folder expanded="0" name="Stages">
             <event-sheet>Carousel.xml</event-sheet>
-            <event-sheet>LevelComplete.xml</event-sheet>
             <event-sheet>Intro.xml</event-sheet>
             <event-sheet>Veider.xml</event-sheet>
             <event-sheet>Kebab.xml</event-sheet>
             <event-sheet>Taxi.xml</event-sheet>
+            <event-sheet>Bus.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="LevelComplete">
+        <event-folder expanded="1" name="LevelComplete">
             <event-sheet>LevelCompeleteMain.xml</event-sheet>
         </event-folder>
         <event-folder expanded="0" name="IdiomLand">
@@ -4679,6 +4693,7 @@
         <event-sheet>NPCAnimation.xml</event-sheet>
         <event-sheet>GameConstants.xml</event-sheet>
         <event-sheet>Debug.xml</event-sheet>
+        <event-sheet>Stages.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="10" />

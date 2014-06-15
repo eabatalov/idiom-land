@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Bus</name>
+    <events>
+        <event-block sid="9516434022155823">
+            <conditions>
+                <condition id="0" name="On function" sid="7871613912142498" type="Function">
+                    <param id="0" name="Name">&quot;LevelComplete&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9262925569207571">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="9044314670623789" type="System">
+                            <param id="0" name="Count">10000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="9811751421026885" type="System">
+                            <param id="0" name="Seconds">0.001*loopindex</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3069842496540953">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7535876997702124" type="System">
+                                    <param id="0" name="First value">LayoutScale</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set layout angle" sid="4552481543244048" type="System">
+                                    <param id="0" name="Angle">LayoutAngle + 1</param>
+                                </action>
+                                <action id="-20" name="Set layout scale" sid="5411121416926604" type="System">
+                                    <param id="0" name="Scale">LayoutScale-0.0005</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4021717452589529">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1400372854887514" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="7239476227427739" type="System">
+                                    <param id="0" name="Layout">&quot;LevelComplete&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9632181806524661">
+            <conditions>
+                <condition id="0" name="On function" sid="8630506446783809" type="Function">
+                    <param id="0" name="Name">&quot;InjectTicketCompletion&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>ProcGameAction not ProcPlayerCustomEvent is called because InjectTicketCompletion is called from script and we perform nested call to quest script with blocket Player input</comment>
+                <event-block sid="5363014660933923">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5835478108467434" type="System">
+                            <param id="0" name="First value">TICKETS_COLLECTED</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">TICKETS_OVERALL</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3885223005206374" type="Function">
+                            <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;Player&quot;{###}&quot;ticket_complete&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5922961235719431">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3325318679815538" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="260440920696048" type="Function">
+                            <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;Player&quot;{###}&quot;ticket_not_complete&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5151212095595985">
+            <conditions>
+                <condition id="0" name="On function" sid="5606296006142441" type="Function">
+                    <param id="0" name="Name">&quot;procMiscInputexit_bus&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

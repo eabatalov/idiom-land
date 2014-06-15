@@ -73,18 +73,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 411,
-						"type": 10,
-						"label": "See you in center",
-						"continue": true,
-						"inCondIds": [],
-						"outCondIds": [],
-						"props": {
-							"name": "LevelComplete"
-						}
-					},
-					{
-						"ver": 1,
 						"id": 940,
 						"type": 1,
 						"label": "Taxi greeting",
@@ -3587,12 +3575,260 @@
 						"props": {}
 					}
 				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 2045,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 2045,
+						"type": 9,
+						"label": "exit_bus",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							2856
+						],
+						"props": {
+							"name": "exit_bus",
+							"objs": [
+								"Player",
+								"driver"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2046,
+						"type": 8,
+						"label": "Main storyline",
+						"continue": false,
+						"inCondIds": [
+							2856,
+							2881
+						],
+						"outCondIds": [
+							2878
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"driver"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2047,
+						"type": 10,
+						"label": "GetTicketCompletion",
+						"continue": false,
+						"inCondIds": [
+							2879
+						],
+						"outCondIds": [
+							2859,
+							2877
+						],
+						"props": {
+							"name": "InjectTicketCompletion"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2048,
+						"type": 1,
+						"label": "Ticket incompl 1",
+						"continue": false,
+						"inCondIds": [
+							2859
+						],
+						"outCondIds": [
+							2873
+						],
+						"props": {
+							"id": "driver",
+							"text": "You haven't collected the ticket yet",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2049,
+						"type": 1,
+						"label": "Ticket complete 1",
+						"continue": false,
+						"inCondIds": [
+							2877
+						],
+						"outCondIds": [
+							2882
+						],
+						"props": {
+							"id": "driver",
+							"text": "I see you have the ticket",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2051,
+						"type": 10,
+						"label": "LevelComplete",
+						"continue": false,
+						"inCondIds": [
+							2883
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "LevelComplete"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2054,
+						"type": 12,
+						"label": "",
+						"continue": true,
+						"inCondIds": [
+							2878
+						],
+						"outCondIds": [
+							2879
+						],
+						"props": {
+							"enabled": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2055,
+						"type": 1,
+						"label": "Ticket incompl 2",
+						"continue": false,
+						"inCondIds": [
+							2873
+						],
+						"outCondIds": [
+							2880
+						],
+						"props": {
+							"id": "driver",
+							"text": "So I can't let you get into the bus",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2057,
+						"type": 12,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							2880
+						],
+						"outCondIds": [
+							2881
+						],
+						"props": {
+							"enabled": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2058,
+						"type": 1,
+						"label": "Ticket complete 2",
+						"continue": false,
+						"inCondIds": [
+							2882
+						],
+						"outCondIds": [
+							2883
+						],
+						"props": {
+							"id": "driver",
+							"text": "The bus is leaving now",
+							"phraseType": "SPEAK"
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 2856,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 2859,
+						"type": 10,
+						"props": {
+							"name": "ticket_not_complete"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2873,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 2877,
+						"type": 10,
+						"props": {
+							"name": "ticket_complete"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2878,
+						"type": 10,
+						"props": {
+							"name": "auto_talk_start_driver"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2879,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 2880,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 2881,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 2882,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 2883,
+						"type": 11,
+						"props": {}
+					}
+				]
 			}
 		]
 	},
 	"scriptEditor": {
 		"ver": 1,
-		"currentStageId": 8,
+		"currentStageId": 2045,
 		"stageEditors": [
 			{
 				"ver": 1,
@@ -3614,12 +3850,6 @@
 						"nodeId": 25,
 						"x": -36.23744987117999,
 						"y": 2075.862633327387
-					},
-					{
-						"ver": 1,
-						"nodeId": 411,
-						"x": 1480.4999999999998,
-						"y": 1232.999999999999
 					},
 					{
 						"ver": 1,
@@ -3764,7 +3994,6 @@
 					8,
 					9,
 					25,
-					411,
 					940,
 					942,
 					944,
@@ -5289,7 +5518,7 @@
 					2354,
 					2355
 				],
-				"scale": 0.7000000000000001,
+				"scale": 0.40000000000000013,
 				"pos": {
 					"x": 172.00000856346537,
 					"y": 86
@@ -6508,7 +6737,7 @@
 					2691,
 					2692
 				],
-				"scale": 0.7000000000000001,
+				"scale": 0.40000000000000013,
 				"pos": {
 					"x": 250,
 					"y": 250
@@ -7053,10 +7282,246 @@
 					2358,
 					2359
 				],
+				"scale": 0.40000000000000013,
+				"pos": {
+					"x": -7,
+					"y": 149
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 2045,
+						"x": 58,
+						"y": 85
+					},
+					{
+						"ver": 1,
+						"nodeId": 2046,
+						"x": 58.71428571428572,
+						"y": 479.71428571428567
+					},
+					{
+						"ver": 1,
+						"nodeId": 2047,
+						"x": 680.0000000000002,
+						"y": 472.85714285714243
+					},
+					{
+						"ver": 1,
+						"nodeId": 2048,
+						"x": 671.4285714285708,
+						"y": 861.4285714285712
+					},
+					{
+						"ver": 1,
+						"nodeId": 2049,
+						"x": 681.4285714285713,
+						"y": 184.28571428571433
+					},
+					{
+						"ver": 1,
+						"nodeId": 2051,
+						"x": 1259.9999999999995,
+						"y": 179.99999999999997
+					},
+					{
+						"ver": 1,
+						"nodeId": 2054,
+						"x": 375.71428571428527,
+						"y": 482.85714285714266
+					},
+					{
+						"ver": 1,
+						"nodeId": 2055,
+						"x": 365.71428571428584,
+						"y": 865.7142857142854
+					},
+					{
+						"ver": 1,
+						"nodeId": 2057,
+						"x": 57.142857142857,
+						"y": 867.1428571428573
+					},
+					{
+						"ver": 1,
+						"nodeId": 2058,
+						"x": 974.285714285714,
+						"y": 182.8571428571429
+					}
+				],
+				"nodeIds": [
+					2045,
+					2046,
+					2047,
+					2048,
+					2049,
+					2051,
+					2054,
+					2055,
+					2057,
+					2058
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 2856,
+						"points": {
+							"src": {
+								"x": 138,
+								"y": 165
+							},
+							"dst": {
+								"x": 138.71428571428572,
+								"y": 559.7142857142857
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 2859,
+						"points": {
+							"src": {
+								"x": 760.0000000000002,
+								"y": 552.8571428571424
+							},
+							"dst": {
+								"x": 751.4285714285708,
+								"y": 941.4285714285712
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 2873,
+						"points": {
+							"src": {
+								"x": 751.4285714285708,
+								"y": 941.4285714285712
+							},
+							"dst": {
+								"x": 445.71428571428584,
+								"y": 945.7142857142854
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 2877,
+						"points": {
+							"src": {
+								"x": 760.0000000000002,
+								"y": 552.8571428571424
+							},
+							"dst": {
+								"x": 761.4285714285713,
+								"y": 264.28571428571433
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 2878,
+						"points": {
+							"src": {
+								"x": 138.71428571428572,
+								"y": 559.7142857142857
+							},
+							"dst": {
+								"x": 455.71428571428527,
+								"y": 562.8571428571427
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 2879,
+						"points": {
+							"src": {
+								"x": 455.71428571428527,
+								"y": 562.8571428571427
+							},
+							"dst": {
+								"x": 760.0000000000002,
+								"y": 552.8571428571424
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 2880,
+						"points": {
+							"src": {
+								"x": 445.71428571428584,
+								"y": 945.7142857142854
+							},
+							"dst": {
+								"x": 137.142857142857,
+								"y": 947.1428571428573
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 2881,
+						"points": {
+							"src": {
+								"x": 137.142857142857,
+								"y": 947.1428571428573
+							},
+							"dst": {
+								"x": 138.71428571428572,
+								"y": 559.7142857142857
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 2882,
+						"points": {
+							"src": {
+								"x": 761.4285714285713,
+								"y": 264.28571428571433
+							},
+							"dst": {
+								"x": 1054.285714285714,
+								"y": 262.8571428571429
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 2883,
+						"points": {
+							"src": {
+								"x": 1054.285714285714,
+								"y": 262.8571428571429
+							},
+							"dst": {
+								"x": 1339.9999999999995,
+								"y": 260
+							}
+						}
+					}
+				],
+				"condIds": [
+					2856,
+					2859,
+					2873,
+					2877,
+					2878,
+					2879,
+					2880,
+					2881,
+					2882,
+					2883
+				],
 				"scale": 0.7000000000000001,
 				"pos": {
-					"x": 11,
-					"y": 219
+					"x": 240,
+					"y": 52
 				}
 			}
 		],
@@ -7065,7 +7530,8 @@
 			10,
 			18,
 			488,
-			733
+			733,
+			2045
 		]
 	}
 }
