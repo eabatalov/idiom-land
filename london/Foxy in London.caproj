@@ -3479,7 +3479,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="0" name="Stages">
+        <object-folder expanded="1" name="Stages">
             <object-folder expanded="0" name="Intro">
                 <object-folder expanded="0" name="Helpers">
                     <object-type name="JumpHelper" sid="3052283865919932">
@@ -4105,6 +4105,25 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
+            <object-folder expanded="1" name="Bus">
+                <object-type name="ExitBus" sid="8507818832723008">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8414774843866936" speed="5">
+                            <frame duration="1" hotspotX="0.500606" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.0787879" y="0.106908" />
+                                    <point x="0.499394" y="0.0131579" />
+                                    <point x="0.921212" y="0.106908" />
+                                    <point x="0.928485" y="0.902961" />
+                                    <point x="0.070303" y="0.904605" />
+                                    <point x="0.00363636" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
         </object-folder>
         <object-folder expanded="0" name="IdiomLand">
             <object-type name="IdiomCounterTxt" sid="5244611748275736">
@@ -4429,23 +4448,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ExitBus" sid="8507818832723008">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8414774843866936" speed="5">
-                    <frame duration="1" hotspotX="0.500606" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0787879" y="0.106908" />
-                            <point x="0.499394" y="0.0131579" />
-                            <point x="0.921212" y="0.106908" />
-                            <point x="0.928485" y="0.902961" />
-                            <point x="0.070303" y="0.904605" />
-                            <point x="0.00363636" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="CityAirport" sid="9682607469914049">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -4643,7 +4645,7 @@
         <layout>Main.xml</layout>
         <layout>LevelComplete.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
+    <event-folder expanded="0">
         <event-folder expanded="0" name="Quest">
             <event-sheet>Quest.xml</event-sheet>
             <event-sheet>Bootstrap.xml</event-sheet>
@@ -4665,7 +4667,7 @@
         <event-folder expanded="0" name="LevelComplete">
             <event-sheet>LevelCompeleteMain.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="1" name="IdiomLand">
+        <event-folder expanded="0" name="IdiomLand">
             <event-sheet>IdiomCounter.xml</event-sheet>
             <event-sheet>IdiomDialogCompletion.xml</event-sheet>
             <event-sheet>IdiomLand.xml</event-sheet>
