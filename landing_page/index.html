@@ -60,12 +60,12 @@
                 <div id="slogan"><h2>Get involved with an adventure about English idioms and slang.</h2></div>
                 <!--<a href="game/" class="cta2 crown">Try to play demo</a>-->
                     <p class="home_p">
-                        Idiom Land demo coming this fall.<br>Enter your email to get early access.
+                        Idiom Land demo is coming this fall.<br>Enter your email address to get early access.
                     </p>
                     <div id="newsletter_form">
                         <form action="sendmail.php" method="post" class="subscribe-form subscribe-form-home" id="subscribe-form">
-                            <input type="email" name="email" class="subscribe-input subscribe-input-home" placeholder="Enter your e-mail address..." required>
-                            <button type="submit" class="subscribe-submit subscribe-submit-home">Notify Me</button>
+                            <input type="email" name="email" class="subscribe-input subscribe-input-home" placeholder="Enter your email address" required>
+                            <button type="submit" class="subscribe-submit subscribe-submit-home">Notify&nbspme</button>
                         </form>
                     </div>
                     <div id="preview" class="subscribe-form-home subscribe-form-success"></div>
@@ -221,7 +221,7 @@
             <div class="row" id="gallery_intro">
                 <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" >
                     
-                    <h2>Screenshots Gallery</h2>
+                    <h2>Screenshots</h2>
                     
                 </div>
             </div>
@@ -267,13 +267,13 @@
                 <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" >
                     
                     <h2>Subscribe to our newsletter</h2>
-                    <p>Idiom Land demo coming this fall. Enter your email to get early access.
+                    <p>Idiom Land demo is coming this fall. Enter your email address to get early access.
                     </p>
                     
                     <div id="newsletter_form">
                         <form action="sendmail.php" method="post" class="subscribe-form subscribe-form-footer" id="subscribe-form">
-                            <input type="email" name="email" class="subscribe-input subscribe-input-footer" placeholder="Enter your e-mail address..." required>
-                            <button type="submit" class="subscribe-submit subscribe-submit-footer">Notify Me</button>
+                            <input type="email" name="email" class="subscribe-input subscribe-input-footer" placeholder="Enter your email address" required>
+                            <button type="submit" class="subscribe-submit subscribe-submit-footer">Notify&nbspme</button>
                         </form>
                     </div>
                     <div id="preview" class="subscribe-form-footer subscribe-form-success"></div>
@@ -298,7 +298,7 @@
                                 <label class="sr-only" for="message">Message</label>
                                 <textarea id="message" name="message" class="contact-us-input" rows="6" placeholder="Message:" required></textarea>
                             </div><!--//form-group-->
-                            <button type="submit" class="sm" id="send">Send Message</button>
+                            <button type="submit" class="sm" id="send">Send message</button>
                         </form>
                     </div>
                     <div id="contact-preview"></div>
@@ -344,7 +344,7 @@
                 jqForm.ajaxForm({
                     success: function () {
                         jqForm.slideUp('slow');
-                        jqFormSuccess.text("Success!");
+                        jqFormSuccess.text("Thank you! We'll notify you as soon as demo becomes avaliable.");
                         jqFormSuccess.css({"opacity": "1"});
                     },
                     error: function () {
@@ -358,7 +358,7 @@
             $('#contact-us').ajaxForm( {
                 success: function() {
                     $('#contact-us').slideUp('slow');
-                    $("#contact-preview").text("Success!");
+                    $("#contact-preview").text("Thank you! We'll contact you as soon as we review your message.");
                     $('#contact-preview').css({"opacity":"1"});
                 },
                 error: function() {
