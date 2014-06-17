@@ -1040,7 +1040,16 @@ body {
     padding-bottom:0.4rem;
     padding-right:0.4rem;
 }
-#social_icons_home:hover li {
-    display:inline;
-    opacity: 0.5;
+
+.icon-social {
+    opacity: 1;
+}
+
+.icon-social:hover {
+    opacity: 0.6;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
