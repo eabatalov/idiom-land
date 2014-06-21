@@ -3,9 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>IdiomCounter</name>
     <events>
+        <variable constant="0" name="IDIOMS_GUESSED" sid="6126406036274092" static="0" type="number">0</variable>
         <event-group description="" sid="9203833697821463" title="Idiom Counter">
             <sub-events>
-                <variable constant="0" name="IdiomsGuessed" sid="3838568503774371" static="1" type="number">0</variable>
                 <event-block sid="9206450422816382">
                     <conditions>
                         <condition id="0" name="On function" sid="7418241811877393" type="Function">
@@ -14,18 +14,18 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="4315911345202091" type="System">
-                            <param id="0" name="Variable">IdiomsGuessed</param>
-                            <param id="1" name="Value">IdiomsGuessed + 1</param>
+                            <param id="0" name="Variable">IDIOMS_GUESSED</param>
+                            <param id="1" name="Value">IDIOMS_GUESSED + 1</param>
                         </action>
                         <action id="0" name="Set text" sid="2671474838349759" type="IdiomCounterTxt">
-                            <param id="0" name="Text">&quot;Idioms: &quot; &amp; IdiomsGuessed &amp; &quot;/&quot; &amp; IDIOMS_ON_LEVEL_COUNT</param>
+                            <param id="0" name="Text">&quot;Idioms: &quot; &amp; IDIOMS_GUESSED &amp; &quot;/&quot; &amp; IDIOMS_ON_LEVEL_COUNT</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="1866818113083606">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2989653630136838" type="System">
-                                    <param id="0" name="First value">IdiomsGuessed</param>
+                                    <param id="0" name="First value">IDIOMS_GUESSED</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">IDIOMS_ON_LEVEL_COUNT</param>
                                 </condition>
