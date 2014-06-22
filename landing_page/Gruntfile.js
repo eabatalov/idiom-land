@@ -48,18 +48,19 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['build-js', 'build-css']);
     grunt.registerTask('build-js', buildJS.bind(null, grunt));
     grunt.registerTask('build-css', buildCSS.bind(null, grunt));
-    //console.log(JSON.stringify(grunt.config.get('files')));
 };
 
 function buildJS(grunt) {
    var compressor = require('node-minify');
 
-    // Using Google Closure
+    // Using YUI Compressor for JS
     new compressor.minify({
         type: 'yui-js',
+        //type: 'no-compress',
         fileIn: grunt.config.get('files.js'),
         fileOut: grunt.config.get('files.out.js'),
         tempPath: '/tmp/',
+        options: ['--nomunge', '--preserve-semi', '--disable-optimizations'],
         callback: function(err, min){
             console.error(err);
             console.error(min);
@@ -73,6 +74,7 @@ function buildCSS(grunt) {
     // Using YUI Compressor for CSS
     new compressor.minify({
         type: 'yui-css',
+        //type: 'no-compress',
         fileIn: grunt.config.get('files.css'),
         fileOut: grunt.config.get('files.out.css'),
         tempPath: '/tmp/',
