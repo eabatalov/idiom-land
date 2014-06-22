@@ -110,7 +110,7 @@ function addThisApiGetDynCounter(service) {
         },
         function(counter) {
             if (counter.error) {
-                counterError();        
+                counterError(service); 
                 return;
             }
             var count = shareCountToInt(counter.count);
