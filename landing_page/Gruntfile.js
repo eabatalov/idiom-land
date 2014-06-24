@@ -1,86 +1,130 @@
 module.exports = function(grunt) {
-    var jsFiles = [
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+
+    var jsFilesToProc = [
         /* Modernizer and IE specyfic files */
-        '<%= dirs.js %>modernizr.custom.js',
-        '<%= dirs.js %>jquery-2.0.3.min.js',
-        '<%= dirs.js %>jquery.easing.min.js',
-        '<%= dirs.js %>jquery.form.js',
-        '<%= dirs.js %>main.js',
-        //'<%= dirs.js %>retina.js',
-        '<%= dirs.js %>waypoints.min.js',
-        '<%= dirs.js %>owl.carousel.min.js',
-        '<%= dirs.js %>nivo-lightbox.min.js',
-        '<%= dirs.js %>nicescroll.js',
-        '<%= dirs.share %>share.js'
+        '<%= dirs.in.js %>modernizr.custom.js',
+        '<%= dirs.in.js %>jquery-2.0.3.min.js',
+        '<%= dirs.in.js %>jquery.easing.min.js',
+        '<%= dirs.in.js %>jquery.form.js',
+        '<%= dirs.in.js %>main.js',
+        //'<%= dirs.in.js %>retina.js',
+        '<%= dirs.in.js %>waypoints.min.js',
+        '<%= dirs.in.js %>owl.carousel.min.js',
+        '<%= dirs.in.js %>nivo-lightbox.min.js',
+        '<%= dirs.in.js %>nicescroll.js',
+        '<%= dirs.in.share %>share.js'
     ];
-    var cssFiles = [
-        '<%= dirs.css %>bootstrap.css',
-        '<%= dirs.css %>style.css',
-        '<%= dirs.css %>animate.css',
-        '<%= dirs.css %>owl.carousel.css',
-        '<%= dirs.css %>owl.theme.css',
-        '<%= dirs.css %>nivo-lightbox.css',
-        '<%= dirs.css %>nivo_lightbox_themes/default/default.css',
-        '<%= dirs.css %>colors.css',
-        '<%= dirs.css %>responsive.css',
-        '<%= dirs.share %>share.css'
+
+    var cssFilesToProc = [
+        '<%= dirs.in.css %>bootstrap.css',
+        '<%= dirs.in.css %>style.css',
+        '<%= dirs.in.css %>animate.css',
+        '<%= dirs.in.css %>owl.carousel.css',
+        '<%= dirs.in.css %>owl.theme.css',
+        '<%= dirs.in.css %>nivo-lightbox.css',
+        '<%= dirs.in.css %>nivo_lightbox_themes/default/default.css',
+        '<%= dirs.in.css %>colors.css',
+        '<%= dirs.in.css %>responsive.css',
+        '<%= dirs.in.share %>share.css'
+    ];
+
+    /* Don't use dirs.in.dir prefixes from here */
+    var filesToCopy = [
+        /* Flattened paths */
+        { expand: true, flatten: true, src: '<%= dirs.in.dir%>backend/contactus.php', dest: '<%= dirs.out %>' },
+        { expand: true, flatten: true, src: '<%= dirs.in.dir%>backend/sendmail.php', dest: '<%= dirs.out %>' },
+        { expand: true, flatten: true, src: '<%= dirs.in.dir%>favicon.ico', dest: '<%= dirs.out %>' },
+        { expand: true, flatten: true, src: '<%= dirs.in.dir%>index.html', dest: '<%= dirs.out %>' },
+        { expand: true, flatten: true, src: '<%= dirs.in.dir%>thumbnail.png', dest: '<%= dirs.out %>' },
+        { expand: true, flatten: true, src: '<%= dirs.in.dir%>css/nivo_lightbox_themes/default/*.png', dest: '<%= dirs.out %>' },
+        { expand: true, flatten: true, src: '<%= dirs.in.dir%>css/nivo_lightbox_themes/default/*.gif', dest: '<%= dirs.out %>' },
+        /* Preserve relative paths */
+        { expand: true, flatten: false, cwd: '<%= dirs.in.css %>', src: 'fonts/**', dest: '<%= dirs.out %>' },
+        { expand: true, flatten: false, cwd: '<%= dirs.in.dir %>', src: 'images/**', dest: '<%= dirs.out %>' },
+        { expand: true, flatten: false, cwd: '<%= dirs.in.dir %>share', src: 'addthis_social_icon_pack/*', dest: '<%= dirs.out %>' }
     ];
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
         dirs: {
-            css: 'css/',
-            js: 'js/',
-            share: 'share/'
+            out: 'bin',
+            'in': {
+                dir: 'src/',
+                css: '<%= dirs.in.dir %>css/',
+                js: '<%= dirs.in.dir %>js/',
+                share: '<%= dirs.in.dir %>share/'
+            }
         },
 
         files : {
-            css : cssFiles,
-            js : jsFiles,
+            'in' : {
+                css: cssFilesToProc,
+                js: jsFilesToProc,
+                copy: filesToCopy,
+            },
             out : {
-                css: 'public/css.min.css',
-                js: 'public/js.min.js'
+                debug: {
+                    css: '<%= dirs.out %>/css.css',
+                    js: '<%= dirs.out %>/js.js'
+                },
+                release: {
+                    css: '<%= dirs.out %>/css.min.css',
+                    js: '<%= dirs.out %>/js.min.js'
+                }
             }
         },
+
+        clean: ['<%= dirs.out %>'],
+
+        /* Copy all the files that don't need processing */
+        copy: {
+            options: {
+                mode: true
+            },
+            main: {
+                files: '<%= files.in.copy %>'
+            }
+        },
+
+        /* Concat 'files to process' first */
+        concat: {
+            'css-debug': {
+                src: '<%= files.in.css %>',
+                dest: '<%= files.out.debug.css %>'
+            },
+            'css-release': {
+                src: '<%= files.in.css %>',
+                dest: '<%= files.out.release.css %>'
+            },
+            'js-debug': {
+                src: '<%= files.in.js %>',
+                dest: '<%= files.out.debug.js %>'
+            },
+            'js-release': {
+                src: '<%= files.in.js %>',
+                dest: '<%= files.out.release.js %>'
+            }
+        },
+
+        /* Minify 'files to process' then */
+        uglify: {
+            options : {
+                mangle: false,
+                compress: true,
+                sourceMap: true,
+                preserveComments: false, 
+            },
+            release: {
+                src: '<%= files.out.release.js %>',
+                dest: '<%= files.out.release.js %>'
+            }
+        }
     });
 
-    grunt.registerTask('default', ['build-js', 'build-css']);
-    grunt.registerTask('build-js', buildJS.bind(null, grunt));
-    grunt.registerTask('build-css', buildCSS.bind(null, grunt));
+    grunt.registerTask('default', ['clean', 'copy', 'concat', 'uglify']);
 };
-
-function buildJS(grunt) {
-   var compressor = require('node-minify');
-
-    // Using YUI Compressor for JS
-    new compressor.minify({
-        type: 'yui-js',
-        //type: 'no-compress',
-        fileIn: grunt.config.get('files.js'),
-        fileOut: grunt.config.get('files.out.js'),
-        tempPath: '/tmp/',
-        options: ['--nomunge', '--preserve-semi', '--disable-optimizations'],
-        callback: function(err, min){
-            console.error(err);
-            console.error(min);
-        }
-    });
-}
-
-function buildCSS(grunt) {
-    var compressor = require('node-minify');
-
-    // Using YUI Compressor for CSS
-    new compressor.minify({
-        type: 'yui-css',
-        //type: 'no-compress',
-        fileIn: grunt.config.get('files.css'),
-        fileOut: grunt.config.get('files.out.css'),
-        tempPath: '/tmp/',
-        callback: function(err, min){
-            console.log(err);
-            console.log(min);
-        }
-    });
-}
