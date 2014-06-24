@@ -8,13 +8,13 @@ module.exports = function(grunt) {
         /* Modernizer and IE specyfic files */
         '<%= dirs.in.js %>modernizr.custom.js',
         '<%= dirs.in.js %>jquery-2.0.3.min.js',
-        '<%= dirs.in.js %>jquery.easing.min.js',
+        '<%= dirs.in.js %>jquery.easing.js',
         '<%= dirs.in.js %>jquery.form.js',
         '<%= dirs.in.js %>main.js',
         //'<%= dirs.in.js %>retina.js',
-        '<%= dirs.in.js %>waypoints.min.js',
-        '<%= dirs.in.js %>owl.carousel.min.js',
-        '<%= dirs.in.js %>nivo-lightbox.min.js',
+        '<%= dirs.in.js %>waypoints.js',
+        '<%= dirs.in.js %>owl.carousel.js',
+        '<%= dirs.in.js %>nivo-lightbox.js',
         '<%= dirs.in.js %>nicescroll.js',
         '<%= dirs.in.share %>share.js'
     ];
@@ -114,6 +114,8 @@ module.exports = function(grunt) {
         /* Minify 'files to process' then */
         uglify: {
             options : {
+                /* Mangling has not trivial configuration
+                 * leave it for later (TODO) */
                 mangle: false,
                 compress: true,
                 sourceMap: true,
