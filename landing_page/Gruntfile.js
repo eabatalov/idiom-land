@@ -52,7 +52,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         dirs: {
-            out: 'bin',
+            out: 'bin/',
             'in': {
                 dir: 'src/',
                 css: '<%= dirs.in.dir %>css/',
@@ -69,17 +69,19 @@ module.exports = function(grunt) {
             },
             out : {
                 debug: {
-                    css: '<%= dirs.out %>/css.css',
-                    js: '<%= dirs.out %>/js.js'
+                    css: '<%= dirs.out %>css.css',
+                    js: '<%= dirs.out %>js.js'
                 },
                 release: {
-                    css: '<%= dirs.out %>/css.min.css',
-                    js: '<%= dirs.out %>/js.min.js'
+                    css: '<%= dirs.out %>css.min.css',
+                    js: '<%= dirs.out %>js.min.js'
                 }
             }
         },
 
-        clean: ['<%= dirs.out %>'],
+        clean: {
+            main: ['<%= dirs.out %>*', '!<%= dirs.out %>game/**']
+        },
 
         /* Copy all the files that don't need processing */
         copy: {
