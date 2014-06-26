@@ -171,9 +171,19 @@ socialSharing = {
 }
 
 jQuery(document).ready(function() {
+    var addthis_config = {
+        "data_track_addressbar": true,
+        "data_track_clickback": true
+    };
+
     configure();
     init();
-    addthis.addEventListener('addthis.ready', downloadCounters);
+
+    jQuery.getScript('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-537a67027f7a7a93',
+        function() {
+            addthis.addEventListener('addthis.ready', downloadCounters);
+        }
+    );
 });
 
 })();

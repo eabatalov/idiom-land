@@ -145,8 +145,47 @@
  }
 
 $(function() {
-  App.init();
-  });
+    App.init();
+    //Scrollers
+    $('.scrollto, .gototop').bind('click', function (event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+    //Forms
+    $('.subscribe-form').each(function (formIx, form) {
+        var jqForm = $(form);
+        var jqFormSuccess = $($(".subscribe-form-success").get(formIx))
+        jqForm.ajaxForm({
+            success: function () {
+                jqForm.slideUp('slow');
+                jqFormSuccess.text("Thank you!");
+                jqFormSuccess.css({"opacity": "1"});
+            },
+            error: function () {
+                jqForm.slideUp('slow');
+                jqFormSuccess.text("Sorry. Error occurred.");
+                jqFormSuccess.css({"opacity": "1"});
+            }
+        });
+    });
+
+    $('#contact-us').ajaxForm({
+        success: function () {
+            $('#contact-us').slideUp('slow');
+            $("#contact-preview").text("Thank you!");
+            $('#contact-preview').css({"opacity": "1"});
+        },
+        error: function () {
+            $('#contact-us').slideUp('slow');
+            $("#contact-preview").text("Sorry. Error occurred.");
+            $('#contact-preview').css({"opacity": "1"});
+        }
+    });
+    //
+});
 
 
 })(jQuery);
