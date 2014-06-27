@@ -3,6 +3,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     var jsFilesToProc = [
         /* Modernizer and IE specyfic files */
@@ -116,7 +117,7 @@ module.exports = function(grunt) {
             }
         },
 
-        /* Minify 'files to process' then */
+        /* Minify 'js files to process' then */
         uglify: {
             options : {
                 /* Mangling has not trivial configuration
@@ -130,8 +131,16 @@ module.exports = function(grunt) {
                 src: '<%= files.out.release.js %>',
                 dest: '<%= files.out.release.js %>'
             }
+        },
+
+        /* Minify 'css files to process then' */
+        cssmin : {
+            main : {
+                src: '<%= files.out.release.css %>',
+                dest: '<%= files.out.release.css %>'
+            }
         }
     });
 
-    grunt.registerTask('default', ['clean', 'copy', 'concat', 'uglify']);
+    grunt.registerTask('default', ['clean', 'copy', 'concat', 'uglify', 'cssmin']);
 };
