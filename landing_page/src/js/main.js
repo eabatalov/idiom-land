@@ -9,7 +9,6 @@
         App.HomeOpacity();
         App.ScrollToContact();
         App.ScrollBack();
-        App.Preloader();
         App.Animations();
         App.Carousel();
         App.Lightbox();
@@ -53,22 +52,7 @@
             $.scrollTo('#home',1500,{easing:'easeInOutExpo',offset:0,'axis':'y'});
         });
     },
- 
- 
-    /**
-    * Preloader
-    */
-    Preloader: function() {
-        $(window).load(function() {
-            $('#status').delay(100).fadeOut('slow');
-            $('#preloader').delay(500).fadeOut('slow');
-            $('body').delay(500).css({'overflow':'visible'});
-            setTimeout(function(){$('#logo').addClass('animated fadeInDown')},500);
-            setTimeout(function(){$('#logo_header').addClass('animated fadeInDown')},600);
-            setTimeout(function(){$('#slogan').addClass('animated fadeInDown')},700);
-            setTimeout(function(){$('#home_image').addClass('animated fadeInUp')},900);
-        })
-    },
+
 
 
     /**
@@ -139,13 +123,13 @@
         $('#owl-gallery a').nivoLightbox({
             effect: 'fall',                             // The effect to use when showing the lightbox
         });
-    },
- 
+    }
 
- }
+    }
 
 $(function() {
     App.init();
+
     //Scrollers
     $('.scrollto, .gototop').bind('click', function (event) {
         var $anchor = $(this);
@@ -184,7 +168,26 @@ $(function() {
             $('#contact-preview').css({"opacity": "1"});
         }
     });
-    //
+    /**
+    * Preloader
+    */
+    var preloaderImages = $('.show-preloader');
+    var preloaderImagesLoaded = 0;
+    preloaderImages.each(function(imgIx, img) {
+        var jqImg = $(img);
+        jqImg.imagesLoaded(function() {
+            ++preloaderImagesLoaded;
+            if (preloaderImagesLoaded === preloaderImages.length) {
+                $('#status').delay(100).fadeOut('slow');
+                $('#preloader').delay(500).fadeOut('slow');
+                $('body').delay(500).css({'overflow':'visible'});
+                setTimeout(function(){$('#logo').addClass('animated fadeInDown')},500);
+                setTimeout(function(){$('#logo_header').addClass('animated fadeInDown')},600);
+                setTimeout(function(){$('#slogan').addClass('animated fadeInDown')},700);
+                setTimeout(function(){$('#home_image').addClass('animated fadeInUp')},900);
+            }
+        });
+    });
 });
 
 

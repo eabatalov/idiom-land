@@ -10,12 +10,14 @@ module.exports = function(grunt) {
         '<%= dirs.in.js %>jquery-2.0.3.min.js',
         '<%= dirs.in.js %>jquery.easing.1.3.js',
         '<%= dirs.in.js %>jquery.form.js',
-        '<%= dirs.in.js %>main.js',
+        '<%= dirs.in.js %>imagesloaded.pkgd.js',
         //'<%= dirs.in.js %>retina.js',
         '<%= dirs.in.js %>waypoints.js',
         '<%= dirs.in.js %>owl.carousel.js',
         '<%= dirs.in.js %>nivo-lightbox.js',
         '<%= dirs.in.js %>nicescroll.js',
+        //main should be the last because it uses upper scripts
+        '<%= dirs.in.js %>main.js',
         '<%= dirs.in.share %>share.js',
         '<%= dirs.in.share %>analytics.js'
     ];

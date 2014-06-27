@@ -171,7 +171,7 @@ socialSharing = {
 }
 
 jQuery(document).ready(function() {
-    var addthis_config = {
+    window.addthis_config = {
         "data_track_addressbar": true,
         "data_track_clickback": true
     };
