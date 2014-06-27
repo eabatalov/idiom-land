@@ -18,15 +18,22 @@
     <script type="text/javascript">
         function nonBlockingScriptByURL(url) {
             var script = document.createElement('script');
+            script.type = 'text/javascript';
             script.src = url;
             script.async = false;
             document.head.appendChild(script);
         }
         function nonBlockingScript(scriptText) {
             var script = document.createElement('script');
-            script.text = scriptText;
-            script.async = false;
-            document.head.appendChild(script);           
+            try {
+                script.appendChild(document.createTextNode(scriptText));
+            } catch(e) {
+                script.text = scriptText;
+            } finally {
+                script.type = 'text/javascript';
+                script.async = false;
+                document.head.appendChild(script);
+            } 
         }
         nonBlockingScriptByURL('js.min.js');
     </script>

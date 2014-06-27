@@ -1,6 +1,7 @@
 <!-- Google analytics -->
 function initGoogleAnalytics() {
     (function (i, s, o, g, r, a, m) {
+        console.log("Init google analytics");
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
             (i[r].q = i[r].q || []).push(arguments)
@@ -19,6 +20,7 @@ function initGoogleAnalytics() {
 <!-- Yandex.Metrika counter -->
 function initYandexMetrica() {
     (function (d, w, c) {
+        console.log("Init yandex metrics");
         (w[c] = w[c] || []).push(function () {
             try {
                 w.yaCounter25287059 = new Ya.Metrika({id: 25287059, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true});
@@ -39,7 +41,7 @@ function initYandexMetrica() {
     })(document, window, "yandex_metrika_callbacks");
 }
 
-jQuery(document).ready(function() {
-    nonBlockingScript("initGoogleAnalytics()");
-    nonBlockingScript("initYandexMetrica()");
+jQuery(window).load(function() {
+    nonBlockingScript("initGoogleAnalytics();");
+    nonBlockingScript("initYandexMetrica();");
 });

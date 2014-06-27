@@ -170,12 +170,13 @@ socialSharing = {
     totalCounter : new TotalCounter()
 }
 
-jQuery(document).ready(function() {
+jQuery(window).load(function() {
     window.addthis_config = {
         "data_track_addressbar": true,
         "data_track_clickback": true
     };
 
+    console.log('Addthis init');
     configure();
     init();
 

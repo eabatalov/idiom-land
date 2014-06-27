@@ -17,10 +17,10 @@ module.exports = function(grunt) {
         '<%= dirs.in.js %>owl.carousel.js',
         '<%= dirs.in.js %>nivo-lightbox.js',
         '<%= dirs.in.js %>nicescroll.js',
-        //main should be the last because it uses upper scripts
+        //main should be here because it uses upper scripts
         '<%= dirs.in.js %>main.js',
         '<%= dirs.in.share %>share.js',
-        '<%= dirs.in.share %>analytics.js'
+        '<%= dirs.in.js %>analytics.js'
     ];
 
     var cssFilesToProc = [
