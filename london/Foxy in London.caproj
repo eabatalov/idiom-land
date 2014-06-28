@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Eugene/Learzing" id="QuestRuntimeInterfacePlugin" version="0.100000001">Quest Runtime Interface</plugin>
         <plugin author="Eugene/learzing" id="QuestRuntimePlugin" version="0.100000001">Quest Runtime</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -58,7 +59,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="0" name="Quest">
             <object-folder expanded="0" name="NPC">
                 <object-folder expanded="0" name="Speech">
@@ -1851,6 +1852,9 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Mouse" sid="226545771162981">
+                <plugin id="Mouse" />
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="Animation">
             <object-folder expanded="1" name="Player" />
@@ -3495,7 +3499,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="Stages">
+        <object-folder expanded="0" name="Stages">
             <object-folder expanded="0" name="Intro">
                 <object-folder expanded="0" name="Helpers">
                     <object-type name="JumpHelper" sid="3052283865919932">
@@ -3995,47 +3999,7 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-folder expanded="1" name="Bus">
-                <object-type name="Foxy" sid="4330101678906835">
-                    <plugin id="Sprite" />
-                    <animation-folder expanded="1">
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4763184827659966" speed="5">
-                            <frame duration="1" hotspotX="0.502283" hotspotY="0.502024">
-                                <collision-poly>
-                                    <point x="0.260274" y="0.230769" />
-                                    <point x="0.497717" y="0.165992" />
-                                    <point x="0.712329" y="0.255061" />
-                                    <point x="0.986301" y="0.497976" />
-                                    <point x="0.497717" y="0.935223" />
-                                    <point x="0.232877" y="0.793522" />
-                                    <point x="0.0228311" y="0.497976" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="FoxySpeech" sid="8092447796273613">
-                    <plugin id="Sprite" />
-                    <animation-folder expanded="1">
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2049339548762781" speed="5">
-                            <frame duration="1" hotspotX="0.500998" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.0558882" y="0.0804598" />
-                                    <point x="0.499002" y="0.0172414" />
-                                    <point x="0.922156" y="0.112069" />
-                                    <point x="0.998004" y="0.5" />
-                                    <point x="0.914172" y="0.876437" />
-                                    <point x="0.499002" y="0.876437" />
-                                    <point x="0.0239521" y="0.965517" />
-                                    <point x="0.00199601" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="FoxySpeechText" sid="56095791430872">
-                    <plugin id="Text" />
-                </object-type>
+            <object-folder expanded="0" name="Bus">
                 <object-type name="ExitBus" sid="8507818832723008">
                     <plugin id="Sprite" />
                     <animation-folder expanded="1">
@@ -4221,6 +4185,100 @@
             </object-type>
             <object-type name="TicketsCounterTxt" sid="7143920015409264">
                 <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder expanded="0" name="LevelComplete">
+            <object-type name="Foxy" sid="4330101678906835">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4763184827659966" speed="5">
+                        <frame duration="1" hotspotX="0.502283" hotspotY="0.502024">
+                            <collision-poly>
+                                <point x="0.260274" y="0.230769" />
+                                <point x="0.497717" y="0.165992" />
+                                <point x="0.712329" y="0.255061" />
+                                <point x="0.986301" y="0.497976" />
+                                <point x="0.497717" y="0.935223" />
+                                <point x="0.232877" y="0.793522" />
+                                <point x="0.0228311" y="0.497976" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FoxySpeech" sid="8092447796273613">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2049339548762781" speed="5">
+                        <frame duration="1" hotspotX="0.500998" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0558882" y="0.0804598" />
+                                <point x="0.499002" y="0.0172414" />
+                                <point x="0.922156" y="0.112069" />
+                                <point x="0.998004" y="0.5" />
+                                <point x="0.914172" y="0.876437" />
+                                <point x="0.499002" y="0.876437" />
+                                <point x="0.0239521" y="0.965517" />
+                                <point x="0.00199601" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FoxySpeechText" sid="56095791430872">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="LevelResultsText" sid="3025409012502349">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="IdiomText" sid="8545187802478282">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="IdiomTableLine" sid="1319737610113391">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5590471454420013" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="IdiomMeaning" sid="3567831786456168">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="ReplayBtn" sid="4332853495816837">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7475867165205389" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="NextLevelBtn" sid="8991808887361028">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="4934376255918528">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2918720804750634" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="IdiomTableHeader" sid="2479480790586468">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="IdiomSuccessIndicator" sid="9953672135447337">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Success" pingpong="0" repeatcount="1" repeatto="0" sid="8617214023878586" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Fail" pingpong="0" repeatcount="1" repeatto="0" sid="3140631132054894" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-type name="Platforms" sid="9109209147233701">
@@ -4678,10 +4736,10 @@
             <event-sheet>Taxi.xml</event-sheet>
             <event-sheet>Bus.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="LevelComplete">
+        <event-folder expanded="1" name="LevelComplete">
             <event-sheet>LevelCompeleteMain.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="1" name="IdiomLand">
+        <event-folder expanded="0" name="IdiomLand">
             <event-sheet>IdiomCounter.xml</event-sheet>
             <event-sheet>IdiomDialogCompletion.xml</event-sheet>
             <event-sheet>IdiomLand.xml</event-sheet>
@@ -4705,6 +4763,7 @@
         <global-instance type="Function" uid="14" />
         <global-instance type="QuestEngine" uid="15" />
         <global-instance type="Browser" uid="43" />
+        <global-instance type="Mouse" uid="307" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
