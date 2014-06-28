@@ -60,10 +60,12 @@ function init() {
             + "ct=" + socialSharing.dataToShare.ct;
 
         var serviceShareButtonHtml = ""
-        + "<div class='share-button " + service.shareButtonClass + "'>"
-            + "<a href='" + shareURL + "' rel='nofollow' target='_blank'><div class='button'></div></a>"
-            + "<div class='counter'>&nbsp;</div>"
-        + "</div>";
+        + "<a href='" + shareURL + "' rel='nofollow' target='_blank'>"
+            + "<div class='share-button " + service.shareButtonClass + "'>"
+                + "<div class='button'></div>"
+                + "<div class='counter'>&nbsp;</div>"
+            + "</div>"
+        + "</a>";
         shareButtonsContainer.append(serviceShareButtonHtml);
 
     });
