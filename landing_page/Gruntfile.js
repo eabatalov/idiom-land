@@ -13,7 +13,6 @@ module.exports = function(grunt) {
         '<%= dirs.in.js %>jquery.form.js',
         '<%= dirs.in.js %>imagesloaded.pkgd.js',
         //'<%= dirs.in.js %>retina.js',
-        '<%= dirs.in.js %>waypoints.js',
         '<%= dirs.in.js %>owl.carousel.js',
         '<%= dirs.in.js %>nivo-lightbox.js',
         '<%= dirs.in.js %>nicescroll.js',

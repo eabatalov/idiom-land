@@ -6,94 +6,9 @@
     * Init Function
     */
     init: function() {
-        App.ScrollToContact();
-        App.ScrollBack();
-        App.Animations();
         App.Carousel();
         App.Lightbox();
     },
-
-
-
-
-    /**
-    * Scroll To Contact
-    */
-    ScrollToContact: function() {
-    $('#button_more').click(function () { $.scrollTo('#about',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
-    $('#about_arrow_back').click(function () { $.scrollTo('0px',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
-    $('#about_arrow_next').click(function () { $.scrollTo('#features_1',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
-    $('#features_1_arrow_back').click(function () { $.scrollTo('#about',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
-    $('#features_1_arrow_next').click(function () { $.scrollTo('#features_2',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
-    $('#features_2_arrow_back').click(function () { $.scrollTo('#features_1',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
-    $('#features_2_arrow_next').click(function () { $.scrollTo('#features_3',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
-    $('#features_3_arrow_back').click(function () { $.scrollTo('#features_2',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
-    $('#features_3_arrow_next').click(function () { $.scrollTo('#gallery',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
-    $('#gallery_arrow_back').click(function () { $.scrollTo('#features_3',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
-    $('#gallery_arrow_next').click(function () { $.scrollTo('#dev_blog',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
-    $('#dev_blog_arrow_back').click(function () { $.scrollTo('0px',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
-    },
-
-
-
-    /**
-    * Scroll Back
-    */
-    ScrollBack: function() {
-        $('#arrow_back').click(function () {
-            $.scrollTo('#home',1500,{easing:'easeInOutExpo',offset:0,'axis':'y'});
-        });
-    },
-
-
-
-    /**
-    * Animations
-    */
-    Animations: function() {
-        $('#about').waypoint(function() {
-            setTimeout(function(){$('#about_intro').addClass('animated fadeInDown')},0);
-            setTimeout(function(){$('#service_1').addClass('animated fadeInDown')},100);
-            setTimeout(function(){$('#service_2').addClass('animated fadeInDown')},200);
-            setTimeout(function(){$('#service_3').addClass('animated fadeInDown')},300);
-        }, { offset: '99%' });
-
-        $('#features_1').waypoint(function() {
-            setTimeout(function(){$('#features_1_content').addClass('animated fadeInDown')},0);
-            setTimeout(function(){$('#features1a_image').addClass('animated fadeInRight')},300);
-            setTimeout(function(){$('#features1b_image').addClass('animated fadeInRight')},100);
-        }, { offset: '99%' });
-
-        $('#features_2').waypoint(function() {
-            setTimeout(function(){$('#features_2_content').addClass('animated fadeInDown')},0);
-            setTimeout(function(){$('#features2a_image').addClass('animated fadeInLeft')},300);
-            setTimeout(function(){$('#features2b_image').addClass('animated fadeInLeft')},100)
-        }, { offset: '99%' });
-
-        $('#features_3').waypoint(function() {
-            setTimeout(function(){$('#features_3_intro').addClass('animated fadeInDown')},0);
-            setTimeout(function(){$('#features_3_content_left, #features_3_content_right').addClass('animated fadeInUp')},300);
-            setTimeout(function(){$('#features_3_content_center').addClass('animated fadeInDown')},100)
-        }, { offset: '99%' });
-
-        $('#gallery').waypoint(function() {
-            setTimeout(function(){$('#gallery_intro').addClass('animated fadeInDown')},0);
-            setTimeout(function(){$('#gallery_carousel').addClass('animated fadeInUp')},300)
-        }, { offset: '99%' });
-
-        $('#dev_blog').waypoint(function() {
-            setTimeout(function(){$('#dev_blog_intro').addClass('animated fadeInDown')},0);
-            setTimeout(function(){$('#dev_blog_content').addClass('animated fadeInDown')},300)
-        }, { offset: '99%' });
-
-        $('#blog_header').waypoint(function() {
-            setTimeout(function(){$('#title').addClass('animated fadeInDown')},0);
-        }, { offset: '99%' });
-
-
-    },
-
-
     /**
     * Carousel
     */
@@ -147,7 +62,6 @@ $(function() {
             }
         });
     });
-
     $('#contact-us').ajaxForm({
         success: function () {
             $('#contact-us').slideUp('slow');
