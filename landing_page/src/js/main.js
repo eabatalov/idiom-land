@@ -6,7 +6,6 @@
     * Init Function
     */
     init: function() {
-        App.HomeOpacity();
         App.ScrollToContact();
         App.ScrollBack();
         App.Animations();
@@ -14,14 +13,7 @@
         App.Lightbox();
     },
 
- 
-    HomeOpacity: function() {
-        var h = window.innerHeight;
-        $(window).on('scroll', function() {
-            var st = $(this).scrollTop();
-            $('#home').css('opacity', (1-st/h) );
-        });
-    },
+
 
 
     /**
@@ -41,9 +33,9 @@
     $('#gallery_arrow_next').click(function () { $.scrollTo('#dev_blog',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
     $('#dev_blog_arrow_back').click(function () { $.scrollTo('0px',1000,{easing:'easeInOutExpo',offset:0,'axis':'y'});});
     },
- 
- 
- 
+
+
+
     /**
     * Scroll Back
     */
@@ -61,42 +53,42 @@
     Animations: function() {
         $('#about').waypoint(function() {
             setTimeout(function(){$('#about_intro').addClass('animated fadeInDown')},0);
-            setTimeout(function(){$('#service_1').addClass('animated fadeInDown')},300);
-            setTimeout(function(){$('#service_2').addClass('animated fadeInDown')},500);
-            setTimeout(function(){$('#service_3').addClass('animated fadeInDown')},700);
-        }, { offset: '50%' });
- 
+            setTimeout(function(){$('#service_1').addClass('animated fadeInDown')},100);
+            setTimeout(function(){$('#service_2').addClass('animated fadeInDown')},200);
+            setTimeout(function(){$('#service_3').addClass('animated fadeInDown')},300);
+        }, { offset: '99%' });
+
         $('#features_1').waypoint(function() {
             setTimeout(function(){$('#features_1_content').addClass('animated fadeInDown')},0);
-            setTimeout(function(){$('#features1a_image').addClass('animated fadeInRight')},1100);
-            setTimeout(function(){$('#features1b_image').addClass('animated fadeInRight')},600);
-        }, { offset: '50%' });
- 
+            setTimeout(function(){$('#features1a_image').addClass('animated fadeInRight')},300);
+            setTimeout(function(){$('#features1b_image').addClass('animated fadeInRight')},100);
+        }, { offset: '99%' });
+
         $('#features_2').waypoint(function() {
             setTimeout(function(){$('#features_2_content').addClass('animated fadeInDown')},0);
-            setTimeout(function(){$('#features2a_image').addClass('animated fadeInLeft')},1100);
-            setTimeout(function(){$('#features2b_image').addClass('animated fadeInLeft')},600)
-        }, { offset: '50%' });
- 
+            setTimeout(function(){$('#features2a_image').addClass('animated fadeInLeft')},300);
+            setTimeout(function(){$('#features2b_image').addClass('animated fadeInLeft')},100)
+        }, { offset: '99%' });
+
         $('#features_3').waypoint(function() {
             setTimeout(function(){$('#features_3_intro').addClass('animated fadeInDown')},0);
-            setTimeout(function(){$('#features_3_content_left, #features_3_content_right').addClass('animated fadeInUp')},700);
-            setTimeout(function(){$('#features_3_content_center').addClass('animated fadeInDown')},600)
-        }, { offset: '50%' });
- 
+            setTimeout(function(){$('#features_3_content_left, #features_3_content_right').addClass('animated fadeInUp')},300);
+            setTimeout(function(){$('#features_3_content_center').addClass('animated fadeInDown')},100)
+        }, { offset: '99%' });
+
         $('#gallery').waypoint(function() {
             setTimeout(function(){$('#gallery_intro').addClass('animated fadeInDown')},0);
-            setTimeout(function(){$('#gallery_carousel').addClass('animated fadeInUp')},700)
-        }, { offset: '50%' });
- 
+            setTimeout(function(){$('#gallery_carousel').addClass('animated fadeInUp')},300)
+        }, { offset: '99%' });
+
         $('#dev_blog').waypoint(function() {
             setTimeout(function(){$('#dev_blog_intro').addClass('animated fadeInDown')},0);
-            setTimeout(function(){$('#dev_blog_content').addClass('animated fadeInDown')},700)
-        }, { offset: '50%' });
+            setTimeout(function(){$('#dev_blog_content').addClass('animated fadeInDown')},300)
+        }, { offset: '99%' });
 
         $('#blog_header').waypoint(function() {
             setTimeout(function(){$('#title').addClass('animated fadeInDown')},0);
-        }, { offset: '50%' });
+        }, { offset: '99%' });
 
 
     },
