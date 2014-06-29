@@ -5,15 +5,40 @@
     #home_image {
         top:3rem;
     }
+    .icon-social{
+        width: 3.4rem;
+        position: inherit;
+        display: inline-table;
+    }
+    #social_icons_home {
+        text-align: center;
+        margin-bottom: -3.6rem;
+        margin-top: 3.2rem;
+    }
+    #social_icons{
+        text-align: center;
+        margin-bottom: -3.6rem;
+        margin-top: 3.2rem;
+    }
 
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1199px) {
     html {
         font-size: 81.25%;
     }
     #logo {
         margin-top: 2rem;
+    }
+    .icon-social{
+        width: 3.4rem;
+        position: inherit;
+        display: inline-table;
+    }
+    #social_icons_home {
+        text-align: center;
+        margin-bottom: -3.6rem;
+        margin-top: 3.2rem;
     }
 
 }
@@ -87,6 +112,16 @@
     }
     
     #button_back {float:none;}
+    .icon-social{
+        width: 3.4rem;
+        position: inherit;
+        display: inline-table;
+    }
+    #social_icons_home {
+        text-align: center;
+        margin-bottom: -3.6rem;
+        margin-top: 3.2rem;
+    }
 
 }
 
@@ -99,18 +134,62 @@
     }
 
     h1 {font-size:3rem;}
+    h2 {margin-top: 2rem;}
     #logo_header {margin-bottom:2em }
     
     #logo {
         margin-top: 1rem;
+        text-align: center;
     }
     #home_image {
-
-    top:25rem;
+        top: 38rem;
+        max-width: 135%;
+        left: -11rem;
     }
-    
     #slogan {
-    width:90%;
+    text-align: center;
     }
-
+    #features_3_content_center .img-responsive {
+        max-width: 35.5rem;
+        left: -5rem;
+        top: -5rem;
+    }
+    #social_icons_home {
+        text-align: center;
+        margin-bottom: -3.6rem;
+        margin-top: 22.8rem;
+    }
+    #social_icons{
+        text-align: center;
+    }
+    #newsletter_form {
+        text-align: center;
+        display: flex;
+        position: relative;
+    }
+    .home_p{
+        text-align: center;
+    }
+    .feature_3_icon {
+        margin-bottom: 1.6rem;
+    }
+    .feature_icon {
+        margin-bottom: 2rem;
+    }
+    .contact-us-input{
+        border-radius: 16px;
+    }
+    .icon-social{
+        width: 3.4rem;
+        position: inherit;
+        display: inline-table;
+    }
+    .share-button {
+        padding: 0 10px 0 0;
+    }
+    .button{
+        width: 10%;
+        height: 2.8rem;
+        padding: 6px 10px;
+    }
 }
