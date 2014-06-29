@@ -43,7 +43,7 @@ cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
 	{
 		// note the object is sealed after this call; ensure any properties you'll ever need are set on the object
 		this.idiomsProgressTracker = new IdiomsProgressTracker();
-        this.IdiomsProgressTracker.onIdiomGuessed(function() {
+        this.idiomsProgressTracker.onIdiomGuessed(function() {
             this.runtime.trigger(pluginProto.cnds.guessedIdiomsChanged);
         }.bind(this));
         this.currIdiomIx = 0;
@@ -126,7 +126,7 @@ cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
     Cnds.prototype.forEachIdiom = function() {
         var currentEvent = this.runtime.getCurrentEventStack().current_event;
         this.currIdiomIx = 0;
-        for (currIdiomIx < this.idiomsProgressTracker.getAllIdioms().length; ++currIdiomIx) {
+        for (;currIdiomIx < this.idiomsProgressTracker.getAllIdioms().length; ++currIdiomIx) {
             this.doForEachTrigger(currentEvent);
         }
         return false;

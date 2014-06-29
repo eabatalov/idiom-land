@@ -3,48 +3,48 @@ function IdiomProgressEntry(id) {
     this.title = "";
     this.shortMeaning = "";
     this.longExplanation = "";
-    this.status = IdiomsProgressEntry.statuses.ignored;
+    this.status = IdiomProgressEntry.statuses.ignored;
 }
 
-IdiomsProgressEntry.statuses = {
+IdiomProgressEntry.statuses = {
     ignored: 'IGNORED',
     guessed: 'GUESSED',
     failed: 'FAILED'
 };
 
-IdiomsProgressEntry.prototype.getId = function() {
+IdiomProgressEntry.prototype.getId = function() {
     return this.id;
 };
 
-IdiomsProgressEntry.prototype.getTitle = function() {
+IdiomProgressEntry.prototype.getTitle = function() {
     return this.title;
 };
 
-IdiomsProgressEntry.prototype.setTitle = function(title) {
+IdiomProgressEntry.prototype.setTitle = function(title) {
     this.title = title;
 };
 
-IdiomsProgressEntry.prototype.getMeaning = function() {
+IdiomProgressEntry.prototype.getMeaning = function() {
     return this.shortMeaning;
 };
 
-IdiomsProgressEntry.prototype.setMeaning = function(meaning) {
+IdiomProgressEntry.prototype.setMeaning = function(meaning) {
     this.shortMeaning = meaning;
 };
 
-IdiomsProgressEntry.prototype.getExplanation = function() {
+IdiomProgressEntry.prototype.getExplanation = function() {
     return this.longExplanation;
 };
 
-IdiomsProgressEntry.prototype.setExplanation = function(explanation) {
+IdiomProgressEntry.prototype.setExplanation = function(explanation) {
     this.longExplanation = explanation;
 };
 
-IdiomsProgressEntry.prototype.getStatus = function() {
+IdiomProgressEntry.prototype.getStatus = function() {
     return this.status;
 };
 
-IdiomsProgressEntry.prototype.setStatus = function(status) {
+IdiomProgressEntry.prototype.setStatus = function(status) {
     this.status = status;
 };
 
@@ -69,8 +69,8 @@ IdiomsProgressTracker.prototype.getAllIdioms = function() {
 
 IdiomsProgressTracker.prototype.getGuessedIdiomsCount = function() {
     var count = 0;
-    jQuery.each(this.idiomProgressEntries, function(ix. idiom) {
-        if (idiom.getStatus() === IdiomsProgressEntry.statuses.guessed)
+    jQuery.each(this.idiomProgressEntries, function(ix, idiom) {
+        if (idiom.getStatus() === IdiomProgressEntry.statuses.guessed)
         {
             ++count;
         }
@@ -79,15 +79,15 @@ IdiomsProgressTracker.prototype.getGuessedIdiomsCount = function() {
 };
 
 IdiomsProgressTracker.prototype.registerIdiom = function(id, title, meaning, explanation) {
-    var newIdiom = new IdiomsProgressEntry(id);
+    var newIdiom = new IdiomProgressEntry(id);
     newIdiom.setTitle(title);
     newIdiom.setMeaning(meaning);
     newIdiom.setExplanation(explanation);
     this.idiomProgressEntries.push(newIdiom);
 };
 
-IdiomsProgressEntry.prototype.idiomChangeStatus = function(id, newStatus) {
-    jQuery.each(this.idiomProgressEntries, function(ix. idiom) {
+IdiomProgressEntry.prototype.idiomChangeStatus = function(id, newStatus) {
+    jQuery.each(this.idiomProgressEntries, function(ix, idiom) {
         if (idiom.getId() !== id)
             return;
 
@@ -97,14 +97,14 @@ IdiomsProgressEntry.prototype.idiomChangeStatus = function(id, newStatus) {
 };
 
 IdiomsProgressTracker.prototype.idiomGuessed = function(id) {
-    this.idiomChangeStatus(id, IdiomsProgressEntry.statuses.guessed);
+    this.idiomChangeStatus(id, IdiomProgressEntry.statuses.guessed);
 
     if (this.events.idiomGuessed)
         this.events.idiomGuessed();
 };
 
 IdiomsProgressTracker.prototype.idiomFailed = function(id) {
-    this.idiomChangeStatus(id, IdiomsProgressEntry.statuses.failed);
+    this.idiomChangeStatus(id, IdiomProgressEntry.statuses.failed);
 };
 
 //===============================================================
