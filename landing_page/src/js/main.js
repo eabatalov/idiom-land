@@ -77,23 +77,36 @@ $(function() {
     /**
     * Preloader
     */
+    var websiteIsShown = false;
     var preloaderImages = $('.show-preloader');
     var preloaderImagesLoaded = 0;
+
     preloaderImages.each(function(imgIx, img) {
         var jqImg = $(img);
         jqImg.imagesLoaded(function() {
             ++preloaderImagesLoaded;
             if (preloaderImagesLoaded === preloaderImages.length) {
-                $('#status').delay(100).fadeOut('slow');
-                $('#preloader').delay(500).fadeOut('slow');
-                $('body').delay(500).css({'overflow':'visible'});
-                setTimeout(function(){$('#logo').addClass('animated fadeInDown')},500);
-                setTimeout(function(){$('#logo_header').addClass('animated fadeInDown')},600);
-                setTimeout(function(){$('#slogan').addClass('animated fadeInDown')},700);
-                setTimeout(function(){$('#home_image').addClass('animated fadeInUp')},900);
+                showWebsite();
             }
         });
     });
+
+    /* 7 seconds fallback if some of the images couldn't be loaded */
+    setTimeout(showWebsite, 7000);
+
+    function showWebsite() {
+        if (websiteIsShown)
+            return;
+
+        websiteIsShown = true;
+        $('#status').delay(100).fadeOut('slow');
+        $('#preloader').delay(500).fadeOut('slow');
+        $('body').delay(500).css({'overflow':'visible'});
+        setTimeout(function(){$('#logo').addClass('animated fadeInDown')},500);
+        setTimeout(function(){$('#logo_header').addClass('animated fadeInDown')},600);
+        setTimeout(function(){$('#slogan').addClass('animated fadeInDown')},700);
+        setTimeout(function(){$('#home_image').addClass('animated fadeInUp')},900);
+    }
 });
 
 
