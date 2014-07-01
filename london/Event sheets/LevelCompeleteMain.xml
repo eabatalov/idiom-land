@@ -5,15 +5,11 @@
     <events>
         <include>UIStage</include>
         <include>SCMLSpriteBindings</include>
-        <event-block collapsed="1" sid="6071663212213">
+        <event-block sid="6071663212213">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7380802923572911" type="System" />
             </conditions>
             <actions>
-                <action disabled="1" id="-28" name="Set canvas size" sid="2571247644791632" type="System">
-                    <param id="0" name="Width">400</param>
-                    <param id="1" name="Height">300</param>
-                </action>
                 <action id="0" name="Call function" sid="7973502782543051" type="Function">
                     <param id="0" name="Name">&quot;HidePlayerUI&quot;</param>
                     <param id="1" name="Parameter {n}">Player.UID</param>
@@ -27,17 +23,113 @@
                 </action>
             </actions>
             <sub-events>
+                <event-group description="" sid="615611637592885" title="Results table">
+                    <sub-events>
+                        <event-block sid="6384195424070088">
+                            <conditions>
+                                <condition id="0" name="For each idiom" sid="9460230890113758" type="IdiomProgressTracker" />
+                                <condition id="-33" name="Pick by comparison" sid="8277725355818571" type="System">
+                                    <param id="0" name="Object">IdiomSuccessIndicator</param>
+                                    <param id="1" name="Expression">IdiomSuccessIndicator.Index</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">IdiomProgressTracker.getCurrentIdiomIndex</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="6176657725019744" type="System">
+                                    <param id="0" name="Object">IdiomTitleText</param>
+                                    <param id="1" name="Expression">IdiomTitleText.Index</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">IdiomProgressTracker.getCurrentIdiomIndex</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="1706345831938651" type="System">
+                                    <param id="0" name="Object">IdiomMeaningText</param>
+                                    <param id="1" name="Expression">IdiomMeaningText.Index</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">IdiomProgressTracker.getCurrentIdiomIndex</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9970159896965153">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="7274766214426539" type="System">
+                                            <param id="0" name="First value">IdiomProgressTracker.getCurrentIdiomStatus</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;IGNORED&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="7419951024524106" type="IdiomTitleText">
+                                            <param id="0" name="Text">&quot;???&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="4019729843115121" type="IdiomMeaningText">
+                                            <param id="0" name="Text">&quot;???&quot;</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="5059779342376605" type="IdiomSuccessIndicator">
+                                            <param id="0" name="Animation">&quot;Ignore&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block collapsed="1" sid="2133368662253176">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3006678574299075" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="9375247108443315" type="IdiomTitleText">
+                                            <param id="0" name="Text">IdiomProgressTracker.getCurrentIdiomTitle</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="23459367076765" type="IdiomMeaningText">
+                                            <param id="0" name="Text">IdiomProgressTracker.getCurrentIdiomShortMeaning</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="2957805123090086">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="6557520376988531" type="System">
+                                                    <param id="0" name="First value">IdiomProgressTracker.getCurrentIdiomStatus</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;GUESSED&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="614239108240192" type="IdiomSuccessIndicator">
+                                                    <param id="0" name="Animation">&quot;Guess&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="3382297157081334">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="4200339766365081" type="System">
+                                                    <param id="0" name="First value">IdiomProgressTracker.getCurrentIdiomStatus</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;FAILED&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="6401941280253695" type="IdiomSuccessIndicator">
+                                                    <param id="0" name="Animation">&quot;Fail&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block sid="2750479217556608">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="4932118777377702" type="System">
-                            <param id="0" name="First value">IDIOMS_GUESSED</param>
+                            <param id="0" name="First value">IdiomProgressTracker.getLevelGuessedIdiomsCount</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">IDIOMS_ON_LEVEL_COUNT</param>
+                            <param id="2" name="Second value">IdiomProgressTracker.getLevelIdiomsCount</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="674872669148228" type="FoxySpeechText">
-                            <param id="0" name="Text">&quot;See you in the city center!&quot;</param>
+                            <param id="0" name="Text">&quot;You&apos;ve done it!&quot; &amp; newline &amp; &quot;Other levels will be avaliable in the full version&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" sid="1928677598963283" type="NextLevelBtn">
                             <param id="0" name="Visibility">1</param>
@@ -50,7 +142,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="1920505374085961" type="FoxySpeechText">
-                            <param id="0" name="Text">&quot;Hey! I need to guess all the &quot; &amp; IDIOMS_ON_LEVEL_COUNT &amp; &quot; idioms to get to the next level&quot;</param>
+                            <param id="0" name="Text">&quot;Hey! I need to guess all the &quot; &amp; IdiomProgressTracker.getLevelIdiomsCount &amp; &quot; idioms to get to the next level&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" sid="883368084643163" type="ReplayBtn">
                             <param id="0" name="Visibility">1</param>
@@ -84,7 +176,7 @@
                 <action id="9" name="Reload" sid="872785858509007" type="Browser" />
             </actions>
         </event-block>
-        <event-group description="" sid="3534684667534494" title="Scroll">
+        <event-group collapsed="1" description="" sid="3534684667534494" title="Scroll">
             <sub-events>
                 <variable constant="1" name="SCROLL_SPEED" sid="2062003018966379" static="0" type="number">3</variable>
                 <variable constant="0" name="TOUCH_START_Y" sid="3389368401231197" static="1" type="number">0</variable>

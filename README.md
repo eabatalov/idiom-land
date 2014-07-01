@@ -1,5 +1,6 @@
 idiom-land
 ==========
 
-# Create new Construct2 project /foxy_quest/
-# Create animation characters of quest /foxy_quest/Sources/characters/animation/
+To make plugins avaliable in Construct2:
+
+mklink /D idiom_progress_tracker IDIOMLAND_REPO_DIR\plugins\idiom_progress_tracker

@@ -86,7 +86,7 @@ IdiomsProgressTracker.prototype.registerIdiom = function(id, title, meaning, exp
     this.idiomProgressEntries.push(newIdiom);
 };
 
-IdiomProgressEntry.prototype.idiomChangeStatus = function(id, newStatus) {
+IdiomsProgressTracker.prototype.idiomChangeStatus = function(id, newStatus) {
     jQuery.each(this.idiomProgressEntries, function(ix, idiom) {
         if (idiom.getId() !== id)
             return;
@@ -115,11 +115,12 @@ var IdiomsProgressTrackerInstance = null;
  *  id : String,
  *  title : String,
  *  meaning: String,
- *  explanation: String
+ *  explanation: String (optional)
  * }
  */
 function idiomRegister(args) {
-    IdiomsProgressTrackerInstance.registerIdiom(args.id, args.title, args.meaning, args.explanation);
+    var explanation = args.explanation || "";
+    IdiomsProgressTrackerInstance.registerIdiom(args.id, args.title, args.meaning, explanation);
 }
 
 /*

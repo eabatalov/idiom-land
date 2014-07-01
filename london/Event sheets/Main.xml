@@ -7,7 +7,7 @@
         <include>NPCAnimation</include>
         <include>Quest</include>
         <include>Stages</include>
-        <include>GameConstants</include>
+        <include>LevelConstants</include>
         <include>Debug</include>
         <include>IdiomLand</include>
         <event-block sid="3704540223976062">
@@ -25,10 +25,11 @@
                 </action>
                 <action id="0" name="Call function" sid="8930605218157595" type="Function">
                     <param id="0" name="Name">&quot;StartGame&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;story_script.js&quot;</param>
+                    <param id="1" name="Parameter {n}">LEVEL_SCRIPT_FILE</param>
                 </action>
             </actions>
         </event-block>
+        <comment>Smooth camera&#x0D;&#x0A;Disable as we haven&apos;t made it work without bugs yet.</comment>
         <event-block sid="5431196656068474">
             <conditions>
                 <condition id="0" name="On function" sid="6875055154176057" type="Function">
@@ -67,7 +68,6 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Smooth camera&#x0D;&#x0A;Disable as we haven&apos;t made it work without bugs yet.</comment>
         <event-block sid="1129006647175923">
             <conditions>
                 <condition id="-1" name="Every tick" sid="1149080068650859" type="System" />

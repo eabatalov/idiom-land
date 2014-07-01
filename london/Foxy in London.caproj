@@ -4191,7 +4191,7 @@
                 <plugin id="IdiomProgressTrackingPlugin" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="LevelComplete">
+        <object-folder expanded="1" name="LevelComplete">
             <object-type name="Foxy" sid="4330101678906835">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -4235,8 +4235,11 @@
             <object-type name="LevelResultsText" sid="3025409012502349">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="IdiomText" sid="8545187802478282">
+            <object-type name="IdiomTitleText" sid="8545187802478282">
                 <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="Index" sid="4775299070438301" type="number" />
+                </instance-variables>
             </object-type>
             <object-type name="IdiomTableLine" sid="1319737610113391">
                 <plugin id="Sprite" />
@@ -4246,8 +4249,11 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="IdiomMeaning" sid="3567831786456168">
+            <object-type name="IdiomMeaningText" sid="3567831786456168">
                 <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="Index" sid="8692695741756436" type="number" />
+                </instance-variables>
             </object-type>
             <object-type name="ReplayBtn" sid="4332853495816837">
                 <plugin id="Sprite" />
@@ -4275,11 +4281,17 @@
             </object-type>
             <object-type name="IdiomSuccessIndicator" sid="9953672135447337">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Index" sid="3233607771119763" type="number" />
+                </instance-variables>
                 <animation-folder expanded="1">
-                    <animation framecount="1" loop="0" name="Success" pingpong="0" repeatcount="1" repeatto="0" sid="8617214023878586" speed="5">
+                    <animation framecount="1" loop="0" name="Guess" pingpong="0" repeatcount="1" repeatto="0" sid="8617214023878586" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                     <animation framecount="1" loop="0" name="Fail" pingpong="0" repeatcount="1" repeatto="0" sid="3140631132054894" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Ignore" pingpong="0" repeatcount="1" repeatto="0" sid="1710418827736003" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -4743,7 +4755,7 @@
         <event-folder expanded="1" name="LevelComplete">
             <event-sheet>LevelCompeleteMain.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="IdiomLand">
+        <event-folder expanded="1" name="IdiomLand">
             <event-sheet>IdiomCounter.xml</event-sheet>
             <event-sheet>IdiomDialogCompletion.xml</event-sheet>
             <event-sheet>IdiomLand.xml</event-sheet>
@@ -4753,7 +4765,7 @@
         <event-sheet>SCMLSpriteBindings.xml</event-sheet>
         <event-sheet>Main.xml</event-sheet>
         <event-sheet>NPCAnimation.xml</event-sheet>
-        <event-sheet>GameConstants.xml</event-sheet>
+        <event-sheet>LevelConstants.xml</event-sheet>
         <event-sheet>Debug.xml</event-sheet>
         <event-sheet>Stages.xml</event-sheet>
     </event-folder>
@@ -4772,7 +4784,7 @@
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="0">
+    <files-folder expanded="1">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
@@ -4791,6 +4803,6 @@
             <file name="captain.scml" />
             <file name="captain.scon" />
         </file-folder>
-        <file name="story_script.js" />
+        <file name="demo_script.js" />
     </files-folder>
 </c2project>

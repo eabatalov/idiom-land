@@ -55,8 +55,9 @@
 //				display_str,		// as appears in event sheet - use {0}, {1} for parameters and also <b></b>, <i></i>
 //				description,		// appears in event wizard dialog when selected
 //				script_name);		// corresponding runtime function name
-				
-AddCondition(0, cf_looping, "For each idiom", "General", "For each idiom", "forEachIdiom");
+
+AddCondition(0, cf_looping, "For each idiom", "General", "For each idiom",
+    "For each idiom", "forEachIdiom");
 AddCondition(1, cf_trigger, "Guessed idioms changed", "General", "Guessed idioms changed",
     "Guessed idioms changed", "guessedIdiomsChanged");
 
@@ -85,6 +86,8 @@ AddCondition(1, cf_trigger, "Guessed idioms changed", "General", "Guessed idioms
 //				 exp_name,		// the expression name after the dot, e.g. "foo" for "myobject.foo" - also the runtime function name
 //				 description);	// description in expressions panel
 
+AddExpression(0, ef_return_number, "Current idiom index", "Getters", "getCurrentIdiomIndex",
+    "Get index of current idiom we iterate over");
 AddExpression(1, ef_return_string, "Current idiom title", "Getters", "getCurrentIdiomTitle",
 	"Get title of current idiom");
 AddExpression(2, ef_return_string, "Current idiom short meaning", "Getters", "getCurrentIdiomShortMeaning",

@@ -44,9 +44,9 @@ cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
 		// note the object is sealed after this call; ensure any properties you'll ever need are set on the object
 		this.idiomsProgressTracker = new IdiomsProgressTracker();
         this.idiomsProgressTracker.onIdiomGuessed(function() {
-            this.runtime.trigger(pluginProto.cnds.guessedIdiomsChanged);
+            this.runtime.trigger(pluginProto.cnds.guessedIdiomsChanged, this);
         }.bind(this));
-        this.currIdiomIx = 0;
+        this.curIdiomIx = 0;
 	};
 	
 	// called whenever an instance is destroyed
@@ -118,16 +118,23 @@ cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
 	function Cnds() {};
 
     instanceProto.doForEachIdiomTrigger = function(curEvent) {
-        this.runtime.pushCopySol(current_event.solModifiers);
-        current_event.retrigger();
-        this.runtime.popSol(current_event.solModifiers)
+    	/*
+    	 * Looks like this retrigger sequnce propagates current SOL
+    	 * to new retriggered event handler. This handler gets not all the objects
+    	 * but only current event SOL. We need to explicitly filter from all the objects
+    	 * in Construct 2 event handler.
+    	 */
+        this.runtime.pushCopySol(curEvent.solModifiers);
+        curEvent.retrigger();
+        this.runtime.popSol(curEvent.solModifiers)
     };
 
     Cnds.prototype.forEachIdiom = function() {
-        var currentEvent = this.runtime.getCurrentEventStack().current_event;
-        this.currIdiomIx = 0;
-        for (;currIdiomIx < this.idiomsProgressTracker.getAllIdioms().length; ++currIdiomIx) {
-            this.doForEachTrigger(currentEvent);
+        var curEvent = this.runtime.getCurrentEventStack().current_event;
+        this.curIdiomIx = 0;
+        for (;this.curIdiomIx < this.idiomsProgressTracker.getAllIdioms().length; ++this.curIdiomIx) {
+            console.log("Current idiom for: ", this.curIdiomIx);
+            this.doForEachIdiomTrigger(curEvent);
         }
         return false;
     };
@@ -148,31 +155,39 @@ cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
 	// Expressions
 	function Exps() {};
 	//this is instance in expressions
+
+	Exps.prototype.getCurrentIdiomIndex = function(ret) {
+		ret.set_int(
+            this.curIdiomIx
+        );
+	};
+
 	Exps.prototype.getCurrentIdiomTitle = function(ret)
 	{
+        console.log("Current idiom get: ", this.curIdiomIx);
 		ret.set_string(
-            this.idiomsProgressTracker.getAllIdioms()[currIdiomIx].getTitle()
+            this.idiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getTitle()
         );
 	};
 
 	Exps.prototype.getCurrentIdiomShortMeaning = function(ret)
 	{
 		ret.set_string(
-            this.idiomsProgressTracker.getAllIdioms()[currIdiomIx].getMeaning()
+            this.idiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getMeaning()
         );
 	};
 
 	Exps.prototype.getCurrentIdiomLongExplanation = function(ret)
 	{
 		ret.set_string(
-            this.idiomsProgressTracker.getAllIdioms()[currIdiomIx].getExplanation()
+            this.idiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getExplanation()
         );
 	};
 
 	Exps.prototype.getCurrentIdiomStatus = function(ret)
 	{
 		ret.set_string(
-            this.idiomsProgressTracker.getAllIdioms()[currIdiomIx].getStatus()
+            this.idiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getStatus()
         );
 	};
 
