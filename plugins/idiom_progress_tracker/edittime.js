@@ -94,6 +94,8 @@ AddExpression(2, ef_return_string, "Current idiom short meaning", "Getters", "ge
 	"Get short meaning of current idiom.");
 AddExpression(3, ef_return_string, "Current idiom long explanation", "Getters", "getCurrentIdiomLongExplanation",
 	"Get long explanation of current idiom:");
+AddExpression(8, ef_return_string, "Current idiom hint to find", "Getters", "getCurrentIdiomHintToFind",
+	"Get hint to find current idiom:");
 AddExpression(4, ef_return_string, "Current idiom status", "Getters", "getCurrentIdiomStatus",
 	"Get current idiom status: 'IGNORED' | 'GUESSED' | 'FAILED'");
 
@@ -101,6 +103,8 @@ AddExpression(5, ef_return_number, "Level overall idioms count", "Getters", "get
     "Get overall number of idioms on the current level");
 AddExpression(6, ef_return_number, "Level gueesed idioms count", "Getters", "getLevelGuessedIdiomsCount",
     "Get number of guessed idioms on the current level");
+AddExpression(7, ef_return_number, "Level found idioms count", "Getters", "getLevelFoundIdiomsCount",
+    "Get number of found idioms on the current level");
 
 ////////////////////////////////////////
 ACESDone();

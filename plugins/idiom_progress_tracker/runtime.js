@@ -184,6 +184,13 @@ cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
         );
 	};
 
+	Exps.prototype.getCurrentIdiomHintToFind = function(ret)
+	{
+		ret.set_string(
+            this.idiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getHint()
+        );
+	};
+
 	Exps.prototype.getCurrentIdiomStatus = function(ret)
 	{
 		ret.set_string(
@@ -200,6 +207,12 @@ cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
 	Exps.prototype.getLevelGuessedIdiomsCount = function(ret) {
 		ret.set_int(
             this.idiomsProgressTracker.getGuessedIdiomsCount()
+        );
+	};
+
+	Exps.prototype.getLevelFoundIdiomsCount = function(ret) {
+		ret.set_int(
+            this.idiomsProgressTracker.getFoundIdiomsCount()
         );
 	};
 

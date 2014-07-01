@@ -21,6 +21,12 @@
                 <action behavior="ScrollTo" id="1" name="Set enabled" sid="5642327861027111" type="PlayerPlatform">
                     <param id="0" name="State">0</param>
                 </action>
+                <action id="0" name="Set text" sid="9679877642509217" type="IdiomsFoundText">
+                    <param id="0" name="Text">&quot;Idioms found: &quot; &amp; IdiomProgressTracker.getLevelFoundIdiomsCount &amp; &quot;/&quot; &amp; IdiomProgressTracker.getLevelIdiomsCount</param>
+                </action>
+                <action id="0" name="Set text" sid="7225573258372632" type="IdiomsGuessedText">
+                    <param id="0" name="Text">&quot;Idioms guessed: &quot; &amp; IdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; IdiomProgressTracker.getLevelIdiomsCount</param>
+                </action>
             </actions>
             <sub-events>
                 <event-group description="" sid="615611637592885" title="Results table">
@@ -62,7 +68,7 @@
                                             <param id="0" name="Text">&quot;???&quot;</param>
                                         </action>
                                         <action id="0" name="Set text" sid="4019729843115121" type="IdiomMeaningText">
-                                            <param id="0" name="Text">&quot;???&quot;</param>
+                                            <param id="0" name="Text">IdiomProgressTracker.getCurrentIdiomHintToFind</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="5059779342376605" type="IdiomSuccessIndicator">
                                             <param id="0" name="Animation">&quot;Ignore&quot;</param>
