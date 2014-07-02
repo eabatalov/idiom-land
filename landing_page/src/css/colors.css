@@ -9,10 +9,6 @@ p {
     color: black;
 }
 
-#footer {
-    background-color: #7C8BA9;
-}
-
 .cta1 {
     border-color: white;
 }
@@ -81,6 +77,105 @@ p {
     background-color:#81CCA9;
 }
 
+#home {
+    background-color: rgb(130, 200, 170);
+    -webkit-animation: change-color-home 40s infinite;
+    -moz-animation: change-color-home 40s infinite;
+    -o-animation: change-color-home 40s infinite;
+    animation: change-color 40s infinite;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+@-webkit-keyframes change-color-home {
+    0% {
+        background-color: rgb(130, 200, 170);
+    }
+    20% {
+        background-color: rgb(130, 200, 170);
+    }
+    40% {
+        background-color: rgb(130, 200, 200);
+    }
+    60% {
+        background-color: rgb(130, 200, 170);
+    }
+    80% {
+        background-color: rgb(130, 200, 120);
+    }
+    100% {
+        background-color: rgb(130, 200, 170);
+    }
+}
+@-moz-keyframes change-color-home {
+    0% {
+        background-color: rgb(130, 200, 170);
+    }
+    20% {
+        background-color: rgb(130, 200, 170);
+    }
+    40% {
+        background-color: rgb(130, 200, 200);
+    }
+    60% {
+        background-color: rgb(130, 200, 170);
+    }
+    80% {
+        background-color: rgb(130, 200, 120);
+    }
+    100% {
+        background-color: rgb(130, 200, 170);
+    }
+}
+@-o-keyframes change-color-home {
+    0% {
+        background-color: rgb(130, 200, 170);
+    }
+    20% {
+        background-color: rgb(130, 200, 170);
+    }
+    40% {
+        background-color: rgb(130, 200, 200);
+    }
+    60% {
+        background-color: rgb(130, 200, 170);
+    }
+    80% {
+        background-color: rgb(130, 200, 120);
+    }
+    100% {
+        background-color: rgb(130, 200, 170);
+    }
+}
+@keyframes change-color-home {
+    0% {
+        background-color: rgb(130, 200, 170);
+    }
+    20% {
+        background-color: rgb(130, 200, 170);
+    }
+    40% {
+        background-color: rgb(130, 200, 200);
+    }
+    60% {
+        background-color: rgb(130, 200, 170);
+    }
+    80% {
+        background-color: rgb(130, 200, 120);
+    }
+    100% {
+        background-color: rgb(130, 200, 170);
+    }
+}
+
+#features_3, .arrows_box_bg {
+    background-color: #FB8B7A;
+}
+
+#footer {
+    background-color: #7C8BA9;
+}
 h3 {
     color:black;
 }
@@ -109,10 +204,6 @@ h4 {
 
 .home_p {
     color: white;
-}
-
-#features_3, .arrows_box_bg {
-    background-color: #FB8B7A;
 }
 
 #features_3 p {
