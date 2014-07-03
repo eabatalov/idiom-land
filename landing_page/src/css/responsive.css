@@ -1,9 +1,9 @@
 @media (min-width: 1200px) {
     html {
-        font-size: 118.75%;
+        font-size: 120%;
     }
     #home_image {
-        top: 6rem;
+        top: 5rem;
     }
     #features_3_content_center .img-responsive {
         display: block;
@@ -28,16 +28,26 @@
     }
     #social_icons{
         text-align: center;
-
+    }
+    .share-button-facebook .button,
+    .share-button-twitter .button,
+    .share-button-gplus .button,
+    .share-button-vkontakte .button {
+        width: 52px;
+        height: 52px;
+        background-size: 52px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
     html {
-        font-size: 81.25%;
+        font-size: 100%;
     }
     #logo {
         margin-top: 2rem;
+    }
+    #home_image {
+        top: 5rem;
     }
     .icon-social{
         width: 3.4rem;
@@ -48,6 +58,22 @@
         text-align: center;
         margin-bottom: -3.6rem;
         margin-top: 3.2rem;
+    }
+    .icon-social{
+        position: inherit;
+        display: inline-table;
+        overflow: hidden;
+        zoom: 0.28;
+        -moz-transform:scale(0.28);
+        -moz-transform-origin: 0 0;
+    }
+    .share-button-facebook .button,
+    .share-button-twitter .button,
+    .share-button-gplus .button,
+    .share-button-vkontakte .button {
+        width: 43px;
+        height: 43px;
+        background-size: 43px;
     }
 
 }
@@ -107,7 +133,8 @@
     }
 
     #home_image {
-        top:17rem;
+        top: 10rem;
+        right: -2rem;
     }
 
     #blog_header {
@@ -127,16 +154,32 @@
         display: inline-table;
     }
     #social_icons_home {
-        text-align: center;
+        text-align: left;
         margin-bottom: -3.6rem;
         margin-top: 3.2rem;
+    }
+    .icon-social{
+        position: inherit;
+        display: inline-table;
+        overflow: hidden;
+        zoom: 0.3;
+        -moz-transform:scale(0.30);
+        -moz-transform-origin: 0 0;
+    }
+    .share-button-facebook .button,
+    .share-button-twitter .button,
+    .share-button-gplus .button,
+    .share-button-vkontakte .button {
+        width: 34px;
+        height: 34px;
+        background-size: 34px;
     }
 
 }
 
 @media (max-width: 480px) {
     html {
-        font-size: 62.5%;
+        font-size: 66%;
     }
     p {
         font-size: 1.5rem;
@@ -151,16 +194,17 @@
         text-align: center;
     }
     #home_image {
-        top: 38rem;
-        max-width: 135%;
-        left: -11rem;
+        top: 8rem;
+        max-width: 185%;
+        right: -2rem;
     }
     #slogan {
     text-align: center;
+    top:28rem;
     }
     #features_3_content_center .img-responsive {
-        max-width: 35.5rem;
-        left: -5rem;
+        max-width: 34.5rem;
+        left: -6rem;
         top: -5rem;
     }
     #social_icons_home {
@@ -174,10 +218,15 @@
     #newsletter_form {
         text-align: center;
         display: flex;
-        position: relative;
+        position: inherit;
     }
     .home_p{
         text-align: center;
+        top: 28rem;
+        position: inherit;
+    }
+    .subscribe-form{
+        float: inherit;
     }
     .feature_3_icon {
         margin-bottom: 1.6rem;
@@ -193,6 +242,12 @@
         position: inherit;
         display: inline-table;
     }
+    .share-container {
+        line-height: 27px;
+        position: inherit;
+        z-index: 20;
+        text-align: center;
+    }
     .share-button {
         padding: 0 10px 0 0;
     }
@@ -200,5 +255,30 @@
         width: 10%;
         height: 2.8rem;
         padding: 6px 10px;
+    }
+    .icon-social{
+        position: inherit;
+        display: inline-table;
+        overflow: hidden;
+    }
+    .share-button-facebook .button {
+        width: 28px;
+        height: 28px;
+        background-size: 28px;
+    }
+    .share-button-twitter .button {
+        width: 28px;
+        height: 28px;
+        background-size: 28px;
+    }
+    .share-button-gplus .button {
+        width: 28px;
+        height: 28px;
+        background-size: 28px;
+    }
+    .share-button-vkontakte .button {
+        width: 28px;
+        height: 28px;
+        background-size: 28px;
     }
 }
