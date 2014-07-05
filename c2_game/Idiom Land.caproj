@@ -174,7 +174,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="0" name="Levels">
+        <object-folder expanded="1" name="Levels">
             <object-folder expanded="0" name="1demo">
                 <object-folder expanded="0" name="Stages">
                     <object-folder expanded="0" name="Intro">
@@ -1599,7 +1599,7 @@
                     </object-folder>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="0" name="Common">
+            <object-folder expanded="1" name="Common">
                 <object-folder expanded="0" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
@@ -1639,7 +1639,7 @@
                         </object-type>
                     </object-folder>
                 </object-folder>
-                <object-folder expanded="0" name="VisualObjects">
+                <object-folder expanded="1" name="VisualObjects">
                     <object-folder expanded="0" name="B">
                         <object-folder expanded="0" name="Benches">
                             <object-type name="Benches" sid="4870667590189457">
@@ -1946,7 +1946,7 @@
                             </object-type>
                         </object-folder>
                     </object-folder>
-                    <object-folder expanded="0" name="F">
+                    <object-folder expanded="1" name="F">
                         <object-folder expanded="0" name="Fence">
                             <object-type name="Fence" sid="856090690368867">
                                 <plugin id="Sprite" />
@@ -2728,7 +2728,7 @@
                             </object-type>
                         </object-folder>
                     </object-folder>
-                    <object-folder expanded="1" name="M">
+                    <object-folder expanded="0" name="M">
                         <object-folder expanded="1" name="Markers">
                             <object-type name="MarkerJump" sid="4853427643974434">
                                 <plugin id="Sprite" />
@@ -4719,21 +4719,21 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="1">
+    <layout-folder expanded="0">
         <layout-folder expanded="0" name="Levels">
             <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
         </layout-folder>
-        <layout-folder expanded="1" name="Menus">
+        <layout-folder expanded="0" name="Menus">
             <layout-folder expanded="1" name="LevelResults">
                 <layout>LevelResults.xml</layout>
             </layout-folder>
         </layout-folder>
     </layout-folder>
-    <event-folder expanded="0">
-        <event-folder expanded="0" name="Levels">
-            <event-folder expanded="1" name="Common">
+    <event-folder expanded="1">
+        <event-folder expanded="1" name="Levels">
+            <event-folder expanded="0" name="Common">
                 <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>Quest.xml</event-sheet>
                     <event-sheet>Bootstrap.xml</event-sheet>
@@ -4744,7 +4744,7 @@
                     <event-sheet>PlayerAnimation.xml</event-sheet>
                     <event-sheet>PlayerInput.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="1" name="Controls">
+                <event-folder expanded="0" name="Controls">
                     <event-folder expanded="0" name="GameHelp">
                         <event-sheet>GameHelp.xml</event-sheet>
                     </event-folder>
@@ -4770,19 +4770,24 @@
                             <event-sheet>IdiomDialogCompletion.xml</event-sheet>
                         </event-folder>
                     </event-folder>
+                    <event-folder expanded="0" name="F">
+                        <event-folder expanded="1" name="Foxy">
+                            <event-sheet>FoxySimpleSCMLSpritesBinding.xml</event-sheet>
+                        </event-folder>
+                    </event-folder>
                 </event-folder>
                 <event-sheet>LevelDebug.xml</event-sheet>
                 <event-sheet>LevelCommon.xml</event-sheet>
             </event-folder>
             <event-folder expanded="1" name="1demo">
-                <event-folder expanded="0" name="Stages">
+                <event-folder expanded="1" name="Stages">
                     <event-folder expanded="0" name="BalloonSeller">
                         <event-sheet>BalloonSeller.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="0" name="Carousel">
                         <event-sheet>Carousel.xml</event-sheet>
                     </event-folder>
-                    <event-folder expanded="0" name="ExitBus">
+                    <event-folder expanded="1" name="ExitBus">
                         <event-sheet>ExitBus.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="0" name="Intro">
@@ -4797,8 +4802,8 @@
                     <event-sheet>1demoAllStages.xml</event-sheet>
                 </event-folder>
                 <event-sheet>1demoMain.xml</event-sheet>
-                <event-sheet>1demoNPCAnimation.xml</event-sheet>
-                <event-sheet>1demoSCMLBindings.xml</event-sheet>
+                <event-sheet>1demoNpcAnimationRunners.xml</event-sheet>
+                <event-sheet>1demoNpcScmlSpritesBindings.xml</event-sheet>
             </event-folder>
         </event-folder>
         <event-folder expanded="0" name="Menus">

@@ -5,37 +5,42 @@
     <events>
         <include>LevelCommon</include>
         <comment>Level specific logic</comment>
-        <include>1demoSCMLBindings</include>
-        <include>1demoNPCAnimation</include>
+        <include>1demoNpcScmlSpritesBindings</include>
+        <include>1demoNpcAnimationRunners</include>
         <include>1demoAllStages</include>
         <comment>Level specific logic for common visual objects</comment>
         <include>CabBullet</include>
         <include>ScooterBullet</include>
-        <event-block sid="3704540223976062">
-            <conditions>
-                <condition id="0" name="On function" sid="1002490218619657" type="Function">
-                    <param id="0" name="Name">&quot;InitGame&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="8930605218157595" type="Function">
-                    <param id="0" name="Name">&quot;StartGame&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;1demo_script.js&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5431196656068474">
-            <conditions>
-                <condition id="0" name="On function" sid="6875055154176057" type="Function">
-                    <param id="0" name="Name">&quot;GameStarted&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="9688480019624415" type="Function">
-                    <param id="0" name="Name">&quot;CarouselInit&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="460933006001851" title="Local var scope 1">
+            <sub-events>
+                <variable constant="1" name="LEVEL_QUEST_SCRIPT_FILE" sid="146390735041057" static="0" type="text">1demo_script.js</variable>
+                <variable constant="1" name="LEVEL_NPC_ANIMS_TO_INIT" sid="5379837504000799" static="0" type="number">3</variable>
+                <variable constant="1" name="LEVEL_INITIAL_STAGE" sid="4210704395276113" static="0" type="text">intro</variable>
+                <event-block sid="2994783783040874">
+                    <conditions>
+                        <condition id="-25" name="On loader layout complete" sid="9886935471380511" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8930605218157595" type="Function">
+                            <param id="0" name="Name">&quot;StartLevel&quot;</param>
+                            <param id="1" name="Parameter {n}">LEVEL_QUEST_SCRIPT_FILE{###}LEVEL_NPC_ANIMS_TO_INIT {###}LEVEL_INITIAL_STAGE</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5431196656068474">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6875055154176057" type="Function">
+                            <param id="0" name="Name">&quot;GameStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9688480019624415" type="Function">
+                            <param id="0" name="Name">&quot;CarouselInit&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

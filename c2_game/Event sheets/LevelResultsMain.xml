@@ -4,7 +4,7 @@
     <name>LevelResultsMain</name>
     <events>
         <include>UIStage</include>
-        <include>1demoSCMLBindings</include>
+        <include>1demoNpcScmlSpritesBindings</include>
         <event-block sid="6071663212213">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7380802923572911" type="System" />
@@ -29,7 +29,7 @@
                 </action>
             </actions>
             <sub-events>
-                <event-group description="" sid="615611637592885" title="Results table">
+                <event-group collapsed="1" description="" sid="615611637592885" title="Results table">
                     <sub-events>
                         <event-block sid="6384195424070088">
                             <conditions>
@@ -179,10 +179,12 @@
                 <condition id="-9" name="Is visible" sid="3982297993895291" type="ReplayBtn" />
             </conditions>
             <actions>
-                <action id="9" name="Reload" sid="872785858509007" type="Browser" />
+                <action id="-2" name="Go to layout" sid="6129401738881049" type="System">
+                    <param id="0" name="Layout">1demo</param>
+                </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="3534684667534494" title="Scroll">
+        <event-group description="" sid="3534684667534494" title="Scroll">
             <sub-events>
                 <variable constant="1" name="SCROLL_SPEED" sid="2062003018966379" static="0" type="number">3</variable>
                 <variable constant="0" name="TOUCH_START_Y" sid="3389368401231197" static="1" type="number">0</variable>
@@ -233,6 +235,30 @@
                     <actions>
                         <action id="-6" name="Scroll to Y" sid="4845689816073376" type="System">
                             <param id="0" name="Y">scrolly - 50 * SCROLL_SPEED</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4463695137099466">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="2595460383765392" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Scroll to Y" sid="4090709779871711" type="System">
+                            <param id="0" name="Y">scrolly + 5 * SCROLL_SPEED</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7060850029608232">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="4099960994321835" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Scroll to Y" sid="4867388939492282" type="System">
+                            <param id="0" name="Y">scrolly - 5 * SCROLL_SPEED</param>
                         </action>
                     </actions>
                 </event-block>
