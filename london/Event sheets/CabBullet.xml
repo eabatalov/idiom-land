@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CabBullet</name>
+    <events>
+        <event-block sid="7400822955852578">
+            <conditions>
+                <condition id="-18" name="On created" sid="4083402527861292" type="CabMoveBack" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="8766940800465198" type="CabMoveBack">
+                    <param id="0" name="X">random(0, LayoutWidth)</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="1456712976871176" type="CabMoveBack">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8435439126661103">
+            <conditions>
+                <condition id="-18" name="On created" sid="5811557297085756" type="CabMoveFw" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="762217270878443" type="CabMoveFw">
+                    <param id="0" name="X">random(0, LayoutWidth)</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="4731522062748086" type="CabMoveFw">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

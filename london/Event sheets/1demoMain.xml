@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>1demoMain</name>
+    <events>
+        <include>LevelCommon</include>
+        <comment>Level specific logic</comment>
+        <include>1demoSCMLBindings</include>
+        <include>1demoNPCAnimation</include>
+        <include>1demoAllStages</include>
+        <comment>Level specific logic for common visual objects</comment>
+        <include>CabBullet</include>
+        <include>ScooterBullet</include>
+        <event-block sid="3704540223976062">
+            <conditions>
+                <condition id="0" name="On function" sid="1002490218619657" type="Function">
+                    <param id="0" name="Name">&quot;InitGame&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="8930605218157595" type="Function">
+                    <param id="0" name="Name">&quot;StartGame&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;1demo_script.js&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5431196656068474">
+            <conditions>
+                <condition id="0" name="On function" sid="6875055154176057" type="Function">
+                    <param id="0" name="Name">&quot;GameStarted&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="9688480019624415" type="Function">
+                    <param id="0" name="Name">&quot;CarouselInit&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
