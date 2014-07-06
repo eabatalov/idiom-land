@@ -142,13 +142,13 @@
                             <param id="0" name="Instance variable">CurrentStage</param>
                             <param id="1" name="Value">LEVEL_FIRST_STAGE</param>
                         </action>
-                        <action id="0" name="Set current stage" sid="2931653126024059" type="QuestRuntimeInterface">
+                        <action id="4" name="Set current stage" sid="2931653126024059" type="QuestLevelRuntime">
                             <param id="0" name="Value">LEVEL_FIRST_STAGE</param>
                         </action>
-                        <action id="2" name="Setup quest objects." sid="7533819724177504" type="QuestEngine">
+                        <action id="2" name="Setup quest objects." sid="7533819724177504" type="QuestLevelRuntime">
                             <param id="0" name="NPC object type">NPC</param>
                         </action>
-                        <action id="3" name="Setup quest script URL." sid="3974431105479061" type="QuestEngine">
+                        <action id="3" name="Setup quest script URL." sid="3974431105479061" type="QuestLevelRuntime">
                             <param id="0" name="Quest script file URL">LEVEL_QUEST_SCRIPT_FILE_NAME</param>
                         </action>
                     </actions>
@@ -156,7 +156,7 @@
                 <comment>Third stage of initialization: final game start preparation after quest engine initialization.</comment>
                 <event-block sid="3608536962210634">
                     <conditions>
-                        <condition id="0" name="Quest script loaded" sid="9984593045440814" type="QuestEngine" />
+                        <condition id="0" name="Quest script loaded" sid="9984593045440814" type="QuestLevelRuntime" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="2717024278170931" type="Function">

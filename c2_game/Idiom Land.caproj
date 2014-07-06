@@ -15,8 +15,7 @@
         <plugin author="Eugene/Idiomland" id="IdiomProgressTrackingPlugin" version="0.100000001">IdiomProgressTracker</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Eugene/Learzing" id="QuestRuntimeInterfacePlugin" version="0.100000001">Quest Runtime Interface</plugin>
-        <plugin author="Eugene/learzing" id="QuestRuntimePlugin" version="0.100000001">Quest Runtime</plugin>
+        <plugin author="Eugene/learzing" id="QuestLevelRuntimePlugin" version="0.100000001">Quest Level Runtime</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -174,7 +173,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="Levels">
+        <object-folder expanded="0" name="Levels">
             <object-folder expanded="0" name="1demo">
                 <object-folder expanded="0" name="Stages">
                     <object-folder expanded="0" name="Intro">
@@ -1599,7 +1598,7 @@
                     </object-folder>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="1" name="Common">
+            <object-folder expanded="0" name="Common">
                 <object-folder expanded="0" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
@@ -1639,7 +1638,7 @@
                         </object-type>
                     </object-folder>
                 </object-folder>
-                <object-folder expanded="1" name="VisualObjects">
+                <object-folder expanded="0" name="VisualObjects">
                     <object-folder expanded="0" name="B">
                         <object-folder expanded="0" name="Benches">
                             <object-type name="Benches" sid="4870667590189457">
@@ -1946,7 +1945,7 @@
                             </object-type>
                         </object-folder>
                     </object-folder>
-                    <object-folder expanded="1" name="F">
+                    <object-folder expanded="0" name="F">
                         <object-folder expanded="0" name="Fence">
                             <object-type name="Fence" sid="856090690368867">
                                 <plugin id="Sprite" />
@@ -4506,11 +4505,8 @@
                             </animation-folder>
                         </object-type>
                     </object-folder>
-                    <object-type name="QuestEngine" sid="6155412818206068">
-                        <plugin id="QuestRuntimePlugin" />
-                    </object-type>
-                    <object-type global="1" name="QuestRuntimeInterface" sid="4980129753739623">
-                        <plugin id="QuestRuntimeInterfacePlugin" />
+                    <object-type name="QuestLevelRuntime" sid="6155412818206068">
+                        <plugin id="QuestLevelRuntimePlugin" />
                     </object-type>
                     <object-type name="StageChanger" sid="7618603551053084">
                         <plugin id="Sprite" />
@@ -4719,13 +4715,13 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout-folder expanded="0" name="Levels">
             <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
         </layout-folder>
-        <layout-folder expanded="0" name="Menus">
+        <layout-folder expanded="1" name="Menus">
             <layout-folder expanded="1" name="LevelResults">
                 <layout>LevelResults.xml</layout>
             </layout-folder>
@@ -4771,7 +4767,7 @@
                         </event-folder>
                     </event-folder>
                     <event-folder expanded="0" name="F">
-                        <event-folder expanded="1" name="Foxy">
+                        <event-folder expanded="0" name="Foxy">
                             <event-sheet>FoxySimpleSCMLSpritesBinding.xml</event-sheet>
                         </event-folder>
                     </event-folder>
@@ -4780,14 +4776,14 @@
                 <event-sheet>LevelCommon.xml</event-sheet>
             </event-folder>
             <event-folder expanded="1" name="1demo">
-                <event-folder expanded="1" name="Stages">
+                <event-folder expanded="0" name="Stages">
                     <event-folder expanded="0" name="BalloonSeller">
                         <event-sheet>BalloonSeller.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="0" name="Carousel">
                         <event-sheet>Carousel.xml</event-sheet>
                     </event-folder>
-                    <event-folder expanded="1" name="ExitBus">
+                    <event-folder expanded="0" name="ExitBus">
                         <event-sheet>ExitBus.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="0" name="Intro">
@@ -4806,8 +4802,8 @@
                 <event-sheet>1demoNpcScmlSpritesBindings.xml</event-sheet>
             </event-folder>
         </event-folder>
-        <event-folder expanded="0" name="Menus">
-            <event-folder expanded="0" name="LevelResults">
+        <event-folder expanded="1" name="Menus">
+            <event-folder expanded="1" name="LevelResults">
                 <event-sheet>LevelResultsMain.xml</event-sheet>
             </event-folder>
         </event-folder>
@@ -4820,7 +4816,7 @@
             </properties>
         </global-instance>
         <global-instance type="Function" uid="14" />
-        <global-instance type="QuestEngine" uid="15" />
+        <global-instance type="QuestLevelRuntime" uid="15" />
         <global-instance type="Browser" uid="43" />
         <global-instance type="Mouse" uid="307" />
         <global-instance type="IdiomProgressTracker" uid="308" />
