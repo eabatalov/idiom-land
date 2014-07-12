@@ -13,9 +13,13 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Eugene/Idiomland" id="IdiomProgressTrackingPlugin" version="0.100000001">IdiomProgressTracker</plugin>
+        <plugin author="Eugene/Learzing" id="IdiomlandGamePlugin" version="0.100000001">Idiomland game</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Eugene/Learzing" id="QuestGamePlugin" version="0.100000001">Quest game</plugin>
+        <plugin author="Eugene/Learzing" id="QuestInAppPurchasePlugin" version="0.100000001">Quest in-app purchase</plugin>
         <plugin author="Eugene/learzing" id="QuestLevelRuntimePlugin" version="0.100000001">Quest Level Runtime</plugin>
+        <plugin author="Eugene/Learzing" id="QuestPersistentStoragePlugin" version="0.100000001">Quest persistent storage</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -58,7 +62,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-folder expanded="0" name="Menus">
             <object-folder expanded="0" name="LevelResults">
                 <object-type name="Foxy" sid="4330101678906835">
@@ -173,7 +177,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="0" name="Levels">
+        <object-folder expanded="1" name="Levels">
             <object-folder expanded="0" name="1demo">
                 <object-folder expanded="0" name="Stages">
                     <object-folder expanded="0" name="Intro">
@@ -1598,7 +1602,7 @@
                     </object-folder>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="0" name="Common">
+            <object-folder expanded="1" name="Common">
                 <object-folder expanded="0" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
@@ -4505,9 +4509,20 @@
                             </animation-folder>
                         </object-type>
                     </object-folder>
-                    <object-type name="QuestLevelRuntime" sid="6155412818206068">
-                        <plugin id="QuestLevelRuntimePlugin" />
-                    </object-type>
+                    <object-folder expanded="0" name="Plugins">
+                        <object-type name="QuestGame" sid="6363285105821507">
+                            <plugin id="QuestGamePlugin" />
+                        </object-type>
+                        <object-type name="QuestInappPurchase" sid="9665546101009722">
+                            <plugin id="QuestInAppPurchasePlugin" />
+                        </object-type>
+                        <object-type name="QuestLevelRuntime" sid="6155412818206068">
+                            <plugin id="QuestLevelRuntimePlugin" />
+                        </object-type>
+                        <object-type name="QuestPersistentStorage" sid="7495214766064503">
+                            <plugin id="QuestPersistentStoragePlugin" />
+                        </object-type>
+                    </object-folder>
                     <object-type name="StageChanger" sid="7618603551053084">
                         <plugin id="Sprite" />
                         <instance-variables>
@@ -4655,6 +4670,9 @@
                 <object-type name="IdiomProgressTracker" sid="504992448476046">
                     <plugin id="IdiomProgressTrackingPlugin" />
                 </object-type>
+                <object-type name="IdiomlandGame" sid="1603271377434259">
+                    <plugin id="IdiomlandGamePlugin" />
+                </object-type>
             </object-folder>
         </object-folder>
     </object-folder>
@@ -4727,9 +4745,9 @@
             </layout-folder>
         </layout-folder>
     </layout-folder>
-    <event-folder expanded="1">
+    <event-folder expanded="0">
         <event-folder expanded="1" name="Levels">
-            <event-folder expanded="0" name="Common">
+            <event-folder expanded="1" name="Common">
                 <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>Quest.xml</event-sheet>
                     <event-sheet>Bootstrap.xml</event-sheet>
@@ -4775,7 +4793,7 @@
                 <event-sheet>LevelDebug.xml</event-sheet>
                 <event-sheet>LevelCommon.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="1" name="1demo">
+            <event-folder expanded="0" name="1demo">
                 <event-folder expanded="0" name="Stages">
                     <event-folder expanded="0" name="BalloonSeller">
                         <event-sheet>BalloonSeller.xml</event-sheet>
@@ -4820,6 +4838,10 @@
         <global-instance type="Browser" uid="43" />
         <global-instance type="Mouse" uid="307" />
         <global-instance type="IdiomProgressTracker" uid="308" />
+        <global-instance type="QuestGame" uid="16" />
+        <global-instance type="QuestInappPurchase" uid="301" />
+        <global-instance type="QuestPersistentStorage" uid="309" />
+        <global-instance type="IdiomlandGame" uid="310" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
@@ -4832,8 +4854,8 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
-        <file-folder expanded="1" name="Levels">
-            <file-folder expanded="1" name="1demo">
+        <file-folder expanded="0" name="Levels">
+            <file-folder expanded="0" name="1demo">
                 <file-folder expanded="0" name="Stages">
                     <file-folder expanded="0" name="Carousel">
                         <file name="captain.scml" />
@@ -4848,9 +4870,9 @@
                         <file name="veider.scon" />
                     </file-folder>
                 </file-folder>
-                <file name="1demo_script.js" />
+                <file name="1demo_script.json" />
             </file-folder>
-            <file-folder expanded="1" name="Common">
+            <file-folder expanded="0" name="Common">
                 <file-folder expanded="1" name="VisualObjects">
                     <file-folder expanded="1" name="F">
                         <file-folder expanded="1" name="Foxy">

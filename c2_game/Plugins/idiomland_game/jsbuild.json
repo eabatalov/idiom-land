@@ -1,0 +1,22 @@
+{
+    "module" : {
+        "name" : "c2-plugin-idiomland-game",
+        "description" : "",
+        "outDir" : ".",
+        "outFile" : "idiomland_game",
+        "dependencies" : {
+            "base" : {
+                "lib-util" : [],
+                "lib-quest-game" : [],
+                "c2-plugin-idiom-progress-tracker" : [],
+                "c2-plugin-quest-level-runtime" : [],
+                "c2-plugin-quest-persistent-storage" : [],
+                "c2-plugin-quest-inapp-purchase" : [],
+                "c2-plugin-quest-game" : []
+             }
+        },
+        "src" : {
+            "web" : ["src/game_web.js"]
+        }
+    }
+}

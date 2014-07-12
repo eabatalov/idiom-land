@@ -1,6 +1,4410 @@
-function getQuestScript() {
-var scriptSavedJSON = JSON.parse(
-"{\n\t\"ver\": 1,\n\t\"name\": \"1demo\",\n\t\"stages\": [\n\t\t{\n\t\t\t\"ver\": 1,\n\t\t\t\"stageNodeId\": 8,\n\t\t\t\"nodes\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 8,\n\t\t\t\t\t\"type\": 9,\n\t\t\t\t\t\"label\": \"Airport taxi\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t0\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"airport_taxi\",\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\",\n\t\t\t\t\t\t\t\"driver1\",\n\t\t\t\t\t\t\t\"driver2\",\n\t\t\t\t\t\t\t\"driver3\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"objPool\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 9,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"label\": \"Main storyline\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t0,\n\t\t\t\t\t\t1442\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1440,\n\t\t\t\t\t\t1459,\n\t\t\t\t\t\t1460,\n\t\t\t\t\t\t1719\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\",\n\t\t\t\t\t\t\t\"driver1\",\n\t\t\t\t\t\t\t\"driver2\",\n\t\t\t\t\t\t\t\"driver3\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 25,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Bus down street\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2726\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2722\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver2\",\n\t\t\t\t\t\t\"text\": \"There is a bus down the street. The price is quite affordable\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 940,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Taxi greeting\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1440,\n\t\t\t\t\t\t1739\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1441\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver2\",\n\t\t\t\t\t\t\"text\": \"City center!\\nBest price!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 942,\n\t\t\t\t\t\"type\": -1,\n\t\t\t\t\t\"label\": \"Connection\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1441\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1442\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 944,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Hi need to get\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1718\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1448\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Hi, I need to go to the downtown\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 945,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"No problems\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1448\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2719\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver2\",\n\t\t\t\t\t\t\"text\": \"No problem.\\n200 coins please\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 946,\n\t\t\t\t\t\"type\": 3,\n\t\t\t\t\t\"label\": \"\\\"Quick buck\\\"\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2721\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2894,\n\t\t\t\t\t\t2896\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Hmmm...\\nWhat is \\\"to make a quick buck\\\"?\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\",\n\t\t\t\t\t\t\"ans1\": \"To marry after the first date\",\n\t\t\t\t\t\t\"ans2\": \"To tell the driver where to drive\",\n\t\t\t\t\t\t\"ans3\": \"To wish a good luck\",\n\t\t\t\t\t\t\"ans4\": \"To earn money quickly with a little effort\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 947,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Wrong\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2895\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1452\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Not exactly\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 948,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Right\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2897\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1453\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Right!!\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 949,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Quick buck is 1\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1452,\n\t\t\t\t\t\t1453\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2502\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"\\\"To make a quick buck\\\" means...\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 952,\n\t\t\t\t\t\"type\": -1,\n\t\t\t\t\t\"label\": \"driver1 clicked\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1459,\n\t\t\t\t\t\t1461\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1738\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 953,\n\t\t\t\t\t\"type\": -1,\n\t\t\t\t\t\"label\": \"driver3 clicked\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1460\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1461\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1124,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"Controls disable\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1719\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1718\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": false\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1125,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"Controls enable\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2899\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2110\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": true\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1134,\n\t\t\t\t\t\"type\": -1,\n\t\t\t\t\t\"label\": \"driver2 clicked\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1738\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1739\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1422,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Try find all idioms\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2110,\n\t\t\t\t\t\t2113\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2111\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver2\",\n\t\t\t\t\t\t\"text\": \"Try to find all the idioms on this level.\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1423,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Hat\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2111\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2112\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver2\",\n\t\t\t\t\t\t\"text\": \"I got this hat from my father.\\nAnd he got it from his father.\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1424,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"5 accidents\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2112\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2113\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver2\",\n\t\t\t\t\t\t\"text\": \"I'm a good driver. I had only 5 accidents...\\nThis year\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1753,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Quick buck is 2\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2502\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2725\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"to earn money quickly with a little effort...\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1922,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Too much\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2719\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2720\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Oh. I think it's too expensive for me\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1923,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Not a quick buck\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2720\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2721\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver2\",\n\t\t\t\t\t\t\"text\": \"It is a regular price. We don't make a quick buck here. I promise you\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1924,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Thank you\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2722\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2898\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Thank you!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1925,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Quick buck is 3\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2725\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2726\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"...and often not in an honest way!\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2068,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"idiomFailed\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2894\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2895\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomFailed\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"ToMakeAQuickBuck\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"05C\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2069,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"idiomGuessed\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2896\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2897\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomGuessed\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"ToMakeAQuickBuck\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"05O\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2070,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"IdiomDialogCompleted\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2898\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2899\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"IdiomDialogCompleted\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"conds\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 0,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1440,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"stage_activate\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1441,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1442,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1448,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1452,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1453,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1459,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver1\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1460,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver3\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1461,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1718,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1719,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"auto_talk_start_driver2\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1738,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1739,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2110,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver2\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2111,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver2\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2112,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver2\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2113,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver2\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2502,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2719,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2720,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2721,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2722,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2725,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2726,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2894,\n\t\t\t\t\t\"type\": 7,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2895,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2896,\n\t\t\t\t\t\"type\": 6,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2897,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2898,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2899,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"ver\": 1,\n\t\t\t\"stageNodeId\": 10,\n\t\t\t\"nodes\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 10,\n\t\t\t\t\t\"type\": 9,\n\t\t\t\t\t\"label\": \"Veider\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"veider\",\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\",\n\t\t\t\t\t\t\t\"veider\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"objPool\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 11,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"label\": \"Main storyline\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1,\n\t\t\t\t\t\t1175\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1173,\n\t\t\t\t\t\t1721,\n\t\t\t\t\t\t1744\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\",\n\t\t\t\t\t\t\t\"veider\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 720,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Veider greeting\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1173,\n\t\t\t\t\t\t1743\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1174\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"veider\",\n\t\t\t\t\t\t\"text\": \"Keep calm and buy a balloon!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 721,\n\t\t\t\t\t\"type\": -1,\n\t\t\t\t\t\"label\": \"Connection\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1174\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1175\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 722,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"OMG! Darth Veid\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1722\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1177\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Oh my god! Darth Vader! What are you doing here?\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 723,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Don't be silly\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1177\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1178\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"veider\",\n\t\t\t\t\t\t\"text\": \"Don’t be silly. It’s just a costume.\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 724,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Where is Trafalgar square?\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1178\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1179\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"I see… Could you tell me where is Trafalgar Square?\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 725,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Dunno\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1179\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1180\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"veider\",\n\t\t\t\t\t\t\"text\": \"Dunno. Try to ask taxi drivers, they're down the street.\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 726,\n\t\t\t\t\t\"type\": 3,\n\t\t\t\t\t\"label\": \"\\\"Dunno\\\" means\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1180\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2902,\n\t\t\t\t\t\t2904\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"\\\"Dunno\\\" means...\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\",\n\t\t\t\t\t\t\"ans1\": \"Downtown\",\n\t\t\t\t\t\t\"ans2\": \"I don’t know\",\n\t\t\t\t\t\t\"ans3\": \"Don't worry\",\n\t\t\t\t\t\t\"ans4\": \"I don’t live here\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 727,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Wrong\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2903\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1183\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Not right...\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 728,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Right\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2905\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1184\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"That's right!\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 729,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Dunno is\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1183,\n\t\t\t\t\t\t1184\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2907\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"\\\"Dunno\\\" means don't know!\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 731,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Ballon offer\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2003,\n\t\t\t\t\t\t2103\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2001\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"veider\",\n\t\t\t\t\t\t\"text\": \"Keep calm and buy a balloon!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1126,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"Controls disable\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1721\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1722\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": false\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1127,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"Controls enable\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2906\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2003\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": true\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1137,\n\t\t\t\t\t\"type\": -1,\n\t\t\t\t\t\"label\": \"Connection\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1744\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1743\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1241,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"I've got the pwr!\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2001\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2002\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"veider\",\n\t\t\t\t\t\t\"text\": \"I've got the power!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1331,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Come to the...\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2002\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2102\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"veider\",\n\t\t\t\t\t\t\"text\": \"Come to the\\nDark Side!\\nWe have balloons!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1418,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"I'm saving money\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2102\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2103\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"veider\",\n\t\t\t\t\t\t\"text\": \"I'm saving money to build another\\nDeath Star\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2072,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"idiomFailed\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2902\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2903\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomFailed\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"Dunno\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"07C\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2073,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"idiomGuessed\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2904\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2905\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomGuessed\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"Dunno\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"07E\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2074,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"IdiomDialogCompleted\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2907\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2906\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"IdiomDialogCompleted\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"conds\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1173,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"stage_activate\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1174,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1175,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1177,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1178,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1179,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1180,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1183,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1184,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1721,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"auto_talk_start_veider\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1722,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1743,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1744,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"veider\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2001,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"veider\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2002,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"veider\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2003,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2102,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"veider\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2103,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"veider\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2902,\n\t\t\t\t\t\"type\": 7,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2903,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2904,\n\t\t\t\t\t\"type\": 4,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2905,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2906,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2907,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"ver\": 1,\n\t\t\t\"stageNodeId\": 18,\n\t\t\t\"nodes\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 18,\n\t\t\t\t\t\"type\": 9,\n\t\t\t\t\t\"label\": \"Kebab kiosk\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t5\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"kebab\",\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\",\n\t\t\t\t\t\t\t\"seller\",\n\t\t\t\t\t\t\t\"child\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"objPool\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 19,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"label\": \"Main storyline\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t5,\n\t\t\t\t\t\t1378\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t132,\n\t\t\t\t\t\t1726,\n\t\t\t\t\t\t1742\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\",\n\t\t\t\t\t\t\t\"child\",\n\t\t\t\t\t\t\t\"seller\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 127,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Seller greeeting\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t132,\n\t\t\t\t\t\t1741\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1377\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\",\n\t\t\t\t\t\t\"text\": \"Hot kebab! Hot kebab!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 129,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Mommy told\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1746\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1160\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"child\",\n\t\t\t\t\t\t\"text\": \"Mommy told me you make it from cats sometimes.\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 131,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Put a sock in it!\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1160\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1161\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\",\n\t\t\t\t\t\t\"text\": \"Put a sock in it!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 133,\n\t\t\t\t\t\"type\": 3,\n\t\t\t\t\t\"label\": \"“Put a...\\\" means\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1161\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2908,\n\t\t\t\t\t\t2909\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"“Put a sock in it” means\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\",\n\t\t\t\t\t\t\"ans1\": \"Put a sock in kebab!\",\n\t\t\t\t\t\t\"ans2\": \"Wear a sock!\",\n\t\t\t\t\t\t\"ans3\": \"It’s true!\",\n\t\t\t\t\t\t\"ans4\": \"Shut up!\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 134,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Right\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2911\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1383\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"That's right!\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 135,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Wrong\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2910\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1382\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Not right...\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 892,\n\t\t\t\t\t\"type\": -1,\n\t\t\t\t\t\"label\": \"Connection\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1377\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1378\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 894,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Idiom means\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1382,\n\t\t\t\t\t\t1383\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2912\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"\\\"Put a sock in it\\\" means a request to be quiet\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 896,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Hot kebab!\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2008,\n\t\t\t\t\t\t2108\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2009\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\",\n\t\t\t\t\t\t\"text\": \"Hot kebab! Hot kebab!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1128,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"Controls disable\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1726\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1745\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": false\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1129,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"Controls enable\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2913\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2008\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": true\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1136,\n\t\t\t\t\t\"type\": -1,\n\t\t\t\t\t\"label\": \"Connection\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1742\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1741\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1138,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Seller offers\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1745\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1746\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\",\n\t\t\t\t\t\t\"text\": \"Fresh kebab! Made from the best lamb meat!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1335,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Best meat\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2009\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2106\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\",\n\t\t\t\t\t\t\"text\": \"The best meat in the city!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1336,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"I am a liar...\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2107\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2109\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\",\n\t\t\t\t\t\t\"text\": \"I am a liar...\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1420,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Ten kebabs\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2106\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2107\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\",\n\t\t\t\t\t\t\"text\": \"I can make ten kebabs in one minute!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1421,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"My boy wants...\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2109\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2108\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\",\n\t\t\t\t\t\t\"text\": \"My boy wants to be an ice cream seller.\\nWhat a shame!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2075,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"idiomGuessed\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2908\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2911\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomGuessed\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"PutASockInIt\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"093\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2076,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"idiomFailed\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2909\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2910\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomFailed\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"PutASockInIt\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"091\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2077,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"IdiomDialogCompleted\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2912\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2913\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"IdiomDialogCompleted\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"conds\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 5,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 132,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"stage_activate\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1160,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1161,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1377,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1378,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1382,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1383,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1726,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"auto_talk_start_seller\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1741,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1742,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1745,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1746,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2008,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2009,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2106,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2107,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2108,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2109,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"seller\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2908,\n\t\t\t\t\t\"type\": 6,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2909,\n\t\t\t\t\t\"type\": 7,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2910,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2911,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2912,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2913,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"ver\": 1,\n\t\t\t\"stageNodeId\": 488,\n\t\t\t\"nodes\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 488,\n\t\t\t\t\t\"type\": 9,\n\t\t\t\t\t\"label\": \"intro\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t574\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"intro\",\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\",\n\t\t\t\t\t\t\t\"policeman\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"objPool\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 489,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"label\": \"\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t574\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1678\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\",\n\t\t\t\t\t\t\t\"policeman\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1012,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"label\": \"Learn notif\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2924\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2926\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"text\": \"Foxy is a journalist. She’s arrived to London to collect English idioms and slang words\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1016,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"label\": \"Intro notif-n #2\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1706\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2933\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"text\": \"Talk to London people and when they use an idiom or a slang word, try to guess the right meaning of it!\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1021,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Hey, man!\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2935\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2936\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Hey, man!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1025,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"WHAT???\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2938\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2940\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"policeman\",\n\t\t\t\t\t\t\"text\": \"WHAT???\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1026,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Hot to downtown?\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2941\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2942\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"How can I get to the downtown?\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1027,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Need the gen?\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2944\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2945\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"policeman\",\n\t\t\t\t\t\t\"text\": \"Need the gen?\\nTry Internet.\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1033,\n\t\t\t\t\t\"type\": 3,\n\t\t\t\t\t\"label\": \"\\\"The gen\\\" is\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2947\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2953,\n\t\t\t\t\t\t2954\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"\\\"The gen\\\" is...\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\",\n\t\t\t\t\t\t\"ans1\": \"Friend\",\n\t\t\t\t\t\t\"ans2\": \"Sightseeing\",\n\t\t\t\t\t\t\"ans3\": \"Information\",\n\t\t\t\t\t\t\"ans4\": \"Relaxation\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1034,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Wrong\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2949\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1561\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Not correct\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1035,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Right\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2950\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1562\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Correct!\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1036,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"\\\"The gen\\\" is\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1561,\n\t\t\t\t\t\t1562\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2957\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"\\\"The gen\\\" is informal synonym for information\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1059,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"label\": \"First idiom!\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2960\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2961\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"text\": \"\\\"The gen\\\" is the first idiom on the level!\\n\\nTalk to people and guess all the 5 idioms to explore the next level in the city center\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1070,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"label\": \"Learn move\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1681\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2931\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"text\": \"Use left and right arrows to walk, up arrow to jump. Use arrow keys on your keyboard or click/tap on arrow icons on the screen.\\n\\nNow get closer to the policeman using this controls.\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1098,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"Disable controls\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1678\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2925\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": false\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1099,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"Enable controls\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2928\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1681\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": true\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1119,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"Disable controls\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2932\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1706\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": false\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1120,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"Controls enable\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2965\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2692\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": true\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1238,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Policeman idle 1\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2101,\n\t\t\t\t\t\t2677\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2099\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"policeman\",\n\t\t\t\t\t\t\"text\": \"Nothing to do?\\nGet a job!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1416,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Policeman idle 2\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2099\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2100\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"policeman\",\n\t\t\t\t\t\t\"text\": \"I don't like fox smell\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1417,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Policeman idle 3\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2100\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2101\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"policeman\",\n\t\t\t\t\t\t\"text\": \"Stop pestering me or I'll arrest you!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1866,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"label\": \"Ticket tutorial 1\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2963\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2964\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"text\": \"But how can you get to the city center?\\n\\nYou'll need to find all the 4 pieces of bus ticket and give the ticket to bus driver waiting in the end of the level\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1894,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Ticket tutorial 2\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2692\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2968\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Now let's take the first piece of the ticket located on the airplane!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1896,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Let's collect all\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2970\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2677\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Great!\\nLet's collect the ticket and all the idioms!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2083,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show notif helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2925\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2924\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowNotificationHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2084,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide notif helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2926\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2929\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HideNotificationHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2085,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show contr helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2929\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2928\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowControlsHelpers\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2086,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show notif helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2930\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2932\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowNotificationHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2087,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide contrl helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2931\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2930\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HideControlsHelpers\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2088,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide notif helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2933\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2934\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HideNotificationHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2089,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show balln helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2934\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2935\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowPlayerBalloonHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2090,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide balln helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2936\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2937\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HidePlayerBalloonHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2091,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show balln helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2937\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2938\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowPolicemanBalloonHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2092,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide balln helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2940\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2939\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HidePolicemanBalloonHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2093,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show balln helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2939\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2941\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowPlayerBalloonHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2094,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide balln helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2942\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2943\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HidePlayerBalloonHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2095,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show balln helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2943\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2944\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowPolicemanBalloonHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2096,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide balln helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2945\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2946\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HidePolicemanBalloonHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2097,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show quizz help\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2946\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2947\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowQuizzHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2098,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"idiomGuessed\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2952\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2950\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomGuessed\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"TheGen\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"0D7\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2099,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"idiomFailed\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2951\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2949\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomFailed\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"TheGen\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"0D9\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2100,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show balln helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2955\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2951\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowPlayerBalloonHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2101,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show balln helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2956\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2952\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowPlayerBalloonHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2102,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide quizz helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2954\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2955\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HideQuizzHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2103,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide quizz helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2953\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2956\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HideQuizzHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2104,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide balln helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2957\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2958\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HidePlayerBalloonHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2105,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show new idiom\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2958\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2959\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowNewIdiomHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2106,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show notif helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2959\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2960\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowNotificationHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2107,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show tckt cntr hlp\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2961\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2962\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowTicketCounterHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2108,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide new idiom\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2962\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2963\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HideNewIdiomHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2109,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Show ticket hlpr\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2967\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2965\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ShowTicketHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2110,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide tickt cntr hlpr\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2966\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2967\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HideTicketCounterHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2111,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide notif helper\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2964\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2966\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HideNotificationHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2112,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Hide ticket hlpr\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2968\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2969\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"HideTicketHelper\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2113,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"IdiomDialogCompleted\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2969\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2970\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"IdiomDialogCompleted\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"conds\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 574,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1561,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1562,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1678,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"stage_activate\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1681,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1706,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2099,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"policeman\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2100,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"policeman\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2101,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"policeman\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2677,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"policeman\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2692,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2924,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2925,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2926,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2928,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2929,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2930,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2931,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"auto_talk_start_policeman\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2932,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2933,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2934,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2935,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2936,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2937,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2938,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2939,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2940,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2941,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2942,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2943,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2944,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2945,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2946,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2947,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2949,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2950,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2951,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2952,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2953,\n\t\t\t\t\t\"type\": 5,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2954,\n\t\t\t\t\t\"type\": 7,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2955,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2956,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2957,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2958,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2959,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2960,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2961,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2962,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2963,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2964,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2965,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2966,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2967,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2968,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ticket_collected\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2969,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2970,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"ver\": 1,\n\t\t\t\"stageNodeId\": 733,\n\t\t\t\"nodes\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 733,\n\t\t\t\t\t\"type\": 9,\n\t\t\t\t\t\"label\": \"Funny carousel\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1190\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"carousel\",\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\",\n\t\t\t\t\t\t\t\"cap\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"objPool\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 734,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"label\": \"Main storyline\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1190,\n\t\t\t\t\t\t1322\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1191,\n\t\t\t\t\t\t1729,\n\t\t\t\t\t\t1737\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\",\n\t\t\t\t\t\t\t\"cap\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 735,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Try a carousel!\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1191,\n\t\t\t\t\t\t1736\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1321\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\",\n\t\t\t\t\t\t\"text\": \"The Ferris wheel is free to enter, Foxy!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 736,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Cap speech\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1730\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1193\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\",\n\t\t\t\t\t\t\"text\": \"Life is like a Ferris wheel; it goes up and down, round and round...\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 737,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Cap cpeech\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1193\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1194\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\",\n\t\t\t\t\t\t\"text\": \"...then it can suddenly stop and you are flung from it.\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 738,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Circle of life\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1194\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1195\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\",\n\t\t\t\t\t\t\"text\": \"Just life. The Circle of Life!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 739,\n\t\t\t\t\t\"type\": 3,\n\t\t\t\t\t\"label\": \"What is circle..\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1195\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2914,\n\t\t\t\t\t\t2915\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"What is \\\"The Circle of Life\\\"?\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\",\n\t\t\t\t\t\t\"ans1\": \"A dance\",\n\t\t\t\t\t\t\"ans2\": \"Stages every living thing passes through\",\n\t\t\t\t\t\t\"ans3\": \"Orbital period of the Earth\",\n\t\t\t\t\t\t\"ans4\": \"A donuts advertisement slogan\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 740,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Right\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2916\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1199\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"Yep!\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 741,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Wrong\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2917\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1198\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"No no...\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 742,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Idiom means 1\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1198,\n\t\t\t\t\t\t1199\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1200\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"'The Circle of Life' is a sequence of stages...\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 743,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Idiom means 2\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1200\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1201\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"every living thing passes through\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 744,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Idiom means 3\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1201\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1731\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"Player\",\n\t\t\t\t\t\t\"text\": \"The major stages of the circle are: birth, growth, maturity and death\",\n\t\t\t\t\t\t\"phraseType\": \"THINK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 848,\n\t\t\t\t\t\"type\": -1,\n\t\t\t\t\t\"label\": \"Connection\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1321\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1322\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 852,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Try a carousel!\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2104,\n\t\t\t\t\t\t2919\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1999\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\",\n\t\t\t\t\t\t\"text\": \"The Ferris wheel is free to enter, Foxy!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1130,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"Controls disable\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1729\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1730\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": false\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1131,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"Controls enable\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1731\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2918\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": true\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1133,\n\t\t\t\t\t\"type\": -1,\n\t\t\t\t\t\"label\": \"Connection\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1737\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t1736\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1332,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Too fast?\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t1999\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2006\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\",\n\t\t\t\t\t\t\"text\": \"Some people say that the Ferris wheel is too fast. \\nWant to check?\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1334,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Woodpeckers\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2006\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2105\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\",\n\t\t\t\t\t\t\"text\": \"Sometimes I worry about woodpeckers because of my wooden leg.\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1419,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Yo-ho-ho\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2105\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2104\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\",\n\t\t\t\t\t\t\"text\": \"Yo-ho-ho, and a bottle of rum!\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2078,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"IdiomDialogCompleted\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2918\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2919\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"IdiomDialogCompleted\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2079,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"idiomGuessed\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2915\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2916\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomGuessed\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"TheCircleOfLife\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"09W\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2080,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"idiomFailed\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2914\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2917\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomFailed\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"TheCircleOfLife\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"09U\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"conds\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1190,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1191,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"stage_activate\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1193,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1194,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1195,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1198,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1199,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1200,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1201,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1321,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1322,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1729,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"auto_talk_start_cap\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1730,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1731,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1736,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1737,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 1999,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2006,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2104,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2105,\n\t\t\t\t\t\"type\": 2,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"cap\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2914,\n\t\t\t\t\t\"type\": 7,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2915,\n\t\t\t\t\t\"type\": 4,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2916,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2917,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2918,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2919,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"ver\": 1,\n\t\t\t\"stageNodeId\": 2045,\n\t\t\t\"nodes\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2045,\n\t\t\t\t\t\"type\": 9,\n\t\t\t\t\t\"label\": \"exit_bus\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2856\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"exit_bus\",\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\",\n\t\t\t\t\t\t\t\"driver\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"objPool\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2046,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"label\": \"Main storyline\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2856,\n\t\t\t\t\t\t2881\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2878\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\",\n\t\t\t\t\t\t\t\"driver\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2048,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Ticket incompl 1\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2922\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2873\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver\",\n\t\t\t\t\t\t\"text\": \"You haven't collected the ticket yet\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2049,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Ticket complete 1\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2923\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2882\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver\",\n\t\t\t\t\t\t\"text\": \"I see you have the ticket\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2054,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2878\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2921\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": false\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2055,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Ticket incompl 2\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2873\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2880\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver\",\n\t\t\t\t\t\t\"text\": \"So I can't let you get into the bus\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2057,\n\t\t\t\t\t\"type\": 12,\n\t\t\t\t\t\"label\": \"\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2880\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2881\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"enabled\": true\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2058,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"label\": \"Ticket complete 2\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2882\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2920\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"id\": \"driver\",\n\t\t\t\t\t\t\"text\": \"The bus is leaving now\",\n\t\t\t\t\t\t\"phraseType\": \"SPEAK\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2081,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"InjectTicketCompletion\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2921\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2922,\n\t\t\t\t\t\t2923\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"InjectTicketCompletion\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2082,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"LevelComplete\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2920\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"LevelComplete\",\n\t\t\t\t\t\t\"source\": \"c2\",\n\t\t\t\t\t\t\"params\": []\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"conds\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2856,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2873,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2878,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"auto_talk_start_driver\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2880,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2881,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2882,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2920,\n\t\t\t\t\t\"type\": 11,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2921,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2922,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ticket_not_complete\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2923,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"ticket_complete\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"ver\": 1,\n\t\t\t\"stageNodeId\": 2060,\n\t\t\t\"nodes\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2060,\n\t\t\t\t\t\"type\": 9,\n\t\t\t\t\t\"label\": \"init\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2885\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"init\",\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"objPool\": []\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2061,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"label\": \"\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2885\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2891\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"objs\": [\n\t\t\t\t\t\t\t\"Player\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2062,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Reg the gen\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2891\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2890\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomRegister\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"TheGen\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"01U\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"title\",\n\t\t\t\t\t\t\t\t\"value\": \"The gen\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"01Z\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"meaning\",\n\t\t\t\t\t\t\t\t\"value\": \"Information\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"021\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"hint\",\n\t\t\t\t\t\t\t\t\"value\": \"Try to speak with a policeman\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"01P\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2063,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Reg quick buck\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2892\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2893\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomRegister\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"ToMakeAQuickBuck\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"02K\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"title\",\n\t\t\t\t\t\t\t\t\"value\": \"To make a quick buck\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"02M\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"meaning\",\n\t\t\t\t\t\t\t\t\"value\": \"To earn money quickly with a little effort\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"02O\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"hint\",\n\t\t\t\t\t\t\t\t\"value\": \"Ask for a taxi to the city center\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"029\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2064,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Reg dunno\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2890\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2888\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomRegister\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"Dunno\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"01W\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"title\",\n\t\t\t\t\t\t\t\t\"value\": \"Dunno\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"024\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"meaning\",\n\t\t\t\t\t\t\t\t\"value\": \"Don't know\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"026\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"hint\",\n\t\t\t\t\t\t\t\t\"value\": \"Try to speak with a balloon seller\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"01U\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2065,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Reg circle of life\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2888\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2887\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomRegister\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"TheCircleOfLife\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"028\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"title\",\n\t\t\t\t\t\t\t\t\"value\": \"The circle of life\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"02A\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"meaning\",\n\t\t\t\t\t\t\t\t\"value\": \"Sequence of stages every living thing passes through\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"02C\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"hint\",\n\t\t\t\t\t\t\t\t\"value\": \"Try to speak with captain\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"01Z\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2066,\n\t\t\t\t\t\"type\": 10,\n\t\t\t\t\t\"label\": \"Reg put a sock\",\n\t\t\t\t\t\"continue\": true,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2887\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [\n\t\t\t\t\t\t2892\n\t\t\t\t\t],\n\t\t\t\t\t\"props\": {\n\t\t\t\t\t\t\"name\": \"idiomRegister\",\n\t\t\t\t\t\t\"source\": \"js\",\n\t\t\t\t\t\t\"params\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\t\t\t\"value\": \"PutASockInIt\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"02E\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"title\",\n\t\t\t\t\t\t\t\t\"value\": \"Put a sock in it\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"02G\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"meaning\",\n\t\t\t\t\t\t\t\t\"value\": \"Request to be quite\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"02I\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"type\": \"str\",\n\t\t\t\t\t\t\t\t\"name\": \"hint\",\n\t\t\t\t\t\t\t\t\"value\": \"Try to buy a kebab\",\n\t\t\t\t\t\t\t\t\"$$hashKey\": \"024\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2067,\n\t\t\t\t\t\"type\": -1,\n\t\t\t\t\t\"label\": \"End\",\n\t\t\t\t\t\"continue\": false,\n\t\t\t\t\t\"inCondIds\": [\n\t\t\t\t\t\t2893\n\t\t\t\t\t],\n\t\t\t\t\t\"outCondIds\": [],\n\t\t\t\t\t\"props\": {}\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"conds\": [\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2885,\n\t\t\t\t\t\"type\": 1,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2887,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2888,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2890,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2891,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2892,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"ver\": 1,\n\t\t\t\t\t\"id\": 2893,\n\t\t\t\t\t\"type\": 8,\n\t\t\t\t\t\"props\": {}\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}"
-);
-return SEScript.load(scriptSavedJSON);
+{
+	"ver": 1,
+	"name": "1demo",
+	"stages": [
+		{
+			"ver": 1,
+			"stageNodeId": 8,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 8,
+					"type": 9,
+					"label": "Airport taxi",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						0
+					],
+					"props": {
+						"name": "airport_taxi",
+						"objs": [
+							"Player",
+							"driver1",
+							"driver2",
+							"driver3"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 9,
+					"type": 8,
+					"label": "Main storyline",
+					"continue": false,
+					"inCondIds": [
+						0,
+						1442
+					],
+					"outCondIds": [
+						1440,
+						1459,
+						1460,
+						1719
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"driver1",
+							"driver2",
+							"driver3"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 25,
+					"type": 1,
+					"label": "Bus down street",
+					"continue": false,
+					"inCondIds": [
+						2726
+					],
+					"outCondIds": [
+						2722
+					],
+					"props": {
+						"id": "driver2",
+						"text": "There is a bus down the street. The price is quite affordable",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 940,
+					"type": 1,
+					"label": "Taxi greeting",
+					"continue": false,
+					"inCondIds": [
+						1440,
+						1739
+					],
+					"outCondIds": [
+						1441
+					],
+					"props": {
+						"id": "driver2",
+						"text": "City center!\nBest price!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 942,
+					"type": -1,
+					"label": "Connection",
+					"continue": false,
+					"inCondIds": [
+						1441
+					],
+					"outCondIds": [
+						1442
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 944,
+					"type": 1,
+					"label": "Hi need to get",
+					"continue": false,
+					"inCondIds": [
+						1718
+					],
+					"outCondIds": [
+						1448
+					],
+					"props": {
+						"id": "Player",
+						"text": "Hi, I need to go to the downtown",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 945,
+					"type": 1,
+					"label": "No problems",
+					"continue": false,
+					"inCondIds": [
+						1448
+					],
+					"outCondIds": [
+						2719
+					],
+					"props": {
+						"id": "driver2",
+						"text": "No problem.\n200 coins please",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 946,
+					"type": 3,
+					"label": "\"Quick buck\"",
+					"continue": false,
+					"inCondIds": [
+						2721
+					],
+					"outCondIds": [
+						2894,
+						2896
+					],
+					"props": {
+						"id": "Player",
+						"text": "Hmmm...\nWhat is \"to make a quick buck\"?",
+						"phraseType": "THINK",
+						"ans1": "To marry after the first date",
+						"ans2": "To tell the driver where to drive",
+						"ans3": "To wish a good luck",
+						"ans4": "To earn money quickly with a little effort"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 947,
+					"type": 1,
+					"label": "Wrong",
+					"continue": false,
+					"inCondIds": [
+						2895
+					],
+					"outCondIds": [
+						1452
+					],
+					"props": {
+						"id": "Player",
+						"text": "Not exactly",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 948,
+					"type": 1,
+					"label": "Right",
+					"continue": false,
+					"inCondIds": [
+						2897
+					],
+					"outCondIds": [
+						1453
+					],
+					"props": {
+						"id": "Player",
+						"text": "Right!!",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 949,
+					"type": 1,
+					"label": "Quick buck is 1",
+					"continue": false,
+					"inCondIds": [
+						1452,
+						1453
+					],
+					"outCondIds": [
+						2502
+					],
+					"props": {
+						"id": "Player",
+						"text": "\"To make a quick buck\" means...",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 952,
+					"type": -1,
+					"label": "driver1 clicked",
+					"continue": true,
+					"inCondIds": [
+						1459,
+						1461
+					],
+					"outCondIds": [
+						1738
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 953,
+					"type": -1,
+					"label": "driver3 clicked",
+					"continue": true,
+					"inCondIds": [
+						1460
+					],
+					"outCondIds": [
+						1461
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1124,
+					"type": 12,
+					"label": "Controls disable",
+					"continue": true,
+					"inCondIds": [
+						1719
+					],
+					"outCondIds": [
+						1718
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1125,
+					"type": 12,
+					"label": "Controls enable",
+					"continue": false,
+					"inCondIds": [
+						2899
+					],
+					"outCondIds": [
+						2110
+					],
+					"props": {
+						"enabled": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1134,
+					"type": -1,
+					"label": "driver2 clicked",
+					"continue": true,
+					"inCondIds": [
+						1738
+					],
+					"outCondIds": [
+						1739
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1422,
+					"type": 1,
+					"label": "Try find all idioms",
+					"continue": false,
+					"inCondIds": [
+						2110,
+						2113
+					],
+					"outCondIds": [
+						2111
+					],
+					"props": {
+						"id": "driver2",
+						"text": "Try to find all the idioms on this level.",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1423,
+					"type": 1,
+					"label": "Hat",
+					"continue": false,
+					"inCondIds": [
+						2111
+					],
+					"outCondIds": [
+						2112
+					],
+					"props": {
+						"id": "driver2",
+						"text": "I got this hat from my father.\nAnd he got it from his father.",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1424,
+					"type": 1,
+					"label": "5 accidents",
+					"continue": false,
+					"inCondIds": [
+						2112
+					],
+					"outCondIds": [
+						2113
+					],
+					"props": {
+						"id": "driver2",
+						"text": "I'm a good driver. I had only 5 accidents...\nThis year",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1753,
+					"type": 1,
+					"label": "Quick buck is 2",
+					"continue": false,
+					"inCondIds": [
+						2502
+					],
+					"outCondIds": [
+						2725
+					],
+					"props": {
+						"id": "Player",
+						"text": "to earn money quickly with a little effort...",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1922,
+					"type": 1,
+					"label": "Too much",
+					"continue": false,
+					"inCondIds": [
+						2719
+					],
+					"outCondIds": [
+						2720
+					],
+					"props": {
+						"id": "Player",
+						"text": "Oh. I think it's too expensive for me",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1923,
+					"type": 1,
+					"label": "Not a quick buck",
+					"continue": false,
+					"inCondIds": [
+						2720
+					],
+					"outCondIds": [
+						2721
+					],
+					"props": {
+						"id": "driver2",
+						"text": "It is a regular price. We don't make a quick buck here. I promise you",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1924,
+					"type": 1,
+					"label": "Thank you",
+					"continue": false,
+					"inCondIds": [
+						2722
+					],
+					"outCondIds": [
+						2898
+					],
+					"props": {
+						"id": "Player",
+						"text": "Thank you!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1925,
+					"type": 1,
+					"label": "Quick buck is 3",
+					"continue": false,
+					"inCondIds": [
+						2725
+					],
+					"outCondIds": [
+						2726
+					],
+					"props": {
+						"id": "Player",
+						"text": "...and often not in an honest way!",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2068,
+					"type": 10,
+					"label": "idiomFailed",
+					"continue": true,
+					"inCondIds": [
+						2894
+					],
+					"outCondIds": [
+						2895
+					],
+					"props": {
+						"name": "idiomFailed",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "ToMakeAQuickBuck",
+								"$$hashKey": "05C"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2069,
+					"type": 10,
+					"label": "idiomGuessed",
+					"continue": true,
+					"inCondIds": [
+						2896
+					],
+					"outCondIds": [
+						2897
+					],
+					"props": {
+						"name": "idiomGuessed",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "ToMakeAQuickBuck",
+								"$$hashKey": "05O"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2070,
+					"type": 10,
+					"label": "IdiomDialogCompleted",
+					"continue": true,
+					"inCondIds": [
+						2898
+					],
+					"outCondIds": [
+						2899
+					],
+					"props": {
+						"name": "IdiomDialogCompleted",
+						"source": "c2",
+						"params": []
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 0,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1440,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1441,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1442,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1448,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1452,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1453,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1459,
+					"type": 2,
+					"props": {
+						"id": "driver1"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1460,
+					"type": 2,
+					"props": {
+						"id": "driver3"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1461,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1718,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1719,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_driver2"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1738,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1739,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2110,
+					"type": 2,
+					"props": {
+						"id": "driver2"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2111,
+					"type": 2,
+					"props": {
+						"id": "driver2"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2112,
+					"type": 2,
+					"props": {
+						"id": "driver2"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2113,
+					"type": 2,
+					"props": {
+						"id": "driver2"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2502,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2719,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2720,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2721,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2722,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2725,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2726,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2894,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2895,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2896,
+					"type": 6,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2897,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2898,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2899,
+					"type": 8,
+					"props": {}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 10,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 10,
+					"type": 9,
+					"label": "Veider",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						1
+					],
+					"props": {
+						"name": "veider",
+						"objs": [
+							"Player",
+							"veider"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 8,
+					"label": "Main storyline",
+					"continue": false,
+					"inCondIds": [
+						1,
+						1175
+					],
+					"outCondIds": [
+						1173,
+						1721,
+						1744
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"veider"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 720,
+					"type": 1,
+					"label": "Veider greeting",
+					"continue": false,
+					"inCondIds": [
+						1173,
+						1743
+					],
+					"outCondIds": [
+						1174
+					],
+					"props": {
+						"id": "veider",
+						"text": "Keep calm and buy a balloon!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 721,
+					"type": -1,
+					"label": "Connection",
+					"continue": false,
+					"inCondIds": [
+						1174
+					],
+					"outCondIds": [
+						1175
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 722,
+					"type": 1,
+					"label": "OMG! Darth Veid",
+					"continue": false,
+					"inCondIds": [
+						1722
+					],
+					"outCondIds": [
+						1177
+					],
+					"props": {
+						"id": "Player",
+						"text": "Oh my god! Darth Vader! What are you doing here?",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 723,
+					"type": 1,
+					"label": "Don't be silly",
+					"continue": false,
+					"inCondIds": [
+						1177
+					],
+					"outCondIds": [
+						1178
+					],
+					"props": {
+						"id": "veider",
+						"text": "Don’t be silly. It’s just a costume.",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 724,
+					"type": 1,
+					"label": "Where is Trafalgar square?",
+					"continue": false,
+					"inCondIds": [
+						1178
+					],
+					"outCondIds": [
+						1179
+					],
+					"props": {
+						"id": "Player",
+						"text": "I see… Could you tell me where is Trafalgar Square?",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 725,
+					"type": 1,
+					"label": "Dunno",
+					"continue": false,
+					"inCondIds": [
+						1179
+					],
+					"outCondIds": [
+						1180
+					],
+					"props": {
+						"id": "veider",
+						"text": "Dunno. Try to ask taxi drivers, they're down the street.",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 726,
+					"type": 3,
+					"label": "\"Dunno\" means",
+					"continue": false,
+					"inCondIds": [
+						1180
+					],
+					"outCondIds": [
+						2902,
+						2904
+					],
+					"props": {
+						"id": "Player",
+						"text": "\"Dunno\" means...",
+						"phraseType": "THINK",
+						"ans1": "Downtown",
+						"ans2": "I don’t know",
+						"ans3": "Don't worry",
+						"ans4": "I don’t live here"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 727,
+					"type": 1,
+					"label": "Wrong",
+					"continue": false,
+					"inCondIds": [
+						2903
+					],
+					"outCondIds": [
+						1183
+					],
+					"props": {
+						"id": "Player",
+						"text": "Not right...",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 728,
+					"type": 1,
+					"label": "Right",
+					"continue": false,
+					"inCondIds": [
+						2905
+					],
+					"outCondIds": [
+						1184
+					],
+					"props": {
+						"id": "Player",
+						"text": "That's right!",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 729,
+					"type": 1,
+					"label": "Dunno is",
+					"continue": false,
+					"inCondIds": [
+						1183,
+						1184
+					],
+					"outCondIds": [
+						2907
+					],
+					"props": {
+						"id": "Player",
+						"text": "\"Dunno\" means don't know!",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 731,
+					"type": 1,
+					"label": "Ballon offer",
+					"continue": false,
+					"inCondIds": [
+						2003,
+						2103
+					],
+					"outCondIds": [
+						2001
+					],
+					"props": {
+						"id": "veider",
+						"text": "Keep calm and buy a balloon!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1126,
+					"type": 12,
+					"label": "Controls disable",
+					"continue": true,
+					"inCondIds": [
+						1721
+					],
+					"outCondIds": [
+						1722
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1127,
+					"type": 12,
+					"label": "Controls enable",
+					"continue": true,
+					"inCondIds": [
+						2906
+					],
+					"outCondIds": [
+						2003
+					],
+					"props": {
+						"enabled": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1137,
+					"type": -1,
+					"label": "Connection",
+					"continue": true,
+					"inCondIds": [
+						1744
+					],
+					"outCondIds": [
+						1743
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1241,
+					"type": 1,
+					"label": "I've got the pwr!",
+					"continue": false,
+					"inCondIds": [
+						2001
+					],
+					"outCondIds": [
+						2002
+					],
+					"props": {
+						"id": "veider",
+						"text": "I've got the power!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1331,
+					"type": 1,
+					"label": "Come to the...",
+					"continue": false,
+					"inCondIds": [
+						2002
+					],
+					"outCondIds": [
+						2102
+					],
+					"props": {
+						"id": "veider",
+						"text": "Come to the\nDark Side!\nWe have balloons!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1418,
+					"type": 1,
+					"label": "I'm saving money",
+					"continue": false,
+					"inCondIds": [
+						2102
+					],
+					"outCondIds": [
+						2103
+					],
+					"props": {
+						"id": "veider",
+						"text": "I'm saving money to build another\nDeath Star",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2072,
+					"type": 10,
+					"label": "idiomFailed",
+					"continue": true,
+					"inCondIds": [
+						2902
+					],
+					"outCondIds": [
+						2903
+					],
+					"props": {
+						"name": "idiomFailed",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "Dunno",
+								"$$hashKey": "07C"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2073,
+					"type": 10,
+					"label": "idiomGuessed",
+					"continue": true,
+					"inCondIds": [
+						2904
+					],
+					"outCondIds": [
+						2905
+					],
+					"props": {
+						"name": "idiomGuessed",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "Dunno",
+								"$$hashKey": "07E"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2074,
+					"type": 10,
+					"label": "IdiomDialogCompleted",
+					"continue": true,
+					"inCondIds": [
+						2907
+					],
+					"outCondIds": [
+						2906
+					],
+					"props": {
+						"name": "IdiomDialogCompleted",
+						"source": "c2",
+						"params": []
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 1,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1173,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1174,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1175,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1177,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1178,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1179,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1180,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1183,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1184,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1721,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_veider"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1722,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1743,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1744,
+					"type": 2,
+					"props": {
+						"id": "veider"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2001,
+					"type": 2,
+					"props": {
+						"id": "veider"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2002,
+					"type": 2,
+					"props": {
+						"id": "veider"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2003,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2102,
+					"type": 2,
+					"props": {
+						"id": "veider"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2103,
+					"type": 2,
+					"props": {
+						"id": "veider"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2902,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2903,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2904,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2905,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2906,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2907,
+					"type": 11,
+					"props": {}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 18,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 18,
+					"type": 9,
+					"label": "Kebab kiosk",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						5
+					],
+					"props": {
+						"name": "kebab",
+						"objs": [
+							"Player",
+							"seller",
+							"child"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 19,
+					"type": 8,
+					"label": "Main storyline",
+					"continue": false,
+					"inCondIds": [
+						5,
+						1378
+					],
+					"outCondIds": [
+						132,
+						1726,
+						1742
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"child",
+							"seller"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 127,
+					"type": 1,
+					"label": "Seller greeeting",
+					"continue": false,
+					"inCondIds": [
+						132,
+						1741
+					],
+					"outCondIds": [
+						1377
+					],
+					"props": {
+						"id": "seller",
+						"text": "Hot kebab! Hot kebab!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 129,
+					"type": 1,
+					"label": "Mommy told",
+					"continue": false,
+					"inCondIds": [
+						1746
+					],
+					"outCondIds": [
+						1160
+					],
+					"props": {
+						"id": "child",
+						"text": "Mommy told me you make it from cats sometimes.",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 131,
+					"type": 1,
+					"label": "Put a sock in it!",
+					"continue": false,
+					"inCondIds": [
+						1160
+					],
+					"outCondIds": [
+						1161
+					],
+					"props": {
+						"id": "seller",
+						"text": "Put a sock in it!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 133,
+					"type": 3,
+					"label": "“Put a...\" means",
+					"continue": false,
+					"inCondIds": [
+						1161
+					],
+					"outCondIds": [
+						2908,
+						2909
+					],
+					"props": {
+						"id": "Player",
+						"text": "“Put a sock in it” means",
+						"phraseType": "THINK",
+						"ans1": "Put a sock in kebab!",
+						"ans2": "Wear a sock!",
+						"ans3": "It’s true!",
+						"ans4": "Shut up!"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 134,
+					"type": 1,
+					"label": "Right",
+					"continue": false,
+					"inCondIds": [
+						2911
+					],
+					"outCondIds": [
+						1383
+					],
+					"props": {
+						"id": "Player",
+						"text": "That's right!",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 135,
+					"type": 1,
+					"label": "Wrong",
+					"continue": false,
+					"inCondIds": [
+						2910
+					],
+					"outCondIds": [
+						1382
+					],
+					"props": {
+						"id": "Player",
+						"text": "Not right...",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 892,
+					"type": -1,
+					"label": "Connection",
+					"continue": false,
+					"inCondIds": [
+						1377
+					],
+					"outCondIds": [
+						1378
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 894,
+					"type": 1,
+					"label": "Idiom means",
+					"continue": false,
+					"inCondIds": [
+						1382,
+						1383
+					],
+					"outCondIds": [
+						2912
+					],
+					"props": {
+						"id": "Player",
+						"text": "\"Put a sock in it\" means a request to be quiet",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 896,
+					"type": 1,
+					"label": "Hot kebab!",
+					"continue": false,
+					"inCondIds": [
+						2008,
+						2108
+					],
+					"outCondIds": [
+						2009
+					],
+					"props": {
+						"id": "seller",
+						"text": "Hot kebab! Hot kebab!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1128,
+					"type": 12,
+					"label": "Controls disable",
+					"continue": true,
+					"inCondIds": [
+						1726
+					],
+					"outCondIds": [
+						1745
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1129,
+					"type": 12,
+					"label": "Controls enable",
+					"continue": true,
+					"inCondIds": [
+						2913
+					],
+					"outCondIds": [
+						2008
+					],
+					"props": {
+						"enabled": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1136,
+					"type": -1,
+					"label": "Connection",
+					"continue": true,
+					"inCondIds": [
+						1742
+					],
+					"outCondIds": [
+						1741
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1138,
+					"type": 1,
+					"label": "Seller offers",
+					"continue": false,
+					"inCondIds": [
+						1745
+					],
+					"outCondIds": [
+						1746
+					],
+					"props": {
+						"id": "seller",
+						"text": "Fresh kebab! Made from the best lamb meat!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1335,
+					"type": 1,
+					"label": "Best meat",
+					"continue": false,
+					"inCondIds": [
+						2009
+					],
+					"outCondIds": [
+						2106
+					],
+					"props": {
+						"id": "seller",
+						"text": "The best meat in the city!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1336,
+					"type": 1,
+					"label": "I am a liar...",
+					"continue": false,
+					"inCondIds": [
+						2107
+					],
+					"outCondIds": [
+						2109
+					],
+					"props": {
+						"id": "seller",
+						"text": "I am a liar...",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1420,
+					"type": 1,
+					"label": "Ten kebabs",
+					"continue": false,
+					"inCondIds": [
+						2106
+					],
+					"outCondIds": [
+						2107
+					],
+					"props": {
+						"id": "seller",
+						"text": "I can make ten kebabs in one minute!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1421,
+					"type": 1,
+					"label": "My boy wants...",
+					"continue": false,
+					"inCondIds": [
+						2109
+					],
+					"outCondIds": [
+						2108
+					],
+					"props": {
+						"id": "seller",
+						"text": "My boy wants to be an ice cream seller.\nWhat a shame!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2075,
+					"type": 10,
+					"label": "idiomGuessed",
+					"continue": true,
+					"inCondIds": [
+						2908
+					],
+					"outCondIds": [
+						2911
+					],
+					"props": {
+						"name": "idiomGuessed",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "PutASockInIt",
+								"$$hashKey": "093"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2076,
+					"type": 10,
+					"label": "idiomFailed",
+					"continue": true,
+					"inCondIds": [
+						2909
+					],
+					"outCondIds": [
+						2910
+					],
+					"props": {
+						"name": "idiomFailed",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "PutASockInIt",
+								"$$hashKey": "091"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2077,
+					"type": 10,
+					"label": "IdiomDialogCompleted",
+					"continue": true,
+					"inCondIds": [
+						2912
+					],
+					"outCondIds": [
+						2913
+					],
+					"props": {
+						"name": "IdiomDialogCompleted",
+						"source": "c2",
+						"params": []
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 5,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 132,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1160,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1161,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1377,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1378,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1382,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1383,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1726,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_seller"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1741,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1742,
+					"type": 2,
+					"props": {
+						"id": "seller"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1745,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1746,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2008,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2009,
+					"type": 2,
+					"props": {
+						"id": "seller"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2106,
+					"type": 2,
+					"props": {
+						"id": "seller"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2107,
+					"type": 2,
+					"props": {
+						"id": "seller"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2108,
+					"type": 2,
+					"props": {
+						"id": "seller"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2109,
+					"type": 2,
+					"props": {
+						"id": "seller"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2908,
+					"type": 6,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2909,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2910,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2911,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2912,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2913,
+					"type": 8,
+					"props": {}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 488,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 488,
+					"type": 9,
+					"label": "intro",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						574
+					],
+					"props": {
+						"name": "intro",
+						"objs": [
+							"Player",
+							"policeman"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 489,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						574
+					],
+					"outCondIds": [
+						1678
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"policeman"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1012,
+					"type": 11,
+					"label": "Learn notif",
+					"continue": false,
+					"inCondIds": [
+						2924
+					],
+					"outCondIds": [
+						2926
+					],
+					"props": {
+						"text": "Foxy is a journalist. She’s arrived to London to collect English idioms and slang words"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1016,
+					"type": 11,
+					"label": "Intro notif-n #2",
+					"continue": false,
+					"inCondIds": [
+						1706
+					],
+					"outCondIds": [
+						2933
+					],
+					"props": {
+						"text": "Talk to London people and when they use an idiom or a slang word, try to guess the right meaning of it!"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1021,
+					"type": 1,
+					"label": "Hey, man!",
+					"continue": false,
+					"inCondIds": [
+						2935
+					],
+					"outCondIds": [
+						2936
+					],
+					"props": {
+						"id": "Player",
+						"text": "Hey, man!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1025,
+					"type": 1,
+					"label": "WHAT???",
+					"continue": false,
+					"inCondIds": [
+						2938
+					],
+					"outCondIds": [
+						2940
+					],
+					"props": {
+						"id": "policeman",
+						"text": "WHAT???",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1026,
+					"type": 1,
+					"label": "Hot to downtown?",
+					"continue": false,
+					"inCondIds": [
+						2941
+					],
+					"outCondIds": [
+						2942
+					],
+					"props": {
+						"id": "Player",
+						"text": "How can I get to the downtown?",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1027,
+					"type": 1,
+					"label": "Need the gen?",
+					"continue": false,
+					"inCondIds": [
+						2944
+					],
+					"outCondIds": [
+						2945
+					],
+					"props": {
+						"id": "policeman",
+						"text": "Need the gen?\nTry Internet.",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1033,
+					"type": 3,
+					"label": "\"The gen\" is",
+					"continue": false,
+					"inCondIds": [
+						2947
+					],
+					"outCondIds": [
+						2953,
+						2954
+					],
+					"props": {
+						"id": "Player",
+						"text": "\"The gen\" is...",
+						"phraseType": "THINK",
+						"ans1": "Friend",
+						"ans2": "Sightseeing",
+						"ans3": "Information",
+						"ans4": "Relaxation"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1034,
+					"type": 1,
+					"label": "Wrong",
+					"continue": false,
+					"inCondIds": [
+						2949
+					],
+					"outCondIds": [
+						1561
+					],
+					"props": {
+						"id": "Player",
+						"text": "Not correct",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1035,
+					"type": 1,
+					"label": "Right",
+					"continue": false,
+					"inCondIds": [
+						2950
+					],
+					"outCondIds": [
+						1562
+					],
+					"props": {
+						"id": "Player",
+						"text": "Correct!",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1036,
+					"type": 1,
+					"label": "\"The gen\" is",
+					"continue": false,
+					"inCondIds": [
+						1561,
+						1562
+					],
+					"outCondIds": [
+						2957
+					],
+					"props": {
+						"id": "Player",
+						"text": "\"The gen\" is informal synonym for information",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1059,
+					"type": 11,
+					"label": "First idiom!",
+					"continue": false,
+					"inCondIds": [
+						2960
+					],
+					"outCondIds": [
+						2961
+					],
+					"props": {
+						"text": "\"The gen\" is the first idiom on the level!\n\nTalk to people and guess all the 5 idioms to explore the next level in the city center"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1070,
+					"type": 11,
+					"label": "Learn move",
+					"continue": false,
+					"inCondIds": [
+						1681
+					],
+					"outCondIds": [
+						2931
+					],
+					"props": {
+						"text": "Use left and right arrows to walk, up arrow to jump. Use arrow keys on your keyboard or click/tap on arrow icons on the screen.\n\nNow get closer to the policeman using this controls."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1098,
+					"type": 12,
+					"label": "Disable controls",
+					"continue": true,
+					"inCondIds": [
+						1678
+					],
+					"outCondIds": [
+						2925
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1099,
+					"type": 12,
+					"label": "Enable controls",
+					"continue": true,
+					"inCondIds": [
+						2928
+					],
+					"outCondIds": [
+						1681
+					],
+					"props": {
+						"enabled": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1119,
+					"type": 12,
+					"label": "Disable controls",
+					"continue": true,
+					"inCondIds": [
+						2932
+					],
+					"outCondIds": [
+						1706
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1120,
+					"type": 12,
+					"label": "Controls enable",
+					"continue": true,
+					"inCondIds": [
+						2965
+					],
+					"outCondIds": [
+						2692
+					],
+					"props": {
+						"enabled": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1238,
+					"type": 1,
+					"label": "Policeman idle 1",
+					"continue": false,
+					"inCondIds": [
+						2101,
+						2677
+					],
+					"outCondIds": [
+						2099
+					],
+					"props": {
+						"id": "policeman",
+						"text": "Nothing to do?\nGet a job!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1416,
+					"type": 1,
+					"label": "Policeman idle 2",
+					"continue": false,
+					"inCondIds": [
+						2099
+					],
+					"outCondIds": [
+						2100
+					],
+					"props": {
+						"id": "policeman",
+						"text": "I don't like fox smell",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1417,
+					"type": 1,
+					"label": "Policeman idle 3",
+					"continue": false,
+					"inCondIds": [
+						2100
+					],
+					"outCondIds": [
+						2101
+					],
+					"props": {
+						"id": "policeman",
+						"text": "Stop pestering me or I'll arrest you!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1866,
+					"type": 11,
+					"label": "Ticket tutorial 1",
+					"continue": false,
+					"inCondIds": [
+						2963
+					],
+					"outCondIds": [
+						2964
+					],
+					"props": {
+						"text": "But how can you get to the city center?\n\nYou'll need to find all the 4 pieces of bus ticket and give the ticket to bus driver waiting in the end of the level"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1894,
+					"type": 1,
+					"label": "Ticket tutorial 2",
+					"continue": false,
+					"inCondIds": [
+						2692
+					],
+					"outCondIds": [
+						2968
+					],
+					"props": {
+						"id": "Player",
+						"text": "Now let's take the first piece of the ticket located on the airplane!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1896,
+					"type": 1,
+					"label": "Let's collect all",
+					"continue": false,
+					"inCondIds": [
+						2970
+					],
+					"outCondIds": [
+						2677
+					],
+					"props": {
+						"id": "Player",
+						"text": "Great!\nLet's collect the ticket and all the idioms!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2083,
+					"type": 10,
+					"label": "Show notif helper",
+					"continue": true,
+					"inCondIds": [
+						2925
+					],
+					"outCondIds": [
+						2924
+					],
+					"props": {
+						"name": "ShowNotificationHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2084,
+					"type": 10,
+					"label": "Hide notif helper",
+					"continue": true,
+					"inCondIds": [
+						2926
+					],
+					"outCondIds": [
+						2929
+					],
+					"props": {
+						"name": "HideNotificationHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2085,
+					"type": 10,
+					"label": "Show contr helper",
+					"continue": true,
+					"inCondIds": [
+						2929
+					],
+					"outCondIds": [
+						2928
+					],
+					"props": {
+						"name": "ShowControlsHelpers",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2086,
+					"type": 10,
+					"label": "Show notif helper",
+					"continue": true,
+					"inCondIds": [
+						2930
+					],
+					"outCondIds": [
+						2932
+					],
+					"props": {
+						"name": "ShowNotificationHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2087,
+					"type": 10,
+					"label": "Hide contrl helper",
+					"continue": true,
+					"inCondIds": [
+						2931
+					],
+					"outCondIds": [
+						2930
+					],
+					"props": {
+						"name": "HideControlsHelpers",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2088,
+					"type": 10,
+					"label": "Hide notif helper",
+					"continue": true,
+					"inCondIds": [
+						2933
+					],
+					"outCondIds": [
+						2934
+					],
+					"props": {
+						"name": "HideNotificationHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2089,
+					"type": 10,
+					"label": "Show balln helper",
+					"continue": true,
+					"inCondIds": [
+						2934
+					],
+					"outCondIds": [
+						2935
+					],
+					"props": {
+						"name": "ShowPlayerBalloonHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2090,
+					"type": 10,
+					"label": "Hide balln helper",
+					"continue": true,
+					"inCondIds": [
+						2936
+					],
+					"outCondIds": [
+						2937
+					],
+					"props": {
+						"name": "HidePlayerBalloonHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2091,
+					"type": 10,
+					"label": "Show balln helper",
+					"continue": true,
+					"inCondIds": [
+						2937
+					],
+					"outCondIds": [
+						2938
+					],
+					"props": {
+						"name": "ShowPolicemanBalloonHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2092,
+					"type": 10,
+					"label": "Hide balln helper",
+					"continue": true,
+					"inCondIds": [
+						2940
+					],
+					"outCondIds": [
+						2939
+					],
+					"props": {
+						"name": "HidePolicemanBalloonHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2093,
+					"type": 10,
+					"label": "Show balln helper",
+					"continue": true,
+					"inCondIds": [
+						2939
+					],
+					"outCondIds": [
+						2941
+					],
+					"props": {
+						"name": "ShowPlayerBalloonHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2094,
+					"type": 10,
+					"label": "Hide balln helper",
+					"continue": true,
+					"inCondIds": [
+						2942
+					],
+					"outCondIds": [
+						2943
+					],
+					"props": {
+						"name": "HidePlayerBalloonHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2095,
+					"type": 10,
+					"label": "Show balln helper",
+					"continue": true,
+					"inCondIds": [
+						2943
+					],
+					"outCondIds": [
+						2944
+					],
+					"props": {
+						"name": "ShowPolicemanBalloonHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2096,
+					"type": 10,
+					"label": "Hide balln helper",
+					"continue": true,
+					"inCondIds": [
+						2945
+					],
+					"outCondIds": [
+						2946
+					],
+					"props": {
+						"name": "HidePolicemanBalloonHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2097,
+					"type": 10,
+					"label": "Show quizz help",
+					"continue": true,
+					"inCondIds": [
+						2946
+					],
+					"outCondIds": [
+						2947
+					],
+					"props": {
+						"name": "ShowQuizzHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2098,
+					"type": 10,
+					"label": "idiomGuessed",
+					"continue": true,
+					"inCondIds": [
+						2952
+					],
+					"outCondIds": [
+						2950
+					],
+					"props": {
+						"name": "idiomGuessed",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "TheGen",
+								"$$hashKey": "0D7"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2099,
+					"type": 10,
+					"label": "idiomFailed",
+					"continue": true,
+					"inCondIds": [
+						2951
+					],
+					"outCondIds": [
+						2949
+					],
+					"props": {
+						"name": "idiomFailed",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "TheGen",
+								"$$hashKey": "0D9"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2100,
+					"type": 10,
+					"label": "Show balln helper",
+					"continue": true,
+					"inCondIds": [
+						2955
+					],
+					"outCondIds": [
+						2951
+					],
+					"props": {
+						"name": "ShowPlayerBalloonHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2101,
+					"type": 10,
+					"label": "Show balln helper",
+					"continue": true,
+					"inCondIds": [
+						2956
+					],
+					"outCondIds": [
+						2952
+					],
+					"props": {
+						"name": "ShowPlayerBalloonHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2102,
+					"type": 10,
+					"label": "Hide quizz helper",
+					"continue": true,
+					"inCondIds": [
+						2954
+					],
+					"outCondIds": [
+						2955
+					],
+					"props": {
+						"name": "HideQuizzHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2103,
+					"type": 10,
+					"label": "Hide quizz helper",
+					"continue": true,
+					"inCondIds": [
+						2953
+					],
+					"outCondIds": [
+						2956
+					],
+					"props": {
+						"name": "HideQuizzHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2104,
+					"type": 10,
+					"label": "Hide balln helper",
+					"continue": true,
+					"inCondIds": [
+						2957
+					],
+					"outCondIds": [
+						2958
+					],
+					"props": {
+						"name": "HidePlayerBalloonHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2105,
+					"type": 10,
+					"label": "Show new idiom",
+					"continue": true,
+					"inCondIds": [
+						2958
+					],
+					"outCondIds": [
+						2959
+					],
+					"props": {
+						"name": "ShowNewIdiomHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2106,
+					"type": 10,
+					"label": "Show notif helper",
+					"continue": true,
+					"inCondIds": [
+						2959
+					],
+					"outCondIds": [
+						2960
+					],
+					"props": {
+						"name": "ShowNotificationHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2107,
+					"type": 10,
+					"label": "Show tckt cntr hlp",
+					"continue": true,
+					"inCondIds": [
+						2961
+					],
+					"outCondIds": [
+						2962
+					],
+					"props": {
+						"name": "ShowTicketCounterHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2108,
+					"type": 10,
+					"label": "Hide new idiom",
+					"continue": true,
+					"inCondIds": [
+						2962
+					],
+					"outCondIds": [
+						2963
+					],
+					"props": {
+						"name": "HideNewIdiomHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2109,
+					"type": 10,
+					"label": "Show ticket hlpr",
+					"continue": true,
+					"inCondIds": [
+						2967
+					],
+					"outCondIds": [
+						2965
+					],
+					"props": {
+						"name": "ShowTicketHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2110,
+					"type": 10,
+					"label": "Hide tickt cntr hlpr",
+					"continue": true,
+					"inCondIds": [
+						2966
+					],
+					"outCondIds": [
+						2967
+					],
+					"props": {
+						"name": "HideTicketCounterHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2111,
+					"type": 10,
+					"label": "Hide notif helper",
+					"continue": true,
+					"inCondIds": [
+						2964
+					],
+					"outCondIds": [
+						2966
+					],
+					"props": {
+						"name": "HideNotificationHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2112,
+					"type": 10,
+					"label": "Hide ticket hlpr",
+					"continue": true,
+					"inCondIds": [
+						2968
+					],
+					"outCondIds": [
+						2969
+					],
+					"props": {
+						"name": "HideTicketHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2113,
+					"type": 10,
+					"label": "IdiomDialogCompleted",
+					"continue": true,
+					"inCondIds": [
+						2969
+					],
+					"outCondIds": [
+						2970
+					],
+					"props": {
+						"name": "IdiomDialogCompleted",
+						"source": "c2",
+						"params": []
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 574,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1561,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1562,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1678,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1681,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1706,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2099,
+					"type": 2,
+					"props": {
+						"id": "policeman"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2100,
+					"type": 2,
+					"props": {
+						"id": "policeman"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2101,
+					"type": 2,
+					"props": {
+						"id": "policeman"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2677,
+					"type": 2,
+					"props": {
+						"id": "policeman"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2692,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2924,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2925,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2926,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2928,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2929,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2930,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2931,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_policeman"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2932,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2933,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2934,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2935,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2936,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2937,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2938,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2939,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2940,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2941,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2942,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2943,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2944,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2945,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2946,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2947,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2949,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2950,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2951,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2952,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2953,
+					"type": 5,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2954,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2955,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2956,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2957,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2958,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2959,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2960,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2961,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2962,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2963,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2964,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2965,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2966,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2967,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2968,
+					"type": 10,
+					"props": {
+						"name": "ticket_collected"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2969,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2970,
+					"type": 8,
+					"props": {}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 733,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 733,
+					"type": 9,
+					"label": "Funny carousel",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						1190
+					],
+					"props": {
+						"name": "carousel",
+						"objs": [
+							"Player",
+							"cap"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 734,
+					"type": 8,
+					"label": "Main storyline",
+					"continue": false,
+					"inCondIds": [
+						1190,
+						1322
+					],
+					"outCondIds": [
+						1191,
+						1729,
+						1737
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"cap"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 735,
+					"type": 1,
+					"label": "Try a carousel!",
+					"continue": false,
+					"inCondIds": [
+						1191,
+						1736
+					],
+					"outCondIds": [
+						1321
+					],
+					"props": {
+						"id": "cap",
+						"text": "The Ferris wheel is free to enter, Foxy!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 736,
+					"type": 1,
+					"label": "Cap speech",
+					"continue": false,
+					"inCondIds": [
+						1730
+					],
+					"outCondIds": [
+						1193
+					],
+					"props": {
+						"id": "cap",
+						"text": "Life is like a Ferris wheel; it goes up and down, round and round...",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 737,
+					"type": 1,
+					"label": "Cap cpeech",
+					"continue": false,
+					"inCondIds": [
+						1193
+					],
+					"outCondIds": [
+						1194
+					],
+					"props": {
+						"id": "cap",
+						"text": "...then it can suddenly stop and you are flung from it.",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 738,
+					"type": 1,
+					"label": "Circle of life",
+					"continue": false,
+					"inCondIds": [
+						1194
+					],
+					"outCondIds": [
+						1195
+					],
+					"props": {
+						"id": "cap",
+						"text": "Just life. The Circle of Life!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 739,
+					"type": 3,
+					"label": "What is circle..",
+					"continue": false,
+					"inCondIds": [
+						1195
+					],
+					"outCondIds": [
+						2914,
+						2915
+					],
+					"props": {
+						"id": "Player",
+						"text": "What is \"The Circle of Life\"?",
+						"phraseType": "THINK",
+						"ans1": "A dance",
+						"ans2": "Stages every living thing passes through",
+						"ans3": "Orbital period of the Earth",
+						"ans4": "A donuts advertisement slogan"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 740,
+					"type": 1,
+					"label": "Right",
+					"continue": false,
+					"inCondIds": [
+						2916
+					],
+					"outCondIds": [
+						1199
+					],
+					"props": {
+						"id": "Player",
+						"text": "Yep!",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 741,
+					"type": 1,
+					"label": "Wrong",
+					"continue": false,
+					"inCondIds": [
+						2917
+					],
+					"outCondIds": [
+						1198
+					],
+					"props": {
+						"id": "Player",
+						"text": "No no...",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 742,
+					"type": 1,
+					"label": "Idiom means 1",
+					"continue": false,
+					"inCondIds": [
+						1198,
+						1199
+					],
+					"outCondIds": [
+						1200
+					],
+					"props": {
+						"id": "Player",
+						"text": "'The Circle of Life' is a sequence of stages...",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 743,
+					"type": 1,
+					"label": "Idiom means 2",
+					"continue": false,
+					"inCondIds": [
+						1200
+					],
+					"outCondIds": [
+						1201
+					],
+					"props": {
+						"id": "Player",
+						"text": "every living thing passes through",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 744,
+					"type": 1,
+					"label": "Idiom means 3",
+					"continue": false,
+					"inCondIds": [
+						1201
+					],
+					"outCondIds": [
+						1731
+					],
+					"props": {
+						"id": "Player",
+						"text": "The major stages of the circle are: birth, growth, maturity and death",
+						"phraseType": "THINK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 848,
+					"type": -1,
+					"label": "Connection",
+					"continue": false,
+					"inCondIds": [
+						1321
+					],
+					"outCondIds": [
+						1322
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 852,
+					"type": 1,
+					"label": "Try a carousel!",
+					"continue": false,
+					"inCondIds": [
+						2104,
+						2919
+					],
+					"outCondIds": [
+						1999
+					],
+					"props": {
+						"id": "cap",
+						"text": "The Ferris wheel is free to enter, Foxy!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1130,
+					"type": 12,
+					"label": "Controls disable",
+					"continue": true,
+					"inCondIds": [
+						1729
+					],
+					"outCondIds": [
+						1730
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1131,
+					"type": 12,
+					"label": "Controls enable",
+					"continue": true,
+					"inCondIds": [
+						1731
+					],
+					"outCondIds": [
+						2918
+					],
+					"props": {
+						"enabled": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1133,
+					"type": -1,
+					"label": "Connection",
+					"continue": true,
+					"inCondIds": [
+						1737
+					],
+					"outCondIds": [
+						1736
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1332,
+					"type": 1,
+					"label": "Too fast?",
+					"continue": false,
+					"inCondIds": [
+						1999
+					],
+					"outCondIds": [
+						2006
+					],
+					"props": {
+						"id": "cap",
+						"text": "Some people say that the Ferris wheel is too fast. \nWant to check?",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1334,
+					"type": 1,
+					"label": "Woodpeckers",
+					"continue": false,
+					"inCondIds": [
+						2006
+					],
+					"outCondIds": [
+						2105
+					],
+					"props": {
+						"id": "cap",
+						"text": "Sometimes I worry about woodpeckers because of my wooden leg.",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1419,
+					"type": 1,
+					"label": "Yo-ho-ho",
+					"continue": false,
+					"inCondIds": [
+						2105
+					],
+					"outCondIds": [
+						2104
+					],
+					"props": {
+						"id": "cap",
+						"text": "Yo-ho-ho, and a bottle of rum!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2078,
+					"type": 10,
+					"label": "IdiomDialogCompleted",
+					"continue": true,
+					"inCondIds": [
+						2918
+					],
+					"outCondIds": [
+						2919
+					],
+					"props": {
+						"name": "IdiomDialogCompleted",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2079,
+					"type": 10,
+					"label": "idiomGuessed",
+					"continue": true,
+					"inCondIds": [
+						2915
+					],
+					"outCondIds": [
+						2916
+					],
+					"props": {
+						"name": "idiomGuessed",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "TheCircleOfLife",
+								"$$hashKey": "09W"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2080,
+					"type": 10,
+					"label": "idiomFailed",
+					"continue": true,
+					"inCondIds": [
+						2914
+					],
+					"outCondIds": [
+						2917
+					],
+					"props": {
+						"name": "idiomFailed",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "TheCircleOfLife",
+								"$$hashKey": "09U"
+							}
+						]
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 1190,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1191,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1193,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1194,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1195,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1198,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1199,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1200,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1201,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1321,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1322,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1729,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_cap"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1730,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1731,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1736,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1737,
+					"type": 2,
+					"props": {
+						"id": "cap"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1999,
+					"type": 2,
+					"props": {
+						"id": "cap"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2006,
+					"type": 2,
+					"props": {
+						"id": "cap"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2104,
+					"type": 2,
+					"props": {
+						"id": "cap"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2105,
+					"type": 2,
+					"props": {
+						"id": "cap"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2914,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2915,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2916,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2917,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2918,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2919,
+					"type": 8,
+					"props": {}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 2045,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 2045,
+					"type": 9,
+					"label": "exit_bus",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						2856
+					],
+					"props": {
+						"name": "exit_bus",
+						"objs": [
+							"Player",
+							"driver"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2046,
+					"type": 8,
+					"label": "Main storyline",
+					"continue": false,
+					"inCondIds": [
+						2856,
+						2881
+					],
+					"outCondIds": [
+						2878
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"driver"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2048,
+					"type": 1,
+					"label": "Ticket incompl 1",
+					"continue": false,
+					"inCondIds": [
+						2922
+					],
+					"outCondIds": [
+						2873
+					],
+					"props": {
+						"id": "driver",
+						"text": "You haven't collected the ticket yet",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2049,
+					"type": 1,
+					"label": "Ticket complete 1",
+					"continue": false,
+					"inCondIds": [
+						2923
+					],
+					"outCondIds": [
+						2882
+					],
+					"props": {
+						"id": "driver",
+						"text": "I see you have the ticket",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2054,
+					"type": 12,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						2878
+					],
+					"outCondIds": [
+						2921
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2055,
+					"type": 1,
+					"label": "Ticket incompl 2",
+					"continue": false,
+					"inCondIds": [
+						2873
+					],
+					"outCondIds": [
+						2880
+					],
+					"props": {
+						"id": "driver",
+						"text": "So I can't let you get into the bus",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2057,
+					"type": 12,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						2880
+					],
+					"outCondIds": [
+						2881
+					],
+					"props": {
+						"enabled": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2058,
+					"type": 1,
+					"label": "Ticket complete 2",
+					"continue": false,
+					"inCondIds": [
+						2882
+					],
+					"outCondIds": [
+						2920
+					],
+					"props": {
+						"id": "driver",
+						"text": "The bus is leaving now",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2081,
+					"type": 10,
+					"label": "InjectTicketCompletion",
+					"continue": false,
+					"inCondIds": [
+						2921
+					],
+					"outCondIds": [
+						2922,
+						2923
+					],
+					"props": {
+						"name": "InjectTicketCompletion",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2082,
+					"type": 10,
+					"label": "LevelComplete",
+					"continue": false,
+					"inCondIds": [
+						2920
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "LevelComplete",
+						"source": "c2",
+						"params": []
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 2856,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2873,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2878,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_driver"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2880,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2881,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2882,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2920,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2921,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2922,
+					"type": 10,
+					"props": {
+						"name": "ticket_not_complete"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2923,
+					"type": 10,
+					"props": {
+						"name": "ticket_complete"
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 2060,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 2060,
+					"type": 9,
+					"label": "init",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						2885
+					],
+					"props": {
+						"name": "init",
+						"objs": [
+							"Player"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2061,
+					"type": 8,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						2885
+					],
+					"outCondIds": [
+						2891
+					],
+					"props": {
+						"objs": [
+							"Player"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2062,
+					"type": 10,
+					"label": "Reg the gen",
+					"continue": true,
+					"inCondIds": [
+						2891
+					],
+					"outCondIds": [
+						2890
+					],
+					"props": {
+						"name": "idiomRegister",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "TheGen",
+								"$$hashKey": "01U"
+							},
+							{
+								"type": "str",
+								"name": "title",
+								"value": "The gen",
+								"$$hashKey": "01Z"
+							},
+							{
+								"type": "str",
+								"name": "meaning",
+								"value": "Information",
+								"$$hashKey": "021"
+							},
+							{
+								"type": "str",
+								"name": "hint",
+								"value": "Try to speak with a policeman",
+								"$$hashKey": "01P"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2063,
+					"type": 10,
+					"label": "Reg quick buck",
+					"continue": true,
+					"inCondIds": [
+						2892
+					],
+					"outCondIds": [
+						2893
+					],
+					"props": {
+						"name": "idiomRegister",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "ToMakeAQuickBuck",
+								"$$hashKey": "02K"
+							},
+							{
+								"type": "str",
+								"name": "title",
+								"value": "To make a quick buck",
+								"$$hashKey": "02M"
+							},
+							{
+								"type": "str",
+								"name": "meaning",
+								"value": "To earn money quickly with a little effort",
+								"$$hashKey": "02O"
+							},
+							{
+								"type": "str",
+								"name": "hint",
+								"value": "Ask for a taxi to the city center",
+								"$$hashKey": "029"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2064,
+					"type": 10,
+					"label": "Reg dunno",
+					"continue": true,
+					"inCondIds": [
+						2890
+					],
+					"outCondIds": [
+						2888
+					],
+					"props": {
+						"name": "idiomRegister",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "Dunno",
+								"$$hashKey": "01W"
+							},
+							{
+								"type": "str",
+								"name": "title",
+								"value": "Dunno",
+								"$$hashKey": "024"
+							},
+							{
+								"type": "str",
+								"name": "meaning",
+								"value": "Don't know",
+								"$$hashKey": "026"
+							},
+							{
+								"type": "str",
+								"name": "hint",
+								"value": "Try to speak with a balloon seller",
+								"$$hashKey": "01U"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2065,
+					"type": 10,
+					"label": "Reg circle of life",
+					"continue": true,
+					"inCondIds": [
+						2888
+					],
+					"outCondIds": [
+						2887
+					],
+					"props": {
+						"name": "idiomRegister",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "TheCircleOfLife",
+								"$$hashKey": "028"
+							},
+							{
+								"type": "str",
+								"name": "title",
+								"value": "The circle of life",
+								"$$hashKey": "02A"
+							},
+							{
+								"type": "str",
+								"name": "meaning",
+								"value": "Sequence of stages every living thing passes through",
+								"$$hashKey": "02C"
+							},
+							{
+								"type": "str",
+								"name": "hint",
+								"value": "Try to speak with captain",
+								"$$hashKey": "01Z"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2066,
+					"type": 10,
+					"label": "Reg put a sock",
+					"continue": true,
+					"inCondIds": [
+						2887
+					],
+					"outCondIds": [
+						2892
+					],
+					"props": {
+						"name": "idiomRegister",
+						"source": "js",
+						"params": [
+							{
+								"type": "str",
+								"name": "id",
+								"value": "PutASockInIt",
+								"$$hashKey": "02E"
+							},
+							{
+								"type": "str",
+								"name": "title",
+								"value": "Put a sock in it",
+								"$$hashKey": "02G"
+							},
+							{
+								"type": "str",
+								"name": "meaning",
+								"value": "Request to be quite",
+								"$$hashKey": "02I"
+							},
+							{
+								"type": "str",
+								"name": "hint",
+								"value": "Try to buy a kebab",
+								"$$hashKey": "024"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2067,
+					"type": -1,
+					"label": "End",
+					"continue": false,
+					"inCondIds": [
+						2893
+					],
+					"outCondIds": [],
+					"props": {}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 2885,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2887,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2888,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2890,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2891,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2892,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2893,
+					"type": 8,
+					"props": {}
+				}
+			]
+		}
+	]
 }
