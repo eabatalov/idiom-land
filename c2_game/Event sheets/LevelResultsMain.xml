@@ -181,7 +181,20 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="6129401738881049" type="System">
-                    <param id="0" name="Layout">1demo</param>
+                    <param id="0" name="Layout">1Demo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3684697157392618">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4883235858452033" type="Touch">
+                    <param id="0" name="Object">MainMenuBtn</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="920439839666558" type="MainMenuBtn" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="103136241931018" type="System">
+                    <param id="0" name="Layout">MainMenu</param>
                 </action>
             </actions>
         </event-block>

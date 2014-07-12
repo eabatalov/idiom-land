@@ -47,7 +47,7 @@
         <height>1000</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
-    <first-layout>1demo</first-layout>
+    <first-layout>MainMenu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -175,9 +175,43 @@
                 <object-type name="SecretsFoundText" sid="8324317963687748">
                     <plugin id="Text" />
                 </object-type>
+                <object-type name="MainMenuBtn" sid="8439311364048488">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2426169192141205" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder expanded="0" name="MainMenu">
+                <object-type name="MainMenuIdiomLandLogo" sid="9581819859871193">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5045722772803119" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MainMenuLevel1Button" sid="7486525092793063">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9906154546557492" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MainMenuLevel2Button" sid="6637483047047213">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5568542312008219" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="Levels">
+        <object-folder expanded="0" name="Levels">
             <object-folder expanded="0" name="1demo">
                 <object-folder expanded="0" name="Stages">
                     <object-folder expanded="0" name="Intro">
@@ -1602,7 +1636,7 @@
                     </object-folder>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="1" name="Common">
+            <object-folder expanded="0" name="Common">
                 <object-folder expanded="0" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
@@ -4734,19 +4768,25 @@
         </family>
     </families>
     <layout-folder expanded="0">
-        <layout-folder expanded="1" name="Levels">
-            <layout-folder expanded="1" name="1demo">
-                <layout>1demo.xml</layout>
+        <layout-folder expanded="0" name="Levels">
+            <layout-folder expanded="0" name="1Demo">
+                <layout>1Demo.xml</layout>
+            </layout-folder>
+            <layout-folder expanded="0" name="99CommandorTriangle">
+                <layout>99CommandorTriangle.xml</layout>
             </layout-folder>
         </layout-folder>
         <layout-folder expanded="0" name="Menus">
             <layout-folder expanded="0" name="LevelResults">
                 <layout>LevelResults.xml</layout>
             </layout-folder>
+            <layout-folder expanded="0" name="MainMenu">
+                <layout>MainMenu.xml</layout>
+            </layout-folder>
         </layout-folder>
     </layout-folder>
-    <event-folder expanded="0">
-        <event-folder expanded="0" name="Levels">
+    <event-folder expanded="1">
+        <event-folder expanded="1" name="Levels">
             <event-folder expanded="0" name="Common">
                 <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>Quest.xml</event-sheet>
@@ -4793,7 +4833,7 @@
                 <event-sheet>LevelDebug.xml</event-sheet>
                 <event-sheet>LevelCommon.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="0" name="1demo">
+            <event-folder expanded="1" name="1Demo">
                 <event-folder expanded="0" name="Stages">
                     <event-folder expanded="0" name="BalloonSeller">
                         <event-sheet>BalloonSeller.xml</event-sheet>
@@ -4813,16 +4853,22 @@
                     <event-folder expanded="0" name="Taxi">
                         <event-sheet>Taxi.xml</event-sheet>
                     </event-folder>
-                    <event-sheet>1demoAllStages.xml</event-sheet>
+                    <event-sheet>1DemoAllStages.xml</event-sheet>
                 </event-folder>
-                <event-sheet>1demoMain.xml</event-sheet>
-                <event-sheet>1demoNpcAnimationRunners.xml</event-sheet>
-                <event-sheet>1demoNpcScmlSpritesBindings.xml</event-sheet>
+                <event-sheet>1DemoMain.xml</event-sheet>
+                <event-sheet>1DemoNpcAnimationRunners.xml</event-sheet>
+                <event-sheet>1DemoNpcScmlSpritesBindings.xml</event-sheet>
+            </event-folder>
+            <event-folder expanded="0" name="99CommandorTriangle">
+                <event-sheet>99CommandorTriangleMain.xml</event-sheet>
             </event-folder>
         </event-folder>
         <event-folder expanded="0" name="Menus">
             <event-folder expanded="1" name="LevelResults">
                 <event-sheet>LevelResultsMain.xml</event-sheet>
+            </event-folder>
+            <event-folder expanded="0" name="MainMenu">
+                <event-sheet>MainMenuMain.xml</event-sheet>
             </event-folder>
         </event-folder>
     </event-folder>

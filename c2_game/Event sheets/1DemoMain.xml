@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>1demoMain</name>
+    <name>1DemoMain</name>
     <events>
         <include>LevelCommon</include>
         <comment>Level specific logic</comment>
-        <include>1demoNpcScmlSpritesBindings</include>
-        <include>1demoNpcAnimationRunners</include>
-        <include>1demoAllStages</include>
+        <include>1DemoNpcScmlSpritesBindings</include>
+        <include>1DemoNpcAnimationRunners</include>
+        <include>1DemoAllStages</include>
         <comment>Level specific logic for common visual objects</comment>
         <include>CabBullet</include>
         <include>ScooterBullet</include>
@@ -18,7 +18,7 @@
                 <variable constant="1" name="LEVEL_INITIAL_STAGE" sid="4210704395276113" static="0" type="text">intro</variable>
                 <event-block sid="2994783783040874">
                     <conditions>
-                        <condition id="-25" name="On loader layout complete" sid="9886935471380511" type="System" />
+                        <condition id="-2" name="On start of layout" sid="9886935471380511" type="System" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="8930605218157595" type="Function">
