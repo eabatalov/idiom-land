@@ -12,9 +12,9 @@
     <used-plugins>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
-        <plugin author="Eugene/Idiomland" id="IdiomProgressTrackingPlugin" version="0.100000001">IdiomProgressTracker</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandGamePlugin" version="0.100000001">Idiomland game</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Eugene/Idiomland" id="LevelIdiomProgressTrackingPlugin" version="0.100000001">LevelIdiomProgressTracker</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Eugene/Learzing" id="QuestGamePlugin" version="0.100000001">Quest game</plugin>
         <plugin author="Eugene/Learzing" id="QuestInAppPurchasePlugin" version="0.100000001">Quest in-app purchase</plugin>
@@ -62,7 +62,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="0" name="Menus">
             <object-folder expanded="0" name="LevelResults">
                 <object-type name="Foxy" sid="4330101678906835">
@@ -4667,8 +4667,8 @@
                         <plugin id="Mouse" />
                     </object-type>
                 </object-folder>
-                <object-type name="IdiomProgressTracker" sid="504992448476046">
-                    <plugin id="IdiomProgressTrackingPlugin" />
+                <object-type name="LevelIdiomProgressTracker" sid="504992448476046">
+                    <plugin id="LevelIdiomProgressTrackingPlugin" />
                 </object-type>
                 <object-type name="IdiomlandGame" sid="1603271377434259">
                     <plugin id="IdiomlandGamePlugin" />
@@ -4733,21 +4733,21 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="1">
-        <layout-folder expanded="0" name="Levels">
-            <layout-folder expanded="0" name="1demo">
+    <layout-folder expanded="0">
+        <layout-folder expanded="1" name="Levels">
+            <layout-folder expanded="1" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
         </layout-folder>
-        <layout-folder expanded="1" name="Menus">
-            <layout-folder expanded="1" name="LevelResults">
+        <layout-folder expanded="0" name="Menus">
+            <layout-folder expanded="0" name="LevelResults">
                 <layout>LevelResults.xml</layout>
             </layout-folder>
         </layout-folder>
     </layout-folder>
     <event-folder expanded="0">
-        <event-folder expanded="1" name="Levels">
-            <event-folder expanded="1" name="Common">
+        <event-folder expanded="0" name="Levels">
+            <event-folder expanded="0" name="Common">
                 <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>Quest.xml</event-sheet>
                     <event-sheet>Bootstrap.xml</event-sheet>
@@ -4820,7 +4820,7 @@
                 <event-sheet>1demoNpcScmlSpritesBindings.xml</event-sheet>
             </event-folder>
         </event-folder>
-        <event-folder expanded="1" name="Menus">
+        <event-folder expanded="0" name="Menus">
             <event-folder expanded="1" name="LevelResults">
                 <event-sheet>LevelResultsMain.xml</event-sheet>
             </event-folder>
@@ -4837,7 +4837,7 @@
         <global-instance type="QuestLevelRuntime" uid="15" />
         <global-instance type="Browser" uid="43" />
         <global-instance type="Mouse" uid="307" />
-        <global-instance type="IdiomProgressTracker" uid="308" />
+        <global-instance type="LevelIdiomProgressTracker" uid="308" />
         <global-instance type="QuestGame" uid="16" />
         <global-instance type="QuestInappPurchase" uid="301" />
         <global-instance type="QuestPersistentStorage" uid="309" />

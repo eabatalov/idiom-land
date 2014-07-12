@@ -34,7 +34,7 @@
                                     <param id="0" name="Value">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="6344967101229111" type="GameHelpTxt">
-                                    <param id="0" name="Text">&quot;Level objective:&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Collect &quot; &amp; IdiomProgressTracker.getLevelIdiomsCount &amp; &quot; idioms from London people.&quot; &amp; newline &amp; newline &amp;&#x0D;&#x0A;&quot;Hint:&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Get close to them and talk!&quot;</param>
+                                    <param id="0" name="Text">&quot;Level objective:&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Collect &quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount &amp; &quot; idioms from London people.&quot; &amp; newline &amp; newline &amp;&#x0D;&#x0A;&quot;Hint:&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Get close to them and talk!&quot;</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="4486965649350631" type="GameHelpBg">
                                     <param id="0" name="X">1600 / 2 - GameHelpBg.Width / 2</param>
@@ -130,12 +130,6 @@
                             <param id="0" name="Value">0</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="7224671346053024">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="1747606006850771" type="GameHelpTxt" />
-                    </conditions>
-                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

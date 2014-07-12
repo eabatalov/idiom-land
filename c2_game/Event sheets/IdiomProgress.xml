@@ -6,11 +6,11 @@
         <event-group description="" sid="9203833697821463" title="Idiom Counter" />
         <event-block sid="6013936950830742">
             <conditions>
-                <condition id="1" name="Guessed idioms changed" sid="1217418775746662" type="IdiomProgressTracker" />
+                <condition id="1" name="Guessed idioms changed" sid="1217418775746662" type="LevelIdiomProgressTracker" />
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="2671474838349759" type="IdiomCounterTxt">
-                    <param id="0" name="Text">&quot;Idioms: &quot; &amp; IdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; IdiomProgressTracker.getLevelIdiomsCount</param>
+                    <param id="0" name="Text">&quot;Idioms: &quot; &amp; LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
                 </action>
             </actions>
         </event-block>

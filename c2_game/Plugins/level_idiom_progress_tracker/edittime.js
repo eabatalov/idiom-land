@@ -1,10 +1,10 @@
 ﻿function GetPluginSettings()
 {
 	return {
-		"name":			"IdiomProgressTracker",			// as appears in 'insert object' dialog, can be changed as long as "id" stays the same
-		"id":			"IdiomProgressTrackingPlugin",		// this is used to identify this plugin and is saved to the project; never change it
+		"name":			"LevelIdiomProgressTracker",			// as appears in 'insert object' dialog, can be changed as long as "id" stays the same
+		"id":			"LevelIdiomProgressTrackingPlugin",		// this is used to identify this plugin and is saved to the project; never change it
 		"version":		"0.1",					// (float in x.y format) Plugin version - C2 shows compatibility warnings based on this
-		"description":	"Tracks player's idioms progress on the level and provides information about it.",
+		"description":	"Tracks player's idioms progress on current level",
 		"author":		"Eugene/Idiomland",
 		"help url":		"idiomland.com",
 		"category":		"Learzing",				// Prefer to re-use existing categories, but you can set anything here
@@ -71,10 +71,8 @@ AddCondition(1, cf_trigger, "Guessed idioms changed", "General", "Guessed idioms
 //			 display_str,		// as appears in event sheet - use {0}, {1} for parameters and also <b></b>, <i></i>
 //			 description,		// appears in event wizard dialog when selected
 //			 script_name);		// corresponding runtime function name
-
-// example
-//AddStringParam("Message", "Enter a string to alert.");
-//AddAction(0, af_none, "Alert", "My category", "Alert {0}", "Description for my action!", "MyAction");
+AddAction(0, af_none, "Finalize level idioms progress", "General", "Finalize idioms progress",
+    "Finish level idiom progress and process it", "finalizeProgress");
 
 ////////////////////////////////////////
 // Expressions

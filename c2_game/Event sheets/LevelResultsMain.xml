@@ -22,35 +22,36 @@
                     <param id="0" name="State">0</param>
                 </action>
                 <action id="0" name="Set text" sid="9679877642509217" type="IdiomsFoundText">
-                    <param id="0" name="Text">&quot;Idioms found: &quot; &amp; IdiomProgressTracker.getLevelFoundIdiomsCount &amp; &quot;/&quot; &amp; IdiomProgressTracker.getLevelIdiomsCount</param>
+                    <param id="0" name="Text">&quot;Idioms found: &quot; &amp; LevelIdiomProgressTracker.getLevelFoundIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
                 </action>
                 <action id="0" name="Set text" sid="7225573258372632" type="IdiomsGuessedText">
-                    <param id="0" name="Text">&quot;Idioms guessed: &quot; &amp; IdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; IdiomProgressTracker.getLevelIdiomsCount</param>
+                    <param id="0" name="Text">&quot;Idioms guessed: &quot; &amp; LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
                 </action>
+                <action id="0" name="Finalize level idioms progress" sid="2229058216426496" type="LevelIdiomProgressTracker" />
             </actions>
             <sub-events>
                 <event-group collapsed="1" description="" sid="615611637592885" title="Results table">
                     <sub-events>
                         <event-block sid="6384195424070088">
                             <conditions>
-                                <condition id="0" name="For each idiom" sid="9460230890113758" type="IdiomProgressTracker" />
+                                <condition id="0" name="For each idiom" sid="9460230890113758" type="LevelIdiomProgressTracker" />
                                 <condition id="-33" name="Pick by comparison" sid="8277725355818571" type="System">
                                     <param id="0" name="Object">IdiomSuccessIndicator</param>
                                     <param id="1" name="Expression">IdiomSuccessIndicator.Index</param>
                                     <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">IdiomProgressTracker.getCurrentIdiomIndex</param>
+                                    <param id="3" name="Value">LevelIdiomProgressTracker.getCurrentIdiomIndex</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="6176657725019744" type="System">
                                     <param id="0" name="Object">IdiomTitleText</param>
                                     <param id="1" name="Expression">IdiomTitleText.Index</param>
                                     <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">IdiomProgressTracker.getCurrentIdiomIndex</param>
+                                    <param id="3" name="Value">LevelIdiomProgressTracker.getCurrentIdiomIndex</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="1706345831938651" type="System">
                                     <param id="0" name="Object">IdiomMeaningText</param>
                                     <param id="1" name="Expression">IdiomMeaningText.Index</param>
                                     <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">IdiomProgressTracker.getCurrentIdiomIndex</param>
+                                    <param id="3" name="Value">LevelIdiomProgressTracker.getCurrentIdiomIndex</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -58,7 +59,7 @@
                                 <event-block sid="9970159896965153">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="7274766214426539" type="System">
-                                            <param id="0" name="First value">IdiomProgressTracker.getCurrentIdiomStatus</param>
+                                            <param id="0" name="First value">LevelIdiomProgressTracker.getCurrentIdiomStatus</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;IGNORED&quot;</param>
                                         </condition>
@@ -68,7 +69,7 @@
                                             <param id="0" name="Text">&quot;???&quot;</param>
                                         </action>
                                         <action id="0" name="Set text" sid="4019729843115121" type="IdiomMeaningText">
-                                            <param id="0" name="Text">IdiomProgressTracker.getCurrentIdiomHintToFind</param>
+                                            <param id="0" name="Text">LevelIdiomProgressTracker.getCurrentIdiomHintToFind</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="5059779342376605" type="IdiomSuccessIndicator">
                                             <param id="0" name="Animation">&quot;Ignore&quot;</param>
@@ -82,17 +83,17 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="9375247108443315" type="IdiomTitleText">
-                                            <param id="0" name="Text">IdiomProgressTracker.getCurrentIdiomTitle</param>
+                                            <param id="0" name="Text">LevelIdiomProgressTracker.getCurrentIdiomTitle</param>
                                         </action>
                                         <action id="0" name="Set text" sid="23459367076765" type="IdiomMeaningText">
-                                            <param id="0" name="Text">IdiomProgressTracker.getCurrentIdiomShortMeaning</param>
+                                            <param id="0" name="Text">LevelIdiomProgressTracker.getCurrentIdiomShortMeaning</param>
                                         </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="2957805123090086">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="6557520376988531" type="System">
-                                                    <param id="0" name="First value">IdiomProgressTracker.getCurrentIdiomStatus</param>
+                                                    <param id="0" name="First value">LevelIdiomProgressTracker.getCurrentIdiomStatus</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">&quot;GUESSED&quot;</param>
                                                 </condition>
@@ -107,7 +108,7 @@
                                         <event-block sid="3382297157081334">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="4200339766365081" type="System">
-                                                    <param id="0" name="First value">IdiomProgressTracker.getCurrentIdiomStatus</param>
+                                                    <param id="0" name="First value">LevelIdiomProgressTracker.getCurrentIdiomStatus</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">&quot;FAILED&quot;</param>
                                                 </condition>
@@ -128,9 +129,9 @@
                 <event-block sid="2750479217556608">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="4932118777377702" type="System">
-                            <param id="0" name="First value">IdiomProgressTracker.getLevelGuessedIdiomsCount</param>
+                            <param id="0" name="First value">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">IdiomProgressTracker.getLevelIdiomsCount</param>
+                            <param id="2" name="Second value">LevelIdiomProgressTracker.getLevelIdiomsCount</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -148,7 +149,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="1920505374085961" type="FoxySpeechText">
-                            <param id="0" name="Text">&quot;Hey! I need to guess all the &quot; &amp; IdiomProgressTracker.getLevelIdiomsCount &amp; &quot; idioms to get to the next level&quot;</param>
+                            <param id="0" name="Text">&quot;Hey! I need to guess all the &quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount &amp; &quot; idioms to get to the next level&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" sid="883368084643163" type="ReplayBtn">
                             <param id="0" name="Visibility">1</param>

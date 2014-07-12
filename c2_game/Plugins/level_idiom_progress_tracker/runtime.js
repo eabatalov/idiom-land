@@ -4,14 +4,14 @@
 assert2(cr, "cr namespace not created");
 assert2(cr.plugins_, "cr.plugins_ not created");
 
-cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
+cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
 {
 	this.runtime = runtime;
 };
 
 (function ()
 {
-	var pluginProto = cr.plugins_.IdiomProgressTrackingPlugin.prototype;
+	var pluginProto = cr.plugins_.LevelIdiomProgressTrackingPlugin.prototype;
 		
 	/////////////////////////////////////
 	// Object type class
@@ -42,11 +42,9 @@ cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
 	instanceProto.onCreate = function()
 	{
 		// note the object is sealed after this call; ensure any properties you'll ever need are set on the object
-		this.idiomsProgressTracker = new IdiomsProgressTracker();
-        this.idiomsProgressTracker.onIdiomGuessed(function() {
-            this.runtime.trigger(pluginProto.cnds.guessedIdiomsChanged, this);
-        }.bind(this));
-        this.curIdiomIx = 0;
+        this.levelIdiomsProgressTracker = null;
+        this.curIdiomIx = null;
+        QuestGame.instance.events.levelBeforeChange.subscribe(this, this.onLevelBeforeChange);
 	};
 	
 	// called whenever an instance is destroyed
@@ -113,6 +111,14 @@ cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
 	};
 	/**END-PREVIEWONLY**/
 
+    instanceProto.onLevelBeforeChange = function(idiomLandLevel) {
+        this.levelIdiomsProgressTracker = new LevelIdiomsProgressTracker();
+        this.levelIdiomsProgressTracker.onIdiomGuessed(function() {
+            this.runtime.trigger(pluginProto.cnds.guessedIdiomsChanged, this);
+        }.bind(this));
+        this.curIdiomIx = 0;
+    };
+
 	//////////////////////////////////////
 	// Conditions
 	function Cnds() {};
@@ -132,7 +138,7 @@ cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
     Cnds.prototype.forEachIdiom = function() {
         var curEvent = this.runtime.getCurrentEventStack().current_event;
         this.curIdiomIx = 0;
-        for (;this.curIdiomIx < this.idiomsProgressTracker.getAllIdioms().length; ++this.curIdiomIx) {
+        for (;this.curIdiomIx < this.levelIdiomsProgressTracker.getAllIdioms().length; ++this.curIdiomIx) {
             console.log("Current idiom for: ", this.curIdiomIx);
             this.doForEachIdiomTrigger(curEvent);
         }
@@ -148,7 +154,11 @@ cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
 	//////////////////////////////////////
 	// Actions
 	function Acts() {};
-	
+
+	Acts.prototype.finalizeProgress = function() {
+        //TODO
+    };
+
 	pluginProto.acts = new Acts();
 	
 	//////////////////////////////////////
@@ -166,53 +176,53 @@ cr.plugins_.IdiomProgressTrackingPlugin = function(runtime)
 	{
         console.log("Current idiom get: ", this.curIdiomIx);
 		ret.set_string(
-            this.idiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getTitle()
+            this.levelIdiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getTitle()
         );
 	};
 
 	Exps.prototype.getCurrentIdiomShortMeaning = function(ret)
 	{
 		ret.set_string(
-            this.idiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getMeaning()
+            this.levelIdiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getMeaning()
         );
 	};
 
 	Exps.prototype.getCurrentIdiomLongExplanation = function(ret)
 	{
 		ret.set_string(
-            this.idiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getExplanation()
+            this.levelIdiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getExplanation()
         );
 	};
 
 	Exps.prototype.getCurrentIdiomHintToFind = function(ret)
 	{
 		ret.set_string(
-            this.idiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getHint()
+            this.levelIdiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getHint()
         );
 	};
 
 	Exps.prototype.getCurrentIdiomStatus = function(ret)
 	{
 		ret.set_string(
-            this.idiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getStatus()
+            this.levelIdiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getStatus()
         );
 	};
 
 	Exps.prototype.getLevelIdiomsCount = function(ret) {
 		ret.set_int(
-            this.idiomsProgressTracker.getAllIdioms().length
+            this.levelIdiomsProgressTracker.getAllIdioms().length
         );
 	};
 
 	Exps.prototype.getLevelGuessedIdiomsCount = function(ret) {
 		ret.set_int(
-            this.idiomsProgressTracker.getGuessedIdiomsCount()
+            this.levelIdiomsProgressTracker.getGuessedIdiomsCount()
         );
 	};
 
 	Exps.prototype.getLevelFoundIdiomsCount = function(ret) {
 		ret.set_int(
-            this.idiomsProgressTracker.getFoundIdiomsCount()
+            this.levelIdiomsProgressTracker.getFoundIdiomsCount()
         );
 	};
 
