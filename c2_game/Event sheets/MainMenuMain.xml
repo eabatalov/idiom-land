@@ -29,11 +29,62 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="5483807338450445">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="3231701431767122" type="System" />
-            </conditions>
-            <actions />
-        </event-block>
+        <event-group description="" sid="2462146731093483" title="Game start">
+            <sub-events>
+                <event-block collapsed="1" sid="5483807338450445">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="3231701431767122" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" sid="2074067660843587" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Opacity">50</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Game ready may be fired before C2 event loop was started.&#x0D;&#x0A;So check isReady manually</comment>
+                        <event-block sid="175404168817901">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3063514116476417" type="System">
+                                    <param id="0" name="First value">IdiomlandGame.getIsGameReady</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9013759815641436" type="Function">
+                                    <param id="0" name="Name">&quot;onGameIsReady&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4949258356251412">
+                    <conditions>
+                        <condition id="0" name="On game ready" sid="4522123075981181" type="IdiomlandGame" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8551066200422389" type="Function">
+                            <param id="0" name="Name">&quot;onGameIsReady&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2760344273751576">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7761121441531327" type="Function">
+                            <param id="0" name="Name">&quot;onGameIsReady&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" sid="6149588472924605" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

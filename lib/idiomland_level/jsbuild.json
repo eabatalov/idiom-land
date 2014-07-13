@@ -1,0 +1,26 @@
+{
+    "module" : {
+        "name" : "lib-idiomland-level",
+        "description" : "",
+        "dependencies" : {
+            "base" : {
+                "lib-util" : [],
+                "lib-quest-level" : []
+             },
+            "noweb" : {
+                "lib-jquery-core-nodom" : []
+            }
+        },
+        "src" : {
+            "base" : [
+                "src/Idiom.js",
+                "src/IdiomLandLevel.js",
+                "src/IdiomLandLevelLoader.js",
+                "src/IdiomLevelApi.js"
+            ],
+            "web" : [
+                "src/AjaxQuestScriptLoader.js"
+            ]
+        }
+    }
+}

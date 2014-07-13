@@ -28,6 +28,12 @@
 	};
 };
 
+AddCondition(0, cf_trigger, "On game ready", "Setup", "On game ready",
+    "On game ready", "onGameReady");
+
+AddExpression(0, ef_return_number, "Is game ready", "Setup", "getIsGameReady",
+    "1 if game is ready alse 0");
+
 ACESDone();
 
 var property_list = [];

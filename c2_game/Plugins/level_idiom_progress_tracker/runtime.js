@@ -42,9 +42,12 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
 	instanceProto.onCreate = function()
 	{
 		// note the object is sealed after this call; ensure any properties you'll ever need are set on the object
-        this.levelIdiomsProgressTracker = null;
-        this.curIdiomIx = null;
-        QuestGame.instance.events.levelBeforeChange.subscribe(this, this.onLevelBeforeChange);
+        this.levelIdiomsProgressTracker = new LevelIdiomsProgressTracker();
+        this.levelIdiomsProgressTracker.events.idiomGuessed.subscribe(this, function() {
+            this.runtime.trigger(pluginProto.cnds.guessedIdiomsChanged, this);
+        });
+
+        this.curIdiomIx = 0;
 	};
 	
 	// called whenever an instance is destroyed
@@ -111,14 +114,6 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
 	};
 	/**END-PREVIEWONLY**/
 
-    instanceProto.onLevelBeforeChange = function(idiomLandLevel) {
-        this.levelIdiomsProgressTracker = new LevelIdiomsProgressTracker();
-        this.levelIdiomsProgressTracker.onIdiomGuessed(function() {
-            this.runtime.trigger(pluginProto.cnds.guessedIdiomsChanged, this);
-        }.bind(this));
-        this.curIdiomIx = 0;
-    };
-
 	//////////////////////////////////////
 	// Conditions
 	function Cnds() {};
@@ -138,10 +133,10 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
     Cnds.prototype.forEachIdiom = function() {
         var curEvent = this.runtime.getCurrentEventStack().current_event;
         this.curIdiomIx = 0;
-        for (;this.curIdiomIx < this.levelIdiomsProgressTracker.getAllIdioms().length; ++this.curIdiomIx) {
-            console.log("Current idiom for: ", this.curIdiomIx);
+        this.levelIdiomsProgressTracker.forEachIdiom(function(idiomId, idiom) {
+            ++this.curIdiomIx;
             this.doForEachIdiomTrigger(curEvent);
-        }
+        }.bind(this));
         return false;
     };
 

@@ -41,6 +41,13 @@ cr.plugins_.IdiomlandGamePlugin = function(runtime)
 	// called whenever an instance is created
 	instanceProto.onCreate = function()
 	{
+        if (IdiomLandGame.instance.getIsReady()) {
+            this.runtime.trigger(pluginProto.cnds.onGameReady, this);
+        } else {
+            IdiomLandGame.instance.events.ready.subscribe(this, function(game) {
+                this.runtime.trigger(pluginProto.cnds.onGameReady, this);
+            });
+        }
 	};
 	
 	// called whenever an instance is destroyed
@@ -111,6 +118,9 @@ cr.plugins_.IdiomlandGamePlugin = function(runtime)
 	// Conditions
 	function Cnds() {};
 
+    Cnds.prototype.onGameReady = function() {
+        return true; //cf_trigger was signaled explicitly
+    };
 	pluginProto.cnds = new Cnds();
 
 	//////////////////////////////////////
@@ -122,7 +132,13 @@ cr.plugins_.IdiomlandGamePlugin = function(runtime)
 	//////////////////////////////////////
 	// Expressions
 	function Exps() {};
-	
+
+	Exps.prototype.getIsGameReady = function(ret) {
+        ret.set_int(
+            IdiomLandGame.instance.getIsReady() ? 1 : 0
+        );
+    };
+
 	pluginProto.exps = new Exps();
 
 }());
