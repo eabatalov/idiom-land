@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandGamePlugin" version="0.100000001">Idiomland game</plugin>
+        <plugin author="Eugene/Learzing" id="IdiomlandLevelsPlugin" version="0.100000001">Idiomland levels</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Eugene/Idiomland" id="LevelIdiomProgressTrackingPlugin" version="0.100000001">LevelIdiomProgressTracker</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -193,25 +194,20 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="MainMenuLevel1Button" sid="7486525092793063">
+                <object-type name="MainMenuLevelButton" sid="7486525092793063">
                     <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="levelName" sid="7012575466259958" type="string" />
+                    </instance-variables>
                     <animation-folder expanded="1">
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9906154546557492" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="MainMenuLevel2Button" sid="6637483047047213">
-                    <plugin id="Sprite" />
-                    <animation-folder expanded="1">
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5568542312008219" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="0" name="Levels">
+        <object-folder expanded="1" name="Levels">
             <object-folder expanded="0" name="1demo">
                 <object-folder expanded="0" name="Stages">
                     <object-folder expanded="0" name="Intro">
@@ -4707,6 +4703,9 @@
                 <object-type name="IdiomlandGame" sid="1603271377434259">
                     <plugin id="IdiomlandGamePlugin" />
                 </object-type>
+                <object-type name="IdiomlandLevels" sid="8938034631113359">
+                    <plugin id="IdiomlandLevelsPlugin" />
+                </object-type>
             </object-folder>
         </object-folder>
     </object-folder>
@@ -4768,9 +4767,9 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout-folder expanded="0" name="Levels">
-            <layout-folder expanded="0" name="1Demo">
-                <layout>1Demo.xml</layout>
+        <layout-folder expanded="1" name="Levels">
+            <layout-folder expanded="1" name="1demo">
+                <layout>1demo.xml</layout>
             </layout-folder>
             <layout-folder expanded="0" name="99CommandorTriangle">
                 <layout>99CommandorTriangle.xml</layout>
@@ -4785,9 +4784,9 @@
             </layout-folder>
         </layout-folder>
     </layout-folder>
-    <event-folder expanded="0">
+    <event-folder expanded="1">
         <event-folder expanded="1" name="Levels">
-            <event-folder expanded="1" name="Common">
+            <event-folder expanded="0" name="Common">
                 <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>Quest.xml</event-sheet>
                     <event-sheet>Bootstrap.xml</event-sheet>
@@ -4833,7 +4832,7 @@
                 <event-sheet>LevelDebug.xml</event-sheet>
                 <event-sheet>LevelCommon.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="0" name="1Demo">
+            <event-folder expanded="1" name="1demo">
                 <event-folder expanded="0" name="Stages">
                     <event-folder expanded="0" name="BalloonSeller">
                         <event-sheet>BalloonSeller.xml</event-sheet>
@@ -4853,18 +4852,18 @@
                     <event-folder expanded="0" name="Taxi">
                         <event-sheet>Taxi.xml</event-sheet>
                     </event-folder>
-                    <event-sheet>1DemoAllStages.xml</event-sheet>
+                    <event-sheet>1demoAllStages.xml</event-sheet>
                 </event-folder>
-                <event-sheet>1DemoMain.xml</event-sheet>
-                <event-sheet>1DemoNpcAnimationRunners.xml</event-sheet>
-                <event-sheet>1DemoNpcScmlSpritesBindings.xml</event-sheet>
+                <event-sheet>1demoMain.xml</event-sheet>
+                <event-sheet>1demoNpcAnimationRunners.xml</event-sheet>
+                <event-sheet>1demoNpcScmlSpritesBindings.xml</event-sheet>
             </event-folder>
             <event-folder expanded="0" name="99CommandorTriangle">
                 <event-sheet>99CommandorTriangleMain.xml</event-sheet>
             </event-folder>
         </event-folder>
         <event-folder expanded="1" name="Menus">
-            <event-folder expanded="0" name="LevelResults">
+            <event-folder expanded="1" name="LevelResults">
                 <event-sheet>LevelResultsMain.xml</event-sheet>
             </event-folder>
             <event-folder expanded="1" name="MainMenu">
@@ -4888,6 +4887,7 @@
         <global-instance type="QuestInappPurchase" uid="301" />
         <global-instance type="QuestPersistentStorage" uid="309" />
         <global-instance type="IdiomlandGame" uid="310" />
+        <global-instance type="IdiomlandLevels" uid="315" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
