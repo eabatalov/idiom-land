@@ -29,6 +29,17 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="4414382258113365">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9174286219344076" type="Touch">
+                    <param id="0" name="Object">MainMenuSaveGameButton</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="9986766454627452" type="MainMenuSaveGameButton" />
+            </conditions>
+            <actions>
+                <action id="0" name="Save game" sid="8988930036666261" type="QuestGame" />
+            </actions>
+        </event-block>
         <event-group description="" sid="2462146731093483" title="Game start">
             <sub-events>
                 <event-block collapsed="1" sid="5483807338450445">

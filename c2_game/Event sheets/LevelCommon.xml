@@ -8,5 +8,17 @@
         <include>IdiomDialogCompletion</include>
         <include>FoxySimpleSCMLSpritesBinding</include>
         <include>LevelDebug</include>
+        <event-block sid="1907225801959628">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="3619073238994487" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Finalize level idioms progress" sid="2761617945024757" type="LevelIdiomProgressTracker" />
+                <action id="0" name="Call function" sid="2794971987985416" type="Function">
+                    <param id="0" name="Name">&quot;LevelFinished&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

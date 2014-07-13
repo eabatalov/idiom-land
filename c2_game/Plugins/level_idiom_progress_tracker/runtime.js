@@ -48,6 +48,7 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
         });
 
         this.curIdiomIx = 0;
+        this.curIdiom = null;
 	};
 	
 	// called whenever an instance is destroyed
@@ -133,9 +134,11 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
     Cnds.prototype.forEachIdiom = function() {
         var curEvent = this.runtime.getCurrentEventStack().current_event;
         this.curIdiomIx = 0;
+        this.curIdiom = null;
         this.levelIdiomsProgressTracker.forEachIdiom(function(idiomId, idiom) {
-            ++this.curIdiomIx;
+            this.curIdiom = idiom;
             this.doForEachIdiomTrigger(curEvent);
+            ++this.curIdiomIx;
         }.bind(this));
         return false;
     };
@@ -151,7 +154,7 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
 	function Acts() {};
 
 	Acts.prototype.finalizeProgress = function() {
-        //TODO
+        this.levelIdiomsProgressTracker.finalizeProgress();
     };
 
 	pluginProto.acts = new Acts();
@@ -169,43 +172,42 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
 
 	Exps.prototype.getCurrentIdiomTitle = function(ret)
 	{
-        console.log("Current idiom get: ", this.curIdiomIx);
 		ret.set_string(
-            this.levelIdiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getTitle()
+            this.curIdiom.getTitle()
         );
 	};
 
 	Exps.prototype.getCurrentIdiomShortMeaning = function(ret)
 	{
 		ret.set_string(
-            this.levelIdiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getMeaning()
+            this.curIdiom.getMeaning()
         );
 	};
 
 	Exps.prototype.getCurrentIdiomLongExplanation = function(ret)
 	{
 		ret.set_string(
-            this.levelIdiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getExplanation()
+            this.curIdiom.getExplanation()
         );
 	};
 
 	Exps.prototype.getCurrentIdiomHintToFind = function(ret)
 	{
 		ret.set_string(
-            this.levelIdiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getHint()
+            this.curIdiom.getHint()
         );
 	};
 
 	Exps.prototype.getCurrentIdiomStatus = function(ret)
 	{
 		ret.set_string(
-            this.levelIdiomsProgressTracker.getAllIdioms()[this.curIdiomIx].getStatus()
+            this.curIdiom.getStatus()
         );
 	};
 
 	Exps.prototype.getLevelIdiomsCount = function(ret) {
 		ret.set_int(
-            this.levelIdiomsProgressTracker.getAllIdioms().length
+            this.levelIdiomsProgressTracker.getAllIdiomsCount()
         );
 	};
 

@@ -1,18 +1,34 @@
 function LevelIdiomsProgressTracker() {
     this.events = {
-        idiomGuessed : new SEEvent(),
-        //TODO maybe?
-        idiomsChanged : new SEEvent()
+        idiomGuessed : new SEEvent(/*Idiom*/),
     };
 
     this.currentLevel = null;
+    this.idiomStatusChangeSubscriptions = [];
+    this.isProgressFinalized = false;
 
     IdiomLandGame.instance.events.levelChanged.
         subscribe(this, this.onCurrentLevelChanged);
 }
 
 LevelIdiomsProgressTracker.prototype.onCurrentLevelChanged = function(level) {
+    jQuery.each(this.idiomStatusChangeSubscriptions, function(ix, subs) {
+        subs.delete();
+    });
+    this.idiomStatusChangeSubscriptions = [];
+
     this.currentLevel = level;
+    this.isProgressFinalized = false;
+
+    this.currentLevel.forEachIdiom(function(idiomId, idiom) {
+        idiom.events.statusChanged.subscribe(this, this.onCurrentLevelIdiomStatusChanged);
+    }.bind(this));
+};
+
+LevelIdiomsProgressTracker.prototype.onCurrentLevelIdiomStatusChanged = function(idiom) {
+   if (idiom.getStatus() === Idiom.STATUS.GUESSED) {
+        this.events.idiomGuessed.publish(idiom);
+   } 
 };
 
 LevelIdiomsProgressTracker.prototype.forEachIdiom = function(callback/*(idiomId, idiom)*/) {
@@ -28,6 +44,12 @@ LevelIdiomsProgressTracker.prototype.getIdiomsWithStatusCount = function(status)
     return count;
 };
 
+LevelIdiomsProgressTracker.prototype.getAllIdiomsCount = function() {
+    return this.getIdiomsWithStatusCount(Idiom.STATUS.GUESSED) +
+        this.getIdiomsWithStatusCount(Idiom.STATUS.IGNORED) +
+        this.getIdiomsWithStatusCount(Idiom.STATUS.FAILED);
+};
+
 LevelIdiomsProgressTracker.prototype.getGuessedIdiomsCount = function() {
     return this.getIdiomsWithStatusCount(Idiom.STATUS.GUESSED);
 };
@@ -35,4 +57,13 @@ LevelIdiomsProgressTracker.prototype.getGuessedIdiomsCount = function() {
 LevelIdiomsProgressTracker.prototype.getFoundIdiomsCount = function() {
     return this.getGuessedIdiomsCount() +
         this.getIdiomsWithStatusCount(Idiom.STATUS.FAILED);
+};
+
+LevelIdiomsProgressTracker.prototype.finalizeProgress = function() {
+    if (this.isProgressFinalized)
+        return;
+
+    this.currentLevel.finalizeProgress();
+
+    this.isProgressFinalized = true;
 };

@@ -209,6 +209,14 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="MainMenuSaveGameButton" sid="5752288299155748">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="673486915771021" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
         </object-folder>
         <object-folder expanded="0" name="Levels">
@@ -4767,7 +4775,7 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout-folder expanded="0" name="Levels">
             <layout-folder expanded="0" name="1Demo">
                 <layout>1Demo.xml</layout>
@@ -4776,17 +4784,17 @@
                 <layout>99CommandorTriangle.xml</layout>
             </layout-folder>
         </layout-folder>
-        <layout-folder expanded="0" name="Menus">
+        <layout-folder expanded="1" name="Menus">
             <layout-folder expanded="0" name="LevelResults">
                 <layout>LevelResults.xml</layout>
             </layout-folder>
-            <layout-folder expanded="0" name="MainMenu">
+            <layout-folder expanded="1" name="MainMenu">
                 <layout>MainMenu.xml</layout>
             </layout-folder>
         </layout-folder>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="Levels">
+        <event-folder expanded="0" name="Levels">
             <event-folder expanded="0" name="Common">
                 <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>Quest.xml</event-sheet>
@@ -4833,7 +4841,7 @@
                 <event-sheet>LevelDebug.xml</event-sheet>
                 <event-sheet>LevelCommon.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="1" name="1Demo">
+            <event-folder expanded="0" name="1Demo">
                 <event-folder expanded="0" name="Stages">
                     <event-folder expanded="0" name="BalloonSeller">
                         <event-sheet>BalloonSeller.xml</event-sheet>
