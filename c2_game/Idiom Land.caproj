@@ -200,11 +200,22 @@
                     <instance-variables>
                         <instance-variable name="levelName" sid="7012575466259958" type="string" />
                     </instance-variables>
+                    <container>
+                        <type>MainMenuLevelButton</type>
+                        <type>MainMenuLevelNameText</type>
+                    </container>
                     <animation-folder expanded="1">
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9906154546557492" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
+                </object-type>
+                <object-type name="MainMenuLevelNameText" sid="3943528490161566">
+                    <plugin id="Text" />
+                    <container>
+                        <type>MainMenuLevelButton</type>
+                        <type>MainMenuLevelNameText</type>
+                    </container>
                 </object-type>
             </object-folder>
         </object-folder>
@@ -4772,7 +4783,7 @@
     </families>
     <layout-folder expanded="1">
         <layout-folder expanded="1" name="Levels">
-            <layout-folder expanded="1" name="1demo">
+            <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
             <layout-folder expanded="0" name="99CommandorTriangle">
@@ -4783,7 +4794,7 @@
             <layout-folder expanded="0" name="LevelResults">
                 <layout>LevelResults.xml</layout>
             </layout-folder>
-            <layout-folder expanded="1" name="MainMenu">
+            <layout-folder expanded="0" name="MainMenu">
                 <layout>MainMenu.xml</layout>
             </layout-folder>
         </layout-folder>
@@ -4867,10 +4878,10 @@
             </event-folder>
         </event-folder>
         <event-folder expanded="1" name="Menus">
-            <event-folder expanded="0" name="LevelResults">
+            <event-folder expanded="1" name="LevelResults">
                 <event-sheet>LevelResultsMain.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="0" name="MainMenu">
+            <event-folder expanded="1" name="MainMenu">
                 <event-sheet>MainMenuMain.xml</event-sheet>
             </event-folder>
         </event-folder>

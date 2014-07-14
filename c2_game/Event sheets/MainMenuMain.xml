@@ -38,6 +38,13 @@
                             <param id="0" name="Instance variable">levelName</param>
                             <param id="1" name="Value">IdiomlandLevels.getCurrentLevelName</param>
                         </action>
+                        <action id="0" name="Set text" sid="7953060978842487" type="MainMenuLevelNameText">
+                            <param id="0" name="Text">IdiomlandLevels.getCurrentLevelName</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="6401332365830951" type="MainMenuLevelNameText">
+                            <param id="0" name="X">MainMenuLevelButton.X</param>
+                            <param id="1" name="Y">MainMenuLevelButton.Y + MainMenuLevelButton.Height / 2 + MainMenuLevelNameText.Height / 2</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Should be before &apos;first show&apos; as &apos;first show&apos; modifies GAME_IS_READY</comment>
@@ -140,6 +147,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="4235524927984574" type="MainMenuLevelButton" />
+                        <action id="-9" name="Destroy" sid="6146739173019676" type="MainMenuLevelNameText" />
                     </actions>
                     <sub-events>
                         <event-block sid="7287718458173628">
