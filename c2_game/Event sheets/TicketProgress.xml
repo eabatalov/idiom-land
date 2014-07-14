@@ -44,5 +44,22 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="3296884358783962">
+            <conditions>
+                <condition id="0" name="On function" sid="8727229141355815" type="Function">
+                    <param id="0" name="Name">&quot;LevelFinished&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7321083069473894" type="System">
+                    <param id="0" name="Variable">TICKETS_OVERALL</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="7822079475067109" type="System">
+                    <param id="0" name="Variable">TICKETS_COLLECTED</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

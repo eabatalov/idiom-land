@@ -18,7 +18,9 @@
                 <variable constant="1" name="LEVEL_INITIAL_STAGE" sid="4210704395276113" static="0" type="text">intro</variable>
                 <event-block sid="2994783783040874">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="9886935471380511" type="System" />
+                        <condition id="0" name="On function" sid="9886935471380511" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="8930605218157595" type="Function">
@@ -36,6 +38,10 @@
                     <actions>
                         <action id="0" name="Call function" sid="9688480019624415" type="Function">
                             <param id="0" name="Name">&quot;CarouselInit&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="3499156153788186" type="Function">
+                            <param id="0" name="Name">&quot;ExitBusInit&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>

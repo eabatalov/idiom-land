@@ -4,167 +4,299 @@
     <name>1demoNpcScmlSpritesBindings</name>
     <events>
         <comment>Define level  NPCs animation sprite bindings here</comment>
-        <event-block sid="5690928350207043">
-            <conditions>
-                <condition id="666" name="On initialised" sid="2133755301587494" type="taxiHindiSCML" />
-                <condition id="-14" name="Pick by unique ID" sid="2204366834520169" type="NPC">
-                    <param id="0" name="Unique ID">19</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="666" name="Associate object type" sid="80923873426539" type="taxiHindiSCML">
-                    <param id="0" name="Object">hindu_hand</param>
-                    <param id="1" name="Name">&quot;hand&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="4518216508167966" type="taxiHindiSCML">
-                    <param id="0" name="Object">hindu_eye1_000</param>
-                    <param id="1" name="Name">&quot;eye1_000&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="8449269901775349" type="taxiHindiSCML">
-                    <param id="0" name="Object">hindu_body</param>
-                    <param id="1" name="Name">&quot;body&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="5159645524763994" type="taxiHindiSCML">
-                    <param id="0" name="Object">hindu_head</param>
-                    <param id="1" name="Name">&quot;head&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="2753475262271382" type="taxiHindiSCML">
-                    <param id="0" name="Object">hindu_mustache</param>
-                    <param id="1" name="Name">&quot;mustache&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="9715099512249428" type="taxiHindiSCML">
-                    <param id="0" name="Object">hindu_eye1</param>
-                    <param id="1" name="Name">&quot;eye1&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="3005510325834714" type="taxiHindiSCML">
-                    <param id="0" name="Object">hindu_brows</param>
-                    <param id="1" name="Name">&quot;brows&quot;</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="3971297747776503" type="taxiHindiSCML">
-                    <param id="0" name="Object">NPC</param>
-                    <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
-                </action>
-                <action id="0" name="Call function" sid="9720405317845086" type="Function">
-                    <param id="0" name="Name">&quot;AnimInited&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2184851624869588">
-            <conditions>
-                <condition id="666" name="On initialised" sid="6982621606813343" type="veiderSCML" />
-                <condition id="-14" name="Pick by unique ID" sid="448572840209362" type="NPC">
-                    <param id="0" name="Unique ID">49</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="666" name="Associate object type" sid="7524834984544806" type="veiderSCML">
-                    <param id="0" name="Object">veider_body</param>
-                    <param id="1" name="Name">&quot;body&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="5697909055825983" type="veiderSCML">
-                    <param id="0" name="Object">veider_head</param>
-                    <param id="1" name="Name">&quot;head&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="7141855755339671" type="veiderSCML">
-                    <param id="0" name="Object">veider_eye2</param>
-                    <param id="1" name="Name">&quot;eye2&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="4677873697488636" type="veiderSCML">
-                    <param id="0" name="Object">veider_eye1</param>
-                    <param id="1" name="Name">&quot;eye1&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="8337441324505902" type="veiderSCML">
-                    <param id="0" name="Object">veider_balloons</param>
-                    <param id="1" name="Name">&quot;balloons&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="4024226229850499" type="veiderSCML">
-                    <param id="0" name="Object">veider_hand2</param>
-                    <param id="1" name="Name">&quot;hand2&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="3301890229314846" type="veiderSCML">
-                    <param id="0" name="Object">veider_hand1</param>
-                    <param id="1" name="Name">&quot;hand1&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="7423161854816458" type="veiderSCML">
-                    <param id="0" name="Object">veider_mouth4</param>
-                    <param id="1" name="Name">&quot;mouth4&quot;</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="9465450781200583" type="veiderSCML">
-                    <param id="0" name="Object">NPC</param>
-                    <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
-                </action>
-                <action id="0" name="Call function" sid="2917882733864812" type="Function">
-                    <param id="0" name="Name">&quot;AnimInited&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3872128304082602">
-            <conditions>
-                <condition id="666" name="On initialised" sid="3087516722215817" type="captainSCML" />
-                <condition id="-14" name="Pick by unique ID" sid="6189256422647679" type="NPC">
-                    <param id="0" name="Unique ID">41</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="666" name="Associate object type" sid="1850194242444953" type="captainSCML">
-                    <param id="0" name="Object">captain_feet1</param>
-                    <param id="1" name="Name">&quot;feet1&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="6257430710688715" type="captainSCML">
-                    <param id="0" name="Object">captain_eye1_000</param>
-                    <param id="1" name="Name">&quot;eye1_000&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="7718550074547062" type="captainSCML">
-                    <param id="0" name="Object">captain_broun_000</param>
-                    <param id="1" name="Name">&quot;broun_000&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="7931966175345349" type="captainSCML">
-                    <param id="0" name="Object">captain_head</param>
-                    <param id="1" name="Name">&quot;head&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="2639811042212262" type="captainSCML">
-                    <param id="0" name="Object">captain_body</param>
-                    <param id="1" name="Name">&quot;body&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="784410612185876" type="captainSCML">
-                    <param id="0" name="Object">captain_mustache</param>
-                    <param id="1" name="Name">&quot;mustache&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="1074044024821637" type="captainSCML">
-                    <param id="0" name="Object">captain_feet2</param>
-                    <param id="1" name="Name">&quot;feet2&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="4293708631786738" type="captainSCML">
-                    <param id="0" name="Object">captain_tube</param>
-                    <param id="1" name="Name">&quot;tube&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="3767822816052278" type="captainSCML">
-                    <param id="0" name="Object">captain_hand</param>
-                    <param id="1" name="Name">&quot;hand&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="9544096773421099" type="captainSCML">
-                    <param id="0" name="Object">captain_hat</param>
-                    <param id="1" name="Name">&quot;hat&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="1608176284511607" type="captainSCML">
-                    <param id="0" name="Object">captain_eye1</param>
-                    <param id="1" name="Name">&quot;eye1&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="5677448805012485" type="captainSCML">
-                    <param id="0" name="Object">captain_broun</param>
-                    <param id="1" name="Name">&quot;broun&quot;</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="9329464008465579" type="captainSCML">
-                    <param id="0" name="Object">NPC</param>
-                    <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
-                </action>
-                <action id="0" name="Call function" sid="5096084481424379" type="Function">
-                    <param id="0" name="Name">&quot;AnimInited&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group collapsed="1" description="" sid="2759235104733835" title="VeiderSCML">
+            <sub-events>
+                <event-block sid="9552203827020075">
+                    <conditions>
+                        <condition id="0" name="On function" sid="35548441976617" type="Function">
+                            <param id="0" name="Name">&quot;InitVeiderSCML&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="8231052091156669" type="NPC">
+                            <param id="0" name="Unique ID">49</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="666" name="Associate object type" sid="7524834984544806" type="veiderSCML">
+                            <param id="0" name="Object">veider_body</param>
+                            <param id="1" name="Name">&quot;body&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="5697909055825983" type="veiderSCML">
+                            <param id="0" name="Object">veider_head</param>
+                            <param id="1" name="Name">&quot;head&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="7141855755339671" type="veiderSCML">
+                            <param id="0" name="Object">veider_eye2</param>
+                            <param id="1" name="Name">&quot;eye2&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="4677873697488636" type="veiderSCML">
+                            <param id="0" name="Object">veider_eye1</param>
+                            <param id="1" name="Name">&quot;eye1&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="8337441324505902" type="veiderSCML">
+                            <param id="0" name="Object">veider_balloons</param>
+                            <param id="1" name="Name">&quot;balloons&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="4024226229850499" type="veiderSCML">
+                            <param id="0" name="Object">veider_hand2</param>
+                            <param id="1" name="Name">&quot;hand2&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="3301890229314846" type="veiderSCML">
+                            <param id="0" name="Object">veider_hand1</param>
+                            <param id="1" name="Name">&quot;hand1&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="7423161854816458" type="veiderSCML">
+                            <param id="0" name="Object">veider_mouth4</param>
+                            <param id="1" name="Name">&quot;mouth4&quot;</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="9465450781200583" type="veiderSCML">
+                            <param id="0" name="Object">NPC</param>
+                            <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
+                        </action>
+                        <action id="0" name="Add key" sid="2254260321458212" type="InitedAnimsDict">
+                            <param id="0" name="Key">veiderSCML.entityName</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2917882733864812" type="Function">
+                            <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2184851624869588">
+                    <conditions>
+                        <condition id="666" name="On initialised" sid="6982621606813343" type="veiderSCML" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5841861848284199" type="Function">
+                            <param id="0" name="Name">&quot;InitVeiderSCML&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="500796624509317">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4473430458850128" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8537451062563548">
+                            <conditions>
+                                <condition id="3" name="Has key" sid="9615509713703512" type="InitedAnimsDict">
+                                    <param id="0" name="Key">veiderSCML.entityName</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3562467055770036" type="Function">
+                                    <param id="0" name="Name">&quot;InitVeiderSCML&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="548113854466863" title="HindiSCML">
+            <sub-events>
+                <event-block sid="3703419311412493">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2730480685148612" type="Function">
+                            <param id="0" name="Name">&quot;InitHindiSCML&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2204366834520169" type="NPC">
+                            <param id="0" name="Unique ID">19</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="666" name="Associate object type" sid="80923873426539" type="taxiHindiSCML">
+                            <param id="0" name="Object">hindu_hand</param>
+                            <param id="1" name="Name">&quot;hand&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="4518216508167966" type="taxiHindiSCML">
+                            <param id="0" name="Object">hindu_eye1_000</param>
+                            <param id="1" name="Name">&quot;eye1_000&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="8449269901775349" type="taxiHindiSCML">
+                            <param id="0" name="Object">hindu_body</param>
+                            <param id="1" name="Name">&quot;body&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="5159645524763994" type="taxiHindiSCML">
+                            <param id="0" name="Object">hindu_head</param>
+                            <param id="1" name="Name">&quot;head&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="2753475262271382" type="taxiHindiSCML">
+                            <param id="0" name="Object">hindu_mustache</param>
+                            <param id="1" name="Name">&quot;mustache&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="9715099512249428" type="taxiHindiSCML">
+                            <param id="0" name="Object">hindu_eye1</param>
+                            <param id="1" name="Name">&quot;eye1&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="3005510325834714" type="taxiHindiSCML">
+                            <param id="0" name="Object">hindu_brows</param>
+                            <param id="1" name="Name">&quot;brows&quot;</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="3971297747776503" type="taxiHindiSCML">
+                            <param id="0" name="Object">NPC</param>
+                            <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
+                        </action>
+                        <action id="0" name="Add key" sid="9627548499430506" type="InitedAnimsDict">
+                            <param id="0" name="Key">taxiHindiSCML.entityName</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="9720405317845086" type="Function">
+                            <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5690928350207043">
+                    <conditions>
+                        <condition id="666" name="On initialised" sid="2133755301587494" type="taxiHindiSCML" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5871557877392367" type="Function">
+                            <param id="0" name="Name">&quot;InitHindiSCML&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2240015779887386">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4353117590764075" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1911127932280788">
+                            <conditions>
+                                <condition id="3" name="Has key" sid="9005159033506416" type="InitedAnimsDict">
+                                    <param id="0" name="Key">taxiHindiSCML.entityName</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8407832637520303" type="Function">
+                                    <param id="0" name="Name">&quot;InitHindiSCML&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="3953168523223821" title="CaptainSCML">
+            <sub-events>
+                <event-block sid="9808445706255251">
+                    <conditions>
+                        <condition id="0" name="On function" sid="869270672606678" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6596593179089528">
+                            <conditions>
+                                <condition id="3" name="Has key" sid="2420078482367798" type="InitedAnimsDict">
+                                    <param id="0" name="Key">captainSCML.entityName</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7885843096316263" type="Function">
+                                    <param id="0" name="Name">&quot;InitCaptainSCML&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3872128304082602">
+                    <conditions>
+                        <condition id="666" name="On initialised" sid="3087516722215817" type="captainSCML" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1784339469743315" type="Function">
+                            <param id="0" name="Name">&quot;InitCaptainSCML&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7639803233349926">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1144369014478996" type="Function">
+                            <param id="0" name="Name">&quot;InitCaptainSCML&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="9602601153268583" type="NPC">
+                            <param id="0" name="Unique ID">41</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="666" name="Associate object type" sid="2445906481043113" type="captainSCML">
+                            <param id="0" name="Object">captain_feet1</param>
+                            <param id="1" name="Name">&quot;feet1&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="3307163986931435" type="captainSCML">
+                            <param id="0" name="Object">captain_eye1_000</param>
+                            <param id="1" name="Name">&quot;eye1_000&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="7546557403314718" type="captainSCML">
+                            <param id="0" name="Object">captain_broun_000</param>
+                            <param id="1" name="Name">&quot;broun_000&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="3747294592812786" type="captainSCML">
+                            <param id="0" name="Object">captain_head</param>
+                            <param id="1" name="Name">&quot;head&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="6624072301255303" type="captainSCML">
+                            <param id="0" name="Object">captain_body</param>
+                            <param id="1" name="Name">&quot;body&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="9804943275759049" type="captainSCML">
+                            <param id="0" name="Object">captain_mustache</param>
+                            <param id="1" name="Name">&quot;mustache&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="2191759606034371" type="captainSCML">
+                            <param id="0" name="Object">captain_feet2</param>
+                            <param id="1" name="Name">&quot;feet2&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="2772428932974408" type="captainSCML">
+                            <param id="0" name="Object">captain_tube</param>
+                            <param id="1" name="Name">&quot;tube&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="2931545436545084" type="captainSCML">
+                            <param id="0" name="Object">captain_hand</param>
+                            <param id="1" name="Name">&quot;hand&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="3809800793025821" type="captainSCML">
+                            <param id="0" name="Object">captain_hat</param>
+                            <param id="1" name="Name">&quot;hat&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="7134463797187824" type="captainSCML">
+                            <param id="0" name="Object">captain_eye1</param>
+                            <param id="1" name="Name">&quot;eye1&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="9419692908819134" type="captainSCML">
+                            <param id="0" name="Object">captain_broun</param>
+                            <param id="1" name="Name">&quot;broun&quot;</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="3583274039794135" type="captainSCML">
+                            <param id="0" name="Object">NPC</param>
+                            <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
+                        </action>
+                        <action id="0" name="Add key" sid="4489035795691131" type="InitedAnimsDict">
+                            <param id="0" name="Key">captainSCML.entityName</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1465311428060414" type="Function">
+                            <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

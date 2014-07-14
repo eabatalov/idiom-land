@@ -11,6 +11,7 @@
     <saved-with-version>17300</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandGamePlugin" version="0.100000001">Idiomland game</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandLevelsPlugin" version="0.100000001">Idiomland levels</plugin>
@@ -207,9 +208,9 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="Levels">
+        <object-folder expanded="0" name="Levels">
             <object-folder expanded="0" name="1demo">
-                <object-folder expanded="0" name="Stages">
+                <object-folder expanded="1" name="Stages">
                     <object-folder expanded="0" name="Intro">
                         <object-folder expanded="0" name="Helpers">
                             <object-type name="JumpHelper" sid="3052283865919932">
@@ -1632,7 +1633,7 @@
                     </object-folder>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="0" name="Common">
+            <object-folder expanded="1" name="Common">
                 <object-folder expanded="0" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
@@ -4696,6 +4697,9 @@
                     <object-type name="Mouse" sid="226545771162981">
                         <plugin id="Mouse" />
                     </object-type>
+                    <object-type global="1" name="InitedAnimsDict" sid="5526768729414874">
+                        <plugin id="Dictionary" />
+                    </object-type>
                 </object-folder>
                 <object-type name="LevelIdiomProgressTracker" sid="504992448476046">
                     <plugin id="LevelIdiomProgressTrackingPlugin" />
@@ -4824,7 +4828,7 @@
                         </event-folder>
                     </event-folder>
                     <event-folder expanded="0" name="F">
-                        <event-folder expanded="0" name="Foxy">
+                        <event-folder expanded="1" name="Foxy">
                             <event-sheet>FoxySimpleSCMLSpritesBinding.xml</event-sheet>
                         </event-folder>
                     </event-folder>
@@ -4863,10 +4867,10 @@
             </event-folder>
         </event-folder>
         <event-folder expanded="1" name="Menus">
-            <event-folder expanded="1" name="LevelResults">
+            <event-folder expanded="0" name="LevelResults">
                 <event-sheet>LevelResultsMain.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="1" name="MainMenu">
+            <event-folder expanded="0" name="MainMenu">
                 <event-sheet>MainMenuMain.xml</event-sheet>
             </event-folder>
         </event-folder>

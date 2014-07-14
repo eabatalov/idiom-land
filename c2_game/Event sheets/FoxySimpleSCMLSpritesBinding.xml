@@ -3,9 +3,47 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FoxySimpleSCMLSpritesBinding</name>
     <events>
+        <comment>Already loaded SCML file case</comment>
+        <event-block sid="3705880361721988">
+            <conditions>
+                <condition id="0" name="On function" sid="4016498628516764" type="Function">
+                    <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="54660934737665">
+                    <conditions>
+                        <condition id="3" name="Has key" sid="1556045891143163" type="InitedAnimsDict">
+                            <param id="0" name="Key">PlayerSCML.entityName</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9318585646409481" type="Function">
+                            <param id="0" name="Name">&quot;InitPlayerSCML&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>First game load and scml file loaded on layout start case</comment>
         <event-block any="1" sid="5696395531939232">
             <conditions>
                 <condition id="666" name="On initialised" sid="4830977351397485" type="PlayerSCML" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="9642173694223748" type="Function">
+                    <param id="0" name="Name">&quot;InitPlayerSCML&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3651580525504251">
+            <conditions>
+                <condition id="0" name="On function" sid="3928983191273481" type="Function">
+                    <param id="0" name="Name">&quot;InitPlayerSCML&quot;</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="1857409130494137" type="System">
@@ -59,6 +97,10 @@
                 <action id="666" name="Associate object type" sid="9026714750983605" type="PlayerSCML">
                     <param id="0" name="Object">foxy_simple_hand1</param>
                     <param id="1" name="Name">&quot;hand1&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="2941282593584218" type="InitedAnimsDict">
+                    <param id="0" name="Key">PlayerSCML.entityName</param>
+                    <param id="1" name="Value">1</param>
                 </action>
                 <action id="0" name="Call function" sid="6701742387688106" type="Function">
                     <param id="0" name="Name">&quot;AnimInited&quot;</param>
