@@ -111,7 +111,7 @@ cr.plugins_.IdiomlandLevelsPlugin = function(runtime)
 	};
 
     instanceProto._setCurrentLevel = function(level, levelIx) {
-        this.curLevelIx = 0;
+        this.curLevelIx = levelIx;
         this.curIdiomIx = 0;
         this.curLevel = level;
         this.curLevel.forEachIdiom(function(idiomId, idiom) {

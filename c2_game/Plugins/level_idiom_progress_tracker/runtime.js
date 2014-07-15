@@ -235,11 +235,8 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
 	};
 
     Exps.prototype.getNextLevelName = function(ret) {
-        var nextLevel = IdiomLandGame.instance.
-            getLevelsProgressManager().getNextLevel(this.curLevel);
-
         ret.set_string(
-            nextLevel ? nextLevel.getName() : ""
+            this.levelIdiomsProgressTracker.getNextLevelName()
         );
     };
 

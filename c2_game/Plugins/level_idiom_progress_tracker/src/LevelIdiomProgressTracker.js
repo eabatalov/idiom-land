@@ -75,3 +75,10 @@ LevelIdiomsProgressTracker.prototype.isLevelSucceeded = function() {
 LevelIdiomsProgressTracker.prototype.getLevelName = function() {
     return this.currentLevel.getName();
 };
+
+LevelIdiomsProgressTracker.prototype.getNextLevelName = function() {
+    var nextLevel = IdiomLandGame.instance.
+            getLevelsProgressManager().getNextLevel(this.currentLevel);
+
+    return nextLevel ? nextLevel.getName() : "";
+};

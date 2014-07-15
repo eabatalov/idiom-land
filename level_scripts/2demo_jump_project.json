@@ -1,0 +1,507 @@
+{
+	"script": {
+		"ver": 1,
+		"name": "2demo_jump",
+		"stages": [
+			{
+				"ver": 1,
+				"stageNodeId": 11,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 11,
+						"type": 9,
+						"label": "init",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							0
+						],
+						"props": {
+							"name": "init",
+							"objs": [
+								"Player"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 12,
+						"type": 8,
+						"label": "",
+						"continue": true,
+						"inCondIds": [
+							0
+						],
+						"outCondIds": [
+							1
+						],
+						"props": {
+							"objs": [
+								"Player"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 13,
+						"type": 10,
+						"label": "Reg the gen",
+						"continue": true,
+						"inCondIds": [
+							1
+						],
+						"outCondIds": [
+							2
+						],
+						"props": {
+							"name": "idiomRegister",
+							"source": "js",
+							"params": [
+								{
+									"type": "str",
+									"name": "id",
+									"value": "TheGen",
+									"$$hashKey": "016"
+								},
+								{
+									"type": "str",
+									"name": "title",
+									"value": "The gen",
+									"$$hashKey": "018"
+								},
+								{
+									"type": "str",
+									"name": "meaning",
+									"value": "Information",
+									"$$hashKey": "01A"
+								},
+								{
+									"type": "str",
+									"name": "hint",
+									"value": "Try to speak with a policeman",
+									"$$hashKey": "01C"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 14,
+						"type": 10,
+						"label": "Reg dunno",
+						"continue": true,
+						"inCondIds": [
+							2
+						],
+						"outCondIds": [
+							3
+						],
+						"props": {
+							"name": "idiomRegister",
+							"source": "js",
+							"params": [
+								{
+									"type": "str",
+									"name": "id",
+									"value": "Dunno",
+									"$$hashKey": "016"
+								},
+								{
+									"type": "str",
+									"name": "title",
+									"value": "Dunno",
+									"$$hashKey": "018"
+								},
+								{
+									"type": "str",
+									"name": "meaning",
+									"value": "Don't know",
+									"$$hashKey": "01A"
+								},
+								{
+									"type": "str",
+									"name": "hint",
+									"value": "Try to speak with a balloon seller",
+									"$$hashKey": "01C"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 15,
+						"type": 10,
+						"label": "Reg circle of life",
+						"continue": true,
+						"inCondIds": [
+							3
+						],
+						"outCondIds": [
+							4
+						],
+						"props": {
+							"name": "idiomRegister",
+							"source": "js",
+							"params": [
+								{
+									"type": "str",
+									"name": "id",
+									"value": "TheCircleOfLife",
+									"$$hashKey": "016"
+								},
+								{
+									"type": "str",
+									"name": "title",
+									"value": "The circle of life",
+									"$$hashKey": "018"
+								},
+								{
+									"type": "str",
+									"name": "meaning",
+									"value": "Sequence of stages every living thing passes through",
+									"$$hashKey": "01A"
+								},
+								{
+									"type": "str",
+									"name": "hint",
+									"value": "Try to speak with captain",
+									"$$hashKey": "01C"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 16,
+						"type": 10,
+						"label": "Reg put a sock",
+						"continue": true,
+						"inCondIds": [
+							4
+						],
+						"outCondIds": [
+							5
+						],
+						"props": {
+							"name": "idiomRegister",
+							"source": "js",
+							"params": [
+								{
+									"type": "str",
+									"name": "id",
+									"value": "PutASockInIt",
+									"$$hashKey": "016"
+								},
+								{
+									"type": "str",
+									"name": "title",
+									"value": "Put a sock in it",
+									"$$hashKey": "018"
+								},
+								{
+									"type": "str",
+									"name": "meaning",
+									"value": "Request to be quite",
+									"$$hashKey": "01A"
+								},
+								{
+									"type": "str",
+									"name": "hint",
+									"value": "Try to buy a kebab",
+									"$$hashKey": "01C"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 17,
+						"type": 10,
+						"label": "Reg quick buck",
+						"continue": true,
+						"inCondIds": [
+							5
+						],
+						"outCondIds": [
+							6
+						],
+						"props": {
+							"name": "idiomRegister",
+							"source": "js",
+							"params": [
+								{
+									"type": "str",
+									"name": "id",
+									"value": "ToMakeAQuickBuck",
+									"$$hashKey": "016"
+								},
+								{
+									"type": "str",
+									"name": "title",
+									"value": "To make a quick buck",
+									"$$hashKey": "018"
+								},
+								{
+									"type": "str",
+									"name": "meaning",
+									"value": "To earn money quickly with a little effort",
+									"$$hashKey": "01A"
+								},
+								{
+									"type": "str",
+									"name": "hint",
+									"value": "Ask for a taxi to the city center",
+									"$$hashKey": "01C"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 18,
+						"type": -1,
+						"label": "End",
+						"continue": false,
+						"inCondIds": [
+							6
+						],
+						"outCondIds": [],
+						"props": {}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 0,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 2,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 4,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 5,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6,
+						"type": 8,
+						"props": {}
+					}
+				]
+			}
+		]
+	},
+	"scriptEditor": {
+		"ver": 1,
+		"currentStageId": 11,
+		"stageEditors": [
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 11,
+						"x": 240,
+						"y": 120
+					},
+					{
+						"ver": 1,
+						"nodeId": 12,
+						"x": 248,
+						"y": 381
+					},
+					{
+						"ver": 1,
+						"nodeId": 13,
+						"x": 260,
+						"y": 661
+					},
+					{
+						"ver": 1,
+						"nodeId": 14,
+						"x": 555,
+						"y": 543
+					},
+					{
+						"ver": 1,
+						"nodeId": 15,
+						"x": 627,
+						"y": 234
+					},
+					{
+						"ver": 1,
+						"nodeId": 16,
+						"x": 928,
+						"y": 187
+					},
+					{
+						"ver": 1,
+						"nodeId": 17,
+						"x": 1051,
+						"y": 429
+					},
+					{
+						"ver": 1,
+						"nodeId": 18,
+						"x": 1063,
+						"y": 663
+					}
+				],
+				"nodeIds": [
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					17,
+					18
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 0,
+						"points": {
+							"src": {
+								"x": 320,
+								"y": 200
+							},
+							"dst": {
+								"x": 328,
+								"y": 461
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1,
+						"points": {
+							"src": {
+								"x": 328,
+								"y": 461
+							},
+							"dst": {
+								"x": 340,
+								"y": 741
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 2,
+						"points": {
+							"src": {
+								"x": 340,
+								"y": 741
+							},
+							"dst": {
+								"x": 635,
+								"y": 623
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3,
+						"points": {
+							"src": {
+								"x": 635,
+								"y": 623
+							},
+							"dst": {
+								"x": 707,
+								"y": 314
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 4,
+						"points": {
+							"src": {
+								"x": 707,
+								"y": 314
+							},
+							"dst": {
+								"x": 1008,
+								"y": 267
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 5,
+						"points": {
+							"src": {
+								"x": 1008,
+								"y": 267
+							},
+							"dst": {
+								"x": 1131,
+								"y": 509
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6,
+						"points": {
+							"src": {
+								"x": 1131,
+								"y": 509
+							},
+							"dst": {
+								"x": 1143,
+								"y": 743
+							}
+						}
+					}
+				],
+				"condIds": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6
+				],
+				"scale": 1,
+				"pos": {
+					"x": 0,
+					"y": 0
+				}
+			}
+		],
+		"stageIds": [
+			11
+		]
+	}
+}

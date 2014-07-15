@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelJumpCommon</name>
+    <events>
+        <include>Quest</include>
+        <include>LevelControls</include>
+        <include>FoxySimpleSCMLSpritesBinding</include>
+        <event-block sid="2067776533016639">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="5841305967610261" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="4201301209649887" type="Function">
+                    <param id="0" name="Name">&quot;LevelFinished&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>2demo_jump</name>
+    <events>
+        <include>LevelJumpCommon</include>
+        <event-group description="" sid="9684513442025" title="Local var scope 2">
+            <sub-events>
+                <variable constant="1" name="LEVEL_NAME" sid="146390735041057" static="0" type="text">2demo_jump</variable>
+                <variable constant="1" name="LEVEL_NPC_ANIMS_TO_INIT" sid="5379837504000799" static="0" type="number">0</variable>
+                <variable constant="1" name="LEVEL_INITIAL_STAGE" sid="4210704395276113" static="0" type="text">jump</variable>
+                <event-block sid="2994783783040874">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9886935471380511" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8930605218157595" type="Function">
+                            <param id="0" name="Name">&quot;StartLevel&quot;</param>
+                            <param id="1" name="Parameter {n}">LEVEL_NAME{###}LEVEL_NPC_ANIMS_TO_INIT {###}LEVEL_INITIAL_STAGE</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5431196656068474">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6875055154176057" type="Function">
+                            <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="5070385019573961">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8916381863741268" type="Touch">
+                            <param id="0" name="Object">2demoFinishLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="2663436193442753" type="System">
+                            <param id="0" name="Layout">LevelResults</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
