@@ -147,6 +147,10 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
         return true; //cf_trigger was signaled explicitly
     };
 
+    Cnds.prototype.isLevelSucceeded = function() {
+        return this.levelIdiomsProgressTracker.isLevelSucceeded();
+    };
+
 	pluginProto.cnds = new Cnds();
 
 	//////////////////////////////////////
@@ -222,6 +226,22 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
             this.levelIdiomsProgressTracker.getFoundIdiomsCount()
         );
 	};
+
+    Exps.prototype.getLevelName = function(ret)
+	{
+		ret.set_string(
+            this.levelIdiomsProgressTracker.getLevelName()
+        );
+	};
+
+    Exps.prototype.getNextLevelName = function(ret) {
+        var nextLevel = IdiomLandGame.instance.
+            getLevelsProgressManager().getNextLevel(this.curLevel);
+
+        ret.set_string(
+            nextLevel ? nextLevel.getName() : ""
+        );
+    };
 
 	pluginProto.exps = new Exps();
 

@@ -67,3 +67,11 @@ LevelIdiomsProgressTracker.prototype.finalizeProgress = function() {
 
     this.isProgressFinalized = true;
 };
+
+LevelIdiomsProgressTracker.prototype.isLevelSucceeded = function() {
+    return isIdiomLandLevelSucceeded(this.currentLevel);
+};
+
+LevelIdiomsProgressTracker.prototype.getLevelName = function() {
+    return this.currentLevel.getName();
+};

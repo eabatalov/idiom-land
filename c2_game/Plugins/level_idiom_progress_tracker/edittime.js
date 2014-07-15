@@ -60,6 +60,8 @@ AddCondition(0, cf_looping, "For each idiom", "General", "For each idiom",
     "For each idiom", "forEachIdiom");
 AddCondition(1, cf_trigger, "Guessed idioms changed", "General", "Guessed idioms changed",
     "Guessed idioms changed", "guessedIdiomsChanged");
+AddCondition(2, cf_none, "Is level succeeded", "General", "Is level succeeded",
+    "Is level succeeded", "isLevelSucceeded");
 
 ////////////////////////////////////////
 // Actions
@@ -103,6 +105,11 @@ AddExpression(6, ef_return_number, "Level gueesed idioms count", "Getters", "get
     "Get number of guessed idioms on the current level");
 AddExpression(7, ef_return_number, "Level found idioms count", "Getters", "getLevelFoundIdiomsCount",
     "Get number of found idioms on the current level");
+
+AddExpression(9, ef_return_string, "Level name", "Getters", "getLevelName",
+	"Get level name");
+AddExpression(10, ef_return_string, "Next level name", "Getters", "getNextLevelName",
+    "Get name of next to current level");
 
 ////////////////////////////////////////
 ACESDone();

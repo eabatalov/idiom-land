@@ -180,7 +180,7 @@ cr.plugins_.IdiomlandLevelsPlugin = function(runtime)
 	//////////////////////////////////////
 	// Expressions
 	function Exps() {};
-
+    //Current level
 	Exps.prototype.getLevelIndex = function(ret) {
         ret.set_int(
             this.curLevelIx
@@ -193,6 +193,7 @@ cr.plugins_.IdiomlandLevelsPlugin = function(runtime)
         );
     };
 
+    //Current idiom
 	Exps.prototype.getCurrentIdiomId = function(ret) {
         ret.set_string(
             this.curIdiom.getId()
