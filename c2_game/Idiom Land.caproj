@@ -64,8 +64,8 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
-        <object-folder expanded="1" name="Menus">
+    <object-folder expanded="0">
+        <object-folder expanded="0" name="Menus">
             <object-folder expanded="0" name="LevelResults">
                 <object-type name="Foxy" sid="4330101678906835">
                     <plugin id="Sprite" />
@@ -186,7 +186,7 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-folder expanded="1" name="MainMenu">
+            <object-folder expanded="0" name="MainMenu">
                 <object-type name="MainMenuIdiomLandLogo" sid="9581819859871193">
                     <plugin id="Sprite" />
                     <animation-folder expanded="1">
@@ -219,7 +219,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="Levels">
+        <object-folder expanded="0" name="Levels">
             <object-folder expanded="0" name="1demo">
                 <object-folder expanded="1" name="Stages">
                     <object-folder expanded="0" name="Intro">
@@ -1644,7 +1644,7 @@
                     </object-folder>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="1" name="Common">
+            <object-folder expanded="0" name="Common">
                 <object-folder expanded="0" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
@@ -1684,7 +1684,7 @@
                         </object-type>
                     </object-folder>
                 </object-folder>
-                <object-folder expanded="1" name="VisualObjects">
+                <object-folder expanded="0" name="VisualObjects">
                     <object-folder expanded="0" name="B">
                         <object-folder expanded="0" name="Benches">
                             <object-type name="Benches" sid="4870667590189457">
@@ -1965,14 +1965,14 @@
                             </object-type>
                         </object-folder>
                     </object-folder>
-                    <object-folder expanded="0" name="P">
+                    <object-folder expanded="1" name="P">
                         <object-folder expanded="0" name="Paths">
                             <object-type name="PathFoot" sid="4956958474120191">
                                 <plugin id="TiledBg" />
                                 <texture />
                             </object-type>
                         </object-folder>
-                        <object-folder expanded="0" name="Platforms">
+                        <object-folder expanded="1" name="Platforms">
                             <object-type name="PlatformInvisible" sid="9109209147233701">
                                 <plugin id="Sprite" />
                                 <behaviors>
@@ -1989,9 +1989,22 @@
                                     </animation>
                                 </animation-folder>
                             </object-type>
+                            <object-type name="PlatformInfiniteJump" sid="2490736076967191">
+                                <plugin id="Sprite" />
+                                <behaviors>
+                                    <behavior-type name="Jumpthru" sid="7753157171873651">
+                                        <behavior id="jumpthru" />
+                                    </behavior-type>
+                                </behaviors>
+                                <animation-folder expanded="1">
+                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9602399118211915" speed="5">
+                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                    </animation>
+                                </animation-folder>
+                            </object-type>
                         </object-folder>
                     </object-folder>
-                    <object-folder expanded="1" name="F">
+                    <object-folder expanded="0" name="F">
                         <object-folder expanded="0" name="Fence">
                             <object-type name="Fence" sid="856090690368867">
                                 <plugin id="Sprite" />
@@ -2011,8 +2024,8 @@
                                 </animation-folder>
                             </object-type>
                         </object-folder>
-                        <object-folder expanded="1" name="Foxy">
-                            <object-folder expanded="1" name="foxy_simple sprites">
+                        <object-folder expanded="0" name="Foxy">
+                            <object-folder expanded="0" name="foxy_simple sprites">
                                 <object-type name="foxy_simple_hand2" sid="4780305853928582">
                                     <plugin id="Sprite" />
                                     <container>
@@ -4722,7 +4735,7 @@
                     <plugin id="IdiomlandLevelsPlugin" />
                 </object-type>
             </object-folder>
-            <object-folder expanded="1" name="2demo_jump">
+            <object-folder expanded="0" name="2demo_jump">
                 <object-type name="2demoFinishLevel" sid="2759297908168374">
                     <plugin id="Sprite" />
                     <animation-folder expanded="1">
@@ -4791,7 +4804,7 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="1">
+    <layout-folder expanded="0">
         <layout-folder expanded="0" name="Levels">
             <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
@@ -4800,7 +4813,7 @@
                 <layout>2demo_jump.xml</layout>
             </layout-folder>
         </layout-folder>
-        <layout-folder expanded="1" name="Menus">
+        <layout-folder expanded="0" name="Menus">
             <layout-folder expanded="1" name="LevelResults">
                 <layout>LevelResults.xml</layout>
             </layout-folder>
@@ -4810,17 +4823,17 @@
         </layout-folder>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="0" name="Levels">
-            <event-folder expanded="0" name="Common">
-                <event-folder expanded="0" name="QuestEngine">
-                    <event-sheet>Quest.xml</event-sheet>
-                    <event-sheet>Bootstrap.xml</event-sheet>
-                    <event-sheet>UInit.xml</event-sheet>
-                    <event-sheet>ActionProc.xml</event-sheet>
-                    <event-sheet>UIStage.xml</event-sheet>
-                    <event-sheet>UIMisc.xml</event-sheet>
-                    <event-sheet>PlayerAnimation.xml</event-sheet>
-                    <event-sheet>PlayerInput.xml</event-sheet>
+        <event-folder expanded="1" name="Levels">
+            <event-folder expanded="1" name="Common">
+                <event-folder expanded="1" name="QuestEngine">
+                    <event-sheet>QuestCommon.xml</event-sheet>
+                    <event-sheet>QuestBootstrap.xml</event-sheet>
+                    <event-sheet>QuestUInit.xml</event-sheet>
+                    <event-sheet>QuestActionProc.xml</event-sheet>
+                    <event-sheet>QuestUIStage.xml</event-sheet>
+                    <event-sheet>QuestUIMisc.xml</event-sheet>
+                    <event-sheet>QuestPlayerAnimation.xml</event-sheet>
+                    <event-sheet>QuestPlayerInput.xml</event-sheet>
                 </event-folder>
                 <event-folder expanded="0" name="Controls">
                     <event-folder expanded="0" name="GameHelp">
@@ -4854,9 +4867,11 @@
                         </event-folder>
                     </event-folder>
                 </event-folder>
-                <event-sheet>LevelDebug.xml</event-sheet>
-                <event-sheet>LevelCommon.xml</event-sheet>
+                <event-sheet>LevelQuestDebug.xml</event-sheet>
+                <event-sheet>LevelQuestCommon.xml</event-sheet>
                 <event-sheet>LevelJumpCommon.xml</event-sheet>
+                <event-sheet>LevelJumpLogic.xml</event-sheet>
+                <event-sheet>LevelCommon.xml</event-sheet>
             </event-folder>
             <event-folder expanded="0" name="1demo">
                 <event-folder expanded="0" name="Stages">
@@ -4888,7 +4903,7 @@
                 <event-sheet>2demo_jump.xml</event-sheet>
             </event-folder>
         </event-folder>
-        <event-folder expanded="1" name="Menus">
+        <event-folder expanded="0" name="Menus">
             <event-folder expanded="1" name="LevelResults">
                 <event-sheet>LevelResultsMain.xml</event-sheet>
             </event-folder>

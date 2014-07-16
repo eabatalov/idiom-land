@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>PlayerInput</name>
+    <name>QuestPlayerInput</name>
     <events>
         <variable constant="0" name="BlockPlayerInputOnSeqAction" sid="4976819164673977" static="0" type="number">0</variable>
         <variable constant="0" name="BlockPlayerAvatarControls" sid="4613878177283259" static="0" type="number">0</variable>
@@ -785,10 +785,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3984117986249243" title="Automatic start talk">
+        <event-group collapsed="1" description="" sid="3984117986249243" title="Automatic start talk">
             <sub-events>
                 <comment>Inject custom event with name &quot;auto_talk_start_&quot; + NPC id to start talking</comment>
-                <event-block sid="7124879317616865">
+                <event-block collapsed="1" sid="7124879317616865">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="7991193214109111" type="TalkStartTrigger">
                             <param id="0" name="Object">PlayerMiddleMarker</param>

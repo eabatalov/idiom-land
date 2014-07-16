@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Bootstrap</name>
+    <name>QuestBootstrap</name>
     <events>
         <event-group description="" sid="1015458994841946" title="Local var scope">
             <sub-events>
@@ -51,8 +51,16 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action disabled="1" id="14" name="Log" sid="4706235827688399" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;StartLevel&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="3374487306171643" type="Function">
                             <param id="0" name="Name">&quot;InitUI&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="5268206462800991" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-9" name="Set value" sid="4264590270856551" type="System">
@@ -87,6 +95,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action disabled="1" id="14" name="Log" sid="3913654627084659" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;StartLevel bootstrap&quot;</param>
+                                </action>
                                 <action id="0" name="Call function" sid="3255277236769612" type="Function">
                                     <param id="0" name="Name">&quot;StartLevelStage2&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -106,6 +118,10 @@
                             <param id="0" name="Variable">LEVEL_ANIMS_INITED_CNT</param>
                             <param id="1" name="Value">LEVEL_ANIMS_INITED_CNT + 1</param>
                         </action>
+                        <action disabled="1" id="14" name="Log" sid="2997202378339875" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;AnimInited&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="1315579844635974">
@@ -122,6 +138,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action disabled="1" id="14" name="Log" sid="6382506347392048" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Anim inited bootstrap&quot;</param>
+                                </action>
                                 <action id="0" name="Call function" sid="4027384266352133" type="Function">
                                     <param id="0" name="Name">&quot;StartLevelStage2&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -138,6 +158,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action disabled="1" id="14" name="Log" sid="1526833617772792" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;StartLevelStage2&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="2396820917685016" type="Function">
                             <param id="0" name="Name">&quot;initPlayerAnimation&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -158,6 +182,10 @@
                         <condition id="0" name="Level changed" sid="9984593045440814" type="QuestLevelRuntime" />
                     </conditions>
                     <actions>
+                        <action disabled="1" id="14" name="Log" sid="959432429981909" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;LevelChanged&quot;</param>
+                        </action>
                         <action id="4" name="Set current stage" sid="2931653126024059" type="QuestLevelRuntime">
                             <param id="0" name="Value">LEVEL_FIRST_STAGE</param>
                         </action>
