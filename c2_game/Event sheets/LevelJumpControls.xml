@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelJumpControls</name>
+    <events>
+        <event-group description="" sid="4652860929718227" title="Local var scope 5">
+            <sub-events>
+                <variable constant="0" name="LEVEL_STARTED" sid="1018485019200617" static="1" type="number">0</variable>
+                <variable constant="1" name="TOKEN_GENERATION_CHANCE" sid="1657588435523199" static="0" type="number">30</variable>
+                <event-block sid="5894264748770707">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1551561422326951" type="Function">
+                            <param id="0" name="Name">&quot;LevelFinished&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5371510398860507" type="System">
+                            <param id="0" name="Variable">LEVEL_STARTED</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="303018901264415">
+                    <conditions>
+                        <condition id="0" name="On function" sid="794671092365439" type="Function">
+                            <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3424806724703204" type="System">
+                            <param id="0" name="Variable">LEVEL_STARTED</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2067823218388713">
+                    <conditions>
+                        <condition id="0" name="Current idiom changed" sid="9423943429377404" type="JumpLevelLogic" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="1926073405150167" type="CurrentIdiomToGuessTitleTxt">
+                            <param id="0" name="Text">JumpLevelLogic.getCurrentIdiomTitle</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="161404161469503" type="JumpLevelTokenTxt" />
+                    </actions>
+                </event-block>
+                <event-block sid="3373884619583715">
+                    <conditions>
+                        <condition id="1" name="Current token chain changed" sid="7170326692786265" type="JumpLevelLogic" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="2852035194716259" type="CurrentCollectedTokenChainTxt">
+                            <param id="0" name="Text">JumpLevelLogic.getCurrentTokenChain</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="4260736339910441" type="JumpLevelTokenTxt" />
+                    </actions>
+                </event-block>
+                <event-block sid="9991262898631863">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="3272472401899103" type="JumpLevelTokenBg">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Token collected" sid="8942310337607184" type="JumpLevelLogic">
+                            <param id="0" name="Token">JumpLevelTokenTxt.Text</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1866326247591297" type="JumpLevelTokenBg" />
+                        <action id="-9" name="Destroy" sid="8886386952835969" type="JumpLevelTokenTxt" />
+                    </actions>
+                </event-block>
+                <event-block sid="1817589427106747">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="2822733769502442" type="JumpLevelTokenTxt" />
+                        <condition id="-14" name="Compare variable" sid="4313410818158713" type="System">
+                            <param id="0" name="Variable">LEVEL_STARTED</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="7791812169335802" type="JumpLevelTokenBg">
+                            <param id="0" name="Layer">&quot;Platforms&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="4470714550095519" type="JumpLevelTokenTxt">
+                            <param id="0" name="Layer">&quot;Platforms&quot;</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="9022158542254834" type="JumpLevelTokenBg">
+                            <param id="0" name="Object">JumpLevelTokenTxt</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8291636664377106" type="JumpLevelTokenTxt">
+                            <param id="0" name="Text">JumpLevelLogic.getNextTokenToShow</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="9996751407216131" type="JumpLevelTokenTxt" />
+                    </actions>
+                </event-block>
+                <event-block sid="7366870717302357">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="5009024700235162" type="PlatformInfiniteJump" />
+                        <condition id="-14" name="Compare variable" sid="9228477814385979" type="System">
+                            <param id="0" name="Variable">LEVEL_STARTED</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="7386508937558093" type="System">
+                            <param id="0" name="First value">random(0, 100)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TOKEN_GENERATION_CHANCE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="8174955611514045" type="System">
+                            <param id="0" name="Object to create">JumpLevelTokenTxt</param>
+                            <param id="1" name="Layer">&quot;Platforms&quot;</param>
+                            <param id="2" name="X">PlatformInfiniteJump.X</param>
+                            <param id="3" name="Y">PlatformInfiniteJump.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

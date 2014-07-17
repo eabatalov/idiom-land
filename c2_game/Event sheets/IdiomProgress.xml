@@ -14,5 +14,28 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="6444847767648665">
+            <conditions>
+                <condition id="0" name="On function" sid="1137678234623631" type="Function">
+                    <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="9886288227668308" type="IdiomCounterTxt">
+                    <param id="0" name="Instance variable">DontAutoShow</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7211929255626602" type="IdiomCounterTxt">
+                    <param id="0" name="Text">&quot;Idioms: &quot; &amp; LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6391079334380066" type="IdiomCounterBg">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5608273365843292" type="IdiomCounterTxt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

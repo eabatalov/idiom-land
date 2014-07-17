@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandGamePlugin" version="0.100000001">Idiomland game</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandLevelsPlugin" version="0.100000001">Idiomland levels</plugin>
+        <plugin author="Eugene/Idiomland" id="JumpLevelLogicPlugin" version="0.100000001">JumpLevelLogic</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Eugene/Idiomland" id="LevelIdiomProgressTrackingPlugin" version="0.100000001">LevelIdiomProgressTracker</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -64,7 +65,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-folder expanded="0" name="Menus">
             <object-folder expanded="0" name="LevelResults">
                 <object-type name="Foxy" sid="4330101678906835">
@@ -219,7 +220,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="0" name="Levels">
+        <object-folder expanded="1" name="Levels">
             <object-folder expanded="0" name="1demo">
                 <object-folder expanded="1" name="Stages">
                     <object-folder expanded="0" name="Intro">
@@ -1644,8 +1645,8 @@
                     </object-folder>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="0" name="Common">
-                <object-folder expanded="0" name="Controls">
+            <object-folder expanded="1" name="Common">
+                <object-folder expanded="1" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
                             <plugin id="Sprite" />
@@ -1667,7 +1668,7 @@
                             <plugin id="Text" />
                         </object-type>
                     </object-folder>
-                    <object-folder expanded="0" name="LevelProgress">
+                    <object-folder expanded="1" name="LevelProgress">
                         <object-type name="IdiomCounterBg" sid="6657483908058606">
                             <plugin id="Sprite" />
                             <animation-folder expanded="1">
@@ -1678,9 +1679,15 @@
                         </object-type>
                         <object-type name="IdiomCounterTxt" sid="5244611748275736">
                             <plugin id="Text" />
+                            <instance-variables>
+                                <instance-variable name="DontAutoShow" sid="2031901322407462" type="number" />
+                            </instance-variables>
                         </object-type>
                         <object-type name="TicketsCounterTxt" sid="7143920015409264">
                             <plugin id="Text" />
+                            <instance-variables>
+                                <instance-variable name="DontAutoShow" sid="519622648829588" type="number" />
+                            </instance-variables>
                         </object-type>
                     </object-folder>
                 </object-folder>
@@ -4725,6 +4732,33 @@
                         <plugin id="Dictionary" />
                     </object-type>
                 </object-folder>
+                <object-folder expanded="1" name="JumpLevel">
+                    <object-type name="CurrentIdiomToGuessTitleTxt" sid="360214855235879">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="CurrentCollectedTokenChainTxt" sid="5313372069462686">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="JumpLevelTokenTxt" sid="851946349344739">
+                        <plugin id="Text" />
+                        <container>
+                            <type>JumpLevelTokenTxt</type>
+                            <type>JumpLevelTokenBg</type>
+                        </container>
+                    </object-type>
+                    <object-type name="JumpLevelTokenBg" sid="7708927266531742">
+                        <plugin id="Sprite" />
+                        <container>
+                            <type>JumpLevelTokenTxt</type>
+                            <type>JumpLevelTokenBg</type>
+                        </container>
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7187093087086816" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
                 <object-type name="LevelIdiomProgressTracker" sid="504992448476046">
                     <plugin id="LevelIdiomProgressTrackingPlugin" />
                 </object-type>
@@ -4733,6 +4767,9 @@
                 </object-type>
                 <object-type name="IdiomlandLevels" sid="8938034631113359">
                     <plugin id="IdiomlandLevelsPlugin" />
+                </object-type>
+                <object-type name="JumpLevelLogic" sid="7437827936985691">
+                    <plugin id="JumpLevelLogicPlugin" />
                 </object-type>
             </object-folder>
             <object-folder expanded="0" name="2demo_jump">
@@ -4804,7 +4841,7 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout-folder expanded="0" name="Levels">
             <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
@@ -4825,7 +4862,7 @@
     <event-folder expanded="1">
         <event-folder expanded="1" name="Levels">
             <event-folder expanded="1" name="Common">
-                <event-folder expanded="1" name="QuestEngine">
+                <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
                     <event-sheet>QuestUInit.xml</event-sheet>
@@ -4867,10 +4904,17 @@
                         </event-folder>
                     </event-folder>
                 </event-folder>
-                <event-sheet>LevelQuestDebug.xml</event-sheet>
-                <event-sheet>LevelQuestCommon.xml</event-sheet>
-                <event-sheet>LevelJumpCommon.xml</event-sheet>
-                <event-sheet>LevelJumpLogic.xml</event-sheet>
+                <event-folder expanded="1" name="JumpLevel">
+                    <event-sheet>LevelJumpCommon.xml</event-sheet>
+                    <event-sheet>LevelJumpPlatforms.xml</event-sheet>
+                    <event-sheet>LevelJumpPlayerMovement.xml</event-sheet>
+                    <event-sheet>LevelJumpControls.xml</event-sheet>
+                    <event-sheet>LevelJumpCompletion.xml</event-sheet>
+                </event-folder>
+                <event-folder expanded="1" name="QuestLevel">
+                    <event-sheet>LevelQuestCommon.xml</event-sheet>
+                    <event-sheet>LevelQuestDebug.xml</event-sheet>
+                </event-folder>
                 <event-sheet>LevelCommon.xml</event-sheet>
             </event-folder>
             <event-folder expanded="0" name="1demo">
@@ -4929,6 +4973,7 @@
         <global-instance type="QuestPersistentStorage" uid="309" />
         <global-instance type="IdiomlandGame" uid="310" />
         <global-instance type="IdiomlandLevels" uid="315" />
+        <global-instance type="JumpLevelLogic" uid="321" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

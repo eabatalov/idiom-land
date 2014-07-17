@@ -14,6 +14,10 @@
                     <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;stage_activate&quot;{###}&quot;Player&quot;</param>
                 </action>
+                <action disabled="1" id="14" name="Log" sid="9133486816238686" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;onStageIntroActive&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6869420682188312">
@@ -376,6 +380,32 @@
                 <action id="14" name="Log" sid="7320589517845062" type="Browser">
                     <param id="0" name="Type">0</param>
                     <param id="1" name="Message">&quot;procMiscInput&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5906662501235973">
+            <conditions>
+                <condition id="0" name="On function" sid="3715688441167773" type="Function">
+                    <param id="0" name="Name">&quot;IntroInit&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="7870486154339896" type="IdiomCounterBg">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3245221731798244" type="IdiomCounterTxt">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3854604773231498" type="TicketsCounterTxt">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="3618876923033151" type="IdiomCounterTxt">
+                    <param id="0" name="Instance variable">DontAutoShow</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="6781861336724466" type="TicketsCounterTxt">
+                    <param id="0" name="Instance variable">DontAutoShow</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelJumpPlayerMovement</name>
+    <events>
+        <event-group description="" sid="8388738931396339" title="Local var group 4">
+            <sub-events>
+                <variable constant="0" name="JUMP_LEVEL_START_PLAYER_MOVEMENT" sid="2546928939011121" static="1" type="number">0</variable>
+                <event-block sid="7202626295264731">
+                    <conditions>
+                        <condition id="0" name="On function" sid="832300946697808" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9660860108270316" type="System">
+                            <param id="0" name="Variable">JUMP_LEVEL_START_PLAYER_MOVEMENT</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8578327719985982">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6255114283160244" type="Function">
+                            <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="8309652000395807" type="System">
+                            <param id="0" name="Variable">JUMP_LEVEL_START_PLAYER_MOVEMENT</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="2328981650943005" type="PlayerPlatform">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="1603702768240864" type="PlayerPlatform">
+                            <param id="0" name="Jump strength">PlayerPlatform.Platform.JumpStrength*1.1</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="40224299167871" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Jump player movement level started&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8838048860233468">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9033638191699481" type="System">
+                            <param id="0" name="First value">JUMP_LEVEL_START_PLAYER_MOVEMENT</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-group description="" sid="6006351359811596" title="Player manual movement">
+                            <sub-events>
+                                <comment>Use left and right arrow keys to control the player.  (This is necessary because the &apos;Default controls&apos; property has been set to &apos;No&apos; on the platform behavior, so we can automate jumping.)</comment>
+                                <event-block sid="2979744399792351">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="2477606166891363" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="3810472205274121" type="PlayerPlatform">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4994304785561581">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="7325927930929583" type="Keyboard">
+                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="7486510876292336" type="PlayerPlatform">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>On a mobile device, use the left-to-right tilt (Gamma) to also control movement.  This simply simulates pressing a control if the device has tilted enough to the left or right.</comment>
+                                <event-block sid="8490007337833276">
+                                    <conditions>
+                                        <condition id="8" name="Compare orientation" sid="2742976350425971" type="Touch">
+                                            <param id="0" name="Orientation">2</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Angle">-8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="7390832870906883" type="PlayerPlatform">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1730643563341653">
+                                    <conditions>
+                                        <condition id="8" name="Compare orientation" sid="7839948461076551" type="Touch">
+                                            <param id="0" name="Orientation">2</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Angle">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="6169870630576916" type="PlayerPlatform">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="7358534669891838" title="Player auto movement">
+                            <sub-events>
+                                <comment>As soon as the player lands, jump immediately.</comment>
+                                <event-block sid="2040338080275168">
+                                    <conditions>
+                                        <condition behavior="Platform" id="2" name="Is on floor" sid="7221123720238145" type="PlayerPlatform" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="5355584447363085" type="PlayerPlatform">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>If the player falls off the bottom of the screen, restart the layout.</comment>
+                                <event-block sid="6434760911059324">
+                                    <conditions>
+                                        <condition id="-3" inverted="1" name="Is on-screen" sid="1968416179014511" type="PlayerPlatform" />
+                                        <condition id="-2" name="Compare Y" sid="9006176053157548" type="PlayerPlatform">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Player&quot;)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9248335040297834" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerFallenDown&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Allow the player to wrap around to the left and right.</comment>
+                                <event-block sid="61731224818678">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="3729949496492711" type="PlayerPlatform">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">-10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="2527957887309434" type="PlayerPlatform">
+                                            <param id="0" name="X">LayoutWidth + 9</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5498347821596162">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="7040395535003646" type="PlayerPlatform">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">LayoutWidth+10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="802853700723679" type="PlayerPlatform">
+                                            <param id="0" name="X">-9</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
