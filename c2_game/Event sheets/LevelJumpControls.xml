@@ -6,7 +6,8 @@
         <event-group description="" sid="4652860929718227" title="Local var scope 5">
             <sub-events>
                 <variable constant="0" name="LEVEL_STARTED" sid="1018485019200617" static="1" type="number">0</variable>
-                <variable constant="1" name="TOKEN_GENERATION_CHANCE" sid="1657588435523199" static="0" type="number">11</variable>
+                <variable constant="0" name="PLATFORM_COUNTER" sid="9305839858545446" static="1" type="number">0</variable>
+                <variable constant="1" name="PLATFORMS_PER_ROW" sid="2482672309966095" static="1" type="number">3</variable>
                 <event-block sid="5894264748770707">
                     <conditions>
                         <condition id="0" name="On function" sid="1551561422326951" type="Function">
@@ -103,20 +104,36 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="7386508937558093" type="System">
-                            <param id="0" name="First value">random(0, 100)</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TOKEN_GENERATION_CHANCE</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="8174955611514045" type="System">
-                            <param id="0" name="Object to create">JumpLevelTokenTxt</param>
-                            <param id="1" name="Layer">&quot;Platforms&quot;</param>
-                            <param id="2" name="X">PlatformInfiniteJump.X</param>
-                            <param id="3" name="Y">PlatformInfiniteJump.Y</param>
+                        <action id="-9" name="Set value" sid="2245003536765856" type="System">
+                            <param id="0" name="Variable">PLATFORM_COUNTER</param>
+                            <param id="1" name="Value">PLATFORM_COUNTER + 1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="6731234269356472">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8768534582764477" type="System">
+                                    <param id="0" name="First value">PLATFORM_COUNTER + choose(0, 1, 2)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">PLATFORMS_PER_ROW * 3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1754810238663411" type="System">
+                                    <param id="0" name="Variable">PLATFORM_COUNTER</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="8174955611514045" type="System">
+                                    <param id="0" name="Object to create">JumpLevelTokenTxt</param>
+                                    <param id="1" name="Layer">&quot;Platforms&quot;</param>
+                                    <param id="2" name="X">PlatformInfiniteJump.X</param>
+                                    <param id="3" name="Y">PlatformInfiniteJump.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

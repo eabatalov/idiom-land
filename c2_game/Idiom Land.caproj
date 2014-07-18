@@ -178,14 +178,6 @@
                 <object-type name="SecretsFoundText" sid="8324317963687748">
                     <plugin id="Text" />
                 </object-type>
-                <object-type name="MainMenuBtn" sid="8439311364048488">
-                    <plugin id="Sprite" />
-                    <animation-folder expanded="1">
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2426169192141205" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
             </object-folder>
             <object-folder expanded="0" name="MainMenu">
                 <object-type name="MainMenuIdiomLandLogo" sid="9581819859871193">
@@ -222,7 +214,7 @@
         </object-folder>
         <object-folder expanded="1" name="Levels">
             <object-folder expanded="0" name="1demo">
-                <object-folder expanded="1" name="Stages">
+                <object-folder expanded="0" name="Stages">
                     <object-folder expanded="0" name="Intro">
                         <object-folder expanded="0" name="Helpers">
                             <object-type name="JumpHelper" sid="3052283865919932">
@@ -1645,8 +1637,8 @@
                     </object-folder>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="1" name="Common">
-                <object-folder expanded="1" name="Controls">
+            <object-folder expanded="0" name="Common">
+                <object-folder expanded="0" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
                             <plugin id="Sprite" />
@@ -1668,7 +1660,7 @@
                             <plugin id="Text" />
                         </object-type>
                     </object-folder>
-                    <object-folder expanded="1" name="LevelProgress">
+                    <object-folder expanded="0" name="LevelProgress">
                         <object-type name="IdiomCounterBg" sid="6657483908058606">
                             <plugin id="Sprite" />
                             <animation-folder expanded="1">
@@ -1688,6 +1680,16 @@
                             <instance-variables>
                                 <instance-variable name="DontAutoShow" sid="519622648829588" type="number" />
                             </instance-variables>
+                        </object-type>
+                    </object-folder>
+                    <object-folder expanded="0" name="Navigation">
+                        <object-type name="NavigationMainMenuBtn" sid="8439311364048488">
+                            <plugin id="Sprite" />
+                            <animation-folder expanded="1">
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2426169192141205" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
                         </object-type>
                     </object-folder>
                 </object-folder>
@@ -4732,7 +4734,7 @@
                         <plugin id="Dictionary" />
                     </object-type>
                 </object-folder>
-                <object-folder expanded="1" name="JumpLevel">
+                <object-folder expanded="0" name="JumpLevel">
                     <object-type name="CurrentIdiomToGuessTitleTxt" sid="360214855235879">
                         <plugin id="Text" />
                     </object-type>
@@ -4772,16 +4774,7 @@
                     <plugin id="JumpLevelLogicPlugin" />
                 </object-type>
             </object-folder>
-            <object-folder expanded="0" name="2demo_jump">
-                <object-type name="2demoFinishLevel" sid="2759297908168374">
-                    <plugin id="Sprite" />
-                    <animation-folder expanded="1">
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7321654595290595" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
+            <object-folder expanded="1" name="2demo_jump" />
         </object-folder>
     </object-folder>
     <families>
@@ -4843,14 +4836,14 @@
     </families>
     <layout-folder expanded="1">
         <layout-folder expanded="1" name="Levels">
-            <layout-folder expanded="0" name="1demo">
+            <layout-folder expanded="1" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
             <layout-folder expanded="1" name="2demo_jump">
                 <layout>2demo_jump.xml</layout>
             </layout-folder>
         </layout-folder>
-        <layout-folder expanded="0" name="Menus">
+        <layout-folder expanded="1" name="Menus">
             <layout-folder expanded="1" name="LevelResults">
                 <layout>LevelResults.xml</layout>
             </layout-folder>
@@ -4872,13 +4865,16 @@
                     <event-sheet>QuestPlayerAnimation.xml</event-sheet>
                     <event-sheet>QuestPlayerInput.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="0" name="Controls">
+                <event-folder expanded="1" name="Controls">
                     <event-folder expanded="0" name="GameHelp">
                         <event-sheet>GameHelp.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="0" name="LevelProgress">
                         <event-sheet>IdiomProgress.xml</event-sheet>
                         <event-sheet>TicketProgress.xml</event-sheet>
+                    </event-folder>
+                    <event-folder expanded="1" name="Navigation">
+                        <event-sheet>NavigationMainMenuBtn.xml</event-sheet>
                     </event-folder>
                     <event-sheet>LevelControls.xml</event-sheet>
                 </event-folder>
@@ -4911,7 +4907,7 @@
                     <event-sheet>LevelJumpControls.xml</event-sheet>
                     <event-sheet>LevelJumpCompletion.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="1" name="QuestLevel">
+                <event-folder expanded="0" name="QuestLevel">
                     <event-sheet>LevelQuestCommon.xml</event-sheet>
                     <event-sheet>LevelQuestDebug.xml</event-sheet>
                 </event-folder>
@@ -4943,15 +4939,15 @@
                 <event-sheet>1demoNpcAnimationRunners.xml</event-sheet>
                 <event-sheet>1demoNpcScmlSpritesBindings.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="0" name="2demo_jump">
+            <event-folder expanded="1" name="2demo_jump">
                 <event-sheet>2demo_jump.xml</event-sheet>
             </event-folder>
         </event-folder>
-        <event-folder expanded="0" name="Menus">
+        <event-folder expanded="1" name="Menus">
             <event-folder expanded="1" name="LevelResults">
                 <event-sheet>LevelResultsMain.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="1" name="MainMenu">
+            <event-folder expanded="0" name="MainMenu">
                 <event-sheet>MainMenuMain.xml</event-sheet>
             </event-folder>
         </event-folder>

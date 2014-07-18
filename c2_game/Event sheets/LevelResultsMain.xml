@@ -5,6 +5,7 @@
     <events>
         <include>QuestUIStage</include>
         <include>FoxySimpleSCMLSpritesBinding</include>
+        <include>NavigationMainMenuBtn</include>
         <event-block sid="6071663212213">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7380802923572911" type="System" />
@@ -170,6 +171,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Save even before player leaves results screens because player may no leave it at all for any reason. But game should be saved.</comment>
                 <event-block sid="5545843811475181">
                     <conditions />
                     <actions>
@@ -205,20 +207,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3684697157392618">
-            <conditions>
-                <condition id="3" name="On touched object" sid="4883235858452033" type="Touch">
-                    <param id="0" name="Object">MainMenuBtn</param>
-                </condition>
-                <condition id="-9" name="Is visible" sid="920439839666558" type="MainMenuBtn" />
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="103136241931018" type="System">
-                    <param id="0" name="Layout">MainMenu</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-group description="" sid="3534684667534494" title="Scroll">
+        <event-group collapsed="1" description="" sid="3534684667534494" title="Scroll">
             <sub-events>
                 <variable constant="1" name="SCROLL_SPEED" sid="2062003018966379" static="0" type="number">3</variable>
                 <variable constant="0" name="TOUCH_START_Y" sid="3389368401231197" static="1" type="number">0</variable>
