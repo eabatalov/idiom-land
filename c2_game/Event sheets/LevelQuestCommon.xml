@@ -3,9 +3,22 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>LevelQuestCommon</name>
     <events>
+        <variable constant="1" name="QUEST_LEVEL_WINDOW_WIDTH" sid="3080392151021487" static="0" type="number">1600</variable>
+        <variable constant="1" name="QUEST_LEVEL_WINDOW_HEIGHT" sid="4237678792292579" static="0" type="number">1000</variable>
         <include>LevelCommon</include>
         <include>QuestPlayerInput</include>
         <include>IdiomDialogCompletion</include>
         <include>LevelQuestDebug</include>
+        <event-block sid="3160635742709625">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7393923703900838" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="2884862952129887" type="System">
+                    <param id="0" name="Width">QUEST_LEVEL_WINDOW_WIDTH</param>
+                    <param id="1" name="Height">QUEST_LEVEL_WINDOW_HEIGHT</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

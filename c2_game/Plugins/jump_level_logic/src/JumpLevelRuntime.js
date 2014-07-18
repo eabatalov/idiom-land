@@ -1,10 +1,27 @@
 function IdiomJumpCollectionProgress(idiom) {
     this.idiom = idiom;
-    //TODO make tokens more uniform
-    this.allTokensOrdered = idiom.getTitle().split(" ");
+    this.allTokensOrdered = this.tokenize(idiom.getTitle());
     this.currentTokenToGuessIx = 0;
     this.currentGuessedTokenChainStr = "";
 }
+
+IdiomJumpCollectionProgress.prototype.tokenize = function(str) {
+    var TOKEN_MAX_LEN = 8; //Depends on current UI settings
+    var tokens = [];
+    var curToken = [];
+    for (var chIx = 0; chIx < str.length; ++chIx) {
+        var ch = str[chIx];
+        curToken.push(ch);
+
+        if (curToken.length === TOKEN_MAX_LEN
+            || ch === " "
+            || chIx === (str.length - 1)) {
+            tokens.push(curToken.join(""));
+            curToken = [];
+        }
+    }
+    return tokens;
+};
 
 IdiomJumpCollectionProgress.prototype.getIdiomTitle = function() {
     return this.idiom.getTitle();
@@ -18,12 +35,16 @@ IdiomJumpCollectionProgress.prototype.isGuessed = function() {
     return this.currentTokenToGuessIx === this.allTokensOrdered.length;
 };
 
-IdiomJumpCollectionProgress.prototype.getNextTokenToGuess = function() {
-    //TODO complete
+IdiomJumpCollectionProgress.prototype.getNextRightToken = function() {
     if (this.isGuessed())
         return "";
     else
         return this.allTokensOrdered[this.currentTokenToGuessIx];
+};
+
+IdiomJumpCollectionProgress.prototype.getRandomToken = function() {
+    var randTokenIx = Math.floor(Math.random() * this.allTokensOrdered.length);
+    return this.allTokensOrdered[randTokenIx];
 };
 
 IdiomJumpCollectionProgress.prototype.tokenCollected = function(token) {
@@ -32,7 +53,7 @@ IdiomJumpCollectionProgress.prototype.tokenCollected = function(token) {
         this.currentGuessedTokenChainStr = "";
         return false;
     }
-    this.currentGuessedTokenChainStr += token + " ";
+    this.currentGuessedTokenChainStr += token;
     this.currentTokenToGuessIx++;
     if (this.isGuessed()) {
         this.currentGuessedTokenChainStr = "";
@@ -62,8 +83,15 @@ JumpLevelRuntime.prototype.getCurrentIdiomCollection = function() {
     return idiomCollection;
 };
 
-JumpLevelRuntime.prototype.arrayRandomShuffle = function(array) {
-    //TODO implement
+JumpLevelRuntime.prototype.arrayRandomShuffle = function(ar) {
+    var srcIx = 0; var dstIx = 0; var tmp = null;
+    while (dstIx < ar.length) {
+        srcIx = Math.floor((Math.random() * (ar.length - dstIx))) + dstIx;
+        tmp = ar[srcIx];
+        ar[srcIx] = ar[dstIx];
+        ar[dstIx] = tmp;
+        ++dstIx;
+    }
 }
 
 JumpLevelRuntime.prototype.onCurrentLevelChanged = function(level) {
@@ -107,8 +135,12 @@ JumpLevelRuntime.prototype.getCurrentTokenChain = function() {
 };
 
 JumpLevelRuntime.prototype.getNextTokenToShow = function() {
-    //TODO complete
-    return this.getCurrentIdiomCollection().getNextTokenToGuess();
+    var RIGHT_TOKEN_PROB = 0.5;
+    if (Math.random() < RIGHT_TOKEN_PROB)
+        return this.getCurrentIdiomCollection().getNextRightToken();
+
+    var randIdiomIx = Math.floor(Math.random() * this.idiomJumpCollections.length);
+    return this.idiomJumpCollections[randIdiomIx].getRandomToken();
 };
 
 JumpLevelRuntime.prototype.isLevelCompleted = function() {
