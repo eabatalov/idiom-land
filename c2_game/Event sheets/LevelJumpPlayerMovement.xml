@@ -82,29 +82,57 @@
                                 <comment>On a mobile device, use the left-to-right tilt (Gamma) to also control movement.  This simply simulates pressing a control if the device has tilted enough to the left or right.</comment>
                                 <event-block sid="8490007337833276">
                                     <conditions>
-                                        <condition id="8" name="Compare orientation" sid="2742976350425971" type="Touch">
-                                            <param id="0" name="Orientation">2</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Angle">-8</param>
+                                        <condition id="4" name="Is touching object" sid="2742976350425971" type="Touch">
+                                            <param id="0" name="Object">ControlLeft</param>
                                         </condition>
+                                        <condition id="-9" name="Is visible" sid="563418347461213" type="ControlLeft" />
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="7" name="Simulate control" sid="7390832870906883" type="PlayerPlatform">
                                             <param id="0" name="Control">0</param>
                                         </action>
+                                        <action id="4" name="Set animation" sid="2869675408684606" type="ControlLeft">
+                                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3884746202831742">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6931583321546103" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9992459316271975" type="ControlLeft">
+                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="1730643563341653">
                                     <conditions>
-                                        <condition id="8" name="Compare orientation" sid="7839948461076551" type="Touch">
-                                            <param id="0" name="Orientation">2</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Angle">8</param>
+                                        <condition id="4" name="Is touching object" sid="7839948461076551" type="Touch">
+                                            <param id="0" name="Object">ControlRight</param>
                                         </condition>
+                                        <condition id="-9" name="Is visible" sid="7621809174592475" type="ControlRight" />
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="7" name="Simulate control" sid="6169870630576916" type="PlayerPlatform">
                                             <param id="0" name="Control">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="8259840906162701" type="ControlRight">
+                                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3179793940897698">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4038816001930007" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8799544685735081" type="ControlRight">
+                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
