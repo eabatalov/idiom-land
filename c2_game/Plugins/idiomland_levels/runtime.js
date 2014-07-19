@@ -75,7 +75,22 @@ cr.plugins_.IdiomlandLevelsPlugin = function(runtime)
 		// note you MUST use double-quote syntax (e.g. o["property"]) to prevent
 		// Closure Compiler renaming and breaking the save format
 	};
-	
+
+    instanceProto._setCurrentLevel = function(level, levelIx) {
+        this.curLevelIx = levelIx;
+        this.curIdiomIx = 0;
+        this.curLevel = level;
+        this.curLevel.forEachIdiom(function(idiomId, idiom) {
+            this.curIdiom = idiom;
+            return false;
+        }.bind(this));
+    };
+
+    instanceProto._setCurrentIdiom = function(idiom, idiomIx) {
+        this.idiomIx = idiomIx;
+        this.idiom = idiom;
+    };
+
 	// The comments around these functions ensure they are removed when exporting, since the
 	// debugger code is no longer relevant after publishing.
 	/**BEGIN-PREVIEWONLY**/
@@ -110,20 +125,6 @@ cr.plugins_.IdiomlandLevelsPlugin = function(runtime)
 			this.myProperty = value;
 	};
 
-    instanceProto._setCurrentLevel = function(level, levelIx) {
-        this.curLevelIx = levelIx;
-        this.curIdiomIx = 0;
-        this.curLevel = level;
-        this.curLevel.forEachIdiom(function(idiomId, idiom) {
-            this.curIdiom = idiom;
-            return false;
-        }.bind(this));
-    };
-
-    instanceProto._setCurrentIdiom = function(idiom, idiomIx) {
-        this.idiomIx = idiomIx;
-        this.idiom = idiom;
-    };
 	/**END-PREVIEWONLY**/
 
 	//////////////////////////////////////
