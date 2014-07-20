@@ -176,6 +176,20 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="9942670639696983">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5759182489966004" type="System">
+                                    <param id="0" name="First value">QuestLevelRuntime.getHasBack</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="5678332274179108" type="QuestBackBtn">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="1516959210380085">
@@ -456,11 +470,14 @@
                         <action id="-15" name="Set visible" sid="9823194379351544" type="NPCSpeechNextBtn">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="4842507208078697" type="QuestBackBtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6702021473764103" title="PlayerUI">
+        <event-group collapsed="1" description="" sid="6702021473764103" title="PlayerUI">
             <sub-events>
                 <comment>XXX: this every tick &quot;pinning&quot; is needed because construct has some bugs in computation of special sprite points.&#x0D;&#x0A;Construct return invalid values and we pin to them. But almost all the time Construct returns good values. This everytick pinning allows us to use this valid values.</comment>
                 <event-block sid="5619469661584902">
@@ -569,6 +586,20 @@
                             </conditions>
                             <actions>
                                 <action id="-15" name="Set visible" sid="5229721842304233" type="PlayerSpeechNextBtn">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9794332428580027">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3272126626577682" type="System">
+                                    <param id="0" name="First value">QuestLevelRuntime.getHasBack</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="4924461062817899" type="QuestBackBtn">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
@@ -853,11 +884,14 @@
                         <action id="-15" name="Set visible" sid="8513310277800242" type="PlayerSpeechNextBtn">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="2091574982885889" type="QuestBackBtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6986851323157604" title="Notification">
+        <event-group description="" sid="6986851323157604" title="Notification">
             <sub-events>
                 <event-block sid="2467896438487668">
                     <conditions>
@@ -873,6 +907,9 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="5639425526544703" type="NotificationNextBtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="369973433893749" type="QuestBackBtn">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -909,6 +946,20 @@
                             </conditions>
                             <actions>
                                 <action id="-15" name="Set visible" sid="2560478392975436" type="NotificationNextBtn">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5256305697234667">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4050016301174066" type="System">
+                                    <param id="0" name="First value">QuestLevelRuntime.getHasBack</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="3213144043702175" type="QuestBackBtn">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
