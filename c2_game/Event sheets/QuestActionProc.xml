@@ -16,10 +16,10 @@
                     <sub-events>
                         <event-block sid="5100714146768124">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="695100223885562" type="System">
-                                    <param id="0" name="First value">QuestLevelRuntime.getContinue</param>
+                                <condition id="-8" name="Compare two values" sid="9779377835176027" type="System">
+                                    <param id="0" name="First value">QuestLevelRuntime.getContinuation</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">0</param>
+                                    <param id="2" name="Second value">&quot;NONE&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -33,25 +33,42 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="2477676966064047">
+                        <event-block sid="2887242115696691">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="6061104974833849" type="System">
-                                    <param id="0" name="First value">QuestLevelRuntime.getContinue</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">1</param>
-                                </condition>
+                                <condition id="-22" name="Else" sid="6348177549438832" type="System" />
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="3661026114796109" type="Function">
-                                    <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;CONTINUE&quot;{###}&quot;&quot;{###}&quot;&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8729273860090556">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="8773426417972351" type="System">
+                                            <param id="0" name="First value">QuestLevelRuntime.getContinuation</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;CONTINUE_UI_CLEAR&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="6795751199566285" type="Function">
+                                            <param id="0" name="Name">&quot;HideStageUI&quot;</param>
+                                            <param id="1" name="Parameter {n}">QuestLevelRuntime.getCurrentStage</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4569508626216378">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3661026114796109" type="Function">
+                                            <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;CONTINUE&quot;{###}&quot;&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Process action dedicated for UI state change.&#x0D;&#x0A;if QuestLevelRuntime.getContinue == true ProcUIAction can be called only from ProcGameAction because together they form continuation loop. If you call this func from another place you create 2 continuation loops and this is invlaid.</comment>
-                <event-block sid="9685306970185458">
+                <comment>Process action dedicated for UI state change.&#x0D;&#x0A;if QuestLevelRuntime.getContinuation != &quot;NONE&quot; ProcUIAction can be called only from ProcGameAction because together they form continuation loop. If you call this func from another place you create 2 continuation loops and this is invlaid.</comment>
+                <event-block collapsed="1" sid="9685306970185458">
                     <conditions>
                         <condition id="0" name="On function" sid="4879756541203689" type="Function">
                             <param id="0" name="Name">&quot;ProcUIAction&quot;</param>
