@@ -21,6 +21,7 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Eugene/Learzing" id="QuestGamePlugin" version="0.100000001">Quest game</plugin>
         <plugin author="Eugene/Learzing" id="QuestInAppPurchasePlugin" version="0.100000001">Quest in-app purchase</plugin>
+        <plugin author="Eugene/Learzing" id="QuestLevelRecordingPlugin" version="0.100000001">Quest level recording</plugin>
         <plugin author="Eugene/learzing" id="QuestLevelRuntimePlugin" version="0.100000001">Quest Level Runtime</plugin>
         <plugin author="Eugene/Learzing" id="QuestPersistentStoragePlugin" version="0.100000001">Quest persistent storage</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -3036,7 +3037,7 @@
                         </object-folder>
                     </object-folder>
                 </object-folder>
-                <object-folder expanded="1" name="QuestEngine">
+                <object-folder expanded="0" name="QuestEngine">
                     <object-folder expanded="0" name="NPC">
                         <object-folder expanded="0" name="Speech">
                             <object-type name="NPCAns1Bg" sid="1347035969697416">
@@ -4586,6 +4587,9 @@
                         <object-type name="QuestPersistentStorage" sid="7495214766064503">
                             <plugin id="QuestPersistentStoragePlugin" />
                         </object-type>
+                        <object-type name="QuestLevelRecording" sid="572199709364609">
+                            <plugin id="QuestLevelRecordingPlugin" />
+                        </object-type>
                     </object-folder>
                     <object-type name="StageChanger" sid="7618603551053084">
                         <plugin id="Sprite" />
@@ -4879,8 +4883,10 @@
                     <event-sheet>QuestUIMisc.xml</event-sheet>
                     <event-sheet>QuestPlayerAnimation.xml</event-sheet>
                     <event-sheet>QuestPlayerInput.xml</event-sheet>
+                    <event-sheet>QuestRecording.xml</event-sheet>
+                    <event-sheet>QuestPlayback.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="1" name="Controls">
+                <event-folder expanded="0" name="Controls">
                     <event-folder expanded="0" name="GameHelp">
                         <event-sheet>GameHelp.xml</event-sheet>
                     </event-folder>
@@ -4916,18 +4922,17 @@
                         </event-folder>
                     </event-folder>
                 </event-folder>
-                <event-folder expanded="1" name="JumpLevel">
+                <event-folder expanded="0" name="JumpLevel">
                     <event-sheet>LevelJumpCommon.xml</event-sheet>
                     <event-sheet>LevelJumpPlatforms.xml</event-sheet>
                     <event-sheet>LevelJumpPlayerMovement.xml</event-sheet>
                     <event-sheet>LevelJumpIdioms.xml</event-sheet>
                     <event-sheet>LevelJumpCompletion.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="0" name="QuestLevel">
+                <event-folder expanded="1" name="QuestLevel">
                     <event-sheet>LevelQuestCommon.xml</event-sheet>
                     <event-sheet>LevelQuestDebug.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="1" name="LevelCommon" />
                 <event-sheet>LevelCommon.xml</event-sheet>
             </event-folder>
             <event-folder expanded="0" name="1demo">
@@ -4987,6 +4992,7 @@
         <global-instance type="IdiomlandGame" uid="310" />
         <global-instance type="IdiomlandLevels" uid="315" />
         <global-instance type="JumpLevelLogic" uid="321" />
+        <global-instance type="QuestLevelRecording" uid="345" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

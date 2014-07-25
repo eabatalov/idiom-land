@@ -11,7 +11,8 @@ function LevelIdiomsProgressTracker() {
         subscribe(this, this.onCurrentLevelChanged);
 }
 
-LevelIdiomsProgressTracker.prototype.onCurrentLevelChanged = function(level) {
+LevelIdiomsProgressTracker.prototype.onCurrentLevelChanged = function(questLevelRuntime) {
+    var level = questLevelRuntime.getLevel();
     jQuery.each(this.idiomStatusChangeSubscriptions, function(ix, subs) {
         subs.delete();
     });

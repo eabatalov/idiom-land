@@ -94,8 +94,8 @@ JumpLevelRuntime.prototype.arrayRandomShuffle = function(ar) {
     }
 }
 
-JumpLevelRuntime.prototype.onCurrentLevelChanged = function(level) {
-    this.currentLevel = level;
+JumpLevelRuntime.prototype.onCurrentLevelChanged = function(questLevelRuntime) {
+    this.currentLevel = questLevelRuntime.getLevel();
     this.idiomJumpCollections = [];
     this.currentIdiomToGuessIx = 0;
 

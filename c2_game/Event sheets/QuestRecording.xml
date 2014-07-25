@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>QuestRecording</name>
+    <events>
+        <event-group description="" sid="948492908663676" title="Local var group 5">
+            <sub-events>
+                <variable constant="0" name="QUEST_RECORDING_ENABLE" sid="9942586311396493" static="1" type="number">1</variable>
+                <variable constant="0" name="QUEST_RECORDING_STARTED" sid="2198030591488888" static="1" type="number">0</variable>
+                <event-block sid="3716209717360828">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="116377176019598" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="3067016738145269" type="System">
+                            <param id="0" name="First value">QUEST_RECORDING_ENABLE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="9890275587254193" type="System">
+                            <param id="0" name="First value">QUEST_RECORDING_STARTED</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Record player position" sid="3480448623374034" type="QuestLevelRecording">
+                            <param id="0" name="Player X">PlayerPlatform.X</param>
+                            <param id="1" name="Player Y">PlayerPlatform.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8866862396462997">
+                    <conditions>
+                        <condition id="-3" name="On end of layout" sid="558215752669171" type="System" />
+                        <condition id="-8" name="Compare two values" sid="4046410489764109" type="System">
+                            <param id="0" name="First value">QUEST_RECORDING_ENABLE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="4196714341527702" type="System">
+                            <param id="0" name="First value">QUEST_RECORDING_STARTED</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Save level gameplay recording" sid="2979535927079655" type="QuestLevelRecording" />
+                    </actions>
+                </event-block>
+                <event-block sid="7024565452734747">
+                    <conditions>
+                        <condition id="0" name="On function" sid="430788854180831" type="Function">
+                            <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="7904122597959812" type="System">
+                            <param id="0" name="First value">QUEST_RECORDING_ENABLE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="8914913455080522" type="System">
+                            <param id="0" name="Variable">QUEST_RECORDING_STARTED</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
