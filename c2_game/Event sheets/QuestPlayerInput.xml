@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="BlockPlayerInputOnSeqAction" sid="4976819164673977" static="0" type="number">0</variable>
         <variable constant="0" name="BlockPlayerAvatarControls" sid="4613878177283259" static="0" type="number">0</variable>
-        <event-group description="" sid="2830842349648749" title="PlayerInput">
+        <event-group collapsed="1" description="" sid="2830842349648749" title="PlayerInput">
             <sub-events>
                 <comment>Initial = &quot;BLOCKED&quot;: block player input on start until game was inited</comment>
                 <variable constant="0" name="INPUT_STATE" sid="3003482212209299" static="1" type="text">BLOCKED</variable>
@@ -22,7 +22,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="9069475156831885" title="PlayerAvatarControlsEnableDisable">
+                <event-group collapsed="1" description="" sid="9069475156831885" title="PlayerAvatarControlsEnableDisable">
                     <sub-events>
                         <event-block sid="8694111219489924">
                             <conditions>
@@ -324,7 +324,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="6040864831798009" title="GameObjectsClicking">
+                <event-group collapsed="1" description="" sid="6040864831798009" title="GameObjectsClicking">
                     <sub-events>
                         <comment>Simple tap processing by objects priority</comment>
                         <event-block sid="4129211300491289">
@@ -723,7 +723,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="332469586418499" title="Stage changer">
+        <event-group description="" sid="332469586418499" title="Stage changer">
             <sub-events>
                 <event-block sid="9949365663832994">
                     <conditions>
@@ -792,16 +792,9 @@
                             <param id="0" name="Instance variable">CurrentStage</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
-                        <action id="4" name="Set current stage" sid="7157665240375644" type="QuestLevelRuntime">
-                            <param id="0" name="Value">Function.Param(0)</param>
-                        </action>
-                        <action id="0" name="Call function" sid="3525188631633559" type="Function">
-                            <param id="0" name="Name">&quot;ProcUIAction&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="2064427168564408" type="Function">
-                            <param id="0" name="Name">&quot;onStage&quot; &amp; StageChanger.Stage &amp; &quot;Active&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="0" name="Call function" sid="8422606877246718" type="Function">
+                            <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;stage_activate&quot;{###}&quot;Player&quot;</param>
                         </action>
                     </actions>
                 </event-block>

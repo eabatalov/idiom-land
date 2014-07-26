@@ -2,5 +2,18 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>QuestPlayback</name>
-    <events />
+    <events>
+        <event-block sid="1108082092697224">
+            <conditions>
+                <condition id="0" name="Change player position" sid="7232518486501936" type="QuestLevelPlayback" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="353473135796383" type="PlayerPlatform">
+                    <param id="0" name="X">QuestLevelPlayback.getPlayerX</param>
+                    <param id="1" name="Y">QuestLevelPlayback.getPlayerY</param>
+                </action>
+                <action id="2" name="Signal player position change completed" sid="8683222478461531" type="QuestLevelPlayback" />
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

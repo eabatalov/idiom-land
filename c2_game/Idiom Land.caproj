@@ -21,6 +21,7 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Eugene/Learzing" id="QuestGamePlugin" version="0.100000001">Quest game</plugin>
         <plugin author="Eugene/Learzing" id="QuestInAppPurchasePlugin" version="0.100000001">Quest in-app purchase</plugin>
+        <plugin author="Eugene/Learzing" id="QuestLevelPlaybackPlugin" version="0.100000001">Quest level playback</plugin>
         <plugin author="Eugene/Learzing" id="QuestLevelRecordingPlugin" version="0.100000001">Quest level recording</plugin>
         <plugin author="Eugene/learzing" id="QuestLevelRuntimePlugin" version="0.100000001">Quest Level Runtime</plugin>
         <plugin author="Eugene/Learzing" id="QuestPersistentStoragePlugin" version="0.100000001">Quest persistent storage</plugin>
@@ -4792,6 +4793,9 @@
                 <object-type name="JumpLevelLogic" sid="7437827936985691">
                     <plugin id="JumpLevelLogicPlugin" />
                 </object-type>
+                <object-type name="QuestLevelPlayback" sid="7708577922288796">
+                    <plugin id="QuestLevelPlaybackPlugin" />
+                </object-type>
             </object-folder>
             <object-folder expanded="1" name="2demo_jump" />
         </object-folder>
@@ -4855,10 +4859,10 @@
     </families>
     <layout-folder expanded="1">
         <layout-folder expanded="1" name="Levels">
-            <layout-folder expanded="1" name="1demo">
+            <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
-            <layout-folder expanded="1" name="2demo_jump">
+            <layout-folder expanded="0" name="2demo_jump">
                 <layout>2demo_jump.xml</layout>
             </layout-folder>
         </layout-folder>
@@ -4935,7 +4939,7 @@
                 </event-folder>
                 <event-sheet>LevelCommon.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="0" name="1demo">
+            <event-folder expanded="1" name="1demo">
                 <event-folder expanded="0" name="Stages">
                     <event-folder expanded="0" name="BalloonSeller">
                         <event-sheet>BalloonSeller.xml</event-sheet>
@@ -4993,6 +4997,7 @@
         <global-instance type="IdiomlandLevels" uid="315" />
         <global-instance type="JumpLevelLogic" uid="321" />
         <global-instance type="QuestLevelRecording" uid="345" />
+        <global-instance type="QuestLevelPlayback" uid="346" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
