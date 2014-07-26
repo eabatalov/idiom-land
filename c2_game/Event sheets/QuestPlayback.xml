@@ -3,17 +3,79 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>QuestPlayback</name>
     <events>
-        <event-block sid="1108082092697224">
-            <conditions>
-                <condition id="0" name="Change player position" sid="7232518486501936" type="QuestLevelPlayback" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="353473135796383" type="PlayerPlatform">
-                    <param id="0" name="X">QuestLevelPlayback.getPlayerX</param>
-                    <param id="1" name="Y">QuestLevelPlayback.getPlayerY</param>
-                </action>
-                <action id="2" name="Signal player position change completed" sid="8683222478461531" type="QuestLevelPlayback" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="6094464589040204" title="Local var scope 7">
+            <sub-events>
+                <variable constant="0" name="IS_PLAYING" sid="9837120651696721" static="1" type="number">0</variable>
+                <event-block sid="1108082092697224">
+                    <conditions>
+                        <condition id="0" name="Change player position" sid="7232518486501936" type="QuestLevelPlayback" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="353473135796383" type="PlayerPlatform">
+                            <param id="0" name="X">QuestLevelPlayback.getPlayerX</param>
+                            <param id="1" name="Y">QuestLevelPlayback.getPlayerY</param>
+                        </action>
+                        <action id="2" name="Signal player position change completed" sid="8683222478461531" type="QuestLevelPlayback" />
+                    </actions>
+                </event-block>
+                <event-block sid="7551035515349315">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1652754158812733" type="Touch">
+                            <param id="0" name="Object">LevelGameplayPlaybackCtl</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3410400198507345">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="554921974346731" type="System">
+                                    <param id="0" name="First value">IS_PLAYING</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7216349613136794" type="System">
+                                    <param id="0" name="Variable">IS_PLAYING</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="4867605425627556" type="LevelGameplayPlaybackCtl">
+                                    <param id="0" name="Animation">&quot;Play&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="1" name="Stop" sid="1656210383954431" type="QuestLevelPlayback" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="8364549653424852">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8895810506689774" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1627129212820882" type="Function">
+                                    <param id="0" name="Name">&quot;ForbidRecording&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="4114288446369743" type="Function">
+                                    <param id="0" name="Name">&quot;BlockUIActionsProcessing&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="478624215672301" type="PlayerPlatform">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1934393445156217" type="System">
+                                    <param id="0" name="Variable">IS_PLAYING</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="3625298234136021" type="LevelGameplayPlaybackCtl">
+                                    <param id="0" name="Animation">&quot;Pause&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="1274713355080333" type="QuestLevelPlayback" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

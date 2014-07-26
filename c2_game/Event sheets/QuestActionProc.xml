@@ -5,8 +5,9 @@
     <events>
         <event-group description="" sid="3100647790949735" title="ActionProcess">
             <sub-events>
+                <variable constant="0" name="IS_PREV_UI_ACT_CONTINUE" sid="7528182529661732" static="1" type="number">0</variable>
                 <comment>Common processing after delay and non-delay UI action</comment>
-                <event-block sid="5462294256267517">
+                <event-block collapsed="1" sid="5462294256267517">
                     <conditions>
                         <condition id="0" name="On function" sid="3958206933563915" type="Function">
                             <param id="0" name="Name">&quot;ProcAfterUIAction&quot;</param>
@@ -31,6 +32,10 @@
                                     <param id="0" name="Variable">BlockPlayerInputOnSeqAction</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="8542273144097988" type="System">
+                                    <param id="0" name="Variable">IS_PREV_UI_ACT_CONTINUE</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="8" name="Signla UI action completed" sid="6814910372213305" type="QuestLevelRuntime" />
                             </actions>
                         </event-block>
@@ -38,7 +43,12 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="6348177549438832" type="System" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="6402280763287613" type="System">
+                                    <param id="0" name="Variable">IS_PREV_UI_ACT_CONTINUE</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="8729273860090556">
                                     <conditions>
@@ -69,33 +79,42 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Process action dedicated for UI state change.&#x0D;&#x0A;if QuestLevelRuntime.getContinuation != &quot;NONE&quot; ProcUIAction can be called only from ProcGameAction because together they form continuation loop. If you call this func from another place you create 2 continuation loops and this is invlaid.</comment>
-                <event-block collapsed="1" sid="9685306970185458">
+                <event-block sid="9685306970185458">
                     <conditions>
                         <condition id="0" name="On function" sid="4879756541203689" type="Function">
                             <param id="0" name="Name">&quot;ProcUIAction&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="2824821941456284" type="Function">
-                            <param id="0" name="Name">&quot;makeStageChangersSolid&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="8036011244503883">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="4009910061773385" type="System">
+                                    <param id="0" name="First value">IS_PREV_UI_ACT_CONTINUE</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="56233886372353" type="Function">
+                                    <param id="0" name="Name">&quot;HideStageUI&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.CurrentStage</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6442384714433765">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4180364542099183" type="System">
                                     <param id="0" name="First value">QuestLevelRuntime.getAction</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">&quot;DELAY&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="3062219250112227" type="System">
+                                <action id="-16" name="Wait" sid="8601938363507592" type="System">
                                     <param id="0" name="Seconds">QuestLevelRuntime.getDelay</param>
                                 </action>
-                                <action id="0" name="Call function" sid="5068168314085308" type="Function">
+                                <action id="0" name="Call function" sid="4681952901696571" type="Function">
                                     <param id="0" name="Name">&quot;ProcAfterUIAction&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
@@ -355,6 +374,49 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>XXX theoretically our UI &lt;=&gt; protocol allows to send UI action to any stage. but in practice it is impossible due to&#x0D;&#x0A;- Solid stage changers during UI action execution&#x0D;&#x0A;We set here player.stage to work ok during gameplay playback because stage changers may not trigger intersection with player that is moving by 1 sec position measurements</comment>
+                <event-block sid="733206755841331">
+                    <conditions>
+                        <condition id="1" name="UI action is pending" sid="8115179259503179" type="QuestLevelRuntime" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9628642405686811" type="Player">
+                            <param id="0" name="Instance variable">CurrentStage</param>
+                            <param id="1" name="Value">QuestLevelRuntime.getCurrentStage</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8283331344010882" type="Function">
+                            <param id="0" name="Name">&quot;ProcUIAction&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3666487095470993">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4218672536757897" type="Function">
+                            <param id="0" name="Name">&quot;BlockUIActionsProcessing&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3264800309476903" type="System">
+                            <param id="0" name="Variable">BLOCK_UI_ACTIONS_PROCESSING</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2181479984983191">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7804790539123348" type="Function">
+                            <param id="0" name="Name">&quot;AllowUIActionsProcessing&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5786381721224031" type="System">
+                            <param id="0" name="Variable">BLOCK_UI_ACTIONS_PROCESSING</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable constant="0" name="BLOCK_UI_ACTIONS_PROCESSING" sid="3661459468619402" static="1" type="number">0</variable>
                 <comment>Process player action&#x0D;&#x0A;p0: Player action type&#x0D;&#x0A;p1: Player action &apos;target id&apos; data</comment>
                 <event-block sid="1359721088397747">
                     <conditions>
@@ -366,15 +428,16 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="8010312559986772" type="System">
+                            <param id="0" name="First value">BLOCK_UI_ACTIONS_PROCESSING</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="3602083228748498" type="System">
                             <param id="0" name="Variable">BlockPlayerInputOnSeqAction</param>
                             <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="7766630465012576" type="Function">
-                            <param id="0" name="Name">&quot;HideStageUI&quot;</param>
-                            <param id="1" name="Parameter {n}">Player.CurrentStage</param>
                         </action>
                         <action id="0" name="Call function" sid="4631591131679396" type="Function">
                             <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
@@ -393,15 +456,16 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="4447298196087772" type="System">
+                            <param id="0" name="First value">BLOCK_UI_ACTIONS_PROCESSING</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="9956919483730849" type="System">
                             <param id="0" name="Variable">BlockPlayerInputOnSeqAction</param>
                             <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="3743524068143124" type="Function">
-                            <param id="0" name="Name">&quot;HideStageUI&quot;</param>
-                            <param id="1" name="Parameter {n}">Player.CurrentStage</param>
                         </action>
                         <action id="0" name="Call function" sid="7233653807269136" type="Function">
                             <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
@@ -415,8 +479,17 @@
                         <condition id="0" name="On function" sid="6910645582081889" type="Function">
                             <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="9294739917053716" type="System">
+                            <param id="0" name="First value">BLOCK_UI_ACTIONS_PROCESSING</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="2824821941456284" type="Function">
+                            <param id="0" name="Name">&quot;makeStageChangersSolid&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="4" name="Set current stage" sid="9168260037996853" type="QuestLevelRuntime">
                             <param id="0" name="Value">Player.CurrentStage</param>
                         </action>
@@ -430,22 +503,6 @@
                             <param id="0" name="Value">Function.Param(2)</param>
                         </action>
                         <action id="1" name="Execute last player action on current stage" sid="8413799453876062" type="QuestLevelRuntime" />
-                    </actions>
-                </event-block>
-                <comment>XXX theoretically our UI &lt;=&gt; protocol allows to send UI action to any stage. but in practice it is impossible due to&#x0D;&#x0A;- Solid stage changers during UI action execution&#x0D;&#x0A;We set here player.stage to work ok during gameplay playback because stage changers may not trigger intersection with player that is moving by 1 sec position measurements</comment>
-                <event-block sid="733206755841331">
-                    <conditions>
-                        <condition id="1" name="UI action is pending" sid="8115179259503179" type="QuestLevelRuntime" />
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="-10" name="Set value" sid="9628642405686811" type="Player">
-                            <param id="0" name="Instance variable">CurrentStage</param>
-                            <param id="1" name="Value">QuestLevelRuntime.getCurrentStage</param>
-                        </action>
-                        <action id="0" name="Call function" sid="8283331344010882" type="Function">
-                            <param id="0" name="Name">&quot;ProcUIAction&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
