@@ -1639,8 +1639,8 @@
                     </object-folder>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="0" name="Common">
-                <object-folder expanded="0" name="Controls">
+            <object-folder expanded="1" name="Common">
+                <object-folder expanded="1" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
                             <plugin id="Sprite" />
@@ -1803,7 +1803,7 @@
                             </animation-folder>
                         </object-type>
                     </object-folder>
-                    <object-folder expanded="0" name="LevelGameplayPlayback">
+                    <object-folder expanded="1" name="LevelGameplayPlayback">
                         <object-type name="LevelGameplayPlaybackCtl" sid="9012759797251801">
                             <plugin id="Sprite" />
                             <animation-folder expanded="1">
@@ -4887,11 +4887,11 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout-folder expanded="0" name="Levels">
+        <layout-folder expanded="1" name="Levels">
             <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
-            <layout-folder expanded="0" name="2demo_jump">
+            <layout-folder expanded="1" name="2demo_jump">
                 <layout>2demo_jump.xml</layout>
             </layout-folder>
         </layout-folder>
@@ -4907,7 +4907,7 @@
     <event-folder expanded="1">
         <event-folder expanded="1" name="Levels">
             <event-folder expanded="1" name="Common">
-                <event-folder expanded="0" name="QuestEngine">
+                <event-folder expanded="1" name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
                     <event-sheet>QuestUInit.xml</event-sheet>
@@ -4955,20 +4955,23 @@
                         </event-folder>
                     </event-folder>
                 </event-folder>
-                <event-folder expanded="0" name="JumpLevel">
+                <event-folder expanded="1" name="JumpLevel">
                     <event-sheet>LevelJumpCommon.xml</event-sheet>
                     <event-sheet>LevelJumpPlatforms.xml</event-sheet>
                     <event-sheet>LevelJumpPlayerMovement.xml</event-sheet>
                     <event-sheet>LevelJumpIdioms.xml</event-sheet>
                     <event-sheet>LevelJumpCompletion.xml</event-sheet>
+                    <event-sheet>LevelJumpPlayback.xml</event-sheet>
+                    <event-sheet>LevelJumpRecording.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="1" name="QuestLevel">
+                <event-folder expanded="0" name="QuestLevel">
                     <event-sheet>LevelQuestCommon.xml</event-sheet>
                     <event-sheet>LevelQuestDebug.xml</event-sheet>
+                    <event-sheet>LevelQuestPlayback.xml</event-sheet>
                 </event-folder>
                 <event-sheet>LevelCommon.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="1" name="1demo">
+            <event-folder expanded="0" name="1demo">
                 <event-folder expanded="0" name="Stages">
                     <event-folder expanded="0" name="BalloonSeller">
                         <event-sheet>BalloonSeller.xml</event-sheet>

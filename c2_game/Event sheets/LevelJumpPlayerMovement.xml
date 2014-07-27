@@ -19,6 +19,19 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="9723772895325251">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7411742175860297" type="Function">
+                            <param id="0" name="Name">&quot;JumpLevelPlayerPlaybackModeEnable&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3204133124673118" type="System">
+                            <param id="0" name="Variable">JUMP_LEVEL_START_PLAYER_MOVEMENT</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="8578327719985982">
                     <conditions>
                         <condition id="0" name="On function" sid="6255114283160244" type="Function">
@@ -42,7 +55,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="8838048860233468">
+                <event-block collapsed="1" sid="8838048860233468">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="9033638191699481" type="System">
                             <param id="0" name="First value">JUMP_LEVEL_START_PLAYER_MOVEMENT</param>
@@ -52,7 +65,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-group description="" sid="6006351359811596" title="Player manual movement">
+                        <event-group collapsed="1" description="" sid="6006351359811596" title="Player manual movement">
                             <sub-events>
                                 <comment>Use left and right arrow keys to control the player.  (This is necessary because the &apos;Default controls&apos; property has been set to &apos;No&apos; on the platform behavior, so we can automate jumping.)</comment>
                                 <event-block sid="2979744399792351">

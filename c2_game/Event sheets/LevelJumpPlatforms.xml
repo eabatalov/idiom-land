@@ -23,6 +23,19 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="8556462755051646">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1745874670102871" type="Function">
+                            <param id="0" name="Name">&quot;JumpLevelPlatformsPlaybackModeEnable&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3526083251064411" type="System">
+                            <param id="0" name="Variable">JUMP_LEVEL_START_PLATFORMS</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="3995359475659405">
                     <conditions>
                         <condition id="0" name="On function" sid="8945786050988433" type="Function">
@@ -50,7 +63,7 @@
                 </event-block>
                 <event-group description="" sid="946020039256646" title="Jump physics enabled">
                     <sub-events>
-                        <event-block sid="2762694241083942">
+                        <event-block collapsed="1" sid="2762694241083942">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="3054299836180485" type="System">
                                     <param id="0" name="Variable">JUMP_LEVEL_START_PLATFORMS</param>
