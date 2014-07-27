@@ -1,0 +1,20 @@
+{
+    "module" : {
+        "name" : "c2-plugin-quest-level-playback",
+        "description" : "",
+        "outDir" : ".",
+        "dependencies" : {
+            "base" : {
+                "lib-quest-game" : [],
+                "lib-quest-level-runtime" : [],
+                "lib-quest-level-recording" : [],
+                "lib-quest-level-playback" : []
+             }
+        },
+        "src" : {
+            "base" : [
+                "src/LevelGameplayPlayerController.js"
+            ]
+        }
+    }
+}

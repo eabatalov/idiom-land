@@ -41,7 +41,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="7551035515349315">
+                <event-block sid="7551035515349315">
                     <conditions>
                         <condition id="3" name="On touched object" sid="1652754158812733" type="Touch">
                             <param id="0" name="Object">LevelGameplayPlaybackCtl</param>
@@ -59,15 +59,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="7216349613136794" type="System">
-                                    <param id="0" name="Variable">IS_PLAYING</param>
-                                    <param id="1" name="Value">0</param>
+                                <action id="0" name="Call function" sid="5479959218572512" type="Function">
+                                    <param id="0" name="Name">&quot;PlaybackStop&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="4" name="Set animation" sid="4867605425627556" type="LevelGameplayPlaybackCtl">
-                                    <param id="0" name="Animation">&quot;Play&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="1" name="Stop" sid="1656210383954431" type="QuestLevelPlayback" />
                             </actions>
                         </event-block>
                         <event-block sid="8364549653424852">
@@ -75,15 +70,10 @@
                                 <condition id="-22" name="Else" sid="8895810506689774" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="1934393445156217" type="System">
-                                    <param id="0" name="Variable">IS_PLAYING</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="0" name="Call function" sid="5104245935775941" type="Function">
+                                    <param id="0" name="Name">&quot;PlaybackStart&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="4" name="Set animation" sid="3625298234136021" type="LevelGameplayPlaybackCtl">
-                                    <param id="0" name="Animation">&quot;Pause&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="0" name="Play" sid="1274713355080333" type="QuestLevelPlayback" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -96,7 +86,10 @@
                         <condition id="-9" name="Is visible" sid="3294156778612793" type="LevelGameplayPlaybackSpeedDown" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Speed down" sid="5653658609528732" type="QuestLevelPlayback" />
+                        <action id="0" name="Call function" sid="4453785418545246" type="Function">
+                            <param id="0" name="Name">&quot;PlaybackSpeedDown&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="4314792308477793">
@@ -107,7 +100,10 @@
                         <condition id="-9" name="Is visible" sid="5745724704149643" type="LevelGameplayPlaybackSpeedUp" />
                     </conditions>
                     <actions>
-                        <action id="3" name="Speed up" sid="6154596698573482" type="QuestLevelPlayback" />
+                        <action id="0" name="Call function" sid="4354472966450098" type="Function">
+                            <param id="0" name="Name">&quot;PlaybackSpeedUp&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block collapsed="1" sid="707822008968798">
@@ -228,6 +224,62 @@
                             <param id="0" name="Variable">BUTTONS_VISIBLE</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8921347511807015">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6293333820991083" type="Function">
+                            <param id="0" name="Name">&quot;PlaybackStart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1934393445156217" type="System">
+                            <param id="0" name="Variable">IS_PLAYING</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="3625298234136021" type="LevelGameplayPlaybackCtl">
+                            <param id="0" name="Animation">&quot;Pause&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="1274713355080333" type="QuestLevelPlayback" />
+                    </actions>
+                </event-block>
+                <event-block sid="9992458396558573">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3229164516151491" type="Function">
+                            <param id="0" name="Name">&quot;PlaybackStop&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7216349613136794" type="System">
+                            <param id="0" name="Variable">IS_PLAYING</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4867605425627556" type="LevelGameplayPlaybackCtl">
+                            <param id="0" name="Animation">&quot;Play&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="1" name="Stop" sid="1656210383954431" type="QuestLevelPlayback" />
+                    </actions>
+                </event-block>
+                <event-block sid="2733840242138459">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4426417464377087" type="Function">
+                            <param id="0" name="Name">&quot;PlaybackSpeedUp&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Speed up" sid="6154596698573482" type="QuestLevelPlayback" />
+                    </actions>
+                </event-block>
+                <event-block sid="2022738784616823">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7753685975936505" type="Function">
+                            <param id="0" name="Name">&quot;PlaybackSpeedDown&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Speed down" sid="5653658609528732" type="QuestLevelPlayback" />
                     </actions>
                 </event-block>
             </sub-events>

@@ -6,6 +6,7 @@
         <event-group description="" sid="9462243209791046" title="Local var group 3">
             <sub-events>
                 <variable constant="0" name="JUMP_LEVEL_START_PLATFORMS" sid="2596266830366742" static="1" type="number">0</variable>
+                <variable constant="0" name="IS_PLAYBACK" sid="2743000891899509" static="1" type="number">0</variable>
                 <comment>This variable holds the current scroll position, which gets smaller as the player moves upwards.</comment>
                 <variable constant="0" name="MinScroll" sid="3006293705114735" static="1" type="number">0</variable>
                 <comment>This variable holds the Y co-ordinate of the next platform to create.  When the top of the screen reaches that position, the platform is created.</comment>
@@ -21,6 +22,10 @@
                             <param id="0" name="Variable">JUMP_LEVEL_START_PLATFORMS</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-9" name="Set value" sid="7970358757640328" type="System">
+                            <param id="0" name="Variable">IS_PLAYBACK</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="8556462755051646">
@@ -31,8 +36,8 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="3526083251064411" type="System">
-                            <param id="0" name="Variable">JUMP_LEVEL_START_PLATFORMS</param>
-                            <param id="1" name="Value">0</param>
+                            <param id="0" name="Variable">IS_PLAYBACK</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -105,60 +110,73 @@
                                             <param id="0" name="Variable">isOnePlatDropped</param>
                                             <param id="1" name="Value">random(0, 100) &gt;= PLATFORM_GENERATION_CHANCE ? 1 : 0</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="5745157919120237" type="System">
-                                            <param id="0" name="Variable">platToDrop</param>
-                                            <param id="1" name="Value">isOnePlatDropped = 1 ? choose(0, 1, 2) : 4</param>
-                                        </action>
                                         <action id="-9" name="Set value" sid="9959058317183354" type="System">
                                             <param id="0" name="Variable">YBias</param>
                                             <param id="1" name="Value"> ViewportTop(&quot;Game&quot;) </param>
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="9600748118645527">
+                                        <event-block sid="633281693232555">
                                             <conditions>
-                                                <condition id="-14" name="Compare variable" sid="7185979901919767" type="System">
-                                                    <param id="0" name="Variable">platToDrop</param>
-                                                    <param id="1" name="Comparison">1</param>
+                                                <condition id="-14" name="Compare variable" sid="2357135886808921" type="System">
+                                                    <param id="0" name="Variable">IS_PLAYBACK</param>
+                                                    <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="3046803974272154" type="Function">
-                                                    <param id="0" name="Name">&quot;CreatePlatform&quot;</param>
-                                                    <param id="1" name="Parameter {n}">random(PlatformInfiniteJump.Width/2, LayoutWidth/3  - PlatformInfiniteJump.Width / 2){###} YBias + random(-PlatformInfiniteJump.Height, PlatformInfiniteJump.Height)</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="5216090895925084">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="3109350843486846" type="System">
+                                                <action id="-9" name="Set value" sid="5745157919120237" type="System">
                                                     <param id="0" name="Variable">platToDrop</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="7280290709554074" type="Function">
-                                                    <param id="0" name="Name">&quot;CreatePlatform&quot;</param>
-                                                    <param id="1" name="Parameter {n}">random(LayoutWidth/3 + PlatformInfiniteJump.Width/2, LayoutWidth * 2/3 - PlatformInfiniteJump.Width / 2){###}YBias+ random(-PlatformInfiniteJump.Height, PlatformInfiniteJump.Height)</param>
+                                                    <param id="1" name="Value">isOnePlatDropped = 1 ? choose(0, 1, 2) : 4</param>
                                                 </action>
                                             </actions>
-                                        </event-block>
-                                        <event-block sid="4751623205904988">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="5925289376480775" type="System">
-                                                    <param id="0" name="Variable">platToDrop</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">2</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="5041431092298802" type="Function">
-                                                    <param id="0" name="Name">&quot;CreatePlatform&quot;</param>
-                                                    <param id="1" name="Parameter {n}">random(LayoutWidth * 2/3 + PlatformInfiniteJump.Width/2, LayoutWidth - PlatformInfiniteJump.Width / 2){###}YBias+ random(-PlatformInfiniteJump.Height, PlatformInfiniteJump.Height)</param>
-                                                </action>
-                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="9600748118645527">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="7185979901919767" type="System">
+                                                            <param id="0" name="Variable">platToDrop</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="3046803974272154" type="Function">
+                                                            <param id="0" name="Name">&quot;CreatePlatform&quot;</param>
+                                                            <param id="1" name="Parameter {n}">random(PlatformInfiniteJump.Width/2, LayoutWidth/3  - PlatformInfiniteJump.Width / 2){###} YBias + random(-PlatformInfiniteJump.Height, PlatformInfiniteJump.Height)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="5216090895925084">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="3109350843486846" type="System">
+                                                            <param id="0" name="Variable">platToDrop</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="7280290709554074" type="Function">
+                                                            <param id="0" name="Name">&quot;CreatePlatform&quot;</param>
+                                                            <param id="1" name="Parameter {n}">random(LayoutWidth/3 + PlatformInfiniteJump.Width/2, LayoutWidth * 2/3 - PlatformInfiniteJump.Width / 2){###}YBias+ random(-PlatformInfiniteJump.Height, PlatformInfiniteJump.Height)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="4751623205904988">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="5925289376480775" type="System">
+                                                            <param id="0" name="Variable">platToDrop</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="5041431092298802" type="Function">
+                                                            <param id="0" name="Name">&quot;CreatePlatform&quot;</param>
+                                                            <param id="1" name="Parameter {n}">random(LayoutWidth * 2/3 + PlatformInfiniteJump.Width/2, LayoutWidth - PlatformInfiniteJump.Width / 2){###}YBias+ random(-PlatformInfiniteJump.Height, PlatformInfiniteJump.Height)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="4563748088792622">
                                             <conditions />
@@ -198,24 +216,32 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>param(0): x&#x0D;&#x0A;param(1): y</comment>
-                        <event-block sid="2666729693630022">
-                            <conditions>
-                                <condition id="0" name="On function" sid="2020997655751521" type="Function">
-                                    <param id="0" name="Name">&quot;CreatePlatform&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="129652729162659" type="System">
-                                    <param id="0" name="Object to create">PlatformInfiniteJump</param>
-                                    <param id="1" name="Layer">&quot;Platforms&quot;</param>
-                                    <param id="2" name="X">Function.Param(0)</param>
-                                    <param id="3" name="Y">Function.Param(1)</param>
-                                </action>
-                            </actions>
-                        </event-block>
                     </sub-events>
                 </event-group>
+                <comment>param(0): x&#x0D;&#x0A;param(1): y</comment>
+                <event-block sid="2666729693630022">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2020997655751521" type="Function">
+                            <param id="0" name="Name">&quot;CreatePlatform&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="129652729162659" type="System">
+                            <param id="0" name="Object to create">PlatformInfiniteJump</param>
+                            <param id="1" name="Layer">&quot;Platforms&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6513293918482393">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="4318197067351806" type="PlatformInfiniteJump" />
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Move to bottom" sid="2123987540322303" type="PlatformInfiniteJump" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

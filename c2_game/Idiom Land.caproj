@@ -10,12 +10,14 @@
     <unique-id>1qpq9otxp4r4o</unique-id>
     <saved-with-version>17300</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandGamePlugin" version="0.100000001">Idiomland game</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandLevelsPlugin" version="0.100000001">Idiomland levels</plugin>
         <plugin author="Eugene/Idiomland" id="JumpLevelLogicPlugin" version="0.100000001">JumpLevelLogic</plugin>
+        <plugin author="Eugene/Learzing" id="JumpLevelPlaybackPlugin" version="0.100000001">Jump level playback</plugin>
         <plugin author="Eugene/Learzing" id="JumpLevelRecordingPlugin" version="0.100000001">Jump level recording</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Eugene/Idiomland" id="LevelIdiomProgressTrackingPlugin" version="0.100000001">LevelIdiomProgressTracker</plugin>
@@ -1834,8 +1836,8 @@
                         </object-type>
                     </object-folder>
                 </object-folder>
-                <object-folder expanded="0" name="VisualObjects">
-                    <object-folder expanded="1" name="B">
+                <object-folder expanded="1" name="VisualObjects">
+                    <object-folder expanded="0" name="B">
                         <object-folder expanded="0" name="Benches">
                             <object-type name="Benches" sid="4870667590189457">
                                 <plugin id="Sprite" />
@@ -4787,7 +4789,7 @@
                         </animation-folder>
                     </object-type>
                 </object-folder>
-                <object-folder expanded="0" name="JumpLevel">
+                <object-folder expanded="1" name="JumpLevel">
                     <object-type name="CurrentIdiomToGuessTitleTxt" sid="360214855235879">
                         <plugin id="Text" />
                     </object-type>
@@ -4813,6 +4815,9 @@
                             </animation>
                         </animation-folder>
                     </object-type>
+                    <object-type name="JumpCreateTokenPlatformRequests" sid="2220743634826471">
+                        <plugin id="Arr" />
+                    </object-type>
                 </object-folder>
                 <object-type name="LevelIdiomProgressTracker" sid="504992448476046">
                     <plugin id="LevelIdiomProgressTrackingPlugin" />
@@ -4828,6 +4833,9 @@
                 </object-type>
                 <object-type name="JumpLevelRecording" sid="9956620667216801">
                     <plugin id="JumpLevelRecordingPlugin" />
+                </object-type>
+                <object-type name="JumpLevelPlayback" sid="819652268829102">
+                    <plugin id="JumpLevelPlaybackPlugin" />
                 </object-type>
             </object-folder>
             <object-folder expanded="1" name="2demo_jump" />
@@ -5035,6 +5043,7 @@
         <global-instance type="QuestLevelRecording" uid="345" />
         <global-instance type="QuestLevelPlayback" uid="346" />
         <global-instance type="JumpLevelRecording" uid="353" />
+        <global-instance type="JumpLevelPlayback" uid="354" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
