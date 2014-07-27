@@ -93,20 +93,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-26" name="Move to layer" sid="7791812169335802" type="JumpLevelTokenBg">
-                            <param id="0" name="Layer">&quot;Platforms&quot;</param>
+                        <action id="0" name="Call function" sid="3203169027490476" type="Function">
+                            <param id="0" name="Name">&quot;CreateJumpLevelToken&quot;</param>
+                            <param id="1" name="Parameter {n}">JumpLevelTokenTxt.X{###}JumpLevelTokenTxt.Y{###}JumpLevelLogic.getNextTokenToShow{###}JumpLevelTokenTxt.UID</param>
                         </action>
-                        <action id="-26" name="Move to layer" sid="4470714550095519" type="JumpLevelTokenTxt">
-                            <param id="0" name="Layer">&quot;Platforms&quot;</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="9022158542254834" type="JumpLevelTokenBg">
-                            <param id="0" name="Object">JumpLevelTokenTxt</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="0" name="Set text" sid="8291636664377106" type="JumpLevelTokenTxt">
-                            <param id="0" name="Text">JumpLevelLogic.getNextTokenToShow</param>
-                        </action>
-                        <action id="-24" name="Move to top" sid="9996751407216131" type="JumpLevelTokenTxt" />
                     </actions>
                 </event-block>
                 <event-block sid="7366870717302357">
@@ -147,6 +137,34 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>param(0): x&#x0D;&#x0A;param(1): y&#x0D;&#x0A;param(2): tokenText&#x0D;&#x0A;param(3): jumpLevelTokenText UID&#x0D;&#x0A;NB: handled in jump level recording too</comment>
+                <event-block sid="2861129055716647">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5808808861457329" type="Function">
+                            <param id="0" name="Name">&quot;CreateJumpLevelToken&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="68781509786967" type="JumpLevelTokenTxt">
+                            <param id="0" name="Unique ID">Function.Param(3)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="3906527448147415" type="JumpLevelTokenBg">
+                            <param id="0" name="Layer">&quot;Platforms&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="7403004740986081" type="JumpLevelTokenTxt">
+                            <param id="0" name="Layer">&quot;Platforms&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="2103853153597317" type="JumpLevelTokenBg">
+                            <param id="0" name="X">Function.Param(0)</param>
+                            <param id="1" name="Y">Function.Param(1)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3234565410905058" type="JumpLevelTokenTxt">
+                            <param id="0" name="Text">Function.Param(2)</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="9075735060318638" type="JumpLevelTokenBg" />
+                        <action id="-24" name="Move to top" sid="3951080007035433" type="JumpLevelTokenTxt" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

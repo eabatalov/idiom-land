@@ -1,0 +1,21 @@
+{
+    "module" : {
+        "name" : "lib-jump-level-recording",
+        "description" : "",
+        "dependencies" : {
+            "base" : { 
+                "lib-util" : [], 
+                "lib-quest-level" : [],
+                "lib-quest-level-recording" : []
+            }
+        },
+        "src" : {
+            "base" : [
+                "src/JumperCollectedIdiomSubstringChangedRecord.js",
+                "src/JumperGenIdiomTokenRecord.js",
+                "src/JumperGenPlatformRecord.js",
+                "src/JumperIdiomToGuessChangedRecord.js"
+            ]
+        }
+    }
+}

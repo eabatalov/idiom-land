@@ -16,6 +16,7 @@
         <plugin author="Eugene/Learzing" id="IdiomlandGamePlugin" version="0.100000001">Idiomland game</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandLevelsPlugin" version="0.100000001">Idiomland levels</plugin>
         <plugin author="Eugene/Idiomland" id="JumpLevelLogicPlugin" version="0.100000001">JumpLevelLogic</plugin>
+        <plugin author="Eugene/Learzing" id="JumpLevelRecordingPlugin" version="0.100000001">Jump level recording</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Eugene/Idiomland" id="LevelIdiomProgressTrackingPlugin" version="0.100000001">LevelIdiomProgressTracker</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -1640,7 +1641,7 @@
                 </object-folder>
             </object-folder>
             <object-folder expanded="1" name="Common">
-                <object-folder expanded="1" name="Controls">
+                <object-folder expanded="0" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
                             <plugin id="Sprite" />
@@ -4825,6 +4826,9 @@
                 <object-type name="JumpLevelLogic" sid="7437827936985691">
                     <plugin id="JumpLevelLogicPlugin" />
                 </object-type>
+                <object-type name="JumpLevelRecording" sid="9956620667216801">
+                    <plugin id="JumpLevelRecordingPlugin" />
+                </object-type>
             </object-folder>
             <object-folder expanded="1" name="2demo_jump" />
         </object-folder>
@@ -5030,6 +5034,7 @@
         <global-instance type="JumpLevelLogic" uid="321" />
         <global-instance type="QuestLevelRecording" uid="345" />
         <global-instance type="QuestLevelPlayback" uid="346" />
+        <global-instance type="JumpLevelRecording" uid="353" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
