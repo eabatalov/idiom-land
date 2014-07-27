@@ -13,5 +13,15 @@ QuestGame.bootstrap({
     levelLoader : { 
         className : 'IdiomLandLevelLoader',
         params : ["new AjaxQuestScriptLoader('')"]
+    },
+
+    levelGameplayHistorySaver : {
+        className : 'AjaxServerLevelGameplayHistorySaver',
+        params : ["'http://idiomland.com/gameplay_record.php'"]
+    },
+
+    levelGameplayHistoryLoader : {
+        className : 'WebDOMLocalFSGameplayHistoryLoader',
+        params : []
     }
 });
