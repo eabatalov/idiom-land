@@ -40,6 +40,7 @@ module.exports = function(grunt) {
         /* Flattened paths */
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>backend/contactus.php', dest: '<%= dirs.out %>' },
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>backend/sendmail.php', dest: '<%= dirs.out %>' },
+        { expand: true, flatten: true, src: '<%= dirs.in.dir%>backend/gameplay_record.php', dest: '<%= dirs.out %>' },
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>favicon.ico', dest: '<%= dirs.out %>' },
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>index.html', dest: '<%= dirs.out %>' },
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>thumbnail.png', dest: '<%= dirs.out %>' },
