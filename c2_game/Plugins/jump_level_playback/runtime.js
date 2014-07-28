@@ -172,8 +172,8 @@ cr.plugins_.JumpLevelPlaybackPlugin = function(runtime)
     Exps.prototype.getX = function(ret) {
         var rec = this.levelGameplayPlayerController.getPendingRecord();
         switch(rec.getRecordType()) {
-            case LevelGameplayRecord.TYPES.JUMPER_GEN_PLATFORM:
-            case LevelGameplayRecord.TYPES.JUMPER_GEN_IDIOM_TOKEN:
+            case JumperGenPlatformRecord.type:
+            case JumperGenIdiomTokenRecord.type:
                 ret.set_int(rec.getPosX());
                 return;
         }
@@ -183,8 +183,8 @@ cr.plugins_.JumpLevelPlaybackPlugin = function(runtime)
     Exps.prototype.getY = function(ret) {
         var rec = this.levelGameplayPlayerController.getPendingRecord();
         switch(rec.getRecordType()) {
-            case LevelGameplayRecord.TYPES.JUMPER_GEN_PLATFORM:
-            case LevelGameplayRecord.TYPES.JUMPER_GEN_IDIOM_TOKEN:
+            case JumperGenPlatformRecord.type:
+            case JumperGenIdiomTokenRecord.type:
                 ret.set_int(rec.getPosY());
                 return;
         }
@@ -194,15 +194,15 @@ cr.plugins_.JumpLevelPlaybackPlugin = function(runtime)
     Exps.prototype.getText = function(ret) {
         var rec = this.levelGameplayPlayerController.getPendingRecord();
         switch(rec.getRecordType()) {
-            case LevelGameplayRecord.TYPES.JUMPER_COLLECTED_IDIOM_SUBSTRING_CHANGE:
+            case JumperCollectedIdiomSubstringChangedRecord.type:
                 ret.set_string(rec.getSubstr());
                 return;
             break;
-            case LevelGameplayRecord.TYPES.JUMPER_GEN_IDIOM_TOKEN:
+            case JumperGenIdiomTokenRecord.type:
                 ret.set_string(rec.getTokenText());
                 return;
             break;
-            case LevelGameplayRecord.TYPES.JUMPER_IDIOM_TO_GUESS_CHANGE:
+            case JumperIdiomToGuessChangedRecord.type:
                 ret.set_string(rec.getIdiomText());
                 return;
             break;
@@ -213,16 +213,16 @@ cr.plugins_.JumpLevelPlaybackPlugin = function(runtime)
     Exps.prototype.getType = function(ret) {
         var rec = this.levelGameplayPlayerController.getPendingRecord();
         switch(rec.getRecordType()) {
-            case LevelGameplayRecord.TYPES.JUMPER_COLLECTED_IDIOM_SUBSTRING_CHANGE:
+            case JumperCollectedIdiomSubstringChangedRecord.type:
                 ret.set_string("COLLECTED_IDIOM_STR_CHANGED");
             break;
-            case LevelGameplayRecord.TYPES.JUMPER_GEN_IDIOM_TOKEN:
+            case JumperGenIdiomTokenRecord.type:
                 ret.set_string("GEN_IDIOM_TOKEN");
             break;
-            case LevelGameplayRecord.TYPES.JUMPER_IDIOM_TO_GUESS_CHANGE:
+            case JumperIdiomToGuessChangedRecord.type:
                 ret.set_string("IDIOM_CHANGED");
             break;
-            case LevelGameplayRecord.TYPES.JUMPER_GEN_PLATFORM:
+            case JumperGenPlatformRecord.type:
                 ret.set_string("GEN_PLATFORM");
             break;
         }
