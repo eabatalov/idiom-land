@@ -5,6 +5,7 @@
     <events>
         <include>QuestCommon</include>
         <include>LevelControls</include>
+        <include>LevelRecording</include>
         <include>FoxySimpleSCMLSpritesBinding</include>
         <event-block sid="5391175458694452">
             <conditions>
@@ -13,6 +14,10 @@
             <actions>
                 <action id="0" name="Call function" sid="4129170099985136" type="Function">
                     <param id="0" name="Name">&quot;LevelFinished&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="7109870308187546" type="Function">
+                    <param id="0" name="Name">&quot;VarsReset&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>

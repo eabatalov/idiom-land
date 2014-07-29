@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelRecording</name>
+    <events>
+        <event-group description="" sid="3260674428638226" title="Local var group 6">
+            <sub-events>
+                <variable constant="1" name="IS_RECORDING_ENABLED" sid="4974372175168924" static="1" type="number">1</variable>
+                <event-block sid="5506964562092859">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7282551356636508" type="Function">
+                            <param id="0" name="Name">&quot;LevelFinished&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Save level gameplay recording" sid="2979535927079655" type="QuestLevelRecording" />
+                    </actions>
+                </event-block>
+                <event-block sid="9657653793535486">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2419460912900368" type="Function">
+                            <param id="0" name="Name">&quot;StartRecording&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4125423442299847" type="Function">
+                            <param id="0" name="Name">&quot;RecordingStarted&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="14" name="Log" sid="2721675147438611" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Level gameplay recording is started&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6219862702962609">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4542649069431778" type="Function">
+                            <param id="0" name="Name">&quot;StopRecording&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Stop level gameplay recording" sid="9949152387908402" type="QuestLevelRecording" />
+                        <action id="14" name="Log" sid="1567082582297895" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Level gameplay recording is disabled and can&apos;t be enabled until the level is reentered&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4215904845201369" type="Function">
+                            <param id="0" name="Name">&quot;RecordingStopped&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7024565452734747">
+                    <conditions>
+                        <condition id="0" name="On function" sid="430788854180831" type="Function">
+                            <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="6225924137308506">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="6438660755456233" type="System">
+                                    <param id="0" name="First value">QuestPersistentStorage.get(&quot;no_recording&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;true&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="8800361408606986" type="System">
+                                    <param id="0" name="First value">IS_RECORDING_ENABLED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9966590668783802" type="Function">
+                                    <param id="0" name="Name">&quot;StopRecording&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3762739302961264">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5969830441110884" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7067089586399416" type="Function">
+                                    <param id="0" name="Name">&quot;StartRecording&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3895098492056037">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="8342896988531691" type="Keyboard">
+                            <param id="0" name="Key">82 (R)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="1018573169969996" type="Keyboard">
+                            <param id="0" name="Key">69 (E)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="1232711590841629" type="Keyboard">
+                            <param id="0" name="Key">67 (C)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2548781921603849">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7869654631799749" type="System">
+                                    <param id="0" name="First value">QuestPersistentStorage.get(&quot;no_recording&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Put" sid="703496681701945" type="QuestPersistentStorage">
+                                    <param id="0" name="Name">&quot;no_recording&quot;</param>
+                                    <param id="1" name="Value">&quot;false&quot;</param>
+                                </action>
+                                <action id="14" name="Log" sid="7902211488361114" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Recording is enabled permanently. Restart level for the changes to take effect&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="507337910133793">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4319420032291054" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3012061147127683" type="Function">
+                                    <param id="0" name="Name">&quot;StopRecording&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Put" sid="9860083529854684" type="QuestPersistentStorage">
+                                    <param id="0" name="Name">&quot;no_recording&quot;</param>
+                                    <param id="1" name="Value">&quot;true&quot;</param>
+                                </action>
+                                <action id="14" name="Log" sid="6478674017362617" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Recording is forbidden permanently. Push &apos;REC&apos; keys to enable again&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

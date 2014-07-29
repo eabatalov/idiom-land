@@ -3,14 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>QuestRecording</name>
     <events>
-        <variable constant="0" name="IS_RECORDING_NOW" sid="2198030591488888" static="0" type="number">0</variable>
         <event-group description="" sid="948492908663676" title="Local var group 5">
             <sub-events>
-                <variable constant="0" name="IS_RECORDING_ENABLED" sid="4974372175168924" static="1" type="number">1</variable>
+                <variable constant="0" name="IS_RECORDING_NOW" sid="2198030591488888" static="1" type="number">0</variable>
                 <event-block sid="3213393338770905">
                     <conditions>
                         <condition id="0" name="On function" sid="9242509523150069" type="Function">
-                            <param id="0" name="Name">&quot;LevelFinished&quot;</param>
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -18,67 +17,12 @@
                             <param id="0" name="Variable">IS_RECORDING_NOW</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-9" name="Set value" sid="1217622784139341" type="System">
-                            <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3716209717360828">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="116377176019598" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="9890275587254193" type="System">
-                            <param id="0" name="First value">IS_RECORDING_NOW</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="8190988047887068" type="System">
-                            <param id="0" name="First value">IS_RECORDING_ENABLED</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Record player position" sid="3480448623374034" type="QuestLevelRecording">
-                            <param id="0" name="Player X">PlayerPlatform.X</param>
-                            <param id="1" name="Player Y">PlayerPlatform.Y</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8866862396462997">
-                    <conditions>
-                        <condition id="-3" name="On end of layout" sid="558215752669171" type="System" />
-                        <condition id="-8" name="Compare two values" sid="4196714341527702" type="System">
-                            <param id="0" name="First value">IS_RECORDING_NOW</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="7039898659548145" type="System">
-                            <param id="0" name="First value">IS_RECORDING_ENABLED</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="2" name="Save level gameplay recording" sid="2979535927079655" type="QuestLevelRecording" />
                     </actions>
                 </event-block>
                 <event-block sid="9657653793535486">
                     <conditions>
                         <condition id="0" name="On function" sid="2419460912900368" type="Function">
-                            <param id="0" name="Name">&quot;StartRecording&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="9421424933318272" type="System">
-                            <param id="0" name="Variable">IS_RECORDING_NOW</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="2489000692523457" type="System">
-                            <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="0" name="Name">&quot;RecordingStarted&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -91,17 +35,7 @@
                 <event-block sid="6219862702962609">
                     <conditions>
                         <condition id="0" name="On function" sid="4542649069431778" type="Function">
-                            <param id="0" name="Name">&quot;StopRecording&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="8171436061316328" type="System">
-                            <param id="0" name="Variable">IS_RECORDING_NOW</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="4825385927912398" type="System">
-                            <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="0" name="Name">&quot;RecordingStopped&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -111,118 +45,26 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7029193184078794">
+                <event-block sid="3716209717360828">
                     <conditions>
-                        <condition id="0" name="On function" sid="2460949197504286" type="Function">
-                            <param id="0" name="Name">&quot;ForbidRecording&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="1546064114534951" type="System">
-                            <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
+                        <condition id="-8" name="Compare two values" sid="9890275587254193" type="System">
+                            <param id="0" name="First value">IS_RECORDING_NOW</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="5117716312789801" type="System">
-                            <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="8985650582936352" type="System">
-                            <param id="0" name="Variable">IS_RECORDING_NOW</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="3" name="Stop level gameplay recording" sid="9949152387908402" type="QuestLevelRecording" />
-                        <action id="14" name="Log" sid="1567082582297895" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Level gameplay recording is disabled and can&apos;t be enabled until the level is reentered&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7024565452734747">
-                    <conditions>
-                        <condition id="0" name="On function" sid="430788854180831" type="Function">
-                            <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                            <param id="2" name="Second value">1</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="6225924137308506">
+                        <event-block sid="4573493225294492">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="6438660755456233" type="System">
-                                    <param id="0" name="First value">QuestPersistentStorage.get(&quot;no_recording&quot;)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;true&quot;</param>
+                                <condition id="-6" name="Every X seconds" sid="116377176019598" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="5391439771792064" type="Function">
-                                    <param id="0" name="Name">&quot;ForbidRecording&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3762739302961264">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="5969830441110884" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="7067089586399416" type="Function">
-                                    <param id="0" name="Name">&quot;StartRecording&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="3895098492056037">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="8342896988531691" type="Keyboard">
-                            <param id="0" name="Key">82 (R)</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="1018573169969996" type="Keyboard">
-                            <param id="0" name="Key">69 (E)</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="1232711590841629" type="Keyboard">
-                            <param id="0" name="Key">67 (C)</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="2548781921603849">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="7869654631799749" type="System">
-                                    <param id="0" name="First value">QuestPersistentStorage.get(&quot;no_recording&quot;)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;true&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Put" sid="703496681701945" type="QuestPersistentStorage">
-                                    <param id="0" name="Name">&quot;no_recording&quot;</param>
-                                    <param id="1" name="Value">&quot;false&quot;</param>
-                                </action>
-                                <action id="14" name="Log" sid="7902211488361114" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;Recording is enabled permanently. Restart level for the changes to take effect&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="507337910133793">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="4319420032291054" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="3012061147127683" type="Function">
-                                    <param id="0" name="Name">&quot;ForbidRecording&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="0" name="Put" sid="9860083529854684" type="QuestPersistentStorage">
-                                    <param id="0" name="Name">&quot;no_recording&quot;</param>
-                                    <param id="1" name="Value">&quot;true&quot;</param>
-                                </action>
-                                <action id="14" name="Log" sid="6478674017362617" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;Recording is forbidden permanently. Push &apos;REC&apos; keys to enable again&quot;</param>
+                                <action id="0" name="Record player position" sid="3480448623374034" type="QuestLevelRecording">
+                                    <param id="0" name="Player X">PlayerPlatform.X</param>
+                                    <param id="1" name="Player Y">PlayerPlatform.Y</param>
                                 </action>
                             </actions>
                         </event-block>
