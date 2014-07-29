@@ -34,12 +34,12 @@ JumpLevelGameplayPlayerController.prototype.recProcCompleted = function() {
 };
 
 JumpLevelGameplayPlayerController.prototype.play = function() {
-    console.log("play()");
+    //console.log("play()");
     this.levelGameplayPlayer.play();
 };
 
 JumpLevelGameplayPlayerController.prototype.stop = function() {
-    console.log("stop()");
+    //console.log("stop()");
     this.levelGameplayPlayer.stop();
 };
 
@@ -52,7 +52,7 @@ JumpLevelGameplayPlayerController.prototype.speedDown = function() {
 };
 
 JumpLevelGameplayPlayerController.prototype._onRecReady = function(rec) {
-    console.log("onRecReady");
+    //console.log("onRecReady");
     this.pendingRecords.push(rec);  
     if (this.pendingRecords.length === 1) {
         this.events.recPending.publish(this.pendingRecords[0]);
@@ -60,6 +60,6 @@ JumpLevelGameplayPlayerController.prototype._onRecReady = function(rec) {
 };
 
 JumpLevelGameplayPlayerController.prototype._onLevelGameplayHistoryLoaded = function(history) {
-    console.log("_onLevelGameplayHistoryLoaded");
+    //console.log("_onLevelGameplayHistoryLoaded");
     this.levelGameplayPlayer.setLevelHist(history);
 };

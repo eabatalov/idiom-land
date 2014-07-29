@@ -1643,7 +1643,7 @@
                 </object-folder>
             </object-folder>
             <object-folder expanded="1" name="Common">
-                <object-folder expanded="0" name="Controls">
+                <object-folder expanded="1" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
                             <plugin id="Sprite" />
@@ -1833,6 +1833,12 @@
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                                 </animation>
                             </animation-folder>
+                        </object-type>
+                        <object-type name="LevelGameplayPlaybackTimeTxt" sid="2008857650694265">
+                            <plugin id="Text" />
+                        </object-type>
+                        <object-type name="LevelGameplayPlaybackSpeedTxt" sid="8736865860248545">
+                            <plugin id="Text" />
                         </object-type>
                     </object-folder>
                 </object-folder>
@@ -4900,7 +4906,7 @@
     </families>
     <layout-folder expanded="1">
         <layout-folder expanded="1" name="Levels">
-            <layout-folder expanded="0" name="1demo">
+            <layout-folder expanded="1" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
             <layout-folder expanded="1" name="2demo_jump">

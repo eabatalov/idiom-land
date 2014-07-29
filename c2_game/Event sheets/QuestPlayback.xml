@@ -14,6 +14,12 @@
                             <param id="0" name="X">QuestLevelPlayback.getPlayerX</param>
                             <param id="1" name="Y">QuestLevelPlayback.getPlayerY</param>
                         </action>
+                        <action id="0" name="Set text" sid="5956951317295912" type="LevelGameplayPlaybackTimeTxt">
+                            <param id="0" name="Text">QuestLevelPlayback.getPlaybackPosMin &amp; &quot; : &quot; &amp; QuestLevelPlayback.getPlaybackPosSec</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9281409180333122" type="LevelGameplayPlaybackSpeedTxt">
+                            <param id="0" name="Text">QuestLevelPlayback.getPlaybackSpeed</param>
+                        </action>
                         <action id="2" name="Signal player position change completed" sid="8683222478461531" type="QuestLevelPlayback" />
                     </actions>
                 </event-block>
@@ -106,7 +112,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="707822008968798">
+                <event-block sid="707822008968798">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="2708826289622226" type="Keyboard">
                             <param id="0" name="Key">80 (P)</param>
@@ -168,6 +174,12 @@
                                         <action id="-15" name="Set visible" sid="5724163525735024" type="LevelGameplayPlaybackSpeedUp">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
+                                        <action id="-15" name="Set visible" sid="6760040136713189" type="LevelGameplayPlaybackTimeTxt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="976470508710598" type="LevelGameplayPlaybackSpeedTxt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
                                         <action id="-9" name="Set value" sid="9582887745600045" type="System">
                                             <param id="0" name="Variable">BUTTONS_VISIBLE</param>
                                             <param id="1" name="Value">0</param>
@@ -218,6 +230,12 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="9110443153158375" type="LevelGameplayPlaybackSpeedUp">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="944451899777277" type="LevelGameplayPlaybackTimeTxt">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2356191555088786" type="LevelGameplayPlaybackSpeedTxt">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="2368139751993755" type="System">
