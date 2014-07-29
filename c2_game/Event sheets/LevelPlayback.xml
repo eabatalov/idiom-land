@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelPlayback</name>
+    <events>
+        <include>LevelGameplayPlaybackControls</include>
+        <event-group description="" sid="6833674505754102" title="Local var scope 9">
+            <sub-events>
+                <variable constant="0" name="IN_PLAYBACK_MODE" sid="3617214372666221" static="1" type="number">0</variable>
+                <event-block sid="31735540223336">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6246719676227119" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4217550552119984" type="System">
+                            <param id="0" name="Variable">IN_PLAYBACK_MODE</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="707822008968798">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="2708826289622226" type="Keyboard">
+                            <param id="0" name="Key">80 (P)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="3578721570231225" type="Keyboard">
+                            <param id="0" name="Key">76 (L)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="4630044259800805" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="2258677564087072" type="Keyboard">
+                            <param id="0" name="Key">89 (Y)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5944991981040148">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2121732711317585" type="System">
+                                    <param id="0" name="Variable">IN_PLAYBACK_MODE</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1276398703763885" type="Function">
+                                    <param id="0" name="Name">&quot;StopRecording&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="9109262988328085" type="Function">
+                                    <param id="0" name="Name">&quot;PlaybackModeEnable&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="5" name="Load" sid="1383017892253274" type="QuestLevelPlayback" />
+                                <action id="-9" name="Set value" sid="7593518908104256" type="System">
+                                    <param id="0" name="Variable">IN_PLAYBACK_MODE</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2613392055866802">
+                    <conditions>
+                        <condition id="1" name="Level gameplay history loaded" sid="9782664513816086" type="QuestLevelPlayback" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="7012612544523575" type="Function">
+                            <param id="0" name="Name">&quot;LevelPlaybackButtonsShow&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

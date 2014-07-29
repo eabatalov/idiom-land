@@ -6,13 +6,11 @@
         <event-group description="" sid="4652860929718227" title="Local var scope 5">
             <sub-events>
                 <variable constant="0" name="LEVEL_STARTED" sid="1018485019200617" static="1" type="number">0</variable>
-                <variable constant="0" name="IS_PLAYBACK" sid="781196773395467" static="1" type="number">0</variable>
-                <variable constant="0" name="PLATFORM_COUNTER" sid="9305839858545446" static="1" type="number">0</variable>
-                <variable constant="1" name="PLATFORMS_PER_ROW" sid="2482672309966095" static="1" type="number">3</variable>
+                <variable constant="0" name="IN_PLAYBACK_MODE" sid="781196773395467" static="1" type="number">0</variable>
                 <event-block sid="5894264748770707">
                     <conditions>
                         <condition id="0" name="On function" sid="1551561422326951" type="Function">
-                            <param id="0" name="Name">&quot;LevelFinished&quot;</param>
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -21,7 +19,7 @@
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="7738611386881322" type="System">
-                            <param id="0" name="Variable">IS_PLAYBACK</param>
+                            <param id="0" name="Variable">IN_PLAYBACK_MODE</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -34,7 +32,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="4383324416464127" type="System">
-                            <param id="0" name="Variable">IS_PLAYBACK</param>
+                            <param id="0" name="Variable">IN_PLAYBACK_MODE</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -46,210 +44,279 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="9776211190202893" type="System">
-                            <param id="0" name="Object to create">JumpCreateTokenPlatformRequests</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">0</param>
-                            <param id="3" name="Y">0</param>
-                        </action>
                         <action id="-9" name="Set value" sid="3424806724703204" type="System">
                             <param id="0" name="Variable">LEVEL_STARTED</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2067823218388713">
-                    <conditions>
-                        <condition id="0" name="Current idiom changed" sid="9423943429377404" type="JumpLevelLogic" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="4434776465983051" type="Function">
-                            <param id="0" name="Name">&quot;JumpLevelCurrentIdiomChaged&quot;</param>
-                            <param id="1" name="Parameter {n}">JumpLevelLogic.getCurrentIdiomTitle</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3373884619583715">
-                    <conditions>
-                        <condition id="1" name="Current token chain changed" sid="7170326692786265" type="JumpLevelLogic" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="3394782608569159" type="Function">
-                            <param id="0" name="Name">&quot;JumpLevelCurrentTokenChainChanged&quot;</param>
-                            <param id="1" name="Parameter {n}">JumpLevelLogic.getCurrentTokenChain</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9991262898631863">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="3272472401899103" type="JumpLevelTokenBg">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Token collected" sid="8942310337607184" type="JumpLevelLogic">
-                            <param id="0" name="Token">JumpLevelTokenTxt.Text</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="1866326247591297" type="JumpLevelTokenBg" />
-                        <action id="-9" name="Destroy" sid="8886386952835969" type="JumpLevelTokenTxt" />
-                    </actions>
-                </event-block>
-                <event-block sid="7366870717302357">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="5009024700235162" type="PlatformInfiniteJump" />
-                        <condition id="-14" name="Compare variable" sid="9228477814385979" type="System">
-                            <param id="0" name="Variable">LEVEL_STARTED</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="7402209323513008" type="System">
-                            <param id="0" name="Variable">IS_PLAYBACK</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="2245003536765856" type="System">
-                            <param id="0" name="Variable">PLATFORM_COUNTER</param>
-                            <param id="1" name="Value">PLATFORM_COUNTER + 1</param>
-                        </action>
-                    </actions>
+                <event-group description="" sid="3221042993009512" title="Jump level idioms common">
                     <sub-events>
-                        <event-block sid="6731234269356472">
+                        <comment>param(0): new idiom title text</comment>
+                        <event-block sid="6351204669769303">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="8768534582764477" type="System">
-                                    <param id="0" name="First value">PLATFORM_COUNTER + choose(0, 1, 2)</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">PLATFORMS_PER_ROW * 3</param>
+                                <condition id="0" name="On function" sid="8091921777726141" type="Function">
+                                    <param id="0" name="Name">&quot;JumpLevelCurrentIdiomChaged&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="1754810238663411" type="System">
-                                    <param id="0" name="Variable">PLATFORM_COUNTER</param>
-                                    <param id="1" name="Value">0</param>
+                                <action id="0" name="Set text" sid="4868163507023832" type="CurrentIdiomToGuessTitleTxt">
+                                    <param id="0" name="Text">Function.Param(0)</param>
                                 </action>
-                                <action id="0" name="Call function" sid="5599071310963626" type="Function">
+                                <action id="-9" name="Destroy" sid="7923443473457453" type="JumpLevelTokenTxt" />
+                            </actions>
+                        </event-block>
+                        <comment>param(0): new token chain text</comment>
+                        <event-block sid="6412667531083897">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7450668451956044" type="Function">
+                                    <param id="0" name="Name">&quot;JumpLevelCurrentTokenChainChanged&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="1697227965660837" type="CurrentCollectedTokenChainTxt">
+                                    <param id="0" name="Text">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="3460925575637823" type="JumpLevelTokenTxt" />
+                            </actions>
+                        </event-block>
+                        <comment>Can&apos;t be placed on layout so should be created manually on start of layout</comment>
+                        <event-block sid="325483892565327">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="8379449149713471" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="3191942479928" type="System">
+                                    <param id="0" name="Object to create">JumpCreateTokenPlatformRequests</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>param(0): x&#x0D;&#x0A;param(1): y&#x0D;&#x0A;param(2): tokenText</comment>
+                        <event-block sid="2861129055716647">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5808808861457329" type="Function">
                                     <param id="0" name="Name">&quot;CreateJumpLevelTokenPlatform&quot;</param>
-                                    <param id="1" name="Parameter {n}">PlatformInfiniteJump.X{###}PlatformInfiniteJump.Y{###}JumpLevelLogic.getNextTokenToShow</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="7614115424252674" type="JumpCreateTokenPlatformRequests">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="2321639694466753" type="JumpCreateTokenPlatformRequests">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="1333526989427756" type="JumpCreateTokenPlatformRequests">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">Function.Param(2)</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="8174955611514045" type="System">
+                                    <param id="0" name="Object to create">JumpLevelTokenTxt</param>
+                                    <param id="1" name="Layer">&quot;Platforms&quot;</param>
+                                    <param id="2" name="X">Function.Param(0)</param>
+                                    <param id="3" name="Y">Function.Param(1)</param>
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>param(0): x&#x0D;&#x0A;param(1): y&#x0D;&#x0A;param(2): tokenText</comment>
-                <event-block sid="2861129055716647">
-                    <conditions>
-                        <condition id="0" name="On function" sid="5808808861457329" type="Function">
-                            <param id="0" name="Name">&quot;CreateJumpLevelTokenPlatform&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Push" sid="7614115424252674" type="JumpCreateTokenPlatformRequests">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">Function.Param(0)</param>
-                            <param id="2" name="Axis">0</param>
-                        </action>
-                        <action id="5" name="Push" sid="2321639694466753" type="JumpCreateTokenPlatformRequests">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">Function.Param(1)</param>
-                            <param id="2" name="Axis">0</param>
-                        </action>
-                        <action id="5" name="Push" sid="1333526989427756" type="JumpCreateTokenPlatformRequests">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">Function.Param(2)</param>
-                            <param id="2" name="Axis">0</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="8174955611514045" type="System">
-                            <param id="0" name="Object to create">JumpLevelTokenTxt</param>
-                            <param id="1" name="Layer">&quot;Platforms&quot;</param>
-                            <param id="2" name="X">Function.Param(0)</param>
-                            <param id="3" name="Y">Function.Param(1)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1817589427106747">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="2822733769502442" type="JumpLevelTokenTxt" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block any="1" sid="3445162218232368">
+                        <event-block collapsed="1" sid="1817589427106747">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="4313410818158713" type="System">
-                                    <param id="0" name="Variable">LEVEL_STARTED</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                <condition id="-18" name="On created" sid="2822733769502442" type="JumpLevelTokenTxt" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="3445162218232368">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4313410818158713" type="System">
+                                            <param id="0" name="Variable">LEVEL_STARTED</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="4128771809340736" type="System">
+                                            <param id="0" name="Variable">IN_PLAYBACK_MODE</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-26" name="Move to layer" sid="3906527448147415" type="JumpLevelTokenBg">
+                                            <param id="0" name="Layer">&quot;Platforms&quot;</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="7403004740986081" type="JumpLevelTokenTxt">
+                                            <param id="0" name="Layer">&quot;Platforms&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="6405783711655757" type="JumpLevelTokenTxt">
+                                            <param id="0" name="X">JumpCreateTokenPlatformRequests.At(JumpCreateTokenPlatformRequests.Width -3)</param>
+                                            <param id="1" name="Y">JumpCreateTokenPlatformRequests.At(JumpCreateTokenPlatformRequests.Width -2)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="2103853153597317" type="JumpLevelTokenBg">
+                                            <param id="0" name="X">JumpCreateTokenPlatformRequests.At(JumpCreateTokenPlatformRequests.Width -3)</param>
+                                            <param id="1" name="Y">JumpCreateTokenPlatformRequests.At(JumpCreateTokenPlatformRequests.Width -2)</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="9075735060318638" type="JumpLevelTokenBg" />
+                                        <action id="-24" name="Move to top" sid="3951080007035433" type="JumpLevelTokenTxt" />
+                                        <action id="0" name="Set text" sid="3234565410905058" type="JumpLevelTokenTxt">
+                                            <param id="0" name="Text">JumpCreateTokenPlatformRequests.At(JumpCreateTokenPlatformRequests.Width -1)</param>
+                                        </action>
+                                        <action id="6" name="Pop" sid="4241054542379864" type="JumpCreateTokenPlatformRequests">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Axis">0</param>
+                                        </action>
+                                        <action id="6" name="Pop" sid="5713488089070108" type="JumpCreateTokenPlatformRequests">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Axis">0</param>
+                                        </action>
+                                        <action id="6" name="Pop" sid="7772948682709876" type="JumpCreateTokenPlatformRequests">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9161062773719917">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="6049737767469124" type="JumpLevelTokenTxt" />
+                                <condition id="-2" name="Compare Y" sid="7478083684657047" type="JumpLevelTokenTxt">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Platforms&quot;)</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="4128771809340736" type="System">
-                                    <param id="0" name="Variable">IS_PLAYBACK</param>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="6490909215327856" type="JumpLevelTokenTxt" />
+                                <action id="-9" name="Destroy" sid="5245703088409653" type="JumpLevelTokenBg" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group collapsed="1" description="" sid="9181105881275887" title="Jump level idioms playback only">
+                    <sub-events>
+                        <event-block sid="8791106221816726">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4118941827324995" type="System">
+                                    <param id="0" name="Variable">IN_PLAYBACK_MODE</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-26" name="Move to layer" sid="3906527448147415" type="JumpLevelTokenBg">
-                                    <param id="0" name="Layer">&quot;Platforms&quot;</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="7403004740986081" type="JumpLevelTokenTxt">
-                                    <param id="0" name="Layer">&quot;Platforms&quot;</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="6405783711655757" type="JumpLevelTokenTxt">
-                                    <param id="0" name="X">JumpCreateTokenPlatformRequests.At(JumpCreateTokenPlatformRequests.Width -3)</param>
-                                    <param id="1" name="Y">JumpCreateTokenPlatformRequests.At(JumpCreateTokenPlatformRequests.Width -2)</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="2103853153597317" type="JumpLevelTokenBg">
-                                    <param id="0" name="X">JumpCreateTokenPlatformRequests.At(JumpCreateTokenPlatformRequests.Width -3)</param>
-                                    <param id="1" name="Y">JumpCreateTokenPlatformRequests.At(JumpCreateTokenPlatformRequests.Width -2)</param>
-                                </action>
-                                <action id="-24" name="Move to top" sid="9075735060318638" type="JumpLevelTokenBg" />
-                                <action id="-24" name="Move to top" sid="3951080007035433" type="JumpLevelTokenTxt" />
-                                <action id="0" name="Set text" sid="3234565410905058" type="JumpLevelTokenTxt">
-                                    <param id="0" name="Text">JumpCreateTokenPlatformRequests.At(JumpCreateTokenPlatformRequests.Width -1)</param>
-                                </action>
-                                <action id="6" name="Pop" sid="4241054542379864" type="JumpCreateTokenPlatformRequests">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Axis">0</param>
-                                </action>
-                                <action id="6" name="Pop" sid="5713488089070108" type="JumpCreateTokenPlatformRequests">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Axis">0</param>
-                                </action>
-                                <action id="6" name="Pop" sid="7772948682709876" type="JumpCreateTokenPlatformRequests">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Axis">0</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7751540366890984">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="658993449442574" type="JumpLevelTokenBg">
+                                            <param id="0" name="Object">Player</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="3953963065171485" type="JumpLevelTokenBg" />
+                                        <action id="-9" name="Destroy" sid="9989164194553736" type="JumpLevelTokenTxt" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <comment>param(0): new idiom title text</comment>
-                <event-block sid="6351204669769303">
-                    <conditions>
-                        <condition id="0" name="On function" sid="8091921777726141" type="Function">
-                            <param id="0" name="Name">&quot;JumpLevelCurrentIdiomChaged&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="4868163507023832" type="CurrentIdiomToGuessTitleTxt">
-                            <param id="0" name="Text">Function.Param(0)</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="7923443473457453" type="JumpLevelTokenTxt" />
-                    </actions>
-                </event-block>
-                <comment>param(0): new token chain text</comment>
-                <event-block sid="6412667531083897">
-                    <conditions>
-                        <condition id="0" name="On function" sid="7450668451956044" type="Function">
-                            <param id="0" name="Name">&quot;JumpLevelCurrentTokenChainChanged&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="1697227965660837" type="CurrentCollectedTokenChainTxt">
-                            <param id="0" name="Text">Function.Param(0)</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="3460925575637823" type="JumpLevelTokenTxt" />
-                    </actions>
-                </event-block>
+                </event-group>
+                <event-group collapsed="1" description="" sid="7981547529656265" title="Jump level idioms not playback only">
+                    <sub-events>
+                        <event-block collapsed="1" sid="6753771883898488">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1184002740771878" type="System">
+                                    <param id="0" name="Variable">IN_PLAYBACK_MODE</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9991262898631863">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="3272472401899103" type="JumpLevelTokenBg">
+                                            <param id="0" name="Object">Player</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Token collected" sid="8942310337607184" type="JumpLevelLogic">
+                                            <param id="0" name="Token">JumpLevelTokenTxt.Text</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="1866326247591297" type="JumpLevelTokenBg" />
+                                        <action id="-9" name="Destroy" sid="8886386952835969" type="JumpLevelTokenTxt" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2067823218388713">
+                                    <conditions>
+                                        <condition id="0" name="Current idiom changed" sid="9423943429377404" type="JumpLevelLogic" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="4434776465983051" type="Function">
+                                            <param id="0" name="Name">&quot;JumpLevelCurrentIdiomChaged&quot;</param>
+                                            <param id="1" name="Parameter {n}">JumpLevelLogic.getCurrentIdiomTitle</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3373884619583715">
+                                    <conditions>
+                                        <condition id="1" name="Current token chain changed" sid="7170326692786265" type="JumpLevelLogic" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3394782608569159" type="Function">
+                                            <param id="0" name="Name">&quot;JumpLevelCurrentTokenChainChanged&quot;</param>
+                                            <param id="1" name="Parameter {n}">JumpLevelLogic.getCurrentTokenChain</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-group collapsed="1" description="" sid="4258428132002003" title="Idiom token generation on jump platforms">
+                                    <sub-events>
+                                        <variable constant="0" name="PLATFORM_COUNTER" sid="9305839858545446" static="1" type="number">0</variable>
+                                        <variable constant="1" name="PLATFORMS_PER_ROW" sid="2482672309966095" static="1" type="number">3</variable>
+                                        <event-block sid="7366870717302357">
+                                            <conditions>
+                                                <condition id="-18" name="On created" sid="5009024700235162" type="PlatformInfiniteJump" />
+                                                <condition id="-14" name="Compare variable" sid="9228477814385979" type="System">
+                                                    <param id="0" name="Variable">LEVEL_STARTED</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="2245003536765856" type="System">
+                                                    <param id="0" name="Variable">PLATFORM_COUNTER</param>
+                                                    <param id="1" name="Value">PLATFORM_COUNTER + 1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="6731234269356472">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="8768534582764477" type="System">
+                                                            <param id="0" name="First value">PLATFORM_COUNTER + choose(0, 1, 2)</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Second value">PLATFORMS_PER_ROW * 3</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="1754810238663411" type="System">
+                                                            <param id="0" name="Variable">PLATFORM_COUNTER</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="5599071310963626" type="Function">
+                                                            <param id="0" name="Name">&quot;CreateJumpLevelTokenPlatform&quot;</param>
+                                                            <param id="1" name="Parameter {n}">PlatformInfiniteJump.X{###}PlatformInfiniteJump.Y{###}JumpLevelLogic.getNextTokenToShow</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>

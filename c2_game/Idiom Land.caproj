@@ -1642,8 +1642,8 @@
                     </object-folder>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="1" name="Common">
-                <object-folder expanded="1" name="Controls">
+            <object-folder expanded="0" name="Common">
+                <object-folder expanded="0" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
                             <plugin id="Sprite" />
@@ -1806,7 +1806,7 @@
                             </animation-folder>
                         </object-type>
                     </object-folder>
-                    <object-folder expanded="1" name="LevelGameplayPlayback">
+                    <object-folder expanded="0" name="LevelGameplayPlayback">
                         <object-type name="LevelGameplayPlaybackCtl" sid="9012759797251801">
                             <plugin id="Sprite" />
                             <animation-folder expanded="1">
@@ -1842,7 +1842,7 @@
                         </object-type>
                     </object-folder>
                 </object-folder>
-                <object-folder expanded="1" name="VisualObjects">
+                <object-folder expanded="0" name="VisualObjects">
                     <object-folder expanded="0" name="B">
                         <object-folder expanded="0" name="Benches">
                             <object-type name="Benches" sid="4870667590189457">
@@ -4795,7 +4795,7 @@
                         </animation-folder>
                     </object-type>
                 </object-folder>
-                <object-folder expanded="1" name="JumpLevel">
+                <object-folder expanded="0" name="JumpLevel">
                     <object-type name="CurrentIdiomToGuessTitleTxt" sid="360214855235879">
                         <plugin id="Text" />
                     </object-type>
@@ -4906,7 +4906,7 @@
     </families>
     <layout-folder expanded="1">
         <layout-folder expanded="1" name="Levels">
-            <layout-folder expanded="1" name="1demo">
+            <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
             <layout-folder expanded="1" name="2demo_jump">
@@ -4925,7 +4925,7 @@
     <event-folder expanded="1">
         <event-folder expanded="1" name="Levels">
             <event-folder expanded="1" name="Common">
-                <event-folder expanded="1" name="QuestEngine">
+                <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
                     <event-sheet>QuestUInit.xml</event-sheet>
@@ -4949,6 +4949,9 @@
                         <event-sheet>NavigationMainMenuBtn.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="1" name="Movement" />
+                    <event-folder expanded="0" name="LevelGameplayPlayback">
+                        <event-sheet>LevelGameplayPlaybackControls.xml</event-sheet>
+                    </event-folder>
                     <event-sheet>LevelControls.xml</event-sheet>
                 </event-folder>
                 <event-folder expanded="0" name="VisualObjects">
@@ -4973,9 +4976,9 @@
                         </event-folder>
                     </event-folder>
                 </event-folder>
-                <event-folder expanded="1" name="JumpLevel">
+                <event-folder expanded="0" name="JumpLevel">
                     <event-sheet>LevelJumpCommon.xml</event-sheet>
-                    <event-sheet>LevelJumpPlatforms.xml</event-sheet>
+                    <event-sheet>LevelJumpCameraAndPlatforms.xml</event-sheet>
                     <event-sheet>LevelJumpPlayerMovement.xml</event-sheet>
                     <event-sheet>LevelJumpIdioms.xml</event-sheet>
                     <event-sheet>LevelJumpCompletion.xml</event-sheet>
@@ -4985,10 +4988,10 @@
                 <event-folder expanded="0" name="QuestLevel">
                     <event-sheet>LevelQuestCommon.xml</event-sheet>
                     <event-sheet>LevelQuestDebug.xml</event-sheet>
-                    <event-sheet>LevelQuestPlayback.xml</event-sheet>
                 </event-folder>
                 <event-sheet>LevelCommon.xml</event-sheet>
                 <event-sheet>LevelRecording.xml</event-sheet>
+                <event-sheet>LevelPlayback.xml</event-sheet>
             </event-folder>
             <event-folder expanded="0" name="1demo">
                 <event-folder expanded="0" name="Stages">
