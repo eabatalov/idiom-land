@@ -43,7 +43,6 @@ cr.plugins_.IdiomlandLevelsPlugin = function(runtime)
 	{
         this.curLevelIx = 0;
         this.curLevel = null;
-        this.curIdiomIx = 0;
         this.curIdiom = null;
 	};
 	
@@ -78,7 +77,6 @@ cr.plugins_.IdiomlandLevelsPlugin = function(runtime)
 
     instanceProto._setCurrentLevel = function(level, levelIx) {
         this.curLevelIx = levelIx;
-        this.curIdiomIx = 0;
         this.curLevel = level;
         this.curLevel.forEachIdiom(function(idiomId, idiom) {
             this.curIdiom = idiom;
@@ -86,9 +84,8 @@ cr.plugins_.IdiomlandLevelsPlugin = function(runtime)
         }.bind(this));
     };
 
-    instanceProto._setCurrentIdiom = function(idiom, idiomIx) {
-        this.idiomIx = idiomIx;
-        this.idiom = idiom;
+    instanceProto._setCurrentIdiom = function(idiom) {
+        this.curIdiom = idiom;
     };
 
 	// The comments around these functions ensure they are removed when exporting, since the
@@ -159,7 +156,7 @@ cr.plugins_.IdiomlandLevelsPlugin = function(runtime)
         var curIdiom = null;
 
         this.curLevel.forEachIdiom(function(idiomId, idiom) {
-            this._setCurrentIdiom(idiom, curIdiomIx);
+            this._setCurrentIdiom(idiom);
             this.doForEachLoopTrigger(curEvent);
             ++curIdiomIx;
         }.bind(this));
