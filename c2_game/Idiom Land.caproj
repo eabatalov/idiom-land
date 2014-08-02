@@ -70,72 +70,152 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="0" name="Menus">
             <object-folder expanded="0" name="LevelResults">
-                <object-type name="Foxy" sid="4330101678906835">
-                    <plugin id="Sprite" />
-                    <animation-folder expanded="1">
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4763184827659966" speed="5">
-                            <frame duration="1" hotspotX="0.502283" hotspotY="0.502024">
-                                <collision-poly>
-                                    <point x="0.260274" y="0.230769" />
-                                    <point x="0.497717" y="0.165992" />
-                                    <point x="0.712329" y="0.255061" />
-                                    <point x="0.986301" y="0.497976" />
-                                    <point x="0.497717" y="0.935223" />
-                                    <point x="0.232877" y="0.793522" />
-                                    <point x="0.0228311" y="0.497976" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="FoxySpeech" sid="8092447796273613">
-                    <plugin id="Sprite" />
-                    <animation-folder expanded="1">
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2049339548762781" speed="5">
-                            <frame duration="1" hotspotX="0.500998" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.0558882" y="0.0804598" />
-                                    <point x="0.499002" y="0.0172414" />
-                                    <point x="0.922156" y="0.112069" />
-                                    <point x="0.998004" y="0.5" />
-                                    <point x="0.914172" y="0.876437" />
-                                    <point x="0.499002" y="0.876437" />
-                                    <point x="0.0239521" y="0.965517" />
-                                    <point x="0.00199601" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="FoxySpeechText" sid="56095791430872">
-                    <plugin id="Text" />
-                </object-type>
-                <object-type name="LevelResultsText" sid="3025409012502349">
-                    <plugin id="Text" />
-                </object-type>
-                <object-type name="IdiomTitleText" sid="8545187802478282">
-                    <plugin id="Text" />
-                    <instance-variables>
-                        <instance-variable name="Index" sid="4775299070438301" type="number" />
-                    </instance-variables>
-                </object-type>
-                <object-type name="IdiomTableLine" sid="1319737610113391">
-                    <plugin id="Sprite" />
-                    <animation-folder expanded="1">
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5590471454420013" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="IdiomMeaningText" sid="3567831786456168">
-                    <plugin id="Text" />
-                    <instance-variables>
-                        <instance-variable name="Index" sid="8692695741756436" type="number" />
-                    </instance-variables>
-                </object-type>
+                <object-folder expanded="0" name="Brief">
+                    <object-type name="IdiomsFoundText" sid="8447354989569584">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="IdiomsGuessedText" sid="591804687404442">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="LevelResultsBriefHeadingTxt" sid="3025409012502349">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="LevelResultsBriefViewIdiomsButton" sid="9490659947021099">
+                        <plugin id="Sprite" />
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8577882762291108" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-folder expanded="0" name="Detailed">
+                    <object-type name="LevelResultsIdiomMeaningText" sid="3567831786456168">
+                        <plugin id="Text" />
+                        <instance-variables>
+                            <instance-variable name="Index" sid="8692695741756436" type="number" />
+                        </instance-variables>
+                        <container>
+                            <type>LevelResultsIdiomTitleText</type>
+                            <type>LevelResultsIdiomMeaningBg</type>
+                            <type>LevelResultsIdiomTitleBg</type>
+                            <type>LevelResultsIdiomMeaningText</type>
+                            <type>LevelResultsIdiomSuccessIndicator</type>
+                        </container>
+                    </object-type>
+                    <object-type name="LevelResultsIdiomSuccessIndicator" sid="9953672135447337">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="Index" sid="3233607771119763" type="number" />
+                        </instance-variables>
+                        <container>
+                            <type>LevelResultsIdiomTitleText</type>
+                            <type>LevelResultsIdiomMeaningBg</type>
+                            <type>LevelResultsIdiomTitleBg</type>
+                            <type>LevelResultsIdiomMeaningText</type>
+                            <type>LevelResultsIdiomSuccessIndicator</type>
+                        </container>
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Guess" pingpong="0" repeatcount="1" repeatto="0" sid="8617214023878586" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="Fail" pingpong="0" repeatcount="1" repeatto="0" sid="3140631132054894" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="Ignore" pingpong="0" repeatcount="1" repeatto="0" sid="1710418827736003" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="LevelResultsIdiomTitleText" sid="8545187802478282">
+                        <plugin id="Text" />
+                        <instance-variables>
+                            <instance-variable name="Index" sid="4775299070438301" type="number" />
+                        </instance-variables>
+                        <container>
+                            <type>LevelResultsIdiomTitleText</type>
+                            <type>LevelResultsIdiomMeaningBg</type>
+                            <type>LevelResultsIdiomTitleBg</type>
+                            <type>LevelResultsIdiomMeaningText</type>
+                            <type>LevelResultsIdiomSuccessIndicator</type>
+                        </container>
+                    </object-type>
+                    <object-type name="LevelResultsIdiomTitleBg" sid="1703556656711394">
+                        <plugin id="Sprite" />
+                        <container>
+                            <type>LevelResultsIdiomTitleText</type>
+                            <type>LevelResultsIdiomMeaningBg</type>
+                            <type>LevelResultsIdiomTitleBg</type>
+                            <type>LevelResultsIdiomMeaningText</type>
+                            <type>LevelResultsIdiomSuccessIndicator</type>
+                        </container>
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9823628634022828" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="LevelResultsIdiomMeaningBg" sid="1006767072642415">
+                        <plugin id="Sprite" />
+                        <container>
+                            <type>LevelResultsIdiomTitleText</type>
+                            <type>LevelResultsIdiomMeaningBg</type>
+                            <type>LevelResultsIdiomTitleBg</type>
+                            <type>LevelResultsIdiomMeaningText</type>
+                            <type>LevelResultsIdiomSuccessIndicator</type>
+                        </container>
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3320557601153585" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-folder expanded="0" name="NeedAllIdioms">
+                    <object-type name="Foxy" sid="4330101678906835">
+                        <plugin id="Sprite" />
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4763184827659966" speed="5">
+                                <frame duration="1" hotspotX="0.502283" hotspotY="0.502024">
+                                    <collision-poly>
+                                        <point x="0.260274" y="0.230769" />
+                                        <point x="0.497717" y="0.165992" />
+                                        <point x="0.712329" y="0.255061" />
+                                        <point x="0.986301" y="0.497976" />
+                                        <point x="0.497717" y="0.935223" />
+                                        <point x="0.232877" y="0.793522" />
+                                        <point x="0.0228311" y="0.497976" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="FoxySpeechText" sid="56095791430872">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="FoxySpeech" sid="8092447796273613">
+                        <plugin id="Sprite" />
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2049339548762781" speed="5">
+                                <frame duration="1" hotspotX="0.500998" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.0558882" y="0.0804598" />
+                                        <point x="0.499002" y="0.0172414" />
+                                        <point x="0.922156" y="0.112069" />
+                                        <point x="0.998004" y="0.5" />
+                                        <point x="0.914172" y="0.876437" />
+                                        <point x="0.499002" y="0.876437" />
+                                        <point x="0.0239521" y="0.965517" />
+                                        <point x="0.00199601" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
                 <object-type name="ReplayBtn" sid="4332853495816837">
                     <plugin id="Sprite" />
                     <animation-folder expanded="1">
@@ -146,42 +226,22 @@
                 </object-type>
                 <object-type name="NextLevelBtn" sid="8991808887361028">
                     <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Sine" sid="4934376255918528">
-                            <behavior id="Sin" />
-                        </behavior-type>
-                    </behaviors>
                     <animation-folder expanded="1">
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2918720804750634" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="IdiomSuccessIndicator" sid="9953672135447337">
+                <object-type name="SecretsFoundText" sid="8324317963687748">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="LevelResultsBack" sid="1065101704977046">
                     <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="Index" sid="3233607771119763" type="number" />
-                    </instance-variables>
                     <animation-folder expanded="1">
-                        <animation framecount="1" loop="0" name="Guess" pingpong="0" repeatcount="1" repeatto="0" sid="8617214023878586" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="Fail" pingpong="0" repeatcount="1" repeatto="0" sid="3140631132054894" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="Ignore" pingpong="0" repeatcount="1" repeatto="0" sid="1710418827736003" speed="5">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5075812569175868" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
-                </object-type>
-                <object-type name="IdiomsFoundText" sid="8447354989569584">
-                    <plugin id="Text" />
-                </object-type>
-                <object-type name="IdiomsGuessedText" sid="591804687404442">
-                    <plugin id="Text" />
-                </object-type>
-                <object-type name="SecretsFoundText" sid="8324317963687748">
-                    <plugin id="Text" />
                 </object-type>
             </object-folder>
             <object-folder expanded="0" name="MainMenu">
@@ -193,31 +253,122 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="MainMenuLevelButton" sid="7486525092793063">
+                <object-type name="MainMenuGoToLevelsMenuButton" sid="6753650535623423">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2267166653918074" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MainMenuHelpButton" sid="2169783506806152">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7617027428944962" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder expanded="0" name="LevelsMenu">
+                <object-type name="LevelsMenuLevelButton" sid="7486525092793063">
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable name="levelName" sid="7012575466259958" type="string" />
                     </instance-variables>
                     <container>
-                        <type>MainMenuLevelButton</type>
-                        <type>MainMenuLevelNameText</type>
+                        <type>LevelsMenuLevelButton</type>
+                        <type>LevelsMenuLevelNameText</type>
+                        <type>LevelsMenuLevelIdiomsButton</type>
                     </container>
                     <animation-folder expanded="1">
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9906154546557492" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Label" x="0.472" y="0.768" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="LevelsMenuLevelNameText" sid="3943528490161566">
+                    <plugin id="Text" />
+                    <container>
+                        <type>LevelsMenuLevelButton</type>
+                        <type>LevelsMenuLevelNameText</type>
+                        <type>LevelsMenuLevelIdiomsButton</type>
+                    </container>
+                </object-type>
+                <object-type name="LevelsMenuLevelIdiomsButton" sid="1672499113022956">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>LevelsMenuLevelButton</type>
+                        <type>LevelsMenuLevelNameText</type>
+                        <type>LevelsMenuLevelIdiomsButton</type>
+                    </container>
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2030048814869723" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="MainMenuLevelNameText" sid="3943528490161566">
+            </object-folder>
+            <object-folder expanded="0" name="LevelIdioms">
+                <object-type name="LevelIdiomsIdiomDefinitionBg" sid="9404711221624946">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>LevelIdiomsIdiomTitleText</type>
+                        <type>LevelIdiomsIdiomDefinitionBg</type>
+                        <type>LevelIdiomsIdiomTitleBg</type>
+                        <type>LevelIdiomsIdiomDefinitionText</type>
+                    </container>
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6254431840867851" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="LevelIdiomsIdiomTitleBg" sid="2074358453225455">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>LevelIdiomsIdiomTitleText</type>
+                        <type>LevelIdiomsIdiomDefinitionBg</type>
+                        <type>LevelIdiomsIdiomTitleBg</type>
+                        <type>LevelIdiomsIdiomDefinitionText</type>
+                    </container>
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7170051596211595" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="LevelIdiomsIdiomDefinitionText" sid="2074464598148086">
                     <plugin id="Text" />
                     <container>
-                        <type>MainMenuLevelButton</type>
-                        <type>MainMenuLevelNameText</type>
+                        <type>LevelIdiomsIdiomTitleText</type>
+                        <type>LevelIdiomsIdiomDefinitionBg</type>
+                        <type>LevelIdiomsIdiomTitleBg</type>
+                        <type>LevelIdiomsIdiomDefinitionText</type>
                     </container>
+                </object-type>
+                <object-type name="LevelIdiomsIdiomTitleText" sid="9728355277178131">
+                    <plugin id="Text" />
+                    <container>
+                        <type>LevelIdiomsIdiomTitleText</type>
+                        <type>LevelIdiomsIdiomDefinitionBg</type>
+                        <type>LevelIdiomsIdiomTitleBg</type>
+                        <type>LevelIdiomsIdiomDefinitionText</type>
+                    </container>
+                </object-type>
+                <object-type name="LevelIdiomsBackToLevelsMenuBtn" sid="1142135389349611">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2613609613401728" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="Levels">
+        <object-folder expanded="0" name="Levels">
             <object-folder expanded="0" name="1demo">
                 <object-folder expanded="0" name="Stages">
                     <object-folder expanded="0" name="Intro">
@@ -4905,7 +5056,7 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout-folder expanded="1" name="Levels">
+        <layout-folder expanded="0" name="Levels">
             <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
@@ -4915,10 +5066,18 @@
         </layout-folder>
         <layout-folder expanded="0" name="Menus">
             <layout-folder expanded="0" name="LevelResults">
-                <layout>LevelResults.xml</layout>
+                <layout>LevelResultsBrief.xml</layout>
+                <layout>LevelResultsDetailed.xml</layout>
+                <layout>LevelResultsNeedAllIdioms.xml</layout>
             </layout-folder>
             <layout-folder expanded="0" name="MainMenu">
                 <layout>MainMenu.xml</layout>
+            </layout-folder>
+            <layout-folder expanded="0" name="LevelsMenu">
+                <layout>LevelsMenu.xml</layout>
+            </layout-folder>
+            <layout-folder expanded="0" name="LevelIdioms">
+                <layout>LevelIdioms.xml</layout>
             </layout-folder>
         </layout-folder>
     </layout-folder>
@@ -4976,7 +5135,7 @@
                         </event-folder>
                     </event-folder>
                 </event-folder>
-                <event-folder expanded="1" name="JumpLevel">
+                <event-folder expanded="0" name="JumpLevel">
                     <event-sheet>LevelJumpCommon.xml</event-sheet>
                     <event-sheet>LevelJumpCameraAndPlatforms.xml</event-sheet>
                     <event-sheet>LevelJumpPlayerMovement.xml</event-sheet>
@@ -5024,11 +5183,20 @@
             </event-folder>
         </event-folder>
         <event-folder expanded="1" name="Menus">
-            <event-folder expanded="0" name="LevelResults">
-                <event-sheet>LevelResultsMain.xml</event-sheet>
+            <event-folder expanded="1" name="LevelResults">
+                <event-sheet>LevelResultsBriefMain.xml</event-sheet>
+                <event-sheet>LevelResultsDetailedMain.xml</event-sheet>
+                <event-sheet>LevelResultsCommon.xml</event-sheet>
+                <event-sheet>LevelResultsNeedAllIdiomsMain.xml</event-sheet>
             </event-folder>
             <event-folder expanded="0" name="MainMenu">
                 <event-sheet>MainMenuMain.xml</event-sheet>
+            </event-folder>
+            <event-folder expanded="1" name="LevelsMenu">
+                <event-sheet>LevelsMenuMain.xml</event-sheet>
+            </event-folder>
+            <event-folder expanded="0" name="LevelIdioms">
+                <event-sheet>LevelIdiomsMain.xml</event-sheet>
             </event-folder>
         </event-folder>
     </event-folder>

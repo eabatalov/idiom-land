@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>MainMenu</name>
-    <sid>6997113862861617</sid>
-    <event-sheet>MainMenuMain</event-sheet>
+    <name>LevelsMenu</name>
+    <sid>2909950194536305</sid>
+    <event-sheet>LevelsMenuMain</event-sheet>
     <size>
         <width>1600</width>
         <height>1000</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Background" sid="6516273952586512">
+        <layer name="Background" sid="9454996353627548">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -26,8 +26,24 @@
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="LevelButtons" sid="3900136296303191">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="MainMenuIdiomLandLogo" uid="311">
+                <instance type="LevelsMenuLevelIdiomsButton" uid="362">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -37,10 +53,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>799</x>
-                        <y>125</y>
+                        <x>748</x>
+                        <y>1194</y>
                         <z>0</z>
-                        <width>1600</width>
+                        <width>250</width>
                         <height>250</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -52,7 +68,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Controls" sid="3233875151096454">
+        <layer name="Controls" sid="5610913499493912">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -66,18 +82,21 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="MainMenuGoToLevelsMenuButton" uid="360">
+                <instance type="LevelsMenuLevelButton" uid="312">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <levelName>invalid</levelName>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>781</x>
-                        <y>800</y>
+                        <x>156</x>
+                        <y>1193</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -88,18 +107,23 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MainMenuHelpButton" uid="361">
+                <instance type="LevelsMenuLevelNameText" uid="316">
                     <properties>
+                        <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <font>Arial,-64,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>126</x>
-                        <y>874</y>
+                        <x>426</x>
+                        <y>1189</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>

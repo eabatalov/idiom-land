@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelsMenuMain</name>
+    <events>
+        <event-group collapsed="1" description="" sid="9815585167119101" title="Show levels menu">
+            <sub-events>
+                <event-block sid="8163900130420095">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2428199803751478" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="745836655437822" type="Function">
+                            <param id="0" name="Name">&quot;ShowLevelsMenu&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable constant="0" name="ITERATING_LEVELS" sid="5875633521619151" static="1" type="number">0</variable>
+                <event-block collapsed="1" sid="7714103794592295">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9630520917185018" type="Function">
+                            <param id="0" name="Name">&quot;ShowLevelsMenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4834722365207504" type="LevelsMenuLevelButton" />
+                        <action id="-9" name="Destroy" sid="7950463541264595" type="LevelsMenuLevelNameText" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1491879446147798">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="1267338172066224" type="System">
+                                    <param id="0" name="Variable">ITERATING_LEVELS</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6717310275174796">
+                            <conditions>
+                                <condition id="0" name="For each unlocked level" sid="5496822028097974" type="IdiomlandLevels" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="5762033207128615" type="System">
+                                    <param id="0" name="Object to create">LevelsMenuLevelButton</param>
+                                    <param id="1" name="Layer">&quot;LevelButtons&quot;</param>
+                                    <param id="2" name="X">LevelsMenuLevelButton.Width + IdiomlandLevels.getLevelIndex * (LevelsMenuLevelButton.Width + 100)</param>
+                                    <param id="3" name="Y">500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5758438923682252">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="688822253349577" type="System">
+                                    <param id="0" name="Variable">ITERATING_LEVELS</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8677730682673917">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="3265561472560564" type="LevelsMenuLevelButton" />
+                        <condition id="-8" name="Compare two values" sid="6168347594493791" type="System">
+                            <param id="0" name="First value">ITERATING_LEVELS</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7795385683133932" type="LevelsMenuLevelButton">
+                            <param id="0" name="Instance variable">levelName</param>
+                            <param id="1" name="Value">IdiomlandLevels.getCurrentLevelName</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8729369955213122" type="LevelsMenuLevelNameText">
+                            <param id="0" name="Text">IdiomlandLevels.getCurrentLevelName</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="5520575126949661" type="LevelsMenuLevelNameText">
+                            <param id="0" name="Object">LevelsMenuLevelButton</param>
+                            <param id="1" name="Image point (optional)">&quot;Label&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="2383182567495713" type="LevelsMenuLevelIdiomsButton">
+                            <param id="0" name="X">LevelsMenuLevelButton.X</param>
+                            <param id="1" name="Y">LevelsMenuLevelButton.Y + LevelsMenuLevelButton.Height / 2  + LevelsMenuLevelIdiomsButton.Height / 2 + 30</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="634855211130252" type="LevelsMenuLevelButton" />
+                        <action id="-24" name="Move to top" sid="6041537985974316" type="LevelsMenuLevelNameText" />
+                        <action id="-24" name="Move to top" sid="4644789980427381" type="LevelsMenuLevelIdiomsButton" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="6762050741817263">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8237475603485407" type="Touch">
+                    <param id="0" name="Object">LevelsMenuLevelButton</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="219553460012941" type="LevelsMenuLevelButton" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="4626652830390252" type="System">
+                    <param id="0" name="Layout">LevelsMenuLevelButton.levelName</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7726474815199692">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6339202726223637" type="Touch">
+                    <param id="0" name="Object">LevelsMenuLevelIdiomsButton</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="8032601094870748" type="LevelsMenuLevelIdiomsButton" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set current level by name" sid="6834698725293323" type="IdiomlandLevels">
+                    <param id="0" name="Level name">LevelsMenuLevelButton.levelName</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="6741550849494247" type="System">
+                    <param id="0" name="Layout">LevelIdioms</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

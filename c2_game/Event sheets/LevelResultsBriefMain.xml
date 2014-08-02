@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelResultsBriefMain</name>
+    <events>
+        <include>LevelResultsCommon</include>
+        <event-block sid="6071663212213">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7380802923572911" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Finalize level idioms progress" sid="9066542529292426" type="LevelIdiomProgressTracker" />
+                <action id="0" name="Save game" sid="7849873616605395" type="QuestGame" />
+                <action id="0" name="Set text" sid="9679877642509217" type="IdiomsFoundText">
+                    <param id="0" name="Text">&quot;Idioms found: &quot; &amp; LevelIdiomProgressTracker.getLevelFoundIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                </action>
+                <action id="0" name="Set text" sid="7225573258372632" type="IdiomsGuessedText">
+                    <param id="0" name="Text">&quot;Idioms guessed: &quot; &amp; LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5769935275446483">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2730285613817509" type="Touch">
+                    <param id="0" name="Object">NextLevelBtn</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="5391992012039003" type="NextLevelBtn" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8730350578672433">
+                    <conditions>
+                        <condition id="2" name="Is level succeeded" sid="5965373000315623" type="LevelIdiomProgressTracker" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1469128340199389" type="Function">
+                            <param id="0" name="Name">&quot;SaveLevelResults&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="7134485946036635" type="System">
+                            <param id="0" name="Layout">LevelIdiomProgressTracker.getNextLevelName</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8352613407998035">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4153544823653079" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="4723239989644491" type="System">
+                            <param id="0" name="Layout">LevelResultsNeedAllIdioms</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2571524852150477">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4574369218737592" type="Touch">
+                    <param id="0" name="Object">LevelResultsBriefViewIdiomsButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4229479487183978" type="System">
+                    <param id="0" name="Layout">LevelResultsDetailed</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

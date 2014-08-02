@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelResultsDetailedMain</name>
+    <events>
+        <event-group description="" sid="71408558927289" title="Results table">
+            <sub-events>
+                <variable constant="1" name="IDIOMS_H_MARGIN" sid="4316974800680357" static="0" type="number">300</variable>
+                <variable constant="1" name="IDIOMS_V_SPACING" sid="6306750405112745" static="0" type="number">30</variable>
+                <variable constant="0" name="IS_LOOPING_IDIOMS" sid="8916469577299853" static="1" type="number">0</variable>
+                <event-block collapsed="1" sid="6466158122168322">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5928048654079393" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="295426897118105">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="9189187056977864" type="System">
+                                    <param id="0" name="Variable">IS_LOOPING_IDIOMS</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6384195424070088">
+                            <conditions>
+                                <condition id="0" name="For each idiom" sid="9460230890113758" type="LevelIdiomProgressTracker" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="4154410177783092" type="System">
+                                    <param id="0" name="Object to create">LevelResultsIdiomTitleText</param>
+                                    <param id="1" name="Layer">&quot;Idioms&quot;</param>
+                                    <param id="2" name="X">IDIOMS_H_MARGIN + LevelResultsIdiomTitleBg.Width / 2</param>
+                                    <param id="3" name="Y">LevelResultsIdiomTitleBg.Height / 2 + (IDIOMS_V_SPACING + LevelResultsIdiomTitleBg.Height) * LevelIdiomProgressTracker.getCurrentIdiomIndex</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9872777789196687">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="4337946059335413" type="System">
+                                    <param id="0" name="Variable">IS_LOOPING_IDIOMS</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3380545445876918">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="2603382701538641" type="LevelResultsIdiomTitleText" />
+                        <condition id="-14" name="Compare variable" sid="7769382683842833" type="System">
+                            <param id="0" name="Variable">IS_LOOPING_IDIOMS</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="574806574970596" type="LevelResultsIdiomMeaningBg">
+                            <param id="0" name="Layer">&quot;Idiom&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="5335280137646594" type="LevelResultsIdiomMeaningText">
+                            <param id="0" name="Layer">&quot;Idioms&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="2920476600469802" type="LevelResultsIdiomTitleBg">
+                            <param id="0" name="Layer">&quot;Idioms&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="7375766345863231" type="LevelResultsIdiomTitleText">
+                            <param id="0" name="Layer">&quot;Idioms&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="1419948314776255" type="LevelResultsIdiomSuccessIndicator">
+                            <param id="0" name="Layer">&quot;Idioms&quot;</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="7392097795118871" type="LevelResultsIdiomMeaningBg" />
+                        <action id="-24" name="Move to top" sid="1330900692185337" type="LevelResultsIdiomTitleBg" />
+                        <action id="-24" name="Move to top" sid="7351154419835689" type="LevelResultsIdiomMeaningText" />
+                        <action id="-24" name="Move to top" sid="2596875733833964" type="LevelResultsIdiomTitleText" />
+                        <action id="-24" name="Move to top" sid="7670296669661531" type="LevelResultsIdiomSuccessIndicator" />
+                        <action id="-4" name="Set position to another object" sid="6123130924852342" type="LevelResultsIdiomTitleBg">
+                            <param id="0" name="Object">LevelResultsIdiomTitleText</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="2193745809369427" type="LevelResultsIdiomMeaningText">
+                            <param id="0" name="X">LevelResultsIdiomMeaningBg.X + LevelResultsIdiomMeaningBg.Width / 2 + LevelResultsIdiomMeaningBg.Width / 2</param>
+                            <param id="1" name="Y">LevelResultsIdiomTitleText.Y</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1846306004354435" type="LevelResultsIdiomMeaningBg">
+                            <param id="0" name="Object">LevelResultsIdiomMeaningText</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="6899799416908407" type="LevelResultsIdiomSuccessIndicator">
+                            <param id="0" name="X">LevelResultsIdiomTitleBg.X - LevelResultsIdiomTitleBg.Width / 2 - LevelResultsIdiomSuccessIndicator.Width / 2</param>
+                            <param id="1" name="Y">LevelResultsIdiomTitleBg.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1012600785967446">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8158851874385016" type="System">
+                                    <param id="0" name="First value">LevelIdiomProgressTracker.getCurrentIdiomStatus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;IGNORED&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="2145187086822293" type="LevelResultsIdiomTitleText">
+                                    <param id="0" name="Text">&quot;???&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="169802269378298" type="LevelResultsIdiomMeaningText">
+                                    <param id="0" name="Text">LevelIdiomProgressTracker.getCurrentIdiomHintToFind</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="582402600597644" type="LevelResultsIdiomSuccessIndicator">
+                                    <param id="0" name="Animation">&quot;Ignore&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block collapsed="1" sid="8896117926862721">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8691727092945532" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="5576868438515665" type="LevelResultsIdiomTitleText">
+                                    <param id="0" name="Text">LevelIdiomProgressTracker.getCurrentIdiomTitle</param>
+                                </action>
+                                <action id="0" name="Set text" sid="5741971343992225" type="LevelResultsIdiomMeaningText">
+                                    <param id="0" name="Text">LevelIdiomProgressTracker.getCurrentIdiomShortMeaning</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="5268327716364316">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="3496796332181174" type="System">
+                                            <param id="0" name="First value">LevelIdiomProgressTracker.getCurrentIdiomStatus</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;GUESSED&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="2358222762049658" type="LevelResultsIdiomSuccessIndicator">
+                                            <param id="0" name="Animation">&quot;Guess&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7502911977997638">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="868934370816684" type="System">
+                                            <param id="0" name="First value">LevelIdiomProgressTracker.getCurrentIdiomStatus</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;FAILED&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="4443745052784641" type="LevelResultsIdiomSuccessIndicator">
+                                            <param id="0" name="Animation">&quot;Fail&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="8395417524433224">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8553257002554569" type="Touch">
+                    <param id="0" name="Object">LevelResultsBack</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="2414251967286383" type="LevelResultsBack" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4726795475473647" type="System">
+                    <param id="0" name="Layout">LevelResultsBrief</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
