@@ -17,6 +17,8 @@ LevelIdiomsProgressTracker.prototype.onCurrentLevelChanged = function(questLevel
         subs.delete();
     });
     this.idiomStatusChangeSubscriptions = [];
+    if (this.currentLevel)
+        this.currentLevel.resetProgress();
 
     this.currentLevel = level;
     this.isProgressFinalized = false;
