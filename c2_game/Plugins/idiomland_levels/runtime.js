@@ -136,17 +136,17 @@ cr.plugins_.IdiomlandLevelsPlugin = function(runtime)
         this.runtime.popSol(curEvent.solModifiers)
     };
 
-    Cnds.prototype.forEachUnlockedLevel = function() {
+    Cnds.prototype.forEachLevel = function() {
         var curEvent = this.runtime.getCurrentEventStack().current_event;
         var curLevelIx = 0;
         var curLevel = null;
         
         IdiomLandGame.instance.getLevelsProgressManager().
-            forEachOrderedUnlockedLevel(function(level) {
-            this._setCurrentLevel(level, curLevelIx);
-            this.doForEachLoopTrigger(curEvent);
-            ++curLevelIx;
-        }.bind(this));
+            forEachOrderedLevel(function(level) {
+                this._setCurrentLevel(level, curLevelIx);
+                this.doForEachLoopTrigger(curEvent);
+                ++curLevelIx;
+            }.bind(this));
         return false;
     };
 
@@ -191,6 +191,21 @@ cr.plugins_.IdiomlandLevelsPlugin = function(runtime)
         );
     };
 
+	Exps.prototype.getCurrentLevelStatus = function(ret) {
+        switch(this.curLevel.getStatus()) {
+            case IdiomLandLevel.STATUS.UNDEFINED:
+            case IdiomLandLevel.STATUS.UNAVALIABLE:
+            case IdiomLandLevel.STATUS.LOCKED:
+                ret.set_string('LOCKED');
+            break;
+            case IdiomLandLevel.STATUS.IN_PROGRESS:
+                ret.set_string('IN_PROGRESS');
+            break;
+            case IdiomLandLevel.STATUS.COMPLETED:
+                ret.set_string('COMPLETED');
+            break;
+        }
+    };
     //Current idiom
 	Exps.prototype.getCurrentIdiomId = function(ret) {
         ret.set_string(

@@ -32,8 +32,8 @@ AddStringParam("Level name", "Level name", "");
 AddAction(0, af_none, "Set current level by name", "General", "Set current level by name to {0}",
     "Set current level by name", "setCurrentLevelByName");
 
-AddCondition(0, cf_looping, "For each unlocked level", "General", "For each unlocked level",
-    "For each unlocked level", "forEachUnlockedLevel");
+AddCondition(0, cf_looping, "For each level", "General", "For each level",
+    "For each level", "forEachLevel");
 AddCondition(1, cf_looping, "For each idiom on current level", "General", "For each idiom on current level",
     "For each idiom on current level", "forEachIdiomOnCurrentLevel");
 
@@ -42,6 +42,8 @@ AddExpression(0, ef_return_number, "Current level index", "Getters", "getLevelIn
     "Get index of current level");
 AddExpression(1, ef_return_string, "Current level name", "Getters", "getCurrentLevelName",
     "Get name of current level");
+AddExpression(100, ef_return_string, "Current level status", "Getters", "getCurrentLevelStatus",
+    "Get status of current level ('UNLOCKED' | 'LOCKED' | 'UNAVALIABLE')");
 
 //Current idiom
 AddExpression(2, ef_return_string, "Current idiom id", "Getters", "getCurrentIdiomId",
