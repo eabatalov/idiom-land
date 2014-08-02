@@ -4,12 +4,12 @@
     <sid>2909950194536305</sid>
     <event-sheet>LevelsMenuMain</event-sheet>
     <size>
-        <width>1600</width>
-        <height>1000</height>
+        <width>980</width>
+        <height>500</height>
     </size>
     <margins>
-        <horizontal>500</horizontal>
-        <vertical>500</vertical>
+        <horizontal>1000</horizontal>
+        <vertical>1000</vertical>
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
@@ -26,7 +26,52 @@
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="MenuBg" uid="291">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>490</x>
+                        <y>250</y>
+                        <z>0</z>
+                        <width>980</width>
+                        <height>500</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LevelsMenuLevelsButtonsMidLine" uid="292">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1070</x>
+                        <y>203</y>
+                        <z>0</z>
+                        <width>1142</width>
+                        <height>5</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="LevelButtons" sid="3900136296303191">
@@ -53,13 +98,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>748</x>
-                        <y>1194</y>
+                        <x>728</x>
+                        <y>-191</y>
                         <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
+                        <width>271</width>
+                        <height>90</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.501845002</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -91,28 +136,29 @@
                     </properties>
                     <instance-variables>
                         <levelName>invalid</levelName>
+                        <Active>0</Active>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>156</x>
-                        <y>1193</y>
+                        <x>136</x>
+                        <y>-192</y>
                         <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
+                        <width>255</width>
+                        <height>225</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.498039216</hotspotX>
+                        <hotspotY>0.49777779</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="LevelsMenuLevelNameText" uid="316">
                     <properties>
-                        <text>Text</text>
+                        <text>Level name</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-64,400,0</font>
-                        <color>0,0,0</color>
+                        <font>Arial,-35,400,0</font>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -122,13 +168,35 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>426</x>
-                        <y>1189</y>
+                        <x>140</x>
+                        <y>-141</y>
                         <z>0</z>
                         <width>250</width>
-                        <height>250</height>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LevelsMenuLevelPreviewPic" uid="300">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>410</x>
+                        <y>-192</y>
+                        <z>0</z>
+                        <width>157</width>
+                        <height>110</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503184736</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

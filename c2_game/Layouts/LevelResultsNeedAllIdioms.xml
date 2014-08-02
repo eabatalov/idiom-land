@@ -4,8 +4,8 @@
     <sid>6161329910038796</sid>
     <event-sheet>LevelResultsNeedAllIdiomsMain</event-sheet>
     <size>
-        <width>1600</width>
-        <height>1000</height>
+        <width>980</width>
+        <height>500</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -26,7 +26,30 @@
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="LevelResultsNeedAllIdiomsBg" uid="293">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>491</x>
+                        <y>251</y>
+                        <z>0</z>
+                        <width>980</width>
+                        <height>500</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Foxy" sid="687658266981837">
@@ -53,14 +76,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>681</x>
-                        <y>735</y>
+                        <x>421</x>
+                        <y>362</y>
                         <z>0</z>
-                        <width>219</width>
-                        <height>247</height>
+                        <width>140</width>
+                        <height>181</height>
                         <depth>0</depth>
-                        <hotspotX>0.502283096</hotspotX>
-                        <hotspotY>0.502024293</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.502762437</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -92,24 +115,24 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1075</x>
-                        <y>467</y>
+                        <x>617</x>
+                        <y>188</y>
                         <z>0</z>
-                        <width>501</width>
-                        <height>348</height>
+                        <width>321</width>
+                        <height>309</height>
                         <depth>0</depth>
-                        <hotspotX>0.50099802</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.501557648</hotspotX>
+                        <hotspotY>0.501618147</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="FoxySpeechText" uid="285">
                     <properties>
-                        <text>Hey! I need to guess all the idioms to get to the next level. Let&apos;s try again!</text>
+                        <text>Hey...</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
+                        <font>Arial,-27,400,0</font>
+                        <color>117,76,36</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -119,14 +142,41 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>866</x>
-                        <y>353</y>
+                        <x>478.088745117</x>
+                        <y>140.181213379</y>
                         <z>0</z>
-                        <width>432</width>
-                        <height>204</height>
+                        <width>276.543579102</width>
+                        <height>149.453582764</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="FoxySpeechHeaderText" uid="295">
+                    <properties>
+                        <text>FOXY</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,700,0</font>
+                        <color>117,76,36</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>581.238647461</x>
+                        <y>78.547927856</y>
+                        <z>0</z>
+                        <width>196.36340332</width>
+                        <height>40.90914917</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -158,11 +208,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1252</x>
-                        <y>528</y>
+                        <x>723</x>
+                        <y>259</y>
                         <z>0</z>
-                        <width>100</width>
-                        <height>100</height>
+                        <width>88</width>
+                        <height>88</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -180,11 +230,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>103</x>
-                        <y>504</y>
+                        <x>80</x>
+                        <y>250</y>
                         <z>0</z>
-                        <width>100</width>
-                        <height>100</height>
+                        <width>88</width>
+                        <height>88</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

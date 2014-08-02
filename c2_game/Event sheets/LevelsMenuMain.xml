@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>LevelsMenuMain</name>
     <events>
-        <event-group collapsed="1" description="" sid="9815585167119101" title="Show levels menu">
+        <event-group description="" sid="9815585167119101" title="Show levels menu">
             <sub-events>
                 <event-block sid="8163900130420095">
                     <conditions>
@@ -17,7 +17,8 @@
                     </actions>
                 </event-block>
                 <variable constant="0" name="ITERATING_LEVELS" sid="5875633521619151" static="1" type="number">0</variable>
-                <event-block collapsed="1" sid="7714103794592295">
+                <variable constant="1" name="LEVEL_BUTTONS_H_SPACING" sid="3524638623812518" static="0" type="number">60</variable>
+                <event-block sid="7714103794592295">
                     <conditions>
                         <condition id="0" name="On function" sid="9630520917185018" type="Function">
                             <param id="0" name="Name">&quot;ShowLevelsMenu&quot;</param>
@@ -39,14 +40,14 @@
                         </event-block>
                         <event-block sid="6717310275174796">
                             <conditions>
-                                <condition id="0" name="For each unlocked level" sid="5496822028097974" type="IdiomlandLevels" />
+                                <condition id="0" name="For each level" sid="3426392613971131" type="IdiomlandLevels" />
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="5762033207128615" type="System">
                                     <param id="0" name="Object to create">LevelsMenuLevelButton</param>
                                     <param id="1" name="Layer">&quot;LevelButtons&quot;</param>
-                                    <param id="2" name="X">LevelsMenuLevelButton.Width + IdiomlandLevels.getLevelIndex * (LevelsMenuLevelButton.Width + 100)</param>
-                                    <param id="3" name="Y">500</param>
+                                    <param id="2" name="X">LEVEL_BUTTONS_H_SPACING /2 + LevelsMenuLevelButton.Width / 2 + IdiomlandLevels.getLevelIndex * (LevelsMenuLevelButton.Width + LEVEL_BUTTONS_H_SPACING)</param>
+                                    <param id="3" name="Y">LevelsMenuLevelsButtonsMidLine.Y</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -71,6 +72,22 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-26" name="Move to layer" sid="4280290565671498" type="LevelsMenuLevelButton">
+                            <param id="0" name="Layer">&quot;LevelButtons&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="7326046900867582" type="LevelsMenuLevelPreviewPic">
+                            <param id="0" name="Layer">&quot;LevelButtons&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="4891632671460044" type="LevelsMenuLevelNameText">
+                            <param id="0" name="Layer">&quot;LevelButtons&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="2735685512767538" type="LevelsMenuLevelIdiomsButton">
+                            <param id="0" name="Layer">&quot;LevelButtons&quot;</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="634855211130252" type="LevelsMenuLevelButton" />
+                        <action id="-24" name="Move to top" sid="3563728343839726" type="LevelsMenuLevelPreviewPic" />
+                        <action id="-24" name="Move to top" sid="6041537985974316" type="LevelsMenuLevelNameText" />
+                        <action id="-24" name="Move to top" sid="4644789980427381" type="LevelsMenuLevelIdiomsButton" />
                         <action id="-10" name="Set value" sid="7795385683133932" type="LevelsMenuLevelButton">
                             <param id="0" name="Instance variable">levelName</param>
                             <param id="1" name="Value">IdiomlandLevels.getCurrentLevelName</param>
@@ -86,10 +103,86 @@
                             <param id="0" name="X">LevelsMenuLevelButton.X</param>
                             <param id="1" name="Y">LevelsMenuLevelButton.Y + LevelsMenuLevelButton.Height / 2  + LevelsMenuLevelIdiomsButton.Height / 2 + 30</param>
                         </action>
-                        <action id="-24" name="Move to top" sid="634855211130252" type="LevelsMenuLevelButton" />
-                        <action id="-24" name="Move to top" sid="6041537985974316" type="LevelsMenuLevelNameText" />
-                        <action id="-24" name="Move to top" sid="4644789980427381" type="LevelsMenuLevelIdiomsButton" />
+                        <action id="-4" name="Set position to another object" sid="915615229589107" type="LevelsMenuLevelPreviewPic">
+                            <param id="0" name="Object">LevelsMenuLevelButton</param>
+                            <param id="1" name="Image point (optional)">&quot;LevelPreview&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5737148216532244" type="LevelsMenuLevelPreviewPic">
+                            <param id="0" name="Animation">IdiomlandLevels.getCurrentLevelName</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="1037944625216315">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5869424202899412" type="System">
+                                    <param id="0" name="First value">IdiomlandLevels.getCurrentLevelStatus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;COMPLETED&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4125323872193382" type="LevelsMenuLevelButton">
+                                    <param id="0" name="Animation">&quot;Completed&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="7817582810187584" type="LevelsMenuLevelIdiomsButton">
+                                    <param id="0" name="Animation">&quot;Completed&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1771138873070655" type="LevelsMenuLevelButton">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="903103840481523">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3302738114382937" type="System">
+                                    <param id="0" name="First value">IdiomlandLevels.getCurrentLevelStatus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;IN_PROGRESS&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2395312359791388" type="LevelsMenuLevelButton">
+                                    <param id="0" name="Animation">&quot;InProgress&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9885162206059675" type="LevelsMenuLevelIdiomsButton">
+                                    <param id="0" name="Animation">&quot;InProgress&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7237706573693844" type="LevelsMenuLevelButton">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8529518692940379">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4752095883284398" type="System">
+                                    <param id="0" name="First value">IdiomlandLevels.getCurrentLevelStatus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;LOCKED&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6168799083583901" type="LevelsMenuLevelButton">
+                                    <param id="0" name="Animation">&quot;Locked&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="8663152928668302" type="LevelsMenuLevelIdiomsButton">
+                                    <param id="0" name="Animation">&quot;Locked&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1938589331421859" type="LevelsMenuLevelButton">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -99,6 +192,11 @@
                     <param id="0" name="Object">LevelsMenuLevelButton</param>
                 </condition>
                 <condition id="-9" name="Is visible" sid="219553460012941" type="LevelsMenuLevelButton" />
+                <condition id="-8" name="Compare two values" sid="4439207937504441" type="System">
+                    <param id="0" name="First value">LevelsMenuLevelButton.Active</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-25" name="Go to layout (by name)" sid="4626652830390252" type="System">
@@ -112,6 +210,11 @@
                     <param id="0" name="Object">LevelsMenuLevelIdiomsButton</param>
                 </condition>
                 <condition id="-9" name="Is visible" sid="8032601094870748" type="LevelsMenuLevelIdiomsButton" />
+                <condition id="-8" name="Compare two values" sid="7929083239352929" type="System">
+                    <param id="0" name="First value">LevelsMenuLevelButton.Active</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set current level by name" sid="6834698725293323" type="IdiomlandLevels">
