@@ -207,17 +207,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Move to layer" sid="1145716991523785" type="IdiomCounterHelper">
-                    <param id="0" name="Layer">IdiomCounterBg.LayerName</param>
-                </action>
-                <action id="-3" name="Set position" sid="6301266965801196" type="IdiomCounterHelper">
-                    <param id="0" name="X">IdiomCounterBg.X - (IdiomCounterHelper.ImagePointX(&quot;ArrowPointer&quot;) - IdiomCounterHelper.X) + IdiomCounterBg.Width / 2</param>
-                    <param id="1" name="Y">IdiomCounterBg.Y - (IdiomCounterHelper.ImagePointY(&quot;ArrowPointer&quot;) - IdiomCounterHelper.Y)</param>
-                </action>
                 <action id="-15" name="Set visible" sid="1335013270755848" type="IdiomCounterHelper">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="9288408600161229" type="IdiomCounterBg">
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="4056381786467033" type="IdiomCounterTxt">
@@ -242,22 +232,22 @@
                 <condition id="0" name="On function" sid="1153427252199131" type="Function">
                     <param id="0" name="Name">&quot;ShowTicketHelper&quot;</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="9915663641704553" type="Ticket">
+                <condition id="-14" name="Pick by unique ID" sid="9915663641704553" type="Coin">
                     <param id="0" name="Unique ID">233</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-26" name="Move to layer" sid="9489430068627018" type="TicketHelper">
-                    <param id="0" name="Layer">Ticket.LayerName</param>
+                    <param id="0" name="Layer">Coin.LayerName</param>
                 </action>
                 <action id="-3" name="Set position" sid="7725278522542604" type="TicketHelper">
-                    <param id="0" name="X">Ticket.X + Ticket.Width / 2 - (TicketHelper.ImagePointX(&quot;ArrowPointer&quot;) - TicketHelper.X) + 60</param>
-                    <param id="1" name="Y">Ticket.Y - (TicketHelper.ImagePointY(&quot;ArrowPointer&quot;) - TicketHelper.Y)</param>
+                    <param id="0" name="X">Coin.X + Coin.Width / 2 - (TicketHelper.ImagePointX(&quot;ArrowPointer&quot;) - TicketHelper.X) + 60</param>
+                    <param id="1" name="Y">Coin.Y - (TicketHelper.ImagePointY(&quot;ArrowPointer&quot;) - TicketHelper.Y)</param>
                 </action>
                 <action id="-15" name="Set visible" sid="8708879133444199" type="TicketHelper">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="4673464712560752" type="Ticket">
+                <action id="-15" name="Set visible" sid="4673464712560752" type="Coin">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
@@ -267,7 +257,7 @@
                 <condition id="0" name="On function" sid="6691372146598866" type="Function">
                     <param id="0" name="Name">&quot;HideTicketHelper&quot;</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="7553203707331893" type="Ticket">
+                <condition id="-14" name="Pick by unique ID" sid="7553203707331893" type="Coin">
                     <param id="0" name="Unique ID">233</param>
                 </condition>
             </conditions>
@@ -285,16 +275,16 @@
             </conditions>
             <actions>
                 <action id="-26" name="Move to layer" sid="5811787582669735" type="TIcketCounterHelper">
-                    <param id="0" name="Layer">TicketsCounterTxt.LayerName</param>
+                    <param id="0" name="Layer">CoinsCounterTxt.LayerName</param>
                 </action>
                 <action id="-15" name="Set visible" sid="5721626641907052" type="TIcketCounterHelper">
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-3" name="Set position" sid="8257330747219817" type="TIcketCounterHelper">
-                    <param id="0" name="X">TicketsCounterTxt.X - (TIcketCounterHelper.ImagePointX(&quot;ArrowPointer&quot;) - TIcketCounterHelper.X) + TicketsCounterTxt.Width / 2</param>
-                    <param id="1" name="Y">TicketsCounterTxt.Y - (TIcketCounterHelper.ImagePointY(&quot;ArrowPointer&quot;) - TIcketCounterHelper.Y)</param>
+                    <param id="0" name="X">CoinsCounterTxt.X - (TIcketCounterHelper.ImagePointX(&quot;ArrowPointer&quot;) - TIcketCounterHelper.X) + CoinsCounterTxt.Width / 2</param>
+                    <param id="1" name="Y">CoinsCounterTxt.Y - (TIcketCounterHelper.ImagePointY(&quot;ArrowPointer&quot;) - TIcketCounterHelper.Y)</param>
                 </action>
-                <action id="-15" name="Set visible" sid="3741395235618238" type="TicketsCounterTxt">
+                <action id="-15" name="Set visible" sid="3741395235618238" type="CoinsCounterTxt">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
@@ -373,20 +363,17 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="7870486154339896" type="IdiomCounterBg">
-                    <param id="0" name="Visibility">0</param>
-                </action>
                 <action id="-15" name="Set visible" sid="3245221731798244" type="IdiomCounterTxt">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="3854604773231498" type="TicketsCounterTxt">
+                <action id="-15" name="Set visible" sid="3854604773231498" type="CoinsCounterTxt">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-10" name="Set value" sid="3618876923033151" type="IdiomCounterTxt">
                     <param id="0" name="Instance variable">DontAutoShow</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-10" name="Set value" sid="6781861336724466" type="TicketsCounterTxt">
+                <action id="-10" name="Set value" sid="6781861336724466" type="CoinsCounterTxt">
                     <param id="0" name="Instance variable">DontAutoShow</param>
                     <param id="1" name="Value">1</param>
                 </action>

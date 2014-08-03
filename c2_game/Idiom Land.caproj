@@ -2106,7 +2106,7 @@
                 </object-folder>
             </object-folder>
             <object-folder expanded="1" name="Common">
-                <object-folder expanded="1" name="Controls">
+                <object-folder expanded="0" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
                             <plugin id="Sprite" />
@@ -2159,21 +2159,13 @@
                         </object-type>
                     </object-folder>
                     <object-folder expanded="0" name="LevelProgress">
-                        <object-type name="IdiomCounterBg" sid="6657483908058606">
-                            <plugin id="Sprite" />
-                            <animation-folder expanded="1">
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1529448433622732" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                                </animation>
-                            </animation-folder>
-                        </object-type>
                         <object-type name="IdiomCounterTxt" sid="5244611748275736">
                             <plugin id="Text" />
                             <instance-variables>
                                 <instance-variable name="DontAutoShow" sid="2031901322407462" type="number" />
                             </instance-variables>
                         </object-type>
-                        <object-type name="TicketsCounterTxt" sid="7143920015409264">
+                        <object-type name="CoinsCounterTxt" sid="7143920015409264">
                             <plugin id="Text" />
                             <instance-variables>
                                 <instance-variable name="DontAutoShow" sid="519622648829588" type="number" />
@@ -2485,7 +2477,7 @@
                         </object-type>
                     </object-folder>
                 </object-folder>
-                <object-folder expanded="0" name="VisualObjects">
+                <object-folder expanded="1" name="VisualObjects">
                     <object-folder expanded="0" name="B">
                         <object-folder expanded="0" name="Benches">
                             <object-type name="Benches" sid="4870667590189457">
@@ -2685,7 +2677,7 @@
                             </object-type>
                         </object-folder>
                     </object-folder>
-                    <object-folder expanded="0" name="C">
+                    <object-folder expanded="1" name="C">
                         <object-folder expanded="0" name="Cars">
                             <object-type name="CabMoveBack" sid="8519769150848418">
                                 <plugin id="Sprite" />
@@ -2763,6 +2755,31 @@
                             <object-type name="Clouds" sid="6692103663691251">
                                 <plugin id="TiledBg" />
                                 <texture />
+                            </object-type>
+                        </object-folder>
+                        <object-folder expanded="1" name="Coin">
+                            <object-type name="Coin" sid="9531599521530676">
+                                <plugin id="Sprite" />
+                                <animation-folder expanded="1">
+                                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2218473327933433" speed="1">
+                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                            <collision-poly>
+                                                <point x="0" y="0" />
+                                                <point x="1" y="0" />
+                                                <point x="0.996" y="1" />
+                                                <point x="0" y="1" />
+                                            </collision-poly>
+                                        </frame>
+                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                            <collision-poly>
+                                                <point x="0" y="0" />
+                                                <point x="1" y="0" />
+                                                <point x="0.996" y="1" />
+                                                <point x="0" y="1" />
+                                            </collision-poly>
+                                        </frame>
+                                    </animation>
+                                </animation-folder>
                             </object-type>
                         </object-folder>
                     </object-folder>
@@ -3681,43 +3698,7 @@
                             </object-type>
                         </object-folder>
                     </object-folder>
-                    <object-folder expanded="0" name="T">
-                        <object-folder expanded="0" name="Ticket">
-                            <object-type name="Ticket" sid="9531599521530676">
-                                <plugin id="Sprite" />
-                                <animation-folder expanded="1">
-                                    <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2218473327933433" speed="1">
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                            <collision-poly>
-                                                <point x="0" y="0" />
-                                                <point x="1" y="0" />
-                                                <point x="0.996" y="1" />
-                                                <point x="0" y="1" />
-                                            </collision-poly>
-                                        </frame>
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                            <collision-poly>
-                                                <point x="0" y="0" />
-                                                <point x="0.996" y="0" />
-                                                <point x="1" y="1" />
-                                                <point x="0" y="1" />
-                                            </collision-poly>
-                                        </frame>
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                            <collision-poly>
-                                                <point x="0" y="0" />
-                                                <point x="1" y="0" />
-                                                <point x="1" y="1" />
-                                                <point x="0" y="0.996667" />
-                                            </collision-poly>
-                                        </frame>
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                        </object-folder>
-                    </object-folder>
+                    <object-folder expanded="1" name="T" />
                 </object-folder>
                 <object-folder expanded="0" name="QuestEngine">
                     <object-folder expanded="0" name="NPC">
@@ -5548,15 +5529,15 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout-folder expanded="1" name="Levels">
-            <layout-folder expanded="1" name="1demo">
+        <layout-folder expanded="0" name="Levels">
+            <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
             <layout-folder expanded="0" name="2demo_jump">
                 <layout>2demo_jump.xml</layout>
             </layout-folder>
         </layout-folder>
-        <layout-folder expanded="1" name="Menus">
+        <layout-folder expanded="0" name="Menus">
             <layout-folder expanded="0" name="LevelResults">
                 <layout>LevelResultsBrief.xml</layout>
                 <layout>LevelResultsDetailed.xml</layout>
@@ -5576,7 +5557,7 @@
     <event-folder expanded="1">
         <event-folder expanded="1" name="Levels">
             <event-folder expanded="1" name="Common">
-                <event-folder expanded="0" name="QuestEngine">
+                <event-folder expanded="1" name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
                     <event-sheet>QuestUInit.xml</event-sheet>
@@ -5594,7 +5575,7 @@
                     </event-folder>
                     <event-folder expanded="0" name="LevelProgress">
                         <event-sheet>IdiomProgress.xml</event-sheet>
-                        <event-sheet>TicketProgress.xml</event-sheet>
+                        <event-sheet>CoinsProgress.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="0" name="Navigation">
                         <event-sheet>NavigationMainMenuBtn.xml</event-sheet>
