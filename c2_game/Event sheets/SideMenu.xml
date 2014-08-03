@@ -46,7 +46,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2662208830764854">
+                <event-block collapsed="1" sid="2662208830764854">
                     <conditions>
                         <condition id="0" name="On function" sid="5342035506210788" type="Function">
                             <param id="0" name="Name">&quot;procMenuClick&quot;</param>
@@ -135,6 +135,45 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="9976224122118277" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="4831388798045363">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8142270960089468" type="Function">
+                            <param id="0" name="Name">&quot;procSlideMenuTouch&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="9970273739660969" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6729373204308157">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="1653576910866739" type="Touch">
+                                    <param id="0" name="Object">SlideMenuTrigger</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="1639006400928386" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5670870395411094">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1570496311003848" type="System" />
+                                <condition id="4" name="Is touching object" sid="6633306267029996" type="Touch">
+                                    <param id="0" name="Object">SlideMenuBg</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="812161472721519" type="Function">
                                     <param id="0" name="Value">1</param>
                                 </action>
                             </actions>
