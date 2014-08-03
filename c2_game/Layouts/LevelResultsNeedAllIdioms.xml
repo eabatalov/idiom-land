@@ -16,7 +16,7 @@
         <layer name="Background" sid="7872394314030925">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
-            <transparent>0</transparent>
+            <transparent>1</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -27,6 +27,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="MenuBg" uid="280">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>490</x>
+                        <y>250</y>
+                        <z>0</z>
+                        <width>980</width>
+                        <height>500</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="LevelResultsNeedAllIdiomsBg" uid="293">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -37,8 +59,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>491</x>
-                        <y>251</y>
+                        <x>490</x>
+                        <y>250</y>
                         <z>0</z>
                         <width>980</width>
                         <height>500</height>
@@ -198,7 +220,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ReplayBtn" uid="83">
+                <instance type="LevelReplayBtn" uid="83">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -220,7 +242,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelResultsBack" uid="84">
+                <instance type="BackBtn" uid="84">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

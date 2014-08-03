@@ -4,67 +4,151 @@
     <name>LevelResultsBriefMain</name>
     <events>
         <include>LevelResultsCommon</include>
-        <event-block sid="6071663212213">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="7380802923572911" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Finalize level idioms progress" sid="9066542529292426" type="LevelIdiomProgressTracker" />
-                <action id="0" name="Save game" sid="7849873616605395" type="QuestGame" />
-                <action id="0" name="Set text" sid="9679877642509217" type="IdiomsFoundText">
-                    <param id="0" name="Text">&quot;Idioms found: &quot; &amp; LevelIdiomProgressTracker.getLevelFoundIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
-                </action>
-                <action id="0" name="Set text" sid="7225573258372632" type="IdiomsGuessedText">
-                    <param id="0" name="Text">&quot;Idioms guessed: &quot; &amp; LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5769935275446483">
-            <conditions>
-                <condition id="3" name="On touched object" sid="2730285613817509" type="Touch">
-                    <param id="0" name="Object">NextLevelBtn</param>
-                </condition>
-                <condition id="-9" name="Is visible" sid="5391992012039003" type="NextLevelBtn" />
-            </conditions>
-            <actions />
+        <event-group description="" sid="8501800471470332" title="Level results brief group">
             <sub-events>
-                <event-block sid="8730350578672433">
+                <variable constant="1" name="SUCCESS_COLOR_R" sid="8384096303547795" static="0" type="number">71</variable>
+                <variable constant="1" name="SUCCESS_COLOR_G" sid="9044403269674197" static="0" type="number">189</variable>
+                <variable constant="1" name="SUCCESS_COLOR_B" sid="5817119571671729" static="0" type="number">131</variable>
+                <variable constant="1" name="FAIL_COLOR_R" sid="5500309230561139" static="0" type="number">240</variable>
+                <variable constant="1" name="FAIL_COLOR_G" sid="7408969497604845" static="0" type="number">51</variable>
+                <variable constant="1" name="FAIL_COLOR_B" sid="9454082368479114" static="0" type="number">29</variable>
+                <event-block sid="6071663212213">
                     <conditions>
-                        <condition id="2" name="Is level succeeded" sid="5965373000315623" type="LevelIdiomProgressTracker" />
+                        <condition id="-2" name="On start of layout" sid="7380802923572911" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="1469128340199389" type="Function">
-                            <param id="0" name="Name">&quot;SaveLevelResults&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="0" name="Finalize level idioms progress" sid="9066542529292426" type="LevelIdiomProgressTracker" />
+                        <action id="0" name="Save game" sid="7849873616605395" type="QuestGame" />
+                        <action id="0" name="Set text" sid="9679877642509217" type="LevelResultsIdiomsFoundText">
+                            <param id="0" name="Text">LevelIdiomProgressTracker.getLevelFoundIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
                         </action>
-                        <action id="-25" name="Go to layout (by name)" sid="7134485946036635" type="System">
-                            <param id="0" name="Layout">LevelIdiomProgressTracker.getNextLevelName</param>
+                        <action id="0" name="Set text" sid="7225573258372632" type="LevelResultsIdiomsGuessedText">
+                            <param id="0" name="Text">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="6680364648266421">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="470720938343314" type="System">
+                                    <param id="0" name="First value">LevelIdiomProgressTracker.getLevelFoundIdiomsCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="4918195580471301" type="LevelResultsIdiomsFoundText">
+                                    <param id="0" name="Color">rgb(SUCCESS_COLOR_R, SUCCESS_COLOR_G, SUCCESS_COLOR_B)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3595091074003026">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9406701255125344" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="9129707345129352" type="LevelResultsIdiomsFoundText">
+                                    <param id="0" name="Color">rgb(FAIL_COLOR_R, FAIL_COLOR_G, FAIL_COLOR_B)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9034670264578877">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3592914172320456" type="System">
+                                    <param id="0" name="First value">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="4586302685619892" type="LevelResultsIdiomsGuessedText">
+                                    <param id="0" name="Color">rgb(SUCCESS_COLOR_R, SUCCESS_COLOR_G, SUCCESS_COLOR_B)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7088954537351567">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4957958400154307" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="672275885026773" type="LevelResultsIdiomsGuessedText">
+                                    <param id="0" name="Color">rgb(FAIL_COLOR_R, FAIL_COLOR_G, FAIL_COLOR_B)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6356526560736595">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5729829846602192" type="System">
+                                    <param id="0" name="First value">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="9007660485191718" type="LevelResultsSecretsFoundText">
+                                    <param id="0" name="Color">rgb(SUCCESS_COLOR_R, SUCCESS_COLOR_G, SUCCESS_COLOR_B)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6965588888081238">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7312701423748611" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="6745953778954036" type="LevelResultsSecretsFoundText">
+                                    <param id="0" name="Color">rgb(FAIL_COLOR_R, FAIL_COLOR_G, FAIL_COLOR_B)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="8352613407998035">
+                <event-block collapsed="1" sid="5769935275446483">
                     <conditions>
-                        <condition id="-22" name="Else" sid="4153544823653079" type="System" />
+                        <condition id="3" name="On touched object" sid="2730285613817509" type="Touch">
+                            <param id="0" name="Object">LevelNextBtn</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="5391992012039003" type="LevelNextBtn" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8730350578672433">
+                            <conditions>
+                                <condition id="2" name="Is level succeeded" sid="5965373000315623" type="LevelIdiomProgressTracker" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1469128340199389" type="Function">
+                                    <param id="0" name="Name">&quot;SaveLevelResults&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="7134485946036635" type="System">
+                                    <param id="0" name="Layout">LevelIdiomProgressTracker.getNextLevelName</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8352613407998035">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4153544823653079" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="4723239989644491" type="System">
+                                    <param id="0" name="Layout">LevelResultsNeedAllIdioms</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2571524852150477">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="4574369218737592" type="Touch">
+                            <param id="0" name="Object">LevelResultsBriefViewIdiomsButton</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="4723239989644491" type="System">
-                            <param id="0" name="Layout">LevelResultsNeedAllIdioms</param>
+                        <action id="-2" name="Go to layout" sid="4229479487183978" type="System">
+                            <param id="0" name="Layout">LevelResultsDetailed</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="2571524852150477">
-            <conditions>
-                <condition id="3" name="On touched object" sid="4574369218737592" type="Touch">
-                    <param id="0" name="Object">LevelResultsBriefViewIdiomsButton</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="4229479487183978" type="System">
-                    <param id="0" name="Layout">LevelResultsDetailed</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>

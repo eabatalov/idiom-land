@@ -5,9 +5,17 @@
     <events>
         <event-group description="" sid="7979738111217754" title="Level idioms scope">
             <sub-events>
-                <variable constant="1" name="IDIOM_ROW_V_SPACING" sid="36570952631316" static="0" type="number">30</variable>
-                <variable constant="1" name="IDIOM_ROW_H_MARGIN" sid="6746602431452929" static="0" type="number">200</variable>
+                <variable constant="1" name="IDIOM_ROW_TITLE_V_SPACING" sid="36570952631316" static="0" type="number">18</variable>
+                <variable constant="1" name="IDIOM_ROW_MEANING_V_SPACING" sid="8905219511296401" static="0" type="number">18</variable>
                 <variable constant="0" name="IS_ITERATING_IDIOMS" sid="6634284931102298" static="1" type="number">0</variable>
+                <variable constant="0" name="IDIOM_TITLE_BG_H_OFFSET" sid="6310975050982372" static="1" type="number">0</variable>
+                <variable constant="0" name="IDIOM_TITLE_BG_V_OFFSET" sid="7362590508772021" static="1" type="number">0</variable>
+                <variable constant="0" name="IDIOM_TITLE_TXT_BG_H_OFFSET" sid="3248047556516282" static="1" type="number">0</variable>
+                <variable constant="0" name="IDIOM_TITLE_TXT_BG_V_OFFSET" sid="7208248263617359" static="1" type="number">0</variable>
+                <variable constant="0" name="IDIOM_MEANING_BG_H_OFFSET" sid="4372945644015252" static="1" type="number">0</variable>
+                <variable constant="0" name="IDIOM_MEANING_BG_V_OFFSET" sid="6926824229068924" static="1" type="number">0</variable>
+                <variable constant="0" name="IDIOM_MEANING_TXT_BG_H_OFFSET" sid="4284157731698902" static="1" type="number">0</variable>
+                <variable constant="0" name="IDIOM_MEANING_TXT_BG_V_OFFSET" sid="5156962222729555" static="1" type="number">0</variable>
                 <variable constant="0" name="IDIOM_IX" sid="7561240519806333" static="1" type="number">0</variable>
                 <event-block sid="5468867993801345">
                     <conditions>
@@ -22,6 +30,42 @@
                             <param id="0" name="Variable">IDIOM_IX</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-9" name="Set value" sid="3685608331435862" type="System">
+                            <param id="0" name="Variable">IDIOM_TITLE_BG_H_OFFSET</param>
+                            <param id="1" name="Value">LevelIdiomsIdiomTitleBg.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5876469512402787" type="System">
+                            <param id="0" name="Variable">IDIOM_TITLE_BG_V_OFFSET</param>
+                            <param id="1" name="Value">LevelIdiomsIdiomTitleBg.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6823178015489992" type="System">
+                            <param id="0" name="Variable">IDIOM_TITLE_TXT_BG_H_OFFSET</param>
+                            <param id="1" name="Value">LevelIdiomsIdiomTitleText.X - LevelIdiomsIdiomTitleBg.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7149189397700135" type="System">
+                            <param id="0" name="Variable">IDIOM_TITLE_TXT_BG_V_OFFSET</param>
+                            <param id="1" name="Value">LevelIdiomsIdiomTitleText.Y - LevelIdiomsIdiomTitleBg.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5720981124625382" type="System">
+                            <param id="0" name="Variable">IDIOM_MEANING_BG_H_OFFSET</param>
+                            <param id="1" name="Value">LevelIdiomsIdiomMeaningBg.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1755564939221189" type="System">
+                            <param id="0" name="Variable">IDIOM_MEANING_BG_V_OFFSET</param>
+                            <param id="1" name="Value">LevelIdiomsIdiomMeaningBg.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9276592853063819" type="System">
+                            <param id="0" name="Variable">IDIOM_MEANING_TXT_BG_H_OFFSET</param>
+                            <param id="1" name="Value">LevelIdiomsIdiomMeaningText.X - LevelIdiomsIdiomMeaningBg.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="154928887934889" type="System">
+                            <param id="0" name="Variable">IDIOM_MEANING_TXT_BG_V_OFFSET</param>
+                            <param id="1" name="Value">LevelIdiomsIdiomMeaningText.Y - LevelIdiomsIdiomMeaningBg.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1383248725058186" type="LevelIdiomsIdiomMeaningBg" />
+                        <action id="-9" name="Destroy" sid="589066801823819" type="LevelIdiomsIdiomMeaningText" />
+                        <action id="-9" name="Destroy" sid="4989831325240653" type="LevelIdiomsIdiomTitleBg" />
+                        <action id="-9" name="Destroy" sid="2059575659335727" type="LevelIdiomsIdiomTitleText" />
                     </actions>
                     <sub-events>
                         <event-block sid="291707692326027">
@@ -30,10 +74,10 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="6780202484662817" type="System">
-                                    <param id="0" name="Object to create">LevelIdiomsIdiomTitleText</param>
+                                    <param id="0" name="Object to create">LevelIdiomsIdiomTitleBg</param>
                                     <param id="1" name="Layer">&quot;Idioms&quot;</param>
-                                    <param id="2" name="X">IDIOM_ROW_H_MARGIN + LevelIdiomsIdiomTitleBg.Width / 2</param>
-                                    <param id="3" name="Y">LevelIdiomsIdiomTitleBg.Height/2 + (LevelIdiomsIdiomTitleBg.Height + IDIOM_ROW_V_SPACING) * IDIOM_IX</param>
+                                    <param id="2" name="X">IDIOM_TITLE_BG_H_OFFSET</param>
+                                    <param id="3" name="Y">IDIOM_TITLE_BG_V_OFFSET +&#x0D;&#x0A; (LevelIdiomsIdiomTitleBg.Height + IDIOM_ROW_TITLE_V_SPACING) * IDIOM_IX</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="4518268246345124" type="System">
                                     <param id="0" name="Variable">IDIOM_IX</param>
@@ -54,7 +98,7 @@
                 </event-block>
                 <event-block sid="9078004218569844">
                     <conditions>
-                        <condition id="-18" name="On created" sid="9907715908526217" type="LevelIdiomsIdiomTitleText" />
+                        <condition id="-18" name="On created" sid="9907715908526217" type="LevelIdiomsIdiomTitleBg" />
                         <condition id="-8" name="Compare two values" sid="403236089951881" type="System">
                             <param id="0" name="First value">IS_ITERATING_IDIOMS</param>
                             <param id="1" name="Comparison">0</param>
@@ -62,10 +106,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-26" name="Move to layer" sid="7317550085971411" type="LevelIdiomsIdiomDefinitionBg">
+                        <action id="-26" name="Move to layer" sid="7317550085971411" type="LevelIdiomsIdiomMeaningBg">
                             <param id="0" name="Layer">&quot;Idioms&quot;</param>
                         </action>
-                        <action id="-26" name="Move to layer" sid="310635374833153" type="LevelIdiomsIdiomDefinitionText">
+                        <action id="-26" name="Move to layer" sid="310635374833153" type="LevelIdiomsIdiomMeaningText">
                             <param id="0" name="Layer">&quot;Idioms&quot;</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="7198756192354722" type="LevelIdiomsIdiomTitleBg">
@@ -74,26 +118,26 @@
                         <action id="-26" name="Move to layer" sid="7656485366590892" type="LevelIdiomsIdiomTitleText">
                             <param id="0" name="Layer">&quot;Idioms&quot;</param>
                         </action>
-                        <action id="-4" name="Set position to another object" sid="4790940854970839" type="LevelIdiomsIdiomTitleBg">
-                            <param id="0" name="Object">LevelIdiomsIdiomTitleText</param>
-                            <param id="1" name="Image point (optional)">0</param>
+                        <action id="-3" name="Set position" sid="4790940854970839" type="LevelIdiomsIdiomTitleText">
+                            <param id="0" name="X">LevelIdiomsIdiomTitleBg.X + IDIOM_TITLE_TXT_BG_H_OFFSET</param>
+                            <param id="1" name="Y">LevelIdiomsIdiomTitleBg.Y + IDIOM_TITLE_TXT_BG_V_OFFSET</param>
                         </action>
-                        <action id="-3" name="Set position" sid="7778405912569111" type="LevelIdiomsIdiomDefinitionText">
-                            <param id="0" name="X">LevelIdiomsIdiomTitleBg.X + LevelIdiomsIdiomTitleBg.Width / 2 + LevelIdiomsIdiomDefinitionBg.Width / 2</param>
-                            <param id="1" name="Y">LevelIdiomsIdiomTitleBg.Y</param>
+                        <action id="-3" name="Set position" sid="6676356703559194" type="LevelIdiomsIdiomMeaningBg">
+                            <param id="0" name="X">IDIOM_MEANING_BG_H_OFFSET</param>
+                            <param id="1" name="Y">IDIOM_MEANING_BG_V_OFFSET + (LevelIdiomsIdiomMeaningBg.Height + IDIOM_ROW_MEANING_V_SPACING) * IDIOM_IX</param>
                         </action>
-                        <action id="-4" name="Set position to another object" sid="6676356703559194" type="LevelIdiomsIdiomDefinitionBg">
-                            <param id="0" name="Object">LevelIdiomsIdiomDefinitionText</param>
-                            <param id="1" name="Image point (optional)">0</param>
+                        <action id="-3" name="Set position" sid="7778405912569111" type="LevelIdiomsIdiomMeaningText">
+                            <param id="0" name="X">LevelIdiomsIdiomMeaningBg.X + IDIOM_MEANING_TXT_BG_H_OFFSET</param>
+                            <param id="1" name="Y">LevelIdiomsIdiomMeaningBg.Y + IDIOM_MEANING_TXT_BG_V_OFFSET</param>
                         </action>
-                        <action id="-24" name="Move to top" sid="3790546230490609" type="LevelIdiomsIdiomDefinitionBg" />
+                        <action id="-24" name="Move to top" sid="3790546230490609" type="LevelIdiomsIdiomMeaningBg" />
                         <action id="-24" name="Move to top" sid="2688980308270316" type="LevelIdiomsIdiomTitleBg" />
-                        <action id="-24" name="Move to top" sid="2432887336078745" type="LevelIdiomsIdiomDefinitionText" />
+                        <action id="-24" name="Move to top" sid="2432887336078745" type="LevelIdiomsIdiomMeaningText" />
                         <action id="-24" name="Move to top" sid="1407940400278647" type="LevelIdiomsIdiomTitleText" />
                         <action id="0" name="Set text" sid="5107461612409316" type="LevelIdiomsIdiomTitleText">
                             <param id="0" name="Text">IdiomlandLevels.getCurrentIdiomTitle</param>
                         </action>
-                        <action id="0" name="Set text" sid="165038543893921" type="LevelIdiomsIdiomDefinitionText">
+                        <action id="0" name="Set text" sid="165038543893921" type="LevelIdiomsIdiomMeaningText">
                             <param id="0" name="Text">IdiomlandLevels.getCurrentIdiomShortMeaning</param>
                         </action>
                     </actions>
@@ -101,7 +145,7 @@
                 <event-block sid="9849077393575392">
                     <conditions>
                         <condition id="3" name="On touched object" sid="2818752673529902" type="Touch">
-                            <param id="0" name="Object">LevelIdiomsBackToLevelsMenuBtn</param>
+                            <param id="0" name="Object">BackBtn</param>
                         </condition>
                     </conditions>
                     <actions>

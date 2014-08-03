@@ -4,8 +4,8 @@
     <sid>7569777578917988</sid>
     <event-sheet>LevelResultsDetailedMain</event-sheet>
     <size>
-        <width>1600</width>
-        <height>1000</height>
+        <width>980</width>
+        <height>500</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -26,7 +26,74 @@
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="MenuBg" uid="369">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>490</x>
+                        <y>250</y>
+                        <z>0</z>
+                        <width>980</width>
+                        <height>500</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MenuListKeys" uid="370">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>304</x>
+                        <y>247</y>
+                        <z>0</z>
+                        <width>317</width>
+                        <height>424</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501577258</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MenuListValues" uid="371">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>712</x>
+                        <y>250</y>
+                        <z>0</z>
+                        <width>509</width>
+                        <height>486</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500982344</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Idioms" sid="8914593361361006">
@@ -43,13 +110,57 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="LevelResultsIdiomMeaningBg" uid="290">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>723</x>
+                        <y>69</y>
+                        <z>0</z>
+                        <width>405</width>
+                        <height>67</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501234591</hotspotX>
+                        <hotspotY>0.50746268</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="LevelResultsIdiomTitleBg" uid="288">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>300</x>
+                        <y>69</y>
+                        <z>0</z>
+                        <width>310</width>
+                        <height>67</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50746268</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
                 <instance type="LevelResultsIdiomMeaningText" uid="286">
                     <properties>
-                        <text>Idiom meaning</text>
+                        <text>Idiom meaning idiom meaning idiom meaning idiom meaning</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-37,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
+                        <font>Arial,-24,700,0</font>
+                        <color>77,76,77</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
@@ -61,11 +172,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1226</x>
-                        <y>1063</y>
+                        <x>740</x>
+                        <y>69</y>
                         <z>0</z>
-                        <width>468</width>
-                        <height>69</height>
+                        <width>350</width>
+                        <height>63</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -86,11 +197,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>53</x>
-                        <y>1091</y>
+                        <x>494.251708984</x>
+                        <y>68.693840027</y>
                         <z>0</z>
-                        <width>100</width>
-                        <height>100</height>
+                        <width>74</width>
+                        <height>68</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -100,11 +211,11 @@
                 </instance>
                 <instance type="LevelResultsIdiomTitleText" uid="289">
                     <properties>
-                        <text>Idiom title</text>
+                        <text>Idiom title idiom title idiom title idiom title</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-37,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
+                        <font>Arial,-24,700,0</font>
+                        <color>77,76,77</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
@@ -116,55 +227,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>465</x>
-                        <y>1072</y>
+                        <x>311</x>
+                        <y>69</y>
                         <z>0</z>
-                        <width>393</width>
-                        <height>73</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="LevelResultsIdiomTitleBg" uid="288">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>502</x>
-                        <y>1184</y>
-                        <z>0</z>
-                        <width>643</width>
-                        <height>76</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="LevelResultsIdiomMeaningBg" uid="290">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1241</x>
-                        <y>1184</y>
-                        <z>0</z>
-                        <width>702</width>
-                        <height>81</height>
+                        <width>277</width>
+                        <height>67</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -189,7 +256,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="LevelResultsBack" uid="282">
+                <instance type="BackBtn" uid="282">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -199,8 +266,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>92</x>
-                        <y>493</y>
+                        <x>75</x>
+                        <y>250</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
