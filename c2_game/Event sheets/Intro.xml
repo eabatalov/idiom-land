@@ -16,10 +16,7 @@
                 <action id="-15" name="Set visible" sid="6690646893951045" type="WalkHelper">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="2157958195847298" type="TapToContinueLeftHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="3622843070802135" type="TapToContinueRightHelper">
+                <action id="-15" name="Set visible" sid="3622843070802135" type="NavHelper">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="7630814102953574" type="TapToAskHelper">
@@ -37,15 +34,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Move to layer" sid="293469248458139" type="TapToContinueLeftHelper">
-                    <param id="0" name="Layer">NotificationBg.LayerName</param>
-                </action>
-                <action id="-3" name="Set position" sid="9698590537500937" type="TapToContinueLeftHelper">
-                    <param id="0" name="X">NotificationBg.X + NotificationBg.Width - (TapToContinueLeftHelper.ImagePointX(&quot;ArrowPointer&quot;) - TapToContinueLeftHelper.X) + 60</param>
-                    <param id="1" name="Y">NotificationNextBtn.Y - (TapToContinueLeftHelper.ImagePointY(&quot;ArrowPointer&quot;) - TapToContinueLeftHelper.Y)</param>
-                </action>
-                <action id="-15" name="Set visible" sid="6485001683853257" type="TapToContinueLeftHelper">
-                    <param id="0" name="Visibility">1</param>
+                <action id="0" name="Call function" sid="4900060205411876" type="Function">
+                    <param id="0" name="Name">&quot;ShowNavNextHelper&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -56,8 +47,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="5077464110038167" type="TapToContinueLeftHelper">
-                    <param id="0" name="Visibility">0</param>
+                <action id="0" name="Call function" sid="9583263340727451" type="Function">
+                    <param id="0" name="Name">&quot;HideNavNextHelper&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -101,19 +93,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Move to layer" sid="2533867766110922" type="TapToContinueRightHelper">
-                    <param id="0" name="Layer">NPCPhraseBg.LayerName</param>
-                </action>
-                <action id="-3" name="Set position" sid="5721556842895961" type="TapToContinueRightHelper">
-                    <param id="0" name="X">NPCPhraseBg.X - (TapToContinueRightHelper.ImagePointX(&quot;ArrowPointer&quot;) - TapToContinueRightHelper.X) - 100</param>
-                    <param id="1" name="Y">NPCPhraseBg.Y - (TapToContinueRightHelper.ImagePointY(&quot;ArrowPointer&quot;) - TapToContinueRightHelper.Y) + NPCPhraseBg.Height/2</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="8930193911012899" type="TapToContinueRightHelper">
-                    <param id="0" name="Pin to">NPCPhraseBg</param>
-                    <param id="1" name="Mode">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="9065426871197116" type="TapToContinueRightHelper">
-                    <param id="0" name="Visibility">1</param>
+                <action id="0" name="Call function" sid="8907412230467096" type="Function">
+                    <param id="0" name="Name">&quot;ShowNavNextHelper&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -127,10 +109,10 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="855809473114246" type="TapToContinueRightHelper">
-                    <param id="0" name="Visibility">0</param>
+                <action id="0" name="Call function" sid="9000592577210893" type="Function">
+                    <param id="0" name="Name">&quot;HideNavNextHelper&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action behavior="Pin" id="1" name="Unpin" sid="4091108765144546" type="TapToContinueRightHelper" />
             </actions>
         </event-block>
         <event-block sid="9987107342166314">
@@ -140,19 +122,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Move to layer" sid="5942415419053255" type="TapToContinueRightHelper">
-                    <param id="0" name="Layer">PlayerPhraseBg.LayerName</param>
-                </action>
-                <action id="-15" name="Set visible" sid="6631595620615274" type="TapToContinueRightHelper">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-3" name="Set position" sid="8285616677487911" type="TapToContinueRightHelper">
-                    <param id="0" name="X">PlayerPhraseBg.X - (TapToContinueRightHelper.ImagePointX(&quot;ArrowPointer&quot;) - TapToContinueRightHelper.X) - 100</param>
-                    <param id="1" name="Y">PlayerPhraseBg.Y - (TapToContinueRightHelper.ImagePointY(&quot;ArrowPointer&quot;) - TapToContinueRightHelper.Y) + PlayerPhraseBg.Height/2</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="1169100516190898" type="TapToContinueRightHelper">
-                    <param id="0" name="Pin to">PlayerPhraseBg</param>
-                    <param id="1" name="Mode">1</param>
+                <action id="0" name="Call function" sid="291127432752572" type="Function">
+                    <param id="0" name="Name">&quot;ShowNavNextHelper&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -163,10 +135,10 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="4826285741746231" type="TapToContinueRightHelper">
-                    <param id="0" name="Visibility">0</param>
+                <action id="0" name="Call function" sid="1582611323385487" type="Function">
+                    <param id="0" name="Name">&quot;HideNavNextHelper&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action behavior="Pin" id="1" name="Unpin" sid="276395844582118" type="TapToContinueRightHelper" />
             </actions>
         </event-block>
         <event-block sid="8369839863674356">
@@ -237,14 +209,14 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Move to layer" sid="9489430068627018" type="TicketHelper">
+                <action id="-26" name="Move to layer" sid="9489430068627018" type="CoinsHelper">
                     <param id="0" name="Layer">Coin.LayerName</param>
                 </action>
-                <action id="-3" name="Set position" sid="7725278522542604" type="TicketHelper">
-                    <param id="0" name="X">Coin.X + Coin.Width / 2 - (TicketHelper.ImagePointX(&quot;ArrowPointer&quot;) - TicketHelper.X) + 60</param>
-                    <param id="1" name="Y">Coin.Y - (TicketHelper.ImagePointY(&quot;ArrowPointer&quot;) - TicketHelper.Y)</param>
+                <action id="-3" name="Set position" sid="7725278522542604" type="CoinsHelper">
+                    <param id="0" name="X">Coin.X + Coin.Width / 2 - (CoinsHelper.ImagePointX(&quot;ArrowPointer&quot;) - CoinsHelper.X) + 60</param>
+                    <param id="1" name="Y">Coin.Y - (CoinsHelper.ImagePointY(&quot;ArrowPointer&quot;) - CoinsHelper.Y)</param>
                 </action>
-                <action id="-15" name="Set visible" sid="8708879133444199" type="TicketHelper">
+                <action id="-15" name="Set visible" sid="8708879133444199" type="CoinsHelper">
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="4673464712560752" type="Coin">
@@ -262,7 +234,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="284963755098424" type="TicketHelper">
+                <action id="-15" name="Set visible" sid="284963755098424" type="CoinsHelper">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
@@ -274,15 +246,15 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Move to layer" sid="5811787582669735" type="TIcketCounterHelper">
+                <action id="-26" name="Move to layer" sid="5811787582669735" type="CoinsCounterHelper">
                     <param id="0" name="Layer">CoinsCounterTxt.LayerName</param>
                 </action>
-                <action id="-15" name="Set visible" sid="5721626641907052" type="TIcketCounterHelper">
+                <action id="-15" name="Set visible" sid="5721626641907052" type="CoinsCounterHelper">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="-3" name="Set position" sid="8257330747219817" type="TIcketCounterHelper">
-                    <param id="0" name="X">CoinsCounterTxt.X - (TIcketCounterHelper.ImagePointX(&quot;ArrowPointer&quot;) - TIcketCounterHelper.X) + CoinsCounterTxt.Width / 2</param>
-                    <param id="1" name="Y">CoinsCounterTxt.Y - (TIcketCounterHelper.ImagePointY(&quot;ArrowPointer&quot;) - TIcketCounterHelper.Y)</param>
+                <action id="-3" name="Set position" sid="8257330747219817" type="CoinsCounterHelper">
+                    <param id="0" name="X">CoinsCounterTxt.X - (CoinsCounterHelper.ImagePointX(&quot;ArrowPointer&quot;) - CoinsCounterHelper.X) + CoinsCounterTxt.Width / 2</param>
+                    <param id="1" name="Y">CoinsCounterTxt.Y - (CoinsCounterHelper.ImagePointY(&quot;ArrowPointer&quot;) - CoinsCounterHelper.Y)</param>
                 </action>
                 <action id="-15" name="Set visible" sid="3741395235618238" type="CoinsCounterTxt">
                     <param id="0" name="Visibility">1</param>
@@ -296,7 +268,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="9670245467069661" type="TIcketCounterHelper">
+                <action id="-15" name="Set visible" sid="9670245467069661" type="CoinsCounterHelper">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
@@ -341,6 +313,34 @@
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action behavior="Pin" id="1" name="Unpin" sid="5075786318448821" type="TapToAskHelper" />
+            </actions>
+        </event-block>
+        <event-block sid="4806892063636577">
+            <conditions>
+                <condition id="0" name="On function" sid="9913464809278844" type="Function">
+                    <param id="0" name="Name">&quot;ShowNavNextHelper&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="727018177143338" type="NavHelper">
+                    <param id="0" name="X">QuestNavNextBtn.X - (NavHelper.ImagePointX(&quot;ArrowPointer&quot;) - NavHelper.X) - QuestNavNextBtn.Width / 2 </param>
+                    <param id="1" name="Y">QuestNavNextBtn.Y - (NavHelper.ImagePointY(&quot;ArrowPointer&quot;) - NavHelper.Y)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5024737920802133" type="NavHelper">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2167028059145055">
+            <conditions>
+                <condition id="0" name="On function" sid="2596405651505365" type="Function">
+                    <param id="0" name="Name">&quot;HideNavNextHelper&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="7443607429415219" type="NavHelper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3799889551736866">

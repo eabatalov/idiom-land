@@ -681,8 +681,8 @@
             </object-type>
         </object-folder>
         <object-folder expanded="1" name="Levels">
-            <object-folder expanded="0" name="1demo">
-                <object-folder expanded="0" name="Stages">
+            <object-folder expanded="1" name="1demo">
+                <object-folder expanded="1" name="Stages">
                     <object-folder expanded="0" name="Intro">
                         <object-folder expanded="0" name="Helpers">
                             <object-type name="JumpHelper" sid="3052283865919932">
@@ -723,32 +723,7 @@
                                     </animation>
                                 </animation-folder>
                             </object-type>
-                            <object-type name="TapToContinueLeftHelper" sid="4884040201538329">
-                                <plugin id="Sprite" />
-                                <behaviors>
-                                    <behavior-type name="Pin" sid="7229210052077383">
-                                        <behavior id="Pin" />
-                                    </behavior-type>
-                                </behaviors>
-                                <animation-folder expanded="1">
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2831167001092476" speed="5">
-                                        <frame duration="1" hotspotX="0" hotspotY="1">
-                                            <image-point name="ArrowPointer" x="0.272619" y="0.549148" />
-                                            <collision-poly>
-                                                <point x="0.339286" y="0.373526" />
-                                                <point x="0.5" y="0.301442" />
-                                                <point x="0.659524" y="0.374836" />
-                                                <point x="0.79881" y="0.499345" />
-                                                <point x="0.660714" y="0.626474" />
-                                                <point x="0.5" y="0.698558" />
-                                                <point x="0.340476" y="0.625164" />
-                                                <point x="0.296429" y="0.499345" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TapToContinueRightHelper" sid="9560818838651901">
+                            <object-type name="NavHelper" sid="9560818838651901">
                                 <plugin id="Sprite" />
                                 <behaviors>
                                     <behavior-type name="Pin" sid="1295347209941606">
@@ -758,7 +733,7 @@
                                 <animation-folder expanded="1">
                                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="17044148059576" speed="5">
                                         <frame duration="1" hotspotX="0" hotspotY="0">
-                                            <image-point name="ArrowPointer" x="0.667857" y="0.557012" />
+                                            <image-point name="ArrowPointer" x="0.730952" y="0.496723" />
                                             <collision-poly>
                                                 <point x="0.339286" y="0.373526" />
                                                 <point x="0.5" y="0.301442" />
@@ -814,7 +789,7 @@
                                     </animation>
                                 </animation-folder>
                             </object-type>
-                            <object-type name="TicketHelper" sid="434108885742568">
+                            <object-type name="CoinsHelper" sid="434108885742568">
                                 <plugin id="Sprite" />
                                 <behaviors>
                                     <behavior-type name="Pin" sid="9108384760143063">
@@ -874,7 +849,7 @@
                                     </animation>
                                 </animation-folder>
                             </object-type>
-                            <object-type name="TIcketCounterHelper" sid="6269623346602621">
+                            <object-type name="CoinsCounterHelper" sid="6269623346602621">
                                 <plugin id="Sprite" />
                                 <behaviors>
                                     <behavior-type name="Pin" sid="5828733524377693">
@@ -2477,7 +2452,7 @@
                         </object-type>
                     </object-folder>
                 </object-folder>
-                <object-folder expanded="1" name="VisualObjects">
+                <object-folder expanded="0" name="VisualObjects">
                     <object-folder expanded="0" name="B">
                         <object-folder expanded="0" name="Benches">
                             <object-type name="Benches" sid="4870667590189457">
@@ -2677,7 +2652,7 @@
                             </object-type>
                         </object-folder>
                     </object-folder>
-                    <object-folder expanded="1" name="C">
+                    <object-folder expanded="0" name="C">
                         <object-folder expanded="0" name="Cars">
                             <object-type name="CabMoveBack" sid="8519769150848418">
                                 <plugin id="Sprite" />
@@ -2757,7 +2732,7 @@
                                 <texture />
                             </object-type>
                         </object-folder>
-                        <object-folder expanded="1" name="Coin">
+                        <object-folder expanded="0" name="Coin">
                             <object-type name="Coin" sid="9531599521530676">
                                 <plugin id="Sprite" />
                                 <animation-folder expanded="1">
@@ -2874,7 +2849,6 @@
                                         <type>foxy_simple_leg2</type>
                                         <type>foxy_simple_mouth1</type>
                                         <type>foxy_simple_tail</type>
-                                        <type>PlayerSpeechNextBtn</type>
                                         <type>PlayerPlatform</type>
                                         <type>PlayerMiddleMarker</type>
                                     </container>
@@ -2924,7 +2898,6 @@
                                         <type>foxy_simple_leg2</type>
                                         <type>foxy_simple_mouth1</type>
                                         <type>foxy_simple_tail</type>
-                                        <type>PlayerSpeechNextBtn</type>
                                         <type>PlayerPlatform</type>
                                         <type>PlayerMiddleMarker</type>
                                     </container>
@@ -2975,7 +2948,6 @@
                                         <type>foxy_simple_leg2</type>
                                         <type>foxy_simple_mouth1</type>
                                         <type>foxy_simple_tail</type>
-                                        <type>PlayerSpeechNextBtn</type>
                                         <type>PlayerPlatform</type>
                                         <type>PlayerMiddleMarker</type>
                                     </container>
@@ -3026,7 +2998,6 @@
                                         <type>foxy_simple_leg2</type>
                                         <type>foxy_simple_mouth1</type>
                                         <type>foxy_simple_tail</type>
-                                        <type>PlayerSpeechNextBtn</type>
                                         <type>PlayerPlatform</type>
                                         <type>PlayerMiddleMarker</type>
                                     </container>
@@ -3077,7 +3048,6 @@
                                         <type>foxy_simple_leg2</type>
                                         <type>foxy_simple_mouth1</type>
                                         <type>foxy_simple_tail</type>
-                                        <type>PlayerSpeechNextBtn</type>
                                         <type>PlayerPlatform</type>
                                         <type>PlayerMiddleMarker</type>
                                     </container>
@@ -3128,7 +3098,6 @@
                                         <type>foxy_simple_leg2</type>
                                         <type>foxy_simple_mouth1</type>
                                         <type>foxy_simple_tail</type>
-                                        <type>PlayerSpeechNextBtn</type>
                                         <type>PlayerPlatform</type>
                                         <type>PlayerMiddleMarker</type>
                                     </container>
@@ -3177,7 +3146,6 @@
                                         <type>foxy_simple_leg2</type>
                                         <type>foxy_simple_mouth1</type>
                                         <type>foxy_simple_tail</type>
-                                        <type>PlayerSpeechNextBtn</type>
                                         <type>PlayerPlatform</type>
                                         <type>PlayerMiddleMarker</type>
                                     </container>
@@ -3228,7 +3196,6 @@
                                         <type>foxy_simple_leg2</type>
                                         <type>foxy_simple_mouth1</type>
                                         <type>foxy_simple_tail</type>
-                                        <type>PlayerSpeechNextBtn</type>
                                         <type>PlayerPlatform</type>
                                         <type>PlayerMiddleMarker</type>
                                     </container>
@@ -3279,7 +3246,6 @@
                                         <type>foxy_simple_leg2</type>
                                         <type>foxy_simple_mouth1</type>
                                         <type>foxy_simple_tail</type>
-                                        <type>PlayerSpeechNextBtn</type>
                                         <type>PlayerPlatform</type>
                                         <type>PlayerMiddleMarker</type>
                                     </container>
@@ -3330,7 +3296,6 @@
                                         <type>foxy_simple_leg2</type>
                                         <type>foxy_simple_mouth1</type>
                                         <type>foxy_simple_tail</type>
-                                        <type>PlayerSpeechNextBtn</type>
                                         <type>PlayerPlatform</type>
                                         <type>PlayerMiddleMarker</type>
                                     </container>
@@ -3429,7 +3394,6 @@
                                         <type>foxy_simple_leg2</type>
                                         <type>foxy_simple_mouth1</type>
                                         <type>foxy_simple_tail</type>
-                                        <type>PlayerSpeechNextBtn</type>
                                         <type>PlayerPlatform</type>
                                         <type>PlayerMiddleMarker</type>
                                     </container>
@@ -3534,7 +3498,6 @@
                                         <type>foxy_simple_leg2</type>
                                         <type>foxy_simple_mouth1</type>
                                         <type>foxy_simple_tail</type>
-                                        <type>PlayerSpeechNextBtn</type>
                                         <type>PlayerPlatform</type>
                                         <type>PlayerMiddleMarker</type>
                                     </container>
@@ -3700,7 +3663,7 @@
                     </object-folder>
                     <object-folder expanded="1" name="T" />
                 </object-folder>
-                <object-folder expanded="0" name="QuestEngine">
+                <object-folder expanded="1" name="QuestEngine">
                     <object-folder expanded="0" name="NPC">
                         <object-folder expanded="0" name="Speech">
                             <object-type name="NPCAns1Bg" sid="1347035969697416">
@@ -3725,7 +3688,6 @@
                                     <type>NPCAns3Txt</type>
                                     <type>NPCAns4Bg</type>
                                     <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
                                 </container>
                                 <animation-folder expanded="1">
                                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2736573699057615" speed="5">
@@ -3766,7 +3728,6 @@
                                     <type>NPCAns3Txt</type>
                                     <type>NPCAns4Bg</type>
                                     <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
                                 </container>
                             </object-type>
                             <object-type name="NPCAns2Txt" sid="7876777953796442">
@@ -3791,7 +3752,6 @@
                                     <type>NPCAns3Txt</type>
                                     <type>NPCAns4Bg</type>
                                     <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
                                 </container>
                             </object-type>
                             <object-type name="NPCAns3Bg" sid="4561909957681184">
@@ -3816,7 +3776,6 @@
                                     <type>NPCAns3Txt</type>
                                     <type>NPCAns4Bg</type>
                                     <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
                                 </container>
                                 <animation-folder expanded="1">
                                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9228664563406095" speed="5">
@@ -3857,7 +3816,6 @@
                                     <type>NPCAns3Txt</type>
                                     <type>NPCAns4Bg</type>
                                     <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
                                 </container>
                             </object-type>
                             <object-type name="NPCAns2Bg" sid="9672604453364808">
@@ -3882,7 +3840,6 @@
                                     <type>NPCAns3Txt</type>
                                     <type>NPCAns4Bg</type>
                                     <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
                                 </container>
                                 <animation-folder expanded="1">
                                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7945481242836725" speed="5">
@@ -3923,7 +3880,6 @@
                                     <type>NPCAns3Txt</type>
                                     <type>NPCAns4Bg</type>
                                     <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
                                 </container>
                                 <animation-folder expanded="1">
                                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1301861696673986" speed="5">
@@ -3964,7 +3920,6 @@
                                     <type>NPCAns3Txt</type>
                                     <type>NPCAns4Bg</type>
                                     <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
                                 </container>
                             </object-type>
                             <object-type name="NPCPhraseBg" sid="7674954217822327">
@@ -3989,7 +3944,6 @@
                                     <type>NPCAns3Txt</type>
                                     <type>NPCAns4Bg</type>
                                     <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
                                 </container>
                                 <animation-folder expanded="1">
                                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9397272492932132" speed="5">
@@ -4019,7 +3973,6 @@
                                     <type>NPCAns3Txt</type>
                                     <type>NPCAns4Bg</type>
                                     <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
                                 </container>
                                 <animation-folder expanded="1">
                                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1949978098674882" speed="5">
@@ -4058,7 +4011,6 @@
                                     <type>NPCAns3Txt</type>
                                     <type>NPCAns4Bg</type>
                                     <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
                                 </container>
                             </object-type>
                             <object-type name="NPCSpeechBg" sid="4916656936861965">
@@ -4083,7 +4035,6 @@
                                     <type>NPCAns3Txt</type>
                                     <type>NPCAns4Bg</type>
                                     <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
                                 </container>
                                 <animation-folder expanded="1">
                                     <animation framecount="1" loop="0" name="Speak" pingpong="0" repeatcount="1" repeatto="0" sid="7555485715947281" speed="5">
@@ -4119,53 +4070,6 @@
                                     </animation>
                                 </animation-folder>
                             </object-type>
-                            <object-type name="NPCSpeechNextBtn" sid="6254220261413758">
-                                <plugin id="Sprite" />
-                                <behaviors>
-                                    <behavior-type name="Sine" sid="9362370924485768">
-                                        <behavior id="Sin" />
-                                    </behavior-type>
-                                </behaviors>
-                                <container>
-                                    <type>NPC</type>
-                                    <type>NPCSpeechBg</type>
-                                    <type>NPCPhraseTxt</type>
-                                    <type>NPCPhraseBg</type>
-                                    <type>NPCAnsBg</type>
-                                    <type>NPCPinPoint</type>
-                                    <type>NPCAns1Bg</type>
-                                    <type>NPCAns1Txt</type>
-                                    <type>NPCAns2Bg</type>
-                                    <type>NPCAns2Txt</type>
-                                    <type>NPCAns3Bg</type>
-                                    <type>NPCAns3Txt</type>
-                                    <type>NPCAns4Bg</type>
-                                    <type>NPCAns4Txt</type>
-                                    <type>NPCSpeechNextBtn</type>
-                                </container>
-                                <animation-folder expanded="1">
-                                    <animation framecount="1" loop="0" name="Think" pingpong="0" repeatcount="1" repeatto="0" sid="3209746598368362" speed="5">
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.54">
-                                            <collision-poly>
-                                                <point x="0.485" y="0.23375" />
-                                                <point x="0.8725" y="0.2325" />
-                                                <point x="0.8725" y="0.6875" />
-                                                <point x="0.485" y="0.68875" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                    <animation framecount="1" loop="0" name="Speak" pingpong="0" repeatcount="1" repeatto="0" sid="7787590387579493" speed="5">
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.54">
-                                            <collision-poly>
-                                                <point x="0.385" y="0.375" />
-                                                <point x="0.925" y="0.375" />
-                                                <point x="0.925" y="0.91" />
-                                                <point x="0.385" y="0.91" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
                         </object-folder>
                         <object-type name="NPC" sid="2782814196772796">
                             <plugin id="Sprite" />
@@ -4189,7 +4093,6 @@
                                 <type>NPCAns3Txt</type>
                                 <type>NPCAns4Bg</type>
                                 <type>NPCAns4Txt</type>
-                                <type>NPCSpeechNextBtn</type>
                             </container>
                             <animation-folder expanded="1">
                                 <animation framecount="1" loop="0" name="balloon_seller" pingpong="0" repeatcount="1" repeatto="0" sid="2960639667595226" speed="5">
@@ -4383,7 +4286,6 @@
                                 <type>NPCAns3Txt</type>
                                 <type>NPCAns4Bg</type>
                                 <type>NPCAns4Txt</type>
-                                <type>NPCSpeechNextBtn</type>
                             </container>
                             <animation-folder expanded="1">
                                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2294945521149412" speed="5">
@@ -4424,7 +4326,6 @@
                                     <type>foxy_simple_leg2</type>
                                     <type>foxy_simple_mouth1</type>
                                     <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
                                     <type>PlayerPlatform</type>
                                     <type>PlayerMiddleMarker</type>
                                 </container>
@@ -4475,7 +4376,6 @@
                                     <type>foxy_simple_leg2</type>
                                     <type>foxy_simple_mouth1</type>
                                     <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
                                     <type>PlayerPlatform</type>
                                     <type>PlayerMiddleMarker</type>
                                 </container>
@@ -4510,7 +4410,6 @@
                                     <type>foxy_simple_leg2</type>
                                     <type>foxy_simple_mouth1</type>
                                     <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
                                     <type>PlayerPlatform</type>
                                     <type>PlayerMiddleMarker</type>
                                 </container>
@@ -4561,7 +4460,6 @@
                                     <type>foxy_simple_leg2</type>
                                     <type>foxy_simple_mouth1</type>
                                     <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
                                     <type>PlayerPlatform</type>
                                     <type>PlayerMiddleMarker</type>
                                 </container>
@@ -4596,7 +4494,6 @@
                                     <type>foxy_simple_leg2</type>
                                     <type>foxy_simple_mouth1</type>
                                     <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
                                     <type>PlayerPlatform</type>
                                     <type>PlayerMiddleMarker</type>
                                 </container>
@@ -4631,7 +4528,6 @@
                                     <type>foxy_simple_leg2</type>
                                     <type>foxy_simple_mouth1</type>
                                     <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
                                     <type>PlayerPlatform</type>
                                     <type>PlayerMiddleMarker</type>
                                 </container>
@@ -4682,7 +4578,6 @@
                                     <type>foxy_simple_leg2</type>
                                     <type>foxy_simple_mouth1</type>
                                     <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
                                     <type>PlayerPlatform</type>
                                     <type>PlayerMiddleMarker</type>
                                 </container>
@@ -4733,7 +4628,6 @@
                                     <type>foxy_simple_leg2</type>
                                     <type>foxy_simple_mouth1</type>
                                     <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
                                     <type>PlayerPlatform</type>
                                     <type>PlayerMiddleMarker</type>
                                 </container>
@@ -4768,7 +4662,6 @@
                                     <type>foxy_simple_leg2</type>
                                     <type>foxy_simple_mouth1</type>
                                     <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
                                     <type>PlayerPlatform</type>
                                     <type>PlayerMiddleMarker</type>
                                 </container>
@@ -4822,7 +4715,6 @@
                                     <type>foxy_simple_leg2</type>
                                     <type>foxy_simple_mouth1</type>
                                     <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
                                     <type>PlayerPlatform</type>
                                     <type>PlayerMiddleMarker</type>
                                 </container>
@@ -4867,7 +4759,6 @@
                                     <type>foxy_simple_leg2</type>
                                     <type>foxy_simple_mouth1</type>
                                     <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
                                     <type>PlayerPlatform</type>
                                     <type>PlayerMiddleMarker</type>
                                 </container>
@@ -4907,7 +4798,6 @@
                                     <type>foxy_simple_leg2</type>
                                     <type>foxy_simple_mouth1</type>
                                     <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
                                     <type>PlayerPlatform</type>
                                     <type>PlayerMiddleMarker</type>
                                 </container>
@@ -4938,68 +4828,6 @@
                                                 <point x="0.916827" y="0.782609" />
                                                 <point x="0.0502901" y="0.929348" />
                                                 <point x="0.00967123" y="0.342391" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="PlayerSpeechNextBtn" sid="7560532498981539">
-                                <plugin id="Sprite" />
-                                <behaviors>
-                                    <behavior-type name="Sine" sid="1974507856258891">
-                                        <behavior id="Sin" />
-                                    </behavior-type>
-                                </behaviors>
-                                <container>
-                                    <type>PlayerAns2Bg</type>
-                                    <type>PlayerAns2Txt</type>
-                                    <type>PlayerAns3Txt</type>
-                                    <type>PlayerAns3Bg</type>
-                                    <type>PlayerAns4Bg</type>
-                                    <type>PlayerAns4Txt</type>
-                                    <type>PlayerAnsBg</type>
-                                    <type>PlayerPhraseBg</type>
-                                    <type>PlayerPhraseTxt</type>
-                                    <type>PlayerSpeechBg</type>
-                                    <type>Player</type>
-                                    <type>PlayerPinPoint</type>
-                                    <type>PlayerSCML</type>
-                                    <type>PlayerAns1Bg</type>
-                                    <type>PlayerAns1Txt</type>
-                                    <type>foxy_simple_acc3</type>
-                                    <type>foxy_simple_body</type>
-                                    <type>foxy_simple_ear1</type>
-                                    <type>foxy_simple_ear2</type>
-                                    <type>foxy_simple_eye1</type>
-                                    <type>foxy_simple_hand1</type>
-                                    <type>foxy_simple_hand2</type>
-                                    <type>foxy_simple_head</type>
-                                    <type>foxy_simple_leg1</type>
-                                    <type>foxy_simple_leg2</type>
-                                    <type>foxy_simple_mouth1</type>
-                                    <type>foxy_simple_tail</type>
-                                    <type>PlayerSpeechNextBtn</type>
-                                    <type>PlayerPlatform</type>
-                                    <type>PlayerMiddleMarker</type>
-                                </container>
-                                <animation-folder expanded="1">
-                                    <animation framecount="1" loop="0" name="Speak" pingpong="0" repeatcount="1" repeatto="0" sid="6622350663759345" speed="5">
-                                        <frame duration="1" hotspotX="0.435" hotspotY="0.555">
-                                            <collision-poly>
-                                                <point x="0.445" y="0.4" />
-                                                <point x="0.445" y="0.87" />
-                                                <point x="0.915" y="0.8725" />
-                                                <point x="0.915" y="0.4" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                    <animation framecount="1" loop="0" name="Think" pingpong="0" repeatcount="1" repeatto="0" sid="4717339014082959" speed="5">
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.555">
-                                            <collision-poly>
-                                                <point x="0.435" y="0.1875" />
-                                                <point x="0.8675" y="0.185" />
-                                                <point x="0.8675" y="0.69" />
-                                                <point x="0.435" y="0.69" />
                                             </collision-poly>
                                         </frame>
                                     </animation>
@@ -5045,7 +4873,6 @@
                                 <type>foxy_simple_leg2</type>
                                 <type>foxy_simple_mouth1</type>
                                 <type>foxy_simple_tail</type>
-                                <type>PlayerSpeechNextBtn</type>
                                 <type>PlayerPlatform</type>
                                 <type>PlayerMiddleMarker</type>
                             </container>
@@ -5103,7 +4930,6 @@
                                 <type>foxy_simple_leg2</type>
                                 <type>foxy_simple_mouth1</type>
                                 <type>foxy_simple_tail</type>
-                                <type>PlayerSpeechNextBtn</type>
                                 <type>PlayerPlatform</type>
                                 <type>PlayerMiddleMarker</type>
                             </container>
@@ -5143,7 +4969,6 @@
                                 <type>foxy_simple_leg2</type>
                                 <type>foxy_simple_mouth1</type>
                                 <type>foxy_simple_tail</type>
-                                <type>PlayerSpeechNextBtn</type>
                                 <type>PlayerPlatform</type>
                                 <type>PlayerMiddleMarker</type>
                             </container>
@@ -5186,7 +5011,6 @@
                                 <type>foxy_simple_leg2</type>
                                 <type>foxy_simple_mouth1</type>
                                 <type>foxy_simple_tail</type>
-                                <type>PlayerSpeechNextBtn</type>
                                 <type>PlayerPlatform</type>
                                 <type>PlayerMiddleMarker</type>
                             </container>
@@ -5226,7 +5050,6 @@
                                 <type>foxy_simple_leg2</type>
                                 <type>foxy_simple_mouth1</type>
                                 <type>foxy_simple_tail</type>
-                                <type>PlayerSpeechNextBtn</type>
                                 <type>PlayerPlatform</type>
                                 <type>PlayerMiddleMarker</type>
                             </container>
@@ -5377,44 +5200,55 @@
                             </animation>
                         </animation-folder>
                     </object-type>
-                    <object-type name="NotificationNextBtn" sid="5142399536996931">
-                        <plugin id="Sprite" />
-                        <behaviors>
-                            <behavior-type name="Sine" sid="6197119397764339">
-                                <behavior id="Sin" />
-                            </behavior-type>
-                        </behaviors>
-                        <animation-folder expanded="1">
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="49974521428852" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.577778">
-                                    <collision-poly>
-                                        <point x="0" y="0" />
-                                        <point x="1" y="0" />
-                                        <point x="0.99375" y="1" />
-                                        <point x="0" y="0.988889" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                        </animation-folder>
-                    </object-type>
                     <object-type name="Mouse" sid="226545771162981">
                         <plugin id="Mouse" />
                     </object-type>
                     <object-type global="1" name="InitedAnimsDict" sid="5526768729414874">
                         <plugin id="Dictionary" />
                     </object-type>
-                    <object-type name="QuestBackBtn" sid="6749826793148487">
+                    <object-type name="QuestNavBackBtn" sid="6749826793148487">
                         <plugin id="Sprite" />
                         <animation-folder expanded="1">
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6655417951928474" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.577778">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                     <collision-poly>
-                                        <point x="1" y="0.988889" />
-                                        <point x="0.00625002" y="1" />
-                                        <point x="0" y="0" />
-                                        <point x="1" y="0" />
+                                        <point x="0.161111" y="0.161111" />
+                                        <point x="0.5" y="0.0166667" />
+                                        <point x="0.844444" y="0.155556" />
+                                        <point x="0.988889" y="0.5" />
+                                        <point x="0.844444" y="0.844444" />
+                                        <point x="0.5" y="0.983333" />
+                                        <point x="0.161111" y="0.838889" />
+                                        <point x="0.0166667" y="0.5" />
                                     </collision-poly>
                                 </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="QuestNavNextBtn" sid="6254220261413758">
+                        <plugin id="Sprite" />
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3209746598368362" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.544444">
+                                    <collision-poly>
+                                        <point x="0.161111" y="0.161111" />
+                                        <point x="0.5" y="0.0166667" />
+                                        <point x="0.844444" y="0.155556" />
+                                        <point x="0.988889" y="0.5" />
+                                        <point x="0.844444" y="0.844444" />
+                                        <point x="0.5" y="0.983333" />
+                                        <point x="0.161111" y="0.838889" />
+                                        <point x="0.0166667" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="QuestNavlClutch" sid="6166173285574347">
+                        <plugin id="Sprite" />
+                        <animation-folder expanded="1">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4077256838931114" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -5631,7 +5465,7 @@
                 <event-sheet>LevelRecording.xml</event-sheet>
                 <event-sheet>LevelPlayback.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="0" name="1demo">
+            <event-folder expanded="1" name="1demo">
                 <event-folder expanded="0" name="Stages">
                     <event-folder expanded="0" name="BalloonSeller">
                         <event-sheet>BalloonSeller.xml</event-sheet>

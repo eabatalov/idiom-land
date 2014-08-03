@@ -82,10 +82,6 @@
                             <param id="0" name="X">NPCSpeechBg.X + NPC_PHRASE_TXT_X</param>
                             <param id="1" name="Y">NPCSpeechBg.Y + NPC_PHRASE_TXT_Y</param>
                         </action>
-                        <action id="-3" name="Set position" sid="2931281928546822" type="NPCSpeechNextBtn">
-                            <param id="0" name="X">NPCSpeechBg.X + NPC_PHRASE_NEXT_X</param>
-                            <param id="1" name="Y">NPCSpeechBg.Y + NPC_PHRASE_NEXT_Y</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2078795932936655">
@@ -102,7 +98,6 @@
                             <param id="0" name="Text">QuestLevelRuntime.getText</param>
                         </action>
                         <action id="-25" name="Move to bottom" sid="4487465092045365" type="NPCPhraseTxt" />
-                        <action id="-25" name="Move to bottom" sid="9188985984097292" type="NPCSpeechNextBtn" />
                         <action id="-25" name="Move to bottom" sid="3260745429109428" type="NPCPhraseBg" />
                         <action id="-25" name="Move to bottom" sid="4021589683031011" type="NPCSpeechBg" />
                         <action id="-15" name="Set visible" sid="839835481329796" type="NPCPhraseBg">
@@ -113,6 +108,10 @@
                         </action>
                         <action id="-15" name="Set visible" sid="9386546410996723" type="NPCPhraseTxt">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="5123804654890537" type="Function">
+                            <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                     <sub-events>
@@ -126,10 +125,6 @@
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="4584569239759603" type="NPCSpeechBg">
-                                    <param id="0" name="Animation">&quot;Speak&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="1324014859726249" type="NPCSpeechNextBtn">
                                     <param id="0" name="Animation">&quot;Speak&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -152,41 +147,9 @@
                                     <param id="0" name="Animation">&quot;Think&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="7259459767164906" type="NPCSpeechNextBtn">
-                                    <param id="0" name="Animation">&quot;Think&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="0" name="Call function" sid="6467516756852917" type="Function">
                                     <param id="0" name="Name">&quot;NPCAnimThink&quot;</param>
                                     <param id="1" name="Parameter {n}">NPC.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9907881911000948">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="8671133233587165" type="System">
-                                    <param id="0" name="First value">QuestLevelRuntime.getHasNext</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="2764065373146526" type="NPCSpeechNextBtn">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9942670639696983">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="5759182489966004" type="System">
-                                    <param id="0" name="First value">QuestLevelRuntime.getHasBack</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="5678332274179108" type="QuestBackBtn">
-                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -467,11 +430,9 @@
                         <action id="-15" name="Set visible" sid="7638784932733143" type="NPCAns4Txt">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="9823194379351544" type="NPCSpeechNextBtn">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="4842507208078697" type="QuestBackBtn">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="0" name="Call function" sid="4877515997766695" type="Function">
+                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -500,10 +461,6 @@
                             <param id="0" name="X">PlayerSpeechBg.X + PLAYER_PHRASE_TXT_X</param>
                             <param id="1" name="Y">PlayerSpeechBg.Y + PLAYER_PHRASE_TXT_Y</param>
                         </action>
-                        <action id="-3" name="Set position" sid="7177566349129579" type="PlayerSpeechNextBtn">
-                            <param id="0" name="X">PlayerSpeechBg.X + Player_PHRASE_NEXT_X</param>
-                            <param id="1" name="Y">PlayerSpeechBg.Y + Player_PHRASE_NEXT_Y</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="566202086767859">
@@ -520,7 +477,6 @@
                             <param id="0" name="Text">QuestLevelRuntime.getText</param>
                         </action>
                         <action id="-25" name="Move to bottom" sid="4533967939786091" type="PlayerPhraseTxt" />
-                        <action id="-25" name="Move to bottom" sid="2654204385993533" type="PlayerSpeechNextBtn" />
                         <action id="-25" name="Move to bottom" sid="7078895510264422" type="PlayerPhraseBg" />
                         <action id="-25" name="Move to bottom" sid="2858302157683358" type="PlayerSpeechBg" />
                         <action id="-15" name="Set visible" sid="8723165850772302" type="PlayerPhraseTxt">
@@ -531,6 +487,10 @@
                         </action>
                         <action id="-15" name="Set visible" sid="1056599444429625" type="PlayerSpeechBg">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="9149511859493984" type="Function">
+                            <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                     <sub-events>
@@ -544,10 +504,6 @@
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="6707885725244835" type="PlayerSpeechBg">
-                                    <param id="0" name="Animation">&quot;Speak&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="4801008901531521" type="PlayerSpeechNextBtn">
                                     <param id="0" name="Animation">&quot;Speak&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -569,38 +525,6 @@
                                 <action id="4" name="Set animation" sid="3434206596030371" type="PlayerSpeechBg">
                                     <param id="0" name="Animation">&quot;Think&quot;</param>
                                     <param id="1" name="From">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="9610531088894553" type="PlayerSpeechNextBtn">
-                                    <param id="0" name="Animation">&quot;Think&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9361711407233616">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="4324279796923461" type="System">
-                                    <param id="0" name="First value">QuestLevelRuntime.getHasNext</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="5229721842304233" type="PlayerSpeechNextBtn">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9794332428580027">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="3272126626577682" type="System">
-                                    <param id="0" name="First value">QuestLevelRuntime.getHasBack</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="4924461062817899" type="QuestBackBtn">
-                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -881,17 +805,15 @@
                         <action id="-15" name="Set visible" sid="8111916696491169" type="PlayerSpeechBg">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="8513310277800242" type="PlayerSpeechNextBtn">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="2091574982885889" type="QuestBackBtn">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="0" name="Call function" sid="2082183687293735" type="Function">
+                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6986851323157604" title="Notification">
+        <event-group collapsed="1" description="" sid="6986851323157604" title="Notification">
             <sub-events>
                 <event-block sid="2467896438487668">
                     <conditions>
@@ -906,11 +828,9 @@
                         <action id="-15" name="Set visible" sid="5788949567484358" type="NotificationTxt">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="5639425526544703" type="NotificationNextBtn">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="369973433893749" type="QuestBackBtn">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="0" name="Call function" sid="152690154398008" type="Function">
+                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -926,7 +846,6 @@
                             <param id="0" name="Text">Function.Param(0)</param>
                         </action>
                         <action id="-25" name="Move to bottom" sid="9397713892381626" type="NotificationTxt" />
-                        <action id="-25" name="Move to bottom" sid="9932683615191145" type="NotificationNextBtn" />
                         <action id="-25" name="Move to bottom" sid="7110605039649892" type="NotificationBg" />
                         <action id="-15" name="Set visible" sid="3632933500911169" type="NotificationBg">
                             <param id="0" name="Visibility">1</param>
@@ -934,39 +853,88 @@
                         <action id="-15" name="Set visible" sid="3695326354708191" type="NotificationTxt">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="0" name="Call function" sid="3972111295702101" type="Function">
+                            <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="7648952794047313">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="2061143193865437" type="System">
-                                    <param id="0" name="First value">QuestLevelRuntime.getHasNext</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="2560478392975436" type="NotificationNextBtn">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="5256305697234667">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="4050016301174066" type="System">
-                                    <param id="0" name="First value">QuestLevelRuntime.getHasBack</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="3213144043702175" type="QuestBackBtn">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block collapsed="1" sid="7342057714297118">
+            <conditions>
+                <condition id="0" name="On function" sid="5711349330301738" type="Function">
+                    <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5902812225484827">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="788775599531698" type="System">
+                            <param id="0" name="First value">QuestLevelRuntime.getHasNext</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="9597214294739048" type="QuestNavNextBtn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="89851560940015">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="374224561543823" type="System">
+                            <param id="0" name="First value">QuestLevelRuntime.getHasBack</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1803464239659176" type="QuestNavBackBtn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4843993240299334">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6527730859539497" type="System">
+                            <param id="0" name="First value">QuestLevelRuntime.getHasBack</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="6160084721267992" type="System">
+                            <param id="0" name="First value">QuestLevelRuntime.getHasNext</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6320853121120025" type="QuestNavlClutch">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7648911808261546">
+            <conditions>
+                <condition id="0" name="On function" sid="9354213623164059" type="Function">
+                    <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="9862071057823781" type="QuestNavBackBtn">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="931373842229247" type="QuestNavNextBtn">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6675037024401572" type="QuestNavlClutch">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
