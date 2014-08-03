@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>LevelResultsCommon</name>
     <events>
+        <include>MenuCommon</include>
         <event-block sid="7303888353327395">
             <conditions>
                 <condition id="3" name="On touched object" sid="2672589719114336" type="Touch">
@@ -13,19 +14,6 @@
             <actions>
                 <action id="-25" name="Go to layout (by name)" sid="5050098242814635" type="System">
                     <param id="0" name="Layout">LevelIdiomProgressTracker.getLevelName</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6730932892487198">
-            <conditions>
-                <condition id="3" name="On touched object" sid="347604392572083" type="Touch">
-                    <param id="0" name="Object">NavMainMenuBtn</param>
-                </condition>
-                <condition id="-9" name="Is visible" sid="4963381266470159" type="NavMainMenuBtn" />
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="3441226043922721" type="System">
-                    <param id="0" name="Layout">LevelsMenu</param>
                 </action>
             </actions>
         </event-block>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MenuCommon</name>
+    <events>
+        <include>NavigationMainMenuBtn</include>
+        <event-block sid="9600887387247439">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4581973174240518" type="Touch">
+                    <param id="0" name="Object">NavMainMenuBtn</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="6084405244622362" type="NavMainMenuBtn" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="1799930070524244" type="Function">
+                    <param id="0" name="Name">&quot;HomeTriggered&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

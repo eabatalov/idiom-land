@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SideMenu</name>
+    <events>
+        <event-group description="" sid="1748652998169316" title="Slide menu local scope">
+            <sub-events>
+                <variable constant="0" name="SLIDE_MENU_STATE" sid="2260206036496435" static="1" type="text">MINI</variable>
+                <variable constant="0" name="SLIDE_MENU_MINI_STATE_X" sid="6161224327066155" static="1" type="number">0</variable>
+                <event-block sid="8761190709050145">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8450034108531358" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4957444163737202" type="GameHelpBtn">
+                            <param id="0" name="Animation">&quot;Level&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="9422286834808919" type="NavMainMenuBtn">
+                            <param id="0" name="Animation">&quot;Level&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5560746097376676" type="SlideMenuTrigger">
+                            <param id="0" name="Pin to">SlideMenuBg</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="2941672344343022" type="GameHelpBtn">
+                            <param id="0" name="Pin to">SlideMenuBg</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="9804945840418327" type="NavMainMenuBtn">
+                            <param id="0" name="Pin to">SlideMenuBg</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5181200379232214" type="PauseBtn">
+                            <param id="0" name="Pin to">SlideMenuBg</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1556463990549971" type="System">
+                            <param id="0" name="Variable">SLIDE_MENU_MINI_STATE_X</param>
+                            <param id="1" name="Value">SlideMenuBg.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4130024042874742" type="System">
+                            <param id="0" name="Variable">SLIDE_MENU_STATE</param>
+                            <param id="1" name="Value">&quot;MINI&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2662208830764854">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5342035506210788" type="Function">
+                            <param id="0" name="Name">&quot;procMenuClick&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="523872173816395" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="768079431256834">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="5167503470349041" type="Touch">
+                                    <param id="0" name="Object">SlideMenuTrigger</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="6059269590464038" type="Function">
+                                    <param id="0" name="Name">&quot;SlideMenuTriggered&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="8020174889278968" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9031262624625913">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2789942412859332" type="System" />
+                                <condition id="4" name="Is touching object" sid="3494294769515873" type="Touch">
+                                    <param id="0" name="Object">GameHelpBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7284949188873359" type="Function">
+                                    <param id="0" name="Name">&quot;LevelHelpTriggered&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="8310796554816085" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6247288017119855">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5831584470526364" type="System" />
+                                <condition id="4" name="Is touching object" sid="2879672707222547" type="Touch">
+                                    <param id="0" name="Object">PauseBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5561103008956047" type="Function">
+                                    <param id="0" name="Name">&quot;PauseSwitchTriggered&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="3047266622631348" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="590152022197527">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4078966321059712" type="System" />
+                                <condition id="4" name="Is touching object" sid="9318033116586713" type="Touch">
+                                    <param id="0" name="Object">NavMainMenuBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1324616170699994" type="Function">
+                                    <param id="0" name="Name">&quot;HomeTriggered&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="6821673788764875" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Ignore clicks on objects under menu background</comment>
+                        <event-block sid="2176117913219265">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7425027744737548" type="System" />
+                                <condition id="4" name="Is touching object" sid="2170994203122814" type="Touch">
+                                    <param id="0" name="Object">SlideMenuBg</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="9976224122118277" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="5016751107774012">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9180447286993001" type="Function">
+                            <param id="0" name="Name">&quot;SlideMenuTriggered&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="131567904587905">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2779771990833727" type="System">
+                                    <param id="0" name="First value">SLIDE_MENU_STATE</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;MINI&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6891168878948164" type="System">
+                                    <param id="0" name="Variable">SLIDE_MENU_STATE</param>
+                                    <param id="1" name="Value">&quot;MAXI&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="8253487511547694" type="SlideMenuBg">
+                                    <param id="0" name="X">SlideMenuBg.X + abs( SLIDE_MENU_MINI_STATE_X)</param>
+                                    <param id="1" name="Y">SlideMenuBg.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1875084249297512">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7939497864167908" type="System" />
+                                <condition id="-8" name="Compare two values" sid="5077298461359631" type="System">
+                                    <param id="0" name="First value">SLIDE_MENU_STATE</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;MAXI&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8934310162874439" type="System">
+                                    <param id="0" name="Variable">SLIDE_MENU_STATE</param>
+                                    <param id="1" name="Value">&quot;MINI&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="9733236674317265" type="SlideMenuBg">
+                                    <param id="0" name="X">SlideMenuBg.X - abs( SLIDE_MENU_MINI_STATE_X)</param>
+                                    <param id="1" name="Y">SlideMenuBg.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

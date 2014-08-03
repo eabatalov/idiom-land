@@ -2118,8 +2118,27 @@
                         </object-type>
                         <object-type name="GameHelpBtn" sid="9235764985122567">
                             <plugin id="Sprite" />
+                            <behaviors>
+                                <behavior-type name="Pin" sid="5978756272933856">
+                                    <behavior id="Pin" />
+                                </behavior-type>
+                            </behaviors>
                             <animation-folder expanded="1">
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5065942684153493" speed="5">
+                                <animation framecount="1" loop="0" name="Menu" pingpong="0" repeatcount="1" repeatto="0" sid="5065942684153493" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.147727" y="0.147727" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.852273" y="0.147727" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.852273" y="0.852273" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.147727" y="0.852273" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="Level" pingpong="0" repeatcount="1" repeatto="0" sid="3675941920902104" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                         <collision-poly>
                                             <point x="0.147727" y="0.147727" />
@@ -2161,11 +2180,30 @@
                             </instance-variables>
                         </object-type>
                     </object-folder>
-                    <object-folder expanded="1" name="Navigation">
+                    <object-folder expanded="0" name="Navigation">
                         <object-type name="NavMainMenuBtn" sid="8439311364048488">
                             <plugin id="Sprite" />
+                            <behaviors>
+                                <behavior-type name="Pin" sid="7969414310894759">
+                                    <behavior id="Pin" />
+                                </behavior-type>
+                            </behaviors>
                             <animation-folder expanded="1">
                                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2426169192141205" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.147727" y="0.147727" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.852273" y="0.147727" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.852273" y="0.852273" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.147727" y="0.852273" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="Level" pingpong="0" repeatcount="1" repeatto="0" sid="8694425997035304" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                         <collision-poly>
                                             <point x="0.147727" y="0.147727" />
@@ -2381,6 +2419,69 @@
                         </object-type>
                         <object-type name="LevelGameplayPlaybackSpeedTxt" sid="8736865860248545">
                             <plugin id="Text" />
+                        </object-type>
+                    </object-folder>
+                    <object-folder expanded="0" name="SideMenu">
+                        <object-type name="SlideMenuBg" sid="3543231930940545">
+                            <plugin id="Sprite" />
+                            <animation-folder expanded="1">
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8504351258267179" speed="5">
+                                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="SlideMenuTrigger" sid="9052050500618205">
+                            <plugin id="Sprite" />
+                            <behaviors>
+                                <behavior-type name="Pin" sid="5668355213454639">
+                                    <behavior id="Pin" />
+                                </behavior-type>
+                            </behaviors>
+                            <animation-folder expanded="1">
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574983098663996" speed="5">
+                                    <frame duration="1" hotspotX="0.506329" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                    </object-folder>
+                    <object-folder expanded="0" name="PauseBtn">
+                        <object-type name="PauseBtn" sid="1761882053489404">
+                            <plugin id="Sprite" />
+                            <behaviors>
+                                <behavior-type name="Pin" sid="7937879238059635">
+                                    <behavior id="Pin" />
+                                </behavior-type>
+                            </behaviors>
+                            <animation-folder expanded="1">
+                                <animation framecount="1" loop="0" name="Pause" pingpong="0" repeatcount="1" repeatto="0" sid="1560827727271898" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.147727" y="0.147727" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.852273" y="0.147727" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.852273" y="0.852273" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.147727" y="0.852273" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="Play" pingpong="0" repeatcount="1" repeatto="0" sid="2594789688527885" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.147727" y="0.147727" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.852273" y="0.147727" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.852273" y="0.852273" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.147727" y="0.852273" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
                         </object-type>
                     </object-folder>
                 </object-folder>
@@ -5448,7 +5549,7 @@
     </families>
     <layout-folder expanded="1">
         <layout-folder expanded="1" name="Levels">
-            <layout-folder expanded="0" name="1demo">
+            <layout-folder expanded="1" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
             <layout-folder expanded="0" name="2demo_jump">
@@ -5456,7 +5557,7 @@
             </layout-folder>
         </layout-folder>
         <layout-folder expanded="1" name="Menus">
-            <layout-folder expanded="1" name="LevelResults">
+            <layout-folder expanded="0" name="LevelResults">
                 <layout>LevelResultsBrief.xml</layout>
                 <layout>LevelResultsDetailed.xml</layout>
                 <layout>LevelResultsNeedAllIdioms.xml</layout>
@@ -5501,6 +5602,12 @@
                     <event-folder expanded="1" name="Movement" />
                     <event-folder expanded="0" name="LevelGameplayPlayback">
                         <event-sheet>LevelGameplayPlaybackControls.xml</event-sheet>
+                    </event-folder>
+                    <event-folder expanded="0" name="SideMenu">
+                        <event-sheet>SideMenu.xml</event-sheet>
+                    </event-folder>
+                    <event-folder expanded="0" name="PauseBtn">
+                        <event-sheet>PauseBtn.xml</event-sheet>
                     </event-folder>
                     <event-sheet>LevelControls.xml</event-sheet>
                 </event-folder>
@@ -5574,21 +5681,22 @@
             </event-folder>
         </event-folder>
         <event-folder expanded="1" name="Menus">
-            <event-folder expanded="1" name="LevelResults">
+            <event-folder expanded="0" name="LevelResults">
                 <event-sheet>LevelResultsBriefMain.xml</event-sheet>
                 <event-sheet>LevelResultsDetailedMain.xml</event-sheet>
                 <event-sheet>LevelResultsCommon.xml</event-sheet>
                 <event-sheet>LevelResultsNeedAllIdiomsMain.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="0" name="MainMenu">
+            <event-folder expanded="1" name="MainMenu">
                 <event-sheet>MainMenuMain.xml</event-sheet>
             </event-folder>
             <event-folder expanded="0" name="LevelsMenu">
                 <event-sheet>LevelsMenuMain.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="0" name="LevelIdioms">
+            <event-folder expanded="1" name="LevelIdioms">
                 <event-sheet>LevelIdiomsMain.xml</event-sheet>
             </event-folder>
+            <event-sheet>MenuCommon.xml</event-sheet>
         </event-folder>
     </event-folder>
     <global-instances>
