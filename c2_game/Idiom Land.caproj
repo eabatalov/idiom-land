@@ -357,7 +357,7 @@
                     </object-type>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="1" name="MainMenu">
+            <object-folder expanded="0" name="MainMenu">
                 <object-type name="MainMenuIdiomLandLogo" sid="9581819859871193">
                     <plugin id="Sprite" />
                     <animation-folder expanded="1">
@@ -2389,7 +2389,7 @@
                         </object-type>
                     </object-folder>
                     <object-folder expanded="0" name="SideMenu">
-                        <object-type name="SlideMenuBg" sid="3543231930940545">
+                        <object-type name="SideMenuBg" sid="3543231930940545">
                             <plugin id="Sprite" />
                             <animation-folder expanded="1">
                                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8504351258267179" speed="5">
@@ -2397,7 +2397,7 @@
                                 </animation>
                             </animation-folder>
                         </object-type>
-                        <object-type name="SlideMenuTrigger" sid="9052050500618205">
+                        <object-type name="SideMenuTrigger" sid="9052050500618205">
                             <plugin id="Sprite" />
                             <behaviors>
                                 <behavior-type name="Pin" sid="5668355213454639">
@@ -5080,6 +5080,82 @@
                             <plugin id="QuestLevelPlaybackPlugin" />
                         </object-type>
                     </object-folder>
+                    <object-folder expanded="0" name="QuestNav">
+                        <object-type name="QuestNavBackBtn" sid="6749826793148487">
+                            <plugin id="Sprite" />
+                            <animation-folder expanded="1">
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="6655417951928474" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.161111" y="0.161111" />
+                                            <point x="0.5" y="0.0166667" />
+                                            <point x="0.844444" y="0.155556" />
+                                            <point x="0.988889" y="0.5" />
+                                            <point x="0.844444" y="0.844444" />
+                                            <point x="0.5" y="0.983333" />
+                                            <point x="0.161111" y="0.838889" />
+                                            <point x="0.0166667" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="9706251775595495" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.161111" y="0.161111" />
+                                            <point x="0.5" y="0.0166667" />
+                                            <point x="0.844444" y="0.155556" />
+                                            <point x="0.988889" y="0.5" />
+                                            <point x="0.844444" y="0.844444" />
+                                            <point x="0.5" y="0.983333" />
+                                            <point x="0.161111" y="0.838889" />
+                                            <point x="0.0166667" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="QuestNavlClutch" sid="6166173285574347">
+                            <plugin id="Sprite" />
+                            <animation-folder expanded="1">
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4077256838931114" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="QuestNavNextBtn" sid="6254220261413758">
+                            <plugin id="Sprite" />
+                            <animation-folder expanded="1">
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="3209746598368362" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.161111" y="0.161111" />
+                                            <point x="0.5" y="0.0166667" />
+                                            <point x="0.844444" y="0.155556" />
+                                            <point x="0.988889" y="0.5" />
+                                            <point x="0.844444" y="0.844444" />
+                                            <point x="0.5" y="0.983333" />
+                                            <point x="0.161111" y="0.838889" />
+                                            <point x="0.0166667" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="1324762912986791" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.161111" y="0.161111" />
+                                            <point x="0.5" y="0.0166667" />
+                                            <point x="0.844444" y="0.155556" />
+                                            <point x="0.988889" y="0.5" />
+                                            <point x="0.844444" y="0.844444" />
+                                            <point x="0.5" y="0.983333" />
+                                            <point x="0.161111" y="0.838889" />
+                                            <point x="0.0166667" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                    </object-folder>
                     <object-type name="StageChanger" sid="7618603551053084">
                         <plugin id="Sprite" />
                         <instance-variables>
@@ -5206,51 +5282,8 @@
                     <object-type global="1" name="InitedAnimsDict" sid="5526768729414874">
                         <plugin id="Dictionary" />
                     </object-type>
-                    <object-type name="QuestNavBackBtn" sid="6749826793148487">
-                        <plugin id="Sprite" />
-                        <animation-folder expanded="1">
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6655417951928474" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                    <collision-poly>
-                                        <point x="0.161111" y="0.161111" />
-                                        <point x="0.5" y="0.0166667" />
-                                        <point x="0.844444" y="0.155556" />
-                                        <point x="0.988889" y="0.5" />
-                                        <point x="0.844444" y="0.844444" />
-                                        <point x="0.5" y="0.983333" />
-                                        <point x="0.161111" y="0.838889" />
-                                        <point x="0.0166667" y="0.5" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                        </animation-folder>
-                    </object-type>
-                    <object-type name="QuestNavNextBtn" sid="6254220261413758">
-                        <plugin id="Sprite" />
-                        <animation-folder expanded="1">
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3209746598368362" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.544444">
-                                    <collision-poly>
-                                        <point x="0.161111" y="0.161111" />
-                                        <point x="0.5" y="0.0166667" />
-                                        <point x="0.844444" y="0.155556" />
-                                        <point x="0.988889" y="0.5" />
-                                        <point x="0.844444" y="0.844444" />
-                                        <point x="0.5" y="0.983333" />
-                                        <point x="0.161111" y="0.838889" />
-                                        <point x="0.0166667" y="0.5" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                        </animation-folder>
-                    </object-type>
-                    <object-type name="QuestNavlClutch" sid="6166173285574347">
-                        <plugin id="Sprite" />
-                        <animation-folder expanded="1">
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4077256838931114" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            </animation>
-                        </animation-folder>
+                    <object-type global="1" name="InputProcHandlers" sid="8057624504194046">
+                        <plugin id="Arr" />
                     </object-type>
                 </object-folder>
                 <object-folder expanded="0" name="JumpLevel">
@@ -5414,7 +5447,6 @@
                     <event-folder expanded="0" name="Navigation">
                         <event-sheet>NavigationMainMenuBtn.xml</event-sheet>
                     </event-folder>
-                    <event-folder expanded="1" name="Movement" />
                     <event-folder expanded="0" name="LevelGameplayPlayback">
                         <event-sheet>LevelGameplayPlaybackControls.xml</event-sheet>
                     </event-folder>
@@ -5502,13 +5534,13 @@
                 <event-sheet>LevelResultsCommon.xml</event-sheet>
                 <event-sheet>LevelResultsNeedAllIdiomsMain.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="1" name="MainMenu">
+            <event-folder expanded="0" name="MainMenu">
                 <event-sheet>MainMenuMain.xml</event-sheet>
             </event-folder>
             <event-folder expanded="0" name="LevelsMenu">
                 <event-sheet>LevelsMenuMain.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="1" name="LevelIdioms">
+            <event-folder expanded="0" name="LevelIdioms">
                 <event-sheet>LevelIdiomsMain.xml</event-sheet>
             </event-folder>
             <event-sheet>MenuCommon.xml</event-sheet>

@@ -7608,7 +7608,7 @@
                 <instance type="QuestNavBackBtn" uid="344">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Inactive</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -7750,7 +7750,7 @@
                 <instance type="QuestNavNextBtn" uid="230">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Inactive</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -7764,7 +7764,7 @@
                         <height>180</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.544444442</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -7938,7 +7938,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="SlideMenuBg" uid="372">
+                <instance type="SideMenuBg" uid="372">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7960,7 +7960,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SlideMenuTrigger" uid="373">
+                <instance type="SideMenuTrigger" uid="373">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -8091,6 +8091,13 @@
         <instance type="JumpCreateTokenPlatformRequests" uid="355">
             <properties>
                 <width>30</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="InputProcHandlers" uid="231">
+            <properties>
+                <width>0</width>
                 <height>1</height>
                 <depth>1</depth>
             </properties>
