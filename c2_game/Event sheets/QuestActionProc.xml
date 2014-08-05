@@ -24,7 +24,7 @@
                 </event-block>
                 <variable constant="0" name="IS_PREV_UI_ACT_CONTINUE" sid="7528182529661732" static="1" type="number">0</variable>
                 <comment>Common processing after delay and non-delay UI action</comment>
-                <event-block collapsed="1" sid="5462294256267517">
+                <event-block sid="5462294256267517">
                     <conditions>
                         <condition id="0" name="On function" sid="3958206933563915" type="Function">
                             <param id="0" name="Name">&quot;ProcAfterUIAction&quot;</param>
@@ -45,9 +45,9 @@
                                     <param id="0" name="Name">&quot;makeStageChangersTransparent&quot;</param>
                                     <param id="1" name="Parameter {n}">Player.CurrentStage</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="5237815673853845" type="System">
-                                    <param id="0" name="Variable">BlockPlayerInputOnSeqAction</param>
-                                    <param id="1" name="Value">0</param>
+                                <action id="0" name="Call function" sid="4284990379601855" type="Function">
+                                    <param id="0" name="Name">&quot;UnblockPlayerInput&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-9" name="Set value" sid="8542273144097988" type="System">
                                     <param id="0" name="Variable">IS_PREV_UI_ACT_CONTINUE</param>
@@ -440,11 +440,6 @@
                         <condition id="0" name="On function" sid="549117859264555" type="Function">
                             <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="4412876326954315" type="System">
-                            <param id="0" name="First value">BlockPlayerInputOnSeqAction</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
                         <condition id="-8" name="Compare two values" sid="8010312559986772" type="System">
                             <param id="0" name="First value">BLOCK_UI_ACTIONS_PROCESSING</param>
                             <param id="1" name="Comparison">0</param>
@@ -452,9 +447,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="3602083228748498" type="System">
-                            <param id="0" name="Variable">BlockPlayerInputOnSeqAction</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="0" name="Call function" sid="8065394963161022" type="Function">
+                            <param id="0" name="Name">&quot;BlockPlayerInput&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="4631591131679396" type="Function">
                             <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
@@ -468,11 +463,6 @@
                         <condition id="0" name="On function" sid="158342733640637" type="Function">
                             <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="7111090258796726" type="System">
-                            <param id="0" name="First value">BlockPlayerInputOnSeqAction</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
                         <condition id="-8" name="Compare two values" sid="4447298196087772" type="System">
                             <param id="0" name="First value">BLOCK_UI_ACTIONS_PROCESSING</param>
                             <param id="1" name="Comparison">0</param>
@@ -480,9 +470,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="9956919483730849" type="System">
-                            <param id="0" name="Variable">BlockPlayerInputOnSeqAction</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="0" name="Call function" sid="8274705937095072" type="Function">
+                            <param id="0" name="Name">&quot;BlockPlayerInput&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="7233653807269136" type="Function">
                             <param id="0" name="Name">&quot;ProcGameAction&quot;</param>

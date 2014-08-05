@@ -40,6 +40,10 @@
                             <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Call function" sid="1871988181309516" type="Function">
+                            <param id="0" name="Name">&quot;BlockPlayerInput&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>First stage of initialization: init all the visual construct objects, init all the scml animations.&#x0D;&#x0A;&#x0D;&#x0A;XXX: for some reason we can&apos;t call IniUI from InitGame&#x0D;&#x0A;Probably sprite positions change after load of layout and we compute some invalid offsets.</comment>
@@ -197,7 +201,7 @@
                             <param id="1" name="Parameter {n}">LEVEL_FIRST_STAGE</param>
                         </action>
                         <action id="0" name="Call function" sid="2717024278170931" type="Function">
-                            <param id="0" name="Name">&quot;EnableInputAfterGameInited&quot;</param>
+                            <param id="0" name="Name">&quot;UnblockPlayerInput&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
