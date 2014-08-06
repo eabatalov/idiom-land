@@ -14,7 +14,11 @@
                     <param id="0" name="State">0</param>
                 </action>
                 <action id="0" name="Call function" sid="500232717780891" type="Function">
-                    <param id="0" name="Name">&quot;BlockUIActionsProcessing&quot;</param>
+                    <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="9369180951888569" type="Function">
+                    <param id="0" name="Name">&quot;BlockPlayerInput&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
                 <action id="0" name="Call function" sid="4872609500197954" type="Function">
@@ -74,16 +78,11 @@
                 <action id="4" name="Speed down" sid="2932949585506775" type="JumpLevelPlayback" />
             </actions>
         </event-block>
-        <event-block sid="5410160056482418">
+        <event-block collapsed="1" sid="5410160056482418">
             <conditions>
                 <condition id="0" name="Gameplay record is pending" sid="2818507199414346" type="JumpLevelPlayback" />
             </conditions>
-            <actions>
-                <action disabled="1" id="14" name="Log" sid="780375706158682" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">JumpLevelPlayback.getType</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
                 <event-block sid="2731275620648712">
                     <conditions>

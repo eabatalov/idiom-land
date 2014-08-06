@@ -78,7 +78,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <comment>ProcGameAction not ProcPlayerCustomEvent is called because InjectTicketCompletion is called from script and we perform nested call to quest script with blocket Player input</comment>
+                <comment>Call non blocking because this function is called from quest script and all actions are blocked already</comment>
                 <event-block sid="5363014660933923">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="5835478108467434" type="System">
@@ -88,9 +88,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="3885223005206374" type="Function">
-                            <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;Player&quot;{###}&quot;ticket_complete&quot;</param>
+                        <action id="0" name="Call function" sid="9104400551606684" type="Function">
+                            <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;ticket_complete&quot;{###}&quot;Player&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -99,21 +99,13 @@
                         <condition id="-22" name="Else" sid="3325318679815538" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="260440920696048" type="Function">
-                            <param id="0" name="Name">&quot;ProcGameAction&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;Player&quot;{###}&quot;ticket_not_complete&quot;</param>
+                        <action id="0" name="Call function" sid="2785449849837624" type="Function">
+                            <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;ticket_not_complete&quot;{###}&quot;Player&quot;</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="5151212095595985">
-            <conditions>
-                <condition id="0" name="On function" sid="5606296006142441" type="Function">
-                    <param id="0" name="Name">&quot;procMiscInputexit_bus&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
         </event-block>
     </events>
 </c2eventsheet>
