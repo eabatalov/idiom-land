@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>QuestAutomaticTalkStarters</name>
+    <events>
+        <event-group description="" sid="4263596023615472" title="Automatic start talk">
+            <sub-events>
+                <comment>Inject custom event with name &quot;auto_talk_start_&quot; + NPC id to start talking</comment>
+                <event-block sid="7124879317616865">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7991193214109111" type="TalkStartTrigger">
+                            <param id="0" name="Object">PlayerMiddleMarker</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="881256367298289">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8273393451485714" type="TalkStartTrigger">
+                                    <param id="0" name="Instance variable">FireOnce</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="8097163933482469" type="TalkStartHighlight" />
+                                <action id="-9" name="Destroy" sid="2640317491128253" type="TalkStartTrigger" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="421426358105787">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8589615490797181" type="System">
+                                    <param id="0" name="First value">PlayerPlatform.Platform.VectorX</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="7738017988602158" type="PlayerPlatform">
+                                    <param id="0" name="Vector X">0</param>
+                                </action>
+                                <action id="2" name="Set object scale ratio" sid="4094644124897855" type="PlayerSCML">
+                                    <param id="0" name="Scale Ratio">PlayerSCML.ScaleRatio</param>
+                                    <param id="1" name="Flip X Axis">0</param>
+                                    <param id="2" name="Flip Y Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2309060373181358">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="8550995941394823" type="Function">
+                                    <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;auto_talk_start_&quot;  &amp; TalkStartTrigger.NpcIDInStage{###}&quot;Player&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

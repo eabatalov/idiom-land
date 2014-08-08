@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>LevelJumpPlayerMovement</name>
+    <name>LevelJumpPlayerAutoMovement</name>
     <events>
         <event-group description="" sid="8388738931396339" title="Local var group 4">
             <sub-events>
-                <variable constant="0" name="JUMP_LEVEL_ENABLE_PLAYER_MOVEMENT" sid="2546928939011121" static="1" type="number">0</variable>
+                <variable constant="0" name="ENABLE_PLAYER_AUTO_MOVEMENT" sid="2546928939011121" static="1" type="number">0</variable>
                 <event-block sid="7202626295264731">
                     <conditions>
                         <condition id="0" name="On function" sid="832300946697808" type="Function">
@@ -14,7 +14,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="9660860108270316" type="System">
-                            <param id="0" name="Variable">JUMP_LEVEL_ENABLE_PLAYER_MOVEMENT</param>
+                            <param id="0" name="Variable">ENABLE_PLAYER_AUTO_MOVEMENT</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -27,7 +27,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="3204133124673118" type="System">
-                            <param id="0" name="Variable">JUMP_LEVEL_ENABLE_PLAYER_MOVEMENT</param>
+                            <param id="0" name="Variable">ENABLE_PLAYER_AUTO_MOVEMENT</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -40,7 +40,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="8309652000395807" type="System">
-                            <param id="0" name="Variable">JUMP_LEVEL_ENABLE_PLAYER_MOVEMENT</param>
+                            <param id="0" name="Variable">ENABLE_PLAYER_AUTO_MOVEMENT</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action behavior="ScrollTo" id="1" name="Set enabled" sid="2328981650943005" type="PlayerPlatform">
@@ -49,108 +49,18 @@
                         <action behavior="Platform" id="4" name="Set jump strength" sid="1603702768240864" type="PlayerPlatform">
                             <param id="0" name="Jump strength">PlayerPlatform.Platform.JumpStrength*1.1</param>
                         </action>
-                        <action disabled="1" id="14" name="Log" sid="40224299167871" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Jump player movement level started&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block collapsed="1" sid="8838048860233468">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="9033638191699481" type="System">
-                            <param id="0" name="First value">JUMP_LEVEL_ENABLE_PLAYER_MOVEMENT</param>
+                            <param id="0" name="First value">ENABLE_PLAYER_AUTO_MOVEMENT</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">1</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-group collapsed="1" description="" sid="6006351359811596" title="Player manual movement">
-                            <sub-events>
-                                <comment>Use left and right arrow keys to control the player.  (This is necessary because the &apos;Default controls&apos; property has been set to &apos;No&apos; on the platform behavior, so we can automate jumping.)</comment>
-                                <event-block sid="2979744399792351">
-                                    <conditions>
-                                        <condition id="2" name="Key is down" sid="2477606166891363" type="Keyboard">
-                                            <param id="0" name="Key">37 (Left arrow)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="3810472205274121" type="PlayerPlatform">
-                                            <param id="0" name="Control">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="4994304785561581">
-                                    <conditions>
-                                        <condition id="2" name="Key is down" sid="7325927930929583" type="Keyboard">
-                                            <param id="0" name="Key">39 (Right arrow)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="7486510876292336" type="PlayerPlatform">
-                                            <param id="0" name="Control">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>On a mobile device, use the left-to-right tilt (Gamma) to also control movement.  This simply simulates pressing a control if the device has tilted enough to the left or right.</comment>
-                                <event-block sid="8490007337833276">
-                                    <conditions>
-                                        <condition id="4" name="Is touching object" sid="2742976350425971" type="Touch">
-                                            <param id="0" name="Object">ControlLeft</param>
-                                        </condition>
-                                        <condition id="-9" name="Is visible" sid="563418347461213" type="ControlLeft" />
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="7390832870906883" type="PlayerPlatform">
-                                            <param id="0" name="Control">0</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="2869675408684606" type="ControlLeft">
-                                            <param id="0" name="Animation">&quot;Active&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3884746202831742">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="6931583321546103" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="9992459316271975" type="ControlLeft">
-                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="1730643563341653">
-                                    <conditions>
-                                        <condition id="4" name="Is touching object" sid="7839948461076551" type="Touch">
-                                            <param id="0" name="Object">ControlRight</param>
-                                        </condition>
-                                        <condition id="-9" name="Is visible" sid="7621809174592475" type="ControlRight" />
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="6169870630576916" type="PlayerPlatform">
-                                            <param id="0" name="Control">1</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="8259840906162701" type="ControlRight">
-                                            <param id="0" name="Animation">&quot;Active&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3179793940897698">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="4038816001930007" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="8799544685735081" type="ControlRight">
-                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
                         <event-group description="" sid="7358534669891838" title="Player auto movement">
                             <sub-events>
                                 <comment>As soon as the player lands, jump immediately.</comment>

@@ -101,7 +101,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="5769935275446483">
+                <event-block sid="5769935275446483">
                     <conditions>
                         <condition id="3" name="On touched object" sid="2730285613817509" type="Touch">
                             <param id="0" name="Object">LevelNextBtn</param>
@@ -114,15 +114,34 @@
                             <conditions>
                                 <condition id="2" name="Is level succeeded" sid="5965373000315623" type="LevelIdiomProgressTracker" />
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="1469128340199389" type="Function">
-                                    <param id="0" name="Name">&quot;SaveLevelResults&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="-25" name="Go to layout (by name)" sid="7134485946036635" type="System">
-                                    <param id="0" name="Layout">LevelIdiomProgressTracker.getNextLevelName</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2010406503643612">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9406768795089482" type="System">
+                                            <param id="0" name="First value">LevelIdiomProgressTracker.getNextLevelName</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="7134485946036635" type="System">
+                                            <param id="0" name="Layout">LevelIdiomProgressTracker.getNextLevelName</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>TODO: game finished!</comment>
+                                <event-block sid="5979640010454225">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="861198748816813" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="1628906960763652" type="System">
+                                            <param id="0" name="Layout">LevelsMenu</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="8352613407998035">
                             <conditions>

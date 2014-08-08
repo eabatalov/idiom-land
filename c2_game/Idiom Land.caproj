@@ -5396,7 +5396,7 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout-folder expanded="0" name="Levels">
+        <layout-folder expanded="1" name="Levels">
             <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
@@ -5424,7 +5424,7 @@
     <event-folder expanded="1">
         <event-folder expanded="1" name="Levels">
             <event-folder expanded="1" name="Common">
-                <event-folder expanded="0" name="QuestEngine">
+                <event-folder expanded="1" name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
                     <event-sheet>QuestUInit.xml</event-sheet>
@@ -5432,9 +5432,11 @@
                     <event-sheet>QuestUIStage.xml</event-sheet>
                     <event-sheet>QuestUIMisc.xml</event-sheet>
                     <event-sheet>QuestPlayerAnimation.xml</event-sheet>
-                    <event-sheet>QuestPlayerInput.xml</event-sheet>
+                    <event-sheet>QuestUIinput.xml</event-sheet>
                     <event-sheet>QuestRecording.xml</event-sheet>
                     <event-sheet>QuestPlayback.xml</event-sheet>
+                    <event-sheet>QuestStageChangers.xml</event-sheet>
+                    <event-sheet>QuestAutomaticTalkStarters.xml</event-sheet>
                 </event-folder>
                 <event-folder expanded="0" name="Controls">
                     <event-folder expanded="0" name="GameHelp">
@@ -5483,13 +5485,13 @@
                 <event-folder expanded="1" name="JumpLevel">
                     <event-sheet>LevelJumpCommon.xml</event-sheet>
                     <event-sheet>LevelJumpCameraAndPlatforms.xml</event-sheet>
-                    <event-sheet>LevelJumpPlayerMovement.xml</event-sheet>
+                    <event-sheet>LevelJumpPlayerAutoMovement.xml</event-sheet>
                     <event-sheet>LevelJumpIdioms.xml</event-sheet>
                     <event-sheet>LevelJumpCompletion.xml</event-sheet>
                     <event-sheet>LevelJumpPlayback.xml</event-sheet>
                     <event-sheet>LevelJumpRecording.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="0" name="QuestLevel">
+                <event-folder expanded="1" name="QuestLevel">
                     <event-sheet>LevelQuestCommon.xml</event-sheet>
                     <event-sheet>LevelQuestDebug.xml</event-sheet>
                 </event-folder>
@@ -5523,7 +5525,7 @@
                 <event-sheet>1demoNpcAnimationRunners.xml</event-sheet>
                 <event-sheet>1demoNpcScmlSpritesBindings.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="0" name="2demo_jump">
+            <event-folder expanded="1" name="2demo_jump">
                 <event-sheet>2demo_jump.xml</event-sheet>
             </event-folder>
         </event-folder>

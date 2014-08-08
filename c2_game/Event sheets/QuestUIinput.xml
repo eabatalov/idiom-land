@@ -1,12 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>QuestPlayerInput</name>
+    <name>QuestUIinput</name>
     <events>
         <event-group description="" sid="9423143259056749" title="Input state machine">
             <sub-events>
                 <comment>Globally recognizable values: &quot;IDLE&quot;, &quot;BLOCKED&quot;</comment>
                 <variable constant="0" name="INPUT_STATE" sid="3003482212209299" static="1" type="text">IDLE</variable>
+                <event-block sid="1361004411185543">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7334103707504004" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="8174448000636504" type="System">
+                            <param id="0" name="Variable">INPUT_STATE</param>
+                            <param id="1" name="Value">&quot;IDLE&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-group collapsed="1" description="" sid="7514782767214732" title="Input state machine init">
                     <sub-events>
                         <event-block sid="9110923667725193">
@@ -73,7 +86,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="6412486179240296" title="Input event initiators">
+                <event-group description="" sid="6412486179240296" title="Input event initiators">
                     <sub-events>
                         <comment>Completely blocks player input processing. Be careful when use. UX may suffer heavily.</comment>
                         <event-group collapsed="1" description="" sid="2003175553896425" title="Input state machine block/unblock">
@@ -116,7 +129,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="6173355597483726" type="Function">
                                                     <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;BLOCK&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;BLOCK&quot;{###}-1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -146,7 +159,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="331512279109491" type="Function">
                                                     <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;UNBLOCK&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;UNBLOCK&quot;{###}-1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -2046,7 +2059,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="3870640516651617">
+                        <event-block collapsed="1" sid="3870640516651617">
                             <conditions>
                                 <condition id="0" name="On function" sid="2178727481963409" type="Function">
                                     <param id="0" name="Name">&quot;DisablePlayerAvatarControls&quot;</param>
@@ -2088,7 +2101,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="8694111219489924">
+                        <event-block collapsed="1" sid="8694111219489924">
                             <conditions>
                                 <condition id="0" name="On function" sid="5825575074126567" type="Function">
                                     <param id="0" name="Name">&quot;EnablePlayerAvatarControls&quot;</param>
@@ -2128,129 +2141,6 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-            </sub-events>
-        </event-group>
-        <event-group collapsed="1" description="" sid="332469586418499" title="Stage changers">
-            <sub-events>
-                <event-block sid="9949365663832994">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="6721803164694401" type="Player">
-                            <param id="0" name="Object">StageChanger</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="2039766089303173" type="System">
-                            <param id="0" name="First value">Player.CurrentStage</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">StageChanger.Stage</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="6251768207915564" type="Function">
-                            <param id="0" name="Name">&quot;ChangeStage&quot;</param>
-                            <param id="1" name="Parameter {n}">StageChanger.Stage</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7609698910929058">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="1160313490422418" type="Player">
-                            <param id="0" name="Object">CrankyStageChanger</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="9033207215331274" type="System">
-                            <param id="0" name="First value">Player.CurrentStage</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">CrankyStageChanger.Stage</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="8040100302080544" type="Function">
-                            <param id="0" name="Name">&quot;ChangeStage&quot;</param>
-                            <param id="1" name="Parameter {n}">CrankyStageChanger.Stage</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Change stage context and render current UI action on stage</comment>
-                <comment>p(0): new stage name</comment>
-                <event-block sid="6811936083988063">
-                    <conditions>
-                        <condition id="0" name="On function" sid="3098069443372747" type="Function">
-                            <param id="0" name="Name">&quot;ChangeStage&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="7107882144466008" type="Function">
-                            <param id="0" name="Name">&quot;onStage&quot; &amp; Player.CurrentStage&amp; &quot;Inactive&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="7588886292693031" type="Function">
-                            <param id="0" name="Name">&quot;HideStageUI&quot;</param>
-                            <param id="1" name="Parameter {n}">Player.CurrentStage</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="7257467278459108" type="Player">
-                            <param id="0" name="Instance variable">CurrentStage</param>
-                            <param id="1" name="Value">Function.Param(0)</param>
-                        </action>
-                        <action id="0" name="Call function" sid="8422606877246718" type="Function">
-                            <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;stage_activate&quot;{###}&quot;Player&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group collapsed="1" description="" sid="3984117986249243" title="Automatic start talk">
-            <sub-events>
-                <comment>Inject custom event with name &quot;auto_talk_start_&quot; + NPC id to start talking</comment>
-                <event-block collapsed="1" sid="7124879317616865">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="7991193214109111" type="TalkStartTrigger">
-                            <param id="0" name="Object">PlayerMiddleMarker</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="881256367298289">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="8273393451485714" type="TalkStartTrigger">
-                                    <param id="0" name="Instance variable">FireOnce</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="8097163933482469" type="TalkStartHighlight" />
-                                <action id="-9" name="Destroy" sid="2640317491128253" type="TalkStartTrigger" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="421426358105787">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="8589615490797181" type="System">
-                                    <param id="0" name="First value">PlayerPlatform.Platform.VectorX</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="7738017988602158" type="PlayerPlatform">
-                                    <param id="0" name="Vector X">0</param>
-                                </action>
-                                <action id="2" name="Set object scale ratio" sid="4094644124897855" type="PlayerSCML">
-                                    <param id="0" name="Scale Ratio">PlayerSCML.ScaleRatio</param>
-                                    <param id="1" name="Flip X Axis">0</param>
-                                    <param id="2" name="Flip Y Axis">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2309060373181358">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="8550995941394823" type="Function">
-                                    <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;auto_talk_start_&quot;  &amp; TalkStartTrigger.NpcIDInStage{###}&quot;Player&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
             </sub-events>
         </event-group>
     </events>
