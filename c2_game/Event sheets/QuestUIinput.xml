@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>QuestUIinput</name>
     <events>
-        <event-group description="" sid="9423143259056749" title="Input state machine">
+        <event-group collapsed="1" description="" sid="9423143259056749" title="Input state machine">
             <sub-events>
                 <comment>Globally recognizable values: &quot;IDLE&quot;, &quot;BLOCKED&quot;</comment>
                 <variable constant="0" name="INPUT_STATE" sid="3003482212209299" static="1" type="text">IDLE</variable>
@@ -20,7 +20,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="7514782767214732" title="Input state machine init">
+                <event-group collapsed="1" description="" sid="7514782767214732" title="Input state machine init">
                     <sub-events>
                         <event-block collapsed="1" sid="9110923667725193">
                             <conditions>
@@ -115,7 +115,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="6412486179240296" title="Input event initiators">
+                <event-group collapsed="1" description="" sid="6412486179240296" title="Input event initiators">
                     <sub-events>
                         <comment>Completely blocks player input processing. Be careful when use. UX may suffer heavily.</comment>
                         <event-group collapsed="1" description="" sid="2003175553896425" title="Input state machine block/unblock">
@@ -250,10 +250,10 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="678010174450329" title="Input state machine proc loop">
+                <event-group collapsed="1" description="" sid="678010174450329" title="Input state machine proc loop">
                     <sub-events>
                         <comment>param(0): input event name. One of &quot;BLOCK&quot;, &quot;UNBLOCK&quot;, &quot;TOUCH_START&quot;, &quot;TOUCHING&quot;, &quot;TOUCH_END&quot;, &quot;TOUCH_CANCEL&quot;, &quot;KBD_TOUCHING&quot;&#x0D;&#x0A;param(1): logical touch id. -1 on events that doesn&apos;t provide touch id.</comment>
-                        <event-block sid="9257404603565276">
+                        <event-block collapsed="1" sid="9257404603565276">
                             <conditions>
                                 <condition id="0" name="On function" sid="9444283504746207" type="Function">
                                     <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
@@ -299,7 +299,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="1968544516879905" title="Input event handlers">
+                <event-group collapsed="1" description="" sid="1968544516879905" title="Input event handlers">
                     <sub-events>
                         <event-block collapsed="1" sid="8912003593169878">
                             <conditions>

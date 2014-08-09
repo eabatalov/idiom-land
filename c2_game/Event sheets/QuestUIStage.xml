@@ -59,7 +59,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group collapsed="1" description="" sid="6888331275258145" title="NPCUI">
+        <event-group description="" sid="6888331275258145" title="NPCUI">
             <sub-events>
                 <comment>XXX: this every tick &quot;pinning&quot; is needed because construct has some bugs in computation of special sprite points.&#x0D;&#x0A;Construct return invalid values and we pin to them. But almost all the time Construct returns good values. This everytick pinning allows us to use this valid values.</comment>
                 <event-block sid="2604798924698626">
@@ -128,6 +128,9 @@
                                     <param id="0" name="Animation">&quot;Speak&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="4" name="Set font color" sid="883905854577542" type="NPCPhraseTxt">
+                                    <param id="0" name="Color">rgb(NPCPhraseTxt.SpeachR, NPCPhraseTxt.SpeachG, NPCPhraseTxt.SpeachB)</param>
+                                </action>
                                 <action id="0" name="Call function" sid="1704179595407417" type="Function">
                                     <param id="0" name="Name">&quot;NPCAnimSay&quot;</param>
                                     <param id="1" name="Parameter {n}">NPC.UID</param>
@@ -146,6 +149,9 @@
                                 <action id="4" name="Set animation" sid="7118728048350618" type="NPCSpeechBg">
                                     <param id="0" name="Animation">&quot;Think&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="9300413180648319" type="NPCPhraseTxt">
+                                    <param id="0" name="Color">rgb(NPCPhraseTxt.ThinkR, NPCPhraseTxt.ThinkG, NPCPhraseTxt.ThinkB)</param>
                                 </action>
                                 <action id="0" name="Call function" sid="6467516756852917" type="Function">
                                     <param id="0" name="Name">&quot;NPCAnimThink&quot;</param>
@@ -438,7 +444,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6702021473764103" title="PlayerUI">
+        <event-group description="" sid="6702021473764103" title="PlayerUI">
             <sub-events>
                 <comment>XXX: this every tick &quot;pinning&quot; is needed because construct has some bugs in computation of special sprite points.&#x0D;&#x0A;Construct return invalid values and we pin to them. But almost all the time Construct returns good values. This everytick pinning allows us to use this valid values.</comment>
                 <event-block sid="5619469661584902">
@@ -507,6 +513,9 @@
                                     <param id="0" name="Animation">&quot;Speak&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="4" name="Set font color" sid="6982593764192367" type="PlayerPhraseTxt">
+                                    <param id="0" name="Color">rgb(PlayerPhraseTxt.SpeachR, PlayerPhraseTxt.SpeachG, PlayerPhraseTxt.SpeachB)</param>
+                                </action>
                                 <action id="0" name="Call function" sid="7067417842225699" type="Function">
                                     <param id="0" name="Name">&quot;AnimPlayerSay&quot;</param>
                                     <param id="1" name="Parameter {n}">Player.UID</param>
@@ -525,6 +534,9 @@
                                 <action id="4" name="Set animation" sid="3434206596030371" type="PlayerSpeechBg">
                                     <param id="0" name="Animation">&quot;Think&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="8589746743441473" type="PlayerPhraseTxt">
+                                    <param id="0" name="Color">rgb(PlayerPhraseTxt.ThinkR, PlayerPhraseTxt.ThinkG, PlayerPhraseTxt.ThinkB)</param>
                                 </action>
                             </actions>
                         </event-block>
