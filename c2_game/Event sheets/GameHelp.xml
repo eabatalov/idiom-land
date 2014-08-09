@@ -116,7 +116,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="3097259777495928">
+                <event-block sid="3097259777495928">
                     <conditions>
                         <condition id="0" name="On function" sid="8538245497201991" type="Function">
                             <param id="0" name="Name">&quot;LevelHelpTriggered&quot;</param>
@@ -137,8 +137,8 @@
                                     <param id="0" name="Text">&quot;Level objective:&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Collect &quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount &amp; &quot; idioms from London people.&quot; &amp; newline &amp; newline &amp;&#x0D;&#x0A;&quot;Hint:&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Get close to them and talk!&quot;</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="4486965649350631" type="GameHelpBg">
-                                    <param id="0" name="X">1600 / 2 - GameHelpBg.Width / 2</param>
-                                    <param id="1" name="Y">1000 / 2 - GameHelpBg.Height / 2</param>
+                                    <param id="0" name="X">WindowWidth / 2 - GameHelpBg.Width / 2</param>
+                                    <param id="1" name="Y">WindowHeight / 2 - GameHelpBg.Height / 2</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="9819448618380588" type="GameHelpTxt">
                                     <param id="0" name="X">GameHelpBg.X + ((GameHelpBg.Width - GameHelpTxt.Width) / 2)</param>
