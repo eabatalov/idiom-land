@@ -3,36 +3,70 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>IdiomProgress</name>
     <events>
-        <event-group description="" sid="9203833697821463" title="Idiom Counter" />
-        <event-block sid="6013936950830742">
-            <conditions>
-                <condition id="1" name="Guessed idioms changed" sid="1217418775746662" type="LevelIdiomProgressTracker" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="2671474838349759" type="IdiomCounterTxt">
-                    <param id="0" name="Text">&quot;Idioms: &quot; &amp; LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6444847767648665">
-            <conditions>
-                <condition id="0" name="On function" sid="1137678234623631" type="Function">
-                    <param id="0" name="Name">&quot;LevelStarted&quot;</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="9886288227668308" type="IdiomCounterTxt">
-                    <param id="0" name="Instance variable">DontAutoShow</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="7211929255626602" type="IdiomCounterTxt">
-                    <param id="0" name="Text">&quot;Idioms: &quot; &amp; LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
-                </action>
-                <action id="-15" name="Set visible" sid="5608273365843292" type="IdiomCounterTxt">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="9203833697821463" title="Idiom Counter">
+            <sub-events>
+                <event-block sid="6013936950830742">
+                    <conditions>
+                        <condition id="1" name="Guessed idioms changed" sid="1217418775746662" type="LevelIdiomProgressTracker" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="2671474838349759" type="IdiomCounterTxt">
+                            <param id="0" name="Text">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6444847767648665">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1137678234623631" type="Function">
+                            <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9886288227668308" type="IdiomCounterTxt">
+                            <param id="0" name="Instance variable">DontAutoShow</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7211929255626602" type="IdiomCounterTxt">
+                            <param id="0" name="Text">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                        </action>
+                        <action id="0" name="Call function" sid="5376953944407645" type="Function">
+                            <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8879515276872887">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2869782477909554" type="Function">
+                            <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="5135175855605868" type="IdiomCounterBg">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4141376050044942" type="IdiomCounterTxt">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9603477592321399">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1734981569393728" type="Function">
+                            <param id="0" name="Name">&quot;HideIdiomsCounter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="9211902205698735" type="IdiomCounterBg">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1096415619501791" type="IdiomCounterTxt">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

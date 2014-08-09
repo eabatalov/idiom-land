@@ -836,8 +836,8 @@
                                 </behaviors>
                                 <animation-folder expanded="1">
                                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="41830544008186" speed="5">
-                                        <frame duration="1" hotspotX="0.0964286" hotspotY="0.180865">
-                                            <image-point name="ArrowPointer" x="0.140476" y="0.239843" />
+                                        <frame duration="1" hotspotX="0.0941176" hotspotY="0.186667">
+                                            <image-point name="ArrowPointer" x="0.141176" y="0.24" />
                                             <collision-poly>
                                                 <point x="0.339286" y="0.373526" />
                                                 <point x="0.5" y="0.301442" />
@@ -859,7 +859,7 @@
                                 <animation-folder expanded="1">
                                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1092650811402289" speed="5">
                                         <frame duration="1" hotspotX="0" hotspotY="0">
-                                            <image-point name="ArrowPointer" x="0.439286" y="0.117955" />
+                                            <image-point name="ArrowPointer" x="0.441176" y="0.12" />
                                             <collision-poly>
                                                 <point x="0.339286" y="0.373526" />
                                                 <point x="0.5" y="0.301442" />
@@ -2080,8 +2080,8 @@
                     </object-folder>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="0" name="Common">
-                <object-folder expanded="0" name="Controls">
+            <object-folder expanded="1" name="Common">
+                <object-folder expanded="1" name="Controls">
                     <object-folder expanded="0" name="GameHelp">
                         <object-type name="GameHelpBg" sid="1824745844934605">
                             <plugin id="Sprite" />
@@ -2133,7 +2133,7 @@
                             <plugin id="Text" />
                         </object-type>
                     </object-folder>
-                    <object-folder expanded="0" name="LevelProgress">
+                    <object-folder expanded="1" name="LevelProgress">
                         <object-type name="IdiomCounterTxt" sid="5244611748275736">
                             <plugin id="Text" />
                             <instance-variables>
@@ -2145,6 +2145,44 @@
                             <instance-variables>
                                 <instance-variable name="DontAutoShow" sid="519622648829588" type="number" />
                             </instance-variables>
+                        </object-type>
+                        <object-type name="CoinsCounterBg" sid="4494969541865341">
+                            <plugin id="Sprite" />
+                            <animation-folder expanded="1">
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="87872476243606" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.04" y="0.15" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.96" y="0.15" />
+                                            <point x="0.993333" y="0.5" />
+                                            <point x="0.96" y="0.85" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.04" y="0.85" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="IdiomCounterBg" sid="1238724228214556">
+                            <plugin id="Sprite" />
+                            <animation-folder expanded="1">
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3213246788885911" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.04" y="0.15" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.96" y="0.15" />
+                                            <point x="0.993333" y="0.5" />
+                                            <point x="0.96" y="0.85" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.04" y="0.85" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
                         </object-type>
                     </object-folder>
                     <object-folder expanded="0" name="Navigation">
@@ -5493,7 +5531,7 @@
                     <event-folder expanded="0" name="LevelGameplayPlayback">
                         <event-sheet>LevelGameplayPlaybackControls.xml</event-sheet>
                     </event-folder>
-                    <event-folder expanded="1" name="SideMenu">
+                    <event-folder expanded="0" name="SideMenu">
                         <event-sheet>SideMenu.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="0" name="PauseBtn">
@@ -5540,8 +5578,8 @@
                 <event-sheet>LevelRecording.xml</event-sheet>
                 <event-sheet>LevelPlayback.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="0" name="1demo">
-                <event-folder expanded="0" name="Stages">
+            <event-folder expanded="1" name="1demo">
+                <event-folder expanded="1" name="Stages">
                     <event-folder expanded="0" name="BalloonSeller">
                         <event-sheet>BalloonSeller.xml</event-sheet>
                     </event-folder>
@@ -5551,7 +5589,7 @@
                     <event-folder expanded="0" name="ExitBus">
                         <event-sheet>ExitBus.xml</event-sheet>
                     </event-folder>
-                    <event-folder expanded="0" name="Intro">
+                    <event-folder expanded="1" name="Intro">
                         <event-sheet>Intro.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="0" name="Kebab">

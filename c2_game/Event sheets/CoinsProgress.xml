@@ -7,6 +7,9 @@
         <variable constant="0" name="COINS_COLLECTED" sid="7852061145548592" static="0" type="number">0</variable>
         <event-block sid="4093737274702246">
             <conditions>
+                <condition id="0" name="On function" sid="7583269899174511" type="Function">
+                    <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                </condition>
                 <condition id="-7" name="Compare instance variable" sid="1549395916819256" type="CoinsCounterTxt">
                     <param id="0" name="Instance variable">DontAutoShow</param>
                     <param id="1" name="Comparison">0</param>
@@ -14,8 +17,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="4184219092544904" type="CoinsCounterTxt">
-                    <param id="0" name="Visibility">1</param>
+                <action id="0" name="Call function" sid="2846376237254982" type="Function">
+                    <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -29,7 +33,7 @@
                     <param id="1" name="Value">COINS_OVERALL + 1</param>
                 </action>
                 <action id="0" name="Set text" sid="9920624997865343" type="CoinsCounterTxt">
-                    <param id="0" name="Text">&quot;Coins: &quot; &amp; COINS_COLLECTED &amp; &quot;/&quot; &amp; COINS_OVERALL</param>
+                    <param id="0" name="Text">COINS_COLLECTED &amp; &quot;/&quot; &amp; COINS_OVERALL</param>
                 </action>
             </actions>
         </event-block>
@@ -50,7 +54,7 @@
                     <param id="1" name="Value">COINS_COLLECTED + 1</param>
                 </action>
                 <action id="0" name="Set text" sid="7342377968102071" type="CoinsCounterTxt">
-                    <param id="0" name="Text">&quot;Coins: &quot; &amp; COINS_COLLECTED &amp; &quot;/&quot; &amp; COINS_OVERALL</param>
+                    <param id="0" name="Text">COINS_COLLECTED &amp; &quot;/&quot; &amp; COINS_OVERALL</param>
                 </action>
                 <action id="0" name="Call function" sid="8517277183558699" type="Function">
                     <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
@@ -72,6 +76,36 @@
                 <action id="-9" name="Set value" sid="7822079475067109" type="System">
                     <param id="0" name="Variable">COINS_COLLECTED</param>
                     <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7274949143533471">
+            <conditions>
+                <condition id="0" name="On function" sid="1336694382311913" type="Function">
+                    <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="1260498786217375" type="CoinsCounterTxt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2643534583739126" type="CoinsCounterBg">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5782202832791717">
+            <conditions>
+                <condition id="0" name="On function" sid="3769686537358707" type="Function">
+                    <param id="0" name="Name">&quot;HideCoinsCounter&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="368602629716394" type="CoinsCounterTxt">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="135999759060467" type="CoinsCounterBg">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>

@@ -7334,6 +7334,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="CoinsCounterBg" uid="377">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>123</x>
+                        <y>45</y>
+                        <z>0</z>
+                        <width>150</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="ControlLeft" uid="71">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -7449,36 +7471,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="IdiomCounterTxt" uid="200">
-                    <properties>
-                        <text>Idioms: 0/5</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-53,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <instance-variables>
-                        <DontAutoShow>0</DontAutoShow>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>320</x>
-                        <y>0</y>
-                        <z>0</z>
-                        <width>315</width>
-                        <height>90</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="MarkerGoForward" uid="202">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -7527,10 +7519,10 @@
                 </instance>
                 <instance type="CoinsCounterTxt" uid="244">
                     <properties>
-                        <text>Coins: 0/5</text>
+                        <text>0/5</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-53,400,0</font>
-                        <color>0,0,0</color>
+                        <font>Arial,-27,700,0</font>
+                        <color>119,70,40</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -7543,11 +7535,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
-                        <y>0</y>
+                        <x>122</x>
+                        <y>24</y>
                         <z>0</z>
-                        <width>312</width>
-                        <height>90</height>
+                        <width>60</width>
+                        <height>39</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -7741,6 +7733,58 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="IdiomCounterBg" uid="378">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>300</x>
+                        <y>45</y>
+                        <z>0</z>
+                        <width>150</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="IdiomCounterTxt" uid="200">
+                    <properties>
+                        <text>0/5</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-27,700,0</font>
+                        <color>119,70,40</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <DontAutoShow>0</DontAutoShow>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>299</x>
+                        <y>25</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>39</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -7840,14 +7884,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>296</x>
-                        <y>-67</y>
+                        <x>231</x>
+                        <y>26.520311356</y>
                         <z>0</z>
-                        <width>840</width>
-                        <height>763</height>
+                        <width>170</width>
+                        <height>75</height>
                         <depth>0</depth>
-                        <hotspotX>0.096428573</hotspotX>
-                        <hotspotY>0.180865005</hotspotY>
+                        <hotspotX>0.094117649</hotspotX>
+                        <hotspotY>0.186666667</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -7865,11 +7909,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-117</x>
-                        <y>-196</y>
+                        <x>39</x>
+                        <y>13</y>
                         <z>0</z>
-                        <width>840</width>
-                        <height>763</height>
+                        <width>170</width>
+                        <height>75</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
