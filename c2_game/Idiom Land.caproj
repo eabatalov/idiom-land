@@ -2405,27 +2405,127 @@
                         <object-type name="LevelGameplayPlaybackCtl" sid="9012759797251801">
                             <plugin id="Sprite" />
                             <animation-folder expanded="1">
-                                <animation framecount="1" loop="0" name="Play" pingpong="0" repeatcount="1" repeatto="0" sid="7112546485909675" speed="5">
-                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <animation framecount="1" loop="0" name="PlayInactive" pingpong="0" repeatcount="1" repeatto="0" sid="7112546485909675" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.15" y="0.15" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.85" y="0.15" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.85" y="0.85" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.15" y="0.85" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="Pause" pingpong="0" repeatcount="1" repeatto="0" sid="4414219295308795" speed="5">
-                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <animation framecount="1" loop="0" name="PauseInactive" pingpong="0" repeatcount="1" repeatto="0" sid="4414219295308795" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.15" y="0.15" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.85" y="0.15" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.85" y="0.85" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.15" y="0.85" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="PlayActive" pingpong="0" repeatcount="1" repeatto="0" sid="5801503150290691" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.141667" y="0.141667" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.85" y="0.15" />
+                                            <point x="0.991667" y="0.5" />
+                                            <point x="0.85" y="0.85" />
+                                            <point x="0.5" y="0.991667" />
+                                            <point x="0.15" y="0.85" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="PauseActive" pingpong="0" repeatcount="1" repeatto="0" sid="5632550834925564" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.15" y="0.15" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.85" y="0.15" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.85" y="0.85" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.15" y="0.85" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
                                 </animation>
                             </animation-folder>
                         </object-type>
                         <object-type name="LevelGameplayPlaybackSpeedUp" sid="1757589434274373">
                             <plugin id="Sprite" />
                             <animation-folder expanded="1">
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9560360262925068" speed="5">
-                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="9560360262925068" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.146341" y="0.146341" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.853659" y="0.146341" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.853659" y="0.853659" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.146341" y="0.853659" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="9976789737717156" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.146341" y="0.146341" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.853659" y="0.146341" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.853659" y="0.853659" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.146341" y="0.853659" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
                                 </animation>
                             </animation-folder>
                         </object-type>
                         <object-type name="LevelGameplayPlaybackSpeedDown" sid="8258068468507934">
                             <plugin id="Sprite" />
                             <animation-folder expanded="1">
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5915057741567877" speed="5">
-                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="5915057741567877" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.146341" y="0.146341" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.853659" y="0.146341" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.853659" y="0.853659" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.146341" y="0.853659" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="6806028632752612" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.146341" y="0.146341" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.853659" y="0.146341" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.853659" y="0.853659" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.146341" y="0.853659" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
                                 </animation>
                             </animation-folder>
                         </object-type>
@@ -2436,7 +2536,7 @@
                             <plugin id="Text" />
                         </object-type>
                     </object-folder>
-                    <object-folder expanded="0" name="SideMenu">
+                    <object-folder expanded="1" name="SideMenu">
                         <object-type name="SideMenuBg" sid="3543231930940545">
                             <plugin id="Sprite" />
                             <animation-folder expanded="1">
@@ -2464,7 +2564,7 @@
                             </behaviors>
                             <animation-folder expanded="1">
                                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574983098663996" speed="5">
-                                    <frame duration="1" hotspotX="0.508571" hotspotY="0.5">
+                                    <frame duration="1" hotspotX="0" hotspotY="0.5">
                                         <collision-poly>
                                             <point x="0" y="0" />
                                             <point x="0.834286" y="0" />
@@ -5456,14 +5556,14 @@
     </families>
     <layout-folder expanded="1">
         <layout-folder expanded="1" name="Levels">
-            <layout-folder expanded="1" name="1demo">
+            <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
-            <layout-folder expanded="0" name="2demo_jump">
+            <layout-folder expanded="1" name="2demo_jump">
                 <layout>2demo_jump.xml</layout>
             </layout-folder>
         </layout-folder>
-        <layout-folder expanded="1" name="Menus">
+        <layout-folder expanded="0" name="Menus">
             <layout-folder expanded="0" name="LevelResults">
                 <layout>LevelResultsBrief.xml</layout>
                 <layout>LevelResultsDetailed.xml</layout>
@@ -5508,7 +5608,7 @@
                     <event-folder expanded="0" name="Navigation">
                         <event-sheet>NavigationMainMenuBtn.xml</event-sheet>
                     </event-folder>
-                    <event-folder expanded="0" name="LevelGameplayPlayback">
+                    <event-folder expanded="1" name="LevelGameplayPlayback">
                         <event-sheet>LevelGameplayPlaybackControls.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="0" name="SideMenu">

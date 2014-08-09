@@ -90,7 +90,7 @@
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="1548410288935381" type="LevelGameplayPlaybackCtl">
-                                    <param id="0" name="Animation">&quot;Play&quot;</param>
+                                    <param id="0" name="Animation">&quot;PlayInactive&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="2199858980999551" type="System">
@@ -109,7 +109,7 @@
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="30854489364392" type="LevelGameplayPlaybackCtl">
-                                    <param id="0" name="Animation">&quot;Pause&quot;</param>
+                                    <param id="0" name="Animation">&quot;PauseInactive&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="8773390088265353" type="System">
@@ -123,6 +123,68 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="8667739723840157">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="4955788004813277" type="Touch">
+                            <param id="0" name="Object">LevelGameplayPlaybackCtl</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block disabled="1" sid="6968526496634995">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5788117966284311" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="6719061712499815">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="3873633678178147" type="Touch">
+                            <param id="0" name="Object">LevelGameplayPlaybackSpeedDown</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3121414268744107" type="LevelGameplayPlaybackSpeedDown">
+                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8819452321330813">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6948734063570543" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6634708046690897" type="LevelGameplayPlaybackSpeedDown">
+                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5691757871411135">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="6882002936592301" type="Touch">
+                            <param id="0" name="Object">LevelGameplayPlaybackSpeedUp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1157601520365361" type="LevelGameplayPlaybackSpeedUp">
+                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9264347411335308">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="553676731412591" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5889080372546381" type="LevelGameplayPlaybackSpeedUp">
+                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
