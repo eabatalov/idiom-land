@@ -46,7 +46,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="6112377783202571">
+                <event-block sid="6112377783202571">
                     <conditions>
                         <condition id="0" name="On function" sid="6152589466917541" type="Function">
                             <param id="0" name="Name">&quot;procMenuTouchStart&quot;</param>
@@ -58,22 +58,8 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="7617696915082357">
-                            <conditions>
-                                <condition id="4" name="Is touching object" sid="2714599865566919" type="Touch">
-                                    <param id="0" name="Object">SideMenuTrigger</param>
-                                </condition>
-                                <condition id="-9" name="Is visible" sid="1850453346117105" type="SideMenuTrigger" />
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="284583923972599" type="Function">
-                                    <param id="0" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="4600367239791623">
                             <conditions>
-                                <condition id="-22" name="Else" sid="3229092457962764" type="System" />
                                 <condition id="4" name="Is touching object" sid="3305454494974341" type="Touch">
                                     <param id="0" name="Object">GameHelpBtn</param>
                                 </condition>
@@ -113,6 +99,20 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="7617696915082357">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3229092457962764" type="System" />
+                                <condition id="4" name="Is touching object" sid="2714599865566919" type="Touch">
+                                    <param id="0" name="Object">SideMenuTrigger</param>
+                                </condition>
+                                <condition id="-9" name="Is visible" sid="1850453346117105" type="SideMenuTrigger" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="284583923972599" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>Also ignore clicks on objects under menu background</comment>
                         <event-block sid="7708772128617696">
                             <conditions>
@@ -138,23 +138,8 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="768079431256834">
-                            <conditions>
-                                <condition id="4" name="Is touching object" sid="5167503470349041" type="Touch">
-                                    <param id="0" name="Object">SideMenuTrigger</param>
-                                </condition>
-                                <condition id="-9" name="Is visible" sid="158763429189671" type="SideMenuTrigger" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="6059269590464038" type="Function">
-                                    <param id="0" name="Name">&quot;SlideMenuTriggered&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="9031262624625913">
                             <conditions>
-                                <condition id="-22" name="Else" sid="2789942412859332" type="System" />
                                 <condition id="4" name="Is touching object" sid="3494294769515873" type="Touch">
                                     <param id="0" name="Object">GameHelpBtn</param>
                                 </condition>
@@ -163,6 +148,21 @@
                             <actions>
                                 <action id="0" name="Call function" sid="7284949188873359" type="Function">
                                     <param id="0" name="Name">&quot;LevelHelpTriggered&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="590152022197527">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4078966321059712" type="System" />
+                                <condition id="4" name="Is touching object" sid="9318033116586713" type="Touch">
+                                    <param id="0" name="Object">NavMainMenuBtn</param>
+                                </condition>
+                                <condition id="-9" name="Is visible" sid="2292579342377943" type="NavMainMenuBtn" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1324616170699994" type="Function">
+                                    <param id="0" name="Name">&quot;HomeTriggered&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -182,17 +182,17 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="590152022197527">
+                        <event-block sid="768079431256834">
                             <conditions>
-                                <condition id="-22" name="Else" sid="4078966321059712" type="System" />
-                                <condition id="4" name="Is touching object" sid="9318033116586713" type="Touch">
-                                    <param id="0" name="Object">NavMainMenuBtn</param>
+                                <condition id="-22" name="Else" sid="2789942412859332" type="System" />
+                                <condition id="4" name="Is touching object" sid="5167503470349041" type="Touch">
+                                    <param id="0" name="Object">SideMenuTrigger</param>
                                 </condition>
-                                <condition id="-9" name="Is visible" sid="2292579342377943" type="NavMainMenuBtn" />
+                                <condition id="-9" name="Is visible" sid="158763429189671" type="SideMenuTrigger" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="1324616170699994" type="Function">
-                                    <param id="0" name="Name">&quot;HomeTriggered&quot;</param>
+                                <action id="0" name="Call function" sid="6059269590464038" type="Function">
+                                    <param id="0" name="Name">&quot;SlideMenuTriggered&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
