@@ -19,9 +19,6 @@
                 <action id="-15" name="Set visible" sid="3622843070802135" type="NavHelper">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="7630814102953574" type="TapToAskHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
                 <action id="-15" name="Set visible" sid="3104795103770746" type="TapQuizzHelper">
                     <param id="0" name="Visibility">0</param>
                 </action>
@@ -151,10 +148,6 @@
                 <action id="-26" name="Move to layer" sid="1852455390107423" type="TapQuizzHelper">
                     <param id="0" name="Layer">PlayerAnsBg.LayerName</param>
                 </action>
-                <action id="-3" name="Set position" sid="7442534722946283" type="TapQuizzHelper">
-                    <param id="0" name="X">PlayerAnsBg.X + PlayerAnsBg.Width</param>
-                    <param id="1" name="Y">PlayerAnsBg.Y</param>
-                </action>
                 <action id="-15" name="Set visible" sid="8601286533578236" type="TapQuizzHelper">
                     <param id="0" name="Visibility">1</param>
                 </action>
@@ -271,48 +264,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1198608668841483">
-            <conditions>
-                <condition id="0" name="On function" sid="2831580699577529" type="Function">
-                    <param id="0" name="Name">&quot;ShowAskPolicemanHelper&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="4781640832418085" type="NPC">
-                    <param id="0" name="Unique ID">52</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-26" name="Move to layer" sid="6672239447622631" type="TapToAskHelper">
-                    <param id="0" name="Layer">NPC.LayerName</param>
-                </action>
-                <action id="-3" name="Set position" sid="4372592600505083" type="TapToAskHelper">
-                    <param id="0" name="X">NPC.X - TapToAskHelper.Width - 20</param>
-                    <param id="1" name="Y">NPC.Y</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="6949767421253554" type="TapToAskHelper">
-                    <param id="0" name="Pin to">NPCPinPoint</param>
-                    <param id="1" name="Mode">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="2665068954682653" type="TapToAskHelper">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3152051915546614">
-            <conditions>
-                <condition id="0" name="On function" sid="5375560744342252" type="Function">
-                    <param id="0" name="Name">&quot;HideAskPolicemanHelper&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="8730805072888969" type="NPC">
-                    <param id="0" name="Unique ID">52</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="1995937315939472" type="TapToAskHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action behavior="Pin" id="1" name="Unpin" sid="5075786318448821" type="TapToAskHelper" />
-            </actions>
-        </event-block>
         <event-block sid="4806892063636577">
             <conditions>
                 <condition id="0" name="On function" sid="9913464809278844" type="Function">
@@ -320,10 +271,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="727018177143338" type="NavHelper">
-                    <param id="0" name="X">QuestNavNextBtn.X - (NavHelper.ImagePointX(&quot;ArrowPointer&quot;) - NavHelper.X) - QuestNavNextBtn.Width / 2 </param>
-                    <param id="1" name="Y">QuestNavNextBtn.Y - (NavHelper.ImagePointY(&quot;ArrowPointer&quot;) - NavHelper.Y)</param>
-                </action>
                 <action id="-15" name="Set visible" sid="5024737920802133" type="NavHelper">
                     <param id="0" name="Visibility">1</param>
                 </action>
