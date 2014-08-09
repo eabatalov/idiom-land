@@ -7,7 +7,6 @@
             <sub-events>
                 <comment>Globally recognizable values: &quot;IDLE&quot;, &quot;BLOCKED&quot;</comment>
                 <variable constant="0" name="INPUT_STATE" sid="3003482212209299" static="1" type="text">IDLE</variable>
-                <variable constant="0" name="INPUT_EVENT" sid="9553766427125968" static="1" type="text"></variable>
                 <event-block sid="1361004411185543">
                     <conditions>
                         <condition id="0" name="On function" sid="7334103707504004" type="Function">
@@ -19,115 +18,75 @@
                             <param id="0" name="Variable">INPUT_STATE</param>
                             <param id="1" name="Value">&quot;IDLE&quot;</param>
                         </action>
-                        <action id="-9" name="Set value" sid="3898619790372212" type="System">
-                            <param id="0" name="Variable">INPUT_EVENT</param>
-                            <param id="1" name="Value">&quot;&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="7514782767214732" title="Input state machine init">
+                <event-group collapsed="1" description="" sid="7514782767214732" title="Input state machine init">
                     <sub-events>
                         <event-block sid="9110923667725193">
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="4459049133762932" type="System" />
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block collapsed="1" sid="1947893154446443">
-                                    <conditions>
-                                        <condition id="-23" name="While" sid="2882886416427836" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="6" name="Pop" sid="6042876870438062" type="UIinputChannelHandlers">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Axis">0</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="298756394516406">
-                                            <conditions>
-                                                <condition id="6" name="Is empty" sid="1871396780701204" type="UIinputChannelHandlers" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-24" name="Stop loop" sid="5692782668131772" type="System" />
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="7999572656197398">
-                                    <conditions />
-                                    <actions>
-                                        <action id="5" name="Push" sid="4381457908584188" type="UIinputChannelHandlers">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;ProcGlobalInputStateChange&quot;</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="5" name="Push" sid="3551139410835578" type="UIinputChannelHandlers">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;ProcPlayerMovementKeyboardInput&quot;</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="5" name="Push" sid="461296398848152" type="UIinputChannelHandlers">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;ProcSlideMenuTouchInput&quot;</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="5" name="Push" sid="3044597228846055" type="UIinputChannelHandlers">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;ProcPopupTouchInput&quot;</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="5" name="Push" sid="5332040349339655" type="UIinputChannelHandlers">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;ProcQuestNavTouchInput&quot;</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="5" name="Push" sid="7302458121774294" type="UIinputChannelHandlers">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;ProcPlayerQuizzAnswerTouchInput&quot;</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="5" name="Push" sid="2745549389262577" type="UIinputChannelHandlers">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;ProcNPCQuizzAnswerTouchInput&quot;</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="5" name="Push" sid="3335435945375437" type="UIinputChannelHandlers">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;ProcNPCTouchInput&quot;</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="5" name="Push" sid="4889233414235001" type="UIinputChannelHandlers">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;ProcPlayerTouchInput&quot;</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="5" name="Push" sid="5581868348450229" type="UIinputChannelHandlers">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;ProcPlayerMovementTouchInput&quot;</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="5" name="Push" sid="802327101624508" type="UIinputChannelHandlers">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;ProcStageSpecificTouchInput&quot;</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="3" name="Clear" sid="7774100740770241" type="UIinputChannelsState" />
-                                        <action id="0" name="Add key" sid="3503397526714455" type="UIinputChannelsState">
-                                            <param id="0" name="Key">&quot;DEFAULT&quot;</param>
-                                            <param id="1" name="Value">&quot;IDLE&quot;</param>
-                                        </action>
-                                        <action id="0" name="Add key" sid="7361919349123735" type="UIinputChannelsState">
-                                            <param id="0" name="Key">&quot;KBD&quot;</param>
-                                            <param id="1" name="Value">&quot;IDLE&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="5" name="Push" sid="4381457908584188" type="InputProcHandlers">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;ProcGlobalInputStateChange&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="3551139410835578" type="InputProcHandlers">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;ProcPlayerMovementKeyboardInput&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="461296398848152" type="InputProcHandlers">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;ProcSlideMenuTouchInput&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="3044597228846055" type="InputProcHandlers">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;ProcPopupTouchInput&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="5332040349339655" type="InputProcHandlers">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;ProcQuestNavTouchInput&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="7302458121774294" type="InputProcHandlers">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;ProcPlayerQuizzAnswerTouchInput&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="2745549389262577" type="InputProcHandlers">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;ProcNPCQuizzAnswerTouchInput&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="3335435945375437" type="InputProcHandlers">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;ProcNPCTouchInput&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="4889233414235001" type="InputProcHandlers">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;ProcPlayerTouchInput&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="5581868348450229" type="InputProcHandlers">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;ProcPlayerMovementTouchInput&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="802327101624508" type="InputProcHandlers">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;ProcStageSpecificTouchInput&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="6412486179240296" title="Input event channels">
+                <event-group description="" sid="6412486179240296" title="Input event initiators">
                     <sub-events>
                         <comment>Completely blocks player input processing. Be careful when use. UX may suffer heavily.</comment>
                         <event-group collapsed="1" description="" sid="2003175553896425" title="Input state machine block/unblock">
@@ -170,7 +129,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="6173355597483726" type="Function">
                                                     <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;BLOCK&quot;{###}&quot;DEFAULT&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;BLOCK&quot;{###}-1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -200,7 +159,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="331512279109491" type="Function">
                                                     <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;UNBLOCK&quot;{###}&quot;DEFAULT&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;UNBLOCK&quot;{###}-1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -213,34 +172,22 @@
                                 <condition id="0" name="On any touch start" sid="4812237641790106" type="Touch" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Add key" sid="1672493527366888" type="UIinputChannelsState">
-                                    <param id="0" name="Key">str(Touch.TouchID)</param>
-                                    <param id="1" name="Value">&quot;IDLE&quot;</param>
-                                </action>
                                 <action id="0" name="Call function" sid="1572697411062233" type="Function">
                                     <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;TOUCH_START&quot;{###}str(Touch.TouchID)</param>
+                                    <param id="1" name="Parameter {n}">&quot;TOUCH_START&quot;{###}Touch.TouchID</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="4791278340946103">
+                        <event-block sid="4791278340946103">
                             <conditions>
                                 <condition id="2" name="Is in touch" sid="9491209786652303" type="Touch" />
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="4647607535412047">
-                                    <conditions>
-                                        <condition id="1" name="For each key" sid="4784455232553861" type="UIinputChannelsState" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="9007639279302958" type="Function">
-                                            <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;TOUCHING&quot;{###}UIinputChannelsState.CurrentKey</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="0" name="Call function" sid="9007639279302958" type="Function">
+                                    <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;TOUCHING&quot;{###}-1</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="5240915229928226">
                             <conditions>
@@ -249,10 +196,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="4826951733394581" type="Function">
                                     <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;TOUCH_END&quot;{###}str(Touch.TouchID)</param>
-                                </action>
-                                <action id="2" name="Delete key" sid="9475361840548707" type="UIinputChannelsState">
-                                    <param id="0" name="Key">str(Touch.TouchID)</param>
+                                    <param id="1" name="Parameter {n}">&quot;TOUCH_END&quot;{###}Touch.TouchID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -265,7 +209,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="2273947775429669" type="Function">
                                     <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;UNBLOCK&quot;{###}&quot;DEFAULT&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;UNBLOCK&quot;{###}-1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -284,53 +228,35 @@
                             <actions>
                                 <action id="0" name="Call function" sid="3558997997391144" type="Function">
                                     <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;KBD_TOUCHING&quot;{###}&quot;KBD&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;KBD_TOUCHING&quot;{###}-1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="678010174450329" title="Input state machine proc loop">
+                <event-group collapsed="1" description="" sid="678010174450329" title="Input state machine proc loop">
                     <sub-events>
-                        <comment>param(0): input event name. One of &quot;BLOCK&quot;, &quot;UNBLOCK&quot;, &quot;TOUCH_START&quot;, &quot;TOUCHING&quot;, &quot;TOUCH_END&quot;, &quot;TOUCH_CANCEL&quot;, &quot;KBD_TOUCHING&quot;&#x0D;&#x0A;param(1): input channle id. &quot;DEFAULT&quot; on events that doesn&apos;t provide channel id.</comment>
-                        <event-block sid="9257404603565276">
+                        <comment>param(0): input event name. One of &quot;BLOCK&quot;, &quot;UNBLOCK&quot;, &quot;TOUCH_START&quot;, &quot;TOUCHING&quot;, &quot;TOUCH_END&quot;, &quot;TOUCH_CANCEL&quot;, &quot;KBD_TOUCHING&quot;&#x0D;&#x0A;param(1): logical touch id. -1 on events that doesn&apos;t provide touch id.</comment>
+                        <event-block collapsed="1" sid="9257404603565276">
                             <conditions>
                                 <condition id="0" name="On function" sid="9444283504746207" type="Function">
                                     <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="6532701374124179" type="System">
-                                    <param id="0" name="Variable">INPUT_EVENT</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="5482070627266667" type="System">
-                                    <param id="0" name="Variable">INPUT_STATE</param>
-                                    <param id="1" name="Value">UIinputChannelsState.Get(Function.Param(1))</param>
-                                </action>
-                                <action disabled="1" id="14" name="Log" sid="9998160505435656" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">INPUT_EVENT &amp; &quot; &quot; &amp; INPUT_STATE</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
-                                <comment>1 excessive element is always created in array x dim</comment>
                                 <event-block sid="4000807565093725">
                                     <conditions>
                                         <condition id="-10" name="For" sid="7744932262781726" type="System">
                                             <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
                                             <param id="1" name="Start index">0</param>
-                                            <param id="2" name="End index">UIinputChannelHandlers.Width - 1</param>
+                                            <param id="2" name="End index">InputProcHandlers.Width - 1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="5067354793803956" type="Function">
-                                            <param id="0" name="Name">UIinputChannelHandlers.At(loopindex)</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                        <action id="0" name="Add key" sid="8084818389763129" type="UIinputChannelsState">
-                                            <param id="0" name="Key">Function.Param(1)</param>
-                                            <param id="1" name="Value">INPUT_STATE</param>
+                                            <param id="0" name="Name">InputProcHandlers.At(loopindex)</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1)</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -369,7 +295,7 @@
                                 <event-block sid="2927505355321816">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="2820905914313718" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;UNBLOCK&quot;</param>
                                         </condition>
@@ -392,7 +318,7 @@
                                 <event-block sid="1597405016995936">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="2512988032699059" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;BLOCK&quot;</param>
                                         </condition>
@@ -445,10 +371,10 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="1686322096370056">
+                                <event-block collapsed="1" sid="1686322096370056">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="7019353003900697" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;KBD_TOUCHING&quot;</param>
                                         </condition>
@@ -523,7 +449,7 @@
                                 <event-block collapsed="1" sid="6651889315114041">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="9745886294313667" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_START&quot;</param>
                                         </condition>
@@ -573,7 +499,7 @@
                                 <event-block collapsed="1" sid="9292267566306469">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="7456274847469501" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_END&quot;</param>
                                         </condition>
@@ -634,10 +560,10 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block collapsed="1" sid="541670216504052">
+                                <event-block sid="541670216504052">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="8185229801691418" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_START&quot;</param>
                                         </condition>
@@ -687,7 +613,7 @@
                                 <event-block collapsed="1" sid="5374010651569836">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="3212715310209434" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_END&quot;</param>
                                         </condition>
@@ -751,7 +677,7 @@
                                 <event-block collapsed="1" sid="4496419766149641">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="7334073350615249" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_START&quot;</param>
                                         </condition>
@@ -828,7 +754,7 @@
                                 <event-block collapsed="1" sid="8033642930570133">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="6961710141146701" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_END&quot;</param>
                                         </condition>
@@ -875,7 +801,7 @@
                                 <event-block collapsed="1" sid="4131999497247067">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="2438881984535516" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_END&quot;</param>
                                         </condition>
@@ -919,10 +845,10 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="6510082004862061">
+                                <event-block collapsed="1" sid="6510082004862061">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="7708213556845318" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_CANCEL&quot;</param>
                                         </condition>
@@ -972,7 +898,7 @@
                                 <event-block sid="2738204307327908">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="7510619316850309" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_START&quot;</param>
                                         </condition>
@@ -999,7 +925,7 @@
                                 <event-block collapsed="1" sid="7462882370916286">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="9683828772056207" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_END&quot;</param>
                                         </condition>
@@ -1094,7 +1020,7 @@
                                 <event-block sid="3083874996367664">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="4604102028065967" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_START&quot;</param>
                                         </condition>
@@ -1126,7 +1052,7 @@
                                 <event-block collapsed="1" sid="1990385261731029">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="1935885167062934" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_END&quot;</param>
                                         </condition>
@@ -1221,7 +1147,7 @@
                                 <event-block sid="1605477500764539">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="3341834816431049" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_START&quot;</param>
                                         </condition>
@@ -1253,7 +1179,7 @@
                                 <event-block sid="4641588212254011">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="5431793488345909" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_END&quot;</param>
                                         </condition>
@@ -1311,7 +1237,7 @@
                                 <event-block sid="7252876427135176">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="74114917005656" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_START&quot;</param>
                                         </condition>
@@ -1338,7 +1264,7 @@
                                 <event-block collapsed="1" sid="5652841308128895">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="8875570911736648" type="System">
-                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                            <param id="0" name="First value">Function.Param(0)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_END&quot;</param>
                                         </condition>
@@ -1376,13 +1302,69 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-group description="" sid="4741510254121109" title="Player movement touch control handler">
+                        <event-group collapsed="1" description="" sid="4741510254121109" title="Player movement touch control handler">
                             <sub-events>
                                 <comment>Multytouch is implemented here</comment>
                                 <variable constant="0" name="TOUCH_LEFT" sid="170806465083593" static="1" type="number">-1</variable>
                                 <variable constant="0" name="TOUCH_RIGHT" sid="4323171716875884" static="1" type="number">-1</variable>
                                 <variable constant="0" name="TOUCH_UP" sid="1619515425554516" static="1" type="number">-1</variable>
-                                <event-block sid="4169620110013898">
+                                <event-block sid="7203826538175857">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="169619500662095" type="Function">
+                                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="1340606882316634" type="System">
+                                            <param id="0" name="Variable">TOUCH_LEFT</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="486188128022743" type="System">
+                                            <param id="0" name="Variable">TOUCH_RIGHT</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3707310843450866" type="System">
+                                            <param id="0" name="Variable">TOUCH_UP</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block collapsed="1" sid="1116309399693488">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="7638987156175969" type="Function">
+                                            <param id="0" name="Name">&quot;ControlTouchEnd&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="2010690883788991">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="6429800436647393" type="System">
+                                                    <param id="0" name="Variable">TOUCH_LEFT</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">-1</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="836410135907551" type="System">
+                                                    <param id="0" name="Variable">TOUCH_RIGHT</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">-1</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="2012577330980615" type="System">
+                                                    <param id="0" name="Variable">TOUCH_UP</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="3859555410638916" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Value">&quot;IDLE&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block collapsed="1" sid="4169620110013898">
                                     <conditions>
                                         <condition id="0" name="On function" sid="3626230809522197" type="Function">
                                             <param id="0" name="Name">&quot;ProcPlayerMovementTouchInput&quot;</param>
@@ -1396,10 +1378,10 @@
                                     <sub-events>
                                         <event-group collapsed="1" description="" sid="848943531617697" title="Control left">
                                             <sub-events>
-                                                <event-block sid="4359189801812126">
+                                                <event-block collapsed="1" sid="4359189801812126">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="4856779615524423" type="System">
-                                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                                            <param id="0" name="First value">Function.Param(0)</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">&quot;TOUCH_START&quot;</param>
                                                         </condition>
@@ -1407,41 +1389,67 @@
                                                             <param id="0" name="Object">ControlLeft</param>
                                                         </condition>
                                                         <condition id="-9" name="Is visible" sid="491813060498044" type="ControlLeft" />
-                                                        <condition id="-14" name="Compare variable" sid="4768647800358242" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
+                                                        <condition id="-14" name="Compare variable" sid="6063950201798875" type="System">
+                                                            <param id="0" name="Variable">TOUCH_LEFT</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;IDLE&quot;</param>
+                                                            <param id="2" name="Value">-1</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Call function" sid="6298438032666861" type="Function">
-                                                            <param id="0" name="Name">&quot;PlayerInputLeft&quot;</param>
-                                                            <param id="1" name="Parameter {n}"></param>
-                                                        </action>
-                                                        <action id="4" name="Set animation" sid="3327688780706368" type="ControlLeft">
-                                                            <param id="0" name="Animation">&quot;Active&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="-9" name="Set value" sid="229189310188889" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Value">&quot;TOUCH_MOV_LEFT&quot;</param>
-                                                        </action>
-                                                        <action id="1" name="Set return value" sid="9202051396522107" type="Function">
-                                                            <param id="0" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="3741440858093217">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="4768647800358242" type="System">
+                                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;IDLE&quot;</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="7408078309461612" type="System">
+                                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="6298438032666861" type="Function">
+                                                                    <param id="0" name="Name">&quot;PlayerInputLeft&quot;</param>
+                                                                    <param id="1" name="Parameter {n}"></param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="3327688780706368" type="ControlLeft">
+                                                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="229189310188889" type="System">
+                                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                                    <param id="1" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="8987770982193545" type="System">
+                                                                    <param id="0" name="Variable">TOUCH_LEFT</param>
+                                                                    <param id="1" name="Value">Function.Param(1)</param>
+                                                                </action>
+                                                                <action id="1" name="Set return value" sid="9202051396522107" type="Function">
+                                                                    <param id="0" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="5639121922690403">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="8390376610221918" type="System">
-                                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                                            <param id="0" name="First value">Function.Param(0)</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">&quot;TOUCHING&quot;</param>
                                                         </condition>
                                                         <condition id="-14" name="Compare variable" sid="7958146565418591" type="System">
                                                             <param id="0" name="Variable">INPUT_STATE</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;TOUCH_MOV_LEFT&quot;</param>
+                                                            <param id="2" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="4669466073675386" type="System">
+                                                            <param id="0" name="Variable">TOUCH_LEFT</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">-1</param>
                                                         </condition>
                                                         <condition id="4" name="Is touching object" sid="7573374526423911" type="Touch">
                                                             <param id="0" name="Object">ControlLeft</param>
@@ -1461,14 +1469,19 @@
                                                 <event-block sid="126649516249981">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="3049484768964526" type="System">
-                                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                                            <param id="0" name="First value">Function.Param(0)</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">&quot;TOUCH_END&quot;</param>
                                                         </condition>
                                                         <condition id="-14" name="Compare variable" sid="8389267276648474" type="System">
                                                             <param id="0" name="Variable">INPUT_STATE</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;TOUCH_MOV_LEFT&quot;</param>
+                                                            <param id="2" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="5957555284171278" type="System">
+                                                            <param id="0" name="Variable">TOUCH_LEFT</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">-1</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -1476,89 +1489,131 @@
                                                             <param id="0" name="Animation">&quot;Inactive&quot;</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
-                                                        <action id="-9" name="Set value" sid="3859555410638916" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Value">&quot;IDLE&quot;</param>
+                                                        <action id="-9" name="Set value" sid="5963645476519114" type="System">
+                                                            <param id="0" name="Variable">TOUCH_LEFT</param>
+                                                            <param id="1" name="Value">-1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="3333727560723212" type="Function">
+                                                            <param id="0" name="Name">&quot;ControlTouchEnd&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
                                                         </action>
                                                         <action id="1" name="Set return value" sid="8931272855108938" type="Function">
                                                             <param id="0" name="Value">1</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="8673829036544601">
+                                                <event-block collapsed="1" sid="8673829036544601">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="6301394226124007" type="System">
-                                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                                            <param id="0" name="First value">Function.Param(0)</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">&quot;TOUCH_CANCEL&quot;</param>
                                                         </condition>
-                                                        <condition id="-14" name="Compare variable" sid="9366725309278621" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;TOUCH_MOV_LEFT&quot;</param>
-                                                        </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="6438122990963265" type="ControlLeft">
-                                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="-9" name="Set value" sid="2187151650493219" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Value">&quot;IDLE&quot;</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="3660348619463846">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="9366725309278621" type="System">
+                                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="8638850537664124" type="System">
+                                                                    <param id="0" name="Variable">TOUCH_LEFT</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">-1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="6438122990963265" type="ControlLeft">
+                                                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="4612201293615565" type="System">
+                                                                    <param id="0" name="Variable">TOUCH_LEFT</param>
+                                                                    <param id="1" name="Value">-1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-group>
                                         <event-group collapsed="1" description="" sid="8644105495216526" title="Control right">
                                             <sub-events>
-                                                <event-block sid="4359189801812126">
+                                                <event-block collapsed="1" sid="4359189801812126">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="4856779615524423" type="System">
-                                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                                            <param id="0" name="First value">Function.Param(0)</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">&quot;TOUCH_START&quot;</param>
                                                         </condition>
                                                         <condition id="4" name="Is touching object" sid="1091969369819632" type="Touch">
                                                             <param id="0" name="Object">ControlRight</param>
                                                         </condition>
-                                                        <condition id="-14" name="Compare variable" sid="4604671841832233" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
+                                                        <condition id="-14" name="Compare variable" sid="8111765585091072" type="System">
+                                                            <param id="0" name="Variable">TOUCH_RIGHT</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;IDLE&quot;</param>
+                                                            <param id="2" name="Value">-1</param>
                                                         </condition>
                                                         <condition id="-9" name="Is visible" sid="491813060498044" type="ControlRight" />
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Call function" sid="6298438032666861" type="Function">
-                                                            <param id="0" name="Name">&quot;PlayerInputRight&quot;</param>
-                                                            <param id="1" name="Parameter {n}"></param>
-                                                        </action>
-                                                        <action id="4" name="Set animation" sid="522886125698141" type="ControlRight">
-                                                            <param id="0" name="Animation">&quot;Active&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="-9" name="Set value" sid="229189310188889" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Value">&quot;TOUCH_MOV_RIGHT&quot;</param>
-                                                        </action>
-                                                        <action id="1" name="Set return value" sid="9202051396522107" type="Function">
-                                                            <param id="0" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="6316582982305323">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="4604671841832233" type="System">
+                                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;IDLE&quot;</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="8166554688792793" type="System">
+                                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="6298438032666861" type="Function">
+                                                                    <param id="0" name="Name">&quot;PlayerInputRight&quot;</param>
+                                                                    <param id="1" name="Parameter {n}"></param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="522886125698141" type="ControlRight">
+                                                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="229189310188889" type="System">
+                                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                                    <param id="1" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="9387174959480507" type="System">
+                                                                    <param id="0" name="Variable">TOUCH_RIGHT</param>
+                                                                    <param id="1" name="Value">Function.Param(1)</param>
+                                                                </action>
+                                                                <action id="1" name="Set return value" sid="9202051396522107" type="Function">
+                                                                    <param id="0" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="5639121922690403">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="8390376610221918" type="System">
-                                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                                            <param id="0" name="First value">Function.Param(0)</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">&quot;TOUCHING&quot;</param>
                                                         </condition>
                                                         <condition id="-14" name="Compare variable" sid="8628733637536552" type="System">
                                                             <param id="0" name="Variable">INPUT_STATE</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;TOUCH_MOV_RIGHT&quot;</param>
+                                                            <param id="2" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="6001901835823498" type="System">
+                                                            <param id="0" name="Variable">TOUCH_RIGHT</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">-1</param>
                                                         </condition>
                                                         <condition id="4" name="Is touching object" sid="8744349419833779" type="Touch">
                                                             <param id="0" name="Object">ControlRight</param>
@@ -1578,24 +1633,33 @@
                                                 <event-block sid="126649516249981">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="3049484768964526" type="System">
-                                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                                            <param id="0" name="First value">Function.Param(0)</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">&quot;TOUCH_END&quot;</param>
                                                         </condition>
                                                         <condition id="-14" name="Compare variable" sid="1078044195906095" type="System">
                                                             <param id="0" name="Variable">INPUT_STATE</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;TOUCH_MOV_RIGHT&quot;</param>
+                                                            <param id="2" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="6334123296440783" type="System">
+                                                            <param id="0" name="Variable">TOUCH_RIGHT</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">-1</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
+                                                        <action id="-9" name="Set value" sid="8256895350626957" type="System">
+                                                            <param id="0" name="Variable">TOUCH_RIGHT</param>
+                                                            <param id="1" name="Value">-1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="4561957910743296" type="Function">
+                                                            <param id="0" name="Name">&quot;ControlTouchEnd&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
                                                         <action id="4" name="Set animation" sid="6254793579527131" type="ControlRight">
                                                             <param id="0" name="Animation">&quot;Inactive&quot;</param>
                                                             <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="-9" name="Set value" sid="4364844580582039" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Value">&quot;IDLE&quot;</param>
                                                         </action>
                                                         <action id="1" name="Set return value" sid="8931272855108938" type="Function">
                                                             <param id="0" name="Value">1</param>
@@ -1605,26 +1669,38 @@
                                                 <event-block sid="7015298127335412">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="3689382700806466" type="System">
-                                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                                            <param id="0" name="First value">Function.Param(0)</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">&quot;TOUCH_CANCEL&quot;</param>
                                                         </condition>
-                                                        <condition id="-14" name="Compare variable" sid="8501493584769792" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;TOUCH_MOV_RIGHT&quot;</param>
-                                                        </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="8323206711007582" type="ControlRight">
-                                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="-9" name="Set value" sid="5367045725670614" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Value">&quot;IDLE&quot;</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="6668838722006141">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="8501493584769792" type="System">
+                                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="8224518464605088" type="System">
+                                                                    <param id="0" name="Variable">TOUCH_RIGHT</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">-1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="8323206711007582" type="ControlRight">
+                                                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="7304972474194256" type="System">
+                                                                    <param id="0" name="Variable">TOUCH_RIGHT</param>
+                                                                    <param id="1" name="Value">-1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-group>
@@ -1633,49 +1709,75 @@
                                                 <event-block sid="4359189801812126">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="4856779615524423" type="System">
-                                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                                            <param id="0" name="First value">Function.Param(0)</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">&quot;TOUCH_START&quot;</param>
                                                         </condition>
                                                         <condition id="4" name="Is touching object" sid="1091969369819632" type="Touch">
                                                             <param id="0" name="Object">ControlUp</param>
                                                         </condition>
-                                                        <condition id="-14" name="Compare variable" sid="4834751086081449" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;IDLE&quot;</param>
-                                                        </condition>
                                                         <condition id="-9" name="Is visible" sid="491813060498044" type="ControlUp" />
+                                                        <condition id="-14" name="Compare variable" sid="3968347301567991" type="System">
+                                                            <param id="0" name="Variable">TOUCH_UP</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">-1</param>
+                                                        </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Call function" sid="6298438032666861" type="Function">
-                                                            <param id="0" name="Name">&quot;PlayerInputUp&quot;</param>
-                                                            <param id="1" name="Parameter {n}"></param>
-                                                        </action>
-                                                        <action id="4" name="Set animation" sid="6016606316429611" type="ControlUp">
-                                                            <param id="0" name="Animation">&quot;Active&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="-9" name="Set value" sid="229189310188889" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Value">&quot;TOUCH_MOV_UP&quot;</param>
-                                                        </action>
-                                                        <action id="1" name="Set return value" sid="9202051396522107" type="Function">
-                                                            <param id="0" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="8508377967238666">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="4834751086081449" type="System">
+                                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;IDLE&quot;</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="8299515547134307" type="System">
+                                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="6298438032666861" type="Function">
+                                                                    <param id="0" name="Name">&quot;PlayerInputUp&quot;</param>
+                                                                    <param id="1" name="Parameter {n}"></param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="6016606316429611" type="ControlUp">
+                                                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="229189310188889" type="System">
+                                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                                    <param id="1" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="6956751782045721" type="System">
+                                                                    <param id="0" name="Variable">TOUCH_UP</param>
+                                                                    <param id="1" name="Value">Function.Param(1)</param>
+                                                                </action>
+                                                                <action id="1" name="Set return value" sid="9202051396522107" type="Function">
+                                                                    <param id="0" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="5639121922690403">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="8390376610221918" type="System">
-                                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                                            <param id="0" name="First value">Function.Param(0)</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">&quot;TOUCHING&quot;</param>
                                                         </condition>
                                                         <condition id="-14" name="Compare variable" sid="7958146565418591" type="System">
                                                             <param id="0" name="Variable">INPUT_STATE</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;TOUCH_MOV_UP&quot;</param>
+                                                            <param id="2" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="8279946908690582" type="System">
+                                                            <param id="0" name="Variable">TOUCH_UP</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">-1</param>
                                                         </condition>
                                                         <condition id="4" name="Is touching object" sid="7922243043405626" type="Touch">
                                                             <param id="0" name="Object">ControlUp</param>
@@ -1695,20 +1797,29 @@
                                                 <event-block sid="126649516249981">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="3049484768964526" type="System">
-                                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                                            <param id="0" name="First value">Function.Param(0)</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">&quot;TOUCH_END&quot;</param>
                                                         </condition>
                                                         <condition id="-14" name="Compare variable" sid="8389267276648474" type="System">
                                                             <param id="0" name="Variable">INPUT_STATE</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;TOUCH_MOV_UP&quot;</param>
+                                                            <param id="2" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="9412358482865688" type="System">
+                                                            <param id="0" name="Variable">TOUCH_UP</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">-1</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-9" name="Set value" sid="6008571043038691" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Value">&quot;IDLE&quot;</param>
+                                                        <action id="-9" name="Set value" sid="4789488090256279" type="System">
+                                                            <param id="0" name="Variable">TOUCH_UP</param>
+                                                            <param id="1" name="Value">-1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="3984497239006798" type="Function">
+                                                            <param id="0" name="Name">&quot;ControlTouchEnd&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
                                                         </action>
                                                         <action id="4" name="Set animation" sid="6860660741987237" type="ControlUp">
                                                             <param id="0" name="Animation">&quot;Inactive&quot;</param>
@@ -1719,29 +1830,41 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="1076211589519715">
+                                                <event-block collapsed="1" sid="1076211589519715">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="4116313087672376" type="System">
-                                                            <param id="0" name="First value">INPUT_EVENT</param>
+                                                            <param id="0" name="First value">Function.Param(0)</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">&quot;TOUCH_CANCEL&quot;</param>
                                                         </condition>
-                                                        <condition id="-14" name="Compare variable" sid="8321835965151482" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;TOUCH_MOV_UP&quot;</param>
-                                                        </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="-9" name="Set value" sid="9315960441498729" type="System">
-                                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                                            <param id="1" name="Value">&quot;IDLE&quot;</param>
-                                                        </action>
-                                                        <action id="4" name="Set animation" sid="1492203054688391" type="ControlUp">
-                                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="8506155223775358">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="8321835965151482" type="System">
+                                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;TOUCH_MOV&quot;</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="3617692398939281" type="System">
+                                                                    <param id="0" name="Variable">TOUCH_UP</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">-1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="4608719771087491" type="System">
+                                                                    <param id="0" name="Variable">TOUCH_UP</param>
+                                                                    <param id="1" name="Value">-1</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="1492203054688391" type="ControlUp">
+                                                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-group>
@@ -1984,23 +2107,13 @@
                                     <param id="0" name="Name">&quot;EnablePlayerAvatarControls&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="7174361625186059" type="System">
+                                    <param id="0" name="Variable">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
+                                    <param id="1" name="Value">BLOCK_PLAYER_MOVEMENT_CONTROLS - 1</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="986241855466154">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="2460939222342887" type="System">
-                                            <param id="0" name="Variable">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="7174361625186059" type="System">
-                                            <param id="0" name="Variable">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
-                                            <param id="1" name="Value">BLOCK_PLAYER_MOVEMENT_CONTROLS - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                                 <event-block sid="3713549101723842">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="881751309893878" type="System">
