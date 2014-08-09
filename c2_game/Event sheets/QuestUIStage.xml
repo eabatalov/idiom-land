@@ -82,6 +82,14 @@
                             <param id="0" name="X">NPCSpeechBg.X + NPC_PHRASE_TXT_X</param>
                             <param id="1" name="Y">NPCSpeechBg.Y + NPC_PHRASE_TXT_Y</param>
                         </action>
+                        <action id="-3" name="Set position" sid="6281158760553531" type="NPCNameTxt">
+                            <param id="0" name="X">NPCSpeechBg.X + NPC_NAME_TXT_X</param>
+                            <param id="1" name="Y">NPCSpeechBg.Y + NPC_NAME_TXT_Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="26003773102825" type="NpcPhoto">
+                            <param id="0" name="X">NPCSpeechBg.X + NPC_PHOTO_X</param>
+                            <param id="1" name="Y">NPCSpeechBg.Y + NPC_PHOTO_Y</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2078795932936655">
@@ -97,6 +105,8 @@
                         <action id="0" name="Set text" sid="9312399705115263" type="NPCPhraseTxt">
                             <param id="0" name="Text">QuestLevelRuntime.getText</param>
                         </action>
+                        <action id="-25" name="Move to bottom" sid="3014047790257941" type="NpcPhoto" />
+                        <action id="-25" name="Move to bottom" sid="9991529144254778" type="NPCNameTxt" />
                         <action id="-25" name="Move to bottom" sid="4487465092045365" type="NPCPhraseTxt" />
                         <action id="-25" name="Move to bottom" sid="3260745429109428" type="NPCPhraseBg" />
                         <action id="-25" name="Move to bottom" sid="4021589683031011" type="NPCSpeechBg" />
@@ -107,6 +117,12 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="9386546410996723" type="NPCPhraseTxt">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7853190160108122" type="NPCNameTxt">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8570550841279258" type="NpcPhoto">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="0" name="Call function" sid="5123804654890537" type="Function">
@@ -131,6 +147,9 @@
                                 <action id="4" name="Set font color" sid="883905854577542" type="NPCPhraseTxt">
                                     <param id="0" name="Color">rgb(NPCPhraseTxt.SpeachR, NPCPhraseTxt.SpeachG, NPCPhraseTxt.SpeachB)</param>
                                 </action>
+                                <action id="4" name="Set font color" sid="9272913985091823" type="NPCNameTxt">
+                                    <param id="0" name="Color">rgb(NPCPhraseTxt.SpeachR, NPCPhraseTxt.SpeachG, NPCPhraseTxt.SpeachB)</param>
+                                </action>
                                 <action id="0" name="Call function" sid="1704179595407417" type="Function">
                                     <param id="0" name="Name">&quot;NPCAnimSay&quot;</param>
                                     <param id="1" name="Parameter {n}">NPC.UID</param>
@@ -151,6 +170,9 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="4" name="Set font color" sid="9300413180648319" type="NPCPhraseTxt">
+                                    <param id="0" name="Color">rgb(NPCPhraseTxt.ThinkR, NPCPhraseTxt.ThinkG, NPCPhraseTxt.ThinkB)</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="4340457018045201" type="NPCNameTxt">
                                     <param id="0" name="Color">rgb(NPCPhraseTxt.ThinkR, NPCPhraseTxt.ThinkG, NPCPhraseTxt.ThinkB)</param>
                                 </action>
                                 <action id="0" name="Call function" sid="6467516756852917" type="Function">
@@ -436,6 +458,12 @@
                         <action id="-15" name="Set visible" sid="7638784932733143" type="NPCAns4Txt">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="8556447528120962" type="NPCNameTxt">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2196549733152381" type="NpcPhoto">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action id="0" name="Call function" sid="4877515997766695" type="Function">
                             <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -467,6 +495,14 @@
                             <param id="0" name="X">PlayerSpeechBg.X + PLAYER_PHRASE_TXT_X</param>
                             <param id="1" name="Y">PlayerSpeechBg.Y + PLAYER_PHRASE_TXT_Y</param>
                         </action>
+                        <action id="-3" name="Set position" sid="8761286579304547" type="PlayerNameTxt">
+                            <param id="0" name="X">PlayerSpeechBg.X + PLAYER_NAME_TXT_X</param>
+                            <param id="1" name="Y">PlayerSpeechBg.Y + PLAYER_NAME_TXT_Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="6154871387855901" type="PlayerPhoto">
+                            <param id="0" name="X">PlayerSpeechBg.X + PLAYER_PHOTO_X</param>
+                            <param id="1" name="Y">PlayerSpeechBg.Y + PLAYER_PHOTO_Y</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="566202086767859">
@@ -483,6 +519,8 @@
                             <param id="0" name="Text">QuestLevelRuntime.getText</param>
                         </action>
                         <action id="-25" name="Move to bottom" sid="4533967939786091" type="PlayerPhraseTxt" />
+                        <action id="-25" name="Move to bottom" sid="960340167474096" type="PlayerPhoto" />
+                        <action id="-25" name="Move to bottom" sid="2214607857350972" type="PlayerNameTxt" />
                         <action id="-25" name="Move to bottom" sid="7078895510264422" type="PlayerPhraseBg" />
                         <action id="-25" name="Move to bottom" sid="2858302157683358" type="PlayerSpeechBg" />
                         <action id="-15" name="Set visible" sid="8723165850772302" type="PlayerPhraseTxt">
@@ -492,6 +530,12 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="1056599444429625" type="PlayerSpeechBg">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8445503092593476" type="PlayerPhoto">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3498046344092397" type="PlayerNameTxt">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="0" name="Call function" sid="9149511859493984" type="Function">
@@ -516,6 +560,9 @@
                                 <action id="4" name="Set font color" sid="6982593764192367" type="PlayerPhraseTxt">
                                     <param id="0" name="Color">rgb(PlayerPhraseTxt.SpeachR, PlayerPhraseTxt.SpeachG, PlayerPhraseTxt.SpeachB)</param>
                                 </action>
+                                <action id="4" name="Set font color" sid="2588544027070215" type="PlayerNameTxt">
+                                    <param id="0" name="Color">rgb(PlayerPhraseTxt.SpeachR, PlayerPhraseTxt.SpeachG, PlayerPhraseTxt.SpeachB)</param>
+                                </action>
                                 <action id="0" name="Call function" sid="7067417842225699" type="Function">
                                     <param id="0" name="Name">&quot;AnimPlayerSay&quot;</param>
                                     <param id="1" name="Parameter {n}">Player.UID</param>
@@ -536,6 +583,9 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="4" name="Set font color" sid="8589746743441473" type="PlayerPhraseTxt">
+                                    <param id="0" name="Color">rgb(PlayerPhraseTxt.ThinkR, PlayerPhraseTxt.ThinkG, PlayerPhraseTxt.ThinkB)</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="3697102974604999" type="PlayerNameTxt">
                                     <param id="0" name="Color">rgb(PlayerPhraseTxt.ThinkR, PlayerPhraseTxt.ThinkG, PlayerPhraseTxt.ThinkB)</param>
                                 </action>
                             </actions>
@@ -802,10 +852,10 @@
                         <action id="-15" name="Set visible" sid="3990253066213187" type="PlayerAns2Bg">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="8320872167310339" type="PlayerAns3Bg">
+                        <action id="-15" name="Set visible" sid="1247759749381549" type="PlayerAns4Bg">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="1247759749381549" type="PlayerAns4Bg">
+                        <action id="-15" name="Set visible" sid="8320872167310339" type="PlayerAns3Bg">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="9717765267155444" type="PlayerAnsBg">
@@ -815,6 +865,12 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="8111916696491169" type="PlayerSpeechBg">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8369023630724183" type="PlayerNameTxt">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3541010195576974" type="PlayerPhoto">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="0" name="Call function" sid="2082183687293735" type="Function">

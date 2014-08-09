@@ -11,6 +11,10 @@
         <variable constant="0" name="PLAYER_PHRASE_BG_Y" sid="8697885988512202" static="0" type="number">0</variable>
         <variable constant="0" name="PLAYER_PHRASE_TXT_X" sid="3847839595773115" static="0" type="number">0</variable>
         <variable constant="0" name="PLAYER_PHRASE_TXT_Y" sid="8148074933414549" static="0" type="number">0</variable>
+        <variable constant="0" name="PLAYER_NAME_TXT_X" sid="9389046605015565" static="0" type="number">0</variable>
+        <variable constant="0" name="PLAYER_NAME_TXT_Y" sid="7812956666867186" static="0" type="number">0</variable>
+        <variable constant="0" name="PLAYER_PHOTO_X" sid="3333890339544275" static="0" type="number">0</variable>
+        <variable constant="0" name="PLAYER_PHOTO_Y" sid="3736555117509064" static="0" type="number">0</variable>
         <variable constant="0" name="PLAYER_ANS_BG_LEFT_MARGIN" sid="1520508369458528" static="0" type="number">0</variable>
         <variable constant="0" name="PLAYER_ANS_BG_TOP_MARGIN" sid="3695631180500388" static="0" type="number">0</variable>
         <variable constant="0" name="PLAYER_ANS_TXT_LEFT_MARGIN" sid="8207606161804895" static="0" type="number">0</variable>
@@ -22,6 +26,10 @@
         <variable constant="0" name="NPC_PHRASE_BG_Y" sid="2278496595138549" static="0" type="number">0</variable>
         <variable constant="0" name="NPC_PHRASE_TXT_X" sid="2404478089321439" static="0" type="number">0</variable>
         <variable constant="0" name="NPC_PHRASE_TXT_Y" sid="8548549228445129" static="0" type="number">0</variable>
+        <variable constant="0" name="NPC_NAME_TXT_X" sid="2045461070332024" static="0" type="number">0</variable>
+        <variable constant="0" name="NPC_NAME_TXT_Y" sid="9929090341093853" static="0" type="number">0</variable>
+        <variable constant="0" name="NPC_PHOTO_X" sid="2541777351024761" static="0" type="number">0</variable>
+        <variable constant="0" name="NPC_PHOTO_Y" sid="8757748456062465" static="0" type="number">0</variable>
         <variable constant="0" name="NPC_ANS_BG_LEFT_MARGIN" sid="6541324415464498" static="0" type="number">0</variable>
         <variable constant="0" name="NPC_ANS_BG_TOP_MARGIN" sid="9976369174176448" static="0" type="number">0</variable>
         <variable constant="0" name="NPC_ANS_TXT_LEFT_MARGIN" sid="4773364738096738" static="0" type="number">0</variable>
@@ -151,6 +159,12 @@
                         <action id="-26" name="Move to layer" sid="5151622101950851" type="PlayerPhraseBg">
                             <param id="0" name="Layer">&quot;Speech&quot;</param>
                         </action>
+                        <action id="-26" name="Move to layer" sid="9550809875814796" type="PlayerNameTxt">
+                            <param id="0" name="Layer">&quot;Speech&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="5959952715105045" type="PlayerPhoto">
+                            <param id="0" name="Layer">&quot;Speech&quot;</param>
+                        </action>
                         <action id="-26" name="Move to layer" sid="7011129363249012" type="PlayerPlatform">
                             <param id="0" name="Layer">Player.LayerName</param>
                         </action>
@@ -211,6 +225,12 @@
                             <param id="0" name="Layer">&quot;Speech&quot;</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="6163938762955854" type="NPCPhraseBg">
+                            <param id="0" name="Layer">&quot;Speech&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="9656119738525581" type="NPCNameTxt">
+                            <param id="0" name="Layer">&quot;Speech&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="7027095134757207" type="NpcPhoto">
                             <param id="0" name="Layer">&quot;Speech&quot;</param>
                         </action>
                     </actions>
@@ -355,6 +375,22 @@
                             <param id="0" name="Variable">NPC_PHRASE_TXT_Y</param>
                             <param id="1" name="Value">NPCPhraseTxt.Y - NPCSpeechBg.Y</param>
                         </action>
+                        <action id="-9" name="Set value" sid="8752796075984674" type="System">
+                            <param id="0" name="Variable">NPC_NAME_TXT_X</param>
+                            <param id="1" name="Value">NPCNameTxt.X - NPCSpeechBg.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1249630838645266" type="System">
+                            <param id="0" name="Variable">NPC_NAME_TXT_Y</param>
+                            <param id="1" name="Value">NPCNameTxt.Y - NPCSpeechBg.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1288487796791063" type="System">
+                            <param id="0" name="Variable">NPC_PHOTO_X</param>
+                            <param id="1" name="Value">NPCPhoto.X - NPCSpeechBg.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4606933520803515" type="System">
+                            <param id="0" name="Variable">NPC_PHOTO_Y</param>
+                            <param id="1" name="Value">NPCPhoto.Y - NPCSpeechBg.Y</param>
+                        </action>
                         <action id="-9" name="Set value" sid="698209876512723" type="System">
                             <param id="0" name="Variable">NPC_ANS_BG_LEFT_MARGIN</param>
                             <param id="1" name="Value">NPCAns1Bg.X - NPCAnsBg.X</param>
@@ -415,6 +451,22 @@
                         <action id="-9" name="Set value" sid="4092575084341254" type="System">
                             <param id="0" name="Variable">PLAYER_PHRASE_TXT_Y</param>
                             <param id="1" name="Value">PlayerPhraseTxt.Y - PlayerSpeechBg.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3565377046192407" type="System">
+                            <param id="0" name="Variable">PLAYER_NAME_TXT_X</param>
+                            <param id="1" name="Value">PlayerNameTxt.X - PlayerSpeechBg.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2879495725990057" type="System">
+                            <param id="0" name="Variable">PLAYER_NAME_TXT_Y</param>
+                            <param id="1" name="Value">PlayerNameTxt.Y - PlayerSpeechBg.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="149850086170187" type="System">
+                            <param id="0" name="Variable">PLAYER_PHOTO_X</param>
+                            <param id="1" name="Value">PlayerPhoto.X - PlayerSpeechBg.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7836754945136031" type="System">
+                            <param id="0" name="Variable">PLAYER_PHOTO_Y</param>
+                            <param id="1" name="Value">PlayerPhoto.Y - PlayerSpeechBg.Y</param>
                         </action>
                         <action id="-9" name="Set value" sid="8910253164485732" type="System">
                             <param id="0" name="Variable">PLAYER_ANS_BG_LEFT_MARGIN</param>
