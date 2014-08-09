@@ -207,7 +207,7 @@
                     <param id="0" name="Layer">Coin.LayerName</param>
                 </action>
                 <action id="-3" name="Set position" sid="7725278522542604" type="CoinsHelper">
-                    <param id="0" name="X">Coin.X + Coin.Width / 2 - (CoinsHelper.ImagePointX(&quot;ArrowPointer&quot;) - CoinsHelper.X) + 60</param>
+                    <param id="0" name="X">Coin.X + Coin.Width / 2 - (CoinsHelper.ImagePointX(&quot;ArrowPointer&quot;) - CoinsHelper.X) + 20</param>
                     <param id="1" name="Y">Coin.Y - (CoinsHelper.ImagePointY(&quot;ArrowPointer&quot;) - CoinsHelper.Y)</param>
                 </action>
                 <action id="-15" name="Set visible" sid="8708879133444199" type="CoinsHelper">
@@ -240,9 +240,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Move to layer" sid="5811787582669735" type="CoinsCounterHelper">
-                    <param id="0" name="Layer">CoinsCounterTxt.LayerName</param>
-                </action>
                 <action id="-15" name="Set visible" sid="5721626641907052" type="CoinsCounterHelper">
                     <param id="0" name="Visibility">1</param>
                 </action>
