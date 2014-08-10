@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>LevelJumpCameraAndPlatforms</name>
     <events>
-        <event-group collapsed="1" description="" sid="9462243209791046" title="Local var group 3">
+        <event-group description="" sid="9462243209791046" title="Local var group 3">
             <sub-events>
                 <variable constant="0" name="LEVEL_STARTED" sid="2596266830366742" static="1" type="number">0</variable>
                 <variable constant="0" name="IN_PLAYBACK_MODE" sid="2743000891899509" static="1" type="number">0</variable>
@@ -54,7 +54,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group collapsed="1" description="" sid="946020039256646" title="Jump level platforms management">
+                <event-group description="" sid="946020039256646" title="Jump level platforms management">
                     <sub-events>
                         <comment>This variable holds the Y co-ordinate of the next platform to create.  When the top of the screen reaches that position, the platform is created.</comment>
                         <variable comment="The next Y scroll position to create a platform at" constant="0" name="NextPlatform" sid="7092542792610779" static="1" type="number">0</variable>
@@ -71,7 +71,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="2762694241083942">
+                        <event-block sid="2762694241083942">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="3054299836180485" type="System">
                                     <param id="0" name="Variable">LEVEL_STARTED</param>
@@ -91,7 +91,7 @@
                                 <variable constant="0" name="isOnePlatDropped" sid="3375717106113218" static="0" type="number">0</variable>
                                 <variable constant="0" name="platToDrop" sid="8046964084851814" static="0" type="number">4</variable>
                                 <variable constant="0" name="YBias" sid="2080671079615816" static="0" type="number">0</variable>
-                                <event-block sid="5343750991007461">
+                                <event-block collapsed="1" sid="5343750991007461">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="5312519497299033" type="System">
                                             <param id="0" name="First value">NextPlatform</param>
