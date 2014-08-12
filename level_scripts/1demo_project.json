@@ -136,7 +136,7 @@
 						],
 						"props": {
 							"id": "driver2",
-							"text": "No problem.\nThat will be 200 coins, please",
+							"text": "No problem.\nThat will be 50 coins, please",
 							"phraseType": "SPEAK"
 						}
 					},
@@ -210,11 +210,11 @@
 							1453
 						],
 						"outCondIds": [
-							2502
+							3058
 						],
 						"props": {
 							"id": "Player",
-							"text": "\"To make a quick buck\" means...",
+							"text": "\"To make a quick buck\" means to earn money quickly with a little effort...",
 							"phraseType": "THINK"
 						}
 					},
@@ -344,26 +344,8 @@
 						],
 						"props": {
 							"id": "driver2",
-							"text": "I'm a good driver. I had only 5 accidents...\nThis year",
+							"text": "I'm a good driver. I had only 5 accidents\n...\nThis year",
 							"phraseType": "SPEAK"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 1753,
-						"type": 1,
-						"label": "Quick buck is 2",
-						"continue": false,
-						"inCondIds": [
-							2502
-						],
-						"outCondIds": [
-							2725
-						],
-						"props": {
-							"id": "Player",
-							"text": "To earn money quickly with a little effort...",
-							"phraseType": "THINK"
 						}
 					},
 					{
@@ -427,7 +409,7 @@
 						"label": "Quick buck is 3",
 						"continue": false,
 						"inCondIds": [
-							2725
+							3058
 						],
 						"outCondIds": [
 							2726
@@ -637,12 +619,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 2502,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 2719,
 						"type": 11,
 						"props": {}
@@ -662,12 +638,6 @@
 					{
 						"ver": 1,
 						"id": 2722,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 2725,
 						"type": 11,
 						"props": {}
 					},
@@ -711,6 +681,12 @@
 						"ver": 1,
 						"id": 2899,
 						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3058,
+						"type": 11,
 						"props": {}
 					}
 				]
@@ -1946,7 +1922,7 @@
 							2926
 						],
 						"props": {
-							"text": "Foxy is a journalist. She’s arrived to London to collect English idioms and slang words"
+							"text": "Foxy is a journalist. She’s arrived in London to collect English idioms and slang words"
 						}
 					},
 					{
@@ -2125,7 +2101,7 @@
 							2960
 						],
 						"outCondIds": [
-							2961
+							3055
 						],
 						"props": {
 							"text": "\"The gen\" is the first idiom on the level!\n\nTalk to people and guess all the 5 idioms to explore the next level in the city center"
@@ -2144,7 +2120,7 @@
 							2931
 						],
 						"props": {
-							"text": "Use left and right arrows to walk, up arrow to jump. Use arrow keys on your keyboard or click/tap on arrow icons on the screen.\n\nNow get closer to the policeman using this controls."
+							"text": "Use screen controls or arrow keys on your keyboard to move.\n\nNow get closer to the policeman and ask the way to the city center"
 						}
 					},
 					{
@@ -2219,7 +2195,7 @@
 						"continue": false,
 						"inCondIds": [
 							2101,
-							2677
+							3051
 						],
 						"outCondIds": [
 							2099
@@ -2276,10 +2252,10 @@
 							2963
 						],
 						"outCondIds": [
-							2964
+							3056
 						],
 						"props": {
-							"text": "But how can you get to the city center?\n\nYou'll need to find all the 4 pieces of bus ticket and give the ticket to bus driver waiting in the end of the level"
+							"text": "But how can you get to the city center?"
 						}
 					},
 					{
@@ -2296,7 +2272,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "Now get the first piece of the ticket located on the airplane!",
+							"text": "Now get the first coin located on the airplane!",
 							"phraseType": "SPEAK"
 						}
 					},
@@ -2305,16 +2281,16 @@
 						"id": 1896,
 						"type": 1,
 						"label": "Let's collect all",
-						"continue": false,
+						"continue": true,
 						"inCondIds": [
 							2970
 						],
 						"outCondIds": [
-							2677
+							3052
 						],
 						"props": {
 							"id": "Player",
-							"text": "Great!\nTry to collect all the ticket pieces and all the idioms!",
+							"text": "Great!\nTry to collect 5 coins and all the idioms!",
 							"phraseType": "SPEAK"
 						}
 					},
@@ -2795,10 +2771,10 @@
 						"label": "Show tckt cntr hlp",
 						"continue": true,
 						"inCondIds": [
-							2961
+							3056
 						],
 						"outCondIds": [
-							2962
+							3057
 						],
 						"props": {
 							"name": "ShowTicketCounterHelper",
@@ -2814,7 +2790,7 @@
 						"label": "Hide new idiom",
 						"continue": true,
 						"inCondIds": [
-							2962
+							3055
 						],
 						"outCondIds": [
 							2963
@@ -2871,7 +2847,7 @@
 						"label": "Hide notif helper",
 						"continue": true,
 						"inCondIds": [
-							2964
+							3054
 						],
 						"outCondIds": [
 							2966
@@ -2919,6 +2895,36 @@
 							"source": "c2",
 							"rollbackName": "",
 							"params": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2213,
+						"type": -1,
+						"label": "Empty stage state",
+						"continue": false,
+						"inCondIds": [
+							3052
+						],
+						"outCondIds": [
+							3051
+						],
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 2214,
+						"type": 11,
+						"label": "Ticket tutorial 2",
+						"continue": false,
+						"inCondIds": [
+							3057
+						],
+						"outCondIds": [
+							3054
+						],
+						"props": {
+							"text": "Find 5 coins on the level to buy a bus ticket.\n\nAlso find a bus driver to buy the ticket."
 						}
 					}
 				],
@@ -2980,14 +2986,6 @@
 					{
 						"ver": 1,
 						"id": 2101,
-						"type": 2,
-						"props": {
-							"id": "policeman"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 2677,
 						"type": 2,
 						"props": {
 							"id": "policeman"
@@ -3213,26 +3211,8 @@
 					},
 					{
 						"ver": 1,
-						"id": 2961,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 2962,
-						"type": 8,
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 2963,
 						"type": 8,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 2964,
-						"type": 11,
 						"props": {}
 					},
 					{
@@ -3270,6 +3250,44 @@
 					{
 						"ver": 1,
 						"id": 2970,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3051,
+						"type": 2,
+						"props": {
+							"id": "policeman"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3052,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3054,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3055,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3056,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3057,
 						"type": 8,
 						"props": {}
 					}
@@ -3371,7 +3389,7 @@
 						],
 						"props": {
 							"id": "cap",
-							"text": "...then it can suddenly stop and you are flung from it.",
+							"text": "...then it can suddenly stop and you are flung from it",
 							"phraseType": "SPEAK"
 						}
 					},
@@ -3618,7 +3636,7 @@
 						],
 						"props": {
 							"id": "cap",
-							"text": "Sometimes I worry about woodpeckers because of my wooden leg.",
+							"text": "Sometimes I worry about woodpeckers because of my wooden leg",
 							"phraseType": "SPEAK"
 						}
 					},
@@ -3942,7 +3960,7 @@
 						],
 						"props": {
 							"id": "driver",
-							"text": "You haven't collected all the ticket pieces yet",
+							"text": "You need to have 5 coins to buy a bus ticket",
 							"phraseType": "SPEAK"
 						}
 					},
@@ -3960,7 +3978,7 @@
 						],
 						"props": {
 							"id": "driver",
-							"text": "I see you have the ticket",
+							"text": "I see you have enough coins to buy the ticket",
 							"phraseType": "SPEAK"
 						}
 					},
@@ -4582,12 +4600,6 @@
 					},
 					{
 						"ver": 1,
-						"nodeId": 1753,
-						"x": 339.500017209784,
-						"y": 1751.9835424231464
-					},
-					{
-						"ver": 1,
 						"nodeId": 1922,
 						"x": 190.00001720978412,
 						"y": 434.48354242314474
@@ -4607,8 +4619,8 @@
 					{
 						"ver": 1,
 						"nodeId": 1925,
-						"x": -31.99998279021571,
-						"y": 1753.9835424231449
+						"x": -29.49998279021588,
+						"y": 1756.4835424231449
 					},
 					{
 						"ver": 1,
@@ -4649,7 +4661,6 @@
 					1422,
 					1423,
 					1424,
-					1753,
 					1922,
 					1923,
 					1924,
@@ -4913,20 +4924,6 @@
 					},
 					{
 						"ver": 1,
-						"condId": 2502,
-						"points": {
-							"src": {
-								"x": 834.5000172097841,
-								"y": 1831.4835424231453
-							},
-							"dst": {
-								"x": 419.500017209784,
-								"y": 1831.9835424231464
-							}
-						}
-					},
-					{
-						"ver": 1,
 						"condId": 2719,
 						"points": {
 							"src": {
@@ -4983,25 +4980,11 @@
 					},
 					{
 						"ver": 1,
-						"condId": 2725,
-						"points": {
-							"src": {
-								"x": 419.500017209784,
-								"y": 1831.9835424231464
-							},
-							"dst": {
-								"x": 48.00001720978429,
-								"y": 1833.9835424231449
-							}
-						}
-					},
-					{
-						"ver": 1,
 						"condId": 2726,
 						"points": {
 							"src": {
-								"x": 48.00001720978429,
-								"y": 1833.9835424231449
+								"x": 50.50001720978412,
+								"y": 1836.4835424231449
 							},
 							"dst": {
 								"x": 43.76255012882001,
@@ -5092,6 +5075,20 @@
 								"y": 2155.4835424231437
 							}
 						}
+					},
+					{
+						"ver": 1,
+						"condId": 3058,
+						"points": {
+							"src": {
+								"x": 834.5000172097841,
+								"y": 1831.4835424231453
+							},
+							"dst": {
+								"x": 50.50001720978412,
+								"y": 1836.4835424231449
+							}
+						}
 					}
 				],
 				"condIds": [
@@ -5113,24 +5110,23 @@
 					2111,
 					2112,
 					2113,
-					2502,
 					2719,
 					2720,
 					2721,
 					2722,
-					2725,
 					2726,
 					2894,
 					2895,
 					2896,
 					2897,
 					2898,
-					2899
+					2899,
+					3058
 				],
 				"scale": 0.40000000000000013,
 				"pos": {
-					"x": 243.9999913951079,
-					"y": -27.991771211572342
+					"x": 232.9999913951079,
+					"y": 2.008228788427658
 				}
 			},
 			{
@@ -6241,8 +6237,8 @@
 					{
 						"ver": 1,
 						"nodeId": 1012,
-						"x": 2611.4999999999986,
-						"y": 589
+						"x": 2613.999999999999,
+						"y": 594
 					},
 					{
 						"ver": 1,
@@ -6355,8 +6351,8 @@
 					{
 						"ver": 1,
 						"nodeId": 1866,
-						"x": 103.33333333333246,
-						"y": 189.99999999999886
+						"x": 73.33333333333246,
+						"y": -90.00000000000114
 					},
 					{
 						"ver": 1,
@@ -6367,8 +6363,8 @@
 					{
 						"ver": 1,
 						"nodeId": 1896,
-						"x": 1246.666666666667,
-						"y": -105.83333333333371
+						"x": 1261.6666666666672,
+						"y": -108.3333333333336
 					},
 					{
 						"ver": 1,
@@ -6517,32 +6513,32 @@
 					{
 						"ver": 1,
 						"nodeId": 2107,
-						"x": 102.5,
-						"y": -347.4999999999999
+						"x": 72.49999999999966,
+						"y": 220
 					},
 					{
 						"ver": 1,
 						"nodeId": 2108,
-						"x": 102.49999999999943,
-						"y": -94.99999999999989
+						"x": 94.99999999999966,
+						"y": -362.4999999999998
 					},
 					{
 						"ver": 1,
 						"nodeId": 2109,
 						"x": 374.9999999999993,
-						"y": -349.9999999999999
+						"y": -364.9999999999999
 					},
 					{
 						"ver": 1,
 						"nodeId": 2110,
-						"x": 372.4999999999998,
-						"y": -82.49999999999983
+						"x": 367.4999999999999,
+						"y": -64.99999999999977
 					},
 					{
 						"ver": 1,
 						"nodeId": 2111,
-						"x": 364.9999999999998,
-						"y": 194.99999999999966
+						"x": 367.4999999999998,
+						"y": 222.49999999999977
 					},
 					{
 						"ver": 1,
@@ -6553,8 +6549,20 @@
 					{
 						"ver": 1,
 						"nodeId": 2113,
-						"x": 927.4999999999991,
-						"y": -105
+						"x": 924.9999999999989,
+						"y": -104.99999999999989
+					},
+					{
+						"ver": 1,
+						"nodeId": 2213,
+						"x": 1522.4999999999989,
+						"y": 69.99999999999989
+					},
+					{
+						"ver": 1,
+						"nodeId": 2214,
+						"x": 214.99999999999977,
+						"y": 479.9999999999998
 					}
 				],
 				"nodeIds": [
@@ -6612,7 +6620,9 @@
 					2110,
 					2111,
 					2112,
-					2113
+					2113,
+					2213,
+					2214
 				],
 				"condViews": [
 					{
@@ -6743,20 +6753,6 @@
 					},
 					{
 						"ver": 1,
-						"condId": 2677,
-						"points": {
-							"src": {
-								"x": 1326.666666666667,
-								"y": -25.833333333333712
-							},
-							"dst": {
-								"x": 1325.8333333333337,
-								"y": 343.3333333333336
-							}
-						}
-					},
-					{
-						"ver": 1,
 						"condId": 2692,
 						"points": {
 							"src": {
@@ -6778,8 +6774,8 @@
 								"y": 849.2857142857135
 							},
 							"dst": {
-								"x": 2691.4999999999986,
-								"y": 669
+								"x": 2693.999999999999,
+								"y": 674
 							}
 						}
 					},
@@ -6802,8 +6798,8 @@
 						"condId": 2926,
 						"points": {
 							"src": {
-								"x": 2691.4999999999986,
-								"y": 669
+								"x": 2693.999999999999,
+								"y": 674
 							},
 							"dst": {
 								"x": 2690.3571428571418,
@@ -7261,57 +7257,15 @@
 					},
 					{
 						"ver": 1,
-						"condId": 2961,
-						"points": {
-							"src": {
-								"x": -130.833333333334,
-								"y": -290.66666666666663
-							},
-							"dst": {
-								"x": 182.5,
-								"y": -267.4999999999999
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 2962,
-						"points": {
-							"src": {
-								"x": 182.5,
-								"y": -267.4999999999999
-							},
-							"dst": {
-								"x": 182.49999999999943,
-								"y": -14.999999999999886
-							}
-						}
-					},
-					{
-						"ver": 1,
 						"condId": 2963,
 						"points": {
 							"src": {
-								"x": 182.49999999999943,
-								"y": -14.999999999999886
+								"x": 174.99999999999966,
+								"y": -282.4999999999998
 							},
 							"dst": {
-								"x": 183.33333333333246,
-								"y": 269.99999999999886
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 2964,
-						"points": {
-							"src": {
-								"x": 183.33333333333246,
-								"y": 269.99999999999886
-							},
-							"dst": {
-								"x": 444.9999999999998,
-								"y": 274.99999999999966
+								"x": 153.33333333333246,
+								"y": -10.000000000001137
 							}
 						}
 					},
@@ -7321,7 +7275,7 @@
 						"points": {
 							"src": {
 								"x": 454.9999999999993,
-								"y": -269.9999999999999
+								"y": -284.9999999999999
 							},
 							"dst": {
 								"x": 729.4999999999998,
@@ -7334,12 +7288,12 @@
 						"condId": 2966,
 						"points": {
 							"src": {
-								"x": 444.9999999999998,
-								"y": 274.99999999999966
+								"x": 447.4999999999998,
+								"y": 302.4999999999998
 							},
 							"dst": {
-								"x": 452.4999999999998,
-								"y": -2.4999999999998295
+								"x": 447.4999999999999,
+								"y": 15.000000000000227
 							}
 						}
 					},
@@ -7348,12 +7302,12 @@
 						"condId": 2967,
 						"points": {
 							"src": {
-								"x": 452.4999999999998,
-								"y": -2.4999999999998295
+								"x": 447.4999999999999,
+								"y": 15.000000000000227
 							},
 							"dst": {
 								"x": 454.9999999999993,
-								"y": -269.9999999999999
+								"y": -284.9999999999999
 							}
 						}
 					},
@@ -7380,8 +7334,8 @@
 								"y": -267.4999999999999
 							},
 							"dst": {
-								"x": 1007.4999999999991,
-								"y": -25
+								"x": 1004.9999999999989,
+								"y": -24.999999999999886
 							}
 						}
 					},
@@ -7390,12 +7344,96 @@
 						"condId": 2970,
 						"points": {
 							"src": {
-								"x": 1007.4999999999991,
-								"y": -25
+								"x": 1004.9999999999989,
+								"y": -24.999999999999886
 							},
 							"dst": {
-								"x": 1326.666666666667,
-								"y": -25.833333333333712
+								"x": 1341.6666666666672,
+								"y": -28.3333333333336
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3051,
+						"points": {
+							"src": {
+								"x": 1602.4999999999989,
+								"y": 149.9999999999999
+							},
+							"dst": {
+								"x": 1325.8333333333337,
+								"y": 343.3333333333336
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3052,
+						"points": {
+							"src": {
+								"x": 1341.6666666666672,
+								"y": -28.3333333333336
+							},
+							"dst": {
+								"x": 1602.4999999999989,
+								"y": 149.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3054,
+						"points": {
+							"src": {
+								"x": 294.9999999999998,
+								"y": 559.9999999999998
+							},
+							"dst": {
+								"x": 447.4999999999998,
+								"y": 302.4999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3055,
+						"points": {
+							"src": {
+								"x": -130.833333333334,
+								"y": -290.66666666666663
+							},
+							"dst": {
+								"x": 174.99999999999966,
+								"y": -282.4999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3056,
+						"points": {
+							"src": {
+								"x": 153.33333333333246,
+								"y": -10.000000000001137
+							},
+							"dst": {
+								"x": 152.49999999999966,
+								"y": 300
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3057,
+						"points": {
+							"src": {
+								"x": 152.49999999999966,
+								"y": 300
+							},
+							"dst": {
+								"x": 294.9999999999998,
+								"y": 559.9999999999998
 							}
 						}
 					}
@@ -7410,7 +7448,6 @@
 					2099,
 					2100,
 					2101,
-					2677,
 					2692,
 					2924,
 					2925,
@@ -7447,21 +7484,24 @@
 					2958,
 					2959,
 					2960,
-					2961,
-					2962,
 					2963,
-					2964,
 					2965,
 					2966,
 					2967,
 					2968,
 					2969,
-					2970
+					2970,
+					3051,
+					3052,
+					3054,
+					3055,
+					3056,
+					3057
 				],
 				"scale": 0.40000000000000013,
 				"pos": {
-					"x": 210,
-					"y": -105
+					"x": 250,
+					"y": 248
 				}
 			},
 			{
@@ -8049,8 +8089,8 @@
 					{
 						"ver": 1,
 						"nodeId": 2048,
-						"x": 686.4285714285706,
-						"y": 866.4285714285711
+						"x": 684.9999999999993,
+						"y": 866.4285714285713
 					},
 					{
 						"ver": 1,
@@ -8127,8 +8167,8 @@
 						"condId": 2873,
 						"points": {
 							"src": {
-								"x": 766.4285714285706,
-								"y": 946.4285714285711
+								"x": 764.9999999999993,
+								"y": 946.4285714285713
 							},
 							"dst": {
 								"x": 445.71428571428584,
@@ -8229,8 +8269,8 @@
 								"y": 549.9999999999999
 							},
 							"dst": {
-								"x": 766.4285714285706,
-								"y": 946.4285714285711
+								"x": 764.9999999999993,
+								"y": 946.4285714285713
 							}
 						}
 					},
@@ -8438,7 +8478,7 @@
 					2892,
 					2893
 				],
-				"scale": 1,
+				"scale": 0.8,
 				"pos": {
 					"x": 130,
 					"y": 36

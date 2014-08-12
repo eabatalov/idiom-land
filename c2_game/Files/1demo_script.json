@@ -135,7 +135,7 @@
 					],
 					"props": {
 						"id": "driver2",
-						"text": "No problem.\nThat will be 200 coins, please",
+						"text": "No problem.\nThat will be 50 coins, please",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -209,11 +209,11 @@
 						1453
 					],
 					"outCondIds": [
-						2502
+						3058
 					],
 					"props": {
 						"id": "Player",
-						"text": "\"To make a quick buck\" means...",
+						"text": "\"To make a quick buck\" means to earn money quickly with a little effort...",
 						"phraseType": "THINK"
 					}
 				},
@@ -343,26 +343,8 @@
 					],
 					"props": {
 						"id": "driver2",
-						"text": "I'm a good driver. I had only 5 accidents...\nThis year",
+						"text": "I'm a good driver. I had only 5 accidents\n...\nThis year",
 						"phraseType": "SPEAK"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 1753,
-					"type": 1,
-					"label": "Quick buck is 2",
-					"continue": false,
-					"inCondIds": [
-						2502
-					],
-					"outCondIds": [
-						2725
-					],
-					"props": {
-						"id": "Player",
-						"text": "To earn money quickly with a little effort...",
-						"phraseType": "THINK"
 					}
 				},
 				{
@@ -426,7 +408,7 @@
 					"label": "Quick buck is 3",
 					"continue": false,
 					"inCondIds": [
-						2725
+						3058
 					],
 					"outCondIds": [
 						2726
@@ -636,12 +618,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2502,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 2719,
 					"type": 11,
 					"props": {}
@@ -661,12 +637,6 @@
 				{
 					"ver": 1,
 					"id": 2722,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2725,
 					"type": 11,
 					"props": {}
 				},
@@ -710,6 +680,12 @@
 					"ver": 1,
 					"id": 2899,
 					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3058,
+					"type": 11,
 					"props": {}
 				}
 			]
@@ -1945,7 +1921,7 @@
 						2926
 					],
 					"props": {
-						"text": "Foxy is a journalist. She’s arrived to London to collect English idioms and slang words"
+						"text": "Foxy is a journalist. She’s arrived in London to collect English idioms and slang words"
 					}
 				},
 				{
@@ -2124,7 +2100,7 @@
 						2960
 					],
 					"outCondIds": [
-						2961
+						3055
 					],
 					"props": {
 						"text": "\"The gen\" is the first idiom on the level!\n\nTalk to people and guess all the 5 idioms to explore the next level in the city center"
@@ -2143,7 +2119,7 @@
 						2931
 					],
 					"props": {
-						"text": "Use left and right arrows to walk, up arrow to jump. Use arrow keys on your keyboard or click/tap on arrow icons on the screen.\n\nNow get closer to the policeman using this controls."
+						"text": "Use screen controls or arrow keys on your keyboard to move.\n\nNow get closer to the policeman and ask the way to the city center"
 					}
 				},
 				{
@@ -2218,7 +2194,7 @@
 					"continue": false,
 					"inCondIds": [
 						2101,
-						2677
+						3051
 					],
 					"outCondIds": [
 						2099
@@ -2275,10 +2251,10 @@
 						2963
 					],
 					"outCondIds": [
-						2964
+						3056
 					],
 					"props": {
-						"text": "But how can you get to the city center?\n\nYou'll need to find all the 4 pieces of bus ticket and give the ticket to bus driver waiting in the end of the level"
+						"text": "But how can you get to the city center?"
 					}
 				},
 				{
@@ -2295,7 +2271,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "Now get the first piece of the ticket located on the airplane!",
+						"text": "Now get the first coin located on the airplane!",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -2304,16 +2280,16 @@
 					"id": 1896,
 					"type": 1,
 					"label": "Let's collect all",
-					"continue": false,
+					"continue": true,
 					"inCondIds": [
 						2970
 					],
 					"outCondIds": [
-						2677
+						3052
 					],
 					"props": {
 						"id": "Player",
-						"text": "Great!\nTry to collect all the ticket pieces and all the idioms!",
+						"text": "Great!\nTry to collect 5 coins and all the idioms!",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -2794,10 +2770,10 @@
 					"label": "Show tckt cntr hlp",
 					"continue": true,
 					"inCondIds": [
-						2961
+						3056
 					],
 					"outCondIds": [
-						2962
+						3057
 					],
 					"props": {
 						"name": "ShowTicketCounterHelper",
@@ -2813,7 +2789,7 @@
 					"label": "Hide new idiom",
 					"continue": true,
 					"inCondIds": [
-						2962
+						3055
 					],
 					"outCondIds": [
 						2963
@@ -2870,7 +2846,7 @@
 					"label": "Hide notif helper",
 					"continue": true,
 					"inCondIds": [
-						2964
+						3054
 					],
 					"outCondIds": [
 						2966
@@ -2918,6 +2894,36 @@
 						"source": "c2",
 						"rollbackName": "",
 						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2213,
+					"type": -1,
+					"label": "Empty stage state",
+					"continue": false,
+					"inCondIds": [
+						3052
+					],
+					"outCondIds": [
+						3051
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2214,
+					"type": 11,
+					"label": "Ticket tutorial 2",
+					"continue": false,
+					"inCondIds": [
+						3057
+					],
+					"outCondIds": [
+						3054
+					],
+					"props": {
+						"text": "Find 5 coins on the level to buy a bus ticket.\n\nAlso find a bus driver to buy the ticket."
 					}
 				}
 			],
@@ -2979,14 +2985,6 @@
 				{
 					"ver": 1,
 					"id": 2101,
-					"type": 2,
-					"props": {
-						"id": "policeman"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2677,
 					"type": 2,
 					"props": {
 						"id": "policeman"
@@ -3212,26 +3210,8 @@
 				},
 				{
 					"ver": 1,
-					"id": 2961,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2962,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 2963,
 					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2964,
-					"type": 11,
 					"props": {}
 				},
 				{
@@ -3269,6 +3249,44 @@
 				{
 					"ver": 1,
 					"id": 2970,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3051,
+					"type": 2,
+					"props": {
+						"id": "policeman"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3052,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3054,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3055,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3056,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3057,
 					"type": 8,
 					"props": {}
 				}
@@ -3370,7 +3388,7 @@
 					],
 					"props": {
 						"id": "cap",
-						"text": "...then it can suddenly stop and you are flung from it.",
+						"text": "...then it can suddenly stop and you are flung from it",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -3617,7 +3635,7 @@
 					],
 					"props": {
 						"id": "cap",
-						"text": "Sometimes I worry about woodpeckers because of my wooden leg.",
+						"text": "Sometimes I worry about woodpeckers because of my wooden leg",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -3941,7 +3959,7 @@
 					],
 					"props": {
 						"id": "driver",
-						"text": "You haven't collected all the ticket pieces yet",
+						"text": "You need to have 5 coins to buy a bus ticket",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -3959,7 +3977,7 @@
 					],
 					"props": {
 						"id": "driver",
-						"text": "I see you have the ticket",
+						"text": "I see you have enough coins to buy the ticket",
 						"phraseType": "SPEAK"
 					}
 				},
