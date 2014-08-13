@@ -84,7 +84,7 @@ module.exports = function(grunt) {
         },
 
         clean: {
-            main: ['<%= dirs.out %>*', '!<%= dirs.out %>game/**']
+            main: ['<%= dirs.out %>*', '!<%= dirs.out %>game*/**']
         },
 
         /* Copy all the files that don't need processing */
