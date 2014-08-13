@@ -16,6 +16,34 @@ if ($dataSize > $MB40) {
     exit("Too large level replay!");
 }
 
+$strDateTime = date("D_M_d_Y_G_i_s_P");
+$randStr = generateRandomString(5);
+
+$replayFilePath = $REPLAYS_DIR_PATH . 'replay_'
+    . $levelName . '_'
+    . 'ip_' . getClientIP() . '_'
+    . $strDateTime . '_'
+    . $randStr
+    . '.json';
+
+file_put_contents($replayFilePath, $replay, 0);
+echo "Ok";
+
+function getClientIP() {
+    if ( isset($_SERVER['HTTP_CLIENT_IP']) && ! empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) && ! empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = (isset($_SERVER['REMOTE_ADDR'])) ? $_SERVER['REMOTE_ADDR'] : '0.0.0.0';
+    }
+
+    $ip = filter_var($ip, FILTER_VALIDATE_IP);
+    $ip = ($ip === false) ? '0.0.0.0' : $ip;
+
+    return $ip;
+}
+
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $randomString = '';
@@ -24,11 +52,3 @@ function generateRandomString($length = 10) {
     }
     return $randomString;
 }
-
-$strDateTime = date("D_M_d_Y_G_i_s_P") . '_rand' . generateRandomString();
-
-$replayFilePath = $REPLAYS_DIR_PATH . 'replay_' . $levelName . '_' . $strDateTime . '.json';
-
-
-file_put_contents($replayFilePath, $replay, 0);
-echo "Ok";
