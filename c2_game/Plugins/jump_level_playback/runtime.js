@@ -41,7 +41,7 @@ cr.plugins_.JumpLevelPlaybackPlugin = function(runtime)
 	// called whenever an instance is created
 	instanceProto.onCreate = function()
 	{
-        this.levelGameplayPlayerController = null;
+        this.levelReplayPlayerController = null;
         this.levelSpecificHandlers = [];
         QuestGame.instance.events.levelChanged.subscribe(this, this.onLevelChanged);
 	};
@@ -99,7 +99,7 @@ cr.plugins_.JumpLevelPlaybackPlugin = function(runtime)
 			]
 		});
 	};
-	
+
 	instanceProto.onDebugValueEdited = function (header, name, value)
 	{
 		// Called when a non-readonly property has been edited in the debugger. Usually you only
@@ -114,14 +114,15 @@ cr.plugins_.JumpLevelPlaybackPlugin = function(runtime)
         jQuery.each(this.levelSpecificHandlers, collectionObjectDelete);
         this.levelSpecificHandlers = [];
 
-        if (this.levelGameplayPlayerController)
-            this.levelGameplayPlayerController.delete();
+        if (this.levelReplayPlayerController)
+            this.levelReplayPlayerController.delete();
 
-        this.levelGameplayPlayerController =
-            new JumpLevelGameplayPlayerController(
-                    new JumpLevelGameplayPlayer(),
-                    QuestGame.instance.getLevelGameplayHistoryLoader());
-        this.levelSpecificHandlers.push(this.levelGameplayPlayerController.events.
+        this.levelReplayPlayerController =
+            new JumpLevelReplayPlayerController(
+                    new JumpLevelReplayPlayer(),
+                    QuestGame.instance.getLevelReplayLoader()
+            );
+        this.levelSpecificHandlers.push(this.levelReplayPlayerController.events.
             recPending.subscribe(this, this.onRecPending));
     };
 
@@ -144,23 +145,23 @@ cr.plugins_.JumpLevelPlaybackPlugin = function(runtime)
 	function Acts() {};
 
 	Acts.prototype.play = function() {
-        this.levelGameplayPlayerController.play();
+        this.levelReplayPlayerController.play();
     };
 
     Acts.prototype.stop = function() {
-        this.levelGameplayPlayerController.stop();
+        this.levelReplayPlayerController.stop();
     };
 
     Acts.prototype.recProcCompleted = function() {
-        this.levelGameplayPlayerController.recProcCompleted();
+        this.levelReplayPlayerController.recProcCompleted();
     };
 
 	Acts.prototype.speedUp = function() {
-        this.levelGameplayPlayerController.speedUp();
+        this.levelReplayPlayerController.speedUp();
     };
 
     Acts.prototype.speedDown = function() {
-        this.levelGameplayPlayerController.speedDown();
+        this.levelReplayPlayerController.speedDown();
     };
 
 	pluginProto.acts = new Acts();
@@ -170,7 +171,7 @@ cr.plugins_.JumpLevelPlaybackPlugin = function(runtime)
 	function Exps() {};
 
     Exps.prototype.getX = function(ret) {
-        var rec = this.levelGameplayPlayerController.getPendingRecord();
+        var rec = this.levelReplayPlayerController.getPendingRecord();
         switch(rec.getRecordType()) {
             case JumperGenPlatformRecord.type:
             case JumperGenIdiomTokenRecord.type:
@@ -181,7 +182,7 @@ cr.plugins_.JumpLevelPlaybackPlugin = function(runtime)
     };
 
     Exps.prototype.getY = function(ret) {
-        var rec = this.levelGameplayPlayerController.getPendingRecord();
+        var rec = this.levelReplayPlayerController.getPendingRecord();
         switch(rec.getRecordType()) {
             case JumperGenPlatformRecord.type:
             case JumperGenIdiomTokenRecord.type:
@@ -192,7 +193,7 @@ cr.plugins_.JumpLevelPlaybackPlugin = function(runtime)
     };
 
     Exps.prototype.getText = function(ret) {
-        var rec = this.levelGameplayPlayerController.getPendingRecord();
+        var rec = this.levelReplayPlayerController.getPendingRecord();
         switch(rec.getRecordType()) {
             case JumperCollectedIdiomSubstringChangedRecord.type:
                 ret.set_string(rec.getSubstr());
@@ -211,7 +212,7 @@ cr.plugins_.JumpLevelPlaybackPlugin = function(runtime)
     };
 
     Exps.prototype.getType = function(ret) {
-        var rec = this.levelGameplayPlayerController.getPendingRecord();
+        var rec = this.levelReplayPlayerController.getPendingRecord();
         switch(rec.getRecordType()) {
             case JumperCollectedIdiomSubstringChangedRecord.type:
                 ret.set_string("COLLECTED_IDIOM_STR_CHANGED");

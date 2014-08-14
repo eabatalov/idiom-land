@@ -110,7 +110,10 @@ cr.plugins_.JumpLevelRecordingPlugin = function(runtime)
 	/**END-PREVIEWONLY**/
 
     instanceProto.onLevelChanged = function(questLevelRuntime) {
-        this.levelGameplayRecorder = questLevelRuntime.getLevelGameplayRecorder();
+        this.levelGameplayHistory = questLevelRuntime.getLevelGameplayHistory(); 
+        this.levelGameplayRecorder =
+            new JumperLevelGameplayRecorder(this.levelGameplayHistory);
+        this.levelGameplayRecorder.startRecording();
     };
 	//////////////////////////////////////
 	// Conditions
@@ -138,6 +141,10 @@ cr.plugins_.JumpLevelRecordingPlugin = function(runtime)
         this.levelGameplayRecorder.addRecord(
             new JumperCollectedIdiomSubstringChangedRecord(substr)
         );
+    };
+
+    Acts.prototype.stopRecording = function() {
+        this.levelGameplayRecorder.stopRecording();
     };
 
 	pluginProto.acts = new Acts();

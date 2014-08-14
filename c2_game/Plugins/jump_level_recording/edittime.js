@@ -48,6 +48,9 @@ AddAction(3, af_none, "Record change of guessed idiom substring",
     "General", "Record change of guessed idiom substring to {0}",
     "Record change of gueesed idiom substring", "recCollectedIdiomSubstChange");
 
+AddAction(4, af_none, "Stop level gameplay recording", "General",
+            "Stop level gameplay recording", "Stop level gameplay recording", "stopRecording");
+
 ACESDone();
 
 var property_list = [];
