@@ -3,7 +3,7 @@ $REPLAYS_DIR_PATH = '/idiom_land/level_replays/';
 $MB40 = 41943040; //40 Mb in bytes
 
 $levelName = $_POST['level_name'];
-$replay = $_POST['gameplay_history'];
+$replay = $_POST['replay'];
 
 if ($levelName === NULL || $replay === NULL) {
     echo "error";
