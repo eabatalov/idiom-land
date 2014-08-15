@@ -3831,11 +3831,6 @@
                         <object-folder expanded="1" name="Walls">
                             <object-type name="WallBrick" sid="9181772036400364">
                                 <plugin id="Sprite" />
-                                <behaviors>
-                                    <behavior-type name="Solid" sid="2552076849817571">
-                                        <behavior id="solid" />
-                                    </behavior-type>
-                                </behaviors>
                                 <animation-folder expanded="1">
                                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9150353291030714" speed="5">
                                         <frame duration="1" hotspotX="0.506024" hotspotY="0.501597">
@@ -5876,9 +5871,9 @@
             </layout-folder>
         </layout-folder>
     </layout-folder>
-    <event-folder expanded="1">
-        <event-folder expanded="1" name="Levels">
-            <event-folder expanded="1" name="Common">
+    <event-folder expanded="0">
+        <event-folder expanded="0" name="Levels">
+            <event-folder expanded="0" name="Common">
                 <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
@@ -5937,7 +5932,7 @@
                         </event-folder>
                     </event-folder>
                 </event-folder>
-                <event-folder expanded="1" name="JumpLevel">
+                <event-folder expanded="0" name="JumpLevel">
                     <event-sheet>LevelJumpCommon.xml</event-sheet>
                     <event-sheet>LevelJumpCameraAndPlatforms.xml</event-sheet>
                     <event-sheet>LevelJumpPlayerAutoMovement.xml</event-sheet>
