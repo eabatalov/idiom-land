@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>LevelResultsBriefMain</name>
     <events>
+        <include>SecretsProgress</include>
         <include>LevelResultsCommon</include>
         <event-group description="" sid="8501800471470332" title="Level results brief group">
             <sub-events>
@@ -12,6 +13,8 @@
                 <variable constant="1" name="FAIL_COLOR_R" sid="5500309230561139" static="0" type="number">240</variable>
                 <variable constant="1" name="FAIL_COLOR_G" sid="7408969497604845" static="0" type="number">51</variable>
                 <variable constant="1" name="FAIL_COLOR_B" sid="9454082368479114" static="0" type="number">29</variable>
+                <variable constant="0" name="LevelSecretsCount" sid="9880319576464606" static="0" type="number">0</variable>
+                <variable constant="0" name="FoundLevelSecretsCount" sid="9718755377816614" static="0" type="number">0</variable>
                 <event-block sid="6071663212213">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="7380802923572911" type="System" />
@@ -24,6 +27,25 @@
                         </action>
                         <action id="0" name="Set text" sid="7225573258372632" type="LevelResultsIdiomsGuessedText">
                             <param id="0" name="Text">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                        </action>
+                        <action id="0" name="Call function" sid="3674008315126221" type="Function">
+                            <param id="0" name="Name">&quot;GetLevelSecretsCount&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5673064748711863" type="System">
+                            <param id="0" name="Variable">LevelSecretsCount</param>
+                            <param id="1" name="Value">Function.ReturnValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7608494891712398" type="Function">
+                            <param id="0" name="Name">&quot;GetFoundLevelSecretsCount&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7386016449546043" type="System">
+                            <param id="0" name="Variable">FoundLevelSecretsCount</param>
+                            <param id="1" name="Value">Function.ReturnValue</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4250065361709224" type="LevelResultsSecretsFoundText">
+                            <param id="0" name="Text">FoundLevelSecretsCount &amp; &quot;/&quot; &amp; LevelSecretsCount</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -77,10 +99,10 @@
                         </event-block>
                         <event-block sid="6356526560736595">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="5729829846602192" type="System">
-                                    <param id="0" name="First value">1</param>
+                                <condition id="-8" name="Compare two values" sid="6128680480705296" type="System">
+                                    <param id="0" name="First value">FoundLevelSecretsCount</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">0</param>
+                                    <param id="2" name="Second value">LevelSecretsCount</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -101,7 +123,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="5769935275446483">
+                <event-block collapsed="1" sid="5769935275446483">
                     <conditions>
                         <condition id="3" name="On touched object" sid="2730285613817509" type="Touch">
                             <param id="0" name="Object">LevelNextBtn</param>

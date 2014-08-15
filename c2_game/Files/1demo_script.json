@@ -4473,6 +4473,168 @@
 					"props": {}
 				}
 			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 2257,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 2257,
+					"type": 9,
+					"label": "secret",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						3211
+					],
+					"props": {
+						"name": "secret",
+						"objs": [
+							"Player"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2258,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						3211
+					],
+					"outCondIds": [
+						3218
+					],
+					"props": {
+						"objs": [
+							"Player"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2259,
+					"type": 1,
+					"label": "Glasses!",
+					"continue": false,
+					"inCondIds": [
+						3215
+					],
+					"outCondIds": [
+						3216
+					],
+					"props": {
+						"id": "Player",
+						"text": "But look...\n\nBrand new\nsunglasses!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2260,
+					"type": -1,
+					"label": "End",
+					"continue": false,
+					"inCondIds": [
+						3217
+					],
+					"outCondIds": [],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2261,
+					"type": 1,
+					"label": "What a mess...",
+					"continue": false,
+					"inCondIds": [
+						3219
+					],
+					"outCondIds": [
+						3215
+					],
+					"props": {
+						"id": "Player",
+						"text": "What a mess here...\n:(",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2262,
+					"type": 12,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						3218
+					],
+					"outCondIds": [
+						3219
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2263,
+					"type": 12,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						3216
+					],
+					"outCondIds": [
+						3217
+					],
+					"props": {
+						"enabled": true
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 3211,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3215,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3216,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3217,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3218,
+					"type": 10,
+					"props": {
+						"name": "secret_found"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3219,
+					"type": 8,
+					"props": {}
+				}
+			]
 		}
 	]
 }

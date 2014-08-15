@@ -679,8 +679,8 @@
             </object-type>
         </object-folder>
         <object-folder expanded="1" name="Levels">
-            <object-folder expanded="1" name="1demo">
-                <object-folder expanded="1" name="Stages">
+            <object-folder expanded="0" name="1demo">
+                <object-folder expanded="0" name="Stages">
                     <object-folder expanded="0" name="Intro">
                         <object-folder expanded="0" name="Helpers">
                             <object-type name="JumpHelper" sid="3052283865919932">
@@ -912,7 +912,7 @@
                             </animation-folder>
                         </object-type>
                     </object-folder>
-                    <object-folder expanded="1" name="Kebab">
+                    <object-folder expanded="0" name="Kebab">
                         <object-type name="KebabShop" sid="8187431686909286">
                             <plugin id="Sprite" />
                             <animation-folder expanded="1">
@@ -1826,7 +1826,7 @@
                             </container>
                         </object-type>
                     </object-folder>
-                    <object-folder expanded="1" name="Taxi">
+                    <object-folder expanded="0" name="Taxi">
                         <object-folder expanded="0" name="hindu sprites">
                             <object-type name="hindu_hand" sid="3255092294784727">
                                 <plugin id="Sprite" />
@@ -2063,6 +2063,16 @@
                                 <type>hindu_eye1</type>
                                 <type>hindu_brows</type>
                             </container>
+                        </object-type>
+                    </object-folder>
+                    <object-folder expanded="0" name="Secret">
+                        <object-type name="GlassesSecret" sid="3808281501367774">
+                            <plugin id="Sprite" />
+                            <animation-folder expanded="1">
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3000999168783213" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
                         </object-type>
                     </object-folder>
                 </object-folder>
@@ -5871,9 +5881,9 @@
             </layout-folder>
         </layout-folder>
     </layout-folder>
-    <event-folder expanded="0">
-        <event-folder expanded="0" name="Levels">
-            <event-folder expanded="0" name="Common">
+    <event-folder expanded="1">
+        <event-folder expanded="1" name="Levels">
+            <event-folder expanded="1" name="Common">
                 <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
@@ -5888,13 +5898,14 @@
                     <event-sheet>QuestStageChangers.xml</event-sheet>
                     <event-sheet>QuestAutomaticTalkStarters.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="0" name="Controls">
+                <event-folder expanded="1" name="Controls">
                     <event-folder expanded="0" name="GameHelp">
                         <event-sheet>GameHelp.xml</event-sheet>
                     </event-folder>
-                    <event-folder expanded="0" name="LevelProgress">
+                    <event-folder expanded="1" name="LevelProgress">
                         <event-sheet>IdiomProgress.xml</event-sheet>
                         <event-sheet>CoinsProgress.xml</event-sheet>
+                        <event-sheet>SecretsProgress.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="0" name="Navigation">
                         <event-sheet>NavigationMainMenuBtn.xml</event-sheet>
@@ -5912,14 +5923,10 @@
                 </event-folder>
                 <event-folder expanded="0" name="VisualObjects">
                     <event-folder expanded="0" name="S">
-                        <event-folder expanded="1" name="Scooters">
-                            <event-sheet>ScooterBullet.xml</event-sheet>
-                        </event-folder>
+                        <event-folder expanded="1" name="Scooters" />
                     </event-folder>
                     <event-folder expanded="0" name="C">
-                        <event-folder expanded="1" name="Cars">
-                            <event-sheet>CabBullet.xml</event-sheet>
-                        </event-folder>
+                        <event-folder expanded="1" name="Cars" />
                     </event-folder>
                     <event-folder expanded="0" name="M">
                         <event-folder expanded="0" name="Markers">
@@ -5969,6 +5976,9 @@
                     <event-folder expanded="0" name="Taxi">
                         <event-sheet>Taxi.xml</event-sheet>
                     </event-folder>
+                    <event-folder expanded="0" name="Secret">
+                        <event-sheet>SecretStage.xml</event-sheet>
+                    </event-folder>
                     <event-sheet>1demoAllStages.xml</event-sheet>
                 </event-folder>
                 <event-sheet>1demoMain.xml</event-sheet>
@@ -5979,8 +5989,8 @@
                 <event-sheet>2demo_jump.xml</event-sheet>
             </event-folder>
         </event-folder>
-        <event-folder expanded="0" name="Menus">
-            <event-folder expanded="0" name="LevelResults">
+        <event-folder expanded="1" name="Menus">
+            <event-folder expanded="1" name="LevelResults">
                 <event-sheet>LevelResultsBriefMain.xml</event-sheet>
                 <event-sheet>LevelResultsDetailedMain.xml</event-sheet>
                 <event-sheet>LevelResultsCommon.xml</event-sheet>

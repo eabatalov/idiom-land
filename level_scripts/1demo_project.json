@@ -4474,12 +4474,174 @@
 						"props": {}
 					}
 				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 2257,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 2257,
+						"type": 9,
+						"label": "secret",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							3211
+						],
+						"props": {
+							"name": "secret",
+							"objs": [
+								"Player"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2258,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							3211
+						],
+						"outCondIds": [
+							3218
+						],
+						"props": {
+							"objs": [
+								"Player"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2259,
+						"type": 1,
+						"label": "Glasses!",
+						"continue": false,
+						"inCondIds": [
+							3215
+						],
+						"outCondIds": [
+							3216
+						],
+						"props": {
+							"id": "Player",
+							"text": "But look...\n\nBrand new\nsunglasses!",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2260,
+						"type": -1,
+						"label": "End",
+						"continue": false,
+						"inCondIds": [
+							3217
+						],
+						"outCondIds": [],
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 2261,
+						"type": 1,
+						"label": "What a mess...",
+						"continue": false,
+						"inCondIds": [
+							3219
+						],
+						"outCondIds": [
+							3215
+						],
+						"props": {
+							"id": "Player",
+							"text": "What a mess here...\n:(",
+							"phraseType": "SPEAK"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2262,
+						"type": 12,
+						"label": "",
+						"continue": true,
+						"inCondIds": [
+							3218
+						],
+						"outCondIds": [
+							3219
+						],
+						"props": {
+							"enabled": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 2263,
+						"type": 12,
+						"label": "",
+						"continue": true,
+						"inCondIds": [
+							3216
+						],
+						"outCondIds": [
+							3217
+						],
+						"props": {
+							"enabled": true
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 3211,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3215,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3216,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3217,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3218,
+						"type": 10,
+						"props": {
+							"name": "secret_found"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3219,
+						"type": 8,
+						"props": {}
+					}
+				]
 			}
 		]
 	},
 	"scriptEditor": {
 		"ver": 1,
-		"currentStageId": 8,
+		"currentStageId": 2257,
 		"stageEditors": [
 			{
 				"ver": 1,
@@ -8483,6 +8645,161 @@
 					"x": 130,
 					"y": 36
 				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 2257,
+						"x": 214,
+						"y": 78
+					},
+					{
+						"ver": 1,
+						"nodeId": 2258,
+						"x": 224,
+						"y": 324
+					},
+					{
+						"ver": 1,
+						"nodeId": 2259,
+						"x": 510,
+						"y": 300
+					},
+					{
+						"ver": 1,
+						"nodeId": 2260,
+						"x": 838,
+						"y": 583
+					},
+					{
+						"ver": 1,
+						"nodeId": 2261,
+						"x": 513,
+						"y": 576
+					},
+					{
+						"ver": 1,
+						"nodeId": 2262,
+						"x": 233,
+						"y": 580
+					},
+					{
+						"ver": 1,
+						"nodeId": 2263,
+						"x": 831,
+						"y": 304
+					}
+				],
+				"nodeIds": [
+					2257,
+					2258,
+					2259,
+					2260,
+					2261,
+					2262,
+					2263
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 3211,
+						"points": {
+							"src": {
+								"x": 294,
+								"y": 158
+							},
+							"dst": {
+								"x": 304,
+								"y": 404
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3215,
+						"points": {
+							"src": {
+								"x": 593,
+								"y": 656
+							},
+							"dst": {
+								"x": 590,
+								"y": 380
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3216,
+						"points": {
+							"src": {
+								"x": 590,
+								"y": 380
+							},
+							"dst": {
+								"x": 911,
+								"y": 384
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3217,
+						"points": {
+							"src": {
+								"x": 911,
+								"y": 384
+							},
+							"dst": {
+								"x": 918,
+								"y": 663
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3218,
+						"points": {
+							"src": {
+								"x": 304,
+								"y": 404
+							},
+							"dst": {
+								"x": 313,
+								"y": 660
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3219,
+						"points": {
+							"src": {
+								"x": 313,
+								"y": 660
+							},
+							"dst": {
+								"x": 593,
+								"y": 656
+							}
+						}
+					}
+				],
+				"condIds": [
+					3211,
+					3215,
+					3216,
+					3217,
+					3218,
+					3219
+				],
+				"scale": 1,
+				"pos": {
+					"x": 1,
+					"y": -1
+				}
 			}
 		],
 		"stageIds": [
@@ -8492,7 +8809,8 @@
 			488,
 			733,
 			2045,
-			2060
+			2060,
+			2257
 		]
 	}
 }

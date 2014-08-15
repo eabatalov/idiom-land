@@ -8,9 +8,6 @@
         <include>1demoNpcScmlSpritesBindings</include>
         <include>1demoNpcAnimationRunners</include>
         <include>1demoAllStages</include>
-        <comment>Level specific logic for common visual objects</comment>
-        <include>CabBullet</include>
-        <include>ScooterBullet</include>
         <event-group description="" sid="460933006001851" title="Local var scope 1">
             <sub-events>
                 <variable constant="1" name="LEVEL_NAME" sid="146390735041057" static="0" type="text">1demo</variable>
@@ -47,6 +44,10 @@
                         <action id="0" name="Call function" sid="2680688670042512" type="Function">
                             <param id="0" name="Name">&quot;IntroInit&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="2673037115571879" type="Function">
+                            <param id="0" name="Name">&quot;SetLevelSecretsCount&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
                         </action>
                     </actions>
                 </event-block>
