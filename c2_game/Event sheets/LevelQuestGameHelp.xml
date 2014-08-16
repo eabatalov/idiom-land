@@ -1,12 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>GameHelp</name>
+    <name>LevelQuestGameHelp</name>
     <events>
-        <event-group description="" sid="891276307685036" title="Game help">
+        <event-group description="" sid="891276307685036" title="Game help quest">
             <sub-events>
                 <variable constant="0" name="GameHelpPopupMode" sid="1995553290489002" static="1" type="text">HIDDEN</variable>
-                <event-block collapsed="1" sid="271157263218143">
+                <variable constant="0" name="HELP_TEXT_H_OFFSET" sid="5056746298481563" static="1" type="number">0</variable>
+                <variable constant="0" name="HELP_TEXT_V_OFFSET" sid="7606988462413594" static="1" type="number">0</variable>
+                <event-block sid="3628979127515004">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6892727561808205" type="Function">
+                            <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5103519289508616" type="System">
+                            <param id="0" name="Variable">HELP_TEXT_H_OFFSET</param>
+                            <param id="1" name="Value">GameHelpTxt.X - GameHelpBg.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6823407717172882" type="System">
+                            <param id="0" name="Variable">HELP_TEXT_V_OFFSET</param>
+                            <param id="1" name="Value">GameHelpTxt.Y - GameHelpBg.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="271157263218143">
                     <conditions>
                         <condition id="0" name="On function" sid="9999837698902666" type="Function">
                             <param id="0" name="Name">&quot;procPopupTouchEnd&quot;</param>
@@ -18,7 +37,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block collapsed="1" sid="9029453485759799">
+                        <event-block sid="9029453485759799">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="8608155633475664" type="System">
                                     <param id="0" name="First value">GameHelpPopupMode</param>
@@ -50,7 +69,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block collapsed="1" sid="78919014853471">
+                                <event-block sid="78919014853471">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="5266381359251565" type="System" />
                                     </conditions>
@@ -88,7 +107,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Grab all the input as we&apos;re modal popup dialog</comment>
-                <event-block collapsed="1" sid="5289677361687384">
+                <event-block sid="5289677361687384">
                     <conditions>
                         <condition id="0" name="On function" sid="1744004257324432" type="Function">
                             <param id="0" name="Name">&quot;procPopupTouchStart&quot;</param>
@@ -136,13 +155,13 @@
                                 <action id="0" name="Set text" sid="6344967101229111" type="GameHelpTxt">
                                     <param id="0" name="Text">&quot;Level objective:&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Collect &quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount &amp; &quot; idioms from London people.&quot; &amp; newline &amp; newline &amp;&#x0D;&#x0A;&quot;Hint:&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Get close to them and talk!&quot;</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="4486965649350631" type="GameHelpBg">
-                                    <param id="0" name="X">WindowWidth / 2 - GameHelpBg.Width / 2</param>
-                                    <param id="1" name="Y">WindowHeight / 2 - GameHelpBg.Height / 2</param>
+                                <action id="-3" name="Set position" sid="1859327804745588" type="GameHelpBg">
+                                    <param id="0" name="X">WINDOW_WIDTH/2</param>
+                                    <param id="1" name="Y">WINDOW_HEIGHT/2</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="9819448618380588" type="GameHelpTxt">
-                                    <param id="0" name="X">GameHelpBg.X + ((GameHelpBg.Width - GameHelpTxt.Width) / 2)</param>
-                                    <param id="1" name="Y">GameHelpBg.Y + ((GameHelpBg.Height - GameHelpTxt.Height) / 2)</param>
+                                <action id="-3" name="Set position" sid="504115384223653" type="GameHelpTxt">
+                                    <param id="0" name="X">GameHelpBg.X  + HELP_TEXT_H_OFFSET</param>
+                                    <param id="1" name="Y">GameHelpBg.Y + HELP_TEXT_V_OFFSET</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="2343357262994581" type="GameHelpBg">
                                     <param id="0" name="Visibility">1</param>

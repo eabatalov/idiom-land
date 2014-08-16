@@ -2100,7 +2100,7 @@
                             <plugin id="Sprite" />
                             <animation-folder expanded="1">
                                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1625084942408105" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                         <collision-poly>
                                             <point x="0.0642857" y="0.09" />
                                             <point x="0.926786" y="0.1025" />
@@ -6029,7 +6029,7 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout-folder expanded="0" name="Levels">
+        <layout-folder expanded="1" name="Levels">
             <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
@@ -6071,10 +6071,7 @@
                     <event-sheet>QuestStageChangers.xml</event-sheet>
                     <event-sheet>QuestAutomaticTalkStarters.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="0" name="Controls">
-                    <event-folder expanded="0" name="GameHelp">
-                        <event-sheet>GameHelp.xml</event-sheet>
-                    </event-folder>
+                <event-folder expanded="1" name="Controls">
                     <event-folder expanded="0" name="LevelProgress">
                         <event-sheet>IdiomProgress.xml</event-sheet>
                         <event-sheet>CoinsProgress.xml</event-sheet>
@@ -6112,7 +6109,10 @@
                         </event-folder>
                     </event-folder>
                 </event-folder>
-                <event-folder expanded="0" name="JumpLevel">
+                <event-folder expanded="1" name="JumpLevel">
+                    <event-folder expanded="0" name="GameHelp">
+                        <event-sheet>LevelJumpGameHelp.xml</event-sheet>
+                    </event-folder>
                     <event-sheet>LevelJumpCommon.xml</event-sheet>
                     <event-sheet>LevelJumpCameraAndPlatforms.xml</event-sheet>
                     <event-sheet>LevelJumpPlayerAutoMovement.xml</event-sheet>
@@ -6121,7 +6121,10 @@
                     <event-sheet>LevelJumpPlayback.xml</event-sheet>
                     <event-sheet>LevelJumpRecording.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="0" name="QuestLevel">
+                <event-folder expanded="1" name="QuestLevel">
+                    <event-folder expanded="1" name="Controls">
+                        <event-sheet>LevelQuestGameHelp.xml</event-sheet>
+                    </event-folder>
                     <event-sheet>LevelQuestCommon.xml</event-sheet>
                     <event-sheet>LevelQuestInput.xml</event-sheet>
                 </event-folder>

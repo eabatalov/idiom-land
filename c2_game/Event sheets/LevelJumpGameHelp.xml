@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelJumpGameHelp</name>
+    <events>
+        <event-group description="" sid="5351741765487268" title="Game help jump">
+            <sub-events>
+                <variable constant="0" name="GameHelpPopupMode" sid="1995553290489002" static="1" type="text">HIDDEN</variable>
+                <variable constant="0" name="HELP_TEXT_H_OFFSET" sid="5949538084611086" static="1" type="number">0</variable>
+                <variable constant="0" name="HELP_TEXT_V_OFFSET" sid="143179244736322" static="1" type="number">0</variable>
+                <event-block sid="7208232154465511">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1275157067820729" type="Function">
+                            <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3754278098419281" type="System">
+                            <param id="0" name="Variable">HELP_TEXT_H_OFFSET</param>
+                            <param id="1" name="Value">GameHelpTxt.X - GameHelpBg.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9723537279029499" type="System">
+                            <param id="0" name="Variable">HELP_TEXT_V_OFFSET</param>
+                            <param id="1" name="Value">GameHelpTxt.Y - GameHelpBg.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="271157263218143">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9999837698902666" type="Function">
+                            <param id="0" name="Name">&quot;procPopupTouchEnd&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="5739528071912284" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5437169078074145">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5516742003199847" type="System">
+                                    <param id="0" name="First value">GameHelpPopupMode</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;HIDDEN&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3266101979065587">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9337660718735297" type="System">
+                                            <param id="0" name="First value">GameHelpPopupMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;HELP_SHOW&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="4317112993350333" type="GameHelpBg">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1537466527261392" type="GameHelpTxt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5573613136474208" type="System">
+                                            <param id="0" name="Variable">GameHelpPopupMode</param>
+                                            <param id="1" name="Value">&quot;HIDDEN&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="5573784346230437" type="Function">
+                                            <param id="0" name="Name">&quot;EnablePlayerAvatarControls&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="4119480663548013" type="System">
+                                            <param id="0" name="Time scale">1.0</param>
+                                        </action>
+                                        <action id="1" name="Set return value" sid="3266184910919527" type="Function">
+                                            <param id="0" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Grab all the input as we&apos;re modal popup dialog</comment>
+                <event-block sid="5289677361687384">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1744004257324432" type="Function">
+                            <param id="0" name="Name">&quot;procPopupTouchStart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="3752469509097902" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5399146268095214">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7879827317062606" type="System">
+                                    <param id="0" name="First value">GameHelpPopupMode</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;HIDDEN&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="5771924884744587" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3097259777495928">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8538245497201991" type="Function">
+                            <param id="0" name="Name">&quot;LevelHelpTriggered&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3807342819092764">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4853474664474248" type="System">
+                                    <param id="0" name="First value">GameHelpPopupMode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;HIDDEN&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="6344967101229111" type="GameHelpTxt">
+                                    <param id="0" name="Text">&quot;Collect each idiom word by word.&quot; &amp; newline &amp; newline &amp; &quot;If you collect the wrong word then idiom collection starts again.&quot; &amp; newline &amp; newline &amp; &quot;If you fall down then the level is restarted.&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="3855855105402273" type="GameHelpBg">
+                                    <param id="0" name="X">WINDOW_WIDTH/2</param>
+                                    <param id="1" name="Y">WINDOW_HEIGHT/2</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="8443041561314616" type="GameHelpTxt">
+                                    <param id="0" name="X">GameHelpBg.X  + HELP_TEXT_H_OFFSET</param>
+                                    <param id="1" name="Y">GameHelpBg.Y + HELP_TEXT_V_OFFSET</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2343357262994581" type="GameHelpBg">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="1676613740963342" type="GameHelpTxt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3741094900428018" type="System">
+                                    <param id="0" name="Variable">GameHelpPopupMode</param>
+                                    <param id="1" name="Value">&quot;HELP_SHOW&quot;</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="4630466865369307" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="4486115551498461" type="Function">
+                                    <param id="0" name="Name">&quot;DisablePlayerAvatarControls&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
