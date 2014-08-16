@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelQuestInput</name>
+    <events>
+        <event-block any="1" sid="4087255393376731">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3607285203935246" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="570790924863563" type="Keyboard">
+                    <param id="0" name="Key">8 (Backspace)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="5626914279199769" type="Keyboard">
+                    <param id="0" name="Key">49 (1)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="8038357604475605" type="Keyboard">
+                    <param id="0" name="Key">50 (2)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="8844610183125707" type="Keyboard">
+                    <param id="0" name="Key">51 (3)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="8298908293521153" type="Keyboard">
+                    <param id="0" name="Key">52 (4)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="5907824461848222" type="Function">
+                    <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;KBD_TOUCH_END&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

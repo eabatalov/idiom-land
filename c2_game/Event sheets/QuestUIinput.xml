@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>QuestUIinput</name>
     <events>
-        <event-group collapsed="1" description="" sid="9423143259056749" title="Input state machine">
+        <event-group description="" sid="9423143259056749" title="Input state machine">
             <sub-events>
                 <comment>Globally recognizable values: &quot;IDLE&quot;, &quot;BLOCKED&quot;</comment>
                 <variable constant="0" name="INPUT_STATE" sid="3003482212209299" static="1" type="text">IDLE</variable>
@@ -79,6 +79,11 @@
                                             <param id="1" name="Value">&quot;ProcPlayerMovementKeyboardInput&quot;</param>
                                             <param id="2" name="Axis">0</param>
                                         </action>
+                                        <action id="5" name="Push" sid="2181843054002359" type="InputProcHandlers">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ProcQuestKeyboardInput&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
                                         <action id="5" name="Push" sid="5581868348450229" type="InputProcHandlers">
                                             <param id="0" name="Where">0</param>
                                             <param id="1" name="Value">&quot;ProcPlayerMovementTouchInput&quot;</param>
@@ -115,7 +120,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="6412486179240296" title="Input event initiators">
+                <event-group description="" sid="6412486179240296" title="Input event initiators">
                     <sub-events>
                         <comment>Completely blocks player input processing. Be careful when use. UX may suffer heavily.</comment>
                         <event-group collapsed="1" description="" sid="2003175553896425" title="Input state machine block/unblock">
@@ -252,7 +257,7 @@
                 </event-group>
                 <event-group collapsed="1" description="" sid="678010174450329" title="Input state machine proc loop">
                     <sub-events>
-                        <comment>param(0): input event name. One of &quot;BLOCK&quot;, &quot;UNBLOCK&quot;, &quot;TOUCH_START&quot;, &quot;TOUCHING&quot;, &quot;TOUCH_END&quot;, &quot;TOUCH_CANCEL&quot;, &quot;KBD_TOUCHING&quot;&#x0D;&#x0A;param(1): logical touch id. -1 on events that doesn&apos;t provide touch id.</comment>
+                        <comment>param(0): input event name. One of &quot;BLOCK&quot;, &quot;UNBLOCK&quot;, &quot;TOUCH_START&quot;, &quot;TOUCHING&quot;, &quot;TOUCH_END&quot;, &quot;TOUCH_CANCEL&quot;, &quot;KBD_TOUCHING&quot;, &quot;KBD_TOUCH_END&quot;</comment>
                         <event-block collapsed="1" sid="9257404603565276">
                             <conditions>
                                 <condition id="0" name="On function" sid="9444283504746207" type="Function">
@@ -299,7 +304,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="1968544516879905" title="Input event handlers">
+                <event-group description="" sid="1968544516879905" title="Input event handlers">
                     <sub-events>
                         <event-block collapsed="1" sid="8912003593169878">
                             <conditions>
@@ -392,7 +397,7 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block collapsed="1" sid="1686322096370056">
+                                <event-block sid="1686322096370056">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="7019353003900697" type="System">
                                             <param id="0" name="First value">Function.Param(0)</param>
@@ -446,6 +451,124 @@
                                                     <param id="1" name="Parameter {n}"></param>
                                                 </action>
                                                 <action id="1" name="Set return value" sid="1053334449266973" type="Function">
+                                                    <param id="0" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8132614786101144">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8676506402792921" type="Function">
+                                    <param id="0" name="Name">&quot;ProcQuestKeyboardInput&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5802801695735633">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="3048690018630525" type="System">
+                                            <param id="0" name="First value">Function.Param(0)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;KBD_TOUCH_END&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="8664434063285023">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="5305709146926775" type="Keyboard">
+                                                    <param id="0" name="Key">13 (Return)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="379500743598315" type="Function">
+                                                    <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;NEXT&quot;{###}&quot;Player&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="5800932139243603" type="Function">
+                                                    <param id="0" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="3599668816687052">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="541640082706004" type="Keyboard">
+                                                    <param id="0" name="Key">8 (Backspace)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="5981223486867445" type="Function">
+                                                    <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;BACK&quot;{###}&quot;Player&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="7029484105976994" type="Function">
+                                                    <param id="0" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6731176747724161">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="5217000146421768" type="Keyboard">
+                                                    <param id="0" name="Key">49 (1)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="1258352328670129" type="Function">
+                                                    <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;ANSWER1_CLICKED&quot;{###}&quot;Player&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="3140599018540508" type="Function">
+                                                    <param id="0" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="54744855154513">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="5128874401727358" type="Keyboard">
+                                                    <param id="0" name="Key">50 (2)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="7378778145577811" type="Function">
+                                                    <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;ANSWER2_CLICKED&quot;{###}&quot;Player&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="3543870595205287" type="Function">
+                                                    <param id="0" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5416880238708661">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="9629074736901786" type="Keyboard">
+                                                    <param id="0" name="Key">51 (3)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="6753954487048615" type="Function">
+                                                    <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;ANSWER3_CLICKED&quot;{###}&quot;Player&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="9102907052970103" type="Function">
+                                                    <param id="0" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2127168505823118">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="4047060335930902" type="Keyboard">
+                                                    <param id="0" name="Key">52 (4)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="6660007307134872" type="Function">
+                                                    <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;ANSWER4_CLICKED&quot;{###}&quot;Player&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="8117325215482997" type="Function">
                                                     <param id="0" name="Value">1</param>
                                                 </action>
                                             </actions>
