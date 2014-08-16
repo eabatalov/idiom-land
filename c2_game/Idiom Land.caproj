@@ -2653,7 +2653,7 @@
                     </object-folder>
                 </object-folder>
                 <object-folder expanded="1" name="VisualObjects">
-                    <object-folder expanded="0" name="B">
+                    <object-folder expanded="1" name="B">
                         <object-folder expanded="1" name="Benches" />
                         <object-folder expanded="0" name="Backgrounds">
                             <object-type name="CityBackground" sid="1652638420409458">
@@ -2700,6 +2700,27 @@
                                                 <point x="0.5" y="1" />
                                                 <point x="0" y="1" />
                                                 <point x="0" y="0.188235" />
+                                            </collision-poly>
+                                        </frame>
+                                    </animation>
+                                </animation-folder>
+                            </object-type>
+                        </object-folder>
+                        <object-folder expanded="1" name="BusStop">
+                            <object-type name="BusStopFront" sid="1675081744863877">
+                                <plugin id="Sprite" />
+                                <animation-folder expanded="1">
+                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5326804231616801" speed="5">
+                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                            <collision-poly>
+                                                <point x="0.323077" y="0.128049" />
+                                                <point x="0.5" y="0.128049" />
+                                                <point x="0.953846" y="0.0182927" />
+                                                <point x="0.892308" y="0.5" />
+                                                <point x="0.892308" y="0.957317" />
+                                                <point x="0.5" y="0.564024" />
+                                                <point x="0.807692" y="0.679878" />
+                                                <point x="0" y="0.5" />
                                             </collision-poly>
                                         </frame>
                                     </animation>
@@ -3987,6 +4008,45 @@
                                                 <point x="0.495146" y="1" />
                                                 <point x="0.0873786" y="0.92437" />
                                                 <point x="0.038835" y="0.495798" />
+                                            </collision-poly>
+                                        </frame>
+                                    </animation>
+                                </animation-folder>
+                            </object-type>
+                        </object-folder>
+                        <object-folder expanded="1" name="TicketBooth">
+                            <object-type name="TicketBooth" sid="7556900340751483">
+                                <plugin id="Sprite" />
+                                <animation-folder expanded="1">
+                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="669283905177371" speed="5">
+                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                            <collision-poly>
+                                                <point x="0.0769231" y="0.0361446" />
+                                                <point x="0.5" y="0" />
+                                                <point x="0.923077" y="0.0361446" />
+                                                <point x="0.923077" y="0.5" />
+                                                <point x="0.987179" y="0.993976" />
+                                                <point x="0.0128205" y="0.993976" />
+                                                <point x="0.0769231" y="0.5" />
+                                            </collision-poly>
+                                        </frame>
+                                    </animation>
+                                </animation-folder>
+                            </object-type>
+                        </object-folder>
+                        <object-folder expanded="1" name="TaxiFront">
+                            <object-type name="TaxiFront" sid="5570161768598262">
+                                <plugin id="Sprite" />
+                                <animation-folder expanded="1">
+                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5551090169098353" speed="5">
+                                        <frame duration="1" hotspotX="0.5" hotspotY="0.501587">
+                                            <collision-poly>
+                                                <point x="0.03" y="0.00952381" />
+                                                <point x="0.97" y="0.00952381" />
+                                                <point x="1" y="0.498413" />
+                                                <point x="1" y="1" />
+                                                <point x="0" y="1" />
+                                                <point x="0" y="0.498413" />
                                             </collision-poly>
                                         </frame>
                                     </animation>
@@ -5959,32 +6019,40 @@
                         </container>
                         <animation-folder expanded="1">
                             <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1919068225865451" speed="1">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.592105">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.590909">
                                     <collision-poly>
-                                        <point x="0.382842" y="0.23009" />
-                                        <point x="0.617158" y="0.23009" />
-                                        <point x="0.906148" y="0.80973" />
-                                        <point x="0.5" y="0.970741" />
-                                        <point x="0.0938524" y="0.80973" />
+                                        <point x="0.0483871" y="0.272727" />
+                                        <point x="0.5" y="0" />
+                                        <point x="0.951613" y="0.272727" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.951613" y="0.727273" />
+                                        <point x="0.5" y="1" />
+                                        <point x="0.0483871" y="0.727273" />
+                                        <point x="0" y="0.5" />
                                     </collision-poly>
                                 </frame>
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.578947">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.590909">
                                     <collision-poly>
-                                        <point x="0.380952" y="0.381579" />
-                                        <point x="0.619048" y="0.381579" />
-                                        <point x="0.912698" y="0.855263" />
-                                        <point x="0.5" y="0.986842" />
-                                        <point x="0.0873016" y="0.855263" />
+                                        <point x="0.0483871" y="0.272727" />
+                                        <point x="0.5" y="0" />
+                                        <point x="0.951613" y="0.272727" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.951613" y="0.727273" />
+                                        <point x="0.5" y="1" />
+                                        <point x="0.0483871" y="0.727273" />
+                                        <point x="0" y="0.5" />
                                     </collision-poly>
                                 </frame>
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.578947">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.590909">
                                     <collision-poly>
-                                        <point x="0.388889" y="0.394737" />
-                                        <point x="0.5" y="0.381579" />
-                                        <point x="0.611111" y="0.394737" />
-                                        <point x="0.920635" y="0.868421" />
-                                        <point x="0.5" y="0.986842" />
-                                        <point x="0.0873016" y="0.855263" />
+                                        <point x="0.0483871" y="0.272727" />
+                                        <point x="0.5" y="0" />
+                                        <point x="0.951613" y="0.272727" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.951613" y="0.727273" />
+                                        <point x="0.5" y="1" />
+                                        <point x="0.0483871" y="0.727273" />
+                                        <point x="0" y="0.5" />
                                     </collision-poly>
                                 </frame>
                             </animation>
@@ -6064,6 +6132,24 @@
             </object-folder>
             <object-folder expanded="1" name="2demo_jump" />
         </object-folder>
+        <object-type name="Sprite" sid="9331083043378328">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5381206696781569" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0340314" y="0.0722222" />
+                            <point x="0.5" y="0" />
+                            <point x="0.965969" y="0.0722222" />
+                            <point x="0.955497" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.0078534" y="0.983333" />
+                            <point x="0.0445026" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Levels_Common_VisualObjects_F_Foxy_FoxySimpleFamily" plugin-id="Sprite" sid="3940617487415505">
