@@ -679,8 +679,8 @@
             </object-type>
         </object-folder>
         <object-folder expanded="1" name="Levels">
-            <object-folder expanded="0" name="1demo">
-                <object-folder expanded="0" name="Stages">
+            <object-folder expanded="1" name="1demo">
+                <object-folder expanded="1" name="Stages">
                     <object-folder expanded="0" name="Intro">
                         <object-folder expanded="0" name="Helpers">
                             <object-type name="JumpHelper" sid="3052283865919932">
@@ -971,7 +971,7 @@
                             </animation-folder>
                         </object-type>
                     </object-folder>
-                    <object-folder expanded="0" name="Carousel">
+                    <object-folder expanded="1" name="Carousel">
                         <object-folder expanded="0" name="captain sprites">
                             <object-type name="captain_feet1" sid="1876159266587217">
                                 <plugin id="Sprite" />
@@ -1439,15 +1439,16 @@
                                 </animation>
                             </animation-folder>
                         </object-type>
-                        <object-type name="CarouselBottom" sid="8939126371207301">
+                        <object-type name="CarouselFront" sid="8939126371207301">
                             <plugin id="Sprite" />
                             <animation-folder expanded="1">
                                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7018917901112319" speed="5">
-                                    <frame duration="1" hotspotX="0.501538" hotspotY="0.5">
+                                    <frame duration="1" hotspotX="0.501253" hotspotY="0.501129">
                                         <collision-poly>
-                                            <point x="0.329231" y="0.289189" />
-                                            <point x="0.498462" y="0.0108108" />
+                                            <point x="0.328321" y="0.295711" />
+                                            <point x="0.498747" y="0.0158014" />
                                             <point x="1" y="1" />
+                                            <point x="0.498747" y="0.0722348" />
                                             <point x="0" y="1" />
                                         </collision-poly>
                                     </frame>
@@ -1529,6 +1530,21 @@
                                             <point x="0.5" y="0.979112" />
                                             <point x="0.0366667" y="0.942559" />
                                             <point x="0.0383333" y="0.498695" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="CarouselBottom" sid="3641259345881118">
+                            <plugin id="Sprite" />
+                            <animation-folder expanded="1">
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2329697326334886" speed="5">
+                                    <frame duration="1" hotspotX="0.502488" hotspotY="0.501424">
+                                        <collision-poly>
+                                            <point x="0.358209" y="0.205128" />
+                                            <point x="0.497512" y="0.025641" />
+                                            <point x="0.99005" y="0.994302" />
+                                            <point x="0" y="1" />
                                         </collision-poly>
                                     </frame>
                                 </animation>
@@ -2626,7 +2642,7 @@
                         </object-type>
                     </object-folder>
                 </object-folder>
-                <object-folder expanded="0" name="VisualObjects">
+                <object-folder expanded="1" name="VisualObjects">
                     <object-folder expanded="0" name="B">
                         <object-folder expanded="1" name="Benches" />
                         <object-folder expanded="0" name="Backgrounds">
@@ -3752,32 +3768,8 @@
                             </object-type>
                         </object-folder>
                     </object-folder>
-                    <object-folder expanded="0" name="M">
+                    <object-folder expanded="1" name="M">
                         <object-folder expanded="1" name="Markers">
-                            <object-type name="MarkerJump" sid="4853427643974434">
-                                <plugin id="Sprite" />
-                                <behaviors>
-                                    <behavior-type name="Sine" sid="6166288454253121">
-                                        <behavior id="Sin" />
-                                    </behavior-type>
-                                </behaviors>
-                                <animation-folder expanded="1">
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7647370528537248" speed="5">
-                                        <frame duration="1" hotspotX="0.501961" hotspotY="0.5">
-                                            <collision-poly>
-                                                <point x="0.0235294" y="0.0789474" />
-                                                <point x="0.498039" y="0" />
-                                                <point x="0.929412" y="0.236842" />
-                                                <point x="1" y="0.5" />
-                                                <point x="0.929412" y="0.763158" />
-                                                <point x="0.498039" y="1" />
-                                                <point x="0.0235294" y="0.921053" />
-                                                <point x="0" y="0.5" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
                             <object-type name="MarkerGoForward" sid="673420047858757">
                                 <plugin id="Sprite" />
                                 <behaviors>
@@ -3798,6 +3790,36 @@
                                                 <point x="0.844262" y="0.77381" />
                                                 <point x="0.5" y="0.619048" />
                                                 <point x="0" y="0.5" />
+                                            </collision-poly>
+                                        </frame>
+                                    </animation>
+                                </animation-folder>
+                            </object-type>
+                            <object-type name="MarkerJump" sid="6336690234256762">
+                                <plugin id="Sprite" />
+                                <animation-folder expanded="1">
+                                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1037728638250112" speed="0.5">
+                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                            <collision-poly>
+                                                <point x="0.125" y="0.0815217" />
+                                                <point x="0.5" y="0.0652174" />
+                                                <point x="0.533333" y="0.304348" />
+                                                <point x="0.5" y="0.5" />
+                                                <point x="0.85" y="0.902174" />
+                                                <point x="0.3" y="0.804348" />
+                                                <point x="0.125" y="0.5" />
+                                            </collision-poly>
+                                        </frame>
+                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                            <collision-poly>
+                                                <point x="0.108333" y="0.0706522" />
+                                                <point x="0.5" y="0.0543478" />
+                                                <point x="0.533333" y="0.304348" />
+                                                <point x="0.508333" y="0.5" />
+                                                <point x="0.858333" y="0.907609" />
+                                                <point x="0.5" y="0.842391" />
+                                                <point x="0.283333" y="0.815217" />
+                                                <point x="0.116667" y="0.5" />
                                             </collision-poly>
                                         </frame>
                                     </animation>
@@ -6035,7 +6057,7 @@
     <event-folder expanded="1">
         <event-folder expanded="1" name="Levels">
             <event-folder expanded="1" name="Common">
-                <event-folder expanded="1" name="QuestEngine">
+                <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
                     <event-sheet>QuestUInit.xml</event-sheet>
