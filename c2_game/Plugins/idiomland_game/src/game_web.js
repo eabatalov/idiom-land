@@ -16,7 +16,8 @@ QuestGame.bootstrap({
     },
 
     levelReplaySaver : {
-        className : 'AjaxServerLevelReplaySaver',
+        //className : 'AjaxServerLevelReplaySaver',
+        className : 'AjaxServerLevelReplaySaverOnAbnormalExit',
         params : ["'http://idiomland.com/replay_save.php'"]
     },
 
