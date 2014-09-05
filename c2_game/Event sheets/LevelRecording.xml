@@ -5,11 +5,17 @@
     <events>
         <event-group description="" sid="3260674428638226" title="Local var group 6">
             <sub-events>
-                <variable constant="1" name="IS_RECORDING_ENABLED" sid="4974372175168924" static="1" type="number">1</variable>
+                <variable constant="1" name="CONFIG_IS_RECORDING_ENABLED" sid="4974372175168924" static="1" type="number">1</variable>
+                <variable constant="0" name="IS_RECORDING_ENABLED" sid="6244777087061597" static="1" type="number">0</variable>
                 <event-block sid="5506964562092859">
                     <conditions>
                         <condition id="0" name="On function" sid="7282551356636508" type="Function">
                             <param id="0" name="Name">&quot;LevelFinished&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2306040793315326" type="System">
+                            <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -26,6 +32,10 @@
                         <action id="0" name="Call function" sid="4125423442299847" type="Function">
                             <param id="0" name="Name">&quot;RecordingStarted&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5276580579234256" type="System">
+                            <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="14" name="Log" sid="2721675147438611" type="Browser">
                             <param id="0" name="Type">0</param>
@@ -49,6 +59,10 @@
                             <param id="0" name="Name">&quot;RecordingStopped&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-9" name="Set value" sid="188926662840103" type="System">
+                            <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="7024565452734747">
@@ -67,7 +81,7 @@
                                     <param id="2" name="Second value">&quot;true&quot;</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="8800361408606986" type="System">
-                                    <param id="0" name="First value">IS_RECORDING_ENABLED</param>
+                                    <param id="0" name="First value">CONFIG_IS_RECORDING_ENABLED</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">0</param>
                                 </condition>
