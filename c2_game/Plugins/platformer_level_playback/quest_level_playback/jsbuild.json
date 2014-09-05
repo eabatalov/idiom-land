@@ -1,20 +1,19 @@
 {
     "module" : {
-        "name" : "c2-plugin-jump-level-playback",
+        "name" : "c2-plugin-quest-level-playback",
         "description" : "",
         "outDir" : ".",
         "dependencies" : {
             "base" : {
                 "lib-quest-game" : [],
                 "lib-quest-level-runtime" : [],
-                "lib-jump-level-recording" : [],
-                "lib-jump-level-playback" : [],
-                "c2-plugin-quest-level-playback" : []
+                "lib-quest-level-recording" : [],
+                "lib-quest-level-playback" : []
              }
         },
         "src" : {
             "base" : [
-                "src/JumpLevelReplayPlayerController.js"
+                "src/LevelGameplayPlayerController.js"
             ]
         }
     }

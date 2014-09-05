@@ -7,6 +7,9 @@ To make plugins avaliable in Construct2:
 6. mklink /D jump_level_playback IDIOM_LAND_REPO\c2_game\Plugins\jump_level_playback
 7. mklink /D jump_level_recording IDIOM_LAND_REPO\c2_game\Plugins\jump_level_recording
 8. mklink /D level_idiom_progress_tracker IDIOM_LAND_REPO\c2_game\Plugins\level_idiom_progress_tracker
+9. mklink /D platformer_level_playback IDIOM_LAND_REPO\c2_game\Plugins\platformer_level_playback
+10. mklink /D platformer_level_recording IDIOM_LAND_REPO\c2_game\Plugins\platformer_level_recording
+
 
 Assembly project:
 1. Run "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\VsDevCmd.bat"

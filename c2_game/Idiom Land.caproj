@@ -8,7 +8,7 @@
     <author-website>http://idiomland.com</author-website>
     <app-id>com.idiomland</app-id>
     <unique-id>1qpq9otxp4r4o</unique-id>
-    <saved-with-version>17300</saved-with-version>
+    <saved-with-version>17800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -22,6 +22,8 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Eugene/Idiomland" id="LevelIdiomProgressTrackingPlugin" version="0.100000001">LevelIdiomProgressTracker</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Eugene/Learzing" id="PlatformerLevelPlaybackPlugin" version="0.100000001">Platformer level playback</plugin>
+        <plugin author="Eugene/Learzing" id="PlatformerLevelRecordingPlugin" version="0.100000001">Platformer level recording</plugin>
         <plugin author="Eugene/Learzing" id="QuestGamePlugin" version="0.100000001">Quest game</plugin>
         <plugin author="Eugene/Learzing" id="QuestInAppPurchasePlugin" version="0.100000001">Quest in-app purchase</plugin>
         <plugin author="Eugene/Learzing" id="QuestLevelPlaybackPlugin" version="0.100000001">Quest level playback</plugin>
@@ -53,6 +55,7 @@
         <height>500</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
     <first-layout>MainMenu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
@@ -679,8 +682,8 @@
             </object-type>
         </object-folder>
         <object-folder expanded="1" name="Levels">
-            <object-folder expanded="1" name="1demo">
-                <object-folder expanded="1" name="Stages">
+            <object-folder expanded="0" name="1demo">
+                <object-folder expanded="0" name="Stages">
                     <object-folder expanded="0" name="Intro">
                         <object-folder expanded="0" name="Helpers">
                             <object-type name="JumpHelper" sid="3052283865919932">
@@ -2685,7 +2688,7 @@
                         </object-type>
                     </object-folder>
                 </object-folder>
-                <object-folder expanded="1" name="VisualObjects">
+                <object-folder expanded="0" name="VisualObjects">
                     <object-folder expanded="1" name="B">
                         <object-folder expanded="1" name="Benches" />
                         <object-folder expanded="0" name="Backgrounds">
@@ -6144,6 +6147,23 @@
                             </animation>
                         </animation-folder>
                     </object-type>
+                    <object-type name="JumpLevelLogic" sid="7437827936985691">
+                        <plugin id="JumpLevelLogicPlugin" />
+                    </object-type>
+                    <object-type name="JumpLevelPlayback" sid="819652268829102">
+                        <plugin id="JumpLevelPlaybackPlugin" />
+                    </object-type>
+                    <object-type name="JumpLevelRecording" sid="9956620667216801">
+                        <plugin id="JumpLevelRecordingPlugin" />
+                    </object-type>
+                </object-folder>
+                <object-folder expanded="0" name="QuestLevel">
+                    <object-type name="PlatformerLevelPlayback" sid="9019038290632868">
+                        <plugin id="PlatformerLevelPlaybackPlugin" />
+                    </object-type>
+                    <object-type name="PlatformerLevelRecording" sid="9866090684467371">
+                        <plugin id="PlatformerLevelRecordingPlugin" />
+                    </object-type>
                 </object-folder>
                 <object-type name="LevelIdiomProgressTracker" sid="504992448476046">
                     <plugin id="LevelIdiomProgressTrackingPlugin" />
@@ -6153,15 +6173,6 @@
                 </object-type>
                 <object-type name="IdiomlandLevels" sid="8938034631113359">
                     <plugin id="IdiomlandLevelsPlugin" />
-                </object-type>
-                <object-type name="JumpLevelLogic" sid="7437827936985691">
-                    <plugin id="JumpLevelLogicPlugin" />
-                </object-type>
-                <object-type name="JumpLevelRecording" sid="9956620667216801">
-                    <plugin id="JumpLevelRecordingPlugin" />
-                </object-type>
-                <object-type name="JumpLevelPlayback" sid="819652268829102">
-                    <plugin id="JumpLevelPlaybackPlugin" />
                 </object-type>
             </object-folder>
             <object-folder expanded="1" name="2demo_jump" />
@@ -6302,7 +6313,7 @@
     <event-folder expanded="1">
         <event-folder expanded="1" name="Levels">
             <event-folder expanded="1" name="Common">
-                <event-folder expanded="0" name="QuestEngine">
+                <event-folder expanded="1" name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
                     <event-sheet>QuestUInit.xml</event-sheet>
@@ -6316,11 +6327,9 @@
                     <event-sheet>QuestStageChangers.xml</event-sheet>
                     <event-sheet>QuestAutomaticTalkStarters.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="1" name="Controls">
+                <event-folder expanded="0" name="Controls">
                     <event-folder expanded="0" name="LevelProgress">
                         <event-sheet>IdiomProgress.xml</event-sheet>
-                        <event-sheet>CoinsProgress.xml</event-sheet>
-                        <event-sheet>SecretsProgress.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="0" name="Navigation">
                         <event-sheet>NavigationMainMenuBtn.xml</event-sheet>
@@ -6354,7 +6363,7 @@
                         </event-folder>
                     </event-folder>
                 </event-folder>
-                <event-folder expanded="0" name="JumpLevel">
+                <event-folder expanded="1" name="JumpLevel">
                     <event-folder expanded="0" name="GameHelp">
                         <event-sheet>LevelJumpGameHelp.xml</event-sheet>
                     </event-folder>
@@ -6366,12 +6375,16 @@
                     <event-sheet>LevelJumpPlayback.xml</event-sheet>
                     <event-sheet>LevelJumpRecording.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="0" name="QuestLevel">
-                    <event-folder expanded="1" name="Controls">
+                <event-folder expanded="1" name="QuestLevel">
+                    <event-folder expanded="0" name="Controls">
                         <event-sheet>LevelQuestGameHelp.xml</event-sheet>
+                        <event-sheet>LevelQuestCoinsProgress.xml</event-sheet>
+                        <event-sheet>LevelQuestSecretsProgress.xml</event-sheet>
                     </event-folder>
                     <event-sheet>LevelQuestCommon.xml</event-sheet>
                     <event-sheet>LevelQuestInput.xml</event-sheet>
+                    <event-sheet>LevelQuestRecording.xml</event-sheet>
+                    <event-sheet>LevelQuestPlayback.xml</event-sheet>
                 </event-folder>
                 <event-sheet>LevelCommon.xml</event-sheet>
                 <event-sheet>LevelRecording.xml</event-sheet>
@@ -6410,7 +6423,7 @@
                 <event-sheet>2demo_jump.xml</event-sheet>
             </event-folder>
         </event-folder>
-        <event-folder expanded="1" name="Menus">
+        <event-folder expanded="0" name="Menus">
             <event-folder expanded="0" name="LevelResults">
                 <event-sheet>LevelResultsBriefMain.xml</event-sheet>
                 <event-sheet>LevelResultsDetailedMain.xml</event-sheet>
@@ -6420,7 +6433,7 @@
             <event-folder expanded="0" name="MainMenu">
                 <event-sheet>MainMenuMain.xml</event-sheet>
             </event-folder>
-            <event-folder expanded="1" name="LevelsMenu">
+            <event-folder expanded="0" name="LevelsMenu">
                 <event-sheet>LevelsMenuMain.xml</event-sheet>
             </event-folder>
             <event-folder expanded="0" name="LevelIdioms">
@@ -6451,6 +6464,8 @@
         <global-instance type="QuestLevelPlayback" uid="346" />
         <global-instance type="JumpLevelRecording" uid="353" />
         <global-instance type="JumpLevelPlayback" uid="354" />
+        <global-instance type="PlatformerLevelPlayback" uid="265" />
+        <global-instance type="PlatformerLevelRecording" uid="266" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

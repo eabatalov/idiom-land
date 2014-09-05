@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelQuestCoinsProgress</name>
+    <events>
+        <variable constant="0" name="COINS_OVERALL" sid="4632593700030734" static="0" type="number">0</variable>
+        <variable constant="0" name="COINS_COLLECTED" sid="7852061145548592" static="0" type="number">0</variable>
+        <event-group description="" sid="5351671599109888" title="Local var scope 11">
+            <sub-events>
+                <variable constant="0" name="ENABLE_COINS_COLLECTION" sid="8823174541437515" static="1" type="number">0</variable>
+                <event-block sid="3296884358783962">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8727229141355815" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7321083069473894" type="System">
+                            <param id="0" name="Variable">COINS_OVERALL</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7822079475067109" type="System">
+                            <param id="0" name="Variable">COINS_COLLECTED</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="511641768038786" type="System">
+                            <param id="0" name="Variable">ENABLE_COINS_COLLECTION</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block collapsed="1" sid="4093737274702246">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7583269899174511" type="Function">
+                            <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4110741430796485" type="System">
+                            <param id="0" name="Variable">ENABLE_COINS_COLLECTION</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1769648810230721">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1549395916819256" type="CoinsCounterTxt">
+                                    <param id="0" name="Instance variable">DontAutoShow</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2846376237254982" type="Function">
+                                    <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1311742302483372">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="7878573419032161" type="Coin" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5836210913822026" type="System">
+                            <param id="0" name="Variable">COINS_OVERALL</param>
+                            <param id="1" name="Value">COINS_OVERALL + 1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9920624997865343" type="CoinsCounterTxt">
+                            <param id="0" name="Text">COINS_COLLECTED &amp; &quot;/&quot; &amp; COINS_OVERALL</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3913522716553686">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6382257927689729" type="Coin">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="1609508385220633" type="Coin" />
+                        <condition id="-14" name="Compare variable" sid="2259460946427908" type="System">
+                            <param id="0" name="Variable">ENABLE_COINS_COLLECTION</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4974442960124215" type="Function">
+                            <param id="0" name="Name">&quot;CoinCollected&quot;</param>
+                            <param id="1" name="Parameter {n}">Coin.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7274949143533471">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1336694382311913" type="Function">
+                            <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1260498786217375" type="CoinsCounterTxt">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2643534583739126" type="CoinsCounterBg">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5782202832791717">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3769686537358707" type="Function">
+                            <param id="0" name="Name">&quot;HideCoinsCounter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="368602629716394" type="CoinsCounterTxt">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="135999759060467" type="CoinsCounterBg">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>param(0): coin object UID</comment>
+                <event-block sid="5307617833429292">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3738437057969655" type="Function">
+                            <param id="0" name="Name">&quot;CoinCollected&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="8526522858262572" type="Coin">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="2724559086376545" type="Coin">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1879941889917934" type="Coin" />
+                        <action id="-9" name="Set value" sid="4056636921105504" type="System">
+                            <param id="0" name="Variable">COINS_COLLECTED</param>
+                            <param id="1" name="Value">COINS_COLLECTED + 1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7342377968102071" type="CoinsCounterTxt">
+                            <param id="0" name="Text">COINS_COLLECTED &amp; &quot;/&quot; &amp; COINS_OVERALL</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8517277183558699" type="Function">
+                            <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;ticket_collected&quot;{###}&quot;Player&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="614272971958554">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5741287871297043" type="Function">
+                            <param id="0" name="Name">&quot;LevelQuestCoinsPlaybackModeEnable&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1943611459569972" type="System">
+                            <param id="0" name="Variable">ENABLE_COINS_COLLECTION</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
