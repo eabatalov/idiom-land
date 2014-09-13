@@ -1,3 +1,9 @@
+// === CONFIGURE THE REPLAYS ===
+var REPLAY_CLIENT_CONFIG = {
+    SERVER_URL : "http://idiomland.com:20322"
+};
+
+// === START THE GAME ===
 QuestGame.bootstrap({   
     game : { 
         className : 'IdiomLandGame',
@@ -13,11 +19,6 @@ QuestGame.bootstrap({
     levelLoader : { 
         className : 'IdiomLandLevelLoader',
         params : ["new AjaxQuestScriptLoader('')"]
-    },
-
-    levelReplaySaver : {
-        className : 'AjaxServerLevelReplaySaver',
-        params : ["'http://idiomland.com/replay_save.php'"]
     },
 
     levelReplayLoader : {
