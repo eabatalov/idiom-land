@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>LevelQuestCommon</name>
+    <name>PlatformerLevelCommon</name>
     <events>
         <include>LevelCommon</include>
+        <include>IdiomLandLevel</include>
         <include>QuestStageChangers</include>
         <include>QuestAutomaticTalkStarters</include>
         <include>IdiomDialogCompletion</include>
-        <include>LevelQuestInput</include>
-        <include>LevelQuestRecording</include>
-        <include>LevelQuestPlayback</include>
+        <include>PlatformerLevelInput</include>
+        <include>PlatformerLevelRecording</include>
+        <include>PlatformerLevelPlayback</include>
         <event-group description="" sid="3039776007261733" title="Control">
             <sub-events>
-                <include>LevelQuestGameHelp</include>
-                <include>LevelQuestCoinsProgress</include>
-                <include>LevelQuestSecretsProgress</include>
+                <include>PlatformerLevelGameHelp</include>
+                <include>PlatformerLevelCoinsProgress</include>
+                <include>PlatformerLevelSecretsProgress</include>
             </sub-events>
         </event-group>
     </events>

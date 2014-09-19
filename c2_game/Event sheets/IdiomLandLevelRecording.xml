@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>LevelQuestRecording</name>
+    <name>IdiomLandLevelRecording</name>
     <events>
-        <event-group description="" sid="4667166460002834" title="Local var scope 10">
+        <event-group description="" sid="6236950123704572" title="Local var scope 12">
             <sub-events>
                 <variable constant="0" name="IS_RECORDING_NOW" sid="781492883616496" static="1" type="number">0</variable>
                 <event-block sid="9707098237478343">
@@ -43,7 +43,7 @@
                             <param id="0" name="Variable">IS_RECORDING_NOW</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="100" name="Stop level gameplay recording" sid="7178540831990693" type="PlatformerLevelRecording" />
+                        <action id="100" name="Stop level gameplay recording" sid="7178540831990693" type="IdiomlandLevelRecording" />
                     </actions>
                 </event-block>
                 <event-block sid="9315247944899188">
@@ -56,24 +56,10 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="8787407138216891">
-                            <conditions>
-                                <condition id="0" name="On function" sid="9464790157517889" type="Function">
-                                    <param id="0" name="Name">&quot;CoinCollected&quot;</param>
-                                </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="3476555853710864" type="Coin">
-                                    <param id="0" name="Unique ID">Function.Param(0)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Record coin collected event" sid="2965672741546335" type="PlatformerLevelRecording">
-                                    <param id="0" name="Coin UID">Function.Param(0)</param>
-                                </action>
-                                <action id="14" name="Log" sid="3503671638250637" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;CoinCollected&quot;</param>
-                                </action>
-                            </actions>
+                        <comment>No special idiomland level recording for now</comment>
+                        <event-block sid="1910397650206186">
+                            <conditions />
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>

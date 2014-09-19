@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandGamePlugin" version="0.100000001">Idiomland game</plugin>
+        <plugin author="Eugene/Learzing" id="IdiomlandLevelRecordingPlugin" version="0.100000001">Idiomland level recording</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandLevelsPlugin" version="0.100000001">Idiomland levels</plugin>
         <plugin author="Eugene/Idiomland" id="JumpLevelLogicPlugin" version="0.100000001">JumpLevelLogic</plugin>
         <plugin author="Eugene/Learzing" id="JumpLevelPlaybackPlugin" version="0.100000001">Jump level playback</plugin>
@@ -6174,6 +6175,9 @@
                 <object-type name="IdiomlandLevels" sid="8938034631113359">
                     <plugin id="IdiomlandLevelsPlugin" />
                 </object-type>
+                <object-type name="IdiomlandLevelRecording" sid="9614323482789858">
+                    <plugin id="IdiomlandLevelRecordingPlugin" />
+                </object-type>
             </object-folder>
             <object-folder expanded="1" name="2demo_jump" />
         </object-folder>
@@ -6313,7 +6317,7 @@
     <event-folder expanded="1">
         <event-folder expanded="1" name="Levels">
             <event-folder expanded="1" name="Common">
-                <event-folder expanded="1" name="QuestEngine">
+                <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
                     <event-sheet>QuestUInit.xml</event-sheet>
@@ -6327,8 +6331,8 @@
                     <event-sheet>QuestStageChangers.xml</event-sheet>
                     <event-sheet>QuestAutomaticTalkStarters.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="0" name="Controls">
-                    <event-folder expanded="0" name="LevelProgress">
+                <event-folder expanded="1" name="Controls">
+                    <event-folder expanded="1" name="LevelProgress">
                         <event-sheet>IdiomProgress.xml</event-sheet>
                     </event-folder>
                     <event-folder expanded="0" name="Navigation">
@@ -6363,7 +6367,7 @@
                         </event-folder>
                     </event-folder>
                 </event-folder>
-                <event-folder expanded="1" name="JumpLevel">
+                <event-folder expanded="0" name="JumpLevel">
                     <event-folder expanded="0" name="GameHelp">
                         <event-sheet>LevelJumpGameHelp.xml</event-sheet>
                     </event-folder>
@@ -6375,16 +6379,20 @@
                     <event-sheet>LevelJumpPlayback.xml</event-sheet>
                     <event-sheet>LevelJumpRecording.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="1" name="QuestLevel">
+                <event-folder expanded="1" name="PlatformerLevel">
                     <event-folder expanded="0" name="Controls">
-                        <event-sheet>LevelQuestGameHelp.xml</event-sheet>
-                        <event-sheet>LevelQuestCoinsProgress.xml</event-sheet>
-                        <event-sheet>LevelQuestSecretsProgress.xml</event-sheet>
+                        <event-sheet>PlatformerLevelGameHelp.xml</event-sheet>
+                        <event-sheet>PlatformerLevelCoinsProgress.xml</event-sheet>
+                        <event-sheet>PlatformerLevelSecretsProgress.xml</event-sheet>
                     </event-folder>
-                    <event-sheet>LevelQuestCommon.xml</event-sheet>
-                    <event-sheet>LevelQuestInput.xml</event-sheet>
-                    <event-sheet>LevelQuestRecording.xml</event-sheet>
-                    <event-sheet>LevelQuestPlayback.xml</event-sheet>
+                    <event-sheet>PlatformerLevelCommon.xml</event-sheet>
+                    <event-sheet>PlatformerLevelInput.xml</event-sheet>
+                    <event-sheet>PlatformerLevelRecording.xml</event-sheet>
+                    <event-sheet>PlatformerLevelPlayback.xml</event-sheet>
+                </event-folder>
+                <event-folder expanded="0" name="IdiomLandLevel">
+                    <event-sheet>IdiomLandLevel.xml</event-sheet>
+                    <event-sheet>IdiomLandLevelRecording.xml</event-sheet>
                 </event-folder>
                 <event-sheet>LevelCommon.xml</event-sheet>
                 <event-sheet>LevelRecording.xml</event-sheet>
@@ -6423,8 +6431,8 @@
                 <event-sheet>2demo_jump.xml</event-sheet>
             </event-folder>
         </event-folder>
-        <event-folder expanded="1" name="Menus">
-            <event-folder expanded="1" name="LevelResults">
+        <event-folder expanded="0" name="Menus">
+            <event-folder expanded="0" name="LevelResults">
                 <event-sheet>LevelResultsBriefMain.xml</event-sheet>
                 <event-sheet>LevelResultsDetailedMain.xml</event-sheet>
                 <event-sheet>LevelResultsCommon.xml</event-sheet>
@@ -6466,6 +6474,7 @@
         <global-instance type="JumpLevelPlayback" uid="354" />
         <global-instance type="PlatformerLevelPlayback" uid="265" />
         <global-instance type="PlatformerLevelRecording" uid="266" />
+        <global-instance type="IdiomlandLevelRecording" uid="267" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

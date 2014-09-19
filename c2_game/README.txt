@@ -3,12 +3,13 @@ To make plugins avaliable in Construct2:
 2. cd "C:\Program Files\Construct 2\exporters\html5\plugins"
 3. mklink /D idiomland_game IDIOM_LAND_REPO\c2_game\Plugins\idiomland_game
 4. mklink /D idiomland_levels IDIOM_LAND_REPO\c2_game\Plugins\idiomland_levels
-5. mklink /D jump_level_logic IDIOM_LAND_REPO\c2_game\Plugins\jump_level_logic
-6. mklink /D jump_level_playback IDIOM_LAND_REPO\c2_game\Plugins\jump_level_playback
-7. mklink /D jump_level_recording IDIOM_LAND_REPO\c2_game\Plugins\jump_level_recording
-8. mklink /D level_idiom_progress_tracker IDIOM_LAND_REPO\c2_game\Plugins\level_idiom_progress_tracker
-9. mklink /D platformer_level_playback IDIOM_LAND_REPO\c2_game\Plugins\platformer_level_playback
-10. mklink /D platformer_level_recording IDIOM_LAND_REPO\c2_game\Plugins\platformer_level_recording
+5. mklink /D idiomland_level_recording IDIOM_LAND_REPO\c2_game\Plugins\idiomland_level_recording
+6. mklink /D jump_level_logic IDIOM_LAND_REPO\c2_game\Plugins\jump_level_logic
+7. mklink /D jump_level_playback IDIOM_LAND_REPO\c2_game\Plugins\jump_level_playback
+8. mklink /D jump_level_recording IDIOM_LAND_REPO\c2_game\Plugins\jump_level_recording
+9. mklink /D level_idiom_progress_tracker IDIOM_LAND_REPO\c2_game\Plugins\level_idiom_progress_tracker
+10. mklink /D platformer_level_playback IDIOM_LAND_REPO\c2_game\Plugins\platformer_level_playback
+11. mklink /D platformer_level_recording IDIOM_LAND_REPO\c2_game\Plugins\platformer_level_recording
 
 
 Assembly project:
