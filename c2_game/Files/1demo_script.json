@@ -786,17 +786,17 @@
 					"ver": 1,
 					"id": 722,
 					"type": 1,
-					"label": "OMG! Darth Veid",
+					"label": "OMG! YOU here",
 					"continue": false,
 					"inCondIds": [
 						1722
 					],
 					"outCondIds": [
-						1177
+						3541
 					],
 					"props": {
 						"id": "Player",
-						"text": "Oh my god! Darth Vader! What are you doing here?",
+						"text": "Oh my god!\nYOU are HERE!!!",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -807,14 +807,14 @@
 					"label": "Don't be silly",
 					"continue": false,
 					"inCondIds": [
-						1177
+						3546
 					],
 					"outCondIds": [
-						1178
+						3548
 					],
 					"props": {
 						"id": "veider",
-						"text": "Don’t be silly. It’s just a costume",
+						"text": "Don’t be silly.\nIt’s just a costume",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -825,14 +825,14 @@
 					"label": "Where is Trafalgar square?",
 					"continue": false,
 					"inCondIds": [
-						1178
+						3548
 					],
 					"outCondIds": [
 						1179
 					],
 					"props": {
 						"id": "Player",
-						"text": "I see… Could you tell me where is Trafalgar Square?",
+						"text": "Oh I see… Could you tell me where is Trafalgar Square?",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -1006,29 +1006,11 @@
 						2001
 					],
 					"outCondIds": [
-						2002
+						3682
 					],
 					"props": {
 						"id": "veider",
 						"text": "I've got the power!",
-						"phraseType": "SPEAK"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 1331,
-					"type": 1,
-					"label": "Come to the...",
-					"continue": false,
-					"inCondIds": [
-						2002
-					],
-					"outCondIds": [
-						2102
-					],
-					"props": {
-						"id": "veider",
-						"text": "Come to the\nDark Side!\nWe have balloons!",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -1039,7 +1021,7 @@
 					"label": "I'm saving money",
 					"continue": false,
 					"inCondIds": [
-						2102
+						3682
 					],
 					"outCondIds": [
 						3248
@@ -1135,6 +1117,57 @@
 						"id": "veider",
 						"name": "speak"
 					}
+				},
+				{
+					"ver": 1,
+					"id": 2550,
+					"type": 1,
+					"label": "Come to the...",
+					"continue": false,
+					"inCondIds": [
+						3541
+					],
+					"outCondIds": [
+						3542
+					],
+					"props": {
+						"id": "veider",
+						"text": "Come to the\nDark Side!\nWe have balloons!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2552,
+					"type": 5,
+					"label": "Foxy shock",
+					"continue": true,
+					"inCondIds": [
+						3542
+					],
+					"outCondIds": [
+						3543
+					],
+					"props": {
+						"id": "Player",
+						"name": "shock"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2553,
+					"type": 6,
+					"label": "3 sec",
+					"continue": true,
+					"inCondIds": [
+						3543
+					],
+					"outCondIds": [
+						3546
+					],
+					"props": {
+						"secs": 3
+					}
 				}
 			],
 			"conds": [
@@ -1162,18 +1195,6 @@
 					"ver": 1,
 					"id": 1175,
 					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1177,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1178,
-					"type": 11,
 					"props": {}
 				},
 				{
@@ -1238,23 +1259,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 2002,
-					"type": 2,
-					"props": {
-						"id": "veider"
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2003,
-					"type": 2,
-					"props": {
-						"id": "veider"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2102,
 					"type": 2,
 					"props": {
 						"id": "veider"
@@ -1301,6 +1306,44 @@
 					"id": 3248,
 					"type": 1,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3541,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3542,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3543,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3546,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3548,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3682,
+					"type": 2,
+					"props": {
+						"id": "veider"
+					}
 				}
 			]
 		},
