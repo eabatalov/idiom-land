@@ -299,8 +299,7 @@
 					"label": "Try find all idioms",
 					"continue": false,
 					"inCondIds": [
-						2110,
-						2113
+						2110
 					],
 					"outCondIds": [
 						2111
@@ -339,7 +338,7 @@
 						2112
 					],
 					"outCondIds": [
-						2113
+						3382
 					],
 					"props": {
 						"id": "driver2",
@@ -489,6 +488,21 @@
 						"rollbackName": "",
 						"params": []
 					}
+				},
+				{
+					"ver": 1,
+					"id": 2394,
+					"type": 5,
+					"label": "Interact",
+					"continue": false,
+					"inCondIds": [
+						3382
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "driver2",
+						"name": "speak"
+					}
 				}
 			],
 			"conds": [
@@ -610,14 +624,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2113,
-					"type": 2,
-					"props": {
-						"id": "driver2"
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2719,
 					"type": 11,
 					"props": {}
@@ -687,6 +693,14 @@
 					"id": 3058,
 					"type": 11,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3382,
+					"type": 2,
+					"props": {
+						"id": "driver2"
+					}
 				}
 			]
 		},
@@ -925,8 +939,7 @@
 					"label": "Ballon offer",
 					"continue": false,
 					"inCondIds": [
-						2003,
-						2103
+						2003
 					],
 					"outCondIds": [
 						2001
@@ -958,7 +971,7 @@
 					"id": 1127,
 					"type": 12,
 					"label": "Controls enable",
-					"continue": true,
+					"continue": false,
 					"inCondIds": [
 						2906
 					],
@@ -1029,7 +1042,7 @@
 						2102
 					],
 					"outCondIds": [
-						2103
+						3248
 					],
 					"props": {
 						"id": "veider",
@@ -1106,6 +1119,21 @@
 						"source": "c2",
 						"rollbackName": "",
 						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2265,
+					"type": 5,
+					"label": "Interact",
+					"continue": false,
+					"inCondIds": [
+						3248
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "veider",
+						"name": "speak"
 					}
 				}
 			],
@@ -1219,12 +1247,6 @@
 				{
 					"ver": 1,
 					"id": 2003,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2102,
 					"type": 2,
 					"props": {
 						"id": "veider"
@@ -1232,7 +1254,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 2103,
+					"id": 2102,
 					"type": 2,
 					"props": {
 						"id": "veider"
@@ -1272,6 +1294,12 @@
 					"ver": 1,
 					"id": 2907,
 					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3248,
+					"type": 1,
 					"props": {}
 				}
 			]
@@ -1477,8 +1505,7 @@
 					"label": "Hot kebab!",
 					"continue": false,
 					"inCondIds": [
-						2008,
-						2108
+						2008
 					],
 					"outCondIds": [
 						2009
@@ -1510,7 +1537,7 @@
 					"id": 1129,
 					"type": 12,
 					"label": "Controls enable",
-					"continue": true,
+					"continue": false,
 					"inCondIds": [
 						2913
 					],
@@ -1617,7 +1644,7 @@
 						2109
 					],
 					"outCondIds": [
-						2108
+						3383
 					],
 					"props": {
 						"id": "seller",
@@ -1694,6 +1721,21 @@
 						"source": "c2",
 						"rollbackName": "",
 						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2395,
+					"type": 5,
+					"label": "Interact",
+					"continue": false,
+					"inCondIds": [
+						3383
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "seller",
+						"name": "speak"
 					}
 				}
 			],
@@ -1785,8 +1827,10 @@
 				{
 					"ver": 1,
 					"id": 2008,
-					"type": 8,
-					"props": {}
+					"type": 2,
+					"props": {
+						"id": "seller"
+					}
 				},
 				{
 					"ver": 1,
@@ -1807,14 +1851,6 @@
 				{
 					"ver": 1,
 					"id": 2107,
-					"type": 2,
-					"props": {
-						"id": "seller"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2108,
 					"type": 2,
 					"props": {
 						"id": "seller"
@@ -1863,6 +1899,14 @@
 					"id": 2913,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3383,
+					"type": 2,
+					"props": {
+						"id": "seller"
+					}
 				}
 			]
 		},
@@ -2193,7 +2237,6 @@
 					"label": "Policeman idle 1",
 					"continue": false,
 					"inCondIds": [
-						2101,
 						3051
 					],
 					"outCondIds": [
@@ -2233,7 +2276,7 @@
 						2100
 					],
 					"outCondIds": [
-						2101
+						3384
 					],
 					"props": {
 						"id": "policeman",
@@ -2925,6 +2968,21 @@
 					"props": {
 						"text": "Find 5 coins on the level to buy a bus ticket.\n\nAlso find a bus driver to buy the ticket."
 					}
+				},
+				{
+					"ver": 1,
+					"id": 2396,
+					"type": 5,
+					"label": "Interact",
+					"continue": false,
+					"inCondIds": [
+						3384
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "policeman",
+						"name": "speak"
+					}
 				}
 			],
 			"conds": [
@@ -2977,14 +3035,6 @@
 				{
 					"ver": 1,
 					"id": 2100,
-					"type": 2,
-					"props": {
-						"id": "policeman"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2101,
 					"type": 2,
 					"props": {
 						"id": "policeman"
@@ -3289,6 +3339,14 @@
 					"id": 3057,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3384,
+					"type": 2,
+					"props": {
+						"id": "policeman"
+					}
 				}
 			]
 		},
@@ -3516,7 +3574,7 @@
 						1201
 					],
 					"outCondIds": [
-						1731
+						3221
 					],
 					"props": {
 						"id": "Player",
@@ -3545,8 +3603,7 @@
 					"label": "Try a carousel!",
 					"continue": false,
 					"inCondIds": [
-						2104,
-						2919
+						3223
 					],
 					"outCondIds": [
 						1999
@@ -3578,12 +3635,12 @@
 					"id": 1131,
 					"type": 12,
 					"label": "Controls enable",
-					"continue": true,
+					"continue": false,
 					"inCondIds": [
-						1731
+						3222
 					],
 					"outCondIds": [
-						2918
+						3223
 					],
 					"props": {
 						"enabled": true
@@ -3649,7 +3706,7 @@
 						2105
 					],
 					"outCondIds": [
-						2104
+						3385
 					],
 					"props": {
 						"id": "cap",
@@ -3664,10 +3721,10 @@
 					"label": "IdiomDialogCompleted",
 					"continue": true,
 					"inCondIds": [
-						2918
+						3221
 					],
 					"outCondIds": [
-						2919
+						3222
 					],
 					"props": {
 						"name": "IdiomDialogCompleted",
@@ -3726,6 +3783,21 @@
 								"$$hashKey": "09U"
 							}
 						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2397,
+					"type": 5,
+					"label": "Interact",
+					"continue": false,
+					"inCondIds": [
+						3385
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "cap",
+						"name": "speak"
 					}
 				}
 			],
@@ -3814,12 +3886,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 1731,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 1736,
 					"type": 8,
 					"props": {}
@@ -3843,14 +3909,6 @@
 				{
 					"ver": 1,
 					"id": 2006,
-					"type": 2,
-					"props": {
-						"id": "cap"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2104,
 					"type": 2,
 					"props": {
 						"id": "cap"
@@ -3890,15 +3948,31 @@
 				},
 				{
 					"ver": 1,
-					"id": 2918,
+					"id": 3221,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3222,
 					"type": 8,
 					"props": {}
 				},
 				{
 					"ver": 1,
-					"id": 2919,
-					"type": 8,
-					"props": {}
+					"id": 3223,
+					"type": 2,
+					"props": {
+						"id": "cap"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3385,
+					"type": 2,
+					"props": {
+						"id": "cap"
+					}
 				}
 			]
 		},

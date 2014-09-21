@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>QuestUIinput</name>
     <events>
-        <event-group description="" sid="9423143259056749" title="Input state machine">
+        <event-group collapsed="1" description="" sid="9423143259056749" title="Input state machine">
             <sub-events>
                 <comment>Globally recognizable values: &quot;IDLE&quot;, &quot;BLOCKED&quot;</comment>
                 <variable constant="0" name="INPUT_STATE" sid="3003482212209299" static="1" type="text">IDLE</variable>
@@ -120,7 +120,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="6412486179240296" title="Input event initiators">
+                <event-group collapsed="1" description="" sid="6412486179240296" title="Input event initiators">
                     <sub-events>
                         <comment>Completely blocks player input processing. Be careful when use. UX may suffer heavily.</comment>
                         <event-group collapsed="1" description="" sid="2003175553896425" title="Input state machine block/unblock">
@@ -304,7 +304,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="1968544516879905" title="Input event handlers">
+                <event-group collapsed="1" description="" sid="1968544516879905" title="Input event handlers">
                     <sub-events>
                         <event-block collapsed="1" sid="8912003593169878">
                             <conditions>
@@ -2181,7 +2181,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1904461630731408" title="Player avatar movement">
+        <event-group description="" sid="1904461630731408" title="Player avatar movement">
             <sub-events>
                 <variable constant="0" name="BLOCK_PLAYER_MOVEMENT_CONTROLS" sid="4613878177283259" static="1" type="number">0</variable>
                 <event-block sid="9342819312308766">

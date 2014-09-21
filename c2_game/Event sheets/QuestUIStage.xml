@@ -158,8 +158,8 @@
                                     <param id="0" name="Color">rgb(NPCPhraseTxt.SpeachR, NPCPhraseTxt.SpeachG, NPCPhraseTxt.SpeachB)</param>
                                 </action>
                                 <action id="0" name="Call function" sid="1704179595407417" type="Function">
-                                    <param id="0" name="Name">&quot;NPCAnimSay&quot;</param>
-                                    <param id="1" name="Parameter {n}">NPC.UID</param>
+                                    <param id="0" name="Name">&quot;NPCAnim&quot;</param>
+                                    <param id="1" name="Parameter {n}">NPC.UID{###}&quot;speak&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -182,9 +182,9 @@
                                 <action id="4" name="Set font color" sid="4340457018045201" type="NPCNameTxt">
                                     <param id="0" name="Color">rgb(NPCPhraseTxt.ThinkR, NPCPhraseTxt.ThinkG, NPCPhraseTxt.ThinkB)</param>
                                 </action>
-                                <action id="0" name="Call function" sid="6467516756852917" type="Function">
-                                    <param id="0" name="Name">&quot;NPCAnimThink&quot;</param>
-                                    <param id="1" name="Parameter {n}">NPC.UID</param>
+                                <action id="0" name="Call function" sid="9880682856864073" type="Function">
+                                    <param id="0" name="Name">&quot;NPCAnim&quot;</param>
+                                    <param id="1" name="Parameter {n}">NPC.UID{###}&quot;think&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
