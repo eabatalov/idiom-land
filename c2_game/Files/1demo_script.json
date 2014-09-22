@@ -805,7 +805,7 @@
 					"ver": 1,
 					"id": 723,
 					"type": 1,
-					"label": "Don't be silly",
+					"label": "Hey! I'm pulling y",
 					"continue": false,
 					"inCondIds": [
 						3546
@@ -815,7 +815,7 @@
 					],
 					"props": {
 						"id": "veider",
-						"text": "Don’t be silly.\nIt’s just a costume",
+						"text": "Hey!\nI'm pulling your leg.\nIt's just a costume",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -829,29 +829,11 @@
 						3548
 					],
 					"outCondIds": [
-						1179
+						3682
 					],
 					"props": {
 						"id": "Player",
-						"text": "Oh I see… Could you tell me where is Trafalgar Square?",
-						"phraseType": "SPEAK"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 725,
-					"type": 1,
-					"label": "Dunno",
-					"continue": false,
-					"inCondIds": [
-						1179
-					],
-					"outCondIds": [
-						1180
-					],
-					"props": {
-						"id": "veider",
-						"text": "Dunno. Try to ask taxi drivers, they're down the street",
+						"text": "Oh I see…",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -859,10 +841,10 @@
 					"ver": 1,
 					"id": 726,
 					"type": 3,
-					"label": "\"Dunno\" means",
+					"label": "\"Pulling your leg\"",
 					"continue": false,
 					"inCondIds": [
-						1180
+						3682
 					],
 					"outCondIds": [
 						2902,
@@ -870,12 +852,12 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "\"Dunno\" means...",
+						"text": "What does \"I'm pulling your leg\" mean...?",
 						"phraseType": "THINK",
-						"ans1": "Downtown",
-						"ans2": "I don’t know",
-						"ans3": "Don't worry",
-						"ans4": "I don’t live here"
+						"ans1": "I'm selling balloons",
+						"ans2": "I'm joking with you",
+						"ans3": "I'm feeling good",
+						"ans4": "I'm using the Force to pull your leg"
 					}
 				},
 				{
@@ -918,7 +900,7 @@
 					"ver": 1,
 					"id": 729,
 					"type": 1,
-					"label": "Dunno is",
+					"label": "To pull leg means",
 					"continue": false,
 					"inCondIds": [
 						1183,
@@ -929,7 +911,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "\"Dunno\" means don't know!",
+						"text": "\"To pull someone's leg\" means to joke with it!",
 						"phraseType": "THINK"
 					}
 				},
@@ -1071,7 +1053,7 @@
 							{
 								"type": "str",
 								"name": "id",
-								"value": "Dunno",
+								"value": "PullLeg",
 								"$$hashKey": "07C"
 							}
 						]
@@ -1097,7 +1079,7 @@
 							{
 								"type": "str",
 								"name": "id",
-								"value": "Dunno",
+								"value": "PullLeg",
 								"$$hashKey": "07E"
 							}
 						]
@@ -1216,18 +1198,6 @@
 					"ver": 1,
 					"id": 1175,
 					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1179,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1180,
-					"type": 11,
 					"props": {}
 				},
 				{
@@ -1371,6 +1341,12 @@
 				{
 					"ver": 1,
 					"id": 3548,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3682,
 					"type": 11,
 					"props": {}
 				}
@@ -4437,7 +4413,7 @@
 					"ver": 1,
 					"id": 2064,
 					"type": 10,
-					"label": "Reg dunno",
+					"label": "Reg PullLeg",
 					"continue": true,
 					"inCondIds": [
 						2890
@@ -4453,19 +4429,19 @@
 							{
 								"type": "str",
 								"name": "id",
-								"value": "Dunno",
+								"value": "PullLeg",
 								"$$hashKey": "01W"
 							},
 							{
 								"type": "str",
 								"name": "title",
-								"value": "Dunno",
+								"value": "To pull someone's leg",
 								"$$hashKey": "024"
 							},
 							{
 								"type": "str",
 								"name": "meaning",
-								"value": "Don't know",
+								"value": "To joke with it",
 								"$$hashKey": "026"
 							},
 							{

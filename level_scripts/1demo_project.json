@@ -806,7 +806,7 @@
 						"ver": 1,
 						"id": 723,
 						"type": 1,
-						"label": "Don't be silly",
+						"label": "Hey! I'm pulling y",
 						"continue": false,
 						"inCondIds": [
 							3546
@@ -816,7 +816,7 @@
 						],
 						"props": {
 							"id": "veider",
-							"text": "Don’t be silly.\nIt’s just a costume",
+							"text": "Hey!\nI'm pulling your leg.\nIt's just a costume",
 							"phraseType": "SPEAK"
 						}
 					},
@@ -830,29 +830,11 @@
 							3548
 						],
 						"outCondIds": [
-							1179
+							3682
 						],
 						"props": {
 							"id": "Player",
-							"text": "Oh I see… Could you tell me where is Trafalgar Square?",
-							"phraseType": "SPEAK"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 725,
-						"type": 1,
-						"label": "Dunno",
-						"continue": false,
-						"inCondIds": [
-							1179
-						],
-						"outCondIds": [
-							1180
-						],
-						"props": {
-							"id": "veider",
-							"text": "Dunno. Try to ask taxi drivers, they're down the street",
+							"text": "Oh I see…",
 							"phraseType": "SPEAK"
 						}
 					},
@@ -860,10 +842,10 @@
 						"ver": 1,
 						"id": 726,
 						"type": 3,
-						"label": "\"Dunno\" means",
+						"label": "\"Pulling your leg\"",
 						"continue": false,
 						"inCondIds": [
-							1180
+							3682
 						],
 						"outCondIds": [
 							2902,
@@ -871,12 +853,12 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "\"Dunno\" means...",
+							"text": "What does \"I'm pulling your leg\" mean...?",
 							"phraseType": "THINK",
-							"ans1": "Downtown",
-							"ans2": "I don’t know",
-							"ans3": "Don't worry",
-							"ans4": "I don’t live here"
+							"ans1": "I'm selling balloons",
+							"ans2": "I'm joking with you",
+							"ans3": "I'm feeling good",
+							"ans4": "I'm using the Force to pull your leg"
 						}
 					},
 					{
@@ -919,7 +901,7 @@
 						"ver": 1,
 						"id": 729,
 						"type": 1,
-						"label": "Dunno is",
+						"label": "To pull leg means",
 						"continue": false,
 						"inCondIds": [
 							1183,
@@ -930,7 +912,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "\"Dunno\" means don't know!",
+							"text": "\"To pull someone's leg\" means to joke with it!",
 							"phraseType": "THINK"
 						}
 					},
@@ -1072,7 +1054,7 @@
 								{
 									"type": "str",
 									"name": "id",
-									"value": "Dunno",
+									"value": "PullLeg",
 									"$$hashKey": "07C"
 								}
 							]
@@ -1098,7 +1080,7 @@
 								{
 									"type": "str",
 									"name": "id",
-									"value": "Dunno",
+									"value": "PullLeg",
 									"$$hashKey": "07E"
 								}
 							]
@@ -1217,18 +1199,6 @@
 						"ver": 1,
 						"id": 1175,
 						"type": 1,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1179,
-						"type": 11,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1180,
-						"type": 11,
 						"props": {}
 					},
 					{
@@ -1372,6 +1342,12 @@
 					{
 						"ver": 1,
 						"id": 3548,
+						"type": 11,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3682,
 						"type": 11,
 						"props": {}
 					}
@@ -4438,7 +4414,7 @@
 						"ver": 1,
 						"id": 2064,
 						"type": 10,
-						"label": "Reg dunno",
+						"label": "Reg PullLeg",
 						"continue": true,
 						"inCondIds": [
 							2890
@@ -4454,19 +4430,19 @@
 								{
 									"type": "str",
 									"name": "id",
-									"value": "Dunno",
+									"value": "PullLeg",
 									"$$hashKey": "01W"
 								},
 								{
 									"type": "str",
 									"name": "title",
-									"value": "Dunno",
+									"value": "To pull someone's leg",
 									"$$hashKey": "024"
 								},
 								{
 									"type": "str",
 									"name": "meaning",
-									"value": "Don't know",
+									"value": "To joke with it",
 									"$$hashKey": "026"
 								},
 								{
@@ -5483,20 +5459,14 @@
 					{
 						"ver": 1,
 						"nodeId": 723,
-						"x": 709.383892385788,
-						"y": 471.9951142560491
+						"x": 693.383892385788,
+						"y": 467.9951142560492
 					},
 					{
 						"ver": 1,
 						"nodeId": 724,
-						"x": 707.5029400048353,
-						"y": 170.9951142560489
-					},
-					{
-						"ver": 1,
-						"nodeId": 725,
-						"x": 1020.836273338168,
-						"y": -290.5048857439509
+						"x": 687.5029400048353,
+						"y": 176.9951142560489
 					},
 					{
 						"ver": 1,
@@ -5513,8 +5483,8 @@
 					{
 						"ver": 1,
 						"nodeId": 728,
-						"x": 2128.336273338169,
-						"y": 299.1617809227155
+						"x": 2128.3362733381687,
+						"y": 295.1617809227154
 					},
 					{
 						"ver": 1,
@@ -5615,7 +5585,6 @@
 					722,
 					723,
 					724,
-					725,
 					726,
 					727,
 					728,
@@ -5694,34 +5663,6 @@
 					},
 					{
 						"ver": 1,
-						"condId": 1179,
-						"points": {
-							"src": {
-								"x": 787.5029400048353,
-								"y": 250.9951142560489
-							},
-							"dst": {
-								"x": 1100.836273338168,
-								"y": -210.50488574395092
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 1180,
-						"points": {
-							"src": {
-								"x": 1100.836273338168,
-								"y": -210.50488574395092
-							},
-							"dst": {
-								"x": 1843.3362733381691,
-								"y": -230.8382190772844
-							}
-						}
-					},
-					{
-						"ver": 1,
 						"condId": 1183,
 						"points": {
 							"src": {
@@ -5739,8 +5680,8 @@
 						"condId": 1184,
 						"points": {
 							"src": {
-								"x": 2208.336273338169,
-								"y": 379.1617809227155
+								"x": 2208.3362733381687,
+								"y": 375.1617809227154
 							},
 							"dst": {
 								"x": 1828.3362733381705,
@@ -5911,8 +5852,8 @@
 								"y": 27.492671384074015
 							},
 							"dst": {
-								"x": 2208.336273338169,
-								"y": 379.1617809227155
+								"x": 2208.3362733381687,
+								"y": 375.1617809227154
 							}
 						}
 					},
@@ -6009,8 +5950,8 @@
 								"y": 829.9941371072591
 							},
 							"dst": {
-								"x": 789.383892385788,
-								"y": 551.9951142560491
+								"x": 773.383892385788,
+								"y": 547.9951142560492
 							}
 						}
 					},
@@ -6019,12 +5960,26 @@
 						"condId": 3548,
 						"points": {
 							"src": {
-								"x": 789.383892385788,
-								"y": 551.9951142560491
+								"x": 773.383892385788,
+								"y": 547.9951142560492
 							},
 							"dst": {
-								"x": 787.5029400048353,
-								"y": 250.9951142560489
+								"x": 767.5029400048353,
+								"y": 256.9951142560489
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3682,
+						"points": {
+							"src": {
+								"x": 767.5029400048353,
+								"y": 256.9951142560489
+							},
+							"dst": {
+								"x": 1843.3362733381691,
+								"y": -230.8382190772844
 							}
 						}
 					}
@@ -6034,8 +5989,6 @@
 					1173,
 					1174,
 					1175,
-					1179,
-					1180,
 					1183,
 					1184,
 					1721,
@@ -6057,12 +6010,13 @@
 					3542,
 					3543,
 					3546,
-					3548
+					3548,
+					3682
 				],
 				"scale": 0.5000000000000001,
 				"pos": {
-					"x": 249.99823599709885,
-					"y": 231.0029314463704
+					"x": 26.998235997098845,
+					"y": 165.0029314463704
 				}
 			},
 			{
@@ -6613,8 +6567,8 @@
 				],
 				"scale": 0.40000000000000013,
 				"pos": {
-					"x": 231.00000856346537,
-					"y": -131
+					"x": 217.00000856346537,
+					"y": 250
 				}
 			},
 			{
@@ -8713,7 +8667,7 @@
 					2922,
 					2923
 				],
-				"scale": 0.6000000000000001,
+				"scale": 0.40000000000000013,
 				"pos": {
 					"x": 158,
 					"y": 66
@@ -9045,7 +8999,7 @@
 					3218,
 					3219
 				],
-				"scale": 0.9,
+				"scale": 0.40000000000000013,
 				"pos": {
 					"x": 57,
 					"y": 48
