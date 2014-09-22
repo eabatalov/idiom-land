@@ -288,7 +288,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-16" name="Wait" sid="8601938363507592" type="System">
-                                            <param id="0" name="Seconds">QuestLevelRuntime.getDelay</param>
+                                            <param id="0" name="Seconds">QuestLevelRuntime.getDuration</param>
                                         </action>
                                         <action id="0" name="Call function" sid="4681952901696571" type="Function">
                                             <param id="0" name="Name">&quot;ProcAfterUIActionOut&quot;</param>
@@ -417,7 +417,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block collapsed="1" sid="6632858068048924">
+                                        <event-block sid="6632858068048924">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="3014435150508187" type="System">
                                                     <param id="0" name="First value">QuestLevelRuntime.getActor</param>
@@ -465,12 +465,35 @@
                                                             <param id="2" name="Second value">&quot;ANIMATION&quot;</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Call function" sid="8467783007589936" type="Function">
-                                                            <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
-                                                            <param id="1" name="Parameter {n}">Player.UID{###}QuestLevelRuntime.getAnimationName</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="7696197079911287">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="2272220165471873" type="System">
+                                                                    <param id="0" name="First value">QuestLevelRuntime.getDuration</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">-1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="8467783007589936" type="Function">
+                                                                    <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Player.UID{###}QuestLevelRuntime.getAnimationName</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="3537634152926541">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="6411054640510631" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="2031138701096301" type="Function">
+                                                                    <param id="0" name="Name">&quot;AnimPlayerRunTimed&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;shock&quot;{###}QuestLevelRuntime.getDuration * 1000</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -525,12 +548,35 @@
                                                             <param id="2" name="Second value">&quot;ANIMATION&quot;</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Call function" sid="7172013689800202" type="Function">
-                                                            <param id="0" name="Name">&quot;NPCAnim&quot;</param>
-                                                            <param id="1" name="Parameter {n}">NPC.UID{###}QuestLevelRuntime.getAnimationName</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="3142469870401123">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="3546508830117761" type="System">
+                                                                    <param id="0" name="First value">QuestLevelRuntime.getDuration</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">-1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="7172013689800202" type="Function">
+                                                                    <param id="0" name="Name">&quot;NPCAnim&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">NPC.UID{###}QuestLevelRuntime.getAnimationName</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="5859530736142802">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="1950624879028935" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="6769593142659694" type="Function">
+                                                                    <param id="0" name="Name">&quot;NPCAnimTimed&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">NPC.UID{###}QuestLevelRuntime.getAnimationName{###}QuestLevelRuntime.getDuration * 1000</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>

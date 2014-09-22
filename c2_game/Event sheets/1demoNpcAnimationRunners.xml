@@ -42,12 +42,13 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>param(0): NPC UID&#x0D;&#x0A;param(1): animation name</comment>
+                <comment>param(0): NPC UID&#x0D;&#x0A;param(1): animation name&#x0D;&#x0A;param(2): duration. ms</comment>
                 <variable constant="0" name="AnimName" sid="1581421603188817" static="0" type="text"></variable>
+                <variable constant="0" name="AnimDuration" sid="2836824778277777" static="0" type="number">0</variable>
                 <event-block sid="4868196413119031">
                     <conditions>
                         <condition id="0" name="On function" sid="9581007049566467" type="Function">
-                            <param id="0" name="Name">&quot;NPCAnim&quot;</param>
+                            <param id="0" name="Name">&quot;NPCAnimTimed&quot;</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="3621518036507127" type="NPC">
                             <param id="0" name="Unique ID">Function.Param(0)</param>
@@ -57,6 +58,10 @@
                         <action id="-9" name="Set value" sid="401862134294397" type="System">
                             <param id="0" name="Variable">AnimName</param>
                             <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7499833133428187" type="System">
+                            <param id="0" name="Variable">AnimDuration</param>
+                            <param id="1" name="Value">Function.Param(2)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -75,6 +80,23 @@
                                     <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="2783880453445552">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4693270890498144" type="System">
+                                            <param id="0" name="First value">AnimDuration</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Play current animation to..." sid="1304166885041608" type="taxiHindiSCML">
+                                            <param id="0" name="">1</param>
+                                            <param id="1" name="Target">AnimDuration</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="6354548322282467">
                             <conditions>
@@ -91,6 +113,23 @@
                                     <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="6179511127707553">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="6285454288194373" type="System">
+                                            <param id="0" name="First value">AnimDuration</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Play current animation to..." sid="9228681040339359" type="captainSCML">
+                                            <param id="0" name="">1</param>
+                                            <param id="1" name="Target">AnimDuration</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="6029021131133303">
                             <conditions>
@@ -105,6 +144,21 @@
                                     <param id="0" name="Animation">AnimName</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7415830597051525">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3315927311030489" type="System">
+                                    <param id="0" name="First value">AnimDuration</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play current animation to..." sid="7677207066186182" type="veiderSCML">
+                                    <param id="0" name="">1</param>
+                                    <param id="1" name="Target">AnimDuration</param>
                                 </action>
                             </actions>
                         </event-block>

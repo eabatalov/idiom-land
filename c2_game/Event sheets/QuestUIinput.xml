@@ -2235,7 +2235,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="3870415647089319" title="Player avatar controls enable/disable">
+                <event-group description="" sid="5225189963902238" title="Player avatar movement enable/disable">
                     <sub-events>
                         <event-block sid="991005007865104">
                             <conditions>
@@ -2250,6 +2250,48 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="7555453561690709">
+                            <conditions>
+                                <condition id="0" name="On function" sid="956125972911932" type="Function">
+                                    <param id="0" name="Name">&quot;DisablePlayerAvatarMovement&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5620162536875308" type="System">
+                                    <param id="0" name="Variable">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
+                                    <param id="1" name="Value">BLOCK_PLAYER_MOVEMENT_CONTROLS + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7030669251189832">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5000887442859835" type="Function">
+                                    <param id="0" name="Name">&quot;EnablePlayerAvatarMovement&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6271464822872373">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="1947724082364736" type="System">
+                                            <param id="0" name="Variable">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="7174361625186059" type="System">
+                                            <param id="0" name="Variable">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
+                                            <param id="1" name="Value">BLOCK_PLAYER_MOVEMENT_CONTROLS - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="3870415647089319" title="Player avatar controls enable/disable">
+                    <sub-events>
                         <event-block sid="3870640516651617">
                             <conditions>
                                 <condition id="0" name="On function" sid="2178727481963409" type="Function">
@@ -2257,9 +2299,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="5620162536875308" type="System">
-                                    <param id="0" name="Variable">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
-                                    <param id="1" name="Value">BLOCK_PLAYER_MOVEMENT_CONTROLS + 1</param>
+                                <action id="0" name="Call function" sid="768968514756239" type="Function">
+                                    <param id="0" name="Name">&quot;DisablePlayerAvatarMovement&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -2298,23 +2340,13 @@
                                     <param id="0" name="Name">&quot;EnablePlayerAvatarControls&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Call function" sid="2413345386734837" type="Function">
+                                    <param id="0" name="Name">&quot;EnablePlayerAvatarMovement&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="6271464822872373">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="1947724082364736" type="System">
-                                            <param id="0" name="Variable">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="7174361625186059" type="System">
-                                            <param id="0" name="Variable">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
-                                            <param id="1" name="Value">BLOCK_PLAYER_MOVEMENT_CONTROLS - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                                 <event-block sid="3713549101723842">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="881751309893878" type="System">

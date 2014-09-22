@@ -218,6 +218,7 @@
         </event-group>
         <event-group description="Animation logic which can be enabled/disabled on external demand." sid="8278518111259733" title="Dynamic">
             <sub-events>
+                <comment>param(0): player UID&#x0D;&#x0A;param(1): animation name</comment>
                 <event-block sid="8945119670845163">
                     <conditions>
                         <condition id="0" name="On function" sid="668738160881023" type="Function">
@@ -239,6 +240,35 @@
                             <param id="0" name="Animation">Function.Param(1)</param>
                             <param id="1" name="Where to start playing this animation">0</param>
                             <param id="2" name="Blend Duration">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>param(0): player UID&#x0D;&#x0A;param(1): animation name&#x0D;&#x0A;param(2): time duration to play in msecs</comment>
+                <event-block sid="6829625027529603">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9420246619105775" type="Function">
+                            <param id="0" name="Name">&quot;AnimPlayerRunTimed&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="4496524815303654" type="Player">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="4828162364948624" type="Player">
+                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="1" name="Set playback speed ratio" sid="1971031838271672" type="PlayerSCML">
+                            <param id="0" name="Speed Ratio">1.0</param>
+                        </action>
+                        <action id="0" name="Set animation" sid="5225305446680017" type="PlayerSCML">
+                            <param id="0" name="Animation">Function.Param(1)</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">0</param>
+                        </action>
+                        <action id="7" name="Play current animation to..." sid="4621677646508745" type="PlayerSCML">
+                            <param id="0" name="">1</param>
+                            <param id="1" name="Target">Function.Param(2)</param>
                         </action>
                     </actions>
                 </event-block>

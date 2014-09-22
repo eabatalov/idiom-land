@@ -501,7 +501,8 @@
 					"outCondIds": [],
 					"props": {
 						"id": "driver2",
-						"name": "speak"
+						"name": "speak",
+						"secs": -1
 					}
 				}
 			],
@@ -1006,11 +1007,29 @@
 						2001
 					],
 					"outCondIds": [
-						3682
+						2002
 					],
 					"props": {
 						"id": "veider",
 						"text": "I've got the power!",
+						"phraseType": "SPEAK"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 1331,
+					"type": 1,
+					"label": "Come to the...",
+					"continue": false,
+					"inCondIds": [
+						2002
+					],
+					"outCondIds": [
+						2102
+					],
+					"props": {
+						"id": "veider",
+						"text": "Come to the\nDark Side!\nWe have balloons!",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -1021,7 +1040,7 @@
 					"label": "I'm saving money",
 					"continue": false,
 					"inCondIds": [
-						3682
+						2102
 					],
 					"outCondIds": [
 						3248
@@ -1115,7 +1134,8 @@
 					"outCondIds": [],
 					"props": {
 						"id": "veider",
-						"name": "speak"
+						"name": "speak",
+						"secs": -1
 					}
 				},
 				{
@@ -1150,7 +1170,8 @@
 					],
 					"props": {
 						"id": "Player",
-						"name": "shock"
+						"name": "shock",
+						"secs": 5
 					}
 				},
 				{
@@ -1259,7 +1280,23 @@
 				},
 				{
 					"ver": 1,
+					"id": 2002,
+					"type": 2,
+					"props": {
+						"id": "veider"
+					}
+				},
+				{
+					"ver": 1,
 					"id": 2003,
+					"type": 2,
+					"props": {
+						"id": "veider"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2102,
 					"type": 2,
 					"props": {
 						"id": "veider"
@@ -1336,14 +1373,6 @@
 					"id": 3548,
 					"type": 11,
 					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 3682,
-					"type": 2,
-					"props": {
-						"id": "veider"
-					}
 				}
 			]
 		},
@@ -1778,7 +1807,8 @@
 					"outCondIds": [],
 					"props": {
 						"id": "seller",
-						"name": "speak"
+						"name": "speak",
+						"secs": -1
 					}
 				}
 			],
@@ -3024,7 +3054,8 @@
 					"outCondIds": [],
 					"props": {
 						"id": "policeman",
-						"name": "speak"
+						"name": "speak",
+						"secs": -1
 					}
 				}
 			],
@@ -3840,7 +3871,8 @@
 					"outCondIds": [],
 					"props": {
 						"id": "cap",
-						"name": "speak"
+						"name": "speak",
+						"secs": -1
 					}
 				}
 			],
