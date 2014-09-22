@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="PLAYER_ANIM_SCALING_DEFAULT" sid="4744348570009192" static="0" type="number">0</variable>
         <variable comment="Leave it zero. != condition will force recomputation of this var." constant="0" name="PLAYER_ANIM_SCALING_CURRENT" sid="7409917232449734" static="0" type="number">0</variable>
-        <event-group description="" sid="5020068825746262" title="Initialization">
+        <event-group collapsed="1" description="" sid="5020068825746262" title="Initialization">
             <sub-events>
                 <event-block sid="9016563247743718">
                     <conditions>
@@ -31,7 +31,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Animation logic which is not changing during the game." sid="5129574936545948" title="Static">
+        <event-group collapsed="1" description="Animation logic which is not changing during the game." sid="5129574936545948" title="Static">
             <sub-events>
                 <event-block sid="8984455808387501">
                     <conditions>
@@ -60,7 +60,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="9620993175118371" title="Walking">
+                <event-group collapsed="1" description="" sid="9620993175118371" title="Walking">
                     <sub-events>
                         <event-block sid="9751026908280847">
                             <conditions>
@@ -218,130 +218,131 @@
         </event-group>
         <event-group description="Animation logic which can be enabled/disabled on external demand." sid="8278518111259733" title="Dynamic">
             <sub-events>
-                <comment>param(0): player UID&#x0D;&#x0A;param(1): animation name</comment>
-                <event-block sid="8945119670845163">
-                    <conditions>
-                        <condition id="0" name="On function" sid="668738160881023" type="Function">
-                            <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="8681894721691322" type="Player">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="5614522424529324" type="Player">
-                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="1" name="Set playback speed ratio" sid="6874471233467473" type="PlayerSCML">
-                            <param id="0" name="Speed Ratio">1.0</param>
-                        </action>
-                        <action id="0" name="Set animation" sid="8710489600858434" type="PlayerSCML">
-                            <param id="0" name="Animation">Function.Param(1)</param>
-                            <param id="1" name="Where to start playing this animation">0</param>
-                            <param id="2" name="Blend Duration">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>param(0): player UID&#x0D;&#x0A;param(1): animation name&#x0D;&#x0A;param(2): time duration to play in msecs</comment>
-                <event-block sid="6829625027529603">
-                    <conditions>
-                        <condition id="0" name="On function" sid="9420246619105775" type="Function">
-                            <param id="0" name="Name">&quot;AnimPlayerRunTimed&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="4496524815303654" type="Player">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="4828162364948624" type="Player">
-                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="1" name="Set playback speed ratio" sid="1971031838271672" type="PlayerSCML">
-                            <param id="0" name="Speed Ratio">1.0</param>
-                        </action>
-                        <action id="0" name="Set animation" sid="5225305446680017" type="PlayerSCML">
-                            <param id="0" name="Animation">Function.Param(1)</param>
-                            <param id="1" name="Where to start playing this animation">0</param>
-                            <param id="2" name="Blend Duration">0</param>
-                        </action>
-                        <action id="7" name="Play current animation to..." sid="4621677646508745" type="PlayerSCML">
-                            <param id="0" name="">1</param>
-                            <param id="1" name="Target">Function.Param(2)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="527756903709145">
-                    <conditions>
-                        <condition id="0" name="On function" sid="1480948700961629" type="Function">
-                            <param id="0" name="Name">&quot;AnimPlayerSay&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="4286949134509476" type="Player">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="7954753775275856" type="Player">
-                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="1" name="Set playback speed ratio" sid="3572047541768908" type="PlayerSCML">
-                            <param id="0" name="Speed Ratio">1.0</param>
-                        </action>
-                        <action id="0" name="Set animation" sid="2583387249732618" type="PlayerSCML">
-                            <param id="0" name="Animation">&quot;speak&quot;</param>
-                            <param id="1" name="Where to start playing this animation">0</param>
-                            <param id="2" name="Blend Duration">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5489627890018143">
-                    <conditions>
-                        <condition id="0" name="On function" sid="2124706362118779" type="Function">
-                            <param id="0" name="Name">&quot;AnimPlayerThink&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="6538150537895359" type="Player">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="-13" name="Set boolean" sid="5242030614766607" type="Player">
-                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action disabled="1" id="1" name="Set playback speed ratio" sid="96779337590211" type="PlayerSCML">
-                            <param id="0" name="Speed Ratio">1.0</param>
-                        </action>
-                        <action disabled="1" id="0" name="Set animation" sid="6131230958413653" type="PlayerSCML">
-                            <param id="0" name="Animation">&quot;speak&quot;</param>
-                            <param id="1" name="Where to start playing this animation">0</param>
-                            <param id="2" name="Blend Duration">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3478046881652599">
-                    <conditions>
-                        <condition id="1" name="On any finished" sid="6849471902486559" type="PlayerSCML" />
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7054054359084409" type="Player">
-                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="8657511858937932" type="Player">
-                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="1" name="Set playback speed ratio" sid="5567781631114728" type="PlayerSCML">
-                            <param id="0" name="Speed Ratio">1.0</param>
-                        </action>
-                        <action id="0" name="Set animation" sid="7361442950391187" type="PlayerSCML">
-                            <param id="0" name="Animation">&quot;idle&quot;</param>
-                            <param id="1" name="Where to start playing this animation">0</param>
-                            <param id="2" name="Blend Duration">0</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" sid="6327924177304405" title="Base">
+                    <sub-events>
+                        <comment>param(0): player UID&#x0D;&#x0A;param(1): animation name</comment>
+                        <event-block sid="8945119670845163">
+                            <conditions>
+                                <condition id="0" name="On function" sid="668738160881023" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="8681894721691322" type="Player">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="5614522424529324" type="Player">
+                                    <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="6874471233467473" type="PlayerSCML">
+                                    <param id="0" name="Speed Ratio">1.0</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="8710489600858434" type="PlayerSCML">
+                                    <param id="0" name="Animation">Function.Param(1)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>param(0): player UID</comment>
+                        <event-block sid="9783851033608358">
+                            <conditions>
+                                <condition id="0" name="On function" sid="1437120769221381" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerCancel&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="6420696865877594" type="Player">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="837843564603048" type="Player">
+                                    <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="5078019635920668" type="PlayerSCML">
+                                    <param id="0" name="Speed Ratio">1.0</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="7518854742748734" type="PlayerSCML">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3478046881652599">
+                            <conditions>
+                                <condition id="1" name="On any finished" sid="6849471902486559" type="PlayerSCML" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7054054359084409" type="Player">
+                                    <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2755231291215201" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerCancel&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="9056376712737083" title="Extensions">
+                    <sub-events>
+                        <comment>param(0): player UID&#x0D;&#x0A;param(1): animation name&#x0D;&#x0A;param(2): time duration to play in msecs</comment>
+                        <comment>Explicitly stop animation when duration is passed because spriter can&apos;t generate anim finished when duration is longer then animation</comment>
+                        <event-block sid="279668896230396">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2533048029894537" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerRunTimed&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="4761130589128959" type="Player">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8211802956268283" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="290774115957383" type="System">
+                                    <param id="0" name="Seconds">Function.Param(2) / 1000</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6275028504083156" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerCancel&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>param(0): player UID</comment>
+                        <event-block sid="795346902549655">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4040829790392709" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerSay&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7509874760591553" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}&quot;speak&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>param(0): player UID</comment>
+                        <event-block sid="753258020041523">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9368411148312285" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerThink&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Call function" sid="7635814578089396" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}&quot;think&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>
