@@ -59,7 +59,7 @@
 					"label": "Bus down street",
 					"continue": false,
 					"inCondIds": [
-						2726
+						4143
 					],
 					"outCondIds": [
 						2722
@@ -143,7 +143,7 @@
 					"ver": 1,
 					"id": 946,
 					"type": 3,
-					"label": "\"Quick buck\"",
+					"label": "\"New kid on the .\"",
 					"continue": false,
 					"inCondIds": [
 						2721
@@ -154,12 +154,12 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "Hmmm...\nWhat is \"to make a quick buck\"?",
+						"text": "Hmmm...\nWhat is \"new kid on the block\"?",
 						"phraseType": "THINK",
-						"ans1": "To marry after the first date",
-						"ans2": "To tell a passenger where to seat",
-						"ans3": "To wish a good luck",
-						"ans4": "To earn money quickly with a little effort"
+						"ans1": "A fox",
+						"ans2": "A stupid person",
+						"ans3": "A small kid",
+						"ans4": "The newest person in a group"
 					}
 				},
 				{
@@ -202,18 +202,18 @@
 					"ver": 1,
 					"id": 949,
 					"type": 1,
-					"label": "Quick buck is 1",
+					"label": "New kid means",
 					"continue": false,
 					"inCondIds": [
 						1452,
 						1453
 					],
 					"outCondIds": [
-						3058
+						4143
 					],
 					"props": {
 						"id": "Player",
-						"text": "\"To make a quick buck\" means to earn money quickly with a little effort...",
+						"text": "\"New kid on the block\" is a newcomer, the newest person in a group",
 						"phraseType": "THINK"
 					}
 				},
@@ -378,7 +378,7 @@
 					],
 					"props": {
 						"id": "driver2",
-						"text": "That’s regular price. I’m not making a quick buck off you",
+						"text": "You're a new kid on the block, right?\nIt's the lowest price around",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -402,24 +402,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 1925,
-					"type": 1,
-					"label": "Quick buck is 3",
-					"continue": false,
-					"inCondIds": [
-						3058
-					],
-					"outCondIds": [
-						2726
-					],
-					"props": {
-						"id": "Player",
-						"text": "...and often not in an honest way!",
-						"phraseType": "THINK"
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2068,
 					"type": 10,
 					"label": "idiomFailed",
@@ -438,7 +420,7 @@
 							{
 								"type": "str",
 								"name": "id",
-								"value": "ToMakeAQuickBuck",
+								"value": "NewKidOnTheBlock",
 								"$$hashKey": "05C"
 							}
 						]
@@ -464,7 +446,7 @@
 							{
 								"type": "str",
 								"name": "id",
-								"value": "ToMakeAQuickBuck",
+								"value": "NewKidOnTheBlock",
 								"$$hashKey": "05O"
 							}
 						]
@@ -649,12 +631,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2726,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 2894,
 					"type": 7,
 					"props": {}
@@ -691,17 +667,17 @@
 				},
 				{
 					"ver": 1,
-					"id": 3058,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 3382,
 					"type": 2,
 					"props": {
 						"id": "driver2"
 					}
+				},
+				{
+					"ver": 1,
+					"id": 4143,
+					"type": 11,
+					"props": {}
 				}
 			]
 		},
@@ -808,7 +784,7 @@
 					"label": "Hey! I'm pulling y",
 					"continue": false,
 					"inCondIds": [
-						3546
+						4011
 					],
 					"outCondIds": [
 						3548
@@ -1130,7 +1106,7 @@
 						3541
 					],
 					"outCondIds": [
-						3542
+						3877
 					],
 					"props": {
 						"id": "veider",
@@ -1143,33 +1119,35 @@
 					"id": 2552,
 					"type": 5,
 					"label": "Foxy shock",
-					"continue": true,
+					"continue": false,
 					"inCondIds": [
-						3542
+						3878
 					],
 					"outCondIds": [
-						3543
+						4011
 					],
 					"props": {
 						"id": "Player",
 						"name": "shock",
-						"secs": 5
+						"secs": -1
 					}
 				},
 				{
 					"ver": 1,
-					"id": 2553,
-					"type": 6,
-					"label": "3 sec",
+					"id": 2737,
+					"type": 1,
+					"label": "Come to the...",
 					"continue": true,
 					"inCondIds": [
-						3543
+						3877
 					],
 					"outCondIds": [
-						3546
+						3878
 					],
 					"props": {
-						"secs": 3
+						"id": "veider",
+						"text": "Come to the\nDark Side!\nWe have balloons!",
+						"phraseType": "SPEAK"
 					}
 				}
 			],
@@ -1322,24 +1300,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 3542,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 3543,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 3546,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 3548,
 					"type": 11,
 					"props": {}
@@ -1347,6 +1307,24 @@
 				{
 					"ver": 1,
 					"id": 3682,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3877,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3878,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4011,
 					"type": 11,
 					"props": {}
 				}
@@ -2377,7 +2355,7 @@
 						3820
 					],
 					"outCondIds": [
-						3822
+						4146
 					],
 					"props": {
 						"id": "Player",
@@ -2960,7 +2938,7 @@
 						3818
 					],
 					"outCondIds": [
-						2969
+						4145
 					],
 					"props": {
 						"name": "HideTicketHelper",
@@ -2976,10 +2954,10 @@
 					"label": "IdiomDialogCompleted",
 					"continue": true,
 					"inCondIds": [
-						2969
+						4146
 					],
 					"outCondIds": [
-						3819
+						4147
 					],
 					"props": {
 						"name": "IdiomDialogCompleted",
@@ -3027,7 +3005,7 @@
 					"label": "",
 					"continue": true,
 					"inCondIds": [
-						3819
+						4145
 					],
 					"outCondIds": [
 						3820
@@ -3043,7 +3021,7 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						3822
+						4147
 					],
 					"outCondIds": [
 						3824
@@ -3340,12 +3318,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2969,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 3054,
 					"type": 11,
 					"props": {}
@@ -3398,20 +3370,8 @@
 				},
 				{
 					"ver": 1,
-					"id": 3819,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 3820,
 					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 3822,
-					"type": 11,
 					"props": {}
 				},
 				{
@@ -3421,6 +3381,24 @@
 					"props": {
 						"id": "policeman"
 					}
+				},
+				{
+					"ver": 1,
+					"id": 4145,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4146,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4147,
+					"type": 8,
+					"props": {}
 				}
 			]
 		},
@@ -3502,7 +3480,7 @@
 					],
 					"props": {
 						"id": "cap",
-						"text": "Life is like a Ferris wheel; it goes up and down, round and round...",
+						"text": "Life is like that Ferris wheel; it goes up and down, round and round...",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -3516,29 +3494,11 @@
 						1193
 					],
 					"outCondIds": [
-						1194
+						3875
 					],
 					"props": {
 						"id": "cap",
-						"text": "...then it can suddenly stop and you are flung from it",
-						"phraseType": "SPEAK"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 738,
-					"type": 1,
-					"label": "Circle of life",
-					"continue": false,
-					"inCondIds": [
-						1194
-					],
-					"outCondIds": [
-						1195
-					],
-					"props": {
-						"id": "cap",
-						"text": "It’s just life.\nThe circle of life!",
+						"text": "..and it can take your breath away!",
 						"phraseType": "SPEAK"
 					}
 				},
@@ -3546,10 +3506,10 @@
 					"ver": 1,
 					"id": 739,
 					"type": 3,
-					"label": "What is circle..",
+					"label": "\"TYBA\" means...",
 					"continue": false,
 					"inCondIds": [
-						1195
+						3875
 					],
 					"outCondIds": [
 						2914,
@@ -3557,12 +3517,12 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "What is \"The circle of life\"?",
+						"text": "\"Take your breath away\" means…",
 						"phraseType": "THINK",
-						"ans1": "A dance",
-						"ans2": "Stages every living thing passes through",
-						"ans3": "Orbital period of the Earth",
-						"ans4": "A donuts advertisement slogan"
+						"ans1": "Meet you",
+						"ans2": "Amaze you",
+						"ans3": "Feed you",
+						"ans4": "Scare you"
 					}
 				},
 				{
@@ -3612,47 +3572,11 @@
 						1199
 					],
 					"outCondIds": [
-						1200
+						3879
 					],
 					"props": {
 						"id": "Player",
-						"text": "\"The circle of life\" is a sequence of stages...",
-						"phraseType": "THINK"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 743,
-					"type": 1,
-					"label": "Idiom means 2",
-					"continue": false,
-					"inCondIds": [
-						1200
-					],
-					"outCondIds": [
-						1201
-					],
-					"props": {
-						"id": "Player",
-						"text": "every living thing passes through",
-						"phraseType": "THINK"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 744,
-					"type": 1,
-					"label": "Idiom means 3",
-					"continue": false,
-					"inCondIds": [
-						1201
-					],
-					"outCondIds": [
-						3221
-					],
-					"props": {
-						"id": "Player",
-						"text": "The major stages of the circle are: birth, growth, maturity and death",
+						"text": "\"Take someone's breath away\" means to extremely surprise and amaze it!",
 						"phraseType": "THINK"
 					}
 				},
@@ -3795,7 +3719,7 @@
 					"label": "IdiomDialogCompleted",
 					"continue": true,
 					"inCondIds": [
-						3221
+						3879
 					],
 					"outCondIds": [
 						3222
@@ -3827,7 +3751,7 @@
 							{
 								"type": "str",
 								"name": "id",
-								"value": "TheCircleOfLife",
+								"value": "TakeSmonesBreathAway",
 								"$$hashKey": "09W"
 							}
 						]
@@ -3853,7 +3777,7 @@
 							{
 								"type": "str",
 								"name": "id",
-								"value": "TheCircleOfLife",
+								"value": "TakeSmonesBreathAway",
 								"$$hashKey": "09U"
 							}
 						]
@@ -3899,18 +3823,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 1194,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1195,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 1198,
 					"type": 11,
 					"props": {}
@@ -3918,18 +3830,6 @@
 				{
 					"ver": 1,
 					"id": 1199,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1200,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1201,
 					"type": 11,
 					"props": {}
 				},
@@ -4023,12 +3923,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 3221,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 3222,
 					"type": 8,
 					"props": {}
@@ -4048,6 +3942,18 @@
 					"props": {
 						"id": "cap"
 					}
+				},
+				{
+					"ver": 1,
+					"id": 3875,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3879,
+					"type": 11,
+					"props": {}
 				}
 			]
 		},
@@ -4393,7 +4299,7 @@
 					"ver": 1,
 					"id": 2063,
 					"type": 10,
-					"label": "Reg quick buck",
+					"label": "Reg new kid on..",
 					"continue": true,
 					"inCondIds": [
 						2892
@@ -4409,19 +4315,19 @@
 							{
 								"type": "str",
 								"name": "id",
-								"value": "ToMakeAQuickBuck",
+								"value": "NewKidOnTheBlock",
 								"$$hashKey": "02K"
 							},
 							{
 								"type": "str",
 								"name": "title",
-								"value": "To make a quick buck",
+								"value": "New kid on the block",
 								"$$hashKey": "02M"
 							},
 							{
 								"type": "str",
 								"name": "meaning",
-								"value": "To earn money quickly with a little effort",
+								"value": "A newcomer, the newest person in a group",
 								"$$hashKey": "02O"
 							},
 							{
@@ -4481,7 +4387,7 @@
 					"ver": 1,
 					"id": 2065,
 					"type": 10,
-					"label": "Reg circle of life",
+					"label": "Reg take breath",
 					"continue": true,
 					"inCondIds": [
 						2888
@@ -4497,19 +4403,19 @@
 							{
 								"type": "str",
 								"name": "id",
-								"value": "TheCircleOfLife",
+								"value": "TakeSmonesBreathAway",
 								"$$hashKey": "028"
 							},
 							{
 								"type": "str",
 								"name": "title",
-								"value": "The circle of life",
+								"value": "Take someone's breath away",
 								"$$hashKey": "02A"
 							},
 							{
 								"type": "str",
 								"name": "meaning",
-								"value": "Sequence of stages every living thing passes through",
+								"value": "To extremely surprise and amaze someone",
 								"$$hashKey": "02C"
 							},
 							{
