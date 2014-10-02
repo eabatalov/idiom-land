@@ -182,7 +182,7 @@
                             </actions>
                         </event-block>
                         <comment>Common processing after delay and non-delay UI action</comment>
-                        <event-block collapsed="1" sid="5462294256267517">
+                        <event-block sid="5462294256267517">
                             <conditions>
                                 <condition id="0" name="On function" sid="3958206933563915" type="Function">
                                     <param id="0" name="Name">&quot;ProcAfterUIActionOut&quot;</param>
@@ -199,6 +199,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="3008124859283679" type="Function">
+                                            <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                         <action id="0" name="Call function" sid="2413262137877784" type="Function">
                                             <param id="0" name="Name">&quot;makeStageChangersTransparent&quot;</param>
                                             <param id="1" name="Parameter {n}">Player.CurrentStage</param>
@@ -255,7 +259,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="9685306970185458">
+                        <event-block collapsed="1" sid="9685306970185458">
                             <conditions>
                                 <condition id="0" name="On function" sid="4879756541203689" type="Function">
                                     <param id="0" name="Name">&quot;ProcUIActionOut&quot;</param>
@@ -296,7 +300,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="8204323777209088">
+                                <event-block collapsed="1" sid="8204323777209088">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="8789390419850014" type="System">
                                             <param id="0" name="First value">QuestLevelRuntime.getAction</param>

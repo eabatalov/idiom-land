@@ -4,7 +4,7 @@
     <name>QuestUIStage</name>
     <events>
         <comment>p1: Stage</comment>
-        <event-block collapsed="1" sid="8060985393539423">
+        <event-block sid="8060985393539423">
             <conditions>
                 <condition id="0" name="On function" sid="6870888253004275" type="Function">
                     <param id="0" name="Name">&quot;HideStageUI&quot;</param>
@@ -55,11 +55,15 @@
                             <param id="0" name="Name">&quot;HideNotification&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Call function" sid="707955482970022" type="Function">
+                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="6888331275258145" title="NPCUI">
+        <event-group collapsed="1" description="" sid="6888331275258145" title="NPCUI">
             <sub-events>
                 <comment>XXX: this every tick &quot;pinning&quot; is needed because construct has some bugs in computation of special sprite points.&#x0D;&#x0A;Construct return invalid values and we pin to them. But almost all the time Construct returns good values. This everytick pinning allows us to use this valid values.</comment>
                 <event-block sid="2604798924698626">
@@ -131,10 +135,6 @@
                         </action>
                         <action id="-15" name="Set visible" sid="8570550841279258" type="NpcPhoto">
                             <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="5123804654890537" type="Function">
-                            <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                     <sub-events>
@@ -471,15 +471,11 @@
                         <action id="-15" name="Set visible" sid="2196549733152381" type="NpcPhoto">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="0" name="Call function" sid="4877515997766695" type="Function">
-                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6702021473764103" title="PlayerUI">
+        <event-group collapsed="1" description="" sid="6702021473764103" title="PlayerUI">
             <sub-events>
                 <comment>XXX: this every tick &quot;pinning&quot; is needed because construct has some bugs in computation of special sprite points.&#x0D;&#x0A;Construct return invalid values and we pin to them. But almost all the time Construct returns good values. This everytick pinning allows us to use this valid values.</comment>
                 <event-block sid="5619469661584902">
@@ -544,10 +540,6 @@
                         </action>
                         <action id="-15" name="Set visible" sid="3498046344092397" type="PlayerNameTxt">
                             <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="9149511859493984" type="Function">
-                            <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                     <sub-events>
@@ -880,10 +872,6 @@
                         <action id="-15" name="Set visible" sid="3541010195576974" type="PlayerPhoto">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="0" name="Call function" sid="2082183687293735" type="Function">
-                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -902,10 +890,6 @@
                         </action>
                         <action id="-15" name="Set visible" sid="5788949567484358" type="NotificationTxt">
                             <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="152690154398008" type="Function">
-                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -928,15 +912,11 @@
                         <action id="-15" name="Set visible" sid="3695326354708191" type="NotificationTxt">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="0" name="Call function" sid="3972111295702101" type="Function">
-                            <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block collapsed="1" sid="7342057714297118">
+        <event-block sid="7342057714297118">
             <conditions>
                 <condition id="0" name="On function" sid="5711349330301738" type="Function">
                     <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
