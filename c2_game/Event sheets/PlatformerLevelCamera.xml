@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelCamera</name>
+    <events>
+        <event-group description="" sid="4816676888266997" title="Platformer Level Camera">
+            <sub-events>
+                <comment>Not a clean way to detect &apos;platformer&apos; mode</comment>
+                <variable constant="0" name="DialogModeEnCnt" sid="5846031831581482" static="1" type="number">0</variable>
+                <event-block sid="6961493721673194">
+                    <conditions>
+                        <condition id="0" name="On function" sid="54756181112957" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4667883411755622" type="System">
+                            <param id="0" name="Variable">DialogModeEnCnt</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9914313087624316">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9704934647987367" type="Function">
+                            <param id="0" name="Name">&quot;DisablePlayerAvatarMovement&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6941072182152649" type="System">
+                            <param id="0" name="Variable">DialogModeEnCnt</param>
+                            <param id="1" name="Value">DialogModeEnCnt + 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3352707633569276">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1710199269059555" type="Function">
+                            <param id="0" name="Name">&quot;EnablePlayerAvatarMovement&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4012677108634415" type="System">
+                            <param id="0" name="Variable">DialogModeEnCnt</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5291481714425183" type="System">
+                            <param id="0" name="Variable">DialogModeEnCnt</param>
+                            <param id="1" name="Value">DialogModeEnCnt - 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable constant="0" name="ScrollY_" sid="3258752231702773" static="0" type="number">0</variable>
+                <variable constant="0" name="ScrollX_" sid="5989770640872407" static="0" type="number">0</variable>
+                <variable constant="0" name="HeightToShow" sid="4580807785495968" static="0" type="number">0</variable>
+                <event-block sid="1167729450062143">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="3639899065773918" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2838038866639648">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7280400235981144" type="System">
+                                    <param id="0" name="Variable">DialogModeEnCnt</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6691215077796981">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="6735841450145087" type="NPCSpeechBg" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6621366318622434" type="System">
+                                            <param id="0" name="Variable">HeightToShow</param>
+                                            <param id="1" name="Value">NPCSpeechBg.Height + NPC.Height</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7136973551249835" type="System">
+                                            <param id="0" name="Variable">HeightToShow</param>
+                                            <param id="1" name="Value">min(HeightToShow, WINDOW_HEIGHT)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="105121547195072" type="System">
+                                            <param id="0" name="Variable">ScrollY_</param>
+                                            <param id="1" name="Value">NPCSpeechBg.Y + HeightToShow / 2</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4622967846900262" type="System">
+                                            <param id="0" name="Variable">ScrollX_</param>
+                                            <param id="1" name="Value">NPCSpeechBg.X + NPCSpeechBg.Width / 2</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="5177249627400982">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="9822174990249661" type="NPCAnsBg" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="2386600436899474" type="System">
+                                                    <param id="0" name="Variable">ScrollX_</param>
+                                                    <param id="1" name="Value">ScrollX_ - NPCAnsBg.Width / 2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="9373224665176576">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-7" name="Scroll to position" sid="5153785003489897" type="System">
+                                                    <param id="0" name="X">lerp(scrollx, ScrollX_, 0.1)</param>
+                                                    <param id="1" name="Y">lerp(scrolly, ScrollY_, 0.1)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="9346725184404321">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="5127897952935079" type="PlayerSpeechBg" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6437661691253724" type="System">
+                                            <param id="0" name="Variable">HeightToShow</param>
+                                            <param id="1" name="Value">PlayerSpeechBg.Height + Player.Height</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1468430796666146" type="System">
+                                            <param id="0" name="Variable">HeightToShow</param>
+                                            <param id="1" name="Value">min(HeightToShow, WINDOW_HEIGHT)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4248897375658489" type="System">
+                                            <param id="0" name="Variable">ScrollY_</param>
+                                            <param id="1" name="Value">PlayerSpeechBg.Y + HeightToShow / 2</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3708594599993696" type="System">
+                                            <param id="0" name="Variable">ScrollX_</param>
+                                            <param id="1" name="Value">PlayerSpeechBg.X + PlayerSpeechBg.Width / 2</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="6499193785252682">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="7475553151509916" type="PlayerAnsBg" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="8307472738860351" type="System">
+                                                    <param id="0" name="Variable">ScrollX_</param>
+                                                    <param id="1" name="Value">ScrollX_ - PlayerAnsBg.Width / 2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="1812127209495302">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-7" name="Scroll to position" sid="8153865906456604" type="System">
+                                                    <param id="0" name="X">lerp(scrollx, ScrollX_, 0.1)</param>
+                                                    <param id="1" name="Y">lerp(scrolly, ScrollY_, 0.1)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6033767860331669">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5885280101793394" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Scroll to position" sid="2812684577340635" type="System">
+                                    <param id="0" name="X">lerp(scrollx, PlayerPlatform.X, 0.1)</param>
+                                    <param id="1" name="Y">PlayerPlatform.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

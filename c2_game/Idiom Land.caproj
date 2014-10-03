@@ -44,7 +44,6 @@
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
-        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -5747,9 +5746,6 @@
                         <object-type name="PlayerPlatform" sid="3959987311657112">
                             <plugin id="Sprite" />
                             <behaviors>
-                                <behavior-type name="ScrollTo" sid="8241047328241534">
-                                    <behavior id="scrollto" />
-                                </behavior-type>
                                 <behavior-type name="Platform" sid="8867611869722013">
                                     <behavior id="Platform" />
                                 </behavior-type>
@@ -6319,7 +6315,7 @@
     <event-folder expanded="1">
         <event-folder expanded="1" name="Levels">
             <event-folder expanded="1" name="Common">
-                <event-folder expanded="0" name="QuestEngine">
+                <event-folder expanded="1" name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
                     <event-sheet>QuestUInit.xml</event-sheet>
@@ -6334,7 +6330,7 @@
                     <event-sheet>QuestAutomaticTalkStarters.xml</event-sheet>
                     <event-sheet>QuestNPCAnimation.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="1" name="Controls">
+                <event-folder expanded="0" name="Controls">
                     <event-folder expanded="0" name="LevelProgress">
                         <event-sheet>IdiomProgress.xml</event-sheet>
                     </event-folder>
@@ -6379,7 +6375,7 @@
                     <event-sheet>LevelJumpPlayback.xml</event-sheet>
                     <event-sheet>LevelJumpRecording.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="0" name="PlatformerLevel">
+                <event-folder expanded="1" name="PlatformerLevel">
                     <event-folder expanded="0" name="Controls">
                         <event-sheet>PlatformerLevelGameHelp.xml</event-sheet>
                         <event-sheet>PlatformerLevelCoinsProgress.xml</event-sheet>
@@ -6390,12 +6386,13 @@
                     <event-sheet>PlatformerLevelRecording.xml</event-sheet>
                     <event-sheet>PlatformerLevelPlayback.xml</event-sheet>
                     <event-sheet>PlatformerLevelPlayerAutoAnim.xml</event-sheet>
+                    <event-sheet>PlatformerLevelCamera.xml</event-sheet>
                 </event-folder>
                 <event-folder expanded="0" name="IdiomLandLevel">
                     <event-sheet>IdiomLandLevel.xml</event-sheet>
                     <event-sheet>IdiomLandLevelRecording.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="1" name="Level">
+                <event-folder expanded="0" name="Level">
                     <event-sheet>LevelCommon.xml</event-sheet>
                     <event-sheet>LevelPlayback.xml</event-sheet>
                     <event-sheet>LevelRecording.xml</event-sheet>
