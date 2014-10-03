@@ -19,61 +19,10 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="9516434022155823">
-            <conditions>
-                <condition id="0" name="On function" sid="7871613912142498" type="Function">
-                    <param id="0" name="Name">&quot;LevelComplete&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="9262925569207571">
-                    <conditions>
-                        <condition id="-12" name="Repeat" sid="9044314670623789" type="System">
-                            <param id="0" name="Count">10000</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="9811751421026885" type="System">
-                            <param id="0" name="Seconds">0.001*loopindex</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="3069842496540953">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="7535876997702124" type="System">
-                                    <param id="0" name="First value">LayoutScale</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-22" name="Set layout angle" sid="4552481543244048" type="System">
-                                    <param id="0" name="Angle">LayoutAngle + 1</param>
-                                </action>
-                                <action id="-20" name="Set layout scale" sid="5411121416926604" type="System">
-                                    <param id="0" name="Scale">LayoutScale-0.0005</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4021717452589529">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="1400372854887514" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="7239476227427739" type="System">
-                                    <param id="0" name="Layout">LevelResultsBrief</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="9632181806524661">
             <conditions>
                 <condition id="0" name="On function" sid="8630506446783809" type="Function">
-                    <param id="0" name="Name">&quot;InjectTicketCompletion&quot;</param>
+                    <param id="0" name="Name">&quot;C2API_InjectTicketCompletion&quot;</param>
                 </condition>
             </conditions>
             <actions />

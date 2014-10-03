@@ -6166,18 +6166,20 @@
                         <plugin id="PlatformerLevelRecordingPlugin" />
                     </object-type>
                 </object-folder>
-                <object-type name="LevelIdiomProgressTracker" sid="504992448476046">
-                    <plugin id="LevelIdiomProgressTrackingPlugin" />
-                </object-type>
-                <object-type name="IdiomlandGame" sid="1603271377434259">
-                    <plugin id="IdiomlandGamePlugin" />
-                </object-type>
-                <object-type name="IdiomlandLevels" sid="8938034631113359">
-                    <plugin id="IdiomlandLevelsPlugin" />
-                </object-type>
-                <object-type name="IdiomlandLevelRecording" sid="9614323482789858">
-                    <plugin id="IdiomlandLevelRecordingPlugin" />
-                </object-type>
+                <object-folder expanded="0" name="IdiomLandLevel">
+                    <object-type name="IdiomlandGame" sid="1603271377434259">
+                        <plugin id="IdiomlandGamePlugin" />
+                    </object-type>
+                    <object-type name="IdiomlandLevelRecording" sid="9614323482789858">
+                        <plugin id="IdiomlandLevelRecordingPlugin" />
+                    </object-type>
+                    <object-type name="IdiomlandLevels" sid="8938034631113359">
+                        <plugin id="IdiomlandLevelsPlugin" />
+                    </object-type>
+                    <object-type name="LevelIdiomProgressTracker" sid="504992448476046">
+                        <plugin id="LevelIdiomProgressTrackingPlugin" />
+                    </object-type>
+                </object-folder>
             </object-folder>
             <object-folder expanded="1" name="2demo_jump" />
         </object-folder>
@@ -6289,7 +6291,7 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout-folder expanded="1" name="Levels">
+        <layout-folder expanded="0" name="Levels">
             <layout-folder expanded="0" name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
@@ -6317,7 +6319,7 @@
     <event-folder expanded="1">
         <event-folder expanded="1" name="Levels">
             <event-folder expanded="1" name="Common">
-                <event-folder expanded="1" name="QuestEngine">
+                <event-folder expanded="0" name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
                     <event-sheet>QuestUInit.xml</event-sheet>
@@ -6332,7 +6334,7 @@
                     <event-sheet>QuestAutomaticTalkStarters.xml</event-sheet>
                     <event-sheet>QuestNPCAnimation.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="0" name="Controls">
+                <event-folder expanded="1" name="Controls">
                     <event-folder expanded="0" name="LevelProgress">
                         <event-sheet>IdiomProgress.xml</event-sheet>
                     </event-folder>
@@ -6354,15 +6356,15 @@
                     <event-folder expanded="0" name="S">
                         <event-folder expanded="1" name="Scooters" />
                     </event-folder>
-                    <event-folder expanded="1" name="C">
+                    <event-folder expanded="0" name="C">
                         <event-folder expanded="1" name="Cars" />
                     </event-folder>
                     <event-folder expanded="0" name="M">
-                        <event-folder expanded="0" name="Markers">
+                        <event-folder expanded="1" name="Markers">
                             <event-sheet>IdiomDialogCompletion.xml</event-sheet>
                         </event-folder>
                     </event-folder>
-                    <event-folder expanded="1" name="F">
+                    <event-folder expanded="0" name="F">
                         <event-folder expanded="1" name="Foxy">
                             <event-sheet>FoxySimpleSCMLSpritesBinding.xml</event-sheet>
                         </event-folder>
@@ -6380,7 +6382,7 @@
                     <event-sheet>LevelJumpPlayback.xml</event-sheet>
                     <event-sheet>LevelJumpRecording.xml</event-sheet>
                 </event-folder>
-                <event-folder expanded="1" name="PlatformerLevel">
+                <event-folder expanded="0" name="PlatformerLevel">
                     <event-folder expanded="0" name="Controls">
                         <event-sheet>PlatformerLevelGameHelp.xml</event-sheet>
                         <event-sheet>PlatformerLevelCoinsProgress.xml</event-sheet>
@@ -6396,11 +6398,15 @@
                     <event-sheet>IdiomLandLevel.xml</event-sheet>
                     <event-sheet>IdiomLandLevelRecording.xml</event-sheet>
                 </event-folder>
-                <event-sheet>LevelCommon.xml</event-sheet>
-                <event-sheet>LevelRecording.xml</event-sheet>
-                <event-sheet>LevelPlayback.xml</event-sheet>
+                <event-folder expanded="1" name="Level">
+                    <event-sheet>LevelCommon.xml</event-sheet>
+                    <event-sheet>LevelPlayback.xml</event-sheet>
+                    <event-sheet>LevelRecording.xml</event-sheet>
+                    <event-sheet>LevelStartFinish.xml</event-sheet>
+                    <event-sheet>LevelFade.xml</event-sheet>
+                </event-folder>
             </event-folder>
-            <event-folder expanded="1" name="1demo">
+            <event-folder expanded="0" name="1demo">
                 <event-folder expanded="0" name="Stages">
                     <event-folder expanded="0" name="BalloonSeller">
                         <event-sheet>BalloonSeller.xml</event-sheet>
