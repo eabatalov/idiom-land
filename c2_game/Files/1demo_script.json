@@ -638,7 +638,7 @@
 				{
 					"ver": 1,
 					"id": 2895,
-					"type": 1,
+					"type": 8,
 					"props": {}
 				},
 				{
@@ -2331,7 +2331,7 @@
 						3820
 					],
 					"outCondIds": [
-						4712
+						4146
 					],
 					"props": {
 						"id": "Player",
@@ -2914,7 +2914,7 @@
 						3818
 					],
 					"outCondIds": [
-						4714
+						4145
 					],
 					"props": {
 						"name": "C2API_HideTicketHelper",
@@ -2930,7 +2930,7 @@
 					"label": "IdiomDialogCompleted",
 					"continue": true,
 					"inCondIds": [
-						4713
+						4146
 					],
 					"outCondIds": [
 						4147
@@ -2981,7 +2981,7 @@
 					"label": "",
 					"continue": true,
 					"inCondIds": [
-						4715
+						4145
 					],
 					"outCondIds": [
 						3820
@@ -3092,44 +3092,6 @@
 					],
 					"outCondIds": [
 						4709
-					],
-					"props": {
-						"name": "C2API_HidePlayerBalloonHelper",
-						"rollbackName": "C2API_ShowPlayerBalloonHelper",
-						"source": "c2",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2740,
-					"type": 10,
-					"label": "Show balln helper",
-					"continue": true,
-					"inCondIds": [
-						4714
-					],
-					"outCondIds": [
-						4715
-					],
-					"props": {
-						"name": "C2API_ShowPlayerBalloonHelper",
-						"rollbackName": "C2API_HidePlayerBalloonHelper",
-						"source": "c2",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2741,
-					"type": 10,
-					"label": "Hide balln helper",
-					"continue": true,
-					"inCondIds": [
-						4712
-					],
-					"outCondIds": [
-						4713
 					],
 					"props": {
 						"name": "C2API_HidePlayerBalloonHelper",
@@ -3468,6 +3430,18 @@
 				},
 				{
 					"ver": 1,
+					"id": 4145,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4146,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
 					"id": 4147,
 					"type": 8,
 					"props": {}
@@ -3523,30 +3497,6 @@
 				{
 					"ver": 1,
 					"id": 4711,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4712,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4713,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4714,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4715,
 					"type": 8,
 					"props": {}
 				}
