@@ -121,20 +121,24 @@
                         <action id="-25" name="Move to bottom" sid="4487465092045365" type="NPCPhraseTxt" />
                         <action id="-25" name="Move to bottom" sid="3260745429109428" type="NPCPhraseBg" />
                         <action id="-25" name="Move to bottom" sid="4021589683031011" type="NPCSpeechBg" />
-                        <action id="-15" name="Set visible" sid="839835481329796" type="NPCPhraseBg">
+                        <action disabled="1" id="-15" name="Set visible" sid="839835481329796" type="NPCPhraseBg">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="4981011621067659" type="NPCSpeechBg">
+                        <action disabled="1" id="-15" name="Set visible" sid="4981011621067659" type="NPCSpeechBg">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="9386546410996723" type="NPCPhraseTxt">
+                        <action disabled="1" id="-15" name="Set visible" sid="9386546410996723" type="NPCPhraseTxt">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="7853190160108122" type="NPCNameTxt">
+                        <action disabled="1" id="-15" name="Set visible" sid="7853190160108122" type="NPCNameTxt">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="8570550841279258" type="NpcPhoto">
+                        <action disabled="1" id="-15" name="Set visible" sid="8570550841279258" type="NpcPhoto">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7166220648528824" type="Function">
+                            <param id="0" name="Name">&quot;FocusNPC&quot;</param>
+                            <param id="1" name="Parameter {n}">NPC.UID</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -429,15 +433,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="2232269637729392" type="NPCPhraseTxt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="8951861471942926" type="NPCPhraseBg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="3672432380044368" type="NPCSpeechBg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="9445378560020443" type="NPCAnsBg">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -465,10 +460,19 @@
                         <action id="-15" name="Set visible" sid="7638784932733143" type="NPCAns4Txt">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="8556447528120962" type="NPCNameTxt">
+                        <action disabled="1" id="-15" name="Set visible" sid="2232269637729392" type="NPCPhraseTxt">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="2196549733152381" type="NpcPhoto">
+                        <action disabled="1" id="-15" name="Set visible" sid="8951861471942926" type="NPCPhraseBg">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="3672432380044368" type="NPCSpeechBg">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="2196549733152381" type="NpcPhoto">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="8556447528120962" type="NPCNameTxt">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -526,20 +530,24 @@
                         <action id="-25" name="Move to bottom" sid="2214607857350972" type="PlayerNameTxt" />
                         <action id="-25" name="Move to bottom" sid="7078895510264422" type="PlayerPhraseBg" />
                         <action id="-25" name="Move to bottom" sid="2858302157683358" type="PlayerSpeechBg" />
-                        <action id="-15" name="Set visible" sid="8723165850772302" type="PlayerPhraseTxt">
+                        <action disabled="1" id="-15" name="Set visible" sid="8723165850772302" type="PlayerPhraseTxt">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="2707988200121936" type="PlayerPhraseBg">
+                        <action disabled="1" id="-15" name="Set visible" sid="2707988200121936" type="PlayerPhraseBg">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="1056599444429625" type="PlayerSpeechBg">
+                        <action disabled="1" id="-15" name="Set visible" sid="1056599444429625" type="PlayerSpeechBg">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="8445503092593476" type="PlayerPhoto">
+                        <action disabled="1" id="-15" name="Set visible" sid="8445503092593476" type="PlayerPhoto">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="3498046344092397" type="PlayerNameTxt">
+                        <action disabled="1" id="-15" name="Set visible" sid="3498046344092397" type="PlayerNameTxt">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="3502400785906873" type="Function">
+                            <param id="0" name="Name">&quot;FocusPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}">Player.UID</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -830,9 +838,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="3549996884102819" type="PlayerPhraseTxt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="9143839751917798" type="PlayerAns1Txt">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -860,16 +865,19 @@
                         <action id="-15" name="Set visible" sid="9717765267155444" type="PlayerAnsBg">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="1266843181603526" type="PlayerPhraseBg">
+                        <action disabled="1" id="-15" name="Set visible" sid="3549996884102819" type="PlayerPhraseTxt">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="8111916696491169" type="PlayerSpeechBg">
+                        <action disabled="1" id="-15" name="Set visible" sid="1266843181603526" type="PlayerPhraseBg">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="8369023630724183" type="PlayerNameTxt">
+                        <action disabled="1" id="-15" name="Set visible" sid="8111916696491169" type="PlayerSpeechBg">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="3541010195576974" type="PlayerPhoto">
+                        <action disabled="1" id="-15" name="Set visible" sid="8369023630724183" type="PlayerNameTxt">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="3541010195576974" type="PlayerPhoto">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
