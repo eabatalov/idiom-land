@@ -26,7 +26,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="197877896226907" type="Function">
                             <param id="0" name="Name">&quot;HideNPCUI&quot;</param>
-                            <param id="1" name="Parameter {n}">NPC.UID</param>
+                            <param id="1" name="Parameter {n}">NPC.UID{###}Function.Param(1)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -63,7 +63,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group collapsed="1" description="" sid="6888331275258145" title="NPCUI">
+        <event-group description="" sid="6888331275258145" title="NPCUI">
             <sub-events>
                 <comment>XXX: this every tick &quot;pinning&quot; is needed because construct has some bugs in computation of special sprite points.&#x0D;&#x0A;Construct return invalid values and we pin to them. But almost all the time Construct returns good values. This everytick pinning allows us to use this valid values.</comment>
                 <event-block sid="2604798924698626">
@@ -243,7 +243,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4475203334158127">
+                <event-block collapsed="1" sid="4475203334158127">
                     <conditions>
                         <condition id="0" name="On function" sid="9390743698732721" type="Function">
                             <param id="0" name="Name">&quot;PositionNPCQuizGUI&quot;</param>
@@ -437,67 +437,9 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="6974911674457671">
-                    <conditions>
-                        <condition id="0" name="On function" sid="7343618476345899" type="Function">
-                            <param id="0" name="Name">&quot;HideNPCUI&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="3795721353744262" type="NPC">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="9445378560020443" type="NPCAnsBg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="4151941107727719" type="NPCAns1Bg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="8158892272138155" type="NPCAns2Bg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="1441057587393959" type="NPCAns3Bg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="8038671011491533" type="NPCAns4Bg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="7494146649716919" type="NPCAns1Txt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="4073697571337978" type="NPCAns2Txt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="2987597795263536" type="NPCAns3Txt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="7638784932733143" type="NPCAns4Txt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="3672432380044368" type="NPCSpeechBg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="2232269637729392" type="NPCPhraseTxt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="8951861471942926" type="NPCPhraseBg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="2196549733152381" type="NpcPhoto">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="8556447528120962" type="NPCNameTxt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="1863217001488874" type="Function">
-                            <param id="0" name="Name">&quot;NPCSpeechSetTargetOpacity&quot;</param>
-                            <param id="1" name="Parameter {n}">NPC.UID{###}0</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6702021473764103" title="PlayerUI">
+        <event-group collapsed="1" description="" sid="6702021473764103" title="PlayerUI">
             <sub-events>
                 <comment>XXX: this every tick &quot;pinning&quot; is needed because construct has some bugs in computation of special sprite points.&#x0D;&#x0A;Construct return invalid values and we pin to them. But almost all the time Construct returns good values. This everytick pinning allows us to use this valid values.</comment>
                 <event-block sid="5619469661584902">
