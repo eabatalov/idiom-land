@@ -7,9 +7,19 @@
             <sub-events>
                 <variable constant="1" name="SPEECH_OPACITY_CHANGE_STEP_UP" sid="4825987306615553" static="0" type="number">15</variable>
                 <variable constant="1" name="SPEECH_OPACITY_CHANGE_STEP_DOWN" sid="8150897963886032" static="0" type="number">15</variable>
-                <comment>XXX empirical value</comment>
+                <variable constant="1" name="MINIMAL_TIME_BETWEEN_FADES_SEC" sid="8354941427507652" static="0" type="number">0.5</variable>
                 <variable constant="1" name="OPACITY_CHANGED_THRESHOLD" sid="5547579215716478" static="0" type="number">2</variable>
                 <variable constant="0" name="CurrentOpacity" sid="2588381458659113" static="0" type="number">0</variable>
+                <event-block sid="9928466582649426">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4383654832737289" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Clear" sid="9407406021264489" type="LastOpacityTransitionsDict" />
+                    </actions>
+                </event-block>
                 <event-group description="" sid="9770904231275377" title="Player">
                     <sub-events>
                         <variable constant="0" name="PlayerSpeechTargetOpacity" sid="5565827916340631" static="1" type="number">0</variable>
@@ -42,44 +52,142 @@
                             </actions>
                         </event-block>
                         <comment>param(0): opacity</comment>
-                        <event-block sid="5453156334827151">
+                        <variable constant="0" name="PlayerSpeechSetTargetOpacityValue" sid="2602975149855904" static="1" type="number">0</variable>
+                        <event-block collapsed="1" sid="5453156334827151">
                             <conditions>
                                 <condition id="0" name="On function" sid="7958585308316241" type="Function">
                                     <param id="0" name="Name">&quot;PlayerSpeechSetTargetOpacity&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="2351468922898512" type="System">
+                                <action id="-9" name="Set value" sid="6792136372798907" type="System">
+                                    <param id="0" name="Variable">PlayerSpeechSetTargetOpacityValue</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7285662807405383">
+                                    <conditions>
+                                        <condition id="3" name="Has key" sid="7124202044796621" type="LastOpacityTransitionsDict">
+                                            <param id="0" name="Key">str(PlayerSpeechBg.UID)</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="133354115479813" type="System">
+                                            <param id="0" name="First value">wallclocktime - LastOpacityTransitionsDict.Get(str(PlayerSpeechBg.UID))</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">MINIMAL_TIME_BETWEEN_FADES_SEC</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="1613230680680871" type="System">
+                                            <param id="0" name="Seconds">max(MINIMAL_TIME_BETWEEN_FADES_SEC - (wallclocktime - LastOpacityTransitionsDict.Get(str(PlayerSpeechBg.UID))), 0)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8854007071453572" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerSpeechSetTargetOpacity_&quot;</param>
+                                            <param id="1" name="Parameter {n}">PlayerSpeechSetTargetOpacityValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3234365929772428">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2629204208989806" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7856702939054707" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerSpeechSetTargetOpacity_&quot;</param>
+                                            <param id="1" name="Parameter {n}">PlayerSpeechSetTargetOpacityValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): opacity</comment>
+                        <event-block sid="4045859663373091">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4324211892849493" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerSpeechSetTargetOpacity_&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8496880196817063" type="System">
                                     <param id="0" name="Variable">NeedToSignalPlayerSpeechOpacityChanged</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="6899549425758878" type="System">
+                                <action id="-9" name="Set value" sid="3087537425626609" type="System">
                                     <param id="0" name="Variable">PlayerSpeechTargetOpacity</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
                                 </action>
-                                <action id="0" name="Call function" sid="673470679714433" type="Function">
+                                <action id="0" name="Call function" sid="9822392392284256" type="Function">
                                     <param id="0" name="Name">&quot;PlayerSpeechSetVisible&quot;</param>
                                     <param id="1" name="Parameter {n}">1</param>
                                 </action>
                             </actions>
                         </event-block>
                         <comment>param(0): opacity</comment>
-                        <event-block sid="7312987398828679">
+                        <variable constant="0" name="PlayerQuizzSetTargetOpacityValue" sid="5112952203128145" static="1" type="number">0</variable>
+                        <event-block collapsed="1" sid="2744653861449916">
                             <conditions>
-                                <condition id="0" name="On function" sid="280841701491093" type="Function">
+                                <condition id="0" name="On function" sid="1806653119462423" type="Function">
                                     <param id="0" name="Name">&quot;PlayerQuizzSetTargetOpacity&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="5039165418890164" type="System">
+                                <action id="-9" name="Set value" sid="5299575015332312" type="System">
+                                    <param id="0" name="Variable">PlayerQuizzSetTargetOpacityValue</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="170659332508204">
+                                    <conditions>
+                                        <condition id="3" name="Has key" sid="3719091919392271" type="LastOpacityTransitionsDict">
+                                            <param id="0" name="Key">str(PlayerAnsBg.UID)</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="1599072533907529" type="System">
+                                            <param id="0" name="First value">wallclocktime - LastOpacityTransitionsDict.Get(str(PlayerAnsBg.UID))</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">MINIMAL_TIME_BETWEEN_FADES_SEC</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="4018134423174059" type="System">
+                                            <param id="0" name="Seconds">max(&#x0D;&#x0A;MINIMAL_TIME_BETWEEN_FADES_SEC - (wallclocktime - LastOpacityTransitionsDict.Get(str(PlayerAnsBg.UID))), 0)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="5597317976571424" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerQuizzSetTargetOpacity_&quot;</param>
+                                            <param id="1" name="Parameter {n}">PlayerQuizzSetTargetOpacityValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="445143518888093">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="158949997316633" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7171743367747883" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerQuizzSetTargetOpacity_&quot;</param>
+                                            <param id="1" name="Parameter {n}">PlayerQuizzSetTargetOpacityValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): opacity</comment>
+                        <event-block sid="7312987398828679">
+                            <conditions>
+                                <condition id="0" name="On function" sid="280841701491093" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerQuizzSetTargetOpacity_&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5892757977354776" type="System">
                                     <param id="0" name="Variable">NeedToSignalPlayerQuizzOpacityChanged</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="2928961005103244" type="System">
+                                <action id="-9" name="Set value" sid="2037436161351181" type="System">
                                     <param id="0" name="Variable">PlayerQuizzTargetOpacity</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
                                 </action>
-                                <action id="0" name="Call function" sid="1895657444820499" type="Function">
+                                <action id="0" name="Call function" sid="2987831277431156" type="Function">
                                     <param id="0" name="Name">&quot;PlayerQuizzSetVisible&quot;</param>
                                     <param id="1" name="Parameter {n}">1</param>
                                 </action>
@@ -338,6 +446,10 @@
                                             <param id="0" name="Variable">NeedToSignalPlayerSpeechOpacityChanged</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action id="0" name="Add key" sid="3791076222669245" type="LastOpacityTransitionsDict">
+                                            <param id="0" name="Key">str(PlayerSpeechBg.UID)</param>
+                                            <param id="1" name="Value">wallclocktime</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="7250062994298914" type="Function">
                                             <param id="0" name="Name">&quot;PlayerSpeechSetVisible&quot;</param>
                                             <param id="1" name="Parameter {n}">PlayerSpeechTargetOpacity = 0 ? 0 : 1</param>
@@ -376,6 +488,10 @@
                                         <action id="-9" name="Set value" sid="5703855039861778" type="System">
                                             <param id="0" name="Variable">NeedToSignalPlayerQuizzOpacityChanged</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="1221893905502564" type="LastOpacityTransitionsDict">
+                                            <param id="0" name="Key">str(PlayerAnsBg.UID)</param>
+                                            <param id="1" name="Value">wallclocktime</param>
                                         </action>
                                         <action id="0" name="Call function" sid="1673409281993376" type="Function">
                                             <param id="0" name="Name">&quot;PlayerQuizzSetVisible&quot;</param>
