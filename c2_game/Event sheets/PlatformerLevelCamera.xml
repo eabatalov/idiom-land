@@ -6,8 +6,42 @@
         <event-group description="" sid="4816676888266997" title="Platformer Level Camera">
             <sub-events>
                 <variable constant="1" name="DIALOG_SCROLL_SPEED" sid="5880626694219212" static="0" type="number">0.08</variable>
+                <comment>XXX Empirical value</comment>
+                <variable constant="1" name="SCROLLED_TO_THRESHOLD" sid="1353364675478754" static="0" type="number">2</variable>
                 <variable constant="0" name="PlayerToFocusId" sid="3199788943876215" static="1" type="number">-1</variable>
+                <variable constant="0" name="PlayerIsQuizzToFocus" sid="9441861753398009" static="1" type="number">0</variable>
                 <variable constant="0" name="NPCToFocusId" sid="2764618675602972" static="1" type="number">-1</variable>
+                <variable constant="0" name="NPCIsQuizzToFocus" sid="8860463819834523" static="1" type="number">-1</variable>
+                <variable constant="0" name="NeedSignalOnFocusedEvent" sid="7298531531293244" static="1" type="number">0</variable>
+                <event-block sid="1518449300616952">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2903598318365666" type="Function">
+                            <param id="0" name="Name">&quot;ResetPlatformerLevelCameraVars&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9752212473146914" type="System">
+                            <param id="0" name="Variable">PlayerToFocusId</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8007722262413949" type="System">
+                            <param id="0" name="Variable">PlayerIsQuizzToFocus</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4552031594216739" type="System">
+                            <param id="0" name="Variable">NPCToFocusId</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2452077894738554" type="System">
+                            <param id="0" name="Variable">NPCIsQuizzToFocus</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5029560357774149" type="System">
+                            <param id="0" name="Variable">NeedSignalOnFocusedEvent</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="6961493721673194">
                     <conditions>
                         <condition id="0" name="On function" sid="54756181112957" type="Function">
@@ -15,19 +49,18 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="2697849821162982" type="System">
-                            <param id="0" name="Variable">PlayerToFocusId</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="7012236823024744" type="System">
-                            <param id="0" name="Variable">NPCToFocusId</param>
-                            <param id="1" name="Value">-1</param>
+                        <action id="0" name="Call function" sid="7942740356771194" type="Function">
+                            <param id="0" name="Name">&quot;ResetPlatformerLevelCameraVars&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9426360880718929">
+                <comment>Exactly 24 frames /sec</comment>
+                <event-block collapsed="1" sid="9426360880718929">
                     <conditions>
-                        <condition id="-1" name="Every tick" sid="2835629177626751" type="System" />
+                        <condition id="-6" name="Every X seconds" sid="2835629177626751" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -41,12 +74,8 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="6005733808516451" type="Function">
-                                    <param id="0" name="Name">&quot;FocusPlayer&quot;</param>
-                                    <param id="1" name="Parameter {n}">PlayerToFocusId</param>
-                                </action>
-                                <action id="14" name="Log" sid="1668184471130622" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;FocusPlayer &quot; &amp; PlayerToFocusId</param>
+                                    <param id="0" name="Name">&quot;FocusPlayer_&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -61,8 +90,8 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="6769290195041883" type="Function">
-                                    <param id="0" name="Name">&quot;FocusNPC&quot;</param>
-                                    <param id="1" name="Parameter {n}">NPCToFocusId</param>
+                                    <param id="0" name="Name">&quot;FocusNPC_&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -83,7 +112,7 @@
                 <variable constant="0" name="ScrollX_" sid="5989770640872407" static="0" type="number">0</variable>
                 <variable constant="0" name="HeightToShow" sid="4580807785495968" static="0" type="number">0</variable>
                 <comment>param(0): Player id</comment>
-                <event-block collapsed="1" sid="6080822711155584">
+                <event-block sid="6080822711155584">
                     <conditions>
                         <condition id="0" name="On function" sid="3549298997343244" type="Function">
                             <param id="0" name="Name">&quot;FocusPlayer&quot;</param>
@@ -93,56 +122,89 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="4869789262984637" type="Function">
+                            <param id="0" name="Name">&quot;ResetPlatformerLevelCameraVars&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="-9" name="Set value" sid="3438171003363408" type="System">
                             <param id="0" name="Variable">PlayerToFocusId</param>
                             <param id="1" name="Value">Player.UID</param>
                         </action>
-                        <action id="-9" name="Set value" sid="2191152949466925" type="System">
-                            <param id="0" name="Variable">NPCToFocusId</param>
-                            <param id="1" name="Value">-1</param>
+                        <action id="-9" name="Set value" sid="581588859795581" type="System">
+                            <param id="0" name="Variable">NeedSignalOnFocusedEvent</param>
+                            <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="9785844258547026" type="System">
+                    </actions>
+                </event-block>
+                <event-block collapsed="1" sid="331742711965644">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6007835416168635" type="Function">
+                            <param id="0" name="Name">&quot;FocusPlayer_&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1824077883250373" type="Player">
+                            <param id="0" name="Unique ID">PlayerToFocusId</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="893074996973996" type="System">
                             <param id="0" name="Variable">HeightToShow</param>
                             <param id="1" name="Value">PlayerSpeechBg.Height + Player.Height</param>
                         </action>
-                        <action id="-9" name="Set value" sid="8477954464476558" type="System">
+                        <action id="-9" name="Set value" sid="2335120307137946" type="System">
                             <param id="0" name="Variable">HeightToShow</param>
                             <param id="1" name="Value">min(HeightToShow, WINDOW_HEIGHT)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="734780912687661" type="System">
+                        <action id="-9" name="Set value" sid="9359187499327214" type="System">
                             <param id="0" name="Variable">ScrollY_</param>
                             <param id="1" name="Value">PlayerSpeechBg.Y + HeightToShow / 2</param>
                         </action>
-                        <action id="-9" name="Set value" sid="1717407941667081" type="System">
+                        <action id="-9" name="Set value" sid="4604897410470169" type="System">
                             <param id="0" name="Variable">ScrollX_</param>
                             <param id="1" name="Value">PlayerSpeechBg.X + PlayerSpeechBg.Width / 2</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="7595195138216258">
+                        <event-block sid="7198883548849228">
                             <conditions>
-                                <condition id="-9" name="Is visible" sid="9068545822807597" type="PlayerAnsBg" />
+                                <condition id="-14" name="Compare variable" sid="7438255015462867" type="System">
+                                    <param id="0" name="Variable">PlayerIsQuizzToFocus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="9242619831873614" type="System">
+                                <action id="-9" name="Set value" sid="1977196423610621" type="System">
                                     <param id="0" name="Variable">ScrollX_</param>
                                     <param id="1" name="Value">ScrollX_ - PlayerAnsBg.Width / 2</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="5366658463542109">
+                        <event-block sid="6487001421617702">
                             <conditions />
                             <actions>
-                                <action id="-7" name="Scroll to position" sid="4976116375959115" type="System">
-                                    <param id="0" name="X">lerp(scrollx, ScrollX_, DIALOG_SCROLL_SPEED)</param>
-                                    <param id="1" name="Y">lerp(scrolly, ScrollY_, DIALOG_SCROLL_SPEED)</param>
+                                <action id="0" name="Call function" sid="1520420977333692" type="Function">
+                                    <param id="0" name="Name">&quot;FocusToXY&quot;</param>
+                                    <param id="1" name="Parameter {n}">ScrollX_{###}ScrollY_{###}DIALOG_SCROLL_SPEED</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="2002408306699115">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8327331976361084" type="Function">
+                            <param id="0" name="Name">&quot;AddPlayerQuizzToFocusObjects&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4055409574731923" type="System">
+                            <param id="0" name="Variable">PlayerIsQuizzToFocus</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>param(0): NPC id</comment>
-                <event-block collapsed="1" sid="7879476568560109">
+                <event-block sid="7879476568560109">
                     <conditions>
                         <condition id="0" name="On function" sid="2183046803339675" type="Function">
                             <param id="0" name="Name">&quot;FocusNPC&quot;</param>
@@ -152,51 +214,151 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="4509878019195522" type="System">
-                            <param id="0" name="Variable">PlayerToFocusId</param>
-                            <param id="1" name="Value">-1</param>
+                        <action id="0" name="Call function" sid="1694392816704502" type="Function">
+                            <param id="0" name="Name">&quot;ResetPlatformerLevelCameraVars&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-9" name="Set value" sid="832254087479186" type="System">
                             <param id="0" name="Variable">NPCToFocusId</param>
                             <param id="1" name="Value">NPC.UID</param>
                         </action>
-                        <action id="-9" name="Set value" sid="8973651536643707" type="System">
+                        <action id="-9" name="Set value" sid="2320280878308741" type="System">
+                            <param id="0" name="Variable">NeedSignalOnFocusedEvent</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block collapsed="1" sid="8964014590926781">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9971522473725716" type="Function">
+                            <param id="0" name="Name">&quot;FocusNPC_&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="5203657850387647" type="NPC">
+                            <param id="0" name="Unique ID">NPCToFocusId</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7923872671116373" type="System">
                             <param id="0" name="Variable">HeightToShow</param>
                             <param id="1" name="Value">NPCSpeechBg.Height + NPC.Height</param>
                         </action>
-                        <action id="-9" name="Set value" sid="4469130793121731" type="System">
+                        <action id="-9" name="Set value" sid="2868603778616999" type="System">
                             <param id="0" name="Variable">HeightToShow</param>
                             <param id="1" name="Value">min(HeightToShow, WINDOW_HEIGHT)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="8311262190492344" type="System">
+                        <action id="-9" name="Set value" sid="9886767316452491" type="System">
                             <param id="0" name="Variable">ScrollY_</param>
                             <param id="1" name="Value">NPCSpeechBg.Y + HeightToShow / 2</param>
                         </action>
-                        <action id="-9" name="Set value" sid="5274095656607867" type="System">
+                        <action id="-9" name="Set value" sid="725216882442962" type="System">
                             <param id="0" name="Variable">ScrollX_</param>
                             <param id="1" name="Value">NPCSpeechBg.X + NPCSpeechBg.Width / 2</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="2423154993146149">
+                        <event-block sid="5948538115957938">
                             <conditions>
-                                <condition id="-9" name="Is visible" sid="7123263377771133" type="NPCAnsBg" />
+                                <condition id="-14" name="Compare variable" sid="6052622462016008" type="System">
+                                    <param id="0" name="Variable">NPCIsQuizzToFocus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="6921541886723488" type="System">
+                                <action id="-9" name="Set value" sid="2210523526138858" type="System">
                                     <param id="0" name="Variable">ScrollX_</param>
                                     <param id="1" name="Value">ScrollX_ - NPCAnsBg.Width / 2</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="4585206103843915">
+                        <event-block sid="843606883272696">
                             <conditions />
                             <actions>
-                                <action id="-7" name="Scroll to position" sid="3838107527372839" type="System">
-                                    <param id="0" name="X">lerp(scrollx, ScrollX_, DIALOG_SCROLL_SPEED)</param>
-                                    <param id="1" name="Y">lerp(scrolly, ScrollY_, DIALOG_SCROLL_SPEED)</param>
+                                <action id="0" name="Call function" sid="1689147888624932" type="Function">
+                                    <param id="0" name="Name">&quot;FocusToXY&quot;</param>
+                                    <param id="1" name="Parameter {n}">ScrollX_{###}ScrollY_{###}DIALOG_SCROLL_SPEED</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="669181064884576">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8904366203696358" type="Function">
+                            <param id="0" name="Name">&quot;AddNPCQuizzToFocusObjects&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9490235060596113" type="System">
+                            <param id="0" name="Variable">NPCIsQuizzToFocus</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>param(0): x&#x0D;&#x0A;param(1): y&#x0D;&#x0A;param(2): lerp_k</comment>
+                <event-block sid="7346829992265118">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8929217887819968" type="Function">
+                            <param id="0" name="Name">&quot;FocusToXY&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="8834788900949978">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="5322944576869241" type="System">
+                                    <param id="0" name="Variable">ScrollX_</param>
+                                    <param id="1" name="Value">scrollx</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5728089476469353" type="System">
+                                    <param id="0" name="Variable">ScrollY_</param>
+                                    <param id="1" name="Value">scrolly</param>
+                                </action>
+                                <action id="-7" name="Scroll to position" sid="4787676248194115" type="System">
+                                    <param id="0" name="X">lerp(scrollx, Function.Param(0), Function.Param(2))</param>
+                                    <param id="1" name="Y">lerp(scrolly, Function.Param(1), Function.Param(2))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Also handle case of bounded scrolling by comparing with previous value</comment>
+                                <event-block sid="6912409907655335">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4439230300145022" type="System">
+                                            <param id="0" name="First value">abs(ScrollX_ - scrollx)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">SCROLLED_TO_THRESHOLD</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="4289775324393655" type="System">
+                                            <param id="0" name="First value">abs(ScrollY_ - scrolly)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">SCROLLED_TO_THRESHOLD</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="6511349203511914">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="1318803336044702" type="System">
+                                                    <param id="0" name="Variable">NeedSignalOnFocusedEvent</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="1970199430099322" type="System">
+                                                    <param id="0" name="Variable">NeedSignalOnFocusedEvent</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="9742292954177312" type="Function">
+                                                    <param id="0" name="Name">&quot;onPlatformerCameraFocusCompleted&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

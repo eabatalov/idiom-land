@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>QuestUIStage</name>
     <events>
-        <comment>p1: Stage</comment>
-        <event-block collapsed="1" sid="8060985393539423">
+        <comment>param(0): stage&#x0D;&#x0A;param(1): 1 to allow animated transition 0 otherwise</comment>
+        <event-block sid="8060985393539423">
             <conditions>
                 <condition id="0" name="On function" sid="6870888253004275" type="Function">
                     <param id="0" name="Name">&quot;HideStageUI&quot;</param>
@@ -44,7 +44,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="4391312858453261" type="Function">
                             <param id="0" name="Name">&quot;HidePlayerUI&quot;</param>
-                            <param id="1" name="Parameter {n}">Player.UID</param>
+                            <param id="1" name="Parameter {n}">Player.UID{###}Function.Param(1)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -121,10 +121,10 @@
                         <action id="-25" name="Move to bottom" sid="4487465092045365" type="NPCPhraseTxt" />
                         <action id="-25" name="Move to bottom" sid="3260745429109428" type="NPCPhraseBg" />
                         <action id="-25" name="Move to bottom" sid="4021589683031011" type="NPCSpeechBg" />
-                        <action disabled="1" id="-15" name="Set visible" sid="839835481329796" type="NPCPhraseBg">
+                        <action disabled="1" id="-15" name="Set visible" sid="4981011621067659" type="NPCSpeechBg">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="4981011621067659" type="NPCSpeechBg">
+                        <action disabled="1" id="-15" name="Set visible" sid="839835481329796" type="NPCPhraseBg">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action disabled="1" id="-15" name="Set visible" sid="9386546410996723" type="NPCPhraseTxt">
@@ -136,9 +136,19 @@
                         <action disabled="1" id="-15" name="Set visible" sid="8570550841279258" type="NpcPhoto">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="-16" name="Wait" sid="3790572737361058" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
                         <action id="0" name="Call function" sid="7166220648528824" type="Function">
                             <param id="0" name="Name">&quot;FocusNPC&quot;</param>
                             <param id="1" name="Parameter {n}">NPC.UID</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9605983703328309" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="0" name="Call function" sid="5602745019946945" type="Function">
+                            <param id="0" name="Name">&quot;NPCSpeechSetTargetOpacity&quot;</param>
+                            <param id="1" name="Parameter {n}">NPC.UID{###}100</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -207,6 +217,10 @@
                         <action id="0" name="Call function" sid="3080014962192916" type="Function">
                             <param id="0" name="Name">&quot;ShowNPCPhrase&quot;</param>
                             <param id="1" name="Parameter {n}">NPC.UID</param>
+                        </action>
+                        <action id="0" name="Call function" sid="9917351513495563" type="Function">
+                            <param id="0" name="Name">&quot;AddNPCQuizzToFocusObjects&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Set text" sid="7016043142541835" type="NPCAns1Txt">
                             <param id="0" name="Text">QuestLevelRuntime.getAnswer1Text</param>
@@ -460,13 +474,13 @@
                         <action id="-15" name="Set visible" sid="7638784932733143" type="NPCAns4Txt">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="3672432380044368" type="NPCSpeechBg">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action disabled="1" id="-15" name="Set visible" sid="2232269637729392" type="NPCPhraseTxt">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action disabled="1" id="-15" name="Set visible" sid="8951861471942926" type="NPCPhraseBg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="3672432380044368" type="NPCSpeechBg">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action disabled="1" id="-15" name="Set visible" sid="2196549733152381" type="NpcPhoto">
@@ -475,11 +489,15 @@
                         <action disabled="1" id="-15" name="Set visible" sid="8556447528120962" type="NPCNameTxt">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="0" name="Call function" sid="1863217001488874" type="Function">
+                            <param id="0" name="Name">&quot;NPCSpeechSetTargetOpacity&quot;</param>
+                            <param id="1" name="Parameter {n}">NPC.UID{###}0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6702021473764103" title="PlayerUI">
+        <event-group description="" sid="6702021473764103" title="PlayerUI">
             <sub-events>
                 <comment>XXX: this every tick &quot;pinning&quot; is needed because construct has some bugs in computation of special sprite points.&#x0D;&#x0A;Construct return invalid values and we pin to them. But almost all the time Construct returns good values. This everytick pinning allows us to use this valid values.</comment>
                 <event-block sid="5619469661584902">
@@ -512,129 +530,109 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="566202086767859">
+                <comment>param(0): Player UID&#x0D;&#x0A;param(1): phrase text</comment>
+                <event-block collapsed="1" sid="7260169025044465">
                     <conditions>
-                        <condition id="0" name="On function" sid="1757451801164955" type="Function">
-                            <param id="0" name="Name">&quot;ShowPlayerPhrase&quot;</param>
+                        <condition id="0" name="On function" sid="5969798652821802" type="Function">
+                            <param id="0" name="Name">&quot;RenderPlayerPhrase&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="6911479784215454" type="Player">
+                        <condition id="-14" name="Pick by unique ID" sid="8793256265182312" type="Player">
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="6089481301401378" type="PlayerPhraseTxt">
-                            <param id="0" name="Text">QuestLevelRuntime.getText</param>
+                        <action id="0" name="Set text" sid="8349551912507407" type="PlayerPhraseTxt">
+                            <param id="0" name="Text">Function.Param(1)</param>
                         </action>
-                        <action id="-25" name="Move to bottom" sid="4533967939786091" type="PlayerPhraseTxt" />
-                        <action id="-25" name="Move to bottom" sid="960340167474096" type="PlayerPhoto" />
-                        <action id="-25" name="Move to bottom" sid="2214607857350972" type="PlayerNameTxt" />
-                        <action id="-25" name="Move to bottom" sid="7078895510264422" type="PlayerPhraseBg" />
-                        <action id="-25" name="Move to bottom" sid="2858302157683358" type="PlayerSpeechBg" />
-                        <action disabled="1" id="-15" name="Set visible" sid="8723165850772302" type="PlayerPhraseTxt">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="2707988200121936" type="PlayerPhraseBg">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="1056599444429625" type="PlayerSpeechBg">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="8445503092593476" type="PlayerPhoto">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="3498046344092397" type="PlayerNameTxt">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="3502400785906873" type="Function">
-                            <param id="0" name="Name">&quot;FocusPlayer&quot;</param>
-                            <param id="1" name="Parameter {n}">Player.UID</param>
-                        </action>
+                        <action id="-25" name="Move to bottom" sid="5187495633365632" type="PlayerPhraseTxt" />
+                        <action id="-25" name="Move to bottom" sid="3252074603837354" type="PlayerPhoto" />
+                        <action id="-25" name="Move to bottom" sid="9962526198137944" type="PlayerNameTxt" />
+                        <action id="-25" name="Move to bottom" sid="3971054250734241" type="PlayerPhraseBg" />
+                        <action id="-25" name="Move to bottom" sid="6209908945005614" type="PlayerSpeechBg" />
                     </actions>
                     <sub-events>
-                        <event-block sid="3336207269604883">
+                        <event-block sid="4396410957599799">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="6746007235374595" type="System">
+                                <condition id="-8" name="Compare two values" sid="1725133965078051" type="System">
                                     <param id="0" name="First value">QuestLevelRuntime.getPhraseType</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">&quot;SPEAK&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="6707885725244835" type="PlayerSpeechBg">
+                                <action id="4" name="Set animation" sid="6809362161014894" type="PlayerSpeechBg">
                                     <param id="0" name="Animation">&quot;Speak&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="4" name="Set font color" sid="6982593764192367" type="PlayerPhraseTxt">
+                                <action id="4" name="Set font color" sid="5126957908910642" type="PlayerPhraseTxt">
                                     <param id="0" name="Color">rgb(PlayerPhraseTxt.SpeachR, PlayerPhraseTxt.SpeachG, PlayerPhraseTxt.SpeachB)</param>
                                 </action>
-                                <action id="4" name="Set font color" sid="2588544027070215" type="PlayerNameTxt">
+                                <action id="4" name="Set font color" sid="4889537074674111" type="PlayerNameTxt">
                                     <param id="0" name="Color">rgb(PlayerPhraseTxt.SpeachR, PlayerPhraseTxt.SpeachG, PlayerPhraseTxt.SpeachB)</param>
                                 </action>
-                                <action id="0" name="Call function" sid="7067417842225699" type="Function">
+                                <action id="0" name="Call function" sid="1298677460303536" type="Function">
                                     <param id="0" name="Name">&quot;AnimPlayerSay&quot;</param>
                                     <param id="1" name="Parameter {n}">Player.UID</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="5047793466862367">
+                        <event-block sid="5146636920445088">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="4239130951151388" type="System">
+                                <condition id="-8" name="Compare two values" sid="7248227027918118" type="System">
                                     <param id="0" name="First value">QuestLevelRuntime.getPhraseType</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">&quot;THINK&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="3434206596030371" type="PlayerSpeechBg">
+                                <action id="4" name="Set animation" sid="4820451764910349" type="PlayerSpeechBg">
                                     <param id="0" name="Animation">&quot;Think&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="4" name="Set font color" sid="8589746743441473" type="PlayerPhraseTxt">
+                                <action id="4" name="Set font color" sid="6654284537873172" type="PlayerPhraseTxt">
                                     <param id="0" name="Color">rgb(PlayerPhraseTxt.ThinkR, PlayerPhraseTxt.ThinkG, PlayerPhraseTxt.ThinkB)</param>
                                 </action>
-                                <action id="4" name="Set font color" sid="3697102974604999" type="PlayerNameTxt">
+                                <action id="4" name="Set font color" sid="4079261107697881" type="PlayerNameTxt">
                                     <param id="0" name="Color">rgb(PlayerPhraseTxt.ThinkR, PlayerPhraseTxt.ThinkG, PlayerPhraseTxt.ThinkB)</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>param(0): player UID&#x0D;&#x0A;param(1): quizz text&#x0D;&#x0A;param(2): ans 1 text&#x0D;&#x0A;param(3): ans 2 text&#x0D;&#x0A;param(4): ans 3 text&#x0D;&#x0A;param(5): ans 4 text</comment>
                 <event-block sid="2311930963919224">
                     <conditions>
                         <condition id="0" name="On function" sid="1546117940917564" type="Function">
-                            <param id="0" name="Name">&quot;ShowPlayerQuiz&quot;</param>
+                            <param id="0" name="Name">&quot;RenderPlayerQuizz&quot;</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="596242356038575" type="Player">
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="6954710528723984" type="Function">
-                            <param id="0" name="Name">&quot;ShowPlayerPhrase&quot;</param>
-                            <param id="1" name="Parameter {n}">Player.UID</param>
+                        <action id="0" name="Call function" sid="9432185204001599" type="Function">
+                            <param id="0" name="Name">&quot;RenderPlayerPhrase&quot;</param>
+                            <param id="1" name="Parameter {n}">Player.UID{###}Function.Param(1)</param>
                         </action>
                         <action id="0" name="Set text" sid="3928744004699147" type="PlayerAns1Txt">
-                            <param id="0" name="Text">QuestLevelRuntime.getAnswer1Text</param>
+                            <param id="0" name="Text">Function.Param(2)</param>
                         </action>
                         <action id="0" name="Set text" sid="1471397401252449" type="PlayerAns2Txt">
-                            <param id="0" name="Text">QuestLevelRuntime.getAnswer2Text</param>
+                            <param id="0" name="Text">Function.Param(3)</param>
                         </action>
                         <action id="0" name="Set text" sid="4205700305958357" type="PlayerAns3Txt">
-                            <param id="0" name="Text">QuestLevelRuntime.getAnswer3Text</param>
+                            <param id="0" name="Text">Function.Param(4)</param>
                         </action>
                         <action id="0" name="Set text" sid="7382570758288879" type="PlayerAns4Txt">
-                            <param id="0" name="Text">QuestLevelRuntime.getAnswer4Text</param>
+                            <param id="0" name="Text">Function.Param(5)</param>
                         </action>
                         <action id="0" name="Call function" sid="1390912680364879" type="Function">
                             <param id="0" name="Name">&quot;PositionPlayerQuizGUI&quot;</param>
                             <param id="1" name="Parameter {n}">Player.UID</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="8997221757649511" type="PlayerAnsBg">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
                     </actions>
                 </event-block>
-                <event-block sid="1790664730454496">
+                <event-block collapsed="1" sid="1790664730454496">
                     <conditions>
                         <condition id="0" name="On function" sid="3442607008895169" type="Function">
                             <param id="0" name="Name">&quot;PositionPlayerQuizGUI&quot;</param>
@@ -658,26 +656,13 @@
                                     <param id="0" name="X">PlayerAnsBg.X + PLAYER_ANS_BG_LEFT_MARGIN</param>
                                     <param id="1" name="Y">PlayerAnsBg.Y + PLAYER_ANS_BG_TOP_MARGIN</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="1984610222555113" type="PlayerAns1Bg">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="1042434702278706" type="PlayerAns1Txt">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="2295744947018604">
                             <conditions>
                                 <condition id="-22" name="Else" sid="4917762979996623" type="System" />
                             </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="78175635275083" type="PlayerAns1Bg">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="162902264807622" type="PlayerAns1Txt">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="69717981260904">
                             <conditions>
@@ -688,12 +673,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="8342347727981312" type="PlayerAns2Bg">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="4841087328880777" type="PlayerAns2Txt">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="7468864271926432" type="PlayerAns2Bg">
                                     <param id="0" name="X">PlayerAnsBg.X + PLAYER_ANS_BG_LEFT_MARGIN</param>
                                     <param id="1" name="Y">PlayerAns1Bg.Y + PlayerAns1Bg.Height + PLAYER_ANS_BG_Y_DIST</param>
@@ -705,12 +684,6 @@
                                 <condition id="-22" name="Else" sid="5642333086175663" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="2064347708388616" type="PlayerAns2Bg">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="1237552211532959" type="PlayerAns2Txt">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
                                 <action id="-4" name="Set position to another object" sid="9838924819085938" type="PlayerAns2Bg">
                                     <param id="0" name="Object">PlayerAns1Bg</param>
                                     <param id="1" name="Image point (optional)">0</param>
@@ -730,12 +703,6 @@
                                     <param id="0" name="X">PlayerAnsBg.X + PLAYER_ANS_BG_LEFT_MARGIN</param>
                                     <param id="1" name="Y">PlayerAns2Bg.Y + PlayerAns2Bg.Height + PLAYER_ANS_BG_Y_DIST</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="1296792445337202" type="PlayerAns3Bg">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="6212427984118246" type="PlayerAns3Txt">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="4124198209286696">
@@ -743,12 +710,6 @@
                                 <condition id="-22" name="Else" sid="7677623629624812" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="5109206775254558" type="PlayerAns3Bg">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="9437245638728847" type="PlayerAns3Txt">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
                                 <action id="-4" name="Set position to another object" sid="1812311981423502" type="PlayerAns3Bg">
                                     <param id="0" name="Object">PlayerAns2Bg</param>
                                     <param id="1" name="Image point (optional)">0</param>
@@ -768,12 +729,6 @@
                                     <param id="0" name="X">PlayerAnsBg.X + PLAYER_ANS_BG_LEFT_MARGIN</param>
                                     <param id="1" name="Y">PlayerAns3Bg.Y + PlayerAns3Bg.Height + PLAYER_ANS_BG_Y_DIST</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="6250581031262538" type="PlayerAns4Bg">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="6189032593816453" type="PlayerAns4Txt">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="5293465441251764">
@@ -781,12 +736,6 @@
                                 <condition id="-22" name="Else" sid="3660630623006651" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="8572659834976648" type="PlayerAns4Bg">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="6123164962754568" type="PlayerAns4Txt">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
                                 <action id="-4" name="Set position to another object" sid="9065469262858012" type="PlayerAns4Bg">
                                     <param id="0" name="Object">PlayerAns3Bg</param>
                                     <param id="1" name="Image point (optional)">0</param>
@@ -827,60 +776,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="4401104733867801">
-                    <conditions>
-                        <condition id="0" name="On function" sid="2281091698438416" type="Function">
-                            <param id="0" name="Name">&quot;HidePlayerUI&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="7274281172612733" type="Player">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="9143839751917798" type="PlayerAns1Txt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="7188716658708552" type="PlayerAns2Txt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="4034530674309775" type="PlayerAns3Txt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="6888464399982306" type="PlayerAns4Txt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="866011420139008" type="PlayerAns1Bg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="3990253066213187" type="PlayerAns2Bg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="1247759749381549" type="PlayerAns4Bg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="8320872167310339" type="PlayerAns3Bg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="9717765267155444" type="PlayerAnsBg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="3549996884102819" type="PlayerPhraseTxt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="1266843181603526" type="PlayerPhraseBg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="8111916696491169" type="PlayerSpeechBg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="8369023630724183" type="PlayerNameTxt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action disabled="1" id="-15" name="Set visible" sid="3541010195576974" type="PlayerPhoto">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

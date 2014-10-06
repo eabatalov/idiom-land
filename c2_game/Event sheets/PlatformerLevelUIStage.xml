@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelUIStage</name>
+    <events>
+        <event-group description="" sid="5565326216105839" title="Platformer level Stage UI">
+            <sub-events>
+                <variable constant="0" name="DialogUITransitionState" sid="5751455831370674" static="1" type="text">IDLE</variable>
+                <variable constant="0" name="DialogUITransitionPending" sid="6512345099944581" static="1" type="number">0</variable>
+                <variable constant="0" name="DialogUITransitionTargetType" sid="9313408438439418" static="1" type="text"></variable>
+                <variable constant="0" name="DialogUITransitionTargetUID" sid="5318938060020209" static="1" type="number">0</variable>
+                <variable constant="0" name="DialogUITransitionTargetArg1" sid="2052170236579215" static="1" type="text"></variable>
+                <variable constant="0" name="DialogUITransitionTargetArg2" sid="2032141834246585" static="1" type="text"></variable>
+                <variable constant="0" name="DialogUITransitionTargetArg3" sid="6324085777805781" static="1" type="text"></variable>
+                <variable constant="0" name="DialogUITransitionTargetArg4" sid="4792315073394233" static="1" type="text"></variable>
+                <variable constant="0" name="DialogUITransitionTargetArg5" sid="4715699489553334" static="1" type="text"></variable>
+                <event-block sid="4820370108278057">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5424632589989922" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1107973897578765" type="System">
+                            <param id="0" name="Variable">DialogUITransitionState</param>
+                            <param id="1" name="Value">&quot;IDLE&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7940535952151154" type="System">
+                            <param id="0" name="Variable">DialogUITransitionPending</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="9103655247878102">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4231073526735975" type="Function">
+                            <param id="0" name="Name">&quot;onPlayerSpeechOpacityChanged&quot;</param>
+                        </condition>
+                        <condition id="0" name="On function" sid="9315858450997968" type="Function">
+                            <param id="0" name="Name">&quot;onPlayerQuizzOpacityChanged&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7866741331648822">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="8690329369908118" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2053967028819043">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5457631161685365" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;HIDE_PENDING&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="9576419070076844" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Value">&quot;HIDDEN1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1502787854638286">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5142121643231643" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="3781518980493806" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;HIDDEN1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="3858095929483307" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Value">&quot;HIDDEN&quot;</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="5047685051618165" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;q&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6167154770746009" type="Function">
+                                            <param id="0" name="Name">&quot;UnlockUIActionsINProcessing&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>In case of hide -&gt; transition we relock immediately in RunPlatformerDialogTransition</comment>
+                                <event-block sid="137165131445524">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="7495599842433161" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;HIDDEN&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="8941407206256625" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionPending</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3511861697138991" type="Function">
+                                            <param id="0" name="Name">&quot;RunPlatformerDialogTransition&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="3023407118962052">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7631020963110604" type="Function">
+                            <param id="0" name="Name">&quot;onPlatformerDialogTransitionPending&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9725504987595343">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6857737468609749" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;HIDDEN&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8573084635807551" type="Function">
+                                    <param id="0" name="Name">&quot;RunPlatformerDialogTransition&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1425395909307392">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1376094444714423" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6425762567692221" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionPending</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="1685813036077234">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9842814320323773" type="Function">
+                            <param id="0" name="Name">&quot;RunPlatformerDialogTransition&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="4775029344531819" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;w&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="9553472305902107" type="Function">
+                            <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8810389966641304" type="System">
+                            <param id="0" name="Variable">DialogUITransitionState</param>
+                            <param id="1" name="Value">&quot;TRANSITION_IN_PROGRESS&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7802471436239891" type="System">
+                            <param id="0" name="Variable">DialogUITransitionPending</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7534616964692776">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7450639535771653" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionTargetType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;PLAYER_SPEECH&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1095176037818967" type="Function">
+                                    <param id="0" name="Name">&quot;RunShowPlayerPhraseTransition&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4204147214082157">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6930018367713261" type="System" />
+                                <condition id="-14" name="Compare variable" sid="3957299735386686" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionTargetType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;PLAYER_QUIZZ&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5704672400891265" type="Function">
+                                    <param id="0" name="Name">&quot;RunShowPlayerQuizTransition&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4150128698061613">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>TODO prohibit user actions here until transition is finished</comment>
+                <event-block sid="8636625879039788">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4441805430038149" type="Function">
+                            <param id="0" name="Name">&quot;onPlatformerDialogUIHidePending&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="453516068783453">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8830089795786545" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;IDLE&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="6770170343178894" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;e&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2866461822419321" type="Function">
+                                    <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6759590744895759" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionState</param>
+                                    <param id="1" name="Value">&quot;HIDE_PENDING&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>TODO enable user actions as transition is finished</comment>
+                <event-block collapsed="1" sid="3789459919723832">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5140582260850752" type="Function">
+                            <param id="0" name="Name">&quot;onPlatformerDialogTransitionFinished&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3487904826632114">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="843587429554661" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;TRANSITION_IN_PROGRESS&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4870493174435286" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionState</param>
+                                    <param id="1" name="Value">&quot;IDLE&quot;</param>
+                                </action>
+                                <action id="14" name="Log" sid="4730699152933114" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;r&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="1787333422932216" type="Function">
+                                    <param id="0" name="Name">&quot;UnlockUIActionsINProcessing&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="1682190461560594" title="Platformer level Stage UI (Player)">
+                    <sub-events>
+                        <variable constant="0" name="TransitionState" sid="5420934110522117" static="1" type="text">IDLE</variable>
+                        <event-block sid="8458442659268548">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8212260143225692" type="Function">
+                                    <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6592969818139132" type="System">
+                                    <param id="0" name="Variable">TransitionState</param>
+                                    <param id="1" name="Value">&quot;IDLE&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6470279792900033">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3167028364366284" type="Function">
+                                    <param id="0" name="Name">&quot;RunShowPlayerPhraseTransition&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8623570227154838" type="System">
+                                    <param id="0" name="Variable">TransitionState</param>
+                                    <param id="1" name="Value">&quot;SWAIT_FOCUS&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="473916692849169" type="Function">
+                                    <param id="0" name="Name">&quot;FocusPlayer&quot;</param>
+                                    <param id="1" name="Parameter {n}">DialogUITransitionTargetUID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4349946561655149">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8885051148492768" type="Function">
+                                    <param id="0" name="Name">&quot;RunShowPlayerQuizTransition&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1371110156294184" type="System">
+                                    <param id="0" name="Variable">TransitionState</param>
+                                    <param id="1" name="Value">&quot;QWAIT_FOCUS&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9274702889127944" type="Function">
+                                    <param id="0" name="Name">&quot;FocusPlayer&quot;</param>
+                                    <param id="1" name="Parameter {n}">DialogUITransitionTargetUID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5390793607670801" type="Function">
+                                    <param id="0" name="Name">&quot;AddPlayerQuizzToFocusObjects&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block collapsed="1" sid="2547375494303181">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3171069691506674" type="Function">
+                                    <param id="0" name="Name">&quot;onPlatformerCameraFocusCompleted&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6915825920859894">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4132842828555981" type="System">
+                                            <param id="0" name="Variable">TransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;SWAIT_FOCUS&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="4691823537579225" type="Function">
+                                            <param id="0" name="Name">&quot;RenderPlayerPhrase&quot;</param>
+                                            <param id="1" name="Parameter {n}">DialogUITransitionTargetUID{###}DialogUITransitionTargetArg1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3636611484536098" type="System">
+                                            <param id="0" name="Variable">TransitionState</param>
+                                            <param id="1" name="Value">&quot;SPEECH_OPACITY_CHANGE_WAIT&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="3181958486252215" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerSpeechSetTargetOpacity&quot;</param>
+                                            <param id="1" name="Parameter {n}">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="175350501134632">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="8495077166205361" type="System">
+                                            <param id="0" name="Variable">TransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;QWAIT_FOCUS&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="57054111041193" type="Function">
+                                            <param id="0" name="Name">&quot;RenderPlayerQuizz&quot;</param>
+                                            <param id="1" name="Parameter {n}">DialogUITransitionTargetUID{###}DialogUITransitionTargetArg1{###}DialogUITransitionTargetArg2{###}DialogUITransitionTargetArg3{###}DialogUITransitionTargetArg4{###}DialogUITransitionTargetArg5</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2629198860200246" type="System">
+                                            <param id="0" name="Variable">TransitionState</param>
+                                            <param id="1" name="Value">&quot;QUIZZ_OPACITY_CHANGE_WAIT1&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="9727595194320182" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerSpeechSetTargetOpacity&quot;</param>
+                                            <param id="1" name="Parameter {n}">100</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="7442353339563933" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerQuizzSetTargetOpacity&quot;</param>
+                                            <param id="1" name="Parameter {n}">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block collapsed="1" sid="3093451124149949">
+                            <conditions>
+                                <condition id="0" name="On function" sid="1047572567241011" type="Function">
+                                    <param id="0" name="Name">&quot;onPlayerSpeechOpacityChanged&quot;</param>
+                                </condition>
+                                <condition id="1" name="Compare parameter" sid="1399131711992507" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6592111282293967">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="2332832130789063" type="System">
+                                            <param id="0" name="Variable">TransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;SPEECH_OPACITY_CHANGE_WAIT&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="9129996880902406" type="System">
+                                            <param id="0" name="Variable">TransitionState</param>
+                                            <param id="1" name="Value">&quot;IDLE&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="7497230994345884" type="Function">
+                                            <param id="0" name="Name">&quot;onPlatformerDialogTransitionFinished&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" collapsed="1" sid="6336227977084312">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4211566791040718" type="Function">
+                                    <param id="0" name="Name">&quot;onPlayerSpeechOpacityChanged&quot;</param>
+                                </condition>
+                                <condition id="0" name="On function" sid="1067721292192338" type="Function">
+                                    <param id="0" name="Name">&quot;onPlayerQuizzOpacityChanged&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1898084965368242">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="3808762357675977" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7330268972073694">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="6950727496529245" type="System">
+                                                    <param id="0" name="Variable">TransitionState</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;QUIZZ_OPACITY_CHANGE_WAIT1&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="2683369313710672" type="System">
+                                                    <param id="0" name="Variable">TransitionState</param>
+                                                    <param id="1" name="Value">&quot;QUIZZ_OPACITY_CHANGE_WAIT2&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="3344286835568711">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="2331470849190026" type="System">
+                                                    <param id="0" name="Variable">TransitionState</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;QUIZZ_OPACITY_CHANGE_WAIT2&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="1563971980660627" type="System">
+                                                    <param id="0" name="Variable">TransitionState</param>
+                                                    <param id="1" name="Value">&quot;IDLE&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="1367127553122179" type="Function">
+                                                    <param id="0" name="Name">&quot;onPlatformerDialogTransitionFinished&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): PlayerUID</comment>
+                        <event-block sid="3486765469677393">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3855773707928359" type="Function">
+                                    <param id="0" name="Name">&quot;ShowPlayerPhrase&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="2388438884092351" type="Player">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6035024796215998" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionTargetType</param>
+                                    <param id="1" name="Value">&quot;PLAYER_SPEECH&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6289035341737086" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionTargetUID</param>
+                                    <param id="1" name="Value">Player.UID</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3027275935313092" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionTargetArg1</param>
+                                    <param id="1" name="Value">QuestLevelRuntime.getText</param>
+                                </action>
+                                <action id="0" name="Call function" sid="1993349131582578" type="Function">
+                                    <param id="0" name="Name">&quot;onPlatformerDialogTransitionPending&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>param(0): PlayerUID</comment>
+                        <event-block sid="3132477502899316">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6967098243219766" type="Function">
+                                    <param id="0" name="Name">&quot;ShowPlayerQuizz&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="5893522468846799" type="Player">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6837716749775446" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionTargetType</param>
+                                    <param id="1" name="Value">&quot;PLAYER_QUIZZ&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5265357505564185" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionTargetUID</param>
+                                    <param id="1" name="Value">Player.UID</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2654919210401026" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionTargetArg1</param>
+                                    <param id="1" name="Value">QuestLevelRuntime.getText</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3582880939127321" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionTargetArg2</param>
+                                    <param id="1" name="Value">QuestLevelRuntime.getAnswer1Text</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6045242516580437" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionTargetArg3</param>
+                                    <param id="1" name="Value">QuestLevelRuntime.getAnswer2Text</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2041816379342062" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionTargetArg4</param>
+                                    <param id="1" name="Value">QuestLevelRuntime.getAnswer3Text</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6010456324680083" type="System">
+                                    <param id="0" name="Variable">DialogUITransitionTargetArg5</param>
+                                    <param id="1" name="Value">QuestLevelRuntime.getAnswer4Text</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5836391653536639" type="Function">
+                                    <param id="0" name="Name">&quot;onPlatformerDialogTransitionPending&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>param(0): PlayerUID&#x0D;&#x0A;param(1): 1 to allow animated</comment>
+                        <event-block sid="4959257967270137">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5215631197799404" type="Function">
+                                    <param id="0" name="Name">&quot;HidePlayerUI&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="3583779739822938" type="Player">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1987882933064479">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="1430682907559647" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9485752918107092" type="Function">
+                                            <param id="0" name="Name">&quot;onPlatformerDialogUIHidePending&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="4368360481339767" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerSpeechSetTargetOpacity&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="3887823703655958" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerQuizzSetTargetOpacity&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2855195962133744">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9830768744469849" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1705407143891343" type="Function">
+                                            <param id="0" name="Name">&quot;onPlatformerDialogUIHidePending&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6411624697263137" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerSpeechSetVisible&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6160070161084307" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerSpeechSetOpacity&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="617852100897001" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerQuizzSetVisible&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8435256131541612" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerQuizzSetOpacity&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="1636926020980046" type="Function">
+                                            <param id="0" name="Name">&quot;onPlayerSpeechOpacityChanged&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="4862524648997226" type="Function">
+                                            <param id="0" name="Name">&quot;onPlayerQuizzOpacityChanged&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
