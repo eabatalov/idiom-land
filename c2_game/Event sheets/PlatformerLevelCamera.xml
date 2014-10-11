@@ -281,6 +281,16 @@
                                         <event-block sid="704468072028879">
                                             <conditions />
                                             <actions>
+                                                <action id="-3" name="Set position" sid="8383283780119992" type="CameraFocusIndicator">
+                                                    <param id="0" name="X">DialogFocusRectX1</param>
+                                                    <param id="1" name="Y">DialogFocusRectY1</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="4076305874937349" type="CameraFocusIndicator">
+                                                    <param id="0" name="Width">DialogFocusRectX2 - DialogFocusRectX1</param>
+                                                </action>
+                                                <action id="-6" name="Set height" sid="4232247247417277" type="CameraFocusIndicator">
+                                                    <param id="0" name="Height">DialogFocusRectY2 - DialogFocusRectY1</param>
+                                                </action>
                                                 <action id="0" name="Call function" sid="4189991724624493" type="Function">
                                                     <param id="0" name="Name">&quot;DialogFocusToXYStep_&quot;</param>
                                                     <param id="1" name="Parameter {n}">ScrollX_{###}ScrollY_{###}DIALOG_SCROLL_SPEED</param>
