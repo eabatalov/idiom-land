@@ -7,6 +7,7 @@
         <variable constant="0" name="CURRENT_TALKING_CHAR_ID_ON_STAGE" sid="8827647186199187" static="0" type="text"></variable>
         <event-group description="" sid="969413197294685" title="Quest dialog UI">
             <sub-events>
+                <comment>&quot;STOPPED&quot; - no dialog step transitions are running&#x0D;&#x0A;&quot;STOPPED&quot; -&gt; &quot;TRANSITION_PENDING&quot; -&gt; &quot;TRANSITION_RUNNING&quot; -&gt; &quot;STEP_SHOW&quot; -&gt; &quot;STOPPED&quot;...</comment>
                 <variable constant="0" name="DialogUITransitionState" sid="1398252681402346" static="1" type="text">STOPPED</variable>
                 <variable constant="0" name="IsDialogUIVisible" sid="5302879002748858" static="1" type="number">1</variable>
                 <variable constant="0" name="IsDialogUIPositioningStarted" sid="920441695999561" static="1" type="number">0</variable>
@@ -182,7 +183,7 @@
                                 <condition id="-14" name="Compare variable" sid="9794090461444666" type="System">
                                     <param id="0" name="Variable">DialogUITransitionState</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;TRANSITION_PENDING&quot;</param>
+                                    <param id="2" name="Value">&quot;TRANSITION_RUNNING&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -265,7 +266,7 @@
                     <actions>
                         <action id="14" name="Log" sid="4465611036594381" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;RunNextDialogStepTransition: &quot; &amp; DialogUITransitionState &amp; &quot; &quot; &amp;  CurrentDialogStepType</param>
+                            <param id="1" name="Message">&quot;RunNextDialogStepTransition: &quot; &amp; DialogUITransitionState &amp; &quot; &quot; &amp;  CurrentDialogStepType &amp; &quot; IsDialogUIVisible: &quot; &amp; IsDialogUIVisible</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -275,7 +276,7 @@
                                 <condition id="-14" name="Compare variable" sid="7477401277446601" type="System">
                                     <param id="0" name="Variable">DialogUITransitionState</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;STOPPED&quot;</param>
+                                    <param id="2" name="Value">&quot;TRANSITION_PENDING&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="2719378322065626" type="System">
                                     <param id="0" name="Variable">IsDialogUIVisible</param>
@@ -324,7 +325,7 @@
                                         </action>
                                         <action id="-9" name="Set value" sid="1397792644842268" type="System">
                                             <param id="0" name="Variable">DialogUITransitionState</param>
-                                            <param id="1" name="Value">&quot;TRANSITION_PENDING&quot;</param>
+                                            <param id="1" name="Value">&quot;TRANSITION_RUNNING&quot;</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="6164624999555192" type="System">
                                             <param id="0" name="Variable">CURRENT_TALKING_CHAR_ID_ON_STAGE</param>
@@ -398,7 +399,7 @@
                                         </action>
                                         <action id="-9" name="Set value" sid="4672732661195773" type="System">
                                             <param id="0" name="Variable">DialogUITransitionState</param>
-                                            <param id="1" name="Value">&quot;TRANSITION_PENDING&quot;</param>
+                                            <param id="1" name="Value">&quot;TRANSITION_RUNNING&quot;</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="5816886402114509" type="System">
                                             <param id="0" name="Variable">CURRENT_TALKING_CHAR_ID_ON_STAGE</param>
@@ -624,6 +625,9 @@
                                     <param id="0" name="Name">Function.Param(0)</param>
                                     <param id="1" name="Parameter {n}">CharOuterRectX1{###}CharOuterRectY1{###}CharOuterRectX2{###}CharOuterRectY2</param>
                                 </action>
+                                <action id="1" name="Set return value" sid="3683010555468262" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -664,6 +668,10 @@
                                         <action id="0" name="Call function" sid="6911774772133971" type="Function">
                                             <param id="0" name="Name">&quot;ResetDialogStepState&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="8594785332920608" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Value">&quot;TRANSITION_PENDING&quot;</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="1976149850402087" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepType</param>
@@ -730,6 +738,10 @@
                                         <action id="0" name="Call function" sid="1906136014680887" type="Function">
                                             <param id="0" name="Name">&quot;ResetDialogStepState&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7699575917603995" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Value">&quot;TRANSITION_PENDING&quot;</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="162780790485214" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepType</param>
@@ -818,6 +830,10 @@
                                             <param id="0" name="Name">&quot;ResetDialogStepState&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
+                                        <action id="-9" name="Set value" sid="264175153451144" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Value">&quot;TRANSITION_PENDING&quot;</param>
+                                        </action>
                                         <action id="-9" name="Set value" sid="6295199421575603" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepType</param>
                                             <param id="1" name="Value">&quot;NPCP&quot;</param>
@@ -883,6 +899,10 @@
                                         <action id="0" name="Call function" sid="2069647624428976" type="Function">
                                             <param id="0" name="Name">&quot;ResetDialogStepState&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4925237451434835" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Value">&quot;TRANSITION_PENDING&quot;</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="635766706639037" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepType</param>
@@ -965,6 +985,10 @@
                                         <action id="0" name="Call function" sid="6970954655932032" type="Function">
                                             <param id="0" name="Name">&quot;ResetDialogStepState&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9115787008368876" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Value">&quot;TRANSITION_PENDING&quot;</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="2326585348138385" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepType</param>

@@ -7,6 +7,8 @@
             <sub-events>
                 <variable constant="1" name="DIALOG_SCROLL_SPEED" sid="5880626694219212" static="0" type="number">0.14</variable>
                 <variable constant="1" name="SCROLLED_TO_THRESHOLD" sid="1353364675478754" static="0" type="number">2</variable>
+                <comment>&quot;PLATFORMER&quot; | &quot;DIALOG&quot;</comment>
+                <variable constant="0" name="CurrentCameraMode" sid="8666412595963399" static="1" type="text">&quot;PLATFORMER&quot;</variable>
                 <variable constant="0" name="IsDialogFocusActive" sid="3199788943876215" static="1" type="number">0</variable>
                 <variable constant="0" name="IsDialogQuizzFocusActive" sid="9441861753398009" static="1" type="number">0</variable>
                 <variable constant="0" name="IsDialogFocusPointReachPending" sid="7298531531293244" static="1" type="number">0</variable>
@@ -21,64 +23,80 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="4945082974730791" type="System">
+                            <param id="0" name="Variable">CurrentCameraMode</param>
+                            <param id="1" name="Value">&quot;PLATFORMER&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="7942740356771194" type="Function">
                             <param id="0" name="Name">&quot;ResetPlatformerLevelDIalogCameraVars&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2808213357816571">
-                    <conditions>
-                        <condition id="0" name="On function" sid="679501969615838" type="Function">
-                            <param id="0" name="Name">&quot;LevelStarted&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="7696607382392268" type="Function">
-                            <param id="0" name="Name">&quot;ActivatePlatformerModeCamera&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-group description="" sid="5728668707605984" title="Platformer level camera (interface)">
                     <sub-events>
-                        <comment>param(0): rect top left x&#x0D;&#x0A;param(1): rect top left y&#x0D;&#x0A;param(2): rect bottom right x&#x0D;&#x0A;param(3): rect bottom right y</comment>
+                        <comment>param(0): rect top left x&#x0D;&#x0A;param(1): rect top left y&#x0D;&#x0A;param(2): rect bottom right x&#x0D;&#x0A;param(3): rect bottom right y&#x0D;&#x0A;returns: 1 on success, 0 else</comment>
                         <event-block sid="6080822711155584">
                             <conditions>
                                 <condition id="0" name="On function" sid="3549298997343244" type="Function">
                                     <param id="0" name="Name">&quot;DialogFocusRect&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="4869789262984637" type="Function">
-                                    <param id="0" name="Name">&quot;ResetPlatformerLevelDIalogCameraVars&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="-9" name="Set value" sid="3438171003363408" type="System">
-                                    <param id="0" name="Variable">IsDialogFocusActive</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="581588859795581" type="System">
-                                    <param id="0" name="Variable">IsDialogFocusPointReachPending</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="893074996973996" type="System">
-                                    <param id="0" name="Variable">DialogFocusRectX1</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="2335120307137946" type="System">
-                                    <param id="0" name="Variable">DialogFocusRectY1</param>
-                                    <param id="1" name="Value">Function.Param(1)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="8139539342753031" type="System">
-                                    <param id="0" name="Variable">DialogFocusRectX2</param>
-                                    <param id="1" name="Value">Function.Param(2)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="8039870952617113" type="System">
-                                    <param id="0" name="Variable">DialogFocusRectY2</param>
-                                    <param id="1" name="Value">Function.Param(3)</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9847743052358234">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="7820812663901327" type="System">
+                                            <param id="0" name="Variable">CurrentCameraMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;DIALOG&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="4869789262984637" type="Function">
+                                            <param id="0" name="Name">&quot;ResetPlatformerLevelDIalogCameraVars&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3438171003363408" type="System">
+                                            <param id="0" name="Variable">IsDialogFocusActive</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="581588859795581" type="System">
+                                            <param id="0" name="Variable">IsDialogFocusPointReachPending</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="893074996973996" type="System">
+                                            <param id="0" name="Variable">DialogFocusRectX1</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2335120307137946" type="System">
+                                            <param id="0" name="Variable">DialogFocusRectY1</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="8139539342753031" type="System">
+                                            <param id="0" name="Variable">DialogFocusRectX2</param>
+                                            <param id="1" name="Value">Function.Param(2)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="8039870952617113" type="System">
+                                            <param id="0" name="Variable">DialogFocusRectY2</param>
+                                            <param id="1" name="Value">Function.Param(3)</param>
+                                        </action>
+                                        <action id="1" name="Set return value" sid="4497439218284383" type="Function">
+                                            <param id="0" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7625013624849303">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6218839602170913" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="4893302865407112" type="Function">
+                                            <param id="0" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="2002408306699115">
                             <conditions>
@@ -96,13 +114,34 @@
                         <event-block sid="7160138652797632">
                             <conditions>
                                 <condition id="0" name="On function" sid="3885582727079727" type="Function">
-                                    <param id="0" name="Name">&quot;ActivatePlatformerModeCamera&quot;</param>
+                                    <param id="0" name="Name">&quot;AllowDialogModeCamera&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="9025793817134936" type="Function">
                                     <param id="0" name="Name">&quot;ResetPlatformerLevelDIalogCameraVars&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7277145348954421" type="System">
+                                    <param id="0" name="Variable">CurrentCameraMode</param>
+                                    <param id="1" name="Value">&quot;DIALOG&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5540085214002079">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8959503359361131" type="Function">
+                                    <param id="0" name="Name">&quot;DenyDialogModeCamera&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8723788958128756" type="Function">
+                                    <param id="0" name="Name">&quot;ResetPlatformerLevelDIalogCameraVars&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5769979757727761" type="System">
+                                    <param id="0" name="Variable">CurrentCameraMode</param>
+                                    <param id="1" name="Value">&quot;PLATFORMER&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -166,6 +205,11 @@
                             <sub-events>
                                 <event-block sid="6851533700295082">
                                     <conditions>
+                                        <condition id="-14" name="Compare variable" sid="935248411261182" type="System">
+                                            <param id="0" name="Variable">CurrentCameraMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;DIALOG&quot;</param>
+                                        </condition>
                                         <condition id="-14" name="Compare variable" sid="6369461090520638" type="System">
                                             <param id="0" name="Variable">IsDialogFocusActive</param>
                                             <param id="1" name="Comparison">0</param>
@@ -186,7 +230,7 @@
                                     <actions>
                                         <action id="-7" name="Scroll to position" sid="2812684577340635" type="System">
                                             <param id="0" name="X">lerp(scrollx, PlayerPlatform.X, 0.1)</param>
-                                            <param id="1" name="Y">PlayerPlatform.Y</param>
+                                            <param id="1" name="Y">lerp(scrolly, PlayerPlatform.Y, 0.1)</param>
                                         </action>
                                     </actions>
                                 </event-block>
