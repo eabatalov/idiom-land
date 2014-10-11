@@ -40,7 +40,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="8057820423849814" type="Function">
                                     <param id="0" name="Name">&quot;FocusPhrase&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
+                                    <param id="1" name="Parameter {n}">0</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -70,7 +70,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="8086260467430789" type="Function">
                                     <param id="0" name="Name">&quot;CallFuncWithCurrentTalkingCharOuterRect&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;DialogFocusRect&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;DialogFocusRect&quot;{###}Function.Param(0)</param>
                                 </action>
                                 <action id="1" name="Set return value" sid="4767614904042132" type="Function">
                                     <param id="0" name="Value">Function.ReturnValue</param>
@@ -254,7 +254,7 @@
                                         </action>
                                         <action id="0" name="Call function" sid="7257225546850646" type="Function">
                                             <param id="0" name="Name">&quot;FocusPhrase&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                            <param id="1" name="Parameter {n}">1</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -269,17 +269,6 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="4602337974256072" type="Function">
                                                     <param id="0" name="Name">&quot;RunQuizzFadeInStage&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="40191812507762">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="8965025541980367" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="9773107181453984" type="Function">
-                                                    <param id="0" name="Name">&quot;AddQuizzToFocusObjects&quot;</param>
                                                     <param id="1" name="Parameter {n}"></param>
                                                 </action>
                                             </actions>
