@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="PLAYER_ANIM_SCALING_DEFAULT" sid="4744348570009192" static="0" type="number">0</variable>
         <variable comment="Leave it zero. != condition will force recomputation of this var." constant="0" name="PLAYER_ANIM_SCALING_CURRENT" sid="7409917232449734" static="0" type="number">0</variable>
-        <event-group collapsed="1" description="" sid="5020068825746262" title="Initialization">
+        <event-group description="" sid="5020068825746262" title="Initialization">
             <sub-events>
                 <event-block sid="9016563247743718">
                     <conditions>
@@ -31,13 +31,21 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Animation logic which is not changing during the game." sid="5129574936545948" title="Static">
+        <event-group description="Animation logic which is not changing during the game." sid="5129574936545948" title="Static">
             <sub-events>
                 <event-block sid="8984455808387501">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="8669994467646534" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-3" name="Set position" sid="7942888808207559" type="Player">
+                            <param id="0" name="X">PlayerPlatform.X</param>
+                            <param id="1" name="Y">PlayerPlatform.Y - (Player.Height / 2 - PlayerPlatform.Height)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="3892470598369443" type="PlayerMiddleMarker">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y</param>
+                        </action>
                         <action id="-4" name="Set position to another object" sid="5558144430407876" type="PlayerSCML">
                             <param id="0" name="Object">Player</param>
                             <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
@@ -60,7 +68,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group collapsed="1" description="" sid="9620993175118371" title="Walking">
+                <event-group description="" sid="9620993175118371" title="Walking">
                     <sub-events>
                         <event-block sid="9751026908280847">
                             <conditions>

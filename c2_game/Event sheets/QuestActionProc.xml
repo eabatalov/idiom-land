@@ -36,7 +36,7 @@
                                         </action>
                                         <action id="14" name="Log" sid="7550428085722546" type="Browser">
                                             <param id="0" name="Type">0</param>
-                                            <param id="1" name="Message">&quot;LOCKED&quot;</param>
+                                            <param id="1" name="Message">&quot;LOCKED: &quot; &amp; Function.Param(0)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -53,7 +53,7 @@
                                         </action>
                                         <action id="14" name="Log" sid="5539085498783193" type="Browser">
                                             <param id="0" name="Type">0</param>
-                                            <param id="1" name="Message">&quot;ULOCKED&quot;</param>
+                                            <param id="1" name="Message">&quot;ULOCKED: &quot; &amp; Function.Param(0)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -72,7 +72,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="8065394963161022" type="Function">
                                             <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                            <param id="1" name="Parameter {n}">&quot;ProcPlayerAction&quot;</param>
                                         </action>
                                         <action id="0" name="Call function" sid="4423830652258234" type="Function">
                                             <param id="0" name="Name">&quot;makeStageChangersSolid&quot;</param>
@@ -97,14 +97,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="5963510550484769" type="Function">
-                                            <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="3268655184303648" type="Function">
-                                            <param id="0" name="Name">&quot;makeStageChangersSolid&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
                                         <action id="0" name="Call function" sid="3009214006836068" type="Function">
                                             <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
                                             <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1)</param>
@@ -119,6 +111,14 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="5963510550484769" type="Function">
+                                            <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;ProcPlayerCustomEvent&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="3268655184303648" type="Function">
+                                            <param id="0" name="Name">&quot;makeStageChangersSolid&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                         <action id="0" name="Call function" sid="1264752686429032" type="Function">
                                             <param id="0" name="Name">&quot;ProcUIActionIN&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}Function.Param(1){###}Function.Param(0)</param>
@@ -127,7 +127,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group collapsed="1" description="" sid="2560462655010375" title="Quest actions IN implementation">
+                        <event-group description="" sid="2560462655010375" title="Quest actions IN implementation">
                             <sub-events>
                                 <comment>Process action performed by any game actor (Player or Continue for now)&#x0D;&#x0A;p0: Player action type&#x0D;&#x0A;p1: Player action &apos;target id&apos; data&#x0D;&#x0A;p2: Player action &apos;name&apos; data</comment>
                                 <event-block sid="6301185671590818">
@@ -217,7 +217,7 @@
                                         </action>
                                         <action id="0" name="Call function" sid="4284990379601855" type="Function">
                                             <param id="0" name="Name">&quot;UnlockUIActionsINProcessing&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                            <param id="1" name="Parameter {n}">&quot;ProcAfterUIActionOut&quot;</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="8542273144097988" type="System">
                                             <param id="0" name="Variable">IS_PREV_UI_ACT_CONTINUE</param>
@@ -267,7 +267,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block collapsed="1" sid="9685306970185458">
+                        <event-block sid="9685306970185458">
                             <conditions>
                                 <condition id="0" name="On function" sid="4879756541203689" type="Function">
                                     <param id="0" name="Name">&quot;ProcUIActionOut&quot;</param>
@@ -382,8 +382,8 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="1356114499208037" type="Function">
-                                                    <param id="0" name="Name">&quot;ShowNotification&quot;</param>
-                                                    <param id="1" name="Parameter {n}">QuestLevelRuntime.getText</param>
+                                                    <param id="0" name="Name">&quot;RunNotification&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -406,8 +406,8 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="0" name="Call function" sid="6093212877094258" type="Function">
-                                                            <param id="0" name="Name">&quot;DisablePlayerAvatarControls&quot;</param>
+                                                        <action id="0" name="Call function" sid="6015304770311738" type="Function">
+                                                            <param id="0" name="Name">&quot;onPlayerMovementDisabled&quot;</param>
                                                             <param id="1" name="Parameter {n}"></param>
                                                         </action>
                                                     </actions>
@@ -421,8 +421,8 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="0" name="Call function" sid="1315472048789617" type="Function">
-                                                            <param id="0" name="Name">&quot;EnablePlayerAvatarControls&quot;</param>
+                                                        <action id="0" name="Call function" sid="9661322019426205" type="Function">
+                                                            <param id="0" name="Name">&quot;onPlayerMovementEnabled&quot;</param>
                                                             <param id="1" name="Parameter {n}"></param>
                                                         </action>
                                                     </actions>
@@ -449,7 +449,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="2496788276965673" type="Function">
-                                                            <param id="0" name="Name">&quot;ShowPlayerPhrase&quot;</param>
+                                                            <param id="0" name="Name">&quot;RunPlayerPhrase&quot;</param>
                                                             <param id="1" name="Parameter {n}">Player.UID</param>
                                                         </action>
                                                     </actions>
@@ -464,7 +464,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="2556221739997039" type="Function">
-                                                            <param id="0" name="Name">&quot;ShowPlayerQuizz&quot;</param>
+                                                            <param id="0" name="Name">&quot;RunPlayerQuizz&quot;</param>
                                                             <param id="1" name="Parameter {n}">Player.UID</param>
                                                         </action>
                                                     </actions>
@@ -532,7 +532,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="9558714275571348" type="Function">
-                                                            <param id="0" name="Name">&quot;ShowNPCPhrase&quot;</param>
+                                                            <param id="0" name="Name">&quot;RunNPCPhrase&quot;</param>
                                                             <param id="1" name="Parameter {n}">NPC.UID</param>
                                                         </action>
                                                     </actions>
@@ -547,7 +547,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="2512201185994246" type="Function">
-                                                            <param id="0" name="Name">&quot;ShowNPCQuiz&quot;</param>
+                                                            <param id="0" name="Name">&quot;RunNPCQuiz&quot;</param>
                                                             <param id="1" name="Parameter {n}">NPC.UID</param>
                                                         </action>
                                                     </actions>

@@ -8,7 +8,7 @@
             <sub-events>
                 <variable constant="0" name="GAME_IS_READY" sid="1345083819533632" static="1" type="number">0</variable>
                 <comment>Should be before &apos;first show&apos; as &apos;first show&apos; modifies GAME_IS_READY</comment>
-                <event-group collapsed="1" description="" sid="1705783773778731" title="Main menu show again">
+                <event-group description="" sid="1705783773778731" title="Main menu show again">
                     <sub-events>
                         <event-block sid="7926785314790678">
                             <conditions>
@@ -28,10 +28,10 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="2462146731093483" title="Main menu first show">
+                <event-group description="" sid="2462146731093483" title="Main menu first show">
                     <sub-events>
                         <comment>First start of main menu</comment>
-                        <event-block collapsed="1" sid="5483807338450445">
+                        <event-block sid="5483807338450445">
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="3231701431767122" type="System" />
                                 <condition id="-8" name="Compare two values" sid="8268979926168854" type="System">

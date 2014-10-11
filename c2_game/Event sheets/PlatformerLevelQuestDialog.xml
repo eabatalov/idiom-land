@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelQuestDialog</name>
+    <events>
+        <event-group description="" sid="4251705403440198" title="Platformer level quest dialog">
+            <sub-events>
+                <event-block sid="7104510487195964">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4454617112190261" type="Function">
+                            <param id="0" name="Name">&quot;onPlayerMovementEnabled&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9224897662413115" type="Function">
+                            <param id="0" name="Name">&quot;EnablePlayerAvatarControls&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="2581508594710524" type="Function">
+                            <param id="0" name="Name">&quot;ActivatePlatformerModeCamera&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="257643745833294">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1408495294225995" type="Function">
+                            <param id="0" name="Name">&quot;onPlayerMovementDisabled&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6424754219280662" type="Function">
+                            <param id="0" name="Name">&quot;DisablePlayerAvatarControls&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

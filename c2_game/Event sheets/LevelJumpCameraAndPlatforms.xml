@@ -91,7 +91,7 @@
                                 <variable constant="0" name="isOnePlatDropped" sid="3375717106113218" static="0" type="number">0</variable>
                                 <variable constant="0" name="platToDrop" sid="8046964084851814" static="0" type="number">4</variable>
                                 <variable constant="0" name="YBias" sid="2080671079615816" static="0" type="number">0</variable>
-                                <event-block collapsed="1" sid="5343750991007461">
+                                <event-block sid="5343750991007461">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="5312519497299033" type="System">
                                             <param id="0" name="First value">NextPlatform</param>
@@ -211,7 +211,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="3476192022125686" title="Jump level camera">
+                <event-group description="" sid="3476192022125686" title="Jump level camera">
                     <sub-events>
                         <comment>This variable holds the current scroll position, which gets smaller as the player moves upwards.</comment>
                         <variable constant="0" name="MinScroll" sid="3006293705114735" static="1" type="number">0</variable>
@@ -228,7 +228,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="4701954390864379">
+                        <event-block sid="4701954390864379">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="3911604544713809" type="System">
                                     <param id="0" name="Variable">LEVEL_STARTED</param>
