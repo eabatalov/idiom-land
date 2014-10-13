@@ -19,6 +19,7 @@
                                     <param id="0" name="Variable">BLOCK_UI_ACTIONS_IN_PROC_CNT</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="3" name="Clear" sid="7417705993874473" type="PendingPlayerCustomEvents" />
                             </actions>
                         </event-block>
                         <event-group description="" sid="617509718409851" title="Quest actions IN interface">
@@ -56,6 +57,23 @@
                                             <param id="1" name="Message">&quot;ULOCKED: &quot; &amp; Function.Param(0)</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="2442004799138987">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="1599742186258079" type="System">
+                                                    <param id="0" name="Variable">BLOCK_UI_ACTIONS_IN_PROC_CNT</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="8213856233836045" type="Function">
+                                                    <param id="0" name="Name">&quot;onUIActionsInUnlocked&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <comment>Process player action&#x0D;&#x0A;p0: Player action type&#x0D;&#x0A;p1: Player action &apos;target id&apos; data</comment>
                                 <event-block sid="1359721088397747">
@@ -63,26 +81,44 @@
                                         <condition id="0" name="On function" sid="549117859264555" type="Function">
                                             <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
                                         </condition>
-                                        <condition id="-8" name="Compare two values" sid="8010312559986772" type="System">
-                                            <param id="0" name="First value">BLOCK_UI_ACTIONS_IN_PROC_CNT</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="8065394963161022" type="Function">
-                                            <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;ProcPlayerAction&quot;</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="4423830652258234" type="Function">
-                                            <param id="0" name="Name">&quot;makeStageChangersSolid&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="4631591131679396" type="Function">
-                                            <param id="0" name="Name">&quot;ProcUIActionIN&quot;</param>
-                                            <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1){###}&quot;&quot;</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="1825990987905024">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="8010312559986772" type="System">
+                                                    <param id="0" name="First value">BLOCK_UI_ACTIONS_IN_PROC_CNT</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="8065394963161022" type="Function">
+                                                    <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;ProcPlayerAction&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="4423830652258234" type="Function">
+                                                    <param id="0" name="Name">&quot;makeStageChangersSolid&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="4631591131679396" type="Function">
+                                                    <param id="0" name="Name">&quot;ProcUIActionIN&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1){###}&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="444960445583853">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="8691672073631821" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="14" name="Log" sid="4339518129009795" type="Browser">
+                                                    <param id="0" name="Type">1</param>
+                                                    <param id="1" name="Message">&quot;Player action of type &quot; &amp; Function.Param(0) &amp; &quot; with target &quot; &amp; Function.Param(1) &amp; &quot; is blocked&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <comment>Process custom event triggered by player activity&#x0D;&#x0A;p0: Custom event name&#x0D;&#x0A;p1: Action &apos;target id&apos; data to identify storyline where to process event</comment>
                                 <event-block sid="1316027862354772">
@@ -90,20 +126,38 @@
                                         <condition id="0" name="On function" sid="158342733640637" type="Function">
                                             <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
                                         </condition>
-                                        <condition id="-8" name="Compare two values" sid="4447298196087772" type="System">
-                                            <param id="0" name="First value">BLOCK_UI_ACTIONS_IN_PROC_CNT</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="3009214006836068" type="Function">
-                                            <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
-                                            <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1)</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="9609847537793726">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="4447298196087772" type="System">
+                                                    <param id="0" name="First value">BLOCK_UI_ACTIONS_IN_PROC_CNT</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="3009214006836068" type="Function">
+                                                    <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="1972211425881603">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="127530580386768" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="5893347578407253" type="Function">
+                                                    <param id="0" name="Name">&quot;onPlayerCustomEventBlocked&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
-                                <comment>Process custom not blockable event triggered by player activity.&#x0D;&#x0A;p0: Custom event name&#x0D;&#x0A;p1: Action &apos;target id&apos; data to identify storyline where to process event</comment>
+                                <comment>Process custom not blockable quest event.&#x0D;&#x0A;Called only when:&#x0D;&#x0A;- ui actions in lock is not held already&#x0D;&#x0A;- or code called from quest action processing code injects a quest action in&#x0D;&#x0A;p0: Custom event name&#x0D;&#x0A;p1: Action &apos;target id&apos; data to identify storyline where to process event</comment>
                                 <event-block sid="7262705674421046">
                                     <conditions>
                                         <condition id="0" name="On function" sid="7742532410365916" type="Function">
@@ -150,6 +204,62 @@
                                             <param id="0" name="Value">Function.Param(2)</param>
                                         </action>
                                         <action id="1" name="Execute last player action on current stage" sid="8413799453876062" type="QuestLevelRuntime" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1954905602469293">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="8326505368251245" type="Function">
+                                            <param id="0" name="Name">&quot;onUIActionsInUnlocked&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <variable constant="0" name="CustomEventName" sid="240595759840145" static="0" type="text"></variable>
+                                        <variable constant="0" name="EventTargetId" sid="2828029604547638" static="0" type="text"></variable>
+                                        <event-block sid="6094906138613668">
+                                            <conditions>
+                                                <condition id="1" name="For each key" sid="694671386402522" type="PendingPlayerCustomEvents" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="1061190462595725" type="System">
+                                                    <param id="0" name="Variable">CustomEventName</param>
+                                                    <param id="1" name="Value">PendingPlayerCustomEvents.CurrentKey</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="6164680112048974" type="System">
+                                                    <param id="0" name="Variable">EventTargetId</param>
+                                                    <param id="1" name="Value">PendingPlayerCustomEvents.CurrentValue</param>
+                                                </action>
+                                                <action id="2" name="Delete key" sid="5558124158598942" type="PendingPlayerCustomEvents">
+                                                    <param id="0" name="Key">PendingPlayerCustomEvents.CurrentKey</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="332394110262716" type="Function">
+                                                    <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
+                                                    <param id="1" name="Parameter {n}">CustomEventName{###}EventTargetId</param>
+                                                </action>
+                                                <action id="14" name="Log" sid="3872178349186238" type="Browser">
+                                                    <param id="0" name="Type">1</param>
+                                                    <param id="1" name="Message">&quot;Custom player action &quot; &amp; CustomEventName &amp; &quot; was restarted with target id: &quot; &amp; EventTargetId</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>p0: Custom event name&#x0D;&#x0A;p1: Action &apos;target id&apos; data to identify storyline where to process event</comment>
+                                <event-block sid="1192811745210205">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="6175446880268484" type="Function">
+                                            <param id="0" name="Name">&quot;onPlayerCustomEventBlocked&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="9758864458234751" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Custom player action &quot; &amp; Function.Param(0) &amp; &quot; with target id: &quot; &amp; Function.Param(1) &amp; &quot; is postponed&quot;</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="4933126557462257" type="PendingPlayerCustomEvents">
+                                            <param id="0" name="Key">Function.Param(0)</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -215,15 +325,15 @@
                                             <param id="0" name="Name">&quot;makeStageChangersTransparent&quot;</param>
                                             <param id="1" name="Parameter {n}">Player.CurrentStage</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="4284990379601855" type="Function">
-                                            <param id="0" name="Name">&quot;UnlockUIActionsINProcessing&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;ProcAfterUIActionOut&quot;</param>
-                                        </action>
                                         <action id="-9" name="Set value" sid="8542273144097988" type="System">
                                             <param id="0" name="Variable">IS_PREV_UI_ACT_CONTINUE</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="8" name="Signla UI action completed" sid="6814910372213305" type="QuestLevelRuntime" />
+                                        <action id="0" name="Call function" sid="4284990379601855" type="Function">
+                                            <param id="0" name="Name">&quot;UnlockUIActionsINProcessing&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;ProcAfterUIActionOut&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="2887242115696691">

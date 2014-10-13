@@ -2057,51 +2057,72 @@
                         <condition id="0" name="On function" sid="1546118214549502" type="Function">
                             <param id="0" name="Name">&quot;PlayerInputLeft&quot;</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="663044184148649" type="System">
-                            <param id="0" name="First value">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="9061341482689768" type="PlayerPlatform">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5594438941857683">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="663044184148649" type="System">
+                                    <param id="0" name="First value">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="9061341482689768" type="PlayerPlatform">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="9329715248934294">
                     <conditions>
                         <condition id="0" name="On function" sid="6022184579517512" type="Function">
                             <param id="0" name="Name">&quot;PlayerInputUp&quot;</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="8849649317273765" type="System">
-                            <param id="0" name="First value">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="5342964455517997" type="PlayerPlatform">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7623969964313299">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8849649317273765" type="System">
+                                    <param id="0" name="First value">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="5342964455517997" type="PlayerPlatform">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="3302552265671319">
                     <conditions>
                         <condition id="0" name="On function" sid="6310757107772057" type="Function">
                             <param id="0" name="Name">&quot;PlayerInputRight&quot;</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="4505893252888946" type="System">
-                            <param id="0" name="First value">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="2342917029191362" type="PlayerPlatform">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="442990642750268">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4505893252888946" type="System">
+                                    <param id="0" name="First value">BLOCK_PLAYER_MOVEMENT_CONTROLS</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="2342917029191362" type="PlayerPlatform">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-group description="" sid="5225189963902238" title="Player avatar movement enable/disable">
                     <sub-events>
