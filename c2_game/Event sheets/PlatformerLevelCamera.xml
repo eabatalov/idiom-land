@@ -59,6 +59,7 @@
                                         <variable constant="0" name="FocusDistToMove" sid="9422479191324799" static="0" type="number">0</variable>
                                         <variable constant="1" name="XXX_DIALOG_FOCUS_LAYER_NAME" sid="8337283390654884" static="0" type="text">Speech</variable>
                                         <variable constant="1" name="MAX_AVOIDABLE_CAMERA_MOVE_PX" sid="7150457245813031" static="0" type="number">200</variable>
+                                        <variable constant="1" name="FOCUS_RECT_QUIZZ_DIST_ADD_PX" sid="3458661094361083" static="0" type="number">0</variable>
                                         <variable constant="1" name="DIALOG_LRMARGINS_PX" sid="1228383527319362" static="0" type="number">100</variable>
                                         <event-block sid="1419971731760746">
                                             <conditions />
@@ -89,6 +90,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <comment>Always make cool camera move when we show quizz</comment>
                                         <event-block sid="4573912545289387">
                                             <conditions>
                                                 <condition id="1" name="Compare parameter" sid="9667260110274386" type="Function">
@@ -98,59 +100,72 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-9" name="Set value" sid="7912522797710847" type="System">
+                                                <action id="-9" name="Set value" sid="3857157833040818" type="System">
+                                                    <param id="0" name="Variable">DialogFocusRectX1</param>
+                                                    <param id="1" name="Value">DialogFocusRectX1 - DialogAnsBg.Width - FOCUS_RECT_QUIZZ_DIST_ADD_PX</param>
+                                                </action>
+                                                <action disabled="1" id="-9" name="Set value" sid="7912522797710847" type="System">
                                                     <param id="0" name="Variable">DialogFocusRectX1</param>
                                                     <param id="1" name="Value">DialogFocusRectX1 - DialogAnsBg.Width / 2</param>
                                                 </action>
-                                                <action id="-9" name="Set value" sid="4224056997123757" type="System">
+                                                <action disabled="1" id="-9" name="Set value" sid="4224056997123757" type="System">
                                                     <param id="0" name="Variable">DialogFocusRectX2</param>
                                                     <param id="1" name="Value">DialogFocusRectX2 - DialogSpeechBg.Width / 2</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="5942570753748722">
-                                            <conditions />
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="5048427618556538" type="System">
-                                                    <param id="0" name="Variable">FocusDistToMove</param>
-                                                    <param id="1" name="Value">distance(scrollx, scrolly, (DialogFocusRectX1 + DialogFocusRectX2) / 2, (DialogFocusRectY1 + DialogFocusRectY2) / 2) </param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="4783663354366592">
+                                        <comment>Camera movement optimization</comment>
+                                        <event-block sid="6419130974357743">
                                             <conditions>
-                                                <condition id="-14" name="Compare variable" sid="9244926068202542" type="System">
-                                                    <param id="0" name="Variable">DialogFocusRectX1</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">ViewportLeft(XXX_DIALOG_FOCUS_LAYER_NAME) - DIALOG_LRMARGINS_PX</param>
-                                                </condition>
-                                                <condition id="-14" name="Compare variable" sid="3369719125685603" type="System">
-                                                    <param id="0" name="Variable">DialogFocusRectY1</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">ViewportTop(XXX_DIALOG_FOCUS_LAYER_NAME)</param>
-                                                </condition>
-                                                <condition id="-14" name="Compare variable" sid="6002224670999993" type="System">
-                                                    <param id="0" name="Variable">DialogFocusRectX2</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Value">ViewportRight(XXX_DIALOG_FOCUS_LAYER_NAME) - DIALOG_LRMARGINS_PX</param>
-                                                </condition>
-                                                <condition id="-14" name="Compare variable" sid="8666794090822512" type="System">
-                                                    <param id="0" name="Variable">DialogFocusRectY2</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Value">ViewportBottom(XXX_DIALOG_FOCUS_LAYER_NAME)</param>
-                                                </condition>
-                                                <condition id="-8" name="Compare two values" sid="9583751333862529" type="System">
-                                                    <param id="0" name="First value">FocusDistToMove</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Second value">MAX_AVOIDABLE_CAMERA_MOVE_PX</param>
-                                                </condition>
+                                                <condition id="-22" name="Else" sid="8660784291785154" type="System" />
                                             </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="8036506469568901" type="System">
-                                                    <param id="0" name="Variable">IsDIalogFocusOptimizedOut</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="5942570753748722">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="5048427618556538" type="System">
+                                                            <param id="0" name="Variable">FocusDistToMove</param>
+                                                            <param id="1" name="Value">distance(scrollx, scrolly, (DialogFocusRectX1 + DialogFocusRectX2) / 2, (DialogFocusRectY1 + DialogFocusRectY2) / 2) </param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="4783663354366592">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="9244926068202542" type="System">
+                                                            <param id="0" name="Variable">DialogFocusRectX1</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">ViewportLeft(XXX_DIALOG_FOCUS_LAYER_NAME) + DIALOG_LRMARGINS_PX</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="3369719125685603" type="System">
+                                                            <param id="0" name="Variable">DialogFocusRectY1</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">ViewportTop(XXX_DIALOG_FOCUS_LAYER_NAME)</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="6002224670999993" type="System">
+                                                            <param id="0" name="Variable">DialogFocusRectX2</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Value">ViewportRight(XXX_DIALOG_FOCUS_LAYER_NAME) - DIALOG_LRMARGINS_PX</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="8666794090822512" type="System">
+                                                            <param id="0" name="Variable">DialogFocusRectY2</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Value">ViewportBottom(XXX_DIALOG_FOCUS_LAYER_NAME)</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Compare two values" sid="9583751333862529" type="System">
+                                                            <param id="0" name="First value">FocusDistToMove</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Second value">MAX_AVOIDABLE_CAMERA_MOVE_PX</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="8036506469568901" type="System">
+                                                            <param id="0" name="Variable">IsDIalogFocusOptimizedOut</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="7277962635919275">
                                             <conditions>
