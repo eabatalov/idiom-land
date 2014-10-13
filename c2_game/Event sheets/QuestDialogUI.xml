@@ -18,6 +18,7 @@
                 <variable constant="0" name="CurrentDialogStepTargetName" sid="1897180071777137" static="1" type="text"></variable>
                 <variable constant="0" name="CurrentDialogStepArgText" sid="1212501585194827" static="1" type="text"></variable>
                 <variable constant="0" name="CurrentDialogStepArgPhraseType" sid="8799376941356403" static="1" type="text"></variable>
+                <variable constant="0" name="CurrentDialogStepArgPhraseSize" sid="1434574900339979" static="1" type="text"></variable>
                 <variable constant="0" name="CurrentDialogStepArgAns1" sid="3727977218013296" static="1" type="text"></variable>
                 <variable constant="0" name="CurrentDialogStepArgAns2" sid="7024611937349962" static="1" type="text"></variable>
                 <variable constant="0" name="CurrentDialogStepArgAns3" sid="3370910633141851" static="1" type="text"></variable>
@@ -349,7 +350,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="995505883178565" type="Function">
                                                     <param id="0" name="Name">&quot;RenderPhrase&quot;</param>
-                                                    <param id="1" name="Parameter {n}">CurrentDialogStepArgText{###}CurrentDialogStepArgPhraseType{###}CurrentDialogStepTargetID{###}CurrentDialogStepTargetName</param>
+                                                    <param id="1" name="Parameter {n}">CurrentDialogStepArgText{###}CurrentDialogStepArgPhraseType{###}CurrentDialogStepTargetID{###}CurrentDialogStepTargetName{###}CurrentDialogStepArgPhraseSize</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="1440949659788079" type="Function">
                                                     <param id="0" name="Name">&quot;ShowPhrase&quot;</param>
@@ -373,7 +374,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="892001086548449" type="Function">
                                                     <param id="0" name="Name">&quot;RenderQuizz&quot;</param>
-                                                    <param id="1" name="Parameter {n}">CurrentDialogStepArgText{###}CurrentDialogStepArgPhraseType{###}CurrentDialogStepTargetID{###}CurrentDialogStepTargetName{###}CurrentDialogStepArgAns1{###}CurrentDialogStepArgAns2{###}CurrentDialogStepArgAns3{###}CurrentDialogStepArgAns4</param>
+                                                    <param id="1" name="Parameter {n}">CurrentDialogStepArgText{###}CurrentDialogStepArgPhraseType{###}CurrentDialogStepTargetID{###}CurrentDialogStepTargetName{###}CurrentDialogStepArgAns1{###}CurrentDialogStepArgAns2{###}CurrentDialogStepArgAns3{###}CurrentDialogStepArgAns4{###}CurrentDialogStepArgPhraseSize</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="4921037501466652" type="Function">
                                                     <param id="0" name="Name">&quot;ShowQuizz&quot;</param>
@@ -693,6 +694,10 @@
                                             <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
                                             <param id="1" name="Value">QuestLevelRuntime.getPhraseType</param>
                                         </action>
+                                        <action id="-9" name="Set value" sid="5895585058807407" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgPhraseSize</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getPhraseSize</param>
+                                        </action>
                                         <action id="-9" name="Set value" sid="1676933291827153" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepArgText</param>
                                             <param id="1" name="Value">QuestLevelRuntime.getText</param>
@@ -762,6 +767,10 @@
                                         <action id="-9" name="Set value" sid="8319089057146031" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
                                             <param id="1" name="Value">QuestLevelRuntime.getPhraseType</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3400870044660909" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgPhraseSize</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getPhraseSize</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="1306476574784559" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepArgText</param>
@@ -854,6 +863,10 @@
                                             <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
                                             <param id="1" name="Value">QuestLevelRuntime.getPhraseType</param>
                                         </action>
+                                        <action id="-9" name="Set value" sid="1477958654394324" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgPhraseSize</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getPhraseSize</param>
+                                        </action>
                                         <action id="-9" name="Set value" sid="7585777611360504" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepArgText</param>
                                             <param id="1" name="Value">QuestLevelRuntime.getText</param>
@@ -923,6 +936,10 @@
                                         <action id="-9" name="Set value" sid="2533740030057896" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
                                             <param id="1" name="Value">QuestLevelRuntime.getPhraseType</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="6322713478126035" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgPhraseSize</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getPhraseSize</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="8111857732104809" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepArgText</param>

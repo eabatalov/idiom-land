@@ -5,21 +5,22 @@
     <events>
         <variable constant="0" name="NOTIFICATION_TEXT_TOP_MARGIN" sid="1896060484947539" static="0" type="number">0</variable>
         <variable constant="0" name="NOTIFICATION_TEXT_LEFT_MARGIN" sid="3628439654136423" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_PHRASE_COCK_HEIGHT" sid="8327119120210498" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_SPEECH_HEIGHT" sid="4538826344581136" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_PHRASE_BG_X" sid="7145849639664372" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_PHRASE_BG_Y" sid="8697885988512202" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_PHRASE_TXT_X" sid="3847839595773115" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_PHRASE_TXT_Y" sid="8148074933414549" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_NAME_TXT_X" sid="9389046605015565" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_NAME_TXT_Y" sid="7812956666867186" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_PHOTO_X" sid="3333890339544275" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_PHOTO_Y" sid="3736555117509064" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_ANS_BG_LEFT_MARGIN" sid="1520508369458528" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_ANS_BG_TOP_MARGIN" sid="3695631180500388" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_ANS_TXT_LEFT_MARGIN" sid="8207606161804895" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_ANS_TXT_TOP_MARGIN" sid="6241311482652405" static="0" type="number">0</variable>
-        <variable constant="0" name="PLAYER_ANS_BG_Y_DIST" sid="260846906806031" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_COCK_HEIGHT" sid="8327119120210498" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_BG_MARGIN_LEFT" sid="7145849639664372" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_BG_MARGIN_TOP" sid="8697885988512202" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_TXT_MARGIN_LEFT" sid="3847839595773115" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_TXT_MARGIN_TOP" sid="8148074933414549" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_TXT_MARGIN_BOTTOM" sid="9574567546357257" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_BG_MARGIN_BOTTOM" sid="8420926878907876" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_NAME_TXT_MARGIN_LEFT" sid="9389046605015565" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_NAME_TXT_MARGIN_TOP" sid="7812956666867186" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHOTO_MARGIN_LEFT" sid="3333890339544275" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHOTO_MARGIN_TOP" sid="3736555117509064" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_ANS_BG_LEFT_MARGIN" sid="1520508369458528" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_ANS_BG_TOP_MARGIN" sid="3695631180500388" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_ANS_TXT_LEFT_MARGIN" sid="8207606161804895" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_ANS_TXT_TOP_MARGIN" sid="6241311482652405" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_ANS_BG_H_SPACING" sid="260846906806031" static="0" type="number">0</variable>
         <event-block sid="48741975854135">
             <conditions>
                 <condition id="0" name="On function" sid="3065375302718294" type="Function">
@@ -206,64 +207,68 @@
                         <event-block sid="3402315017791729">
                             <conditions />
                             <actions>
-                                <action id="-9" name="Set value" sid="7645705915734749" type="System">
-                                    <param id="0" name="Variable">PLAYER_SPEECH_HEIGHT</param>
-                                    <param id="1" name="Value">DialogSpeechBg.Height</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="4651886017295081" type="System">
-                                    <param id="0" name="Variable">PLAYER_PHRASE_COCK_HEIGHT</param>
+                                    <param id="0" name="Variable">DIALOG_PHRASE_COCK_HEIGHT</param>
                                     <param id="1" name="Value">10</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="2367658805224515" type="System">
-                                    <param id="0" name="Variable">PLAYER_PHRASE_BG_X</param>
+                                    <param id="0" name="Variable">DIALOG_PHRASE_BG_MARGIN_LEFT</param>
                                     <param id="1" name="Value">DialogPhraseBg.X - DialogSpeechBg.X</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="1100476348880111" type="System">
-                                    <param id="0" name="Variable">PLAYER_PHRASE_BG_Y</param>
+                                    <param id="0" name="Variable">DIALOG_PHRASE_BG_MARGIN_TOP</param>
                                     <param id="1" name="Value">DialogPhraseBg.Y - DialogSpeechBg.Y</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="21489154554504" type="System">
+                                    <param id="0" name="Variable">DIALOG_PHRASE_BG_MARGIN_BOTTOM</param>
+                                    <param id="1" name="Value">(DialogSpeechBg.Y + DialogSpeechBg.Height) - (DialogPhraseBg.Y + DialogPhraseBg.Height)</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="3672866360307616" type="System">
-                                    <param id="0" name="Variable">PLAYER_PHRASE_TXT_X</param>
+                                    <param id="0" name="Variable">DIALOG_PHRASE_TXT_MARGIN_LEFT</param>
                                     <param id="1" name="Value">DialogPhraseTxt.X - DialogSpeechBg.X</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="4092575084341254" type="System">
-                                    <param id="0" name="Variable">PLAYER_PHRASE_TXT_Y</param>
+                                    <param id="0" name="Variable">DIALOG_PHRASE_TXT_MARGIN_TOP</param>
                                     <param id="1" name="Value">DialogPhraseTxt.Y - DialogSpeechBg.Y</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="4991254077986567" type="System">
+                                    <param id="0" name="Variable">DIALOG_PHRASE_TXT_MARGIN_BOTTOM</param>
+                                    <param id="1" name="Value">(DialogSpeechBg.Y + DialogSpeechBg.Height) - (DialogPhraseTxt.Y + DialogPhraseTxt.Height)</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="3565377046192407" type="System">
-                                    <param id="0" name="Variable">PLAYER_NAME_TXT_X</param>
+                                    <param id="0" name="Variable">DIALOG_NAME_TXT_MARGIN_LEFT</param>
                                     <param id="1" name="Value">DialogSpeakerNameTxt.X - DialogSpeechBg.X</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="2879495725990057" type="System">
-                                    <param id="0" name="Variable">PLAYER_NAME_TXT_Y</param>
+                                    <param id="0" name="Variable">DIALOG_NAME_TXT_MARGIN_TOP</param>
                                     <param id="1" name="Value">DialogSpeakerNameTxt.Y - DialogSpeechBg.Y</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="149850086170187" type="System">
-                                    <param id="0" name="Variable">PLAYER_PHOTO_X</param>
+                                    <param id="0" name="Variable">DIALOG_PHOTO_MARGIN_LEFT</param>
                                     <param id="1" name="Value">DialogSpeakerPhoto.X - DialogSpeechBg.X</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="7836754945136031" type="System">
-                                    <param id="0" name="Variable">PLAYER_PHOTO_Y</param>
+                                    <param id="0" name="Variable">DIALOG_PHOTO_MARGIN_TOP</param>
                                     <param id="1" name="Value">DialogSpeakerPhoto.Y - DialogSpeechBg.Y</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="8910253164485732" type="System">
-                                    <param id="0" name="Variable">PLAYER_ANS_BG_LEFT_MARGIN</param>
+                                    <param id="0" name="Variable">DIALOG_ANS_BG_LEFT_MARGIN</param>
                                     <param id="1" name="Value">DialogAns1Bg.X - DialogAnsBg.X</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="4076078531904303" type="System">
-                                    <param id="0" name="Variable">PLAYER_ANS_BG_TOP_MARGIN</param>
+                                    <param id="0" name="Variable">DIALOG_ANS_BG_TOP_MARGIN</param>
                                     <param id="1" name="Value">DialogAns1Bg.Y - DialogAnsBg.Y</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="8802392243818429" type="System">
-                                    <param id="0" name="Variable">PLAYER_ANS_TXT_LEFT_MARGIN</param>
+                                    <param id="0" name="Variable">DIALOG_ANS_TXT_LEFT_MARGIN</param>
                                     <param id="1" name="Value">DialogAns1Txt.X - DialogAns1Bg.X</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="5040261077302272" type="System">
-                                    <param id="0" name="Variable">PLAYER_ANS_TXT_TOP_MARGIN</param>
+                                    <param id="0" name="Variable">DIALOG_ANS_TXT_TOP_MARGIN</param>
                                     <param id="1" name="Value">DialogAns1Txt.Y - DialogAns1Bg.Y</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="4317821083467986" type="System">
-                                    <param id="0" name="Variable">PLAYER_ANS_BG_Y_DIST</param>
+                                    <param id="0" name="Variable">DIALOG_ANS_BG_H_SPACING</param>
                                     <param id="1" name="Value">DialogAns2Bg.Y - (DialogAns1Bg.Y + DialogAns1Bg.Height)</param>
                                 </action>
                             </actions>

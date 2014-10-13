@@ -5,7 +5,7 @@
     <events>
         <event-group description="" sid="2707639420600917" title="Quest dialog UI (renderers)">
             <sub-events>
-                <comment>param(0): phrase text&#x0D;&#x0A;param(1): phrase type (SPEAK | &quot;THINK&quot;)&#x0D;&#x0A;param(2): character ID (global)&#x0D;&#x0A;param(3): character name</comment>
+                <comment>param(0): phrase text&#x0D;&#x0A;param(1): phrase type (SPEAK | &quot;THINK&quot;)&#x0D;&#x0A;param(2): character ID (global)&#x0D;&#x0A;param(3): character name&#x0D;&#x0A;param(4): phrase size</comment>
                 <event-block sid="6991107803027691">
                     <conditions>
                         <condition id="0" name="On function" sid="7007669496304643" type="Function">
@@ -38,18 +38,65 @@
                                     <param id="2" name="Second value">&quot;SPEAK&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="9172639859004562" type="DialogSpeechBg">
-                                    <param id="0" name="Animation">&quot;Speak&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="4" name="Set font color" sid="4838907868225771" type="DialogPhraseTxt">
-                                    <param id="0" name="Color">rgb(DialogPhraseTxt.SpeachR, DialogPhraseTxt.SpeachG, DialogPhraseTxt.SpeachB)</param>
-                                </action>
-                                <action id="4" name="Set font color" sid="7942146642301105" type="DialogSpeakerNameTxt">
-                                    <param id="0" name="Color">rgb(DialogPhraseTxt.SpeachR, DialogPhraseTxt.SpeachG, DialogPhraseTxt.SpeachB)</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2853200864169653">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="135883522683859" type="Function">
+                                            <param id="0" name="Index">4</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;LARGE&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9172639859004562" type="DialogSpeechBg">
+                                            <param id="0" name="Animation">&quot;SpeakLarge&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5222549384806212">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="6226238152942925" type="Function">
+                                            <param id="0" name="Index">4</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;MEDIUM&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="3140072478642018" type="DialogSpeechBg">
+                                            <param id="0" name="Animation">&quot;SpeakMedium&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6478086377702757">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="7590158188560062" type="Function">
+                                            <param id="0" name="Index">4</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;SMALL&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9392495678407588" type="DialogSpeechBg">
+                                            <param id="0" name="Animation">&quot;SpeakSmall&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4925344738508399">
+                                    <conditions />
+                                    <actions>
+                                        <action id="4" name="Set font color" sid="4838907868225771" type="DialogPhraseTxt">
+                                            <param id="0" name="Color">rgb(DialogPhraseTxt.SpeechR, DialogPhraseTxt.SpeechG, DialogPhraseTxt.SpeechB)</param>
+                                        </action>
+                                        <action id="4" name="Set font color" sid="7942146642301105" type="DialogSpeakerNameTxt">
+                                            <param id="0" name="Color">rgb(DialogSpeakerNameTxt.SpeechB, DialogSpeakerNameTxt.SpeechG, DialogSpeakerNameTxt.SpeechB)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="1720258011056726">
                             <conditions>
@@ -59,22 +106,69 @@
                                     <param id="2" name="Second value">&quot;THINK&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="3666774656021443" type="DialogSpeechBg">
-                                    <param id="0" name="Animation">&quot;Think&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="4" name="Set font color" sid="579069433855315" type="DialogPhraseTxt">
-                                    <param id="0" name="Color">rgb(DialogPhraseTxt.ThinkR, DialogPhraseTxt.ThinkG, DialogPhraseTxt.ThinkB)</param>
-                                </action>
-                                <action id="4" name="Set font color" sid="5243838372620382" type="DialogSpeakerNameTxt">
-                                    <param id="0" name="Color">rgb(DialogPhraseTxt.ThinkR, DialogPhraseTxt.ThinkG, DialogPhraseTxt.ThinkB)</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4379048069457004">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="1783401271312805" type="Function">
+                                            <param id="0" name="Index">4</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;LARGE&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9761667924567204" type="DialogSpeechBg">
+                                            <param id="0" name="Animation">&quot;ThinkLarge&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9790048951624523">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="3246883621813139" type="Function">
+                                            <param id="0" name="Index">4</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;MEDIUM&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="6362325929022855" type="DialogSpeechBg">
+                                            <param id="0" name="Animation">&quot;ThinkMedium&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="785775374366852">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="6719170624966826" type="Function">
+                                            <param id="0" name="Index">4</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;SMALL&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="3265476280726176" type="DialogSpeechBg">
+                                            <param id="0" name="Animation">&quot;ThinkSmall&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3740922807383994">
+                                    <conditions />
+                                    <actions>
+                                        <action id="4" name="Set font color" sid="579069433855315" type="DialogPhraseTxt">
+                                            <param id="0" name="Color">rgb(DialogPhraseTxt.ThinkR, DialogPhraseTxt.ThinkG, DialogPhraseTxt.ThinkB)</param>
+                                        </action>
+                                        <action id="4" name="Set font color" sid="5243838372620382" type="DialogSpeakerNameTxt">
+                                            <param id="0" name="Color">rgb(DialogSpeakerNameTxt.ThinkR, DialogSpeakerNameTxt.ThinkG, DialogSpeakerNameTxt.ThinkB)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>param(0): quizz phrase text&#x0D;&#x0A;param(1): quizz phrase type (SPEAK | &quot;THINK&quot;)&#x0D;&#x0A;param(2): character ID (global)&#x0D;&#x0A;param(3): character name&#x0D;&#x0A;param(4): ans 1 text&#x0D;&#x0A;param(5): ans 2 text&#x0D;&#x0A;param(6): ans 3 text&#x0D;&#x0A;param(7): ans 4 text</comment>
+                <comment>param(0): quizz phrase text&#x0D;&#x0A;param(1): quizz phrase type (SPEAK | &quot;THINK&quot;)&#x0D;&#x0A;param(2): character ID (global)&#x0D;&#x0A;param(3): character name&#x0D;&#x0A;param(4): ans 1 text&#x0D;&#x0A;param(5): ans 2 text&#x0D;&#x0A;param(6): ans 3 text&#x0D;&#x0A;param(7): ans 4 text&#x0D;&#x0A;param(8): phrase size</comment>
                 <event-block sid="2315980213967111">
                     <conditions>
                         <condition id="0" name="On function" sid="2721077489810115" type="Function">
@@ -84,7 +178,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="6982114128744915" type="Function">
                             <param id="0" name="Name">&quot;RenderPhrase&quot;</param>
-                            <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1){###}Function.Param(2){###}Function.Param(3)</param>
+                            <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1){###}Function.Param(2){###}Function.Param(3){###}Function.Param(8)</param>
                         </action>
                         <action id="0" name="Set text" sid="8982869581353961" type="DialogAns1Txt">
                             <param id="0" name="Text">Function.Param(4)</param>
@@ -122,8 +216,8 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="6835636582815559" type="DialogAns1Bg">
-                                    <param id="0" name="X">DialogAnsBg.X + PLAYER_ANS_BG_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAnsBg.Y + PLAYER_ANS_BG_TOP_MARGIN</param>
+                                    <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS_BG_LEFT_MARGIN</param>
+                                    <param id="1" name="Y">DialogAnsBg.Y + DIALOG_ANS_BG_TOP_MARGIN</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -143,8 +237,8 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="7354688117144522" type="DialogAns2Bg">
-                                    <param id="0" name="X">DialogAnsBg.X + PLAYER_ANS_BG_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns1Bg.Y + DialogAns1Bg.Height + PLAYER_ANS_BG_Y_DIST</param>
+                                    <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS_BG_LEFT_MARGIN</param>
+                                    <param id="1" name="Y">DialogAns1Bg.Y + DialogAns1Bg.Height + DIALOG_ANS_BG_H_SPACING</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -169,8 +263,8 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="5851704533315634" type="DialogAns3Bg">
-                                    <param id="0" name="X">DialogAnsBg.X + PLAYER_ANS_BG_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns2Bg.Y + DialogAns2Bg.Height + PLAYER_ANS_BG_Y_DIST</param>
+                                    <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS_BG_LEFT_MARGIN</param>
+                                    <param id="1" name="Y">DialogAns2Bg.Y + DialogAns2Bg.Height + DIALOG_ANS_BG_H_SPACING</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -195,8 +289,8 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="4147379684167964" type="DialogAns4Bg">
-                                    <param id="0" name="X">DialogAnsBg.X + PLAYER_ANS_BG_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns3Bg.Y + DialogAns3Bg.Height + PLAYER_ANS_BG_Y_DIST</param>
+                                    <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS_BG_LEFT_MARGIN</param>
+                                    <param id="1" name="Y">DialogAns3Bg.Y + DialogAns3Bg.Height + DIALOG_ANS_BG_H_SPACING</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -215,23 +309,23 @@
                             <conditions />
                             <actions>
                                 <action id="-3" name="Set position" sid="1896782282504194" type="DialogAns1Txt">
-                                    <param id="0" name="X">DialogAns1Bg.X + PLAYER_ANS_TXT_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns1Bg.Y + PLAYER_ANS_TXT_TOP_MARGIN</param>
+                                    <param id="0" name="X">DialogAns1Bg.X + DIALOG_ANS_TXT_LEFT_MARGIN</param>
+                                    <param id="1" name="Y">DialogAns1Bg.Y + DIALOG_ANS_TXT_TOP_MARGIN</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="7562447494859096" type="DialogAns2Txt">
-                                    <param id="0" name="X">DialogAns2Bg.X + PLAYER_ANS_TXT_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns2Bg.Y + PLAYER_ANS_TXT_TOP_MARGIN</param>
+                                    <param id="0" name="X">DialogAns2Bg.X + DIALOG_ANS_TXT_LEFT_MARGIN</param>
+                                    <param id="1" name="Y">DialogAns2Bg.Y + DIALOG_ANS_TXT_TOP_MARGIN</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="2583870946870672" type="DialogAns3Txt">
-                                    <param id="0" name="X">DialogAns3Bg.X + PLAYER_ANS_TXT_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns3Bg.Y + PLAYER_ANS_TXT_TOP_MARGIN</param>
+                                    <param id="0" name="X">DialogAns3Bg.X + DIALOG_ANS_TXT_LEFT_MARGIN</param>
+                                    <param id="1" name="Y">DialogAns3Bg.Y + DIALOG_ANS_TXT_TOP_MARGIN</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="6745306759884688" type="DialogAns4Txt">
-                                    <param id="0" name="X">DialogAns4Bg.X + PLAYER_ANS_TXT_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns4Bg.Y + PLAYER_ANS_TXT_TOP_MARGIN</param>
+                                    <param id="0" name="X">DialogAns4Bg.X + DIALOG_ANS_TXT_LEFT_MARGIN</param>
+                                    <param id="1" name="Y">DialogAns4Bg.Y + DIALOG_ANS_TXT_TOP_MARGIN</param>
                                 </action>
                                 <action id="-6" name="Set height" sid="970922342197523" type="DialogAnsBg">
-                                    <param id="0" name="Height">DialogAns4Bg.Y - DialogAnsBg.Y + DialogAns4Bg.Height + PLAYER_ANS_BG_TOP_MARGIN</param>
+                                    <param id="0" name="Height">DialogAns4Bg.Y - DialogAnsBg.Y + DialogAns4Bg.Height + DIALOG_ANS_BG_TOP_MARGIN</param>
                                 </action>
                                 <action id="-25" name="Move to bottom" sid="4678700801648202" type="DialogAns1Txt" />
                                 <action id="-25" name="Move to bottom" sid="889516435108568" type="DialogAns2Txt" />
@@ -269,20 +363,26 @@
                             <param id="1" name="Y">posY - (DialogSpeechBg.ImagePointY(&quot;Cock&quot;) - DialogSpeechBg.Y)</param>
                         </action>
                         <action id="-3" name="Set position" sid="5582694023872794" type="DialogPhraseBg">
-                            <param id="0" name="X">DialogSpeechBg.X + PLAYER_PHRASE_BG_X</param>
-                            <param id="1" name="Y">DialogSpeechBg.Y + PLAYER_PHRASE_BG_Y</param>
+                            <param id="0" name="X">DialogSpeechBg.X + DIALOG_PHRASE_BG_MARGIN_LEFT</param>
+                            <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_PHRASE_BG_MARGIN_TOP</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="6227146808310005" type="DialogPhraseBg">
+                            <param id="0" name="Height">DialogSpeechBg.Height - (DIALOG_PHRASE_BG_MARGIN_TOP +DIALOG_PHRASE_BG_MARGIN_BOTTOM)</param>
                         </action>
                         <action id="-3" name="Set position" sid="5725315443599872" type="DialogPhraseTxt">
-                            <param id="0" name="X">DialogSpeechBg.X + PLAYER_PHRASE_TXT_X</param>
-                            <param id="1" name="Y">DialogSpeechBg.Y + PLAYER_PHRASE_TXT_Y</param>
+                            <param id="0" name="X">DialogSpeechBg.X + DIALOG_PHRASE_TXT_MARGIN_LEFT</param>
+                            <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_PHRASE_TXT_MARGIN_TOP</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="6610390691611551" type="DialogPhraseTxt">
+                            <param id="0" name="Height">DialogSpeechBg.Height - (DIALOG_PHRASE_TXT_MARGIN_TOP +DIALOG_PHRASE_TXT_MARGIN_BOTTOM)</param>
                         </action>
                         <action id="-3" name="Set position" sid="2562315066338364" type="DialogSpeakerNameTxt">
-                            <param id="0" name="X">DialogSpeechBg.X + PLAYER_NAME_TXT_X</param>
-                            <param id="1" name="Y">DialogSpeechBg.Y + PLAYER_NAME_TXT_Y</param>
+                            <param id="0" name="X">DialogSpeechBg.X + DIALOG_NAME_TXT_MARGIN_LEFT</param>
+                            <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_NAME_TXT_MARGIN_TOP</param>
                         </action>
                         <action id="-3" name="Set position" sid="3685046013826177" type="DialogSpeakerPhoto">
-                            <param id="0" name="X">DialogSpeechBg.X + PLAYER_PHOTO_X</param>
-                            <param id="1" name="Y">DialogSpeechBg.Y + PLAYER_PHOTO_Y</param>
+                            <param id="0" name="X">DialogSpeechBg.X + DIALOG_PHOTO_MARGIN_LEFT</param>
+                            <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_PHOTO_MARGIN_TOP</param>
                         </action>
                     </actions>
                 </event-block>
