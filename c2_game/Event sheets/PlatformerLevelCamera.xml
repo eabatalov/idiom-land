@@ -5,7 +5,8 @@
     <events>
         <event-group description="" sid="4816676888266997" title="Platformer Level Camera">
             <sub-events>
-                <variable constant="1" name="DIALOG_SCROLL_SPEED" sid="5880626694219212" static="0" type="number">0.14</variable>
+                <variable constant="1" name="DIALOG_SCROLL_SPEED" sid="5880626694219212" static="0" type="number">0.06</variable>
+                <variable constant="1" name="PLATFORMER_SCROLL_SPEED" sid="1612874301038227" static="0" type="number">0.04</variable>
                 <variable constant="1" name="SCROLLED_TO_THRESHOLD" sid="1353364675478754" static="0" type="number">2</variable>
                 <comment>&quot;PLATFORMER&quot; | &quot;DIALOG&quot;</comment>
                 <variable constant="0" name="CurrentCameraMode" sid="8666412595963399" static="1" type="text">&quot;PLATFORMER&quot;</variable>
@@ -196,7 +197,7 @@
                         <event-block sid="7160138652797632">
                             <conditions>
                                 <condition id="0" name="On function" sid="3885582727079727" type="Function">
-                                    <param id="0" name="Name">&quot;AllowDialogModeCamera&quot;</param>
+                                    <param id="0" name="Name">&quot;EnableDialogModeCamera&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -213,7 +214,7 @@
                         <event-block sid="5540085214002079">
                             <conditions>
                                 <condition id="0" name="On function" sid="8959503359361131" type="Function">
-                                    <param id="0" name="Name">&quot;DenyDialogModeCamera&quot;</param>
+                                    <param id="0" name="Name">&quot;DisableDialogModeCamera&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -276,11 +277,11 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Exactly 24 frames /sec</comment>
+                        <comment>Exactly 40 frames /sec</comment>
                         <event-block sid="9426360880718929">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="2835629177626751" type="System">
-                                    <param id="0" name="Interval (seconds)">0.04</param>
+                                    <param id="0" name="Interval (seconds)">0.02</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -311,8 +312,8 @@
                                     </conditions>
                                     <actions>
                                         <action id="-7" name="Scroll to position" sid="2812684577340635" type="System">
-                                            <param id="0" name="X">lerp(scrollx, PlayerPlatform.X, 0.1)</param>
-                                            <param id="1" name="Y">lerp(scrolly, PlayerPlatform.Y, 0.1)</param>
+                                            <param id="0" name="X">lerp(scrollx, PlayerPlatform.X, PLATFORMER_SCROLL_SPEED)</param>
+                                            <param id="1" name="Y">lerp(scrolly, PlayerPlatform.Y, PLATFORMER_SCROLL_SPEED)</param>
                                         </action>
                                     </actions>
                                 </event-block>

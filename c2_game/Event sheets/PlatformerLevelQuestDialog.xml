@@ -17,7 +17,11 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="2581508594710524" type="Function">
-                            <param id="0" name="Name">&quot;DenyDialogModeCamera&quot;</param>
+                            <param id="0" name="Name">&quot;DisableDialogModeCamera&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="2565502607673445" type="Function">
+                            <param id="0" name="Name">&quot;DisableDialogControls&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
@@ -34,7 +38,24 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="6197933343714762" type="Function">
-                            <param id="0" name="Name">&quot;AllowDialogModeCamera&quot;</param>
+                            <param id="0" name="Name">&quot;EnableDialogModeCamera&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="3503594999552698" type="Function">
+                            <param id="0" name="Name">&quot;EnableDialogControls&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4138055794181939">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7365163639686873" type="Function">
+                            <param id="0" name="Name">&quot;onQuestUIActionSeqCompleted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8069078275055122" type="Function">
+                            <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
