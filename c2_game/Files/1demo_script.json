@@ -4570,7 +4570,7 @@
 						3215
 					],
 					"outCondIds": [
-						3216
+						4918
 					],
 					"props": {
 						"id": "Player",
@@ -4633,13 +4633,32 @@
 					"label": "",
 					"continue": true,
 					"inCondIds": [
-						3216
+						4919
 					],
 					"outCondIds": [
 						3217
 					],
 					"props": {
 						"enabled": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2927,
+					"type": 10,
+					"label": "ShowGoForward",
+					"continue": true,
+					"inCondIds": [
+						4918
+					],
+					"outCondIds": [
+						4919
+					],
+					"props": {
+						"name": "C2API_ShowGoForwardHelper",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
 					}
 				}
 			],
@@ -4653,12 +4672,6 @@
 				{
 					"ver": 1,
 					"id": 3215,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 3216,
 					"type": 11,
 					"props": {}
 				},
@@ -4679,6 +4692,18 @@
 				{
 					"ver": 1,
 					"id": 3219,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4918,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4919,
 					"type": 8,
 					"props": {}
 				}

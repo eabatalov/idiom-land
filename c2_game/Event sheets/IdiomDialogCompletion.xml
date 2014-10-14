@@ -3,10 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>IdiomDialogCompletion</name>
     <events>
-        <event-block sid="5001245945552529">
+        <event-block any="1" sid="5001245945552529">
             <conditions>
                 <condition id="0" name="On function" sid="7109740383385869" type="Function">
                     <param id="0" name="Name">&quot;C2API_IdiomDialogCompleted&quot;</param>
+                </condition>
+                <condition id="0" name="On function" sid="514689757810708" type="Function">
+                    <param id="0" name="Name">&quot;C2API_ShowGoForwardHelper&quot;</param>
                 </condition>
             </conditions>
             <actions>
