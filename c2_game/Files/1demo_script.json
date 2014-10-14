@@ -2591,7 +2591,7 @@
 					"label": "idiomGuessed",
 					"continue": true,
 					"inCondIds": [
-						2952
+						4921
 					],
 					"outCondIds": [
 						2950
@@ -2617,7 +2617,7 @@
 					"label": "idiomFailed",
 					"continue": true,
 					"inCondIds": [
-						2951
+						4923
 					],
 					"outCondIds": [
 						2949
@@ -2646,7 +2646,7 @@
 						4904
 					],
 					"outCondIds": [
-						2951
+						4922
 					],
 					"props": {
 						"name": "C2API_ShowPlayerBalloonHelper",
@@ -2665,7 +2665,7 @@
 						4905
 					],
 					"outCondIds": [
-						2952
+						4920
 					],
 					"props": {
 						"name": "C2API_ShowPlayerBalloonHelper",
@@ -3023,6 +3023,44 @@
 						"source": "c2",
 						"params": []
 					}
+				},
+				{
+					"ver": 1,
+					"id": 2928,
+					"type": 10,
+					"label": "HideQuizzHelper",
+					"continue": true,
+					"inCondIds": [
+						4920
+					],
+					"outCondIds": [
+						4921
+					],
+					"props": {
+						"name": "C2API_HideQuizzHelper",
+						"rollbackName": "C2API_ShowQuizzHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2929,
+					"type": 10,
+					"label": "HideQuizzHelper",
+					"continue": true,
+					"inCondIds": [
+						4922
+					],
+					"outCondIds": [
+						4923
+					],
+					"props": {
+						"name": "C2API_HideQuizzHelper",
+						"rollbackName": "C2API_ShowQuizzHelper",
+						"source": "c2",
+						"params": []
+					}
 				}
 			],
 			"conds": [
@@ -3139,18 +3177,6 @@
 				{
 					"ver": 1,
 					"id": 2950,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2951,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2952,
 					"type": 8,
 					"props": {}
 				},
@@ -3373,6 +3399,30 @@
 				{
 					"ver": 1,
 					"id": 4917,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4920,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4921,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4922,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4923,
 					"type": 8,
 					"props": {}
 				}

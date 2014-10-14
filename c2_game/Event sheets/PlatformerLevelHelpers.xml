@@ -7,6 +7,9 @@
             <sub-events>
                 <variable constant="0" name="IsNavNextShowScheduled" sid="7034669835433632" static="1" type="number">0</variable>
                 <variable constant="0" name="IsQuizzShowScheduled" sid="5005205247247821" static="1" type="number">0</variable>
+                <comment>Quizz is faded in. Thus we shouldn&apos;t show helper instantly.</comment>
+                <variable constant="1" name="NAV_NEXT_AUTO_SHOW_AFTER_SEC" sid="4885520932066248" static="0" type="number">10</variable>
+                <variable constant="0" name="QuizzHelperAutoShowAfterSec" sid="6439810108549409" static="1" type="number">10</variable>
                 <event-block sid="27602076538181">
                     <conditions>
                         <condition id="0" name="On function" sid="2654432718297715" type="Function">
@@ -21,6 +24,10 @@
                         <action id="-9" name="Set value" sid="1654394061006994" type="System">
                             <param id="0" name="Variable">IsQuizzShowScheduled</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="14557770391631" type="System">
+                            <param id="0" name="Variable">QuizzHelperAutoShowAfterSec</param>
+                            <param id="1" name="Value">10</param>
                         </action>
                     </actions>
                 </event-block>
@@ -75,6 +82,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="8715028714498255" type="System">
+                            <param id="0" name="Variable">IsQuizzShowScheduled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action id="-26" name="Move to layer" sid="4165782264564682" type="TapQuizzHelper">
                             <param id="0" name="Layer">DialogAnsBg.LayerName</param>
                         </action>
@@ -86,10 +97,6 @@
                         </action>
                         <action behavior="Sine2" id="0" name="Set active" sid="6049474344525201" type="TapQuizzHelper">
                             <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="8715028714498255" type="System">
-                            <param id="0" name="Variable">IsQuizzShowScheduled</param>
-                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -115,18 +122,30 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Special handling. Manual API call requires &apos;instant&apos; showing of quizz helper. Our quizz fades in so we still need to wait for ~3 seconds</comment>
+                <variable constant="0" name="PrevQuizzAutoShowAfterSecVal" sid="1952271562895553" static="1" type="number">0</variable>
                 <event-block sid="6129252256923267">
                     <conditions>
                         <condition id="0" name="On function" sid="5183353983049356" type="Function">
                             <param id="0" name="Name">&quot;C2API_ShowQuizzHelper&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="7456325680421158" type="Function">
-                            <param id="0" name="Name">&quot;ShowQuizzHelper&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3875275066523262">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="4144697569626519" type="System">
+                                    <param id="0" name="Variable">PrevQuizzAutoShowAfterSecVal</param>
+                                    <param id="1" name="Value">QuizzHelperAutoShowAfterSec</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1351930126883776" type="System">
+                                    <param id="0" name="Variable">QuizzHelperAutoShowAfterSec</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7222601871468376">
                     <conditions>
@@ -135,6 +154,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="5995747872442775" type="System">
+                            <param id="0" name="Variable">QuizzHelperAutoShowAfterSec</param>
+                            <param id="1" name="Value">PrevQuizzAutoShowAfterSecVal</param>
+                        </action>
                         <action id="0" name="Call function" sid="3704268474171743" type="Function">
                             <param id="0" name="Name">&quot;HideQuizzHelper&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -150,6 +173,7 @@
                                 <condition id="0" name="On function" sid="1412271367001705" type="Function">
                                     <param id="0" name="Name">&quot;onQuestNavNextBtnShow&quot;</param>
                                 </condition>
+                                <condition id="-9" inverted="1" name="Is visible" sid="2857099129747548" type="NavHelper" />
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="9330400814171555" type="System">
@@ -158,7 +182,25 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="508545955761226" type="System">
                                     <param id="0" name="Variable">NavNextShowScheduledTSSec</param>
-                                    <param id="1" name="Value">wallclocktime + 10</param>
+                                    <param id="1" name="Value">wallclocktime + NAV_NEXT_AUTO_SHOW_AFTER_SEC</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="881565796682129">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3170931726700172" type="Function">
+                                    <param id="0" name="Name">&quot;SchedQuizzHelperShow&quot;</param>
+                                </condition>
+                                <condition id="-9" inverted="1" name="Is visible" sid="6117150340107912" type="TapQuizzHelper" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8428271516685692" type="System">
+                                    <param id="0" name="Variable">IsQuizzShowScheduled</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9093881579801931" type="System">
+                                    <param id="0" name="Variable">QuizzShowScheduledTSSec</param>
+                                    <param id="1" name="Value">wallclocktime + QuizzHelperAutoShowAfterSec</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -169,13 +211,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="953369848533912" type="System">
-                                    <param id="0" name="Variable">IsQuizzShowScheduled</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="2823870675932843" type="System">
-                                    <param id="0" name="Variable">QuizzShowScheduledTSSec</param>
-                                    <param id="1" name="Value">wallclocktime + 10</param>
+                                <action id="0" name="Call function" sid="6043624352027696" type="Function">
+                                    <param id="0" name="Name">&quot;SchedQuizzHelperShow&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
