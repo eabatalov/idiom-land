@@ -737,64 +737,6 @@
                                     </animation>
                                 </animation-folder>
                             </object-type>
-                            <object-type name="NavHelper" sid="9560818838651901">
-                                <plugin id="Sprite" />
-                                <behaviors>
-                                    <behavior-type name="Pin" sid="1295347209941606">
-                                        <behavior id="Pin" />
-                                    </behavior-type>
-                                    <behavior-type name="Sine" sid="7019420710792958">
-                                        <behavior id="Sin" />
-                                    </behavior-type>
-                                    <behavior-type name="Sine2" sid="5242465752558982">
-                                        <behavior id="Sin" />
-                                    </behavior-type>
-                                </behaviors>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="17044148059576" speed="5">
-                                        <frame duration="1" hotspotX="0" hotspotY="0">
-                                            <image-point name="ArrowPointer" x="1.06429" y="0.668675" />
-                                            <collision-poly>
-                                                <point x="0.15" y="0.126506" />
-                                                <point x="0.5" y="0" />
-                                                <point x="0.85" y="0.126506" />
-                                                <point x="0.992857" y="0.5" />
-                                                <point x="0.75" y="0.789157" />
-                                                <point x="0.5" y="1" />
-                                                <point x="0.25" y="0.789157" />
-                                                <point x="0.00714286" y="0.5" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TapQuizzHelper" sid="7825077689784289">
-                                <plugin id="Sprite" />
-                                <behaviors>
-                                    <behavior-type name="Sine" sid="6734538126016413">
-                                        <behavior id="Sin" />
-                                    </behavior-type>
-                                    <behavior-type name="Sine2" sid="4394113898718459">
-                                        <behavior id="Sin" />
-                                    </behavior-type>
-                                </behaviors>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6888201209251428" speed="5">
-                                        <frame duration="1" hotspotX="0.503311" hotspotY="0.5">
-                                            <collision-poly>
-                                                <point x="0.211921" y="0.25" />
-                                                <point x="0.496689" y="0.0078125" />
-                                                <point x="0.874172" y="0.148438" />
-                                                <point x="1" y="0.5" />
-                                                <point x="0.874172" y="0.851563" />
-                                                <point x="0.496689" y="0.992188" />
-                                                <point x="0.211921" y="0.75" />
-                                                <point x="0" y="0.5" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
                             <object-type name="CoinsHelper" sid="434108885742568">
                                 <plugin id="Sprite" />
                                 <behaviors>
@@ -4960,6 +4902,66 @@
                     </object-type>
                 </object-folder>
                 <object-folder name="PlatformerLevel">
+                    <object-folder name="Helpers">
+                        <object-type name="NavHelper" sid="9560818838651901">
+                            <plugin id="Sprite" />
+                            <behaviors>
+                                <behavior-type name="Pin" sid="1295347209941606">
+                                    <behavior id="Pin" />
+                                </behavior-type>
+                                <behavior-type name="Sine" sid="7019420710792958">
+                                    <behavior id="Sin" />
+                                </behavior-type>
+                                <behavior-type name="Sine2" sid="5242465752558982">
+                                    <behavior id="Sin" />
+                                </behavior-type>
+                            </behaviors>
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="17044148059576" speed="5">
+                                    <frame duration="1" hotspotX="0" hotspotY="0">
+                                        <image-point name="ArrowPointer" x="1.06429" y="0.668675" />
+                                        <collision-poly>
+                                            <point x="0.15" y="0.126506" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.85" y="0.126506" />
+                                            <point x="0.992857" y="0.5" />
+                                            <point x="0.75" y="0.789157" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.25" y="0.789157" />
+                                            <point x="0.00714286" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="TapQuizzHelper" sid="7825077689784289">
+                            <plugin id="Sprite" />
+                            <behaviors>
+                                <behavior-type name="Sine" sid="6734538126016413">
+                                    <behavior id="Sin" />
+                                </behavior-type>
+                                <behavior-type name="Sine2" sid="4394113898718459">
+                                    <behavior id="Sin" />
+                                </behavior-type>
+                            </behaviors>
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6888201209251428" speed="5">
+                                    <frame duration="1" hotspotX="0.503311" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.211921" y="0.25" />
+                                            <point x="0.496689" y="0.0078125" />
+                                            <point x="0.874172" y="0.148438" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.874172" y="0.851563" />
+                                            <point x="0.496689" y="0.992188" />
+                                            <point x="0.211921" y="0.75" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                    </object-folder>
                     <object-type global="1" name="LastOpacityTransitionsDict" sid="8861096821455829">
                         <plugin id="Dictionary" />
                     </object-type>
@@ -5179,6 +5181,7 @@
                         <event-sheet>PlatformerLevelGameHelp.xml</event-sheet>
                         <event-sheet>PlatformerLevelCoinsProgress.xml</event-sheet>
                         <event-sheet>PlatformerLevelSecretsProgress.xml</event-sheet>
+                        <event-sheet>PlatformerLevelHelpers.xml</event-sheet>
                     </event-folder>
                     <event-sheet>PlatformerLevelCommon.xml</event-sheet>
                     <event-sheet>PlatformerLevelInput.xml</event-sheet>
