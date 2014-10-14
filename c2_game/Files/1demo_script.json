@@ -800,7 +800,7 @@
 					"label": "Hey! I'm pulling y",
 					"continue": false,
 					"inCondIds": [
-						4011
+						4760
 					],
 					"outCondIds": [
 						3548
@@ -1146,17 +1146,33 @@
 					"id": 2552,
 					"type": 5,
 					"label": "Foxy shock",
-					"continue": false,
+					"continue": true,
 					"inCondIds": [
 						4567
 					],
 					"outCondIds": [
-						4011
+						4759
 					],
 					"props": {
 						"id": "Player",
 						"name": "shock",
-						"secs": -1
+						"secs": 4
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2787,
+					"type": 6,
+					"label": "Wait animation",
+					"continue": true,
+					"inCondIds": [
+						4759
+					],
+					"outCondIds": [
+						4760
+					],
+					"props": {
+						"secs": 4
 					}
 				}
 			],
@@ -1321,14 +1337,20 @@
 				},
 				{
 					"ver": 1,
-					"id": 4011,
+					"id": 4567,
 					"type": 11,
 					"props": {}
 				},
 				{
 					"ver": 1,
-					"id": 4567,
-					"type": 11,
+					"id": 4759,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4760,
+					"type": 8,
 					"props": {}
 				}
 			]
@@ -2005,7 +2027,7 @@
 						2924
 					],
 					"outCondIds": [
-						2926
+						4897
 					],
 					"props": {
 						"text": "Foxy is a journalist. She’s arrived in London to collect English idioms and slang words"
@@ -2021,7 +2043,7 @@
 						1706
 					],
 					"outCondIds": [
-						2933
+						4898
 					],
 					"props": {
 						"text": "Talk to London people and when they use an idiom or a slang word, try to guess the right meaning of it!"
@@ -2037,7 +2059,7 @@
 						2935
 					],
 					"outCondIds": [
-						2936
+						4899
 					],
 					"props": {
 						"id": "Player",
@@ -2050,13 +2072,13 @@
 					"ver": 1,
 					"id": 1025,
 					"type": 1,
-					"label": "WHAT???",
+					"label": "What you want?",
 					"continue": false,
 					"inCondIds": [
 						2938
 					],
 					"outCondIds": [
-						2940
+						4900
 					],
 					"props": {
 						"id": "policeman",
@@ -2075,7 +2097,7 @@
 						2941
 					],
 					"outCondIds": [
-						2942
+						4901
 					],
 					"props": {
 						"id": "Player",
@@ -2094,7 +2116,7 @@
 						2944
 					],
 					"outCondIds": [
-						2945
+						4902
 					],
 					"props": {
 						"id": "policeman",
@@ -2110,11 +2132,11 @@
 					"label": "\"Piece of cake\"",
 					"continue": false,
 					"inCondIds": [
-						4707
+						4903
 					],
 					"outCondIds": [
-						2953,
-						2954
+						4904,
+						4905
 					],
 					"props": {
 						"id": "Player",
@@ -2137,7 +2159,7 @@
 						2949
 					],
 					"outCondIds": [
-						1561
+						4907
 					],
 					"props": {
 						"id": "Player",
@@ -2156,7 +2178,7 @@
 						2950
 					],
 					"outCondIds": [
-						1562
+						4906
 					],
 					"props": {
 						"id": "Player",
@@ -2172,11 +2194,10 @@
 					"label": "\"PieceCake\" is",
 					"continue": false,
 					"inCondIds": [
-						1561,
-						1562
+						4908
 					],
 					"outCondIds": [
-						2957
+						4909
 					],
 					"props": {
 						"id": "Player",
@@ -2272,7 +2293,7 @@
 					"label": "Controls enable",
 					"continue": false,
 					"inCondIds": [
-						4709
+						4915
 					],
 					"outCondIds": [
 						3818
@@ -2345,7 +2366,7 @@
 					"label": "Ticket tutorial 1",
 					"continue": false,
 					"inCondIds": [
-						2963
+						4911
 					],
 					"outCondIds": [
 						3056
@@ -2364,7 +2385,7 @@
 						4711
 					],
 					"outCondIds": [
-						4708
+						4915
 					],
 					"props": {
 						"id": "Player",
@@ -2380,7 +2401,7 @@
 					"label": "Let's collect all",
 					"continue": false,
 					"inCondIds": [
-						3820
+						4917
 					],
 					"outCondIds": [
 						4146
@@ -2413,31 +2434,12 @@
 				},
 				{
 					"ver": 1,
-					"id": 2084,
-					"type": 10,
-					"label": "Hide notif helper",
-					"continue": true,
-					"inCondIds": [
-						2926
-					],
-					"outCondIds": [
-						2929
-					],
-					"props": {
-						"name": "C2API_HideNotificationHelper",
-						"source": "c2",
-						"rollbackName": "C2API_ShowNotificationHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2085,
 					"type": 10,
 					"label": "Show contr helper",
 					"continue": true,
 					"inCondIds": [
-						2929
+						4897
 					],
 					"outCondIds": [
 						2928
@@ -2489,31 +2491,12 @@
 				},
 				{
 					"ver": 1,
-					"id": 2088,
-					"type": 10,
-					"label": "Hide notif helper",
-					"continue": true,
-					"inCondIds": [
-						2933
-					],
-					"outCondIds": [
-						2934
-					],
-					"props": {
-						"name": "C2API_HideNotificationHelper",
-						"source": "c2",
-						"rollbackName": "C2API_ShowNotificationHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2089,
 					"type": 10,
 					"label": "Show balln helper",
 					"continue": true,
 					"inCondIds": [
-						2934
+						4898
 					],
 					"outCondIds": [
 						2935
@@ -2527,31 +2510,12 @@
 				},
 				{
 					"ver": 1,
-					"id": 2090,
-					"type": 10,
-					"label": "Hide balln helper",
-					"continue": true,
-					"inCondIds": [
-						2936
-					],
-					"outCondIds": [
-						2937
-					],
-					"props": {
-						"name": "C2API_HidePlayerBalloonHelper",
-						"source": "c2",
-						"rollbackName": "C2API_ShowPlayerBalloonHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2091,
 					"type": 10,
 					"label": "Show balln helper",
 					"continue": true,
 					"inCondIds": [
-						2937
+						4899
 					],
 					"outCondIds": [
 						2938
@@ -2565,31 +2529,12 @@
 				},
 				{
 					"ver": 1,
-					"id": 2092,
-					"type": 10,
-					"label": "Hide balln helper",
-					"continue": true,
-					"inCondIds": [
-						2940
-					],
-					"outCondIds": [
-						2939
-					],
-					"props": {
-						"name": "C2API_HidePolicemanBalloonHelper",
-						"source": "c2",
-						"rollbackName": "C2API_ShowPolicemanBalloonHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2093,
 					"type": 10,
 					"label": "Show balln helper",
 					"continue": true,
 					"inCondIds": [
-						2939
+						4900
 					],
 					"outCondIds": [
 						2941
@@ -2603,31 +2548,12 @@
 				},
 				{
 					"ver": 1,
-					"id": 2094,
-					"type": 10,
-					"label": "Hide balln helper",
-					"continue": true,
-					"inCondIds": [
-						2942
-					],
-					"outCondIds": [
-						2943
-					],
-					"props": {
-						"name": "C2API_HidePlayerBalloonHelper",
-						"source": "c2",
-						"rollbackName": "C2API_ShowPlayerBalloonHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2095,
 					"type": 10,
 					"label": "Show balln helper",
 					"continue": true,
 					"inCondIds": [
-						2943
+						4901
 					],
 					"outCondIds": [
 						2944
@@ -2641,25 +2567,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2096,
-					"type": 10,
-					"label": "Hide balln helper",
-					"continue": true,
-					"inCondIds": [
-						2945
-					],
-					"outCondIds": [
-						4704
-					],
-					"props": {
-						"name": "C2API_HidePolicemanBalloonHelper",
-						"source": "c2",
-						"rollbackName": "C2API_ShowPolicemanBalloonHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2097,
 					"type": 10,
 					"label": "Show quizz help",
@@ -2668,7 +2575,7 @@
 						4702
 					],
 					"outCondIds": [
-						4706
+						4903
 					],
 					"props": {
 						"name": "C2API_ShowQuizzHelper",
@@ -2736,7 +2643,7 @@
 					"label": "Show balln helper",
 					"continue": true,
 					"inCondIds": [
-						2955
+						4904
 					],
 					"outCondIds": [
 						2951
@@ -2755,7 +2662,7 @@
 					"label": "Show balln helper",
 					"continue": true,
 					"inCondIds": [
-						2956
+						4905
 					],
 					"outCondIds": [
 						2952
@@ -2769,69 +2676,12 @@
 				},
 				{
 					"ver": 1,
-					"id": 2102,
-					"type": 10,
-					"label": "Hide quizz helper",
-					"continue": true,
-					"inCondIds": [
-						2954
-					],
-					"outCondIds": [
-						2955
-					],
-					"props": {
-						"name": "C2API_HideQuizzHelper",
-						"source": "c2",
-						"rollbackName": "C2API_ShowQuizzHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2103,
-					"type": 10,
-					"label": "Hide quizz helper",
-					"continue": true,
-					"inCondIds": [
-						2953
-					],
-					"outCondIds": [
-						2956
-					],
-					"props": {
-						"name": "C2API_HideQuizzHelper",
-						"source": "c2",
-						"rollbackName": "C2API_ShowQuizzHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2104,
-					"type": 10,
-					"label": "Hide balln helper",
-					"continue": true,
-					"inCondIds": [
-						2957
-					],
-					"outCondIds": [
-						2958
-					],
-					"props": {
-						"name": "C2API_HidePlayerBalloonHelper",
-						"source": "c2",
-						"rollbackName": "C2API_ShowPlayerBalloonHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2105,
 					"type": 10,
 					"label": "Show new idiom",
 					"continue": true,
 					"inCondIds": [
-						2958
+						4909
 					],
 					"outCondIds": [
 						2959
@@ -2872,7 +2722,7 @@
 						3056
 					],
 					"outCondIds": [
-						3057
+						4912
 					],
 					"props": {
 						"name": "C2API_ShowTicketCounterHelper",
@@ -2891,7 +2741,7 @@
 						3055
 					],
 					"outCondIds": [
-						2963
+						4910
 					],
 					"props": {
 						"name": "C2API_HideNewIdiomHelper",
@@ -2926,7 +2776,7 @@
 					"label": "Hide tickt cntr hlpr",
 					"continue": true,
 					"inCondIds": [
-						2966
+						4914
 					],
 					"outCondIds": [
 						2967
@@ -2935,25 +2785,6 @@
 						"name": "C2API_HideTicketCounterHelper",
 						"source": "c2",
 						"rollbackName": "C2API_ShowTicketCounterHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2111,
-					"type": 10,
-					"label": "Hide notif helper",
-					"continue": true,
-					"inCondIds": [
-						3054
-					],
-					"outCondIds": [
-						2966
-					],
-					"props": {
-						"name": "C2API_HideNotificationHelper",
-						"source": "c2",
-						"rollbackName": "C2API_ShowNotificationHelper",
 						"params": []
 					}
 				},
@@ -3002,10 +2833,10 @@
 					"label": "Ticket tutorial 2",
 					"continue": false,
 					"inCondIds": [
-						3057
+						4913
 					],
 					"outCondIds": [
-						3054
+						4914
 					],
 					"props": {
 						"text": "Find 5 coins on the level to buy a bus ticket.\n\nAlso find a bus driver to buy the ticket."
@@ -3037,7 +2868,7 @@
 						4145
 					],
 					"outCondIds": [
-						3820
+						4916
 					],
 					"props": {
 						"enabled": false
@@ -3085,7 +2916,7 @@
 					"label": "Show balln helper",
 					"continue": true,
 					"inCondIds": [
-						4704
+						4902
 					],
 					"outCondIds": [
 						4705
@@ -3093,25 +2924,6 @@
 					"props": {
 						"name": "C2API_ShowPlayerBalloonHelper",
 						"rollbackName": "C2API_HidePlayerBalloonHelper",
-						"source": "c2",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2736,
-					"type": 10,
-					"label": "Hide balln helper",
-					"continue": true,
-					"inCondIds": [
-						4706
-					],
-					"outCondIds": [
-						4707
-					],
-					"props": {
-						"name": "C2API_HidePlayerBalloonHelper",
-						"rollbackName": "C2API_ShowPlayerBalloonHelper",
 						"source": "c2",
 						"params": []
 					}
@@ -3137,19 +2949,77 @@
 				},
 				{
 					"ver": 1,
-					"id": 2739,
+					"id": 2922,
 					"type": 10,
-					"label": "Hide balln helper",
+					"label": "Show balln helper",
 					"continue": true,
 					"inCondIds": [
-						4708
+						4906,
+						4907
 					],
 					"outCondIds": [
-						4709
+						4908
 					],
 					"props": {
-						"name": "C2API_HidePlayerBalloonHelper",
-						"rollbackName": "C2API_ShowPlayerBalloonHelper",
+						"name": "C2API_ShowPlayerBalloonHelper",
+						"rollbackName": "C2API_HidePlayerBalloonHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2923,
+					"type": 10,
+					"label": "Show notif helper",
+					"continue": true,
+					"inCondIds": [
+						4910
+					],
+					"outCondIds": [
+						4911
+					],
+					"props": {
+						"name": "C2API_ShowNotificationHelper",
+						"rollbackName": "C2API_HideNotificationHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2924,
+					"type": 10,
+					"label": "Show notif helper",
+					"continue": true,
+					"inCondIds": [
+						4912
+					],
+					"outCondIds": [
+						4913
+					],
+					"props": {
+						"name": "C2API_ShowNotificationHelper",
+						"rollbackName": "C2API_HideNotificationHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2925,
+					"type": 10,
+					"label": "Show balln helper",
+					"continue": true,
+					"inCondIds": [
+						4916
+					],
+					"outCondIds": [
+						4917
+					],
+					"props": {
+						"name": "C2API_ShowPlayerBalloonHelper",
+						"rollbackName": "C2API_HidePlayerBalloonHelper",
 						"source": "c2",
 						"params": []
 					}
@@ -3160,18 +3030,6 @@
 					"ver": 1,
 					"id": 574,
 					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1561,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1562,
-					"type": 11,
 					"props": {}
 				},
 				{
@@ -3224,19 +3082,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 2926,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 2928,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2929,
 					"type": 8,
 					"props": {}
 				},
@@ -3262,31 +3108,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 2933,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2934,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 2935,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2936,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2937,
 					"type": 8,
 					"props": {}
 				},
@@ -3298,31 +3120,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 2939,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2940,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 2941,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2942,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2943,
 					"type": 8,
 					"props": {}
 				},
@@ -3330,12 +3128,6 @@
 					"ver": 1,
 					"id": 2944,
 					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2945,
-					"type": 11,
 					"props": {}
 				},
 				{
@@ -3364,42 +3156,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2953,
-					"type": 5,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2954,
-					"type": 7,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2955,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2956,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2957,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2958,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 2959,
 					"type": 8,
 					"props": {}
@@ -3412,26 +3168,8 @@
 				},
 				{
 					"ver": 1,
-					"id": 2963,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2966,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 2967,
 					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 3054,
-					"type": 11,
 					"props": {}
 				},
 				{
@@ -3444,12 +3182,6 @@
 					"ver": 1,
 					"id": 3056,
 					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 3057,
-					"type": 8,
 					"props": {}
 				},
 				{
@@ -3467,12 +3199,6 @@
 					"props": {
 						"name": "ticket_collected"
 					}
-				},
-				{
-					"ver": 1,
-					"id": 3820,
-					"type": 8,
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -3508,37 +3234,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 4704,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 4705,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4706,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4707,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4708,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4709,
 					"type": 8,
 					"props": {}
 				},
@@ -3551,6 +3247,132 @@
 				{
 					"ver": 1,
 					"id": 4711,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4897,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4898,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4899,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4900,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4901,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4902,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4903,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4904,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4905,
+					"type": 5,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4906,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4907,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4908,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4909,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4910,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4911,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4912,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4913,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4914,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4915,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4916,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4917,
 					"type": 8,
 					"props": {}
 				}
@@ -3738,7 +3560,7 @@
 						"id": "Player",
 						"text": "\"Take someone's breath away\" means to extremely surprise and amaze it!",
 						"phraseType": "THINK",
-						"phraseSize": "MEDIUM"
+						"phraseSize": "LARGE"
 					}
 				},
 				{

@@ -589,7 +589,12 @@
                                     <param id="0" name="Name">&quot;HideQuizz&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Call function" sid="9553697463592256" type="Function">
+                                    <param id="0" name="Name">&quot;HideQuizzHelper&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="1987882933064479">
                                     <conditions>
@@ -661,6 +666,10 @@
                                 <action id="0" name="Call function" sid="9425723778339728" type="Function">
                                     <param id="0" name="Name">&quot;onQuestControlsVisibleChanged&quot;</param>
                                     <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="8470733226541601" type="Function">
+                                    <param id="0" name="Name">&quot;HideNavNextHelper&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
