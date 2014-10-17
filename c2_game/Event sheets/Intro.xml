@@ -3,314 +3,307 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Intro</name>
     <events>
-        <event-block sid="6869420682188312">
-            <conditions>
-                <condition id="0" name="On function" sid="417314998819277" type="Function">
-                    <param id="0" name="Name">&quot;onStageintroInactive&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="8636277273504871" type="JumpHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="6690646893951045" type="WalkHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="3622843070802135" type="NavHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="3104795103770746" type="TapQuizzHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="6448989681512832" type="CoinsHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="7212763785483017" type="JumpHelper">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="Sine2" id="0" name="Set active" sid="6669062348094862" type="JumpHelper">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="7439847259491265" type="WalkHelper">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="1585865291146218" type="CoinsHelper">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="Sine2" id="0" name="Set active" sid="1822152816923869" type="CoinsHelper">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3502489721726792">
-            <conditions>
-                <condition id="0" name="On function" sid="3078887151823637" type="Function">
-                    <param id="0" name="Name">&quot;C2API_ShowNotificationHelper&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="4900060205411876" type="Function">
-                    <param id="0" name="Name">&quot;ShowNavNextHelper&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5978642077757722">
-            <conditions>
-                <condition id="0" name="On function" sid="7581113646454976" type="Function">
-                    <param id="0" name="Name">&quot;C2API_HideNotificationHelper&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="9583263340727451" type="Function">
-                    <param id="0" name="Name">&quot;HideNavNextHelper&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1469985823134677">
-            <conditions>
-                <condition id="0" name="On function" sid="4828036408162631" type="Function">
-                    <param id="0" name="Name">&quot;C2API_ShowControlsHelpers&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="6340809894119451" type="JumpHelper">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="3703850830632513" type="WalkHelper">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="4761834818262927" type="JumpHelper">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Sine2" id="0" name="Set active" sid="3940795809963511" type="JumpHelper">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="2483812285583599" type="WalkHelper">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8948690394251446">
-            <conditions>
-                <condition id="0" name="On function" sid="9417800071778754" type="Function">
-                    <param id="0" name="Name">&quot;C2API_HideControlsHelpers&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="534836912227634" type="JumpHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="8570305674546621" type="WalkHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="2731339258033314" type="JumpHelper">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="Sine2" id="0" name="Set active" sid="377516903444283" type="JumpHelper">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="115057273153348" type="WalkHelper">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3997826454793024">
-            <conditions>
-                <condition id="0" name="On function" sid="8539531400793125" type="Function">
-                    <param id="0" name="Name">&quot;C2API_ShowPolicemanBalloonHelper&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="4803509375627586" type="NPC">
-                    <param id="0" name="Unique ID">52</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="8907412230467096" type="Function">
-                    <param id="0" name="Name">&quot;ShowNavNextHelper&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="9286526282743166">
-            <conditions>
-                <condition id="0" name="On function" sid="8627291494905341" type="Function">
-                    <param id="0" name="Name">&quot;C2API_HidePolicemanBalloonHelper&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="4002992033732195" type="NPC">
-                    <param id="0" name="Unique ID">52</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="9000592577210893" type="Function">
-                    <param id="0" name="Name">&quot;HideNavNextHelper&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="9987107342166314">
-            <conditions>
-                <condition id="0" name="On function" sid="1790620730908641" type="Function">
-                    <param id="0" name="Name">&quot;C2API_ShowPlayerBalloonHelper&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="291127432752572" type="Function">
-                    <param id="0" name="Name">&quot;ShowNavNextHelper&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3795824499071879">
-            <conditions>
-                <condition id="0" name="On function" sid="8359436962851981" type="Function">
-                    <param id="0" name="Name">&quot;C2API_HidePlayerBalloonHelper&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="1582611323385487" type="Function">
-                    <param id="0" name="Name">&quot;HideNavNextHelper&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8143031984160501">
-            <conditions>
-                <condition id="0" name="On function" sid="5132135630917985" type="Function">
-                    <param id="0" name="Name">&quot;C2API_ShowNewIdiomHelper&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="1335013270755848" type="IdiomCounterHelper">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="0" name="Call function" sid="8110680054011913" type="Function">
-                    <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8784206970284958">
-            <conditions>
-                <condition id="0" name="On function" sid="4234723595757082" type="Function">
-                    <param id="0" name="Name">&quot;C2API_HideNewIdiomHelper&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="6927967553255938" type="IdiomCounterHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1689485073768038">
-            <conditions>
-                <condition id="0" name="On function" sid="1153427252199131" type="Function">
-                    <param id="0" name="Name">&quot;C2API_ShowTicketHelper&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="9915663641704553" type="Coin">
-                    <param id="0" name="Unique ID">233</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-26" name="Move to layer" sid="9489430068627018" type="CoinsHelper">
-                    <param id="0" name="Layer">Coin.LayerName</param>
-                </action>
-                <action id="-3" name="Set position" sid="7725278522542604" type="CoinsHelper">
-                    <param id="0" name="X">Coin.X + Coin.Width / 2 - (CoinsHelper.ImagePointX(&quot;ArrowPointer&quot;) - CoinsHelper.X) + 20</param>
-                    <param id="1" name="Y">Coin.Y - (CoinsHelper.ImagePointY(&quot;ArrowPointer&quot;) - CoinsHelper.Y)</param>
-                </action>
-                <action id="-15" name="Set visible" sid="8708879133444199" type="CoinsHelper">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="4673464712560752" type="Coin">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="7763295636367853" type="CoinsHelper">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Sine2" id="0" name="Set active" sid="5938450635591547" type="CoinsHelper">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3222239879228411">
-            <conditions>
-                <condition id="0" name="On function" sid="6691372146598866" type="Function">
-                    <param id="0" name="Name">&quot;C2API_HideTicketHelper&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="7553203707331893" type="Coin">
-                    <param id="0" name="Unique ID">233</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="284963755098424" type="CoinsHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="1473608948383791" type="CoinsHelper">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="Sine2" id="0" name="Set active" sid="2353821724036119" type="CoinsHelper">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6955187779759266">
-            <conditions>
-                <condition id="0" name="On function" sid="3974516868680465" type="Function">
-                    <param id="0" name="Name">&quot;C2API_ShowTicketCounterHelper&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="5721626641907052" type="CoinsCounterHelper">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="0" name="Call function" sid="6503222420057646" type="Function">
-                    <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8211605406235132">
-            <conditions>
-                <condition id="0" name="On function" sid="1433452937096979" type="Function">
-                    <param id="0" name="Name">&quot;C2API_HideTicketCounterHelper&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="9670245467069661" type="CoinsCounterHelper">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3799889551736866">
-            <conditions>
-                <condition id="0" name="On function" sid="4500215967218276" type="Function">
-                    <param id="0" name="Name">&quot;procMiscInputintro&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="14" name="Log" sid="7320589517845062" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;procMiscInput&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5906662501235973">
-            <conditions>
-                <condition id="0" name="On function" sid="3715688441167773" type="Function">
-                    <param id="0" name="Name">&quot;IntroInit&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="7760214824299522" type="Function">
-                    <param id="0" name="Name">&quot;HideCoinsCounter&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action id="0" name="Call function" sid="3220574629375815" type="Function">
-                    <param id="0" name="Name">&quot;HideIdiomsCounter&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="4917651500998863" title="Level 1 intro stage">
+            <sub-events>
+                <variable constant="1" name="TUTORIAL_COIN_UID" sid="2745591070830743" static="0" type="number">233</variable>
+                <event-block sid="6869420682188312">
+                    <conditions>
+                        <condition id="0" name="On function" sid="417314998819277" type="Function">
+                            <param id="0" name="Name">&quot;onStageintroInactive&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="8636277273504871" type="JumpHelper">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6690646893951045" type="WalkHelper">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3622843070802135" type="NavHelper">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3104795103770746" type="TapQuizzHelper">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6448989681512832" type="CoinsHelper">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="7212763785483017" type="JumpHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="6669062348094862" type="JumpHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="7439847259491265" type="WalkHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="1585865291146218" type="CoinsHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="1822152816923869" type="CoinsHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3502489721726792">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3078887151823637" type="Function">
+                            <param id="0" name="Name">&quot;C2API_ShowNotificationHelper&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4900060205411876" type="Function">
+                            <param id="0" name="Name">&quot;ShowNavNextHelper&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5978642077757722">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7581113646454976" type="Function">
+                            <param id="0" name="Name">&quot;C2API_HideNotificationHelper&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9583263340727451" type="Function">
+                            <param id="0" name="Name">&quot;HideNavNextHelper&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1469985823134677">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4828036408162631" type="Function">
+                            <param id="0" name="Name">&quot;C2API_ShowControlsHelpers&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6340809894119451" type="JumpHelper">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3703850830632513" type="WalkHelper">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="4761834818262927" type="JumpHelper">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="3940795809963511" type="JumpHelper">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="2483812285583599" type="WalkHelper">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8948690394251446">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9417800071778754" type="Function">
+                            <param id="0" name="Name">&quot;C2API_HideControlsHelpers&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="534836912227634" type="JumpHelper">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8570305674546621" type="WalkHelper">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="2731339258033314" type="JumpHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="377516903444283" type="JumpHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="115057273153348" type="WalkHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3997826454793024">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8539531400793125" type="Function">
+                            <param id="0" name="Name">&quot;C2API_ShowPolicemanBalloonHelper&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="4803509375627586" type="NPC">
+                            <param id="0" name="Unique ID">52</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8907412230467096" type="Function">
+                            <param id="0" name="Name">&quot;ShowNavNextHelper&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9286526282743166">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8627291494905341" type="Function">
+                            <param id="0" name="Name">&quot;C2API_HidePolicemanBalloonHelper&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="4002992033732195" type="NPC">
+                            <param id="0" name="Unique ID">52</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9000592577210893" type="Function">
+                            <param id="0" name="Name">&quot;HideNavNextHelper&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9987107342166314">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1790620730908641" type="Function">
+                            <param id="0" name="Name">&quot;C2API_ShowPlayerBalloonHelper&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="291127432752572" type="Function">
+                            <param id="0" name="Name">&quot;ShowNavNextHelper&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3795824499071879">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8359436962851981" type="Function">
+                            <param id="0" name="Name">&quot;C2API_HidePlayerBalloonHelper&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1582611323385487" type="Function">
+                            <param id="0" name="Name">&quot;HideNavNextHelper&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8143031984160501">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5132135630917985" type="Function">
+                            <param id="0" name="Name">&quot;C2API_ShowNewIdiomHelper&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1335013270755848" type="IdiomCounterHelper">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8110680054011913" type="Function">
+                            <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8784206970284958">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4234723595757082" type="Function">
+                            <param id="0" name="Name">&quot;C2API_HideNewIdiomHelper&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6927967553255938" type="IdiomCounterHelper">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6955187779759266">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3974516868680465" type="Function">
+                            <param id="0" name="Name">&quot;C2API_ShowTicketCounterHelper&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="5721626641907052" type="CoinsCounterHelper">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="6503222420057646" type="Function">
+                            <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8211605406235132">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1433452937096979" type="Function">
+                            <param id="0" name="Name">&quot;C2API_HideTicketCounterHelper&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="9670245467069661" type="CoinsCounterHelper">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7639791861676938">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7993163732733459" type="Function">
+                            <param id="0" name="Name">&quot;C2API_PolicemanTalkFinished&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="729754440495066" type="Coin">
+                            <param id="0" name="Unique ID">TUTORIAL_COIN_UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" disabled="1" id="0" name="Set active" sid="3830724915639862" type="Coin">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action disabled="1" id="3" name="Start" sid="9118199770716898" type="Coin">
+                            <param id="0" name="From">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7481838108663596" type="Coin">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3799889551736866">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4500215967218276" type="Function">
+                            <param id="0" name="Name">&quot;procMiscInputintro&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="7320589517845062" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;procMiscInput&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5906662501235973">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3715688441167773" type="Function">
+                            <param id="0" name="Name">&quot;IntroInit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="7760214824299522" type="Function">
+                            <param id="0" name="Name">&quot;HideCoinsCounter&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="3220574629375815" type="Function">
+                            <param id="0" name="Name">&quot;HideIdiomsCounter&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Sine animation of the first coin makes reader angry</comment>
+                        <event-block sid="8015250855053189">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="1653321233194347" type="Coin">
+                                    <param id="0" name="Unique ID">TUTORIAL_COIN_UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" disabled="1" id="0" name="Set active" sid="7239481449251334" type="Coin">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action disabled="1" id="2" name="Stop" sid="7272003608302551" type="Coin" />
+                                <action id="-15" name="Set visible" sid="9268347931849464" type="Coin">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

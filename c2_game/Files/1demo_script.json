@@ -2216,10 +2216,10 @@
 						2960
 					],
 					"outCondIds": [
-						3055
+						4980
 					],
 					"props": {
-						"text": "\"Piece of cake\" is the first idiom on the level!\n\nTalk to people and guess all the 5 idioms to explore the next level in the city center."
+						"text": "\"Piece of cake\" is the first idiom on the level!\n\nTalk to people, guess and learn all the 5 idioms"
 					}
 				},
 				{
@@ -2293,10 +2293,10 @@
 					"label": "Controls enable",
 					"continue": false,
 					"inCondIds": [
-						4915
+						4983
 					],
 					"outCondIds": [
-						3818
+						4981
 					],
 					"props": {
 						"enabled": true
@@ -2309,7 +2309,7 @@
 					"label": "Policeman idle 1",
 					"continue": false,
 					"inCondIds": [
-						3824
+						4981
 					],
 					"outCondIds": [
 						2099
@@ -2363,54 +2363,16 @@
 					"ver": 1,
 					"id": 1866,
 					"type": 11,
-					"label": "Ticket tutorial 1",
+					"label": "Coin tutorial 1",
 					"continue": false,
 					"inCondIds": [
 						4911
 					],
 					"outCondIds": [
-						3056
+						4975
 					],
 					"props": {
-						"text": "But how can you get to the city center?"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 1894,
-					"type": 1,
-					"label": "Ticket tutorial 2",
-					"continue": false,
-					"inCondIds": [
-						4711
-					],
-					"outCondIds": [
-						4915
-					],
-					"props": {
-						"id": "Player",
-						"text": "Now get the first coin located on the airplane!",
-						"phraseType": "SPEAK",
-						"phraseSize": "MEDIUM"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 1896,
-					"type": 1,
-					"label": "Let's collect all",
-					"continue": false,
-					"inCondIds": [
-						4917
-					],
-					"outCondIds": [
-						4146
-					],
-					"props": {
-						"id": "Player",
-						"text": "Great!\nTry to collect 5 coins and all the idioms!",
-						"phraseType": "SPEAK",
-						"phraseSize": "MEDIUM"
+						"text": "You've just collected a coin!\n\nFind 5 coins to buy a bus ticket to the next level"
 					}
 				},
 				{
@@ -2719,10 +2681,10 @@
 					"label": "Show tckt cntr hlp",
 					"continue": true,
 					"inCondIds": [
-						3056
+						4977
 					],
 					"outCondIds": [
-						4912
+						4972
 					],
 					"props": {
 						"name": "C2API_ShowTicketCounterHelper",
@@ -2738,10 +2700,10 @@
 					"label": "Hide new idiom",
 					"continue": true,
 					"inCondIds": [
-						3055
+						5086
 					],
 					"outCondIds": [
-						4910
+						5034
 					],
 					"props": {
 						"name": "C2API_HideNewIdiomHelper",
@@ -2752,34 +2714,15 @@
 				},
 				{
 					"ver": 1,
-					"id": 2109,
-					"type": 10,
-					"label": "Show ticket hlpr",
-					"continue": true,
-					"inCondIds": [
-						2967
-					],
-					"outCondIds": [
-						4710
-					],
-					"props": {
-						"name": "C2API_ShowTicketHelper",
-						"source": "c2",
-						"rollbackName": "C2API_HideTicketHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2110,
 					"type": 10,
 					"label": "Hide tickt cntr hlpr",
 					"continue": true,
 					"inCondIds": [
-						4914
+						4975
 					],
 					"outCondIds": [
-						2967
+						4982
 					],
 					"props": {
 						"name": "C2API_HideTicketCounterHelper",
@@ -2790,56 +2733,21 @@
 				},
 				{
 					"ver": 1,
-					"id": 2112,
-					"type": 10,
-					"label": "Hide ticket hlpr",
-					"continue": true,
-					"inCondIds": [
-						3818
-					],
-					"outCondIds": [
-						4145
-					],
-					"props": {
-						"name": "C2API_HideTicketHelper",
-						"source": "c2",
-						"rollbackName": "C2API_ShowTicketHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2113,
 					"type": 10,
 					"label": "IdiomDialogCompleted",
 					"continue": true,
 					"inCondIds": [
-						4146
+						4980
 					],
 					"outCondIds": [
-						4147
+						5085
 					],
 					"props": {
 						"name": "C2API_IdiomDialogCompleted",
 						"source": "c2",
 						"rollbackName": "",
 						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2214,
-					"type": 11,
-					"label": "Ticket tutorial 2",
-					"continue": false,
-					"inCondIds": [
-						4913
-					],
-					"outCondIds": [
-						4914
-					],
-					"props": {
-						"text": "Find 5 coins on the level to buy a bus ticket.\n\nAlso find a bus driver to buy the ticket."
 					}
 				},
 				{
@@ -2862,32 +2770,16 @@
 					"ver": 1,
 					"id": 2685,
 					"type": 12,
-					"label": "",
+					"label": "First coin collect",
 					"continue": true,
 					"inCondIds": [
-						4145
+						5035
 					],
 					"outCondIds": [
-						4916
+						4977
 					],
 					"props": {
 						"enabled": false
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2686,
-					"type": 12,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						4147
-					],
-					"outCondIds": [
-						3824
-					],
-					"props": {
-						"enabled": true
 					}
 				},
 				{
@@ -2930,25 +2822,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2738,
-					"type": 10,
-					"label": "Show balln helper",
-					"continue": true,
-					"inCondIds": [
-						4710
-					],
-					"outCondIds": [
-						4711
-					],
-					"props": {
-						"name": "C2API_ShowPlayerBalloonHelper",
-						"rollbackName": "C2API_HidePlayerBalloonHelper",
-						"source": "c2",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2922,
 					"type": 10,
 					"label": "Show balln helper",
@@ -2974,7 +2847,7 @@
 					"label": "Show notif helper",
 					"continue": true,
 					"inCondIds": [
-						4910
+						4972
 					],
 					"outCondIds": [
 						4911
@@ -2982,44 +2855,6 @@
 					"props": {
 						"name": "C2API_ShowNotificationHelper",
 						"rollbackName": "C2API_HideNotificationHelper",
-						"source": "c2",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2924,
-					"type": 10,
-					"label": "Show notif helper",
-					"continue": true,
-					"inCondIds": [
-						4912
-					],
-					"outCondIds": [
-						4913
-					],
-					"props": {
-						"name": "C2API_ShowNotificationHelper",
-						"rollbackName": "C2API_HideNotificationHelper",
-						"source": "c2",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2925,
-					"type": 10,
-					"label": "Show balln helper",
-					"continue": true,
-					"inCondIds": [
-						4916
-					],
-					"outCondIds": [
-						4917
-					],
-					"props": {
-						"name": "C2API_ShowPlayerBalloonHelper",
-						"rollbackName": "C2API_HidePlayerBalloonHelper",
 						"source": "c2",
 						"params": []
 					}
@@ -3058,6 +2893,60 @@
 					"props": {
 						"name": "C2API_HideQuizzHelper",
 						"rollbackName": "C2API_ShowQuizzHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 2978,
+					"type": 10,
+					"label": "ShowGoForward",
+					"continue": true,
+					"inCondIds": [
+						4982
+					],
+					"outCondIds": [
+						4983
+					],
+					"props": {
+						"name": "C2API_ShowGoForwardHelper",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3028,
+					"type": 12,
+					"label": "Controls disable",
+					"continue": false,
+					"inCondIds": [
+						5034
+					],
+					"outCondIds": [
+						5035
+					],
+					"props": {
+						"enabled": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3078,
+					"type": 10,
+					"label": "Policeman talk fin",
+					"continue": true,
+					"inCondIds": [
+						5085
+					],
+					"outCondIds": [
+						5086
+					],
+					"props": {
+						"name": "C2API_PolicemanTalkFinished",
+						"rollbackName": null,
 						"source": "c2",
 						"params": []
 					}
@@ -3194,63 +3083,11 @@
 				},
 				{
 					"ver": 1,
-					"id": 2967,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 3055,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 3056,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 3384,
 					"type": 2,
 					"props": {
 						"id": "policeman"
 					}
-				},
-				{
-					"ver": 1,
-					"id": 3818,
-					"type": 10,
-					"props": {
-						"name": "ticket_collected"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 3824,
-					"type": 2,
-					"props": {
-						"id": "policeman"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 4145,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4146,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4147,
-					"type": 8,
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -3261,18 +3098,6 @@
 				{
 					"ver": 1,
 					"id": 4705,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4710,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4711,
 					"type": 8,
 					"props": {}
 				},
@@ -3356,49 +3181,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 4910,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 4911,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4912,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4913,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4914,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4915,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4916,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4917,
 					"type": 8,
 					"props": {}
 				},
@@ -3423,6 +3206,76 @@
 				{
 					"ver": 1,
 					"id": 4923,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4972,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4975,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4977,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4980,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4981,
+					"type": 2,
+					"props": {
+						"id": "policeman"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4982,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4983,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5034,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5035,
+					"type": 10,
+					"props": {
+						"name": "coin_collected"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5085,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5086,
 					"type": 8,
 					"props": {}
 				}
@@ -4620,7 +4473,7 @@
 						3215
 					],
 					"outCondIds": [
-						4918
+						5090
 					],
 					"props": {
 						"id": "Player",
@@ -4683,7 +4536,7 @@
 					"label": "",
 					"continue": true,
 					"inCondIds": [
-						4919
+						5088
 					],
 					"outCondIds": [
 						3217
@@ -4699,16 +4552,51 @@
 					"label": "ShowGoForward",
 					"continue": true,
 					"inCondIds": [
-						4918
+						5089
 					],
 					"outCondIds": [
-						4919
+						5032
 					],
 					"props": {
 						"name": "C2API_ShowGoForwardHelper",
 						"rollbackName": null,
 						"source": "c2",
 						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3027,
+					"type": 10,
+					"label": "Take on glasses",
+					"continue": true,
+					"inCondIds": [
+						5032
+					],
+					"outCondIds": [
+						5088
+					],
+					"props": {
+						"name": "C2API_SecretTakeOnGlasses",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3079,
+					"type": 11,
+					"label": "Secret found!",
+					"continue": false,
+					"inCondIds": [
+						5090
+					],
+					"outCondIds": [
+						5089
+					],
+					"props": {
+						"text": "You've just found a secret!\n\nThere is one for each level. Be curious and find cool things!"
 					}
 				}
 			],
@@ -4747,14 +4635,26 @@
 				},
 				{
 					"ver": 1,
-					"id": 4918,
+					"id": 5032,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5088,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5089,
 					"type": 11,
 					"props": {}
 				},
 				{
 					"ver": 1,
-					"id": 4919,
-					"type": 8,
+					"id": 5090,
+					"type": 11,
 					"props": {}
 				}
 			]
