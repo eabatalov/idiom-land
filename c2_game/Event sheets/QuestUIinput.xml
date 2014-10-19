@@ -1058,20 +1058,97 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;IDLE&quot;</param>
                                         </condition>
-                                        <condition id="4" name="Is touching object" sid="2500929474759732" type="Touch">
-                                            <param id="0" name="Object">DialogAnsBg</param>
-                                        </condition>
-                                        <condition id="-9" name="Is visible" sid="5986664478543017" type="DialogAnsBg" />
                                     </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="8705422268652252" type="System">
-                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                            <param id="1" name="Value">&quot;TOUCH_PLAYER_ANS&quot;</param>
-                                        </action>
-                                        <action id="1" name="Set return value" sid="7616285988296917" type="Function">
-                                            <param id="0" name="Value">1</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="8643459047021705">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="5986664478543017" type="DialogAns1Bg" />
+                                                <condition id="4" name="Is touching object" sid="2500929474759732" type="Touch">
+                                                    <param id="0" name="Object">DialogAns1Bg</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="7492041233656428" type="DialogAns1Bg">
+                                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="8705422268652252" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Value">&quot;TOUCH_PLAYER_ANS1&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="7616285988296917" type="Function">
+                                                    <param id="0" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6479926500845121">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="4318101038481918" type="System" />
+                                                <condition id="-9" name="Is visible" sid="7024879830066541" type="DialogAns2Bg" />
+                                                <condition id="4" name="Is touching object" sid="6856502114465258" type="Touch">
+                                                    <param id="0" name="Object">DialogAns2Bg</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="8674311226517011" type="DialogAns2Bg">
+                                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="1557764894102678" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Value">&quot;TOUCH_PLAYER_ANS2&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="7864972544995926" type="Function">
+                                                    <param id="0" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="959957178170244">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="6063791727695763" type="System" />
+                                                <condition id="-9" name="Is visible" sid="1135530950554876" type="DialogAns3Bg" />
+                                                <condition id="4" name="Is touching object" sid="1289090318604228" type="Touch">
+                                                    <param id="0" name="Object">DialogAns3Bg</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="736252712582209" type="DialogAns3Bg">
+                                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="4503624152335577" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Value">&quot;TOUCH_PLAYER_ANS3&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="6408691769005822" type="Function">
+                                                    <param id="0" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="7694966533423802">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="460432422063451" type="System" />
+                                                <condition id="-9" name="Is visible" sid="7375820396984767" type="DialogAns4Bg" />
+                                                <condition id="4" name="Is touching object" sid="26917272396688" type="Touch">
+                                                    <param id="0" name="Object">DialogAns4Bg</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="9173782691428488" type="DialogAns4Bg">
+                                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="4881653197453108" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Value">&quot;TOUCH_PLAYER_ANS4&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="1979895997963105" type="Function">
+                                                    <param id="0" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="7462882370916286">
                                     <conditions>
@@ -1080,75 +1157,212 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;TOUCH_END&quot;</param>
                                         </condition>
-                                        <condition id="-14" name="Compare variable" sid="5020891414253135" type="System">
-                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;TOUCH_PLAYER_ANS&quot;</param>
-                                        </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="1" name="Set return value" sid="3679607342619308" type="Function">
-                                            <param id="0" name="Value">1</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="7264247991928796" type="System">
-                                            <param id="0" name="Variable">INPUT_STATE</param>
-                                            <param id="1" name="Value">&quot;IDLE&quot;</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                     <sub-events>
                                         <event-block sid="9169822728727606">
                                             <conditions>
-                                                <condition id="4" name="Is touching object" sid="392975167225903" type="Touch">
-                                                    <param id="0" name="Object">DialogAns1Bg</param>
+                                                <condition id="-14" name="Compare variable" sid="5020891414253135" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;TOUCH_PLAYER_ANS1&quot;</param>
                                                 </condition>
                                                 <condition id="-9" name="Is visible" sid="9175367919561376" type="DialogAns1Bg" />
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="6950167789667755" type="Function">
-                                                    <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;ANSWER1_CLICKED&quot;{###}CURRENT_TALKING_CHAR_ID_ON_STAGE</param>
+                                                <action id="4" name="Set animation" sid="6323486054264938" type="DialogAns1Bg">
+                                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="7264247991928796" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Value">&quot;IDLE&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="3679607342619308" type="Function">
+                                                    <param id="0" name="Value">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="6282723039024886">
+                                                    <conditions>
+                                                        <condition id="4" name="Is touching object" sid="392975167225903" type="Touch">
+                                                            <param id="0" name="Object">DialogAns1Bg</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="6950167789667755" type="Function">
+                                                            <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;ANSWER1_CLICKED&quot;{###}CURRENT_TALKING_CHAR_ID_ON_STAGE</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="3559262533373934">
                                             <conditions>
-                                                <condition id="4" name="Is touching object" sid="2075517197663167" type="Touch">
-                                                    <param id="0" name="Object">DialogAns2Bg</param>
+                                                <condition id="-14" name="Compare variable" sid="8624849313135741" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;TOUCH_PLAYER_ANS2&quot;</param>
                                                 </condition>
                                                 <condition id="-9" name="Is visible" sid="7296785025142077" type="DialogAns2Bg" />
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="1377381408525804" type="Function">
-                                                    <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;ANSWER2_CLICKED&quot;{###}CURRENT_TALKING_CHAR_ID_ON_STAGE</param>
+                                                <action id="4" name="Set animation" sid="2342269409105154" type="DialogAns2Bg">
+                                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="2599619337818418" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Value">&quot;IDLE&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="8127866324589362" type="Function">
+                                                    <param id="0" name="Value">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="1044365499790052">
+                                                    <conditions>
+                                                        <condition id="4" name="Is touching object" sid="2075517197663167" type="Touch">
+                                                            <param id="0" name="Object">DialogAns2Bg</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="1377381408525804" type="Function">
+                                                            <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;ANSWER2_CLICKED&quot;{###}CURRENT_TALKING_CHAR_ID_ON_STAGE</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="5449429999749919">
                                             <conditions>
-                                                <condition id="4" name="Is touching object" sid="6382510379748695" type="Touch">
-                                                    <param id="0" name="Object">DialogAns3Bg</param>
+                                                <condition id="-14" name="Compare variable" sid="9298162542183718" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;TOUCH_PLAYER_ANS3&quot;</param>
                                                 </condition>
                                                 <condition id="-9" name="Is visible" sid="429570427795059" type="DialogAns3Bg" />
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="3154258668743757" type="Function">
-                                                    <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;ANSWER3_CLICKED&quot;{###}CURRENT_TALKING_CHAR_ID_ON_STAGE</param>
+                                                <action id="4" name="Set animation" sid="7546294278594443" type="DialogAns3Bg">
+                                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="8332689446964815" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Value">&quot;IDLE&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="9805631482883834" type="Function">
+                                                    <param id="0" name="Value">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="6851380075486533">
+                                                    <conditions>
+                                                        <condition id="4" name="Is touching object" sid="6382510379748695" type="Touch">
+                                                            <param id="0" name="Object">DialogAns3Bg</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="3154258668743757" type="Function">
+                                                            <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;ANSWER3_CLICKED&quot;{###}CURRENT_TALKING_CHAR_ID_ON_STAGE</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="7629642063769996">
                                             <conditions>
-                                                <condition id="4" name="Is touching object" sid="2265286361633372" type="Touch">
-                                                    <param id="0" name="Object">DialogAns4Bg</param>
+                                                <condition id="-14" name="Compare variable" sid="4357346958647097" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;TOUCH_PLAYER_ANS4&quot;</param>
                                                 </condition>
                                                 <condition id="-9" name="Is visible" sid="4170704105225994" type="DialogAns4Bg" />
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="7752516994823085" type="Function">
-                                                    <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;ANSWER4_CLICKED&quot;{###}CURRENT_TALKING_CHAR_ID_ON_STAGE</param>
+                                                <action id="4" name="Set animation" sid="1297033821962901" type="DialogAns4Bg">
+                                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="6407003258154008" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Value">&quot;IDLE&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="647293915081965" type="Function">
+                                                    <param id="0" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="5785016191943927">
+                                                    <conditions>
+                                                        <condition id="4" name="Is touching object" sid="2265286361633372" type="Touch">
+                                                            <param id="0" name="Object">DialogAns4Bg</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="7752516994823085" type="Function">
+                                                            <param id="0" name="Name">&quot;ProcPlayerAction&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;ANSWER4_CLICKED&quot;{###}CURRENT_TALKING_CHAR_ID_ON_STAGE</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="2650950940560639">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4848878580955013" type="System">
+                                            <param id="0" name="First value">Function.Param(0)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;TOUCH_CANCEL&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="9093913646136541">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="2494894083998756" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;TOUCH_PLAYER_ANS1&quot;</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="8883515178095581" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;TOUCH_PLAYER_ANS2&quot;</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="5699068728386286" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;TOUCH_PLAYER_ANS3&quot;</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="62624067991167" type="System">
+                                                    <param id="0" name="Variable">INPUT_STATE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;TOUCH_PLAYER_ANS4&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="9141496154510371" type="DialogAns1Bg">
+                                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="5031272872069388" type="DialogAns2Bg">
+                                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="8910395174302733" type="DialogAns3Bg">
+                                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="5954721384557379" type="DialogAns4Bg">
+                                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                                    <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
