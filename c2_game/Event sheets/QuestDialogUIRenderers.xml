@@ -49,7 +49,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="9172639859004562" type="DialogSpeechBg">
+                                        <action behavior="QuestEngineSpriteExtras" id="0" name="Set animation (instant update of data fields)" sid="3050552990332677" type="DialogSpeechBg">
                                             <param id="0" name="Animation">&quot;SpeakLarge&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -64,7 +64,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="3140072478642018" type="DialogSpeechBg">
+                                        <action behavior="QuestEngineSpriteExtras" id="0" name="Set animation (instant update of data fields)" sid="8313635238891525" type="DialogSpeechBg">
                                             <param id="0" name="Animation">&quot;SpeakMedium&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -79,7 +79,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="9392495678407588" type="DialogSpeechBg">
+                                        <action behavior="QuestEngineSpriteExtras" id="0" name="Set animation (instant update of data fields)" sid="2099980337702204" type="DialogSpeechBg">
                                             <param id="0" name="Animation">&quot;SpeakSmall&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -117,7 +117,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="9761667924567204" type="DialogSpeechBg">
+                                        <action behavior="QuestEngineSpriteExtras" id="0" name="Set animation (instant update of data fields)" sid="5947438200345531" type="DialogSpeechBg">
                                             <param id="0" name="Animation">&quot;ThinkLarge&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -132,7 +132,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="6362325929022855" type="DialogSpeechBg">
+                                        <action behavior="QuestEngineSpriteExtras" id="0" name="Set animation (instant update of data fields)" sid="2741038490181369" type="DialogSpeechBg">
                                             <param id="0" name="Animation">&quot;ThinkMedium&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -147,7 +147,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="3265476280726176" type="DialogSpeechBg">
+                                        <action behavior="QuestEngineSpriteExtras" id="0" name="Set animation (instant update of data fields)" sid="9042887464149555" type="DialogSpeechBg">
                                             <param id="0" name="Animation">&quot;ThinkSmall&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -358,23 +358,23 @@
                             <param id="0" name="Variable">posY</param>
                             <param id="1" name="Value">Function.Param(1)</param>
                         </action>
-                        <action id="-3" name="Set position" sid="2566154745545497" type="DialogSpeechBg">
-                            <param id="0" name="X">posX - (DialogSpeechBg.ImagePointX(&quot;Cock&quot;) - DialogSpeechBg.X)</param>
-                            <param id="1" name="Y">posY - (DialogSpeechBg.ImagePointY(&quot;Cock&quot;) - DialogSpeechBg.Y)</param>
+                        <action id="-3" name="Set position" sid="9121715474322014" type="DialogSpeechBg">
+                            <param id="0" name="X">posX - DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimImagePointXOffset(&quot;cock&quot;)</param>
+                            <param id="1" name="Y">posY - DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimImagePointYOffset(&quot;cock&quot;)</param>
                         </action>
                         <action id="-3" name="Set position" sid="5582694023872794" type="DialogPhraseBg">
                             <param id="0" name="X">DialogSpeechBg.X + DIALOG_PHRASE_BG_MARGIN_LEFT</param>
                             <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_PHRASE_BG_MARGIN_TOP</param>
                         </action>
                         <action id="-6" name="Set height" sid="6227146808310005" type="DialogPhraseBg">
-                            <param id="0" name="Height">DialogSpeechBg.Height - (DIALOG_PHRASE_BG_MARGIN_TOP +DIALOG_PHRASE_BG_MARGIN_BOTTOM)</param>
+                            <param id="0" name="Height">DialogSpeechBg.QuestEngineSpriteExtras.animFrameHeight(DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimName, 0) - (DIALOG_PHRASE_BG_MARGIN_TOP +DIALOG_PHRASE_BG_MARGIN_BOTTOM)</param>
                         </action>
                         <action id="-3" name="Set position" sid="5725315443599872" type="DialogPhraseTxt">
                             <param id="0" name="X">DialogSpeechBg.X + DIALOG_PHRASE_TXT_MARGIN_LEFT</param>
                             <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_PHRASE_TXT_MARGIN_TOP</param>
                         </action>
                         <action id="-6" name="Set height" sid="6610390691611551" type="DialogPhraseTxt">
-                            <param id="0" name="Height">DialogSpeechBg.Height - (DIALOG_PHRASE_TXT_MARGIN_TOP +DIALOG_PHRASE_TXT_MARGIN_BOTTOM)</param>
+                            <param id="0" name="Height">DialogSpeechBg.QuestEngineSpriteExtras.animFrameHeight(DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimName, 0) - (DIALOG_PHRASE_TXT_MARGIN_TOP +DIALOG_PHRASE_TXT_MARGIN_BOTTOM)</param>
                         </action>
                         <action id="-3" name="Set position" sid="2562315066338364" type="DialogSpeakerNameTxt">
                             <param id="0" name="X">DialogSpeechBg.X + DIALOG_NAME_TXT_MARGIN_LEFT</param>

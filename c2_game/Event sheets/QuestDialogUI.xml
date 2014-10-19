@@ -606,6 +606,10 @@
                         <event-block sid="2973710291240337">
                             <conditions />
                             <actions>
+                                <action id="0" name="Call function" sid="2622691135431163" type="Function">
+                                    <param id="0" name="Name">&quot;PositionDialogStep&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="-9" name="Set value" sid="182667185000658" type="System">
                                     <param id="0" name="Variable">CharOuterRectX1</param>
                                     <param id="1" name="Value">min(DialogSpeechBg.X, CharOuterRectX1)</param>
@@ -616,11 +620,11 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="1775254324483763" type="System">
                                     <param id="0" name="Variable">CharOuterRectX2</param>
-                                    <param id="1" name="Value">max(DialogSpeechBg.X + DialogSpeechBg.Width, CharOuterRectX2)</param>
+                                    <param id="1" name="Value">max(DialogSpeechBg.X + DialogSpeechBg.QuestEngineSpriteExtras.animFrameWidth( DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimName, 0), CharOuterRectX2)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="853036121112689" type="System">
                                     <param id="0" name="Variable">CharOuterRectY2</param>
-                                    <param id="1" name="Value">max(DialogSpeechBg.Y + DialogSpeechBg.Height, CharOuterRectY2)</param>
+                                    <param id="1" name="Value">max(DialogSpeechBg.Y + DialogSpeechBg.QuestEngineSpriteExtras.animFrameHeight(DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimName, 0), CharOuterRectY2)</param>
                                 </action>
                                 <action id="0" name="Call function" sid="4304634051681513" type="Function">
                                     <param id="0" name="Name">Function.Param(0)</param>

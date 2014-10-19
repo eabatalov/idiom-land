@@ -399,7 +399,8 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block any="1" sid="9293839021603945">
+                                <comment>Also handle case of bounded scrolling by comparing with previous value</comment>
+                                <event-block sid="8531890191327767">
                                     <conditions />
                                     <actions>
                                         <action id="-9" name="Set value" sid="3488766357207625" type="System">
@@ -419,29 +420,26 @@
                                             <param id="1" name="Message">&quot;scrollx: &quot; &amp; scrollx &amp; &quot; scrolly: &quot; &amp; scrolly</param>
                                         </action>
                                     </actions>
-                                    <sub-events>
-                                        <comment>Also handle case of bounded scrolling by comparing with previous value</comment>
-                                        <event-block sid="4570018091042791">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="1564926517288061" type="System">
-                                                    <param id="0" name="First value">abs(ScrollX_ - scrollx)</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Second value">SCROLLED_TO_THRESHOLD</param>
-                                                </condition>
-                                                <condition id="-8" name="Compare two values" sid="8367440542994609" type="System">
-                                                    <param id="0" name="First value">abs(ScrollY_ - scrolly)</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Second value">SCROLLED_TO_THRESHOLD</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="3378573467695574" type="Function">
-                                                    <param id="0" name="Name">&quot;FinishDialogCameraFocus&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
+                                </event-block>
+                                <event-block sid="4570018091042791">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="1564926517288061" type="System">
+                                            <param id="0" name="First value">abs(ScrollX_ - scrollx)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">SCROLLED_TO_THRESHOLD</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="8367440542994609" type="System">
+                                            <param id="0" name="First value">abs(ScrollY_ - scrolly)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">SCROLLED_TO_THRESHOLD</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3378573467695574" type="Function">
+                                            <param id="0" name="Name">&quot;FinishDialogCameraFocus&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
