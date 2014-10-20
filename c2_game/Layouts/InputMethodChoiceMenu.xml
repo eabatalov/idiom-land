@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>MainMenu</name>
-    <sid>6997113862861617</sid>
-    <event-sheet>MainMenuMain</event-sheet>
+    <name>InputMethodChoiceMenu</name>
+    <sid>6880834339653513</sid>
+    <event-sheet>InputMethodChoiceMenuMain</event-sheet>
     <size>
         <width>980</width>
         <height>500</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Background" sid="6516273952586512">
+        <layer name="Layer 0" sid="2789606939994175">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -28,7 +28,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="MenuBg" uid="281">
+                <instance type="InputMethodChoiceTouch" uid="18">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -38,11 +38,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>490</x>
-                        <y>250</y>
+                        <x>287</x>
+                        <y>285</y>
                         <z>0</z>
-                        <width>980</width>
-                        <height>500</height>
+                        <width>250</width>
+                        <height>250</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -50,7 +50,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MainMenuIdiomLandLogo" uid="311">
+                <instance type="InputMethodChoiceKbd" uid="21">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -60,33 +60,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>491</x>
-                        <y>225</y>
+                        <x>694</x>
+                        <y>282</y>
                         <z>0</z>
-                        <width>980</width>
-                        <height>339</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.501474917</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MainMenuInputMethodChoiceBtn" uid="23">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>80</x>
-                        <y>420</y>
-                        <z>0</z>
-                        <width>88</width>
-                        <height>88</height>
+                        <width>250</width>
+                        <height>250</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -94,25 +72,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="Controls" sid="3233875151096454">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>0</x>
-                <y>0</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="MainMenuGoToLevelsMenuButton" uid="360">
+                <instance type="InputMethodChoiceMenuHeader" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -122,13 +82,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>490</x>
-                        <y>420</y>
+                        <x>484.5</x>
+                        <y>72.5</y>
                         <z>0</z>
-                        <width>269</width>
-                        <height>88</height>
+                        <width>923</width>
+                        <height>105</height>
                         <depth>0</depth>
-                        <hotspotX>0.501858711</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

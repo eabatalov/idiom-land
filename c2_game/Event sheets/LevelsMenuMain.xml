@@ -15,12 +15,34 @@
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="2428199803751478" type="System" />
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="745836655437822" type="Function">
-                                    <param id="0" name="Name">&quot;ShowLevelsMenu&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9030838018592694">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="8657680811623155" type="System">
+                                            <param id="0" name="First value">QuestPersistentStorage.get(&quot;is_touch&quot;)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="745836655437822" type="Function">
+                                            <param id="0" name="Name">&quot;ShowLevelsMenu&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1432082321112129">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7198961887913709" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="9308086787948108" type="System">
+                                            <param id="0" name="Layout">InputMethodChoiceMenu</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <variable constant="0" name="ITERATING_LEVELS" sid="5875633521619151" static="1" type="number">0</variable>
                         <variable constant="1" name="LEVEL_BUTTONS_H_SPACING" sid="3524638623812518" static="0" type="number">60</variable>
@@ -77,48 +99,52 @@
                                     <param id="2" name="Second value">1</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-26" name="Move to layer" sid="4280290565671498" type="LevelsMenuLevelButton">
-                                    <param id="0" name="Layer">&quot;LevelButtons&quot;</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="7326046900867582" type="LevelsMenuLevelPreviewPic">
-                                    <param id="0" name="Layer">&quot;LevelButtons&quot;</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="4891632671460044" type="LevelsMenuLevelNameText">
-                                    <param id="0" name="Layer">&quot;LevelButtons&quot;</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="2735685512767538" type="LevelsMenuLevelIdiomsButton">
-                                    <param id="0" name="Layer">&quot;LevelButtons&quot;</param>
-                                </action>
-                                <action id="-24" name="Move to top" sid="634855211130252" type="LevelsMenuLevelButton" />
-                                <action id="-24" name="Move to top" sid="3563728343839726" type="LevelsMenuLevelPreviewPic" />
-                                <action id="-24" name="Move to top" sid="6041537985974316" type="LevelsMenuLevelNameText" />
-                                <action id="-24" name="Move to top" sid="4644789980427381" type="LevelsMenuLevelIdiomsButton" />
-                                <action id="-10" name="Set value" sid="7795385683133932" type="LevelsMenuLevelButton">
-                                    <param id="0" name="Instance variable">levelName</param>
-                                    <param id="1" name="Value">IdiomlandLevels.getCurrentLevelName</param>
-                                </action>
-                                <action id="0" name="Set text" sid="8729369955213122" type="LevelsMenuLevelNameText">
-                                    <param id="0" name="Text">IdiomlandLevels.getCurrentLevelName</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="5520575126949661" type="LevelsMenuLevelNameText">
-                                    <param id="0" name="Object">LevelsMenuLevelButton</param>
-                                    <param id="1" name="Image point (optional)">&quot;Label&quot;</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="2383182567495713" type="LevelsMenuLevelIdiomsButton">
-                                    <param id="0" name="X">LevelsMenuLevelButton.X</param>
-                                    <param id="1" name="Y">LevelsMenuLevelButton.Y + LevelsMenuLevelButton.Height / 2  + LevelsMenuLevelIdiomsButton.Height / 2 + 30</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="915615229589107" type="LevelsMenuLevelPreviewPic">
-                                    <param id="0" name="Object">LevelsMenuLevelButton</param>
-                                    <param id="1" name="Image point (optional)">&quot;LevelPreview&quot;</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="5737148216532244" type="LevelsMenuLevelPreviewPic">
-                                    <param id="0" name="Animation">IdiomlandLevels.getCurrentLevelName</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
+                                <event-block sid="824881350741901">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-26" name="Move to layer" sid="4280290565671498" type="LevelsMenuLevelButton">
+                                            <param id="0" name="Layer">&quot;LevelButtons&quot;</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="7326046900867582" type="LevelsMenuLevelPreviewPic">
+                                            <param id="0" name="Layer">&quot;LevelButtons&quot;</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="4891632671460044" type="LevelsMenuLevelNameText">
+                                            <param id="0" name="Layer">&quot;LevelButtons&quot;</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="2735685512767538" type="LevelsMenuLevelIdiomsButton">
+                                            <param id="0" name="Layer">&quot;LevelButtons&quot;</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="634855211130252" type="LevelsMenuLevelButton" />
+                                        <action id="-24" name="Move to top" sid="3563728343839726" type="LevelsMenuLevelPreviewPic" />
+                                        <action id="-24" name="Move to top" sid="6041537985974316" type="LevelsMenuLevelNameText" />
+                                        <action id="-24" name="Move to top" sid="4644789980427381" type="LevelsMenuLevelIdiomsButton" />
+                                        <action id="-10" name="Set value" sid="7795385683133932" type="LevelsMenuLevelButton">
+                                            <param id="0" name="Instance variable">levelName</param>
+                                            <param id="1" name="Value">IdiomlandLevels.getCurrentLevelName</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="8729369955213122" type="LevelsMenuLevelNameText">
+                                            <param id="0" name="Text">IdiomlandLevels.getCurrentLevelName</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="5520575126949661" type="LevelsMenuLevelNameText">
+                                            <param id="0" name="Object">LevelsMenuLevelButton</param>
+                                            <param id="1" name="Image point (optional)">&quot;Label&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="2383182567495713" type="LevelsMenuLevelIdiomsButton">
+                                            <param id="0" name="X">LevelsMenuLevelButton.X</param>
+                                            <param id="1" name="Y">LevelsMenuLevelButton.Y + LevelsMenuLevelButton.Height / 2  + LevelsMenuLevelIdiomsButton.Height / 2 + 30</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="915615229589107" type="LevelsMenuLevelPreviewPic">
+                                            <param id="0" name="Object">LevelsMenuLevelButton</param>
+                                            <param id="1" name="Image point (optional)">&quot;LevelPreview&quot;</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="5737148216532244" type="LevelsMenuLevelPreviewPic">
+                                            <param id="0" name="Animation">IdiomlandLevels.getCurrentLevelName</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="1037944625216315">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="5869424202899412" type="System">

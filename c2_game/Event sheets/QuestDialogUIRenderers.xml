@@ -168,6 +168,105 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="6630241657036719">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6304870280062896" type="Function">
+                            <param id="0" name="Name">&quot;MakeQuizzAnswersInactive&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9680256845054335" type="DialogAns1Bg">
+                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8765095884812636" type="DialogAns2Bg">
+                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="3283546999428132" type="DialogAns3Bg">
+                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="2375672977008778" type="DialogAns4Bg">
+                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>param(0): answer ix (from 0)</comment>
+                <event-block sid="7445881998435829">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7607184246821182" type="Function">
+                            <param id="0" name="Name">&quot;MakeQuizzAnswerActive&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9141794296417596">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="5524133764429149" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4625173595412182" type="DialogAns1Bg">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4145831487793828">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="80518722579872" type="System" />
+                                <condition id="1" name="Compare parameter" sid="8696795789937808" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="624817212503052" type="DialogAns2Bg">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3236248365513139">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1775073352667181" type="System" />
+                                <condition id="1" name="Compare parameter" sid="1473990121743469" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4974320346097634" type="DialogAns3Bg">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5761906365370394">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6366116265118671" type="System" />
+                                <condition id="1" name="Compare parameter" sid="7396358790380077" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1098507985100718" type="DialogAns4Bg">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <comment>param(0): quizz phrase text&#x0D;&#x0A;param(1): quizz phrase type (SPEAK | &quot;THINK&quot;)&#x0D;&#x0A;param(2): character ID (global)&#x0D;&#x0A;param(3): character name&#x0D;&#x0A;param(4): ans 1 text&#x0D;&#x0A;param(5): ans 2 text&#x0D;&#x0A;param(6): ans 3 text&#x0D;&#x0A;param(7): ans 4 text&#x0D;&#x0A;param(8): phrase size</comment>
                 <event-block sid="2315980213967111">
                     <conditions>

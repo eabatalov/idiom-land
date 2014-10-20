@@ -37,21 +37,27 @@
                             <param id="0" name="Name">&quot;ShowNavNextHelper&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="9904925078734565" type="NavHelper">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Sine" id="0" name="Set active" sid="7493394305746435" type="NavHelper">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Sine2" id="0" name="Set active" sid="6078670334747625" type="NavHelper">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="7047995377052843" type="System">
-                            <param id="0" name="Variable">IsNavNextShowScheduled</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1011826653157506">
+                            <conditions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="9904925078734565" type="NavHelper">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="7493394305746435" type="NavHelper">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Sine2" id="0" name="Set active" sid="6078670334747625" type="NavHelper">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7047995377052843" type="System">
+                                    <param id="0" name="Variable">IsNavNextShowScheduled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7695567182064191">
                     <conditions>
@@ -59,21 +65,27 @@
                             <param id="0" name="Name">&quot;HideNavNextHelper&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="6773828642055237" type="NavHelper">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action behavior="Sine" id="0" name="Set active" sid="2364655204691713" type="NavHelper">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Sine2" id="0" name="Set active" sid="5104829786476604" type="NavHelper">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="6903055872176464" type="System">
-                            <param id="0" name="Variable">IsNavNextShowScheduled</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1146280936194504">
+                            <conditions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="6773828642055237" type="NavHelper">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="2364655204691713" type="NavHelper">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Sine2" id="0" name="Set active" sid="5104829786476604" type="NavHelper">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6903055872176464" type="System">
+                                    <param id="0" name="Variable">IsNavNextShowScheduled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="9460482189743973">
                     <conditions>
@@ -81,24 +93,30 @@
                             <param id="0" name="Name">&quot;ShowQuizzHelper&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="8715028714498255" type="System">
-                            <param id="0" name="Variable">IsQuizzShowScheduled</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="4165782264564682" type="TapQuizzHelper">
-                            <param id="0" name="Layer">DialogAnsBg.LayerName</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="7776851116341494" type="TapQuizzHelper">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Sine" id="0" name="Set active" sid="2705283871893323" type="TapQuizzHelper">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Sine2" id="0" name="Set active" sid="6049474344525201" type="TapQuizzHelper">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="477351336289531">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="8715028714498255" type="System">
+                                    <param id="0" name="Variable">IsQuizzShowScheduled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="4165782264564682" type="TapQuizzHelper">
+                                    <param id="0" name="Layer">DialogAnsBg.LayerName</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="7776851116341494" type="TapQuizzHelper">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="2705283871893323" type="TapQuizzHelper">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Sine2" id="0" name="Set active" sid="6049474344525201" type="TapQuizzHelper">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="1709138439251834">
                     <conditions>
@@ -106,21 +124,27 @@
                             <param id="0" name="Name">&quot;HideQuizzHelper&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="9144500870421726" type="TapQuizzHelper">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action behavior="Sine" id="0" name="Set active" sid="8154170619567631" type="TapQuizzHelper">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Sine2" id="0" name="Set active" sid="5945153360296675" type="TapQuizzHelper">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="3284831295043991" type="System">
-                            <param id="0" name="Variable">IsQuizzShowScheduled</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1239382632829786">
+                            <conditions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="9144500870421726" type="TapQuizzHelper">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="8154170619567631" type="TapQuizzHelper">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Sine2" id="0" name="Set active" sid="5945153360296675" type="TapQuizzHelper">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3284831295043991" type="System">
+                                    <param id="0" name="Variable">IsQuizzShowScheduled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Special handling. Manual API call requires &apos;instant&apos; showing of quizz helper. Our quizz fades in so we still need to wait for ~3 seconds</comment>
                 <variable constant="0" name="PrevQuizzAutoShowAfterSecVal" sid="1952271562895553" static="1" type="number">0</variable>
@@ -153,16 +177,22 @@
                             <param id="0" name="Name">&quot;C2API_HideQuizzHelper&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="5995747872442775" type="System">
-                            <param id="0" name="Variable">QuizzHelperAutoShowAfterSec</param>
-                            <param id="1" name="Value">PrevQuizzAutoShowAfterSecVal</param>
-                        </action>
-                        <action id="0" name="Call function" sid="3704268474171743" type="Function">
-                            <param id="0" name="Name">&quot;HideQuizzHelper&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2597167027229935">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="5995747872442775" type="System">
+                                    <param id="0" name="Variable">QuizzHelperAutoShowAfterSec</param>
+                                    <param id="1" name="Value">PrevQuizzAutoShowAfterSecVal</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3704268474171743" type="Function">
+                                    <param id="0" name="Name">&quot;HideQuizzHelper&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-group description="" sid="6350577161124085" title="Platformer level helpers (scheduling)">
                     <sub-events>

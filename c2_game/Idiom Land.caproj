@@ -415,6 +415,25 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="MainMenuInputMethodChoiceBtn" sid="7777114360322314">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1020088895719541" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.147727" y="0.147727" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.852273" y="0.147727" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.852273" y="0.852273" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.147727" y="0.852273" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="LevelsMenu">
                 <object-type name="LevelsMenuLevelButton" sid="7486525092793063">
@@ -636,6 +655,32 @@
                         <type>LevelIdiomsIdiomTitleBg</type>
                         <type>LevelIdiomsIdiomMeaningText</type>
                     </container>
+                </object-type>
+            </object-folder>
+            <object-folder name="InputMethodChoiceMenu">
+                <object-type name="InputMethodChoiceTouch" sid="9579634466253522">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3036000267293591" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="InputMethodChoiceKbd" sid="7477313170101025">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8558082035380682" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="InputMethodChoiceMenuHeader" sid="7206492198394866">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3448780165017424" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
                 </object-type>
             </object-folder>
             <object-type name="MenuBg" sid="4118067610103313">
@@ -5010,6 +5055,38 @@
                                 </animation>
                             </animation-folder>
                         </object-type>
+                        <object-type name="KbdQuestNavNextHelper" sid="1857412759221819">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6161282034397378" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="KbdQuestNavBackHelper" sid="3338935248755957">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2979669831219093" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="KbdQuestQuizzHelper" sid="2116636693084039">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2266264422502494" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="KbdPlayerMoveHelper" sid="1986526834882361">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8172684125454181" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
                     </object-folder>
                     <object-type global="1" name="LastOpacityTransitionsDict" sid="8861096821455829">
                         <plugin id="Dictionary" />
@@ -5157,6 +5234,9 @@
             <layout-folder name="LevelIdioms">
                 <layout>LevelIdioms.xml</layout>
             </layout-folder>
+            <layout-folder name="InputMethodChoiceMenu">
+                <layout>InputMethodChoiceMenu.xml</layout>
+            </layout-folder>
         </layout-folder>
     </layout-folder>
     <event-folder>
@@ -5233,7 +5313,6 @@
                         <event-sheet>PlatformerLevelHelpers.xml</event-sheet>
                     </event-folder>
                     <event-sheet>PlatformerLevelCommon.xml</event-sheet>
-                    <event-sheet>PlatformerLevelInput.xml</event-sheet>
                     <event-sheet>PlatformerLevelRecording.xml</event-sheet>
                     <event-sheet>PlatformerLevelPlayback.xml</event-sheet>
                     <event-sheet>PlatformerLevelPlayerAutoAnim.xml</event-sheet>
@@ -5241,6 +5320,7 @@
                     <event-sheet>PlatformerLevelQuestDialogUITransitions.xml</event-sheet>
                     <event-sheet>PlatformerLevelQuestDialogUIFade.xml</event-sheet>
                     <event-sheet>PlatformerLevelQuestDialog.xml</event-sheet>
+                    <event-sheet>PlatformerLevelKeyboardHacks.xml</event-sheet>
                 </event-folder>
                 <event-folder name="IdiomLandLevel">
                     <event-sheet>IdiomLandLevel.xml</event-sheet>
@@ -5302,6 +5382,9 @@
             </event-folder>
             <event-folder name="LevelIdioms">
                 <event-sheet>LevelIdiomsMain.xml</event-sheet>
+            </event-folder>
+            <event-folder name="InputMethodChoiceMenu">
+                <event-sheet>InputMethodChoiceMenuMain.xml</event-sheet>
             </event-folder>
             <event-sheet>MenuCommon.xml</event-sheet>
         </event-folder>

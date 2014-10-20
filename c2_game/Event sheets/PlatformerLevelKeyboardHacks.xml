@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelKeyboardHacks</name>
+    <events>
+        <event-group description="" sid="857788555022791" title="Platformer level keyboard hacks">
+            <sub-events>
+                <variable constant="0" name="IsKeyboardHackActive" sid="9368902701736042" static="1" type="number">0</variable>
+                <variable constant="0" name="IsDialogModeActive" sid="6799701820293859" static="1" type="number">0</variable>
+                <event-block sid="5172640110417845">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5520235693501905" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5254804460532784" type="System">
+                            <param id="0" name="Variable">IsKeyboardHackActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1081790909427201" type="System">
+                            <param id="0" name="Variable">IsDialogModeActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="801764243601828">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9628043577094288" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="668329772265958">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3906753906598158" type="System">
+                                    <param id="0" name="First value">QuestPersistentStorage.get(&quot;is_touch&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;false&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5159283974052661" type="System">
+                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="9281305905988812">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="1153800824059547" type="QuestNavBackBtn" />
+                                        <action id="-9" name="Destroy" sid="57267367433043" type="QuestNavlClutch" />
+                                        <action id="-9" name="Destroy" sid="2391204523207153" type="QuestNavNextBtn" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5069954074620474">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="4032895719259259" type="ControlLeft" />
+                                        <action id="-9" name="Destroy" sid="2101905894547631" type="ControlRight" />
+                                        <action id="-9" name="Destroy" sid="3735513704861357" type="ControlUp" />
+                                        <action id="-9" name="Destroy" sid="4543298188082377" type="Clutch" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4759807275845124">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="4731427529288637" type="JumpHelper" />
+                                        <action id="-9" name="Destroy" sid="1659052459006455" type="NavHelper" />
+                                        <action id="-9" name="Destroy" sid="734375700765692" type="WalkHelper" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="209817636828249">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1004571584001369" type="Function">
+                            <param id="0" name="Name">&quot;HideStageUI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1844814628564092">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4518947768818738" type="System">
+                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="3875770075132514" type="KbdQuestNavNextHelper">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="3069853330854017" type="KbdQuestNavBackHelper">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="8035284685165549" type="KbdQuestQuizzHelper">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="21561600243489">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1568156292092289" type="Function">
+                            <param id="0" name="Name">&quot;onShowQuizzFinished&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9370909037353605">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7238910227304466" type="System">
+                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3404634840685084" type="Function">
+                                    <param id="0" name="Name">&quot;ProcQuizzAnsKbdSwitch&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="5604228376368338" type="KbdQuestQuizzHelper">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7176897867016813">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1095044702929055" type="Function">
+                            <param id="0" name="Name">&quot;onQuestNavNextBtnShow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4808927273876014">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6914754475717713" type="System">
+                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="1902631028405201" type="KbdQuestNavNextHelper">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4503242432309419">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5139988586668967" type="Function">
+                            <param id="0" name="Name">&quot;onQuestNavBackBtnShow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2609249937021553">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1311557454469504" type="System">
+                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="7891867651021789" type="KbdQuestNavBackHelper">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5408321264480387">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3296705633023524" type="Function">
+                            <param id="0" name="Name">&quot;EnablePlayerAvatarControls&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2522035663426507">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2730075968920507" type="System">
+                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="3422218522493404" type="KbdPlayerMoveHelper">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7629298529503576">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4361691746519173" type="Function">
+                            <param id="0" name="Name">&quot;DisablePlayerAvatarControls&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7669139595926804">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6299531570061613" type="System">
+                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="2134248592355581" type="KbdPlayerMoveHelper">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2869618282486309">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8272377294459675" type="Function">
+                            <param id="0" name="Name">&quot;onDialogModeEnter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8587724575720457">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="4921606669758303" type="System">
+                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5836258672037741">
+                    <conditions>
+                        <condition id="0" name="On function" sid="136373413705642" type="Function">
+                            <param id="0" name="Name">&quot;onDialogModeExit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6762957664428062">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="1561094151800313" type="System">
+                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="5802239557081996" title="Platformer level keyboard hack (kbd event handlers)">
+                    <sub-events>
+                        <event-group description="" sid="3251278136344743" title="Platformer level keyboard hack (dialog controls)">
+                            <sub-events>
+                                <event-block any="1" sid="2215877110364409">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="3849911906290882" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="2763301681234233">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="1727816535786967" type="System">
+                                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="4157044363634925" type="System">
+                                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="2839087303708225" type="Function">
+                                                    <param id="0" name="Name">&quot;ProcQuizzAnsKbdSwitch&quot;</param>
+                                                    <param id="1" name="Parameter {n}">-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="195609335183453">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="2231175407699272" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="1271613525091511">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="5200991823461008" type="System">
+                                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="7878369162913329" type="System">
+                                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="6157842005076365" type="Function">
+                                                    <param id="0" name="Name">&quot;ProcQuizzAnsKbdSwitch&quot;</param>
+                                                    <param id="1" name="Parameter {n}">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="5905080073715336">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="6530082152337644" type="Keyboard">
+                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="8726230972388441" type="System">
+                                            <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="5471769466557325" type="System">
+                                            <param id="0" name="Variable">IsDialogModeActive</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9625314631957668" type="Function">
+                                            <param id="0" name="Name">&quot;DialogInputNext&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4508507311223005">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="4387768842849398" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="2625651221128472" type="System">
+                                            <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="6998073561631538" type="System">
+                                            <param id="0" name="Variable">IsDialogModeActive</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="5935714017460358" type="Function">
+                                            <param id="0" name="Name">&quot;DialogInputBack&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="971868252107684">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="2371908183371724" type="Keyboard">
+                                            <param id="0" name="Key">13 (Return)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="4378034656371403">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="7121690884782821" type="System">
+                                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="8494635786236116" type="System">
+                                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-9" name="Is visible" sid="1888606161204156" type="DialogAnsBg" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="591073518959278" type="Function">
+                                                    <param id="0" name="Name">&quot;ProcQuizzAnswerChoice&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="9053339303623593" title="Platformer level keyboard hack (kbd player movement)">
+                            <sub-events>
+                                <event-block sid="8580685331885787">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="5869913657560003" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="1885328516370174">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="8496623368911651" type="System">
+                                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="5689522469176385" type="System">
+                                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="4065365147707009" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerInputLeft&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="177069251329137">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="6720651882631942" type="Keyboard">
+                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7845052008748859">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="5719532371084297" type="System">
+                                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="2856155065763342" type="System">
+                                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="3317197477866092" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerInputRight&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="190011293078744">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="9608128454212672" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="5794469376155944">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="9346280646171814" type="System">
+                                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="2847409436930212" type="System">
+                                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="5916200559621788" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerInputUp&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="8104380707441048" title="Platformer level keyboard hack (quizz answer choice)">
+                    <sub-events>
+                        <event-block sid="6306722204307826">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6244788017342739" type="Function">
+                                    <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4725940292793932" type="System">
+                                    <param id="0" name="Variable">ChosenQuizzAnswer</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>param(0): kbd switch delta/answer&#x0D;&#x0A;param(1): &quot;DELTA&quot;/&quot;ANSWER</comment>
+                        <variable constant="0" name="ChosenQuizzAnswer" sid="5523549226844084" static="1" type="number">0</variable>
+                        <event-block sid="5280004116694535">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7549486796821922" type="Function">
+                                    <param id="0" name="Name">&quot;ProcQuizzAnsKbdSwitch&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="QuizzAnsCnt" sid="6246893547061258" static="0" type="number">0</variable>
+                                <event-block sid="6212999063009647">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="3969258326431054" type="DialogAns1Bg" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="7159981723506025" type="System">
+                                            <param id="0" name="Variable">QuizzAnsCnt</param>
+                                            <param id="1" name="Value">QuizzAnsCnt+1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4186128099341245">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="330905963183048" type="DialogAns2Bg" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6218071327059607" type="System">
+                                            <param id="0" name="Variable">QuizzAnsCnt</param>
+                                            <param id="1" name="Value">QuizzAnsCnt+1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3087154489642137">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="8367113763563028" type="DialogAns3Bg" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="2798332933138123" type="System">
+                                            <param id="0" name="Variable">QuizzAnsCnt</param>
+                                            <param id="1" name="Value">QuizzAnsCnt+1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4229193915555343">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="383843503939799" type="DialogAns4Bg" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="8638253057203429" type="System">
+                                            <param id="0" name="Variable">QuizzAnsCnt</param>
+                                            <param id="1" name="Value">QuizzAnsCnt+1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3392973697602253">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9090203818755933" type="System">
+                                            <param id="0" name="Variable">QuizzAnsCnt</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="135221886780412">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="6669041705910722" type="System">
+                                                    <param id="0" name="Variable">ChosenQuizzAnswer</param>
+                                                    <param id="1" name="Value">ChosenQuizzAnswer + Function.Param(0)</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="2323350146880213" type="System">
+                                                    <param id="0" name="Variable">ChosenQuizzAnswer</param>
+                                                    <param id="1" name="Value">ChosenQuizzAnswer &lt; 0 ? QuizzAnsCnt - 1 : ChosenQuizzAnswer</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="2288263161666391" type="System">
+                                                    <param id="0" name="Variable">ChosenQuizzAnswer</param>
+                                                    <param id="1" name="Value">ChosenQuizzAnswer % QuizzAnsCnt</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="6869585733386195" type="Function">
+                                                    <param id="0" name="Name">&quot;MakeQuizzAnswersInactive&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="304899629277237" type="Function">
+                                                    <param id="0" name="Name">&quot;MakeQuizzAnswerActive&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ChosenQuizzAnswer</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3755411246293056">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4502857357015217" type="Function">
+                                    <param id="0" name="Name">&quot;ProcQuizzAnswerChoice&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5860494046625101">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="4487887338616571" type="Function">
+                                            <param id="0" name="Name">&quot;DailogInputQuizzAnswerX&quot;</param>
+                                            <param id="1" name="Parameter {n}">ChosenQuizzAnswer</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="4723546210605535" type="Function">
+                                            <param id="0" name="Name">&quot;MakeQuizzAnswersInactive&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="8723100392394564" type="System">
+                                            <param id="0" name="Variable">ChosenQuizzAnswer</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
