@@ -16,13 +16,18 @@ QuestGame.bootstrap({
         params : []
     },
 
-    levelLoader : { 
-        className : 'IdiomLandLevelLoader',
-        params : ["new AjaxQuestScriptLoader('')"]
-    },
-
     levelReplayLoader : {
         className : 'WebDOMLocalFSLevelReplayLoader',
         params : []
+    },
+
+    levelLoader : { 
+        className : 'IdiomLandLevelLoader',
+        params : ["new QuestScriptLoader(new AjaxTextFileLoader(''))"]
+    },
+
+    textFileLoader : {
+        className : 'AjaxTextFileLoader',
+        params : ['']
     }
 });
