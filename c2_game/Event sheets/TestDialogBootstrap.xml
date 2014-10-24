@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TestDialogBootstrap</name>
+    <events>
+        <event-group description="" sid="266181871813571" title="Test dialog bootstrap">
+            <sub-events>
+                <event-block sid="6583552400081521">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="4695992158240538" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6714026078303932" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="3648646126847416" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="8184118811573223" type="Function">
+                            <param id="0" name="Name">&quot;onLevelStarted&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5574231572762635">
+                    <conditions>
+                        <condition id="-3" name="On end of layout" sid="7428214885189501" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9060929413625629" type="Function">
+                            <param id="0" name="Name">&quot;onVarsReset&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -7,6 +7,7 @@ To make plugins avaliable in Construct2:
 9. mklink /D level_idiom_progress_tracker IDIOM_LAND_REPO\c2_game\Plugins\level_idiom_progress_tracker
 10. mklink /D platformer_level_playback IDIOM_LAND_REPO\c2_game\Plugins\platformer_level_playback
 11. mklink /D platformer_level_recording IDIOM_LAND_REPO\c2_game\Plugins\platformer_level_recording
+12. mklink /D test_dialog_level_runtime IDIOM_LAND_REPO\c2_game\Plugins\test_dialog_level_runtime
 
 
 Assembly project:

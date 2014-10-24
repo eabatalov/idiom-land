@@ -30,6 +30,7 @@
         <plugin author="Eugene/Learzing" id="QuestPersistentStoragePlugin" version="0.100000001">Quest persistent storage</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
+        <plugin author="Eugene/Learzing" id="TestDialogLevelRuntimePlugin" version="0.100000001">Test dialog level runtime</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
@@ -5112,6 +5113,30 @@
                 </object-folder>
             </object-folder>
         </object-folder>
+        <object-folder name="TestDialog">
+            <object-type name="TestDialogLevelRuntime" sid="9524380120170963">
+                <plugin id="TestDialogLevelRuntimePlugin" />
+            </object-type>
+            <object-type name="TestDialogQuestionText" sid="9414488223775853">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TestDialogAnswerTrueBtn" sid="3745021267252645">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7290434035571739" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TestDialogAnswerFalseBtn" sid="5428804427657712">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6671971305451765" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Sprite" sid="9331083043378328">
             <plugin id="Sprite" />
             <animation-folder>
@@ -5271,6 +5296,9 @@
                 <layout>InputMethodChoiceMenu.xml</layout>
             </layout-folder>
         </layout-folder>
+        <layout-folder name="TestDialog">
+            <layout>TestDialogMain.xml</layout>
+        </layout-folder>
     </layout-folder>
     <event-folder>
         <event-folder name="Levels">
@@ -5406,6 +5434,11 @@
             </event-folder>
             <event-sheet>MenuCommon.xml</event-sheet>
         </event-folder>
+        <event-folder name="TestDialog">
+            <event-sheet>TestDialogBootstrap.xml</event-sheet>
+            <event-sheet>TestDialogCommon.xml</event-sheet>
+            <event-sheet>TestDialogLayoutMain.xml</event-sheet>
+        </event-folder>
         <event-sheet>Debug.xml</event-sheet>
     </event-folder>
     <global-instances>
@@ -5430,6 +5463,7 @@
         <global-instance type="PlatformerLevelPlayback" uid="265" />
         <global-instance type="PlatformerLevelRecording" uid="266" />
         <global-instance type="IdiomlandLevelRecording" uid="267" />
+        <global-instance type="TestDialogLevelRuntime" uid="39" />
     </global-instances>
     <sounds-folder />
     <music-folder />
@@ -5459,6 +5493,7 @@
                     </file-folder>
                 </file-folder>
                 <file name="1demo_script.json" />
+                <file name="1demo_test_dialog.json" />
             </file-folder>
             <file-folder name="Common">
                 <file-folder name="VisualObjects">
@@ -5469,9 +5504,6 @@
                         </file-folder>
                     </file-folder>
                 </file-folder>
-            </file-folder>
-            <file-folder name="2demo_jump">
-                <file name="2demo_jump_script.json" />
             </file-folder>
         </file-folder>
     </files-folder>

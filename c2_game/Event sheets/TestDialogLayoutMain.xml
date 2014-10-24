@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TestDialogLayoutMain</name>
+    <events>
+        <include>TestDialogCommon</include>
+        <event-group description="" sid="823402825228904" title="Test dialog layout main">
+            <sub-events>
+                <event-block sid="7594948566060325">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7209007812321857" type="Function">
+                            <param id="0" name="Name">&quot;onVarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="6893328271089425">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3786943457376712" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Run test dialog" sid="8885087498331405" type="TestDialogLevelRuntime">
+                            <param id="0" name="Dialog name">&quot;1demo&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3778300349835467">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2642819893811308" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="2530814634315889">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6234335476865917" type="Function">
+                            <param id="0" name="Name">&quot;onLevelStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-group description="" sid="8068431485007334" title="Test dialog run">
+                    <sub-events>
+                        <event-block sid="8449176597906831">
+                            <conditions>
+                                <condition id="0" name="Question is avaliable" sid="7690085275328368" type="TestDialogLevelRuntime" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="3760382372610228" type="TestDialogQuestionText">
+                                    <param id="0" name="Text">TestDialogLevelRuntime.getQuestionText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5354358092121544">
+                            <conditions>
+                                <condition id="1" name="Dialog is finished" sid="40786561702656" type="TestDialogLevelRuntime" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="2715749813805349" type="TestDialogQuestionText">
+                                    <param id="0" name="Text">&quot;Dialog is finished! Result: &quot; &amp; TestDialogLevelRuntime.getIsDialogSuccessful</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="340041905235857">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="945882177157676" type="Touch">
+                                    <param id="0" name="Object">TestDialogAnswerTrueBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Answer current question" sid="5935389685729279" type="TestDialogLevelRuntime">
+                                    <param id="0" name="Answer &apos;TRUE&apos; | &apos;FALSE&apos;">&quot;TRUE&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7007996442676378">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="421415982343413" type="Touch">
+                                    <param id="0" name="Object">TestDialogAnswerFalseBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Answer current question" sid="5399144194651872" type="TestDialogLevelRuntime">
+                                    <param id="0" name="Answer &apos;TRUE&apos; | &apos;FALSE&apos;">&quot;FALSE&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
