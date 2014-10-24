@@ -17,9 +17,6 @@
         <plugin author="Eugene/Learzing" id="IdiomlandGamePlugin" version="0.100000001">Idiomland game</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandLevelRecordingPlugin" version="0.100000001">Idiomland level recording</plugin>
         <plugin author="Eugene/Learzing" id="IdiomlandLevelsPlugin" version="0.100000001">Idiomland levels</plugin>
-        <plugin author="Eugene/Idiomland" id="JumpLevelLogicPlugin" version="0.100000001">JumpLevelLogic</plugin>
-        <plugin author="Eugene/Learzing" id="JumpLevelPlaybackPlugin" version="0.100000001">Jump level playback</plugin>
-        <plugin author="Eugene/Learzing" id="JumpLevelRecordingPlugin" version="0.100000001">Jump level recording</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Eugene/Idiomland" id="LevelIdiomProgressTrackingPlugin" version="0.100000001">LevelIdiomProgressTracker</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -4952,58 +4949,6 @@
                         <plugin id="Dictionary" />
                     </object-type>
                 </object-folder>
-                <object-folder name="JumpLevel">
-                    <object-type name="CurrentIdiomToGuessTitleTxt" sid="360214855235879">
-                        <plugin id="Text" />
-                    </object-type>
-                    <object-type name="CurrentCollectedTokenChainTxt" sid="5313372069462686">
-                        <plugin id="Text" />
-                    </object-type>
-                    <object-type name="JumpLevelTokenTxt" sid="851946349344739">
-                        <plugin id="Text" />
-                        <container>
-                            <type>JumpLevelTokenTxt</type>
-                            <type>JumpLevelTokenBg</type>
-                        </container>
-                    </object-type>
-                    <object-type name="JumpLevelTokenBg" sid="7708927266531742">
-                        <plugin id="Sprite" />
-                        <container>
-                            <type>JumpLevelTokenTxt</type>
-                            <type>JumpLevelTokenBg</type>
-                        </container>
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7187093087086816" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            </animation>
-                        </animation-folder>
-                    </object-type>
-                    <object-type name="JumpCreateTokenPlatformRequests" sid="2220743634826471">
-                        <plugin id="Arr" />
-                    </object-type>
-                    <object-type name="PlatformInfiniteJump" sid="2490736076967191">
-                        <plugin id="Sprite" />
-                        <behaviors>
-                            <behavior-type name="Jumpthru" sid="7753157171873651">
-                                <behavior id="jumpthru" />
-                            </behavior-type>
-                        </behaviors>
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9602399118211915" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            </animation>
-                        </animation-folder>
-                    </object-type>
-                    <object-type name="JumpLevelLogic" sid="7437827936985691">
-                        <plugin id="JumpLevelLogicPlugin" />
-                    </object-type>
-                    <object-type name="JumpLevelPlayback" sid="819652268829102">
-                        <plugin id="JumpLevelPlaybackPlugin" />
-                    </object-type>
-                    <object-type name="JumpLevelRecording" sid="9956620667216801">
-                        <plugin id="JumpLevelRecordingPlugin" />
-                    </object-type>
-                </object-folder>
                 <object-folder name="QuestLevel">
                     <object-type name="PlatformerLevelPlayback" sid="9019038290632868">
                         <plugin id="PlatformerLevelPlaybackPlugin" />
@@ -5166,7 +5111,6 @@
                     </object-type>
                 </object-folder>
             </object-folder>
-            <object-folder name="2demo_jump" />
         </object-folder>
         <object-type name="Sprite" sid="9331083043378328">
             <plugin id="Sprite" />
@@ -5307,9 +5251,6 @@
             <layout-folder name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
-            <layout-folder name="2demo_jump">
-                <layout>2demo_jump.xml</layout>
-            </layout-folder>
         </layout-folder>
         <layout-folder name="Menus">
             <layout-folder name="LevelResults">
@@ -5385,18 +5326,6 @@
                         </event-folder>
                     </event-folder>
                 </event-folder>
-                <event-folder name="JumpLevel">
-                    <event-folder name="GameHelp">
-                        <event-sheet>LevelJumpGameHelp.xml</event-sheet>
-                    </event-folder>
-                    <event-sheet>LevelJumpCommon.xml</event-sheet>
-                    <event-sheet>LevelJumpCameraAndPlatforms.xml</event-sheet>
-                    <event-sheet>LevelJumpPlayerAutoMovement.xml</event-sheet>
-                    <event-sheet>LevelJumpIdioms.xml</event-sheet>
-                    <event-sheet>LevelJumpCompletion.xml</event-sheet>
-                    <event-sheet>LevelJumpPlayback.xml</event-sheet>
-                    <event-sheet>LevelJumpRecording.xml</event-sheet>
-                </event-folder>
                 <event-folder name="PlatformerLevel">
                     <event-folder name="Controls">
                         <event-sheet>PlatformerLevelGameHelp.xml</event-sheet>
@@ -5455,9 +5384,6 @@
                 <event-sheet>1demoNpcAnimationRunners.xml</event-sheet>
                 <event-sheet>1demoNpcScmlSpritesBindings.xml</event-sheet>
             </event-folder>
-            <event-folder name="2demo_jump">
-                <event-sheet>2demo_jump.xml</event-sheet>
-            </event-folder>
         </event-folder>
         <event-folder name="Menus">
             <event-folder name="LevelResults">
@@ -5499,11 +5425,8 @@
         <global-instance type="QuestPersistentStorage" uid="309" />
         <global-instance type="IdiomlandGame" uid="310" />
         <global-instance type="IdiomlandLevels" uid="315" />
-        <global-instance type="JumpLevelLogic" uid="321" />
         <global-instance type="QuestLevelRecording" uid="345" />
         <global-instance type="QuestLevelPlayback" uid="346" />
-        <global-instance type="JumpLevelRecording" uid="353" />
-        <global-instance type="JumpLevelPlayback" uid="354" />
         <global-instance type="PlatformerLevelPlayback" uid="265" />
         <global-instance type="PlatformerLevelRecording" uid="266" />
         <global-instance type="IdiomlandLevelRecording" uid="267" />
