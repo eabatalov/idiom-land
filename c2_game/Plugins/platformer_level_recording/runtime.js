@@ -129,6 +129,12 @@ cr.plugins_.PlatformerLevelRecordingPlugin = function(runtime)
         this.levelGameplayRecorder.addRecord(new PlatformerCoinCollectedRecord(coinUID));
     };
 
+    Acts.prototype.recIdiomGuess = function(isGuessed) {
+        this.levelGameplayRecorder.addRecord(
+            new PlatformerIdiomGuessRecord(isGuessed === 1 ? true : false)
+        );
+    };
+
     Acts.prototype.stopRecording = function() {
         this.levelGameplayRecorder.stopRecording();
     };

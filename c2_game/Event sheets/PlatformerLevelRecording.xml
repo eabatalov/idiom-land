@@ -75,6 +75,30 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="4232556333611257">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2875556888580748" type="Function">
+                                    <param id="0" name="Name">&quot;onIdiomGuessed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Record idiom guess event" sid="1141819286702411" type="PlatformerLevelRecording">
+                                    <param id="0" name="Is guessed">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1131209552943889">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6120389191020748" type="Function">
+                                    <param id="0" name="Name">&quot;onIdiomFailed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Record idiom guess event" sid="6870774774795378" type="PlatformerLevelRecording">
+                                    <param id="0" name="Is guessed">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>

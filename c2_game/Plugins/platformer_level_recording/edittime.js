@@ -33,6 +33,10 @@ AddNumberParam("Coin UID", "UID of collected coin");
 AddAction(0, af_none, "Record coin collected event", "General", "Record coin collected event with coin UID {0}",
     "Record coin collected event", "recCoinCollected");
 
+AddNumberParam("Is guessed", "1: guessed, 0: not");
+AddAction(1, af_none, "Record idiom guess event", "General", "Record idiom guess {0} event",
+    "Record idiom guess event", "recIdiomGuess");
+
 AddAction(100, af_none, "Stop level gameplay recording", "General",
     "Stop level gameplay recording", "Stop level gameplay recording", "stopRecording");
 

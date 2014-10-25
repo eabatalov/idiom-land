@@ -5,6 +5,7 @@
     <events>
         <include>PlatformerLevelSecretsProgress</include>
         <include>LevelResultsCommon</include>
+        <include>LevelRecording</include>
         <event-group description="" sid="8501800471470332" title="Level results brief group">
             <sub-events>
                 <variable constant="1" name="SUCCESS_COLOR_R" sid="8384096303547795" static="0" type="number">71</variable>
@@ -22,6 +23,10 @@
                     <actions>
                         <action id="0" name="Finalize level idioms progress" sid="9066542529292426" type="LevelIdiomProgressTracker" />
                         <action id="0" name="Save game" sid="7849873616605395" type="QuestGame" />
+                        <action id="0" name="Call function" sid="9317954635243064" type="Function">
+                            <param id="0" name="Name">&quot;LevelFinished&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="0" name="Set text" sid="9679877642509217" type="LevelResultsIdiomsFoundText">
                             <param id="0" name="Text">LevelIdiomProgressTracker.getLevelFoundIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
                         </action>
