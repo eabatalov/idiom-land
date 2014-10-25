@@ -17,10 +17,6 @@ TestDialogRuntimeController.prototype.getCurrentQuestionSituationName = function
     return this._runtime.getCurrentQuestionSituation().getName();
 };
 
-TestDialogRuntimeController.prototype.isTestSucceeded = function() {
-    return this._runtime.isTestSucceeded();
-};
-
 TestDialogRuntimeController.prototype.answerCurrentQuestion = function(answer) {
     var boolAnswer = false;
     switch (answer) {

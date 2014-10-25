@@ -158,10 +158,6 @@ cr.plugins_.TestDialogLevelRuntimePlugin = function(runtime)
 	// Expressions
 	function Exps() {};
 
-    Exps.prototype.getIsDialogSuccessful = function(ret) {
-        ret.set_int(this.controller.isTestSucceeded() ? 1 : 0);
-    };
-
     Exps.prototype.getQuestionText = function(ret) {
         ret.set_string(this.controller.getCurrentQuestionText());
     };

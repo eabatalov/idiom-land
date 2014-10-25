@@ -41,9 +41,6 @@ AddStringParam("Answer 'TRUE' | 'FALSE'", "Answer", "");
 AddAction(1, af_none, "Answer current question", "General", "Answer current question {0}",
     "Answer current question", "answerQuestion");
 
-AddExpression(0, ef_return_number, "Is dialog successful", "Is dialog successful",
-    "getIsDialogSuccessful", "Is dialog successful");
-
 AddExpression(1, ef_return_string, "Get question text", "Get question text",
     "getQuestionText", "Get question text");
 
