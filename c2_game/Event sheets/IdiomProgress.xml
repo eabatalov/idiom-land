@@ -5,13 +5,17 @@
     <events>
         <event-group description="" sid="9203833697821463" title="Idiom Counter">
             <sub-events>
-                <event-block sid="6013936950830742">
+                <variable constant="0" name="GuessedIdiomsCount" sid="5659419132445212" static="1" type="number">0</variable>
+                <event-block sid="2197912717260677">
                     <conditions>
-                        <condition id="1" name="Guessed idioms changed" sid="1217418775746662" type="LevelIdiomProgressTracker" />
+                        <condition id="0" name="On function" sid="4173280160141289" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="2671474838349759" type="IdiomCounterTxt">
-                            <param id="0" name="Text">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                        <action id="-9" name="Set value" sid="1053444991880535" type="System">
+                            <param id="0" name="Variable">GuessedIdiomsCount</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -27,8 +31,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="7211929255626602" type="IdiomCounterTxt">
-                            <param id="0" name="Text">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                        <action id="0" name="Call function" sid="6884939111987794" type="Function">
+                            <param id="0" name="Name">&quot;UpdateIdiomsCounter&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="5376953944407645" type="Function">
                             <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
@@ -63,6 +68,43 @@
                         </action>
                         <action id="-15" name="Set visible" sid="1096415619501791" type="IdiomCounterTxt">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6433860679706399">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4042507624396536" type="Function">
+                            <param id="0" name="Name">&quot;UpdateIdiomsCounter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="4644203494522885" type="IdiomCounterTxt">
+                            <param id="0" name="Text">GuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4043956287950993">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9664270487461828" type="Function">
+                            <param id="0" name="Name">&quot;C2API_IdiomFailed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="3066804883433329">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1995565934221503" type="Function">
+                            <param id="0" name="Name">&quot;C2API_IdiomGuessed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7348250536286208" type="System">
+                            <param id="0" name="Variable">GuessedIdiomsCount</param>
+                            <param id="1" name="Value">GuessedIdiomsCount + 1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4359773588064432" type="Function">
+                            <param id="0" name="Name">&quot;UpdateIdiomsCounter&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
