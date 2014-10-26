@@ -108,19 +108,35 @@
                                             <param id="0" name="Name">&quot;HideNotification&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
+                                        <action id="0" name="Call function" sid="1656333316552641" type="Function">
+                                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Always hide quest controls in order to maintain the &quot;hide all stage controls on demand contract&quot;</comment>
-                        <event-block sid="5208617626276568">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="3726353163656042" type="Function">
-                                    <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
+                        <event-block sid="6175973717754895">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9118207578240426" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Always hide quest controls in order to maintain the &quot;hide all stage controls on demand contract&quot;</comment>
+                                <event-block sid="5208617626276568">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3726353163656042" type="Function">
+                                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="3576827160189812" type="Function">
+                                            <param id="0" name="Name">&quot;onDialogHidden&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

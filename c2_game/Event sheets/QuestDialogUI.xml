@@ -253,6 +253,94 @@
                                             <param id="1" name="Parameter {n}">&quot;onShowXXXFinished&quot;</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <comment>Transition finish notifiers</comment>
+                                        <event-block sid="7674850633220844">
+                                            <conditions />
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="2277519569666159">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="4321297377878843" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NOTIFICATION&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="7781754068792083" type="Function">
+                                                            <param id="0" name="Name">&quot;onRunNotificationFinished&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="7580560173097775">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="2358964071286735" type="System" />
+                                                        <condition id="-14" name="Compare variable" sid="8217451801909921" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;PLAYERP&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="9382240566569858" type="Function">
+                                                            <param id="0" name="Name">&quot;onRunPlayerPhraseFinished&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="3233268009440074">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="9763566603681778" type="System" />
+                                                        <condition id="-14" name="Compare variable" sid="7826408050565983" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;PLAYERQ&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="7623482145900176" type="Function">
+                                                            <param id="0" name="Name">&quot;onRunPlayerQuizzFinished&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="2839260611316442">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="7287719961025767" type="System" />
+                                                        <condition id="-14" name="Compare variable" sid="2777609450855363" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NPCP&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="9759037426599223" type="Function">
+                                                            <param id="0" name="Name">&quot;onRunNPCPhraseFinished&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="2506923477105921">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="8492361010045994" type="System" />
+                                                        <condition id="-14" name="Compare variable" sid="9920250364815767" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NPCQ&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="4398311724542509" type="Function">
+                                                            <param id="0" name="Name">&quot;onRunNPCQuizzFinished&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
