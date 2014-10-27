@@ -19,6 +19,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>For callers: quest controls should be shown before UI transitions take place because quest controls are blinking and taking player&apos;s attention.&#x0D;&#x0A;We need player to look only at dialog UI transitions (not buttons blinking)</comment>
                 <event-block sid="6829042214390396">
                     <conditions>
                         <condition id="0" name="On function" sid="7991541446327445" type="Function">

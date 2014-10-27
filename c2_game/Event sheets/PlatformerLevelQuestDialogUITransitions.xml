@@ -37,6 +37,10 @@
                                     <param id="0" name="Variable">PhraseTransitionState</param>
                                     <param id="1" name="Value">&quot;WAIT_FOCUS&quot;</param>
                                 </action>
+                                <action id="0" name="Call function" sid="8659819778040629" type="Function">
+                                    <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="0" name="Call function" sid="8057820423849814" type="Function">
                                     <param id="0" name="Name">&quot;FocusPhrase&quot;</param>
                                     <param id="1" name="Parameter {n}">0</param>
@@ -206,6 +210,10 @@
                                 <action id="-9" name="Set value" sid="5893841977109743" type="System">
                                     <param id="0" name="Variable">QuizzTransitionState</param>
                                     <param id="1" name="Value">&quot;WAIT_SPEECH_FADEIN&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2826177849630677" type="Function">
+                                    <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="0" name="Call function" sid="1138832381908552" type="Function">
                                     <param id="0" name="Name">&quot;SpeechSetOpacity&quot;</param>
@@ -386,6 +394,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="4480435778264531" type="Function">
+                                    <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="2188008165760921" type="NotificationBg">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
