@@ -5,8 +5,10 @@
     <events>
         <event-group description="" sid="997480748034186" title="Platformer level dialog UI fade">
             <sub-events>
-                <variable constant="1" name="SPEECH_OPACITY_CHANGE_STEP_UP" sid="4825987306615553" static="0" type="number">15</variable>
-                <variable constant="1" name="SPEECH_OPACITY_CHANGE_STEP_DOWN" sid="8150897963886032" static="0" type="number">15</variable>
+                <variable constant="0" name="CurrentSpeechOpacityChangeStepUp" sid="4825987306615553" static="1" type="number">15</variable>
+                <variable constant="0" name="CurrentSpeechOpacityChangeStepDown" sid="8150897963886032" static="1" type="number">15</variable>
+                <variable constant="1" name="DEFAULT_SPEECH_OPACITY_CHANGE_STEP_UP" sid="896969382962582" static="0" type="number">15</variable>
+                <variable constant="1" name="DEFAULT_SPEECH_OPACITY_CHANGE_STEP_DOWN" sid="2707869267321103" static="0" type="number">15</variable>
                 <variable constant="1" name="MINIMAL_TIME_BETWEEN_FADES_SEC" sid="8354941427507652" static="0" type="number">0.5</variable>
                 <variable constant="1" name="OPACITY_CHANGED_THRESHOLD" sid="5547579215716478" static="0" type="number">2</variable>
                 <event-block sid="9928466582649426">
@@ -29,24 +31,30 @@
                             <param id="0" name="Name">&quot;VarsReset&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="4093183489107359" type="System">
-                            <param id="0" name="Variable">SpeechTargetOpacity</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="4145732158097151" type="System">
-                            <param id="0" name="Variable">QuizzTargetOpacity</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="5611048734238585" type="System">
-                            <param id="0" name="Variable">SpeechOpacityTargetReachPending</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="5320265892292315" type="System">
-                            <param id="0" name="Variable">QuizzOpacityTargetReachPending</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="779069809254635">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="4093183489107359" type="System">
+                                    <param id="0" name="Variable">SpeechTargetOpacity</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4145732158097151" type="System">
+                                    <param id="0" name="Variable">QuizzTargetOpacity</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5611048734238585" type="System">
+                                    <param id="0" name="Variable">SpeechOpacityTargetReachPending</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5320265892292315" type="System">
+                                    <param id="0" name="Variable">QuizzOpacityTargetReachPending</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-group description="" sid="9770904231275377" title="Platformer level dialog UI fade (interface)">
                     <sub-events>
@@ -202,6 +210,30 @@
                                         <action disabled="1" id="14" name="Log" sid="9260309134703338" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">CurrentOpacity</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): multiplier</comment>
+                        <event-block sid="7040245558687982">
+                            <conditions>
+                                <condition id="0" name="On function" sid="1574570063732174" type="Function">
+                                    <param id="0" name="Name">&quot;SetUITransitionsSpeedMultyplier&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6870266959551723">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="1190095204915956" type="System">
+                                            <param id="0" name="Variable">CurrentSpeechOpacityChangeStepUp</param>
+                                            <param id="1" name="Value">DEFAULT_SPEECH_OPACITY_CHANGE_STEP_UP * Function.Param(0)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="6862586997243027" type="System">
+                                            <param id="0" name="Variable">CurrentSpeechOpacityChangeStepDown</param>
+                                            <param id="1" name="Value">DEFAULT_SPEECH_OPACITY_CHANGE_STEP_DOWN * Function.Param(0)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -473,7 +505,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="3948556633646237" type="Function">
                                                     <param id="0" name="Name">&quot;SpeechSetOpacity&quot;</param>
-                                                    <param id="1" name="Parameter {n}">DialogSpeechBg.Opacity +  ( SpeechTargetOpacity &gt; DialogSpeechBg.Opacity ? SPEECH_OPACITY_CHANGE_STEP_UP : -SPEECH_OPACITY_CHANGE_STEP_DOWN)</param>
+                                                    <param id="1" name="Parameter {n}">DialogSpeechBg.Opacity +  ( SpeechTargetOpacity &gt; DialogSpeechBg.Opacity ? CurrentSpeechOpacityChangeStepUp : -CurrentSpeechOpacityChangeStepDown)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -523,7 +555,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="4328295051803992" type="Function">
                                                     <param id="0" name="Name">&quot;QuizzSetOpacity&quot;</param>
-                                                    <param id="1" name="Parameter {n}">DialogAnsBg.Opacity + (QuizzTargetOpacity &gt; DialogAnsBg.Opacity ? SPEECH_OPACITY_CHANGE_STEP_UP : -SPEECH_OPACITY_CHANGE_STEP_DOWN)</param>
+                                                    <param id="1" name="Parameter {n}">DialogAnsBg.Opacity + (QuizzTargetOpacity &gt; DialogAnsBg.Opacity ? CurrentSpeechOpacityChangeStepUp : -CurrentSpeechOpacityChangeStepDown)</param>
                                                 </action>
                                             </actions>
                                         </event-block>

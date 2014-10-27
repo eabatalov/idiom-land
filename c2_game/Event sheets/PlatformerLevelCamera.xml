@@ -5,11 +5,13 @@
     <events>
         <event-group description="" sid="4816676888266997" title="Platformer Level Camera">
             <sub-events>
-                <variable constant="1" name="DIALOG_SCROLL_SPEED" sid="5880626694219212" static="0" type="number">0.06</variable>
-                <variable constant="1" name="PLATFORMER_SCROLL_SPEED" sid="1612874301038227" static="0" type="number">0.06</variable>
+                <variable constant="1" name="DEFAULT_DIALOG_SCROLL_SPEED" sid="3591032965728678" static="0" type="number">0.06</variable>
+                <variable constant="1" name="DEFAULT_PLATFORMER_SCROLL_SPEED" sid="395585634379002" static="0" type="number">0.06</variable>
+                <variable constant="0" name="CurrentDialogScrollSpeed" sid="5880626694219212" static="1" type="number">0.06</variable>
+                <variable constant="0" name="CurrentPlatformerScrollSpeed" sid="1612874301038227" static="1" type="number">0.06</variable>
                 <variable constant="1" name="SCROLLED_TO_THRESHOLD" sid="1353364675478754" static="0" type="number">2</variable>
                 <comment>&quot;PLATFORMER&quot; | &quot;DIALOG&quot;</comment>
-                <variable constant="0" name="CurrentCameraMode" sid="8666412595963399" static="1" type="text">&quot;PLATFORMER&quot;</variable>
+                <variable constant="0" name="CurrentCameraMode" sid="8666412595963399" static="1" type="text">PLATFORMER</variable>
                 <variable constant="0" name="IsDialogFocusActive" sid="3199788943876215" static="1" type="number">0</variable>
                 <variable constant="0" name="IsDialogQuizzFocusActive" sid="9441861753398009" static="1" type="number">0</variable>
                 <variable constant="0" name="IsDialogFocusPointReachPending" sid="7298531531293244" static="1" type="number">0</variable>
@@ -215,16 +217,22 @@
                                     <param id="0" name="Name">&quot;EnableDialogModeCamera&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="9025793817134936" type="Function">
-                                    <param id="0" name="Name">&quot;ResetPlatformerLevelDIalogCameraVars&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="-9" name="Set value" sid="7277145348954421" type="System">
-                                    <param id="0" name="Variable">CurrentCameraMode</param>
-                                    <param id="1" name="Value">&quot;DIALOG&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4937232307731492">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9025793817134936" type="Function">
+                                            <param id="0" name="Name">&quot;ResetPlatformerLevelDIalogCameraVars&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7277145348954421" type="System">
+                                            <param id="0" name="Variable">CurrentCameraMode</param>
+                                            <param id="1" name="Value">&quot;DIALOG&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="5540085214002079">
                             <conditions>
@@ -232,16 +240,46 @@
                                     <param id="0" name="Name">&quot;DisableDialogModeCamera&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="8723788958128756" type="Function">
-                                    <param id="0" name="Name">&quot;ResetPlatformerLevelDIalogCameraVars&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="-9" name="Set value" sid="5769979757727761" type="System">
-                                    <param id="0" name="Variable">CurrentCameraMode</param>
-                                    <param id="1" name="Value">&quot;PLATFORMER&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4938210280764931">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8723788958128756" type="Function">
+                                            <param id="0" name="Name">&quot;ResetPlatformerLevelDIalogCameraVars&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5769979757727761" type="System">
+                                            <param id="0" name="Variable">CurrentCameraMode</param>
+                                            <param id="1" name="Value">&quot;PLATFORMER&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): multiplier</comment>
+                        <event-block sid="302574355763318">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5295511542785304" type="Function">
+                                    <param id="0" name="Name">&quot;SetUITransitionsSpeedMultyplier&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2408457241715159">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="1224347314911454" type="System">
+                                            <param id="0" name="Variable">CurrentDialogScrollSpeed</param>
+                                            <param id="1" name="Value">min(1.0, DEFAULT_DIALOG_SCROLL_SPEED * Function.Param(0))</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2884193767220755" type="System">
+                                            <param id="0" name="Variable">CurrentPlatformerScrollSpeed</param>
+                                            <param id="1" name="Value">min(1.0,DEFAULT_PLATFORMER_SCROLL_SPEED * Function.Param(0))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -327,8 +365,8 @@
                                     </conditions>
                                     <actions>
                                         <action id="-7" name="Scroll to position" sid="2812684577340635" type="System">
-                                            <param id="0" name="X">lerp(scrollx, PlayerPlatform.X, PLATFORMER_SCROLL_SPEED)</param>
-                                            <param id="1" name="Y">lerp(scrolly, PlayerPlatform.Y, PLATFORMER_SCROLL_SPEED)</param>
+                                            <param id="0" name="X">lerp(scrollx, PlayerPlatform.X, CurrentPlatformerScrollSpeed)</param>
+                                            <param id="1" name="Y">lerp(scrolly, PlayerPlatform.Y, CurrentPlatformerScrollSpeed)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -380,7 +418,7 @@
                                                         </action>
                                                         <action id="0" name="Call function" sid="4189991724624493" type="Function">
                                                             <param id="0" name="Name">&quot;DialogFocusToXYStep_&quot;</param>
-                                                            <param id="1" name="Parameter {n}">ScrollX_{###}ScrollY_{###}DIALOG_SCROLL_SPEED</param>
+                                                            <param id="1" name="Parameter {n}">ScrollX_{###}ScrollY_{###}CurrentDialogScrollSpeed</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -449,20 +487,26 @@
                                     <param id="0" name="Name">&quot;FinishDialogCameraFocus&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="717935850629379" type="System">
-                                    <param id="0" name="Variable">IsDialogFocusPointReachPending</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="1694468357800573" type="Function">
-                                    <param id="0" name="Name">&quot;onPlatformerCameraFocusCompleted&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="14" name="Log" sid="4068672453872801" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;onPlatformerCameraFocusCompleted was called&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8279189763049639">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="717935850629379" type="System">
+                                            <param id="0" name="Variable">IsDialogFocusPointReachPending</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="1694468357800573" type="Function">
+                                            <param id="0" name="Name">&quot;onPlatformerCameraFocusCompleted&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="14" name="Log" sid="4068672453872801" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;onPlatformerCameraFocusCompleted was called&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>

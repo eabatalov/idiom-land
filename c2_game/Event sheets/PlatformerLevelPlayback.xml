@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PlatformerLevelPlayback</name>
     <events>
+        <comment>As rate of events grows proportional to playback speed we should make UI processing speed maximal otherwise we can reach UI quest events processing limit even on low playback speeds (&lt;2x)</comment>
         <event-block sid="7157315836192578">
             <conditions>
                 <condition id="0" name="On function" sid="5761221947829176" type="Function">
@@ -13,6 +14,10 @@
                 <action id="0" name="Call function" sid="2029439129419138" type="Function">
                     <param id="0" name="Name">&quot;LevelQuestCoinsPlaybackModeEnable&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="5053444096237619" type="Function">
+                    <param id="0" name="Name">&quot;SetUITransitionsSpeedMultyplier&quot;</param>
+                    <param id="1" name="Parameter {n}">100</param>
                 </action>
             </actions>
         </event-block>

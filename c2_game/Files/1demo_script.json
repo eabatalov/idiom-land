@@ -786,7 +786,7 @@
 					"label": "Hey! I'm pulling y",
 					"continue": false,
 					"inCondIds": [
-						4760
+						5210
 					],
 					"outCondIds": [
 						3548
@@ -1123,7 +1123,7 @@
 						4567
 					],
 					"outCondIds": [
-						4759
+						5209
 					],
 					"props": {
 						"id": "Player",
@@ -1133,18 +1133,21 @@
 				},
 				{
 					"ver": 1,
-					"id": 2787,
-					"type": 6,
-					"label": "Wait animation",
-					"continue": true,
+					"id": 3185,
+					"type": 1,
+					"label": "...",
+					"continue": false,
 					"inCondIds": [
-						4759
+						5209
 					],
 					"outCondIds": [
-						4760
+						5210
 					],
 					"props": {
-						"secs": 4
+						"id": "Player",
+						"text": "...",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
 					}
 				}
 			],
@@ -1315,14 +1318,14 @@
 				},
 				{
 					"ver": 1,
-					"id": 4759,
+					"id": 5209,
 					"type": 8,
 					"props": {}
 				},
 				{
 					"ver": 1,
-					"id": 4760,
-					"type": 8,
+					"id": 5210,
+					"type": 11,
 					"props": {}
 				}
 			]
