@@ -77,10 +77,6 @@
                                             <param id="0" name="Variable">PendingHideCallsCount</param>
                                             <param id="1" name="Value">PendingHideCallsCount + 1</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="698942345367727" type="Function">
-                                            <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;HideStageUI&quot;</param>
-                                        </action>
                                         <action id="0" name="Call function" sid="8941705085437658" type="Function">
                                             <param id="0" name="Name">&quot;HidePhrase&quot;</param>
                                             <param id="1" name="Parameter {n}">Function.Param(1)</param>
@@ -247,10 +243,6 @@
                                         <action id="-9" name="Set value" sid="7471908124922079" type="System">
                                             <param id="0" name="Variable">PendingHideCallsCount</param>
                                             <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="4928727860902687" type="Function">
-                                            <param id="0" name="Name">&quot;UnlockUIActionsINProcessing&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;DialogComponentVisibilityChanged&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>

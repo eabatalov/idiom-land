@@ -250,10 +250,6 @@
                                                     <param id="0" name="Variable">DialogUITransitionState</param>
                                                     <param id="1" name="Value">&quot;STEP_SHOW&quot;</param>
                                                 </action>
-                                                <action id="0" name="Call function" sid="8782762196026079" type="Function">
-                                                    <param id="0" name="Name">&quot;UnlockUIActionsINProcessing&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;onShowXXXFinished&quot;</param>
-                                                </action>
                                             </actions>
                                             <sub-events>
                                                 <comment>Transition finish notifiers</comment>
@@ -410,10 +406,6 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="7230526013793526" type="Function">
-                                                    <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;RunNextDialogStepTransition&quot;</param>
-                                                </action>
                                                 <action id="-9" name="Set value" sid="1397792644842268" type="System">
                                                     <param id="0" name="Variable">DialogUITransitionState</param>
                                                     <param id="1" name="Value">&quot;TRANSITION_RUNNING&quot;</param>
@@ -484,10 +476,6 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="5897661726740638" type="Function">
-                                                    <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;RunNextDialogStepTransition&quot;</param>
-                                                </action>
                                                 <action id="-9" name="Set value" sid="4672732661195773" type="System">
                                                     <param id="0" name="Variable">DialogUITransitionState</param>
                                                     <param id="1" name="Value">&quot;TRANSITION_RUNNING&quot;</param>
