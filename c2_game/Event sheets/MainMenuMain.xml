@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MainMenuMain</name>
     <events>
+        <include>Debug</include>
         <include>MenuCommon</include>
         <event-group description="" sid="4898799079237645" title="MainMenuMain">
             <sub-events>
@@ -105,12 +106,17 @@
                             <param id="0" name="Name">&quot;ShowMainMenu&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Call function" sid="731290803009924" type="Function">
+                            <param id="0" name="Name">&quot;DebugSetup&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="6137197466319306">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="7807476566950348" type="System">
-                                    <param id="0" name="Variable">IS_IN_DEBUG_MODE</param>
+                                    <param id="0" name="Variable">DEBUG_MODE</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>

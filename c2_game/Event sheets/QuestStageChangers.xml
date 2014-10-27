@@ -5,6 +5,7 @@
     <events>
         <event-group description="" sid="9689758281955688" title="Stage changers">
             <sub-events>
+                <comment>If changer is solid Player shouldn&apos;t change stage</comment>
                 <event-block sid="9949365663832994">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6721803164694401" type="Player">
@@ -15,6 +16,7 @@
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Second value">StageChanger.Stage</param>
                         </condition>
+                        <condition behavior="Solid" id="0" inverted="1" name="Is enabled" sid="9162419591455953" type="StageChanger" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="6251768207915564" type="Function">
