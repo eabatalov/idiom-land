@@ -39,6 +39,11 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">&quot;false&quot;</param>
                                 </condition>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="9928627161717412" type="System">
+                                    <param id="0" name="Variable">IS_IN_DEBUG_MODE</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -94,7 +99,7 @@
                 <event-block sid="209817636828249">
                     <conditions>
                         <condition id="0" name="On function" sid="1004571584001369" type="Function">
-                            <param id="0" name="Name">&quot;HideStageUI&quot;</param>
+                            <param id="0" name="Name">&quot;HideQuizz&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -108,12 +113,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="3875770075132514" type="KbdQuestNavNextHelper">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="3069853330854017" type="KbdQuestNavBackHelper">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
                                 <action id="-15" name="Set visible" sid="8035284685165549" type="KbdQuestQuizzHelper">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
@@ -144,6 +143,33 @@
                                 </action>
                                 <action id="-15" name="Set visible" sid="5604228376368338" type="KbdQuestQuizzHelper">
                                     <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8709179570589565">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2167372677530764" type="Function">
+                            <param id="0" name="Name">&quot;onQuestNavHidden&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7154664033655153">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4103235718281666" type="System">
+                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="4283831746565114" type="KbdQuestNavNextHelper">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="8356026404092008" type="KbdQuestNavBackHelper">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>

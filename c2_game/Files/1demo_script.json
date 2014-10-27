@@ -2001,7 +2001,7 @@
 						1706
 					],
 					"outCondIds": [
-						4898
+						5139
 					],
 					"props": {
 						"text": "Talk to London people and when they use an idiom or a slang word, try to guess the right meaning of it!"
@@ -2014,10 +2014,10 @@
 					"label": "Hello, policeman",
 					"continue": false,
 					"inCondIds": [
-						2935
+						5139
 					],
 					"outCondIds": [
-						4899
+						5140
 					],
 					"props": {
 						"id": "Player",
@@ -2033,10 +2033,10 @@
 					"label": "What you want?",
 					"continue": false,
 					"inCondIds": [
-						2938
+						5140
 					],
 					"outCondIds": [
-						4900
+						5141
 					],
 					"props": {
 						"id": "policeman",
@@ -2052,10 +2052,10 @@
 					"label": "How to downtown?",
 					"continue": false,
 					"inCondIds": [
-						2941
+						5141
 					],
 					"outCondIds": [
-						4901
+						5142
 					],
 					"props": {
 						"id": "Player",
@@ -2071,10 +2071,10 @@
 					"label": "Piece of cake",
 					"continue": false,
 					"inCondIds": [
-						2944
+						5142
 					],
 					"outCondIds": [
-						4902
+						5143
 					],
 					"props": {
 						"id": "policeman",
@@ -2117,7 +2117,7 @@
 						2949
 					],
 					"outCondIds": [
-						4907
+						5153
 					],
 					"props": {
 						"id": "Player",
@@ -2136,7 +2136,7 @@
 						2950
 					],
 					"outCondIds": [
-						4906
+						5152
 					],
 					"props": {
 						"id": "Player",
@@ -2152,7 +2152,8 @@
 					"label": "\"PieceCake\" is",
 					"continue": false,
 					"inCondIds": [
-						4908
+						5152,
+						5153
 					],
 					"outCondIds": [
 						4909
@@ -2171,7 +2172,7 @@
 					"label": "First idiom!",
 					"continue": false,
 					"inCondIds": [
-						2960
+						5154
 					],
 					"outCondIds": [
 						4980
@@ -2219,7 +2220,7 @@
 					"label": "Enable controls",
 					"continue": true,
 					"inCondIds": [
-						2928
+						5138
 					],
 					"outCondIds": [
 						1681
@@ -2251,7 +2252,7 @@
 					"label": "Controls enable",
 					"continue": false,
 					"inCondIds": [
-						4983
+						5158
 					],
 					"outCondIds": [
 						4981
@@ -2337,7 +2338,7 @@
 					"ver": 1,
 					"id": 2083,
 					"type": 10,
-					"label": "Show notif helper",
+					"label": "Show next helper",
 					"continue": true,
 					"inCondIds": [
 						2925
@@ -2346,9 +2347,9 @@
 						2924
 					],
 					"props": {
-						"name": "C2API_ShowNotificationHelper",
+						"name": "C2API_ShowNextHelper",
 						"source": "c2",
-						"rollbackName": "C2API_HideNotificationHelper",
+						"rollbackName": "C2API_HideNextHelper",
 						"params": []
 					}
 				},
@@ -2362,7 +2363,7 @@
 						4897
 					],
 					"outCondIds": [
-						2928
+						5137
 					],
 					"props": {
 						"name": "C2API_ShowControlsHelpers",
@@ -2375,7 +2376,7 @@
 					"ver": 1,
 					"id": 2086,
 					"type": 10,
-					"label": "Show notif helper",
+					"label": "Show next helper",
 					"continue": true,
 					"inCondIds": [
 						2930
@@ -2384,9 +2385,9 @@
 						2932
 					],
 					"props": {
-						"name": "C2API_ShowNotificationHelper",
+						"name": "C2API_ShowNextHelper",
 						"source": "c2",
-						"rollbackName": "C2API_HideNotificationHelper",
+						"rollbackName": "C2API_HideNextHelper",
 						"params": []
 					}
 				},
@@ -2411,88 +2412,12 @@
 				},
 				{
 					"ver": 1,
-					"id": 2089,
-					"type": 10,
-					"label": "Show balln helper",
-					"continue": true,
-					"inCondIds": [
-						4898
-					],
-					"outCondIds": [
-						2935
-					],
-					"props": {
-						"name": "C2API_ShowPlayerBalloonHelper",
-						"source": "c2",
-						"rollbackName": "C2API_HidePlayerBalloonHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2091,
-					"type": 10,
-					"label": "Show balln helper",
-					"continue": true,
-					"inCondIds": [
-						4899
-					],
-					"outCondIds": [
-						2938
-					],
-					"props": {
-						"name": "C2API_ShowPolicemanBalloonHelper",
-						"source": "c2",
-						"rollbackName": "C2API_HidePolicemanBalloonHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2093,
-					"type": 10,
-					"label": "Show balln helper",
-					"continue": true,
-					"inCondIds": [
-						4900
-					],
-					"outCondIds": [
-						2941
-					],
-					"props": {
-						"name": "C2API_ShowPlayerBalloonHelper",
-						"source": "c2",
-						"rollbackName": "C2API_HidePlayerBalloonHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2095,
-					"type": 10,
-					"label": "Show balln helper",
-					"continue": true,
-					"inCondIds": [
-						4901
-					],
-					"outCondIds": [
-						2944
-					],
-					"props": {
-						"name": "C2API_ShowPolicemanBalloonHelper",
-						"source": "c2",
-						"rollbackName": "C2API_HidePolicemanBalloonHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2097,
 					"type": 10,
 					"label": "Show quizz help",
 					"continue": true,
 					"inCondIds": [
-						4702
+						5145
 					],
 					"outCondIds": [
 						4903
@@ -2511,7 +2436,7 @@
 					"label": "idiomGuessed",
 					"continue": true,
 					"inCondIds": [
-						4921
+						5151
 					],
 					"outCondIds": [
 						2950
@@ -2530,7 +2455,7 @@
 					"label": "idiomFailed",
 					"continue": true,
 					"inCondIds": [
-						4923
+						5150
 					],
 					"outCondIds": [
 						2949
@@ -2555,9 +2480,9 @@
 						4922
 					],
 					"props": {
-						"name": "C2API_ShowPlayerBalloonHelper",
+						"name": "C2API_ShowNextHelper",
 						"source": "c2",
-						"rollbackName": "C2API_HidePlayerBalloonHelper",
+						"rollbackName": "C2API_HideNextHelper",
 						"params": []
 					}
 				},
@@ -2574,9 +2499,9 @@
 						4920
 					],
 					"props": {
-						"name": "C2API_ShowPlayerBalloonHelper",
+						"name": "C2API_ShowNextHelper",
 						"source": "c2",
-						"rollbackName": "C2API_HidePlayerBalloonHelper",
+						"rollbackName": "C2API_HideNextHelper",
 						"params": []
 					}
 				},
@@ -2590,31 +2515,12 @@
 						4909
 					],
 					"outCondIds": [
-						2959
+						5154
 					],
 					"props": {
 						"name": "C2API_ShowNewIdiomHelper",
 						"source": "c2",
 						"rollbackName": "C2API_HideNewIdiomHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2106,
-					"type": 10,
-					"label": "Show notif helper",
-					"continue": true,
-					"inCondIds": [
-						2959
-					],
-					"outCondIds": [
-						2960
-					],
-					"props": {
-						"name": "C2API_ShowNotificationHelper",
-						"source": "c2",
-						"rollbackName": "C2API_HideNotificationHelper",
 						"params": []
 					}
 				},
@@ -2647,7 +2553,7 @@
 						5086
 					],
 					"outCondIds": [
-						5034
+						5155
 					],
 					"props": {
 						"name": "C2API_HideNewIdiomHelper",
@@ -2733,10 +2639,10 @@
 					"label": "Looks idiom",
 					"continue": false,
 					"inCondIds": [
-						4705
+						5143
 					],
 					"outCondIds": [
-						4702
+						5144
 					],
 					"props": {
 						"id": "Player",
@@ -2747,48 +2653,9 @@
 				},
 				{
 					"ver": 1,
-					"id": 2735,
-					"type": 10,
-					"label": "Show balln helper",
-					"continue": true,
-					"inCondIds": [
-						4902
-					],
-					"outCondIds": [
-						4705
-					],
-					"props": {
-						"name": "C2API_ShowPlayerBalloonHelper",
-						"rollbackName": "C2API_HidePlayerBalloonHelper",
-						"source": "c2",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2922,
-					"type": 10,
-					"label": "Show balln helper",
-					"continue": true,
-					"inCondIds": [
-						4906,
-						4907
-					],
-					"outCondIds": [
-						4908
-					],
-					"props": {
-						"name": "C2API_ShowPlayerBalloonHelper",
-						"rollbackName": "C2API_HidePlayerBalloonHelper",
-						"source": "c2",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2923,
 					"type": 10,
-					"label": "Show notif helper",
+					"label": "Show next helper",
 					"continue": true,
 					"inCondIds": [
 						4972
@@ -2797,8 +2664,8 @@
 						4911
 					],
 					"props": {
-						"name": "C2API_ShowNotificationHelper",
-						"rollbackName": "C2API_HideNotificationHelper",
+						"name": "C2API_ShowNextHelper",
+						"rollbackName": "C2API_HideNextHelper",
 						"source": "c2",
 						"params": []
 					}
@@ -2813,7 +2680,7 @@
 						4920
 					],
 					"outCondIds": [
-						4921
+						5148
 					],
 					"props": {
 						"name": "C2API_HideQuizzHelper",
@@ -2832,7 +2699,7 @@
 						4922
 					],
 					"outCondIds": [
-						4923
+						5149
 					],
 					"props": {
 						"name": "C2API_HideQuizzHelper",
@@ -2851,7 +2718,7 @@
 						4982
 					],
 					"outCondIds": [
-						4983
+						5157
 					],
 					"props": {
 						"name": "C2API_ShowGoForwardHelper",
@@ -2867,7 +2734,7 @@
 					"label": "Controls disable",
 					"continue": false,
 					"inCondIds": [
-						5034
+						5156
 					],
 					"outCondIds": [
 						5035
@@ -2891,6 +2758,120 @@
 					"props": {
 						"name": "C2API_PolicemanTalkFinished",
 						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3129,
+					"type": 10,
+					"label": "Hide next helper",
+					"continue": true,
+					"inCondIds": [
+						5137
+					],
+					"outCondIds": [
+						5138
+					],
+					"props": {
+						"name": "C2API_HideNextHelper",
+						"rollbackName": "C2API_ShowNextHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3130,
+					"type": 10,
+					"label": "Hide next helper",
+					"continue": true,
+					"inCondIds": [
+						5144
+					],
+					"outCondIds": [
+						5145
+					],
+					"props": {
+						"name": "C2API_HideNextHelper",
+						"rollbackName": "C2API_ShowNextHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3131,
+					"type": 10,
+					"label": "Hide next helper",
+					"continue": true,
+					"inCondIds": [
+						5157
+					],
+					"outCondIds": [
+						5158
+					],
+					"props": {
+						"name": "C2API_HideNextHelper",
+						"rollbackName": "C2API_ShowNextHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3132,
+					"type": 10,
+					"label": "Hide next helper",
+					"continue": true,
+					"inCondIds": [
+						5155
+					],
+					"outCondIds": [
+						5156
+					],
+					"props": {
+						"name": "C2API_HideNextHelper",
+						"rollbackName": "C2API_ShowNextHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3133,
+					"type": 10,
+					"label": "Show next helper",
+					"continue": true,
+					"inCondIds": [
+						5148
+					],
+					"outCondIds": [
+						5151
+					],
+					"props": {
+						"name": "C2API_ShowNextHelper",
+						"rollbackName": "C2API_HideNextHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3134,
+					"type": 10,
+					"label": "Show next helper",
+					"continue": true,
+					"inCondIds": [
+						5149
+					],
+					"outCondIds": [
+						5150
+					],
+					"props": {
+						"name": "C2API_ShowNextHelper",
+						"rollbackName": "C2API_HideNextHelper",
 						"source": "c2",
 						"params": []
 					}
@@ -2953,12 +2934,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2928,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 2930,
 					"type": 8,
 					"props": {}
@@ -2979,30 +2954,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2935,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2938,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2941,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2944,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 2949,
 					"type": 8,
 					"props": {}
@@ -3010,18 +2961,6 @@
 				{
 					"ver": 1,
 					"id": 2950,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2959,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2960,
 					"type": 8,
 					"props": {}
 				},
@@ -3035,49 +2974,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 4702,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4705,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 4897,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4898,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4899,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4900,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4901,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4902,
 					"type": 11,
 					"props": {}
 				},
@@ -3101,24 +2998,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 4906,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4907,
-					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4908,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 4909,
 					"type": 11,
 					"props": {}
@@ -3137,19 +3016,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 4921,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 4922,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4923,
 					"type": 8,
 					"props": {}
 				},
@@ -3193,18 +3060,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 4983,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 5034,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 5035,
 					"type": 10,
 					"props": {
@@ -3220,6 +3075,126 @@
 				{
 					"ver": 1,
 					"id": 5086,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5137,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5138,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5139,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5140,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5141,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5142,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5143,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5144,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5145,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5148,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5149,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5150,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5151,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5152,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5153,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5154,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5155,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5156,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5157,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5158,
 					"type": 8,
 					"props": {}
 				}

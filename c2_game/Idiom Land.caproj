@@ -432,6 +432,9 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="MainMenuDebugModeIndicator" sid="9121318222561851">
+                    <plugin id="Text" />
+                </object-type>
             </object-folder>
             <object-folder name="LevelsMenu">
                 <object-type name="LevelsMenuLevelButton" sid="7486525092793063">
@@ -5465,9 +5468,11 @@
                     <event-sheet>QuestStageChangers.xml</event-sheet>
                     <event-sheet>QuestAutomaticTalkStarters.xml</event-sheet>
                     <event-sheet>QuestNPCAnimation.xml</event-sheet>
-                    <event-sheet>QuestDialogUI.xml</event-sheet>
+                    <event-sheet>QuestDialogUIElementsTransitions.xml</event-sheet>
                     <event-sheet>QuestDialogUIHiding.xml</event-sheet>
                     <event-sheet>QuestDialog.xml</event-sheet>
+                    <event-sheet>QuestDialogUITouchControls.xml</event-sheet>
+                    <event-sheet>QuestDialogUIHelpers.xml</event-sheet>
                 </event-folder>
                 <event-folder name="Controls">
                     <event-folder name="LevelGameplayPlayback">
@@ -5507,7 +5512,6 @@
                         <event-sheet>PlatformerLevelGameHelp.xml</event-sheet>
                         <event-sheet>PlatformerLevelCoinsProgress.xml</event-sheet>
                         <event-sheet>PlatformerLevelSecretsProgress.xml</event-sheet>
-                        <event-sheet>PlatformerLevelHelpers.xml</event-sheet>
                     </event-folder>
                     <event-sheet>PlatformerLevelCommon.xml</event-sheet>
                     <event-sheet>PlatformerLevelRecording.xml</event-sheet>

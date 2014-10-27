@@ -10,8 +10,6 @@
                 <variable constant="0" name="IsPhraseVisible" sid="8415885846356448" static="1" type="number">1</variable>
                 <variable constant="0" name="IsQuizzVisible" sid="2275217893868348" static="1" type="number">1</variable>
                 <variable constant="0" name="IsNotificationVisible" sid="1094492035787047" static="1" type="number">1</variable>
-                <comment>Quest controls are set visible immediately after quest action out processing so the are visible almost all the time&#x0D;&#x0A;Implementation is hard. Disable it for now. Also our quest controls don&apos;r fade in/out. They are always on screen during the dialog. So no reason to fix.</comment>
-                <variable constant="0" name="IsQuestControlsVisible" sid="4585460581407535" static="1" type="number">1</variable>
                 <event-block sid="2936291383811159">
                     <conditions>
                         <condition id="0" name="On function" sid="4941695226700236" type="Function">
@@ -29,10 +27,6 @@
                         </action>
                         <action id="-9" name="Set value" sid="6580007433527916" type="System">
                             <param id="0" name="Variable">IsNotificationVisible</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="2977488720208068" type="System">
-                            <param id="0" name="Variable">IsQuestControlsVisible</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="6670221761270646" type="System">
@@ -67,11 +61,6 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
-                                <condition disabled="1" id="-14" name="Compare variable" sid="1351486787745589" type="System">
-                                    <param id="0" name="Variable">IsQuestControlsVisible</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -84,10 +73,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="14" name="Log" sid="656213632247681" type="Browser">
-                                            <param id="0" name="Type">0</param>
-                                            <param id="1" name="Message">&quot;Hide stage UI phrase: &quot; &amp; IsPhraseVisible &amp; &quot;quizz: &quot; &amp; IsQuizzVisible &amp; &quot;notif: &quot; &amp; IsNotificationVisible &amp; &quot;controls: &quot; &amp; IsQuestControlsVisible</param>
-                                        </action>
                                         <action id="-9" name="Set value" sid="6885775845132737" type="System">
                                             <param id="0" name="Variable">PendingHideCallsCount</param>
                                             <param id="1" name="Value">PendingHideCallsCount + 1</param>
@@ -108,10 +93,6 @@
                                             <param id="0" name="Name">&quot;HideNotification&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
-                                        <action id="0" name="Call function" sid="1656333316552641" type="Function">
-                                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -126,10 +107,6 @@
                                 <event-block sid="5208617626276568">
                                     <conditions />
                                     <actions>
-                                        <action id="0" name="Call function" sid="3726353163656042" type="Function">
-                                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
                                         <action id="0" name="Call function" sid="3576827160189812" type="Function">
                                             <param id="0" name="Name">&quot;onDialogHidden&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
@@ -230,48 +207,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>param(0): 1 - visible, 0 - not</comment>
-                <event-block sid="9899946123473529">
-                    <conditions>
-                        <condition id="0" name="On function" sid="4833739371377914" type="Function">
-                            <param id="0" name="Name">&quot;onQuestControlsVisibleChanged&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="9875870957289452">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="2634078229297444" type="System">
-                                    <param id="0" name="First value">Function.Param(0)</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Second value">IsQuestControlsVisible</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="5569356620639661" type="System">
-                                    <param id="0" name="Variable">IsQuestControlsVisible</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action disabled="1" id="0" name="Call function" sid="6080679605692298" type="Function">
-                                    <param id="0" name="Name">&quot;DialogComponentVisibilityChanged&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="4614176983300651">
                     <conditions>
                         <condition id="0" name="On function" sid="6403467256592012" type="Function">
                             <param id="0" name="Name">&quot;DialogComponentVisibilityChanged&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="14" name="Log" sid="9834640208565616" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;DialogComponentVisibilityChanged phrase: &quot; &amp; IsPhraseVisible &amp; &quot;quizz: &quot; &amp; IsQuizzVisible &amp; &quot;notif: &quot; &amp; IsNotificationVisible &amp; &quot;controls: &quot; &amp; IsQuestControlsVisible</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="9518351851636173">
                             <conditions>
@@ -287,11 +229,6 @@
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="9493478824657867" type="System">
                                     <param id="0" name="Variable">IsNotificationVisible</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition disabled="1" id="-14" name="Compare variable" sid="4920514223544394" type="System">
-                                    <param id="0" name="Variable">IsQuestControlsVisible</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>

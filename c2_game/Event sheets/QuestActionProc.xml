@@ -282,7 +282,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>XXX theoretically our UI &lt;=&gt; protocol allows to send UI action to any stage. but in practice it is impossible due to&#x0D;&#x0A;- Solid stage changers during UI action execution&#x0D;&#x0A;We set here player.stage to work ok during gameplay playback because stage changers may not trigger intersection with player that is moving by 1 sec position measurements</comment>
+                        <comment>XXX theoretically our UI &lt;=&gt; protocol allows to send UI action to any stage. but in practice it is impossible due to&#x0D;&#x0A;- Solid stage changers during UI action execution&#x0D;&#x0A;We set here player.stage to work ok during gameplay playback because stage changers may not trigger intersection with player that is moving by 1 sec position measurements.&#x0D;&#x0A;XXX need to refactor Player.CurrentStage usage. It is not clear now.</comment>
                         <comment>param(0): UI cmd name</comment>
                         <event-block sid="5481348960594246">
                             <conditions>
@@ -329,6 +329,11 @@
                                         <action id="8" name="UICmdCompleted" sid="9589206179918434" type="QuestLevelRuntime" />
                                     </actions>
                                 </event-block>
+                                <comment>UI logic</comment>
+                                <event-block sid="960553279425284">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="927682085434178">
@@ -344,11 +349,38 @@
                                             <param id="0" name="Name">&quot;onBeforeQuestUICmdProcessing&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;UI_CMD_SEQUENCE_STARTED&quot;</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="4453723896294161" type="Function">
+                                    </actions>
+                                </event-block>
+                                <comment>UI logic</comment>
+                                <event-block sid="1017644569005597">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3945008245356997" type="Function">
                                             <param id="0" name="Name">&quot;HideStageUI&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player.CurrentStage{###}0</param>
+                                            <param id="1" name="Parameter {n}">Player.CurrentStage{###}1</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="7807473861910291" type="Function">
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="63557050990842">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2188694999171904" type="Function">
+                                    <param id="0" name="Name">&quot;onDialogHidden&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5005245809449544">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="3626748737867485" type="System">
+                                            <param id="0" name="Variable">CurrentUICmdName</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;UI_CMD_SEQUENCE_STARTED&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="5253549056769645" type="Function">
                                             <param id="0" name="Name">&quot;onAfterQuestUICmdProcessing&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
@@ -369,14 +401,31 @@
                                             <param id="0" name="Name">&quot;onBeforeQuestUICmdProcessing&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;UI_CMD_SEQUENCE_FINISHED&quot;</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="665538809190609" type="Function">
-                                            <param id="0" name="Name">&quot;onQuestUIActionSeqCompleted&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="8984744254168748" type="Function">
+                                    </actions>
+                                </event-block>
+                                <comment>UI logic</comment>
+                                <event-block sid="7880933883421533">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8568209614402609" type="Function">
                                             <param id="0" name="Name">&quot;makeStageChangersTransparent&quot;</param>
                                             <param id="1" name="Parameter {n}">Player.CurrentStage</param>
                                         </action>
+                                    </actions>
+                                </event-block>
+                                <comment>UI logic: quest controls should be shown before UI transitions take place because quest controls are blinking and taking player&apos;s attention.&#x0D;&#x0A;We need player to look only at dialog UI transitions (not buttons blinking)</comment>
+                                <event-block sid="9489500679073152">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="6761219735171001" type="Function">
+                                            <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1550917964972391">
+                                    <conditions />
+                                    <actions>
                                         <action id="0" name="Call function" sid="9389501615221153" type="Function">
                                             <param id="0" name="Name">&quot;UnlockUIActionsINProcessing&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;ProcAfterUIActionOut&quot;</param>
