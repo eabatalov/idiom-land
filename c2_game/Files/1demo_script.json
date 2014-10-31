@@ -824,11 +824,13 @@
 					"label": "\"Pulling your leg\"",
 					"continue": false,
 					"inCondIds": [
-						3682
+						3682,
+						5340
 					],
 					"outCondIds": [
 						2902,
-						2904
+						2904,
+						5338
 					],
 					"props": {
 						"id": "Player",
@@ -1146,9 +1148,39 @@
 					"props": {
 						"id": "Player",
 						"text": "...",
-						"phraseType": "SPEAK",
+						"phraseType": "THINK",
 						"phraseSize": "SMALL"
 					}
+				},
+				{
+					"ver": 1,
+					"id": 3311,
+					"type": 11,
+					"label": "Funny but again",
+					"continue": false,
+					"inCondIds": [
+						5338
+					],
+					"outCondIds": [
+						5339
+					],
+					"props": {
+						"text": "Funny! But wrong, try again"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3312,
+					"type": -1,
+					"label": "loop connect",
+					"continue": true,
+					"inCondIds": [
+						5339
+					],
+					"outCondIds": [
+						5340
+					],
+					"props": {}
 				}
 			],
 			"conds": [
@@ -1326,6 +1358,24 @@
 					"ver": 1,
 					"id": 5210,
 					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5338,
+					"type": 6,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5339,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5340,
+					"type": 8,
 					"props": {}
 				}
 			]
@@ -2062,7 +2112,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "Could you tell me how can I get to the downtown?",
+						"text": "Could you tell me how can I get to the city center?",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
