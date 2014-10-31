@@ -7205,6 +7205,19 @@
                             </animation-folder>
                         </object-type>
                     </object-folder>
+                    <object-folder name="Controls">
+                        <object-type name="PlatformerLevelCustomEventSender" sid="8436623997859875">
+                            <plugin id="Sprite" />
+                            <instance-variables>
+                                <instance-variable name="CustomEventName" sid="7317512141929226" type="string" />
+                            </instance-variables>
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7276724435887487" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                    </object-folder>
                     <object-type global="1" name="LastOpacityTransitionsDict" sid="8861096821455829">
                         <plugin id="Dictionary" />
                     </object-type>
@@ -7550,6 +7563,7 @@
                         <event-sheet>PlatformerLevelGameHelp.xml</event-sheet>
                         <event-sheet>PlatformerLevelCoinsProgress.xml</event-sheet>
                         <event-sheet>PlatformerLevelSecretsProgress.xml</event-sheet>
+                        <event-sheet>PlatformerLevelCollisionCustomEventSender.xml</event-sheet>
                     </event-folder>
                     <event-sheet>PlatformerLevelCommon.xml</event-sheet>
                     <event-sheet>PlatformerLevelRecording.xml</event-sheet>

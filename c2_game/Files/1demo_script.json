@@ -34,14 +34,14 @@
 					"label": "Main storyline",
 					"continue": false,
 					"inCondIds": [
-						0,
-						1442
+						0
 					],
 					"outCondIds": [
 						1440,
 						1459,
 						1460,
-						1719
+						1719,
+						5470
 					],
 					"props": {
 						"objs": [
@@ -79,10 +79,11 @@
 					"continue": false,
 					"inCondIds": [
 						1440,
-						1739
+						1739,
+						5627
 					],
 					"outCondIds": [
-						1441
+						5626
 					],
 					"props": {
 						"id": "driver2",
@@ -90,20 +91,6 @@
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
-				},
-				{
-					"ver": 1,
-					"id": 942,
-					"type": -1,
-					"label": "Connection",
-					"continue": false,
-					"inCondIds": [
-						1441
-					],
-					"outCondIds": [
-						1442
-					],
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -261,7 +248,8 @@
 					"label": "Controls disable",
 					"continue": true,
 					"inCondIds": [
-						1719
+						1719,
+						5625
 					],
 					"outCondIds": [
 						1718
@@ -293,7 +281,8 @@
 					"label": "driver2 clicked",
 					"continue": true,
 					"inCondIds": [
-						1738
+						1738,
+						5470
 					],
 					"outCondIds": [
 						1739
@@ -486,6 +475,35 @@
 						"name": "speak",
 						"secs": -1
 					}
+				},
+				{
+					"ver": 1,
+					"id": 3435,
+					"type": -1,
+					"label": "Connect",
+					"continue": false,
+					"inCondIds": [
+						5626
+					],
+					"outCondIds": [
+						5625,
+						5628
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3436,
+					"type": -1,
+					"label": "connect",
+					"continue": true,
+					"inCondIds": [
+						5628
+					],
+					"outCondIds": [
+						5627
+					],
+					"props": {}
 				}
 			],
 			"conds": [
@@ -500,20 +518,8 @@
 					"id": 1440,
 					"type": 10,
 					"props": {
-						"name": "stage_activate"
+						"name": "stage_greeting"
 					}
-				},
-				{
-					"ver": 1,
-					"id": 1441,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1442,
-					"type": 1,
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -678,6 +684,42 @@
 					"id": 4143,
 					"type": 11,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5470,
+					"type": 2,
+					"props": {
+						"id": "driver2"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5625,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_driver2"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5626,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5627,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5628,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
 				}
 			]
 		},
@@ -711,8 +753,7 @@
 					"label": "Main storyline",
 					"continue": false,
 					"inCondIds": [
-						1,
-						1175
+						1
 					],
 					"outCondIds": [
 						1173,
@@ -737,7 +778,7 @@
 						1743
 					],
 					"outCondIds": [
-						1174
+						5782
 					],
 					"props": {
 						"id": "veider",
@@ -745,20 +786,6 @@
 						"phraseType": "SPEAK",
 						"phraseSize": "LARGE"
 					}
-				},
-				{
-					"ver": 1,
-					"id": 721,
-					"type": -1,
-					"label": "Connection",
-					"continue": false,
-					"inCondIds": [
-						1174
-					],
-					"outCondIds": [
-						1175
-					],
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -927,7 +954,8 @@
 					"label": "Controls disable",
 					"continue": true,
 					"inCondIds": [
-						1721
+						1721,
+						5785
 					],
 					"outCondIds": [
 						1722
@@ -959,7 +987,8 @@
 					"label": "Connection",
 					"continue": true,
 					"inCondIds": [
-						1744
+						1744,
+						5786
 					],
 					"outCondIds": [
 						1743
@@ -1181,6 +1210,21 @@
 						5340
 					],
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3585,
+					"type": -1,
+					"label": "connect",
+					"continue": false,
+					"inCondIds": [
+						5782
+					],
+					"outCondIds": [
+						5785,
+						5786
+					],
+					"props": {}
 				}
 			],
 			"conds": [
@@ -1195,20 +1239,8 @@
 					"id": 1173,
 					"type": 10,
 					"props": {
-						"name": "stage_activate"
+						"name": "stage_greeting"
 					}
-				},
-				{
-					"ver": 1,
-					"id": 1174,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1175,
-					"type": 1,
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -1377,6 +1409,28 @@
 					"id": 5340,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5782,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5785,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_veider"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5786,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
 				}
 			]
 		},
@@ -1411,8 +1465,7 @@
 					"label": "Main storyline",
 					"continue": false,
 					"inCondIds": [
-						5,
-						1378
+						5
 					],
 					"outCondIds": [
 						132,
@@ -1438,7 +1491,7 @@
 						1741
 					],
 					"outCondIds": [
-						1377
+						5787
 					],
 					"props": {
 						"id": "seller",
@@ -1549,20 +1602,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 892,
-					"type": -1,
-					"label": "Connection",
-					"continue": false,
-					"inCondIds": [
-						1377
-					],
-					"outCondIds": [
-						1378
-					],
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 894,
 					"type": 1,
 					"label": "Idiom means",
@@ -1607,7 +1646,8 @@
 					"label": "Controls disable",
 					"continue": true,
 					"inCondIds": [
-						1726
+						1726,
+						5788
 					],
 					"outCondIds": [
 						1745
@@ -1639,7 +1679,8 @@
 					"label": "Connection",
 					"continue": true,
 					"inCondIds": [
-						1742
+						1742,
+						5789
 					],
 					"outCondIds": [
 						1741
@@ -1813,6 +1854,21 @@
 						"name": "speak",
 						"secs": -1
 					}
+				},
+				{
+					"ver": 1,
+					"id": 3587,
+					"type": -1,
+					"label": "Connect",
+					"continue": false,
+					"inCondIds": [
+						5787
+					],
+					"outCondIds": [
+						5788,
+						5789
+					],
+					"props": {}
 				}
 			],
 			"conds": [
@@ -1827,7 +1883,7 @@
 					"id": 132,
 					"type": 10,
 					"props": {
-						"name": "stage_activate"
+						"name": "stage_greeting"
 					}
 				},
 				{
@@ -1840,18 +1896,6 @@
 					"ver": 1,
 					"id": 1161,
 					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1377,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1378,
-					"type": 1,
 					"props": {}
 				},
 				{
@@ -1982,6 +2026,28 @@
 					"type": 2,
 					"props": {
 						"id": "seller"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5787,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5788,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_seller"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5789,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
 					}
 				}
 			]
@@ -3283,8 +3349,7 @@
 					"label": "Main storyline",
 					"continue": false,
 					"inCondIds": [
-						1190,
-						1322
+						1190
 					],
 					"outCondIds": [
 						1191,
@@ -3309,7 +3374,7 @@
 						1736
 					],
 					"outCondIds": [
-						1321
+						5791
 					],
 					"props": {
 						"id": "cap",
@@ -3440,20 +3505,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 848,
-					"type": -1,
-					"label": "Connection",
-					"continue": false,
-					"inCondIds": [
-						1321
-					],
-					"outCondIds": [
-						1322
-					],
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 852,
 					"type": 1,
 					"label": "Try a carousel!",
@@ -3478,7 +3529,8 @@
 					"label": "Controls disable",
 					"continue": true,
 					"inCondIds": [
-						1729
+						1729,
+						5790
 					],
 					"outCondIds": [
 						1730
@@ -3510,7 +3562,8 @@
 					"label": "Connection",
 					"continue": true,
 					"inCondIds": [
-						1737
+						1737,
+						5792
 					],
 					"outCondIds": [
 						1736
@@ -3646,6 +3699,21 @@
 						"name": "speak",
 						"secs": -1
 					}
+				},
+				{
+					"ver": 1,
+					"id": 3588,
+					"type": -1,
+					"label": "Connect",
+					"continue": false,
+					"inCondIds": [
+						5791
+					],
+					"outCondIds": [
+						5790,
+						5792
+					],
+					"props": {}
 				}
 			],
 			"conds": [
@@ -3660,7 +3728,7 @@
 					"id": 1191,
 					"type": 10,
 					"props": {
-						"name": "stage_activate"
+						"name": "stage_greeting"
 					}
 				},
 				{
@@ -3679,18 +3747,6 @@
 					"ver": 1,
 					"id": 1199,
 					"type": 11,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1321,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1322,
-					"type": 1,
 					"props": {}
 				},
 				{
@@ -3802,6 +3858,28 @@
 					"id": 3879,
 					"type": 11,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5790,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_cap"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5791,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5792,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
 				}
 			]
 		},

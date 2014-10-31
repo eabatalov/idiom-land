@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelCollisionCustomEventSender</name>
+    <events>
+        <event-group description="" sid="4168267968113046" title="Platformer level collision custom event sender">
+            <sub-events>
+                <event-block sid="5760302759895361">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8114255253044328" type="PlatformerLevelCustomEventSender">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6182274871874095" type="Function">
+                            <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
+                            <param id="1" name="Parameter {n}">PlatformerLevelCustomEventSender.CustomEventName{###}&quot;Player&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
