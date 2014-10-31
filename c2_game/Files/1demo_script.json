@@ -2098,10 +2098,10 @@
 					"ver": 1,
 					"id": 1012,
 					"type": 11,
-					"label": "Learn notif",
+					"label": "Foxy is journalist",
 					"continue": false,
 					"inCondIds": [
-						2924
+						5917
 					],
 					"outCondIds": [
 						4897
@@ -2463,7 +2463,7 @@
 						2925
 					],
 					"outCondIds": [
-						2924
+						5915
 					],
 					"props": {
 						"name": "C2API_ShowNextHelper",
@@ -2479,7 +2479,8 @@
 					"label": "Show contr helper",
 					"continue": true,
 					"inCondIds": [
-						4897
+						4897,
+						5916
 					],
 					"outCondIds": [
 						5137
@@ -2994,6 +2995,42 @@
 						"source": "c2",
 						"params": []
 					}
+				},
+				{
+					"ver": 1,
+					"id": 3710,
+					"type": 10,
+					"label": "Check inputmode",
+					"continue": false,
+					"inCondIds": [
+						5915
+					],
+					"outCondIds": [
+						5917,
+						5918
+					],
+					"props": {
+						"name": "C2API_GetInputMode",
+						"rollbackName": "",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3711,
+					"type": 11,
+					"label": "Foxy is journalist",
+					"continue": false,
+					"inCondIds": [
+						5918
+					],
+					"outCondIds": [
+						5916
+					],
+					"props": {
+						"text": "Foxy is a journalist. She’s arrived in London to collect English idioms and slang words.\n\nPress right arrow on your keyboard to continue"
+					}
 				}
 			],
 			"conds": [
@@ -3038,12 +3075,6 @@
 					"props": {
 						"id": "policeman"
 					}
-				},
-				{
-					"ver": 1,
-					"id": 2924,
-					"type": 8,
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -3316,6 +3347,34 @@
 					"id": 5158,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5915,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5916,
+					"type": 11,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5917,
+					"type": 10,
+					"props": {
+						"name": "input_mode_touch"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5918,
+					"type": 10,
+					"props": {
+						"name": "input_mode_keyboard"
+					}
 				}
 			]
 		},

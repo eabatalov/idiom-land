@@ -686,6 +686,42 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-block sid="9230490973968337">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6335842034551233" type="Function">
+                            <param id="0" name="Name">&quot;C2API_GetInputMode&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8067981445518639">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2587288553922864" type="System">
+                                    <param id="0" name="First value">QuestPersistentStorage.get(&quot;is_touch&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;false&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3512743416609872" type="Function">
+                                    <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;input_mode_keyboard&quot;{###}&quot;Player&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8959302364922546">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6456906494996635" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5259146929883461" type="Function">
+                                    <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;input_mode_touch&quot;{###}&quot;Player&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
     </events>
