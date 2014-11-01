@@ -3,37 +3,42 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>InputMethodChoiceMenuMain</name>
     <events>
-        <event-block sid="583776957201899">
-            <conditions>
-                <condition id="3" name="On touched object" sid="968522224188121" type="Touch">
-                    <param id="0" name="Object">InputMethodChoiceKbd</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Put" sid="6652749219559777" type="QuestPersistentStorage">
-                    <param id="0" name="Name">&quot;is_touch&quot;</param>
-                    <param id="1" name="Value">&quot;false&quot;</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="4868449855813382" type="System">
-                    <param id="0" name="Layout">LevelsMenu</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2684320875063277">
-            <conditions>
-                <condition id="3" name="On touched object" sid="1324032896174412" type="Touch">
-                    <param id="0" name="Object">InputMethodChoiceTouch</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Put" sid="9664201563538777" type="QuestPersistentStorage">
-                    <param id="0" name="Name">&quot;is_touch&quot;</param>
-                    <param id="1" name="Value">&quot;true&quot;</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="2562512611920731" type="System">
-                    <param id="0" name="Layout">LevelsMenu</param>
-                </action>
-            </actions>
-        </event-block>
+        <include>LevelInput</include>
+        <event-group description="" sid="8590854983368419" title="Input method choice menu main">
+            <sub-events>
+                <event-block sid="583776957201899">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="968522224188121" type="Touch">
+                            <param id="0" name="Object">InputMethodChoiceKbd</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="195762062203148" type="Function">
+                            <param id="0" name="Name">&quot;SetInputMode&quot;</param>
+                            <param id="1" name="Parameter {n}">INPUT_MODE_KEYBOARD</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="4868449855813382" type="System">
+                            <param id="0" name="Layout">LevelsMenu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2684320875063277">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1324032896174412" type="Touch">
+                            <param id="0" name="Object">InputMethodChoiceTouch</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="7443573954342839" type="Function">
+                            <param id="0" name="Name">&quot;SetInputMode&quot;</param>
+                            <param id="1" name="Parameter {n}">INPUT_MODE_TOUCH</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="2562512611920731" type="System">
+                            <param id="0" name="Layout">LevelsMenu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

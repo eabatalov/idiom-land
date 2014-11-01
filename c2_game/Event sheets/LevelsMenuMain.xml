@@ -4,6 +4,7 @@
     <name>LevelsMenuMain</name>
     <events>
         <include>MenuCommon</include>
+        <include>LevelInput</include>
         <variable constant="1" name="LEVEL_STATUS_LOCKED" sid="4640802573700786" static="0" type="number">0</variable>
         <variable constant="1" name="LEVEL_STATUS_IN_PROGRESS" sid="1718313039130348" static="0" type="number">1</variable>
         <variable constant="1" name="LEVEL_STATUS_COMPLETED" sid="8826803103150841" static="0" type="number">2</variable>
@@ -15,34 +16,16 @@
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="2428199803751478" type="System" />
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="9030838018592694">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="8657680811623155" type="System">
-                                            <param id="0" name="First value">QuestPersistentStorage.get(&quot;is_touch&quot;)</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Second value">&quot;&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="745836655437822" type="Function">
-                                            <param id="0" name="Name">&quot;ShowLevelsMenu&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="1432082321112129">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="7198961887913709" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-2" name="Go to layout" sid="9308086787948108" type="System">
-                                            <param id="0" name="Layout">InputMethodChoiceMenu</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="0" name="Call function" sid="6432230683705245" type="Function">
+                                    <param id="0" name="Name">&quot;LoadInputMode&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="745836655437822" type="Function">
+                                    <param id="0" name="Name">&quot;ShowLevelsMenu&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
                         </event-block>
                         <variable constant="0" name="ITERATING_LEVELS" sid="5875633521619151" static="1" type="number">0</variable>
                         <variable constant="1" name="LEVEL_BUTTONS_H_SPACING" sid="3524638623812518" static="0" type="number">60</variable>

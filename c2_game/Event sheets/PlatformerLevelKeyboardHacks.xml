@@ -35,9 +35,9 @@
                         <event-block sid="668329772265958">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="3906753906598158" type="System">
-                                    <param id="0" name="First value">QuestPersistentStorage.get(&quot;is_touch&quot;)</param>
+                                    <param id="0" name="First value">CurrentInputMode</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;false&quot;</param>
+                                    <param id="2" name="Second value">INPUT_MODE_KEYBOARD</param>
                                 </condition>
                                 <condition id="-14" inverted="1" name="Compare variable" sid="9928627161717412" type="System">
                                     <param id="0" name="Variable">DEBUG_ALL_INPUT_MODES</param>
@@ -76,10 +76,10 @@
                         </event-block>
                         <event-block any="1" sid="9551883054231056">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="4735933143338811" type="System">
-                                    <param id="0" name="First value">QuestPersistentStorage.get(&quot;is_touch&quot;)</param>
+                                <condition id="-8" name="Compare two values" sid="8941367389248716" type="System">
+                                    <param id="0" name="First value">CurrentInputMode</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;false&quot;</param>
+                                    <param id="2" name="Second value">INPUT_MODE_KEYBOARD</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="3229574579119637" type="System">
                                     <param id="0" name="Variable">DEBUG_ALL_INPUT_MODES</param>
@@ -697,9 +697,9 @@
                         <event-block sid="8067981445518639">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2587288553922864" type="System">
-                                    <param id="0" name="First value">QuestPersistentStorage.get(&quot;is_touch&quot;)</param>
+                                    <param id="0" name="First value">CurrentInputMode</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;false&quot;</param>
+                                    <param id="2" name="Second value">INPUT_MODE_KEYBOARD</param>
                                 </condition>
                             </conditions>
                             <actions>
