@@ -20,7 +20,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="2" name="Save level gameplay recording" sid="2979535927079655" type="QuestLevelRecording" />
+                        <action id="2" name="Save replay" sid="4538762154531736" type="QuestLevelRecording" />
                     </actions>
                 </event-block>
                 <event-block sid="9657653793535486">
@@ -29,20 +29,27 @@
                             <param id="0" name="Name">&quot;StartRecording&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="4125423442299847" type="Function">
-                            <param id="0" name="Name">&quot;RecordingStarted&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-9" name="Set value" sid="5276580579234256" type="System">
-                            <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="14" name="Log" sid="2721675147438611" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Level gameplay recording is started&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="952660290480979">
+                            <conditions />
+                            <actions>
+                                <action id="4" name="Start replay" sid="2374992916918471" type="QuestLevelRecording" />
+                                <action id="0" name="Call function" sid="4125423442299847" type="Function">
+                                    <param id="0" name="Name">&quot;RecordingStarted&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5276580579234256" type="System">
+                                    <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="2721675147438611" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Level gameplay recording is started&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="6219862702962609">
                     <conditions>
@@ -50,21 +57,27 @@
                             <param id="0" name="Name">&quot;StopRecording&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="3" name="Stop level gameplay recording" sid="9949152387908402" type="QuestLevelRecording" />
-                        <action id="14" name="Log" sid="1567082582297895" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Level gameplay recording is disabled and can&apos;t be enabled until the level is reentered&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="4215904845201369" type="Function">
-                            <param id="0" name="Name">&quot;RecordingStopped&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-9" name="Set value" sid="188926662840103" type="System">
-                            <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4684299277919359">
+                            <conditions />
+                            <actions>
+                                <action id="3" name="Stop level gameplay recording" sid="9949152387908402" type="QuestLevelRecording" />
+                                <action id="14" name="Log" sid="1567082582297895" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Level gameplay recording is disabled and can&apos;t be enabled until the level is reentered&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="4215904845201369" type="Function">
+                                    <param id="0" name="Name">&quot;RecordingStopped&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="188926662840103" type="System">
+                                    <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7024565452734747">
                     <conditions>
