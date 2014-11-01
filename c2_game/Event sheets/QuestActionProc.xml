@@ -722,31 +722,106 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="4808982679532209">
-                            <conditions>
-                                <condition id="4" name="onUICmdFuncCall" sid="7293651486461447" type="QuestLevelRuntime" />
-                            </conditions>
-                            <actions />
+                        <event-group description="" sid="2970242295948781" title="UI cmd function call">
                             <sub-events>
-                                <event-block sid="9864808444785909">
-                                    <conditions />
-                                    <actions>
-                                        <action id="0" name="Call function" sid="7992663441012845" type="Function">
-                                            <param id="0" name="Name">&quot;onBeforeQuestUICmdProcessing&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;FUNC_CALL&quot;</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="2643496411923763" type="Function">
-                                            <param id="0" name="Name">QuestLevelRuntime.getFuncName</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="1399508254423917" type="Function">
-                                            <param id="0" name="Name">&quot;onAfterQuestUICmdProcessing&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
+                                <comment>NONE | PENDING</comment>
+                                <variable constant="0" name="FunctionCallWaitState" sid="9359767391288267" static="1" type="number">0</variable>
+                                <variable constant="1" name="FUNCTION_CALL_STATE_NONE" sid="3737250160086304" static="1" type="number">1</variable>
+                                <variable constant="1" name="FUNCTION_CALL_STATE_COMPLETION_PENDING" sid="3448301898444895" static="1" type="number">2</variable>
+                                <event-block sid="5205894478729172">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="7921958315916434" type="Function">
+                                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="6242658382839192">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="3806701347492522" type="System">
+                                                    <param id="0" name="Variable">FunctionCallWaitState</param>
+                                                    <param id="1" name="Value">FUNCTION_CALL_STATE_NONE</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="4808982679532209">
+                                    <conditions>
+                                        <condition id="4" name="onUICmdFuncCall" sid="7293651486461447" type="QuestLevelRuntime" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="9864808444785909">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="7560287978745239" type="System">
+                                                    <param id="0" name="Variable">FunctionCallWaitState</param>
+                                                    <param id="1" name="Value">FUNCTION_CALL_STATE_COMPLETION_PENDING</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="7992663441012845" type="Function">
+                                                    <param id="0" name="Name">&quot;onBeforeQuestUICmdProcessing&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;FUNC_CALL&quot;</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="3240157286123055" type="Function">
+                                                    <param id="0" name="Value">0</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="2643496411923763" type="Function">
+                                                    <param id="0" name="Name">QuestLevelRuntime.getFuncName</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>Synchronous function</comment>
+                                        <event-block sid="4809993689508719">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="6299119971107406" type="System">
+                                                    <param id="0" name="First value">Function.ReturnValue</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="9642802482575262" type="Function">
+                                                    <param id="0" name="Name">&quot;onFuncCallCompleted&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="4535026817161159">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="865987375883442" type="Function">
+                                            <param id="0" name="Name">&quot;onFuncCallCompleted&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7610411744079355">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="865923728304684" type="System">
+                                                    <param id="0" name="Variable">FunctionCallWaitState</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">FUNCTION_CALL_STATE_COMPLETION_PENDING</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="1144661233702675" type="System">
+                                                    <param id="0" name="Variable">FunctionCallWaitState</param>
+                                                    <param id="1" name="Value">FUNCTION_CALL_STATE_NONE</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="4028931324019542" type="Function">
+                                                    <param id="0" name="Name">&quot;onAfterQuestUICmdProcessing&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
-                        </event-block>
+                        </event-group>
                         <event-block sid="3305786164391199">
                             <conditions>
                                 <condition id="7" name="onUICmdPhrase" sid="9390956600227511" type="QuestLevelRuntime" />

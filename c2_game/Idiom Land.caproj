@@ -2609,6 +2609,113 @@
                             </animation-folder>
                         </object-type>
                     </object-folder>
+                    <object-folder name="ResultNotification">
+                        <object-type name="animationresult" sid="4853221490880186">
+                            <plugin id="Spriter" />
+                            <container>
+                                <type>animationresult</type>
+                                <type>animationresult_animationresult_star</type>
+                                <type>animationresult_animationresult_point0</type>
+                                <type>animationresult_animationresult_result1</type>
+                            </container>
+                        </object-type>
+                        <object-type name="animationresult_animationresult_star" sid="2443537502737326">
+                            <plugin id="Sprite" />
+                            <container>
+                                <type>animationresult</type>
+                                <type>animationresult_animationresult_star</type>
+                                <type>animationresult_animationresult_point0</type>
+                                <type>animationresult_animationresult_result1</type>
+                            </container>
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7600785825425206" speed="0">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\Check-result\star\star.png">
+                                        <collision-poly>
+                                            <point x="0.498559" y="0.2675" />
+                                            <point x="0.576369" y="0.3675" />
+                                            <point x="0.668588" y="0.5" />
+                                            <point x="0.498559" y="0.735" />
+                                            <point x="0.331412" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="animationresult_animationresult_result1" sid="1110098389322413">
+                            <plugin id="Sprite" />
+                            <container>
+                                <type>animationresult</type>
+                                <type>animationresult_animationresult_star</type>
+                                <type>animationresult_animationresult_point0</type>
+                                <type>animationresult_animationresult_result1</type>
+                            </container>
+                            <animation-folder>
+                                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="436667971481685" speed="0">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\Check-result\result\result1.png">
+                                        <collision-poly>
+                                            <point x="0.152466" y="0.152466" />
+                                            <point x="0.497758" y="0.00896861" />
+                                            <point x="0.847534" y="0.152466" />
+                                            <point x="0.995516" y="0.497758" />
+                                            <point x="0.852018" y="0.852018" />
+                                            <point x="0.497758" y="0.995516" />
+                                            <point x="0.044843" y="0.955157" />
+                                            <point x="0.00896861" y="0.497758" />
+                                        </collision-poly>
+                                    </frame>
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\Check-result\result\result0.png">
+                                        <collision-poly>
+                                            <point x="0.152466" y="0.152466" />
+                                            <point x="0.497758" y="0.00896861" />
+                                            <point x="0.847534" y="0.152466" />
+                                            <point x="0.991031" y="0.497758" />
+                                            <point x="0.847534" y="0.847534" />
+                                            <point x="0.497758" y="0.995516" />
+                                            <point x="0.0403587" y="0.959641" />
+                                            <point x="0.00448431" y="0.497758" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="animationresult_animationresult_point0" sid="9193468902494255">
+                            <plugin id="Sprite" />
+                            <container>
+                                <type>animationresult</type>
+                                <type>animationresult_animationresult_star</type>
+                                <type>animationresult_animationresult_point0</type>
+                                <type>animationresult_animationresult_result1</type>
+                            </container>
+                            <animation-folder>
+                                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2739485047219221" speed="0">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\Check-result\points\point0.png">
+                                        <collision-poly>
+                                            <point x="0.147982" y="0.147982" />
+                                            <point x="0.497758" y="0" />
+                                            <point x="0.852018" y="0.147982" />
+                                            <point x="1" y="0.497758" />
+                                            <point x="0.852018" y="0.852018" />
+                                            <point x="0.497758" y="1" />
+                                            <point x="0.147982" y="0.852018" />
+                                            <point x="0" y="0.497758" />
+                                        </collision-poly>
+                                    </frame>
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\Check-result\points\point1.png">
+                                        <collision-poly>
+                                            <point x="0.147982" y="0.147982" />
+                                            <point x="0.497758" y="0" />
+                                            <point x="0.852018" y="0.147982" />
+                                            <point x="1" y="0.497758" />
+                                            <point x="0.852018" y="0.852018" />
+                                            <point x="0.497758" y="1" />
+                                            <point x="0.147982" y="0.852018" />
+                                            <point x="0" y="0.497758" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                    </object-folder>
                 </object-folder>
                 <object-folder name="VisualObjects">
                     <object-folder name="B">
@@ -7472,6 +7579,13 @@
                 <member>captain_tube</member>
             </members>
         </family>
+        <family name="animationresultFamily" plugin-id="Sprite" sid="719736049323703">
+            <members>
+                <member>animationresult_animationresult_point0</member>
+                <member>animationresult_animationresult_result1</member>
+                <member>animationresult_animationresult_star</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout-folder name="Levels">
@@ -7537,6 +7651,9 @@
                     </event-folder>
                     <event-folder name="LevelProgress">
                         <event-sheet>IdiomProgress.xml</event-sheet>
+                    </event-folder>
+                    <event-folder name="ResultNotification">
+                        <event-sheet>ResultNotification.xml</event-sheet>
                     </event-folder>
                     <event-sheet>LevelControls.xml</event-sheet>
                 </event-folder>
@@ -7711,6 +7828,10 @@
                     </file-folder>
                 </file-folder>
             </file-folder>
+        </file-folder>
+        <file-folder name="Spriter animations">
+            <file name="animation-result.scml" />
+            <file name="animation-result.scon" />
         </file-folder>
     </files-folder>
 </c2project>

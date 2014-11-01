@@ -83,57 +83,76 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4043956287950993">
-                    <conditions>
-                        <condition id="0" name="On function" sid="9664270487461828" type="Function">
-                            <param id="0" name="Name">&quot;C2API_IdiomFailed&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="5328122881951433" type="Function">
-                            <param id="0" name="Name">&quot;onIdiomFailed&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3066804883433329">
-                    <conditions>
-                        <condition id="0" name="On function" sid="1995565934221503" type="Function">
-                            <param id="0" name="Name">&quot;C2API_IdiomGuessed&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="3653438444229328" type="Function">
-                            <param id="0" name="Name">&quot;onIdiomGuessed&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4136908917327193">
-                    <conditions>
-                        <condition id="0" name="On function" sid="3303652449715377" type="Function">
-                            <param id="0" name="Name">&quot;onIdiomGuessed&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="7059961123251969" type="System">
-                            <param id="0" name="Variable">GuessedIdiomsCount</param>
-                            <param id="1" name="Value">GuessedIdiomsCount + 1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="366225306485366" type="Function">
-                            <param id="0" name="Name">&quot;UpdateIdiomsCounter&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4349837160155389">
-                    <conditions>
-                        <condition id="0" name="On function" sid="2038190328950426" type="Function">
-                            <param id="0" name="Name">&quot;onIdiomFailed&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
+                <event-group description="" sid="124552956827044" title="Idiom counter value change transitions">
+                    <sub-events>
+                        <event-block sid="4043956287950993">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9664270487461828" type="Function">
+                                    <param id="0" name="Name">&quot;C2API_IdiomFailed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5328122881951433" type="Function">
+                                    <param id="0" name="Name">&quot;onIdiomFailed&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="1923388973534487" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3066804883433329">
+                            <conditions>
+                                <condition id="0" name="On function" sid="1995565934221503" type="Function">
+                                    <param id="0" name="Name">&quot;C2API_IdiomGuessed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3653438444229328" type="Function">
+                                    <param id="0" name="Name">&quot;onIdiomGuessed&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="8879926410808177" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4136908917327193">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3303652449715377" type="Function">
+                                    <param id="0" name="Name">&quot;onIdiomGuessed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7059961123251969" type="System">
+                                    <param id="0" name="Variable">GuessedIdiomsCount</param>
+                                    <param id="1" name="Value">GuessedIdiomsCount + 1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="366225306485366" type="Function">
+                                    <param id="0" name="Name">&quot;UpdateIdiomsCounter&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="5508571912533973" type="Function">
+                                    <param id="0" name="Name">&quot;RunSuccessNotification&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4349837160155389">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2038190328950426" type="Function">
+                                    <param id="0" name="Name">&quot;onIdiomFailed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9694748787333662" type="Function">
+                                    <param id="0" name="Name">&quot;RunFailNotification&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>
