@@ -387,32 +387,301 @@
                 </event-group>
                 <event-group description="" sid="1330620094831934" title="Platformer level UI (notification show)">
                     <sub-events>
+                        <variable constant="0" name="IsShowingNotification" sid="5410530306975319" static="1" type="number">0</variable>
+                        <event-block sid="6064175908203845">
+                            <conditions>
+                                <condition id="666" name="On initialised" sid="2969112698293005" type="notifyone" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5206603213180664">
+                                    <conditions />
+                                    <actions>
+                                        <action id="666" name="Associate object type" sid="8354396690470676" type="notifyone">
+                                            <param id="0" name="Object">notifyone_entity_000_body</param>
+                                            <param id="1" name="Name">&quot;entity_000_body&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="732503587111464" type="notifyone">
+                                            <param id="0" name="Object">notifyone_entity_000_title</param>
+                                            <param id="1" name="Name">&quot;entity_000_title&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="361742655277284" type="notifyone">
+                                            <param id="0" name="Object">notifyone_entity_000_imgava</param>
+                                            <param id="1" name="Name">&quot;entity_000_img-ava&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="1998534904949849" type="notifyone">
+                                            <param id="0" name="Object">notifyone_entity_000_textblog</param>
+                                            <param id="1" name="Name">&quot;entity_000_text-blog&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="8290200910969487" type="notifyone">
+                                            <param id="0" name="Object">notifyone_entity_000_texttitle</param>
+                                            <param id="1" name="Name">&quot;entity_000_text-title&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4395479727057254">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4767037282326255" type="Function">
+                                    <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2977580570143627">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="3221610228175282" type="System">
+                                            <param id="0" name="Variable">IsShowingNotification</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1161403775311929">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7564199468308612" type="Function">
+                                    <param id="0" name="Name">&quot;SetUITransitionsSpeedMultyplier&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4736165667742729">
+                                    <conditions />
+                                    <actions>
+                                        <action id="1" name="Set playback speed ratio" sid="6395708808068008" type="notifyone">
+                                            <param id="0" name="Speed Ratio">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="2786881550795008">
                             <conditions>
                                 <condition id="0" name="On function" sid="1562830560032882" type="Function">
                                     <param id="0" name="Name">&quot;ShowNotification&quot;</param>
                                 </condition>
                             </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6063809543185167">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="4480435778264531" type="Function">
+                                            <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="7674953918834904" type="NotificationTxt">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="16" name="Set Visible" sid="2419903837888033" type="notifyone">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Set animation" sid="9802413675559822" type="notifyone">
+                                            <param id="0" name="Animation">&quot;start&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">0</param>
+                                            <param id="2" name="Blend Duration">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="8867740511839762" type="System">
+                                            <param id="0" name="Variable">IsShowingNotification</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1185448865156198">
+                            <conditions>
+                                <condition id="0" name="On animation finished" sid="9078676683149132" type="notifyone">
+                                    <param id="0" name="Animation">&quot;start&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1951445573719601">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="2983148515664535" type="System">
+                                            <param id="0" name="Variable">IsShowingNotification</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set animation" sid="8228210985186738" type="notifyone">
+                                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">0</param>
+                                            <param id="2" name="Blend Duration">0</param>
+                                        </action>
+                                        <action id="3" name="Set animation looping" sid="9810599974014839" type="notifyone">
+                                            <param id="0" name="Loop animation?">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6943094725504245" type="Function">
+                                            <param id="0" name="Name">&quot;onNotificationVisibleChanged&quot;</param>
+                                            <param id="1" name="Parameter {n}">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6111484068545093" type="Function">
+                                            <param id="0" name="Name">&quot;onShowNotificationFinished&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1770502449779607">
+                            <conditions>
+                                <condition id="0" name="On animation finished" sid="6028343852773239" type="notifyone">
+                                    <param id="0" name="Animation">&quot;end&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1042916971310168">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="2951419795276996" type="System">
+                                            <param id="0" name="Variable">IsShowingNotification</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="6383349864739358" type="Function">
+                                            <param id="0" name="Name">&quot;HideNotificationSync&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4665716190938537">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="3262480160331831" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="976766054028031">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="3935836021940146" type="System">
+                                            <param id="0" name="Variable">IsShowingNotification</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="3252379470908969" type="NotificationTxt">
+                                            <param id="0" name="Object">notifyone_entity_000_textblog</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="7855143697757845" type="NotificationTxt">
+                                            <param id="0" name="Angle">notifyone_entity_000_textblog.Angle</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="6019582875770385" type="NotificationTxt">
+                                            <param id="0" name="Opacity">notifyone_entity_000_textblog.Opacity</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6654707553551137">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8944102922929648" type="Function">
+                                    <param id="0" name="Name">&quot;HideNotificationSync&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2560656458873753">
+                                    <conditions />
+                                    <actions>
+                                        <action id="16" name="Set Visible" sid="9832432079378148" type="notifyone">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="4737443345945579" type="NotificationTxt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1414001541024697" type="System">
+                                            <param id="0" name="Variable">IsShowingNotification</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8441232818130833" type="Function">
+                                            <param id="0" name="Name">&quot;onNotificationVisibleChanged&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9982443983870275">
+                            <conditions>
+                                <condition id="0" name="On function" sid="384513812636824" type="Function">
+                                    <param id="0" name="Name">&quot;HideNotificationAnimated&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8385766481575486">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="3074505944647513" type="System">
+                                            <param id="0" name="Variable">IsShowingNotification</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set animation" sid="4023629478498478" type="notifyone">
+                                            <param id="0" name="Animation">&quot;end&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">0</param>
+                                            <param id="2" name="Blend Duration">0</param>
+                                        </action>
+                                        <action id="3" name="Set animation looping" sid="6571324757212455" type="notifyone">
+                                            <param id="0" name="Loop animation?">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9959689425727212">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6292897711659165" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9834741072835508" type="Function">
+                                            <param id="0" name="Name">&quot;HideNotificationSync&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9034117042588142">
+                            <conditions>
+                                <condition id="0" name="On function" sid="179811329660274" type="Function">
+                                    <param id="0" name="Name">&quot;ProcNotificationTouchInput&quot;</param>
+                                </condition>
+                            </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="4480435778264531" type="Function">
-                                    <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="2188008165760921" type="NotificationBg">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="7322451425095435" type="NotificationTxt">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="3433967456289605" type="Function">
-                                    <param id="0" name="Name">&quot;onNotificationVisibleChanged&quot;</param>
-                                    <param id="1" name="Parameter {n}">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="4747157924382918" type="Function">
-                                    <param id="0" name="Name">&quot;onShowNotificationFinished&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
+                                <action id="1" name="Set return value" sid="3171611619807618" type="Function">
+                                    <param id="0" name="Value">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="3624659212964632">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5122836410677621" type="System">
+                                            <param id="0" name="Variable">IsShowingNotification</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="423390838922679" type="Touch">
+                                            <param id="0" name="Object">notifyone_entity_000_body</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="5428411566371942" type="Function">
+                                            <param id="0" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -505,24 +774,42 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>param(0): 1 to allow animated</comment>
                         <event-block sid="1730480090521491">
                             <conditions>
                                 <condition id="0" name="On function" sid="833661190737094" type="Function">
                                     <param id="0" name="Name">&quot;HideNotification&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="6041990316897712" type="NotificationBg">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="4737443345945579" type="NotificationTxt">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="8441232818130833" type="Function">
-                                    <param id="0" name="Name">&quot;onNotificationVisibleChanged&quot;</param>
-                                    <param id="1" name="Parameter {n}">0</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7351381172568601">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="8937176930928652" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8023368510941878" type="Function">
+                                            <param id="0" name="Name">&quot;HideNotificationAnimated&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7578053933021028">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9204266418064706" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="5115788568048462" type="Function">
+                                            <param id="0" name="Name">&quot;HideNotificationSync&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>

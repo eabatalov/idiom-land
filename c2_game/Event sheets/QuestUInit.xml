@@ -174,19 +174,8 @@
                                     <param id="0" name="Name">&quot;HideNotification&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-26" name="Move to layer" sid="1525336025461431" type="NotificationBg">
-                                    <param id="0" name="Layer">&quot;Notification&quot;</param>
-                                </action>
                                 <action id="-26" name="Move to layer" sid="9896540851845385" type="NotificationTxt">
                                     <param id="0" name="Layer">&quot;Notification&quot;</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="7624687524155101" type="NotificationBg">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">0</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="3662457158518097" type="NotificationTxt">
-                                    <param id="0" name="X">NotificationBg.X + NOTIFICATION_TEXT_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">NotificationBg.Y + NOTIFICATION_TEXT_TOP_MARGIN</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -281,70 +270,76 @@
                             <param id="0" name="Name">&quot;ApplyInitialDialogUIState&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-26" name="Move to layer" sid="3412303639341201" type="DialogAnsBg">
-                            <param id="0" name="Layer">&quot;Quizz&quot;</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="921864472517263" type="DialogAns1Bg">
-                            <param id="0" name="Layer">&quot;Quizz&quot;</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="392375829313247" type="DialogAns1Txt">
-                            <param id="0" name="Layer">&quot;Quizz&quot;</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="1358914273646776" type="DialogAns2Bg">
-                            <param id="0" name="Layer">&quot;Quizz&quot;</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="2786557048252688" type="DialogAns2Txt">
-                            <param id="0" name="Layer">&quot;Quizz&quot;</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="7301470108960344" type="DialogAns3Bg">
-                            <param id="0" name="Layer">&quot;Quizz&quot;</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="1643474301921664" type="DialogAns3Txt">
-                            <param id="0" name="Layer">&quot;Quizz&quot;</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="6367661816347463" type="DialogAns4Bg">
-                            <param id="0" name="Layer">&quot;Quizz&quot;</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="1117407887461269" type="DialogAns4Txt">
-                            <param id="0" name="Layer">&quot;Quizz&quot;</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="4389655709412586" type="DialogAnsBg">
-                            <param id="0" name="X">0</param>
-                            <param id="1" name="Y">0</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="1207998375094256" type="DialogSpeechBg">
-                            <param id="0" name="Layer">&quot;Speech&quot;</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="2075076244940227" type="DialogPhraseTxt">
-                            <param id="0" name="Layer">&quot;Speech&quot;</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="9453625871965062" type="DialogPhraseBg">
-                            <param id="0" name="Layer">&quot;Speech&quot;</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="7513793924214671" type="DialogSpeakerNameTxt">
-                            <param id="0" name="Layer">&quot;Speech&quot;</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="3881902797190921" type="DialogSpeakerPhoto">
-                            <param id="0" name="Layer">&quot;Speech&quot;</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="376299342451594" type="QuestNavBackBtn">
-                            <param id="0" name="Object">ControlLeft</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="447902141942948" type="QuestNavNextBtn">
-                            <param id="0" name="Object">ControlRight</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="1352311924310592" type="QuestNavlClutch">
-                            <param id="0" name="Object">Clutch</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="7878231141728811" type="Function">
-                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6454658289611878">
+                            <conditions />
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="3412303639341201" type="DialogAnsBg">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="921864472517263" type="DialogAns1Bg">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="392375829313247" type="DialogAns1Txt">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="1358914273646776" type="DialogAns2Bg">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="2786557048252688" type="DialogAns2Txt">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="7301470108960344" type="DialogAns3Bg">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="1643474301921664" type="DialogAns3Txt">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="6367661816347463" type="DialogAns4Bg">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="1117407887461269" type="DialogAns4Txt">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="4389655709412586" type="DialogAnsBg">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="1207998375094256" type="DialogSpeechBg">
+                                    <param id="0" name="Layer">&quot;Speech&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="2075076244940227" type="DialogPhraseTxt">
+                                    <param id="0" name="Layer">&quot;Speech&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="9453625871965062" type="DialogPhraseBg">
+                                    <param id="0" name="Layer">&quot;Speech&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="7513793924214671" type="DialogSpeakerNameTxt">
+                                    <param id="0" name="Layer">&quot;Speech&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="3881902797190921" type="DialogSpeakerPhoto">
+                                    <param id="0" name="Layer">&quot;Speech&quot;</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="376299342451594" type="QuestNavBackBtn">
+                                    <param id="0" name="Object">ControlLeft</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="447902141942948" type="QuestNavNextBtn">
+                                    <param id="0" name="Object">ControlRight</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="1352311924310592" type="QuestNavlClutch">
+                                    <param id="0" name="Object">Clutch</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7878231141728811" type="Function">
+                                    <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -354,16 +349,7 @@
                     <param id="0" name="Name">&quot;ComputeNotificationUILayout&quot;</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="4695405104506379" type="System">
-                    <param id="0" name="Variable">NOTIFICATION_TEXT_LEFT_MARGIN</param>
-                    <param id="1" name="Value">NotificationTxt.X - NotificationBg.X</param>
-                </action>
-                <action id="-9" name="Set value" sid="3515510548776567" type="System">
-                    <param id="0" name="Variable">NOTIFICATION_TEXT_TOP_MARGIN</param>
-                    <param id="1" name="Value">NotificationTxt.Y - NotificationBg.Y</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

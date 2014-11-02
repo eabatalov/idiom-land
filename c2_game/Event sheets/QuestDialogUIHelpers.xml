@@ -73,6 +73,16 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <comment>&quot;Prefetch&quot;. When helper is shown, nav next will be shown anyway. Don&apos;t allow to show helper without the button.</comment>
+                                <event-block sid="7863417001526013">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3029666012303672" type="Function">
+                                            <param id="0" name="Name">&quot;ShowDialogNextBtn&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="7695567182064191">

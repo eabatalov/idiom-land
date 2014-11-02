@@ -12,24 +12,28 @@
                             <param id="0" name="Name">&quot;RenderPhrase&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="9281448994581314" type="DialogPhraseTxt">
-                            <param id="0" name="Text">Function.Param(0)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="4541273582034804" type="DialogSpeakerNameTxt">
-                            <param id="0" name="Text">Function.Param(3)</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="2946398594670569" type="DialogSpeakerPhoto">
-                            <param id="0" name="Animation">Function.Param(2)</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-25" name="Move to bottom" sid="3184576834278404" type="DialogPhraseTxt" />
-                        <action id="-25" name="Move to bottom" sid="5746744320398443" type="DialogSpeakerPhoto" />
-                        <action id="-25" name="Move to bottom" sid="647837003284256" type="DialogSpeakerNameTxt" />
-                        <action id="-25" name="Move to bottom" sid="6727353356011813" type="DialogPhraseBg" />
-                        <action id="-25" name="Move to bottom" sid="9845501865703609" type="DialogSpeechBg" />
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block sid="3994347792316036">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="9281448994581314" type="DialogPhraseTxt">
+                                    <param id="0" name="Text">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4541273582034804" type="DialogSpeakerNameTxt">
+                                    <param id="0" name="Text">Function.Param(3)</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2946398594670569" type="DialogSpeakerPhoto">
+                                    <param id="0" name="Animation">Function.Param(2)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="3184576834278404" type="DialogPhraseTxt" />
+                                <action id="-25" name="Move to bottom" sid="5746744320398443" type="DialogSpeakerPhoto" />
+                                <action id="-25" name="Move to bottom" sid="647837003284256" type="DialogSpeakerNameTxt" />
+                                <action id="-25" name="Move to bottom" sid="6727353356011813" type="DialogPhraseBg" />
+                                <action id="-25" name="Move to bottom" sid="9845501865703609" type="DialogSpeechBg" />
+                            </actions>
+                        </event-block>
                         <event-block sid="326963464463796">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="4216656543774027" type="System">
@@ -174,24 +178,30 @@
                             <param id="0" name="Name">&quot;MakeQuizzAnswersInactive&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="9680256845054335" type="DialogAns1Bg">
-                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="8765095884812636" type="DialogAns2Bg">
-                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="3283546999428132" type="DialogAns3Bg">
-                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="2375672977008778" type="DialogAns4Bg">
-                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4153557981912655">
+                            <conditions />
+                            <actions>
+                                <action id="4" name="Set animation" sid="9680256845054335" type="DialogAns1Bg">
+                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="8765095884812636" type="DialogAns2Bg">
+                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="3283546999428132" type="DialogAns3Bg">
+                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2375672977008778" type="DialogAns4Bg">
+                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>param(0): answer ix (from 0)</comment>
                 <event-block sid="7445881998435829">
@@ -274,28 +284,34 @@
                             <param id="0" name="Name">&quot;RenderQuizz&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="6982114128744915" type="Function">
-                            <param id="0" name="Name">&quot;RenderPhrase&quot;</param>
-                            <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1){###}Function.Param(2){###}Function.Param(3){###}Function.Param(8)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="8982869581353961" type="DialogAns1Txt">
-                            <param id="0" name="Text">Function.Param(4)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="4110780771317874" type="DialogAns2Txt">
-                            <param id="0" name="Text">Function.Param(5)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="2147489721217758" type="DialogAns3Txt">
-                            <param id="0" name="Text">Function.Param(6)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="6559346501389646" type="DialogAns4Txt">
-                            <param id="0" name="Text">Function.Param(7)</param>
-                        </action>
-                        <action id="0" name="Call function" sid="316789833862848" type="Function">
-                            <param id="0" name="Name">&quot;PositionQuizzGUI&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7174574529392307">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="6982114128744915" type="Function">
+                                    <param id="0" name="Name">&quot;RenderPhrase&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1){###}Function.Param(2){###}Function.Param(3){###}Function.Param(8)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8982869581353961" type="DialogAns1Txt">
+                                    <param id="0" name="Text">Function.Param(4)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4110780771317874" type="DialogAns2Txt">
+                                    <param id="0" name="Text">Function.Param(5)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2147489721217758" type="DialogAns3Txt">
+                                    <param id="0" name="Text">Function.Param(6)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6559346501389646" type="DialogAns4Txt">
+                                    <param id="0" name="Text">Function.Param(7)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="316789833862848" type="Function">
+                                    <param id="0" name="Name">&quot;PositionQuizzGUI&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="668488016851262">
                     <conditions>
@@ -448,42 +464,48 @@
                             <param id="0" name="Name">&quot;PointPhraseToPosition&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="136454161153044" type="System">
-                            <param id="0" name="Variable">posX</param>
-                            <param id="1" name="Value">Function.Param(0)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="1670765010799619" type="System">
-                            <param id="0" name="Variable">posY</param>
-                            <param id="1" name="Value">Function.Param(1)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="9121715474322014" type="DialogSpeechBg">
-                            <param id="0" name="X">posX - DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimImagePointXOffset(&quot;cock&quot;)</param>
-                            <param id="1" name="Y">posY - DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimImagePointYOffset(&quot;cock&quot;)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="5582694023872794" type="DialogPhraseBg">
-                            <param id="0" name="X">DialogSpeechBg.X + DIALOG_PHRASE_BG_MARGIN_LEFT</param>
-                            <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_PHRASE_BG_MARGIN_TOP</param>
-                        </action>
-                        <action id="-6" name="Set height" sid="6227146808310005" type="DialogPhraseBg">
-                            <param id="0" name="Height">DialogSpeechBg.QuestEngineSpriteExtras.animFrameHeight(DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimName, 0) - (DIALOG_PHRASE_BG_MARGIN_TOP +DIALOG_PHRASE_BG_MARGIN_BOTTOM)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="5725315443599872" type="DialogPhraseTxt">
-                            <param id="0" name="X">DialogSpeechBg.X + DIALOG_PHRASE_TXT_MARGIN_LEFT</param>
-                            <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_PHRASE_TXT_MARGIN_TOP</param>
-                        </action>
-                        <action id="-6" name="Set height" sid="6610390691611551" type="DialogPhraseTxt">
-                            <param id="0" name="Height">DialogSpeechBg.QuestEngineSpriteExtras.animFrameHeight(DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimName, 0) - (DIALOG_PHRASE_TXT_MARGIN_TOP +DIALOG_PHRASE_TXT_MARGIN_BOTTOM)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="2562315066338364" type="DialogSpeakerNameTxt">
-                            <param id="0" name="X">DialogSpeechBg.X + DIALOG_NAME_TXT_MARGIN_LEFT</param>
-                            <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_NAME_TXT_MARGIN_TOP</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="3685046013826177" type="DialogSpeakerPhoto">
-                            <param id="0" name="X">DialogSpeechBg.X + DIALOG_PHOTO_MARGIN_LEFT</param>
-                            <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_PHOTO_MARGIN_TOP</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5471043446952972">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="136454161153044" type="System">
+                                    <param id="0" name="Variable">posX</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1670765010799619" type="System">
+                                    <param id="0" name="Variable">posY</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="9121715474322014" type="DialogSpeechBg">
+                                    <param id="0" name="X">posX - DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimImagePointXOffset(&quot;cock&quot;)</param>
+                                    <param id="1" name="Y">posY - DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimImagePointYOffset(&quot;cock&quot;)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="5582694023872794" type="DialogPhraseBg">
+                                    <param id="0" name="X">DialogSpeechBg.X + DIALOG_PHRASE_BG_MARGIN_LEFT</param>
+                                    <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_PHRASE_BG_MARGIN_TOP</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="6227146808310005" type="DialogPhraseBg">
+                                    <param id="0" name="Height">DialogSpeechBg.QuestEngineSpriteExtras.animFrameHeight(DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimName, 0) - (DIALOG_PHRASE_BG_MARGIN_TOP +DIALOG_PHRASE_BG_MARGIN_BOTTOM)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="5725315443599872" type="DialogPhraseTxt">
+                                    <param id="0" name="X">DialogSpeechBg.X + DIALOG_PHRASE_TXT_MARGIN_LEFT</param>
+                                    <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_PHRASE_TXT_MARGIN_TOP</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="6610390691611551" type="DialogPhraseTxt">
+                                    <param id="0" name="Height">DialogSpeechBg.QuestEngineSpriteExtras.animFrameHeight(DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimName, 0) - (DIALOG_PHRASE_TXT_MARGIN_TOP +DIALOG_PHRASE_TXT_MARGIN_BOTTOM)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="2562315066338364" type="DialogSpeakerNameTxt">
+                                    <param id="0" name="X">DialogSpeechBg.X + DIALOG_NAME_TXT_MARGIN_LEFT</param>
+                                    <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_NAME_TXT_MARGIN_TOP</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="3685046013826177" type="DialogSpeakerPhoto">
+                                    <param id="0" name="X">DialogSpeechBg.X + DIALOG_PHOTO_MARGIN_LEFT</param>
+                                    <param id="1" name="Y">DialogSpeechBg.Y + DIALOG_PHOTO_MARGIN_TOP</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>param(0): notification text</comment>
                 <event-block sid="2195082850239705">
@@ -492,13 +514,18 @@
                             <param id="0" name="Name">&quot;RenderNotification&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="9217931539196474" type="NotificationTxt">
-                            <param id="0" name="Text">Function.Param(0)</param>
-                        </action>
-                        <action id="-25" name="Move to bottom" sid="1774801357230584" type="NotificationTxt" />
-                        <action id="-25" name="Move to bottom" sid="4135727408593433" type="NotificationBg" />
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8698892595579223">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="9217931539196474" type="NotificationTxt">
+                                    <param id="0" name="Text">Function.Param(0)</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="1774801357230584" type="NotificationTxt" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

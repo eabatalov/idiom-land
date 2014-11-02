@@ -19354,7 +19354,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Notification" sid="7949218838825817">
+        <layer name="NotificationAnimation" sid="7949218838825817">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -19369,9 +19369,29 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="NotificationBg" uid="203">
+                <instance type="notifyone" uid="946">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <scml-file>notify-one.scml</scml-file>
+                        <starting-entity>entity_000</starting-entity>
+                        <starting-animation>idle</starting-animation>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>490</x>
+                        <y>250</y>
+                        <z>0</z>
+                        <width>50</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                    </world>
+                </instance>
+                <instance type="notifyone_entity_000_body" uid="947">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -19379,38 +19399,144 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>-563</y>
+                        <x>1330</x>
+                        <y>1365</y>
                         <z>0</z>
-                        <width>420</width>
-                        <height>330</height>
+                        <width>604</width>
+                        <height>304</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
+                        <angle>-0</angle>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="NotificationTxt" uid="204">
+                <instance type="notifyone_entity_000_imgava" uid="949">
                     <properties>
-                        <text>Notification! &quot;The gen&quot; is the first idiom on the level</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-24,400,0</font>
-                        <color>233,220,211</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>210.170837402</x>
-                        <y>-461.510498047</y>
+                        <x>1365</x>
+                        <y>1435</y>
                         <z>0</z>
-                        <width>282.326721191</width>
-                        <height>201.567398071</height>
+                        <width>170</width>
+                        <height>160</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>-0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="notifyone_entity_000_textblog" uid="950">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1540</x>
+                        <y>1470</y>
+                        <z>0</z>
+                        <width>324</width>
+                        <height>129</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>-0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="notifyone_entity_000_texttitle" uid="951">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1575</x>
+                        <y>1365</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>33</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>-0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="notifyone_entity_000_title" uid="948">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1330</x>
+                        <y>1365</y>
+                        <z>0</z>
+                        <width>600</width>
+                        <height>72</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>-0.00310234</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="NotificationTexts" sid="9986894939243876">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="NotificationTxt" uid="204">
+                    <properties>
+                        <text>Notification! &quot;The gen&quot; is the first idiom on the level</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>69,70,91</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>-3</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>245</x>
+                        <y>-455</y>
+                        <z>0</z>
+                        <width>324</width>
+                        <height>250</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

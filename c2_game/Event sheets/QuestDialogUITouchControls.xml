@@ -56,11 +56,8 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="3525607827992316" type="QuestNavNextBtn">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="2527663943597893" type="Function">
-                                            <param id="0" name="Name">&quot;onQuestNavNextBtnShow&quot;</param>
+                                        <action id="0" name="Call function" sid="7203615658544899" type="Function">
+                                            <param id="0" name="Name">&quot;ShowDialogNextBtn&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
@@ -105,6 +102,22 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="3704952468126362">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3932568086881826" type="Function">
+                            <param id="0" name="Name">&quot;ShowDialogNextBtn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6895629828091892" type="QuestNavNextBtn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7659778599830337" type="Function">
+                            <param id="0" name="Name">&quot;onQuestNavNextBtnShow&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="36707161853533">
                     <conditions>
