@@ -40,6 +40,19 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>param(0): multiplier</comment>
+                <event-block sid="8039620327268653">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9158245211568899" type="Function">
+                            <param id="0" name="Name">&quot;SetUITransitionsSpeedMultyplier&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set playback speed ratio" sid="2943619425830165" type="animationresult">
+                            <param id="0" name="Speed Ratio">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="1865452838951086">
                     <conditions>
                         <condition id="0" name="On function" sid="3616108639167081" type="Function">
