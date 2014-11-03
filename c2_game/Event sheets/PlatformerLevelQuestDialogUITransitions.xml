@@ -466,13 +466,35 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="6063809543185167">
+                                <event-block sid="3631925328642793">
                                     <conditions />
                                     <actions>
                                         <action id="0" name="Call function" sid="4480435778264531" type="Function">
                                             <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
+                                        <action id="0" name="Set animation" sid="2455874160087352" type="notifyone">
+                                            <param id="0" name="Animation">&quot;cross&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">0</param>
+                                            <param id="2" name="Blend Duration">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6063809543185167">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6804520322818835" type="System">
+                                            <param id="0" name="Variable">IsShowingNotification</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                                <event-block sid="4503757305648">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3435787486287622" type="System" />
+                                    </conditions>
+                                    <actions>
                                         <action id="-15" name="Set visible" sid="7674953918834904" type="NotificationTxt">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
@@ -487,6 +509,39 @@
                                         <action id="-9" name="Set value" sid="8867740511839762" type="System">
                                             <param id="0" name="Variable">IsShowingNotification</param>
                                             <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3136022889126796">
+                            <conditions>
+                                <condition id="0" name="On animation finished" sid="6000265119176514" type="notifyone">
+                                    <param id="0" name="Animation">&quot;cross&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4959543918227316">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="1796512105951052" type="System">
+                                            <param id="0" name="Variable">IsShowingNotification</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set animation" sid="485918172686167" type="notifyone">
+                                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">0</param>
+                                            <param id="2" name="Blend Duration">0</param>
+                                        </action>
+                                        <action id="3" name="Set animation looping" sid="115623036608106" type="notifyone">
+                                            <param id="0" name="Loop animation?">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8196992718834506" type="Function">
+                                            <param id="0" name="Name">&quot;onShowNotificationFinished&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>

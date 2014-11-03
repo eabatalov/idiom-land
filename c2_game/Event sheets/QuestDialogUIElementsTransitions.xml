@@ -9,7 +9,6 @@
             <sub-events>
                 <comment>&quot;STOPPED&quot; - no dialog step transitions are running&#x0D;&#x0A;&quot;STOPPED&quot; -&gt; &quot;TRANSITION_PENDING&quot; -&gt; &quot;TRANSITION_RUNNING&quot; -&gt; &quot;STEP_SHOW&quot; -&gt; &quot;STOPPED&quot;...</comment>
                 <variable constant="0" name="DialogUITransitionState" sid="1398252681402346" static="1" type="text">STOPPED</variable>
-                <variable constant="0" name="IsDialogUIVisible" sid="5302879002748858" static="1" type="number">1</variable>
                 <variable constant="0" name="IsDialogUIPositioningStarted" sid="920441695999561" static="1" type="number">0</variable>
                 <comment>PLAYERP || PLAYERQ || NPCP || NPCQ</comment>
                 <variable constant="0" name="CurrentDialogStepType" sid="100243762214278" static="1" type="text">NONE</variable>
@@ -30,10 +29,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="3902014851262799" type="System">
-                            <param id="0" name="Variable">IsDialogUIVisible</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="0" name="Call function" sid="4279432890691479" type="Function">
                             <param id="0" name="Name">&quot;ResetDialogUIState&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -131,14 +126,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="6584518757240434" type="System">
-                                    <param id="0" name="Variable">IsDialogUIVisible</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="3155573016022035" type="Function">
-                                    <param id="0" name="Name">&quot;RunNextDialogStepTransition&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
                                 <action id="14" name="Log" sid="106132036912841" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;DialogState: &quot; &amp; DialogUITransitionState</param>
@@ -152,10 +139,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="8797740521374042" type="System">
-                                    <param id="0" name="Variable">IsDialogUIVisible</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                                 <action id="14" name="Log" sid="3642959793497668" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;DialogState: &quot; &amp; DialogUITransitionState</param>
@@ -350,12 +333,7 @@
                                     <param id="0" name="Name">&quot;RunNextDialogStepTransition&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="14" name="Log" sid="4465611036594381" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;RunNextDialogStepTransition: &quot; &amp; DialogUITransitionState &amp; &quot; &quot; &amp;  CurrentDialogStepType &amp; &quot; IsDialogUIVisible: &quot; &amp; IsDialogUIVisible</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <comment>Need to position dialog elements before running transitions to focus right</comment>
                                 <event-block sid="4578881098868702">
@@ -364,11 +342,6 @@
                                             <param id="0" name="Variable">DialogUITransitionState</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;TRANSITION_PENDING&quot;</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="2719378322065626" type="System">
-                                            <param id="0" name="Variable">IsDialogUIVisible</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>

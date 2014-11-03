@@ -366,11 +366,28 @@
                                 </event-block>
                                 <comment>UI logic</comment>
                                 <event-block sid="1017644569005597">
-                                    <conditions />
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="1611273537752378" type="System">
+                                            <param id="0" name="First value">QuestLevelRuntime.getClearStage</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="3945008245356997" type="Function">
                                             <param id="0" name="Name">&quot;HideStageUI&quot;</param>
                                             <param id="1" name="Parameter {n}">Player.CurrentStage{###}1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2080060583289271">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2432006475248681" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="53667271149639" type="Function">
+                                            <param id="0" name="Name">&quot;onAfterQuestUICmdProcessing&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
