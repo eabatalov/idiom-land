@@ -74,47 +74,21 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set text" sid="4485335134967527" type="GameHelpTxt">
-                                            <param id="0" name="Text">&quot;Keyboard controls:&quot; &amp; newline  &amp; newline &amp; &quot;Arrow keys - move Foxy.&quot; &amp; newline &amp; newline &amp; &quot;Enter - the next phrase in a dialogue.&quot; &amp; newline &amp;newline &amp; &quot;Backspace - the previous phrase.&quot;  &amp; newline &amp; newline &amp; &quot;1, 2, 3, 4 - select an answer.&quot;</param>
+                                        <action id="-15" name="Set visible" sid="8943880971199881" type="GameHelpBg">
+                                            <param id="0" name="Visibility">0</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="4960105128056485" type="System">
+                                        <action id="-15" name="Set visible" sid="611369860807915" type="GameHelpTxt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7089421835417312" type="System">
                                             <param id="0" name="Variable">GameHelpPopupMode</param>
-                                            <param id="1" name="Value">&quot;KEYBOARD&quot;</param>
+                                            <param id="1" name="Value">&quot;HIDDEN&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8253443521407894" type="Function">
+                                            <param id="0" name="Name">&quot;EnablePlayerAvatarControls&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
-                                </event-block>
-                                <event-block sid="2147999786265843">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="5901560671823474" type="System" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="592819871046419">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="582874528232602" type="System">
-                                                    <param id="0" name="First value">GameHelpPopupMode</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">&quot;KEYBOARD&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="8943880971199881" type="GameHelpBg">
-                                                    <param id="0" name="Visibility">0</param>
-                                                </action>
-                                                <action id="-15" name="Set visible" sid="611369860807915" type="GameHelpTxt">
-                                                    <param id="0" name="Visibility">0</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="7089421835417312" type="System">
-                                                    <param id="0" name="Variable">GameHelpPopupMode</param>
-                                                    <param id="1" name="Value">&quot;HIDDEN&quot;</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="8253443521407894" type="Function">
-                                                    <param id="0" name="Name">&quot;EnablePlayerAvatarControls&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -167,7 +141,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="6344967101229111" type="GameHelpTxt">
-                                    <param id="0" name="Text">&quot;Level objective:&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Collect &quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount &amp; &quot; idioms and &quot; &amp; COINS_OVERALL &amp; &quot; coins on the level.&quot;&#x0D;&#x0A;&amp; newline &amp; newline &amp; &quot;Hint:&quot; &amp; newline &amp;&#x0D;&#x0A;&quot;Talk to London people to get idioms, explore the level to find coins.&quot;</param>
+                                    <param id="0" name="Text">&quot;Foxy is a journalist. She&apos;s arrived to London to collect English idioms.&quot; &amp; newline &amp; &quot;Talk to London people and find a way to the city center. You can buy a bus ticket or take a taxi. Find some coins for that.&quot;</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="1859327804745588" type="GameHelpBg">
                                     <param id="0" name="X">WINDOW_WIDTH/2</param>
