@@ -2184,28 +2184,12 @@
 				},
 				{
 					"ver": 1,
-					"id": 1120,
-					"type": 12,
-					"label": "Controls enable",
-					"continue": false,
-					"inCondIds": [
-						5158
-					],
-					"outCondIds": [
-						4981
-					],
-					"props": {
-						"enabled": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 1238,
 					"type": 1,
 					"label": "Policeman idle 1",
 					"continue": false,
 					"inCondIds": [
-						4981
+						6194
 					],
 					"outCondIds": [
 						2099
@@ -2253,22 +2237,6 @@
 						"text": "Stop pestering me or I'll arrest you!",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 1866,
-					"type": 11,
-					"label": "Coin tutorial 1",
-					"continue": false,
-					"inCondIds": [
-						4911
-					],
-					"outCondIds": [
-						4975
-					],
-					"props": {
-						"text": "You've just collected a coin!\n\nFind 5 coins to buy a bus ticket to the next level"
 					}
 				},
 				{
@@ -2463,25 +2431,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2107,
-					"type": 10,
-					"label": "Show tckt cntr hlp",
-					"continue": true,
-					"inCondIds": [
-						4977
-					],
-					"outCondIds": [
-						4972
-					],
-					"props": {
-						"name": "C2API_ShowTicketCounterHelper",
-						"source": "c2",
-						"rollbackName": "C2API_HideTicketCounterHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2108,
 					"type": 10,
 					"label": "Hide new idiom",
@@ -2496,25 +2445,6 @@
 						"name": "C2API_HideNewIdiomHelper",
 						"source": "c2",
 						"rollbackName": "C2API_ShowNewIdiomHelper",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2110,
-					"type": 10,
-					"label": "Hide tickt cntr hlpr",
-					"continue": true,
-					"inCondIds": [
-						4975
-					],
-					"outCondIds": [
-						4982
-					],
-					"props": {
-						"name": "C2API_HideTicketCounterHelper",
-						"source": "c2",
-						"rollbackName": "C2API_ShowTicketCounterHelper",
 						"params": []
 					}
 				},
@@ -2555,22 +2485,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2685,
-					"type": 12,
-					"label": "First coin collect",
-					"continue": true,
-					"inCondIds": [
-						5035
-					],
-					"outCondIds": [
-						4977
-					],
-					"props": {
-						"enabled": false
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2734,
 					"type": 1,
 					"label": "Looks idiom",
@@ -2586,25 +2500,6 @@
 						"text": "Looks like an idiom!",
 						"phraseType": "THINK",
 						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2923,
-					"type": 10,
-					"label": "Show next helper",
-					"continue": true,
-					"inCondIds": [
-						4972
-					],
-					"outCondIds": [
-						4911
-					],
-					"props": {
-						"name": "C2API_ShowNextHelper",
-						"rollbackName": "C2API_HideNextHelper",
-						"source": "c2",
-						"params": []
 					}
 				},
 				{
@@ -2647,34 +2542,15 @@
 				},
 				{
 					"ver": 1,
-					"id": 2978,
-					"type": 10,
-					"label": "ShowGoForward",
-					"continue": true,
-					"inCondIds": [
-						4982
-					],
-					"outCondIds": [
-						5157
-					],
-					"props": {
-						"name": "C2API_ShowGoForwardHelper",
-						"rollbackName": null,
-						"source": "c2",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
 					"id": 3028,
 					"type": 12,
-					"label": "Controls disable",
+					"label": "Controls enable",
 					"continue": false,
 					"inCondIds": [
 						5156
 					],
 					"outCondIds": [
-						5035
+						6194
 					],
 					"props": {
 						"enabled": true
@@ -2729,25 +2605,6 @@
 					],
 					"outCondIds": [
 						5145
-					],
-					"props": {
-						"name": "C2API_HideNextHelper",
-						"rollbackName": "C2API_ShowNextHelper",
-						"source": "c2",
-						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 3131,
-					"type": 10,
-					"label": "Hide next helper",
-					"continue": true,
-					"inCondIds": [
-						5157
-					],
-					"outCondIds": [
-						5158
 					],
 					"props": {
 						"name": "C2API_HideNextHelper",
@@ -2950,12 +2807,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 4911,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 4920,
 					"type": 8,
 					"props": {}
@@ -2968,52 +2819,10 @@
 				},
 				{
 					"ver": 1,
-					"id": 4972,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 4975,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 4977,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 4980,
 					"type": 11,
 					"props": {
 						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 4981,
-					"type": 2,
-					"props": {
-						"id": "policeman"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 4982,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 5035,
-					"type": 10,
-					"props": {
-						"name": "coin_collected"
 					}
 				},
 				{
@@ -3132,18 +2941,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 5157,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 5158,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 5915,
 					"type": 8,
 					"props": {}
@@ -3221,6 +3018,14 @@
 					"id": 6133,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6194,
+					"type": 2,
+					"props": {
+						"id": "policeman"
+					}
 				}
 			]
 		},
@@ -4560,6 +4365,246 @@
 				{
 					"ver": 1,
 					"id": 5090,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 3908,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 3908,
+					"type": 9,
+					"label": "coin_intro",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						6183
+					],
+					"props": {
+						"name": "coin_intro",
+						"objs": [
+							"Player"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3909,
+					"type": 8,
+					"label": "map",
+					"continue": false,
+					"inCondIds": [
+						6183
+					],
+					"outCondIds": [
+						6185
+					],
+					"props": {
+						"objs": [
+							"Player"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3911,
+					"type": 12,
+					"label": "First coin collect",
+					"continue": true,
+					"inCondIds": [
+						6185
+					],
+					"outCondIds": [
+						6186
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3913,
+					"type": 10,
+					"label": "Show tckt cntr hlp",
+					"continue": true,
+					"inCondIds": [
+						6186
+					],
+					"outCondIds": [
+						6195
+					],
+					"props": {
+						"name": "C2API_ShowTicketCounterHelper",
+						"rollbackName": "C2API_HideTicketCounterHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3915,
+					"type": 11,
+					"label": "Coin tutorial",
+					"continue": false,
+					"inCondIds": [
+						6195
+					],
+					"outCondIds": [
+						6198
+					],
+					"props": {
+						"text": "Find and collect coins to get bonuses and complete quests."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3916,
+					"type": 10,
+					"label": "Hide tickt cntr hlpr",
+					"continue": true,
+					"inCondIds": [
+						6197
+					],
+					"outCondIds": [
+						6190
+					],
+					"props": {
+						"name": "C2API_HideTicketCounterHelper",
+						"rollbackName": "C2API_ShowTicketCounterHelper",
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3917,
+					"type": 10,
+					"label": "ShowGoForward",
+					"continue": true,
+					"inCondIds": [
+						6190
+					],
+					"outCondIds": [
+						6196
+					],
+					"props": {
+						"name": "C2API_ShowGoForwardHelper",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3919,
+					"type": 12,
+					"label": "Controls enable",
+					"continue": true,
+					"inCondIds": [
+						6196
+					],
+					"outCondIds": [
+						6193
+					],
+					"props": {
+						"enabled": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3920,
+					"type": -1,
+					"label": "idle",
+					"continue": false,
+					"inCondIds": [
+						6193
+					],
+					"outCondIds": [],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3921,
+					"type": 1,
+					"label": "I want new dress",
+					"continue": false,
+					"inCondIds": [
+						6198
+					],
+					"outCondIds": [
+						6197
+					],
+					"props": {
+						"id": "Player",
+						"text": "I want to buy a new dress...",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 6183,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6185,
+					"type": 10,
+					"props": {
+						"name": "coin_collected"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6186,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6190,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6193,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6195,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6196,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6197,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6198,
 					"type": 11,
 					"props": {
 						"clearStage": true

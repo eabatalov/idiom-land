@@ -28,16 +28,22 @@
                             <param id="0" name="Name">&quot;VarsReset&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="4279432890691479" type="Function">
-                            <param id="0" name="Name">&quot;ResetDialogUIState&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="7332049745168106" type="Function">
-                            <param id="0" name="Name">&quot;ResetDialogStepState&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="412694249316967">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="4279432890691479" type="Function">
+                                    <param id="0" name="Name">&quot;ResetDialogUIState&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="7332049745168106" type="Function">
+                                    <param id="0" name="Name">&quot;ResetDialogStepState&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-group description="" sid="2096605944371447" title="Quest dialog UI transitions">
                     <sub-events>

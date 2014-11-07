@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>1demoCoins</name>
+    <events>
+        <event-block sid="5641416185958636">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7286511710181577" type="System" />
+                <condition id="-14" name="Pick by unique ID" sid="1125562719301432" type="Coin">
+                    <param id="0" name="Unique ID">956</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="2754508670245007" type="CloudJump">
+                    <param id="0" name="Unique ID">925</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="5624850638521355" type="Coin">
+                    <param id="0" name="Pin to">CloudJump</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

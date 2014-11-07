@@ -154,21 +154,8 @@
                         <condition id="0" name="On function" sid="7993163732733459" type="Function">
                             <param id="0" name="Name">&quot;C2API_PolicemanTalkFinished&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="729754440495066" type="Coin">
-                            <param id="0" name="Unique ID">TUTORIAL_COIN_UID</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Sine" disabled="1" id="0" name="Set active" sid="3830724915639862" type="Coin">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action disabled="1" id="3" name="Start" sid="9118199770716898" type="Coin">
-                            <param id="0" name="From">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="7481838108663596" type="Coin">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="3799889551736866">
                     <conditions>
@@ -199,25 +186,6 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <comment>Sine animation of the first coin makes reader angry</comment>
-                        <event-block sid="8015250855053189">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="1653321233194347" type="Coin">
-                                    <param id="0" name="Unique ID">TUTORIAL_COIN_UID</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" disabled="1" id="0" name="Set active" sid="7239481449251334" type="Coin">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action disabled="1" id="2" name="Stop" sid="7272003608302551" type="Coin" />
-                                <action id="-15" name="Set visible" sid="9268347931849464" type="Coin">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
