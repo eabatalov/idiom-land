@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelDialogF2F</name>
+    <events>
+        <event-group description="" sid="9168218450600736" title="Platformer level dialog F2F">
+            <sub-events>
+                <variable constant="1" name="EYE_SIGHT_POINT_NAME" sid="7704064623066197" static="0" type="text">EyeSight</variable>
+                <variable constant="0" name="NoFlipEyesDist" sid="2584769126741844" static="0" type="number">0</variable>
+                <variable constant="0" name="FlipEyesDist" sid="1549175386291617" static="0" type="number">0</variable>
+                <variable constant="0" name="IsInDialogMode" sid="9067929849343085" static="1" type="number">0</variable>
+                <variable constant="0" name="IsNPCSaidPhraseInDialog" sid="6421005440391279" static="1" type="number">0</variable>
+                <event-block sid="4277869985708197">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5182971595573083" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4761178232446481">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="3406084505343614" type="System">
+                                    <param id="0" name="Variable">IsInDialogMode</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6817057197974839" type="System">
+                                    <param id="0" name="Variable">IsNPCSaidPhraseInDialog</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>param(0): NPC id</comment>
+                <event-block sid="4077725644225357">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3954730987966458" type="Function">
+                            <param id="0" name="Name">&quot;onShowedNPCPhrase&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2710795509666053" type="NPC">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2851167008441477">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4886113104019002" type="System">
+                                    <param id="0" name="Variable">IsInDialogMode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6309029339327678" type="System">
+                                    <param id="0" name="Variable">IsNPCSaidPhraseInDialog</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="6914454266945452">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="4543917059547781" type="System">
+                                            <param id="0" name="Variable">NoFlipEyesDist</param>
+                                            <param id="1" name="Value">distance(Player.ImagePointX(EYE_SIGHT_POINT_NAME), 0, NPC.ImagePointX(EYE_SIGHT_POINT_NAME), 0)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2224960769405774" type="System">
+                                            <param id="0" name="Variable">FlipEyesDist</param>
+                                            <param id="1" name="Value">distance(-(Player.ImagePointX(EYE_SIGHT_POINT_NAME) - Player.X) + Player.X, 0, NPC.ImagePointX(EYE_SIGHT_POINT_NAME), 0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5040246373439436">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="8911773671852482" type="System">
+                                            <param id="0" name="First value">NoFlipEyesDist</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">FlipEyesDist</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Set object scale ratio" sid="8181476539385963" type="PlayerSCML">
+                                            <param id="0" name="Scale Ratio">PlayerSCML.ScaleRatio</param>
+                                            <param id="1" name="Flip X Axis">0</param>
+                                            <param id="2" name="Flip Y Axis">0</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="812134319693627" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;1 dont&apos; flip&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3129372618585551">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1868380537193668" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Set object scale ratio" sid="2045046059749691" type="PlayerSCML">
+                                            <param id="0" name="Scale Ratio">PlayerSCML.ScaleRatio</param>
+                                            <param id="1" name="Flip X Axis">1</param>
+                                            <param id="2" name="Flip Y Axis">0</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="9728237714734426" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;1  flip&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="80582783171507">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6539398439901195" type="Function">
+                            <param id="0" name="Name">&quot;onBeforeShowPlayerPhrase&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>For now Foxy says phrase to NPC stending on the right (by default)</comment>
+                        <event-block sid="5963231970184076">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2429033404583098" type="System">
+                                    <param id="0" name="Variable">IsInDialogMode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="1096380337310551" type="System">
+                                    <param id="0" name="Variable">IsNPCSaidPhraseInDialog</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set object scale ratio" sid="8130141133775681" type="PlayerSCML">
+                                    <param id="0" name="Scale Ratio">PlayerSCML.ScaleRatio</param>
+                                    <param id="1" name="Flip X Axis">0</param>
+                                    <param id="2" name="Flip Y Axis">0</param>
+                                </action>
+                                <action id="14" name="Log" sid="2695214220127129" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;2 dont&apos; flip&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2405958675861945">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5301093592146016" type="Function">
+                            <param id="0" name="Name">&quot;onDialogModeEnter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8434316235700255">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="8756757490448852" type="System">
+                                    <param id="0" name="Variable">IsInDialogMode</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8959325969448834" type="System">
+                                    <param id="0" name="Variable">IsNPCSaidPhraseInDialog</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6048383200153746">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5365350690699287" type="Function">
+                            <param id="0" name="Name">&quot;onDialogModeExit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5269179858745258">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="1021452006589441" type="System">
+                                    <param id="0" name="Variable">IsInDialogMode</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

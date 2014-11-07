@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelAutomaticTalkStarters</name>
+    <events>
+        <event-group description="" sid="4263596023615472" title="Automatic start talk">
+            <sub-events>
+                <comment>Player should stop on the talk starter. We block Player avatar movement for this purpose.</comment>
+                <variable constant="0" name="IsBlockedPlayerMovement" sid="8203916342468839" static="1" type="number">0</variable>
+                <event-block sid="3450361924505571">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3292649332086393" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3710837215276481" type="System">
+                            <param id="0" name="Variable">IsBlockedPlayerMovement</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Inject custom event with name &quot;auto_talk_start_&quot; + NPC id to start talking</comment>
+                <event-block sid="7124879317616865">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7991193214109111" type="TalkStartTrigger">
+                            <param id="0" name="Object">PlayerMiddleMarker</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="881256367298289">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8273393451485714" type="TalkStartTrigger">
+                                    <param id="0" name="Instance variable">FireOnce</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="8097163933482469" type="TalkStartHighlight" />
+                                <action id="-9" name="Destroy" sid="2640317491128253" type="TalkStartTrigger" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="2309060373181358">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="3245662314659202" type="System">
+                                    <param id="0" name="Variable">IsBlockedPlayerMovement</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="278475985110371" type="Function">
+                                    <param id="0" name="Name">&quot;DisablePlayerAvatarMovement&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="8764182261220218" type="PlayerPlatform">
+                                    <param id="0" name="Vector X">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="8550995941394823" type="Function">
+                                    <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;auto_talk_start_&quot;  &amp; TalkStartTrigger.NpcIDInStage{###}&quot;Player&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>When dialog has started we can remove our block</comment>
+                <event-block sid="9783164560448915">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1785206713054027" type="Function">
+                            <param id="0" name="Name">&quot;onDialogModeEnter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7266049838236417">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7823040199802446" type="System">
+                                    <param id="0" name="Variable">IsBlockedPlayerMovement</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3230982188397171" type="System">
+                                    <param id="0" name="Variable">IsBlockedPlayerMovement</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="8331897433132196" type="Function">
+                                    <param id="0" name="Name">&quot;EnablePlayerAvatarMovement&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
