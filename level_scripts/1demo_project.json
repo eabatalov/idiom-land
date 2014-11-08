@@ -60,14 +60,14 @@
 						"label": "Bus down street",
 						"continue": false,
 						"inCondIds": [
-							5970
+							6311
 						],
 						"outCondIds": [
 							2722
 						],
 						"props": {
 							"id": "driver2",
-							"text": "There is a bus down the street. The price is quite affordable",
+							"text": "There is a bus down the street. The price is quite affordable.",
 							"phraseType": "SPEAK",
 							"phraseSize": "MEDIUM"
 						}
@@ -126,7 +126,7 @@
 						],
 						"props": {
 							"id": "driver2",
-							"text": "No problem.\nThat will be 50 coins, please",
+							"text": "No problem.\nThat will be 20 coins, please",
 							"phraseType": "SPEAK",
 							"phraseSize": "MEDIUM"
 						}
@@ -138,7 +138,7 @@
 						"label": "\"New kid on the .\"",
 						"continue": false,
 						"inCondIds": [
-							2721
+							6309
 						],
 						"outCondIds": [
 							2894,
@@ -211,7 +211,7 @@
 							2899
 						],
 						"outCondIds": [
-							2110
+							6337
 						],
 						"props": {
 							"enabled": true
@@ -231,63 +231,6 @@
 							1739
 						],
 						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 1422,
-						"type": 1,
-						"label": "Try find all idioms",
-						"continue": false,
-						"inCondIds": [
-							2110
-						],
-						"outCondIds": [
-							2111
-						],
-						"props": {
-							"id": "driver2",
-							"text": "Try to find all the idioms on this level",
-							"phraseType": "SPEAK",
-							"phraseSize": "MEDIUM"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 1423,
-						"type": 1,
-						"label": "Hat",
-						"continue": false,
-						"inCondIds": [
-							2111
-						],
-						"outCondIds": [
-							2112
-						],
-						"props": {
-							"id": "driver2",
-							"text": "I got this hat from my father.\nAnd he got it from his father",
-							"phraseType": "SPEAK",
-							"phraseSize": "LARGE"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 1424,
-						"type": 1,
-						"label": "5 accidents",
-						"continue": false,
-						"inCondIds": [
-							2112
-						],
-						"outCondIds": [
-							3382
-						],
-						"props": {
-							"id": "driver2",
-							"text": "I'm a good driver. I had only 5 accidents\n...\nThis year",
-							"phraseType": "SPEAK",
-							"phraseSize": "LARGE"
-						}
 					},
 					{
 						"ver": 1,
@@ -318,7 +261,7 @@
 							2720
 						],
 						"outCondIds": [
-							2721
+							6309
 						],
 						"props": {
 							"id": "driver2",
@@ -337,7 +280,7 @@
 							2722
 						],
 						"outCondIds": [
-							2898
+							6312
 						],
 						"props": {
 							"id": "Player",
@@ -391,32 +334,17 @@
 						"label": "IdiomDialogCompleted",
 						"continue": true,
 						"inCondIds": [
-							2898
+							6339,
+							6340
 						],
 						"outCondIds": [
 							2899
 						],
 						"props": {
-							"name": "C2API_IdiomDialogCompleted",
+							"name": "C2API_TaxiIdiomDialogCompleted",
 							"source": "c2",
 							"rollbackName": "",
 							"params": []
-						}
-					},
-					{
-						"ver": 1,
-						"id": 2394,
-						"type": 5,
-						"label": "Interact",
-						"continue": false,
-						"inCondIds": [
-							3382
-						],
-						"outCondIds": [],
-						"props": {
-							"id": "driver2",
-							"name": "speak",
-							"secs": -1
 						}
 					},
 					{
@@ -459,10 +387,318 @@
 							5972
 						],
 						"outCondIds": [
-							5970
+							6310
 						],
 						"props": {
 							"text": "\"New kid on the block\" is a newcomer, the newest person in a group"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3963,
+						"type": 1,
+						"label": "I am newcomer",
+						"continue": false,
+						"inCondIds": [
+							6310
+						],
+						"outCondIds": [
+							6311
+						],
+						"props": {
+							"id": "Player",
+							"text": "Yes. I've just arrived here.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3964,
+						"type": 1,
+						"label": "15 coins",
+						"continue": false,
+						"inCondIds": [
+							6312,
+							6338
+						],
+						"outCondIds": [
+							6313
+						],
+						"props": {
+							"id": "driver2",
+							"text": "If you give me 15 coins, I'll drive you to the city center and I'll tell you my favorite idiom about driving",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3965,
+						"type": 10,
+						"label": "InjectTicketCompletion",
+						"continue": false,
+						"inCondIds": [
+							6313
+						],
+						"outCondIds": [
+							6314,
+							6315
+						],
+						"props": {
+							"name": "C2API_InjectTaxiTicketCompletion",
+							"rollbackName": null,
+							"source": "c2",
+							"params": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3966,
+						"type": 1,
+						"label": "I don't have",
+						"continue": false,
+						"inCondIds": [
+							6314
+						],
+						"outCondIds": [
+							6339
+						],
+						"props": {
+							"id": "Player",
+							"text": "I don't have 15 coins for now",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3967,
+						"type": 3,
+						"label": "Take the taxi?",
+						"continue": false,
+						"inCondIds": [
+							6315
+						],
+						"outCondIds": [
+							6316,
+							6324
+						],
+						"props": {
+							"id": "Player",
+							"text": "Take the taxi?",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL",
+							"ans1": "Yes",
+							"ans2": "No",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3968,
+						"type": 1,
+						"label": "No thank you",
+						"continue": false,
+						"inCondIds": [
+							6316,
+							6329
+						],
+						"outCondIds": [
+							6340
+						],
+						"props": {
+							"id": "Player",
+							"text": "No, thank you.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3969,
+						"type": 1,
+						"label": "Yes, let's go",
+						"continue": false,
+						"inCondIds": [
+							6325,
+							6328
+						],
+						"outCondIds": [
+							6318
+						],
+						"props": {
+							"id": "Player",
+							"text": "Yes. Let's go!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3970,
+						"type": 1,
+						"label": "backseat driver",
+						"continue": false,
+						"inCondIds": [
+							6318
+						],
+						"outCondIds": [
+							6341
+						],
+						"props": {
+							"id": "driver2",
+							"text": "Thanks!\nMy favorite idiom is \"backseat driver\"",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3971,
+						"type": 1,
+						"label": "let's go",
+						"continue": false,
+						"inCondIds": [
+							6321
+						],
+						"outCondIds": [
+							6322
+						],
+						"props": {
+							"id": "driver2",
+							"text": "Now let's go.\nI hope you're not a backseat driver.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3972,
+						"type": 11,
+						"label": "Good job",
+						"continue": false,
+						"inCondIds": [
+							6342
+						],
+						"outCondIds": [
+							6321
+						],
+						"props": {
+							"text": "Good job, Foxy!\nYou've just completed the quest and found hidden \"backseat driver\" idiom."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3973,
+						"type": 10,
+						"label": "CompleteLevel",
+						"continue": false,
+						"inCondIds": [
+							6322
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_CompleteLevel",
+							"rollbackName": null,
+							"source": "c2",
+							"params": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3975,
+						"type": 10,
+						"label": "InjectTalkedWithAllNPCs",
+						"continue": false,
+						"inCondIds": [
+							6324
+						],
+						"outCondIds": [
+							6325,
+							6326
+						],
+						"props": {
+							"name": "C2API_InjectTalkedWithAllNPCs",
+							"rollbackName": null,
+							"source": "c2",
+							"params": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3976,
+						"type": 11,
+						"label": "Are you sure?",
+						"continue": false,
+						"inCondIds": [
+							6326
+						],
+						"outCondIds": [
+							6327
+						],
+						"props": {
+							"text": "You didn't speak with all people around, so you didn't find all idioms on the level."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3977,
+						"type": 3,
+						"label": "Go or not?",
+						"continue": false,
+						"inCondIds": [
+							6327
+						],
+						"outCondIds": [
+							6328,
+							6329
+						],
+						"props": {
+							"id": "Player",
+							"text": "Do I want to finish the level?",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM",
+							"ans1": "No",
+							"ans2": "Yes",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3980,
+						"type": 12,
+						"label": "Controls Disable",
+						"continue": true,
+						"inCondIds": [
+							6337
+						],
+						"outCondIds": [
+							6338
+						],
+						"props": {
+							"enabled": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3981,
+						"type": 1,
+						"label": "backseat driver",
+						"continue": false,
+						"inCondIds": [
+							6341
+						],
+						"outCondIds": [
+							6342
+						],
+						"props": {
+							"id": "driver2",
+							"text": "Backseat driver is a passenger in a car who comments driver's actions during the ride. They annoy me.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
 						}
 					}
 				],
@@ -539,30 +775,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 2110,
-						"type": 2,
-						"props": {
-							"id": "driver2"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 2111,
-						"type": 2,
-						"props": {
-							"id": "driver2"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 2112,
-						"type": 2,
-						"props": {
-							"id": "driver2"
-						}
-					},
-					{
-						"ver": 1,
 						"id": 2719,
 						"type": 11,
 						"props": {
@@ -572,14 +784,6 @@
 					{
 						"ver": 1,
 						"id": 2720,
-						"type": 11,
-						"props": {
-							"clearStage": true
-						}
-					},
-					{
-						"ver": 1,
-						"id": 2721,
 						"type": 11,
 						"props": {
 							"clearStage": true
@@ -607,25 +811,9 @@
 					},
 					{
 						"ver": 1,
-						"id": 2898,
-						"type": 11,
-						"props": {
-							"clearStage": true
-						}
-					},
-					{
-						"ver": 1,
 						"id": 2899,
 						"type": 8,
 						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 3382,
-						"type": 2,
-						"props": {
-							"id": "driver2"
-						}
 					},
 					{
 						"ver": 1,
@@ -665,12 +853,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 5970,
-						"type": 1,
-						"props": {}
-					},
-					{
-						"ver": 1,
 						"id": 5971,
 						"type": 8,
 						"props": {}
@@ -680,6 +862,180 @@
 						"id": 5972,
 						"type": 8,
 						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6309,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6310,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6311,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6312,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6313,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6314,
+						"type": 10,
+						"props": {
+							"name": "taxi_ticket_not_complete"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6315,
+						"type": 10,
+						"props": {
+							"name": "taxi_ticket_complete"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6316,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6318,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6321,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6322,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6324,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6325,
+						"type": 10,
+						"props": {
+							"name": "talked_with_all_npcs"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6326,
+						"type": 10,
+						"props": {
+							"name": "not_talked_with_all_npcs"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6327,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6328,
+						"type": 4,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6329,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6337,
+						"type": 10,
+						"props": {
+							"name": "auto_talk_start_driver2"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6338,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6339,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6340,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6341,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6342,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
 					}
 				]
 			},
@@ -3567,7 +3923,8 @@
 								"Player",
 								"driver"
 							],
-							"objPool": []
+							"objPool": [],
+							"text": ""
 						}
 					},
 					{
@@ -3577,8 +3934,7 @@
 						"label": "Main storyline",
 						"continue": false,
 						"inCondIds": [
-							2856,
-							2881
+							2856
 						],
 						"outCondIds": [
 							2878
@@ -3597,35 +3953,16 @@
 						"label": "Ticket incompl 1",
 						"continue": false,
 						"inCondIds": [
-							2922
+							6277
 						],
 						"outCondIds": [
-							2873
+							6278
 						],
 						"props": {
 							"id": "driver",
-							"text": "You need to have 5 coins to buy a bus ticket",
+							"text": "Yes, it goes.",
 							"phraseType": "SPEAK",
-							"phraseSize": "MEDIUM"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 2049,
-						"type": 1,
-						"label": "Ticket complete 1",
-						"continue": false,
-						"inCondIds": [
-							2923
-						],
-						"outCondIds": [
-							2882
-						],
-						"props": {
-							"id": "driver",
-							"text": "I see you have enough coins to buy the ticket",
-							"phraseType": "SPEAK",
-							"phraseSize": "MEDIUM"
+							"phraseSize": "SMALL"
 						}
 					},
 					{
@@ -3638,7 +3975,7 @@
 							2878
 						],
 						"outCondIds": [
-							2921
+							6253
 						],
 						"props": {
 							"enabled": false
@@ -3648,10 +3985,10 @@
 						"ver": 1,
 						"id": 2055,
 						"type": 1,
-						"label": "Ticket incompl 2",
+						"label": "Ticket incompl 3",
 						"continue": false,
 						"inCondIds": [
-							2873
+							6262
 						],
 						"outCondIds": [
 							2880
@@ -3667,13 +4004,15 @@
 						"ver": 1,
 						"id": 2057,
 						"type": 12,
-						"label": "",
+						"label": "Restart dialog 1",
 						"continue": false,
 						"inCondIds": [
-							2880
+							2880,
+							6266,
+							6331
 						],
 						"outCondIds": [
-							2881
+							6279
 						],
 						"props": {
 							"enabled": true
@@ -3683,13 +4022,14 @@
 						"ver": 1,
 						"id": 2058,
 						"type": 1,
-						"label": "Ticket complete 2",
+						"label": "leaving now",
 						"continue": false,
 						"inCondIds": [
-							2882
+							6270,
+							6272
 						],
 						"outCondIds": [
-							2920
+							6267
 						],
 						"props": {
 							"id": "driver",
@@ -3705,14 +4045,15 @@
 						"label": "InjectTicketCompletion",
 						"continue": false,
 						"inCondIds": [
-							2921
+							6278,
+							6280
 						],
 						"outCondIds": [
-							2922,
-							2923
+							6258,
+							6276
 						],
 						"props": {
-							"name": "C2API_InjectTicketCompletion",
+							"name": "C2API_InjectBusTicketCompletion",
 							"source": "c2",
 							"rollbackName": "",
 							"params": []
@@ -3725,7 +4066,7 @@
 						"label": "CompleteLevel",
 						"continue": false,
 						"inCondIds": [
-							2920
+							6267
 						],
 						"outCondIds": [],
 						"props": {
@@ -3733,6 +4074,182 @@
 							"source": "c2",
 							"rollbackName": "",
 							"params": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3923,
+						"type": 1,
+						"label": "Is this bus",
+						"continue": false,
+						"inCondIds": [
+							6253
+						],
+						"outCondIds": [
+							6277
+						],
+						"props": {
+							"id": "Player",
+							"text": "Hello!\nIs this bus goes to the city center?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3926,
+						"type": 3,
+						"label": "Get on the bus?",
+						"continue": false,
+						"inCondIds": [
+							6258
+						],
+						"outCondIds": [
+							6265,
+							6268
+						],
+						"props": {
+							"id": "driver",
+							"text": "5 coins please",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL",
+							"ans1": "Buy the ticket",
+							"ans2": "Don't buy the ticket",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3927,
+						"type": 1,
+						"label": "Ticket incompl 2",
+						"continue": false,
+						"inCondIds": [
+							6276
+						],
+						"outCondIds": [
+							6262
+						],
+						"props": {
+							"id": "driver",
+							"text": "You need to have 5\ncoins to buy a bus ticket.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3928,
+						"type": 1,
+						"label": "No",
+						"continue": false,
+						"inCondIds": [
+							6265
+						],
+						"outCondIds": [
+							6266
+						],
+						"props": {
+							"id": "Player",
+							"text": "No, thank you,",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3929,
+						"type": 10,
+						"label": "InjectTalkedWithAllNPCs",
+						"continue": false,
+						"inCondIds": [
+							6268
+						],
+						"outCondIds": [
+							6270,
+							6273
+						],
+						"props": {
+							"name": "C2API_InjectTalkedWithAllNPCs",
+							"rollbackName": null,
+							"source": "c2",
+							"params": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3930,
+						"type": 3,
+						"label": "Go or not?",
+						"continue": false,
+						"inCondIds": [
+							6274
+						],
+						"outCondIds": [
+							6272,
+							6330
+						],
+						"props": {
+							"id": "Player",
+							"text": "Do I want to finish the level?",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM",
+							"ans1": "No",
+							"ans2": "Yes",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3931,
+						"type": 11,
+						"label": "Are you sure?",
+						"continue": false,
+						"inCondIds": [
+							6273
+						],
+						"outCondIds": [
+							6274
+						],
+						"props": {
+							"text": "You didn't speak with all people around, so you didn't find all idioms on the level."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3932,
+						"type": 12,
+						"label": "Restart dialog 2",
+						"continue": true,
+						"inCondIds": [
+							6279
+						],
+						"outCondIds": [
+							6280
+						],
+						"props": {
+							"enabled": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 3978,
+						"type": 1,
+						"label": "No thanks",
+						"continue": false,
+						"inCondIds": [
+							6330
+						],
+						"outCondIds": [
+							6331
+						],
+						"props": {
+							"id": "Player",
+							"text": "No, thanks.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
 						}
 					}
 				],
@@ -3742,14 +4259,6 @@
 						"id": 2856,
 						"type": 1,
 						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 2873,
-						"type": 11,
-						"props": {
-							"clearStage": true
-						}
 					},
 					{
 						"ver": 1,
@@ -3769,46 +4278,134 @@
 					},
 					{
 						"ver": 1,
-						"id": 2881,
-						"type": 1,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 2882,
-						"type": 11,
-						"props": {
-							"clearStage": true
-						}
-					},
-					{
-						"ver": 1,
-						"id": 2920,
-						"type": 11,
-						"props": {
-							"clearStage": true
-						}
-					},
-					{
-						"ver": 1,
-						"id": 2921,
+						"id": 6253,
 						"type": 8,
 						"props": {}
 					},
 					{
 						"ver": 1,
-						"id": 2922,
+						"id": 6258,
 						"type": 10,
 						"props": {
-							"name": "ticket_not_complete"
+							"name": "bus_ticket_complete"
 						}
 					},
 					{
 						"ver": 1,
-						"id": 2923,
+						"id": 6262,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6265,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6266,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6267,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6268,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6270,
 						"type": 10,
 						"props": {
-							"name": "ticket_complete"
+							"name": "talked_with_all_npcs"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6272,
+						"type": 4,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6273,
+						"type": 10,
+						"props": {
+							"name": "not_talked_with_all_npcs"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6274,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6276,
+						"type": 10,
+						"props": {
+							"name": "bus_ticket_not_complete"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6277,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6278,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6279,
+						"type": 10,
+						"props": {
+							"name": "auto_talk_start_driver"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6280,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6330,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6331,
+						"type": 11,
+						"props": {
+							"clearStage": true
 						}
 					}
 				]
@@ -4617,7 +5214,7 @@
 	},
 	"scriptEditor": {
 		"ver": 1,
-		"currentStageId": 3908,
+		"currentStageId": 8,
 		"stageEditors": [
 			{
 				"ver": 1,
@@ -4637,8 +5234,8 @@
 					{
 						"ver": 1,
 						"nodeId": 25,
-						"x": 338.7625501288197,
-						"y": 1755.862633327387
+						"x": -61.23744987118016,
+						"y": 1713.3626333273871
 					},
 					{
 						"ver": 1,
@@ -4661,8 +5258,8 @@
 					{
 						"ver": 1,
 						"nodeId": 946,
-						"x": 661.5000172097843,
-						"y": 778.9835424231447
+						"x": 669.0000172097843,
+						"y": 766.4835424231447
 					},
 					{
 						"ver": 1,
@@ -4685,32 +5282,14 @@
 					{
 						"ver": 1,
 						"nodeId": 1125,
-						"x": 1367.500017209784,
-						"y": 2075.4835424231437
+						"x": 1145.0000172097823,
+						"y": 1372.9835424231433
 					},
 					{
 						"ver": 1,
 						"nodeId": 1134,
 						"x": 2056.000017209784,
 						"y": 359.98354242314434
-					},
-					{
-						"ver": 1,
-						"nodeId": 1422,
-						"x": 1683.5000172097848,
-						"y": 1599.4835424231455
-					},
-					{
-						"ver": 1,
-						"nodeId": 1423,
-						"x": 2238.5000172097834,
-						"y": 1607.4835424231455
-					},
-					{
-						"ver": 1,
-						"nodeId": 1424,
-						"x": 1974.500017209784,
-						"y": 1990.4835424231446
 					},
 					{
 						"ver": 1,
@@ -4721,38 +5300,32 @@
 					{
 						"ver": 1,
 						"nodeId": 1923,
-						"x": 179.00001720978435,
-						"y": 777.4835424231444
+						"x": 176.50001720978446,
+						"y": 774.9835424231445
 					},
 					{
 						"ver": 1,
 						"nodeId": 1924,
-						"x": 350.00001720978395,
-						"y": 2079.983542423144
+						"x": 145.0000172097839,
+						"y": 1967.4835424231449
 					},
 					{
 						"ver": 1,
 						"nodeId": 2068,
-						"x": 418.50001720978435,
-						"y": 1038.9835424231446
+						"x": 478.5000172097841,
+						"y": 1003.9835424231444
 					},
 					{
 						"ver": 1,
 						"nodeId": 2069,
-						"x": 990.0000215122295,
-						"y": 1052.4794280289302
+						"x": 885.0000215122295,
+						"y": 1007.4794280289302
 					},
 					{
 						"ver": 1,
 						"nodeId": 2070,
-						"x": 855.00002151223,
-						"y": 2077.4794280289298
-					},
-					{
-						"ver": 1,
-						"nodeId": 2394,
-						"x": 2272.500021512229,
-						"y": 1989.9794280289302
+						"x": 1167.5000215122286,
+						"y": 1642.4794280289307
 					},
 					{
 						"ver": 1,
@@ -4769,8 +5342,104 @@
 					{
 						"ver": 1,
 						"nodeId": 3762,
-						"x": 685.0000215122293,
-						"y": 1342.4794280289311
+						"x": 670.0000215122293,
+						"y": 1254.9794280289311
+					},
+					{
+						"ver": 1,
+						"nodeId": 3963,
+						"x": 182.5000215122302,
+						"y": 1509.9794280289307
+					},
+					{
+						"ver": 1,
+						"nodeId": 3964,
+						"x": 397.5000215122302,
+						"y": 1787.479428028931
+					},
+					{
+						"ver": 1,
+						"nodeId": 3965,
+						"x": 392.50002151223043,
+						"y": 2462.4794280289293
+					},
+					{
+						"ver": 1,
+						"nodeId": 3966,
+						"x": 777.5000215122298,
+						"y": 2162.4794280289298
+					},
+					{
+						"ver": 1,
+						"nodeId": 3967,
+						"x": 865.00002151223,
+						"y": 2442.4794280289284
+					},
+					{
+						"ver": 1,
+						"nodeId": 3968,
+						"x": 1165.0000215122295,
+						"y": 2102.47942802893
+					},
+					{
+						"ver": 1,
+						"nodeId": 3969,
+						"x": 2120.00002151223,
+						"y": 2584.9794280289298
+					},
+					{
+						"ver": 1,
+						"nodeId": 3970,
+						"x": 2117.5000215122295,
+						"y": 2259.979428028929
+					},
+					{
+						"ver": 1,
+						"nodeId": 3971,
+						"x": 2695.00002151223,
+						"y": 2287.4794280289298
+					},
+					{
+						"ver": 1,
+						"nodeId": 3972,
+						"x": 2555.00002151223,
+						"y": 2067.4794280289307
+					},
+					{
+						"ver": 1,
+						"nodeId": 3973,
+						"x": 2617.500021512228,
+						"y": 2584.9794280289298
+					},
+					{
+						"ver": 1,
+						"nodeId": 3975,
+						"x": 1157.5000215122298,
+						"y": 2577.4794280289298
+					},
+					{
+						"ver": 1,
+						"nodeId": 3976,
+						"x": 1400.0000215122295,
+						"y": 2387.4794280289298
+					},
+					{
+						"ver": 1,
+						"nodeId": 3977,
+						"x": 1665.0000215122295,
+						"y": 2239.97942802893
+					},
+					{
+						"ver": 1,
+						"nodeId": 3980,
+						"x": 892.5000215122298,
+						"y": 1504.9794280289302
+					},
+					{
+						"ver": 1,
+						"nodeId": 3981,
+						"x": 2280.0000215122295,
+						"y": 2034.9794280289302
 					}
 				],
 				"nodeIds": [
@@ -4786,19 +5455,31 @@
 					1124,
 					1125,
 					1134,
-					1422,
-					1423,
-					1424,
 					1922,
 					1923,
 					1924,
 					2068,
 					2069,
 					2070,
-					2394,
 					3435,
 					3436,
-					3762
+					3762,
+					3963,
+					3964,
+					3965,
+					3966,
+					3967,
+					3968,
+					3969,
+					3970,
+					3971,
+					3972,
+					3973,
+					3975,
+					3976,
+					3977,
+					3980,
+					3981
 				],
 				"condViews": [
 					{
@@ -4943,48 +5624,6 @@
 					},
 					{
 						"ver": 1,
-						"condId": 2110,
-						"points": {
-							"src": {
-								"x": 1447.500017209784,
-								"y": 2155.4835424231437
-							},
-							"dst": {
-								"x": 1763.5000172097848,
-								"y": 1679.4835424231455
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 2111,
-						"points": {
-							"src": {
-								"x": 1763.5000172097848,
-								"y": 1679.4835424231455
-							},
-							"dst": {
-								"x": 2318.5000172097834,
-								"y": 1687.4835424231455
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 2112,
-						"points": {
-							"src": {
-								"x": 2318.5000172097834,
-								"y": 1687.4835424231455
-							},
-							"dst": {
-								"x": 2054.500017209784,
-								"y": 2070.4835424231446
-							}
-						}
-					},
-					{
-						"ver": 1,
 						"condId": 2719,
 						"points": {
 							"src": {
@@ -5006,22 +5645,8 @@
 								"y": 514.4835424231447
 							},
 							"dst": {
-								"x": 259.00001720978435,
-								"y": 857.4835424231444
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 2721,
-						"points": {
-							"src": {
-								"x": 259.00001720978435,
-								"y": 857.4835424231444
-							},
-							"dst": {
-								"x": 741.5000172097843,
-								"y": 858.9835424231447
+								"x": 256.50001720978446,
+								"y": 854.9835424231445
 							}
 						}
 					},
@@ -5030,12 +5655,12 @@
 						"condId": 2722,
 						"points": {
 							"src": {
-								"x": 418.7625501288197,
-								"y": 1835.862633327387
+								"x": 18.76255012881984,
+								"y": 1793.3626333273871
 							},
 							"dst": {
-								"x": 430.00001720978395,
-								"y": 2159.983542423144
+								"x": 225.0000172097839,
+								"y": 2047.4835424231449
 							}
 						}
 					},
@@ -5044,12 +5669,12 @@
 						"condId": 2894,
 						"points": {
 							"src": {
-								"x": 741.5000172097843,
-								"y": 858.9835424231447
+								"x": 749.0000172097843,
+								"y": 846.4835424231447
 							},
 							"dst": {
-								"x": 498.50001720978435,
-								"y": 1118.9835424231446
+								"x": 558.5000172097841,
+								"y": 1083.9835424231444
 							}
 						}
 					},
@@ -5058,26 +5683,12 @@
 						"condId": 2896,
 						"points": {
 							"src": {
-								"x": 741.5000172097843,
-								"y": 858.9835424231447
+								"x": 749.0000172097843,
+								"y": 846.4835424231447
 							},
 							"dst": {
-								"x": 1070.0000215122295,
-								"y": 1132.4794280289302
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 2898,
-						"points": {
-							"src": {
-								"x": 430.00001720978395,
-								"y": 2159.983542423144
-							},
-							"dst": {
-								"x": 935.00002151223,
-								"y": 2157.4794280289298
+								"x": 965.0000215122295,
+								"y": 1087.4794280289302
 							}
 						}
 					},
@@ -5086,26 +5697,12 @@
 						"condId": 2899,
 						"points": {
 							"src": {
-								"x": 935.00002151223,
-								"y": 2157.4794280289298
+								"x": 1247.5000215122286,
+								"y": 1722.4794280289307
 							},
 							"dst": {
-								"x": 1447.500017209784,
-								"y": 2155.4835424231437
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 3382,
-						"points": {
-							"src": {
-								"x": 2054.500017209784,
-								"y": 2070.4835424231446
-							},
-							"dst": {
-								"x": 2352.500021512229,
-								"y": 2069.97942802893
+								"x": 1225.0000172097823,
+								"y": 1452.9835424231433
 							}
 						}
 					},
@@ -5181,29 +5778,15 @@
 					},
 					{
 						"ver": 1,
-						"condId": 5970,
-						"points": {
-							"src": {
-								"x": 765.0000215122293,
-								"y": 1422.4794280289311
-							},
-							"dst": {
-								"x": 418.7625501288197,
-								"y": 1835.862633327387
-							}
-						}
-					},
-					{
-						"ver": 1,
 						"condId": 5971,
 						"points": {
 							"src": {
-								"x": 1070.0000215122295,
-								"y": 1132.4794280289302
+								"x": 965.0000215122295,
+								"y": 1087.4794280289302
 							},
 							"dst": {
-								"x": 765.0000215122293,
-								"y": 1422.4794280289311
+								"x": 750.0000215122293,
+								"y": 1334.9794280289311
 							}
 						}
 					},
@@ -5212,12 +5795,334 @@
 						"condId": 5972,
 						"points": {
 							"src": {
-								"x": 498.50001720978435,
-								"y": 1118.9835424231446
+								"x": 558.5000172097841,
+								"y": 1083.9835424231444
 							},
 							"dst": {
-								"x": 765.0000215122293,
-								"y": 1422.4794280289311
+								"x": 750.0000215122293,
+								"y": 1334.9794280289311
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6309,
+						"points": {
+							"src": {
+								"x": 256.50001720978446,
+								"y": 854.9835424231445
+							},
+							"dst": {
+								"x": 749.0000172097843,
+								"y": 846.4835424231447
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6310,
+						"points": {
+							"src": {
+								"x": 750.0000215122293,
+								"y": 1334.9794280289311
+							},
+							"dst": {
+								"x": 262.5000215122302,
+								"y": 1589.9794280289307
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6311,
+						"points": {
+							"src": {
+								"x": 262.5000215122302,
+								"y": 1589.9794280289307
+							},
+							"dst": {
+								"x": 18.76255012881984,
+								"y": 1793.3626333273871
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6312,
+						"points": {
+							"src": {
+								"x": 225.0000172097839,
+								"y": 2047.4835424231449
+							},
+							"dst": {
+								"x": 477.5000215122302,
+								"y": 1867.479428028931
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6313,
+						"points": {
+							"src": {
+								"x": 477.5000215122302,
+								"y": 1867.479428028931
+							},
+							"dst": {
+								"x": 472.50002151223043,
+								"y": 2542.4794280289293
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6314,
+						"points": {
+							"src": {
+								"x": 472.50002151223043,
+								"y": 2542.4794280289293
+							},
+							"dst": {
+								"x": 857.5000215122298,
+								"y": 2242.4794280289298
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6315,
+						"points": {
+							"src": {
+								"x": 472.50002151223043,
+								"y": 2542.4794280289293
+							},
+							"dst": {
+								"x": 945.00002151223,
+								"y": 2522.4794280289284
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6316,
+						"points": {
+							"src": {
+								"x": 945.00002151223,
+								"y": 2522.4794280289284
+							},
+							"dst": {
+								"x": 1245.0000215122295,
+								"y": 2182.47942802893
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6318,
+						"points": {
+							"src": {
+								"x": 2200.00002151223,
+								"y": 2664.9794280289298
+							},
+							"dst": {
+								"x": 2197.5000215122295,
+								"y": 2339.979428028929
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6321,
+						"points": {
+							"src": {
+								"x": 2635.00002151223,
+								"y": 2147.4794280289307
+							},
+							"dst": {
+								"x": 2775.00002151223,
+								"y": 2367.4794280289298
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6322,
+						"points": {
+							"src": {
+								"x": 2775.00002151223,
+								"y": 2367.4794280289298
+							},
+							"dst": {
+								"x": 2697.500021512228,
+								"y": 2664.9794280289298
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6324,
+						"points": {
+							"src": {
+								"x": 945.00002151223,
+								"y": 2522.4794280289284
+							},
+							"dst": {
+								"x": 1237.5000215122298,
+								"y": 2657.4794280289298
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6325,
+						"points": {
+							"src": {
+								"x": 1237.5000215122298,
+								"y": 2657.4794280289298
+							},
+							"dst": {
+								"x": 2200.00002151223,
+								"y": 2664.9794280289298
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6326,
+						"points": {
+							"src": {
+								"x": 1237.5000215122298,
+								"y": 2657.4794280289298
+							},
+							"dst": {
+								"x": 1480.0000215122295,
+								"y": 2467.4794280289298
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6327,
+						"points": {
+							"src": {
+								"x": 1480.0000215122295,
+								"y": 2467.4794280289298
+							},
+							"dst": {
+								"x": 1745.0000215122295,
+								"y": 2319.97942802893
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6328,
+						"points": {
+							"src": {
+								"x": 1745.0000215122295,
+								"y": 2319.97942802893
+							},
+							"dst": {
+								"x": 2200.00002151223,
+								"y": 2664.9794280289298
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6329,
+						"points": {
+							"src": {
+								"x": 1745.0000215122295,
+								"y": 2319.97942802893
+							},
+							"dst": {
+								"x": 1245.0000215122295,
+								"y": 2182.47942802893
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6337,
+						"points": {
+							"src": {
+								"x": 1225.0000172097823,
+								"y": 1452.9835424231433
+							},
+							"dst": {
+								"x": 972.5000215122298,
+								"y": 1584.9794280289302
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6338,
+						"points": {
+							"src": {
+								"x": 972.5000215122298,
+								"y": 1584.9794280289302
+							},
+							"dst": {
+								"x": 477.5000215122302,
+								"y": 1867.479428028931
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6339,
+						"points": {
+							"src": {
+								"x": 857.5000215122298,
+								"y": 2242.4794280289298
+							},
+							"dst": {
+								"x": 1247.5000215122286,
+								"y": 1722.4794280289307
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6340,
+						"points": {
+							"src": {
+								"x": 1245.0000215122295,
+								"y": 2182.47942802893
+							},
+							"dst": {
+								"x": 1247.5000215122286,
+								"y": 1722.4794280289307
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6341,
+						"points": {
+							"src": {
+								"x": 2197.5000215122295,
+								"y": 2339.979428028929
+							},
+							"dst": {
+								"x": 2360.0000215122295,
+								"y": 2114.97942802893
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6342,
+						"points": {
+							"src": {
+								"x": 2360.0000215122295,
+								"y": 2114.97942802893
+							},
+							"dst": {
+								"x": 2635.00002151223,
+								"y": 2147.4794280289307
 							}
 						}
 					}
@@ -5233,31 +6138,47 @@
 					1719,
 					1738,
 					1739,
-					2110,
-					2111,
-					2112,
 					2719,
 					2720,
-					2721,
 					2722,
 					2894,
 					2896,
-					2898,
 					2899,
-					3382,
 					5470,
 					5625,
 					5626,
 					5627,
 					5628,
-					5970,
 					5971,
-					5972
+					5972,
+					6309,
+					6310,
+					6311,
+					6312,
+					6313,
+					6314,
+					6315,
+					6316,
+					6318,
+					6321,
+					6322,
+					6324,
+					6325,
+					6326,
+					6327,
+					6328,
+					6329,
+					6337,
+					6338,
+					6339,
+					6340,
+					6341,
+					6342
 				],
 				"scale": 0.40000000000000013,
 				"pos": {
-					"x": 204.9999913951079,
-					"y": 113.00822878842766
+					"x": 180.9999913951079,
+					"y": -249.99177121157234
 				}
 			},
 			{
@@ -5880,7 +6801,7 @@
 					5974,
 					5975
 				],
-				"scale": 0.20000000000000015,
+				"scale": 0.5000000000000001,
 				"pos": {
 					"x": -11.001764002901155,
 					"y": 249.0029314463704
@@ -6403,7 +7324,7 @@
 					5977,
 					5978
 				],
-				"scale": 0.40000000000000013,
+				"scale": 0.7000000000000001,
 				"pos": {
 					"x": 245.00000856346537,
 					"y": 243
@@ -7380,7 +8301,7 @@
 					6133,
 					6194
 				],
-				"scale": 0.5000000000000001,
+				"scale": 0.8,
 				"pos": {
 					"x": 245,
 					"y": 15
@@ -7859,7 +8780,7 @@
 					5983,
 					5984
 				],
-				"scale": 0.20000000000000015,
+				"scale": 0.5000000000000001,
 				"pos": {
 					"x": -143,
 					"y": 250
@@ -7871,75 +8792,131 @@
 					{
 						"ver": 1,
 						"nodeId": 2045,
-						"x": 58,
-						"y": 85
+						"x": -97.71428571428564,
+						"y": 639.2857142857142
 					},
 					{
 						"ver": 1,
 						"nodeId": 2046,
-						"x": 58.71428571428572,
-						"y": 479.71428571428567
+						"x": -92.71428571428567,
+						"y": 329.71428571428584
 					},
 					{
 						"ver": 1,
 						"nodeId": 2048,
-						"x": 684.9999999999993,
-						"y": 866.4285714285713
-					},
-					{
-						"ver": 1,
-						"nodeId": 2049,
-						"x": 686.4285714285713,
-						"y": 111.78571428571433
+						"x": 249.285714285714,
+						"y": -169.28571428571402
 					},
 					{
 						"ver": 1,
 						"nodeId": 2054,
-						"x": 375.71428571428527,
-						"y": 482.85714285714266
+						"x": -92.85714285714312,
+						"y": 107.14285714285688
 					},
 					{
 						"ver": 1,
 						"nodeId": 2055,
-						"x": 365.71428571428584,
-						"y": 865.7142857142854
+						"x": 427.14285714285717,
+						"y": 992.8571428571422
 					},
 					{
 						"ver": 1,
 						"nodeId": 2057,
-						"x": 57.142857142857,
-						"y": 867.1428571428573
+						"x": 654.2857142857146,
+						"y": 532.8571428571436
 					},
 					{
 						"ver": 1,
 						"nodeId": 2058,
-						"x": 976.785714285714,
-						"y": 122.85714285714289
+						"x": 1938.2142857142856,
+						"y": 628.571428571429
 					},
 					{
 						"ver": 1,
 						"nodeId": 2081,
-						"x": 690,
-						"y": 469.9999999999999
+						"x": 429.9999999999996,
+						"y": 105.71428571428555
 					},
 					{
 						"ver": 1,
 						"nodeId": 2082,
-						"x": 1289.9999999999986,
-						"y": 117.49999999999989
+						"x": 1954.2857142857122,
+						"y": 921.7857142857146
+					},
+					{
+						"ver": 1,
+						"nodeId": 3923,
+						"x": -14.28571428571405,
+						"y": -141.42857142857127
+					},
+					{
+						"ver": 1,
+						"nodeId": 3926,
+						"x": 1104.285714285714,
+						"y": 115.71428571428604
+					},
+					{
+						"ver": 1,
+						"nodeId": 3927,
+						"x": 154.2857142857145,
+						"y": 962.8571428571427
+					},
+					{
+						"ver": 1,
+						"nodeId": 3928,
+						"x": 1124.2857142857144,
+						"y": 417.14285714285694
+					},
+					{
+						"ver": 1,
+						"nodeId": 3929,
+						"x": 1687.1428571428569,
+						"y": 115.71428571428558
+					},
+					{
+						"ver": 1,
+						"nodeId": 3930,
+						"x": 1409.9999999999998,
+						"y": 912.857142857143
+					},
+					{
+						"ver": 1,
+						"nodeId": 3931,
+						"x": 1414.2857142857133,
+						"y": 508.57142857142844
+					},
+					{
+						"ver": 1,
+						"nodeId": 3932,
+						"x": 614.285714285714,
+						"y": 301.42857142857156
+					},
+					{
+						"ver": 1,
+						"nodeId": 3978,
+						"x": 1074.2857142857138,
+						"y": 807.1428571428571
 					}
 				],
 				"nodeIds": [
 					2045,
 					2046,
 					2048,
-					2049,
 					2054,
 					2055,
 					2057,
 					2058,
 					2081,
-					2082
+					2082,
+					3923,
+					3926,
+					3927,
+					3928,
+					3929,
+					3930,
+					3931,
+					3932,
+					3978
 				],
 				"condViews": [
 					{
@@ -7947,26 +8924,12 @@
 						"condId": 2856,
 						"points": {
 							"src": {
-								"x": 138,
-								"y": 165
+								"x": -17.714285714285637,
+								"y": 719.2857142857142
 							},
 							"dst": {
-								"x": 138.71428571428572,
-								"y": 559.7142857142857
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 2873,
-						"points": {
-							"src": {
-								"x": 764.9999999999993,
-								"y": 946.4285714285713
-							},
-							"dst": {
-								"x": 445.71428571428584,
-								"y": 945.7142857142854
+								"x": -12.714285714285666,
+								"y": 409.71428571428584
 							}
 						}
 					},
@@ -7975,12 +8938,12 @@
 						"condId": 2878,
 						"points": {
 							"src": {
-								"x": 138.71428571428572,
-								"y": 559.7142857142857
+								"x": -12.714285714285666,
+								"y": 409.71428571428584
 							},
 							"dst": {
-								"x": 455.71428571428527,
-								"y": 562.8571428571427
+								"x": -12.857142857143117,
+								"y": 187.14285714285688
 							}
 						}
 					},
@@ -7989,116 +8952,295 @@
 						"condId": 2880,
 						"points": {
 							"src": {
-								"x": 445.71428571428584,
-								"y": 945.7142857142854
+								"x": 507.14285714285717,
+								"y": 1072.8571428571422
 							},
 							"dst": {
-								"x": 137.142857142857,
-								"y": 947.1428571428573
+								"x": 734.2857142857146,
+								"y": 612.8571428571436
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 2881,
+						"condId": 6253,
 						"points": {
 							"src": {
-								"x": 137.142857142857,
-								"y": 947.1428571428573
+								"x": -12.857142857143117,
+								"y": 187.14285714285688
 							},
 							"dst": {
-								"x": 138.71428571428572,
-								"y": 559.7142857142857
+								"x": 65.71428571428595,
+								"y": -61.428571428571274
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 2882,
+						"condId": 6258,
 						"points": {
 							"src": {
-								"x": 766.4285714285713,
-								"y": 191.78571428571433
+								"x": 509.9999999999996,
+								"y": 185.71428571428555
 							},
 							"dst": {
-								"x": 1056.785714285714,
-								"y": 202.8571428571429
+								"x": 1184.285714285714,
+								"y": 195.71428571428604
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 2920,
+						"condId": 6262,
 						"points": {
 							"src": {
-								"x": 1056.785714285714,
-								"y": 202.8571428571429
+								"x": 234.2857142857145,
+								"y": 1042.8571428571427
 							},
 							"dst": {
-								"x": 1369.9999999999986,
-								"y": 197.4999999999999
+								"x": 507.14285714285717,
+								"y": 1072.8571428571422
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 2921,
+						"condId": 6265,
 						"points": {
 							"src": {
-								"x": 455.71428571428527,
-								"y": 562.8571428571427
+								"x": 1184.285714285714,
+								"y": 195.71428571428604
 							},
 							"dst": {
-								"x": 770,
-								"y": 549.9999999999999
+								"x": 1204.2857142857144,
+								"y": 497.14285714285694
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 2922,
+						"condId": 6266,
 						"points": {
 							"src": {
-								"x": 770,
-								"y": 549.9999999999999
+								"x": 1204.2857142857144,
+								"y": 497.14285714285694
 							},
 							"dst": {
-								"x": 764.9999999999993,
-								"y": 946.4285714285713
+								"x": 734.2857142857146,
+								"y": 612.8571428571436
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 2923,
+						"condId": 6267,
 						"points": {
 							"src": {
-								"x": 770,
-								"y": 549.9999999999999
+								"x": 2018.2142857142856,
+								"y": 708.571428571429
 							},
 							"dst": {
-								"x": 766.4285714285713,
-								"y": 191.78571428571433
+								"x": 2034.2857142857122,
+								"y": 1001.7857142857146
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6268,
+						"points": {
+							"src": {
+								"x": 1184.285714285714,
+								"y": 195.71428571428604
+							},
+							"dst": {
+								"x": 1767.1428571428569,
+								"y": 195.71428571428558
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6270,
+						"points": {
+							"src": {
+								"x": 1767.1428571428569,
+								"y": 195.71428571428558
+							},
+							"dst": {
+								"x": 2018.2142857142856,
+								"y": 708.571428571429
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6272,
+						"points": {
+							"src": {
+								"x": 1489.9999999999998,
+								"y": 992.857142857143
+							},
+							"dst": {
+								"x": 2018.2142857142856,
+								"y": 708.571428571429
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6273,
+						"points": {
+							"src": {
+								"x": 1767.1428571428569,
+								"y": 195.71428571428558
+							},
+							"dst": {
+								"x": 1494.2857142857133,
+								"y": 588.5714285714284
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6274,
+						"points": {
+							"src": {
+								"x": 1494.2857142857133,
+								"y": 588.5714285714284
+							},
+							"dst": {
+								"x": 1489.9999999999998,
+								"y": 992.857142857143
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6276,
+						"points": {
+							"src": {
+								"x": 509.9999999999996,
+								"y": 185.71428571428555
+							},
+							"dst": {
+								"x": 234.2857142857145,
+								"y": 1042.8571428571427
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6277,
+						"points": {
+							"src": {
+								"x": 65.71428571428595,
+								"y": -61.428571428571274
+							},
+							"dst": {
+								"x": 329.285714285714,
+								"y": -89.28571428571402
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6278,
+						"points": {
+							"src": {
+								"x": 329.285714285714,
+								"y": -89.28571428571402
+							},
+							"dst": {
+								"x": 509.9999999999996,
+								"y": 185.71428571428555
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6279,
+						"points": {
+							"src": {
+								"x": 734.2857142857146,
+								"y": 612.8571428571436
+							},
+							"dst": {
+								"x": 694.285714285714,
+								"y": 381.42857142857156
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6280,
+						"points": {
+							"src": {
+								"x": 694.285714285714,
+								"y": 381.42857142857156
+							},
+							"dst": {
+								"x": 509.9999999999996,
+								"y": 185.71428571428555
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6330,
+						"points": {
+							"src": {
+								"x": 1489.9999999999998,
+								"y": 992.857142857143
+							},
+							"dst": {
+								"x": 1154.2857142857138,
+								"y": 887.1428571428571
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6331,
+						"points": {
+							"src": {
+								"x": 1154.2857142857138,
+								"y": 887.1428571428571
+							},
+							"dst": {
+								"x": 734.2857142857146,
+								"y": 612.8571428571436
 							}
 						}
 					}
 				],
 				"condIds": [
 					2856,
-					2873,
 					2878,
 					2880,
-					2881,
-					2882,
-					2920,
-					2921,
-					2922,
-					2923
+					6253,
+					6258,
+					6262,
+					6265,
+					6266,
+					6267,
+					6268,
+					6270,
+					6272,
+					6273,
+					6274,
+					6276,
+					6277,
+					6278,
+					6279,
+					6280,
+					6330,
+					6331
 				],
-				"scale": 0.20000000000000015,
+				"scale": 0.7000000000000001,
 				"pos": {
-					"x": 158,
-					"y": 66
+					"x": -250,
+					"y": -3
 				}
 			},
 			{
@@ -8272,7 +9414,7 @@
 					2892,
 					2893
 				],
-				"scale": 0.30000000000000016,
+				"scale": 0.6000000000000001,
 				"pos": {
 					"x": 130,
 					"y": 36
@@ -8493,7 +9635,7 @@
 					5089,
 					5090
 				],
-				"scale": 0.20000000000000015,
+				"scale": 0.5000000000000001,
 				"pos": {
 					"x": 230,
 					"y": 250
@@ -8714,7 +9856,7 @@
 					6197,
 					6198
 				],
-				"scale": 0.5000000000000001,
+				"scale": 0.8,
 				"pos": {
 					"x": 243,
 					"y": 250

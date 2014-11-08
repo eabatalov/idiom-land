@@ -22,7 +22,7 @@
         <event-block sid="9632181806524661">
             <conditions>
                 <condition id="0" name="On function" sid="8630506446783809" type="Function">
-                    <param id="0" name="Name">&quot;C2API_InjectTicketCompletion&quot;</param>
+                    <param id="0" name="Name">&quot;C2API_InjectBusTicketCompletion&quot;</param>
                 </condition>
             </conditions>
             <actions />
@@ -32,14 +32,14 @@
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="5835478108467434" type="System">
                             <param id="0" name="First value">COINS_COLLECTED</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">COINS_OVERALL</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">5</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="9104400551606684" type="Function">
                             <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;ticket_complete&quot;{###}&quot;Player&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;bus_ticket_complete&quot;{###}&quot;Player&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -50,7 +50,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="2785449849837624" type="Function">
                             <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;ticket_not_complete&quot;{###}&quot;Player&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;bus_ticket_not_complete&quot;{###}&quot;Player&quot;</param>
                         </action>
                     </actions>
                 </event-block>

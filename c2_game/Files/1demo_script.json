@@ -59,14 +59,14 @@
 					"label": "Bus down street",
 					"continue": false,
 					"inCondIds": [
-						5970
+						6311
 					],
 					"outCondIds": [
 						2722
 					],
 					"props": {
 						"id": "driver2",
-						"text": "There is a bus down the street. The price is quite affordable",
+						"text": "There is a bus down the street. The price is quite affordable.",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -125,7 +125,7 @@
 					],
 					"props": {
 						"id": "driver2",
-						"text": "No problem.\nThat will be 50 coins, please",
+						"text": "No problem.\nThat will be 20 coins, please",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -137,7 +137,7 @@
 					"label": "\"New kid on the .\"",
 					"continue": false,
 					"inCondIds": [
-						2721
+						6309
 					],
 					"outCondIds": [
 						2894,
@@ -210,7 +210,7 @@
 						2899
 					],
 					"outCondIds": [
-						2110
+						6337
 					],
 					"props": {
 						"enabled": true
@@ -230,63 +230,6 @@
 						1739
 					],
 					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1422,
-					"type": 1,
-					"label": "Try find all idioms",
-					"continue": false,
-					"inCondIds": [
-						2110
-					],
-					"outCondIds": [
-						2111
-					],
-					"props": {
-						"id": "driver2",
-						"text": "Try to find all the idioms on this level",
-						"phraseType": "SPEAK",
-						"phraseSize": "MEDIUM"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 1423,
-					"type": 1,
-					"label": "Hat",
-					"continue": false,
-					"inCondIds": [
-						2111
-					],
-					"outCondIds": [
-						2112
-					],
-					"props": {
-						"id": "driver2",
-						"text": "I got this hat from my father.\nAnd he got it from his father",
-						"phraseType": "SPEAK",
-						"phraseSize": "LARGE"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 1424,
-					"type": 1,
-					"label": "5 accidents",
-					"continue": false,
-					"inCondIds": [
-						2112
-					],
-					"outCondIds": [
-						3382
-					],
-					"props": {
-						"id": "driver2",
-						"text": "I'm a good driver. I had only 5 accidents\n...\nThis year",
-						"phraseType": "SPEAK",
-						"phraseSize": "LARGE"
-					}
 				},
 				{
 					"ver": 1,
@@ -317,7 +260,7 @@
 						2720
 					],
 					"outCondIds": [
-						2721
+						6309
 					],
 					"props": {
 						"id": "driver2",
@@ -336,7 +279,7 @@
 						2722
 					],
 					"outCondIds": [
-						2898
+						6312
 					],
 					"props": {
 						"id": "Player",
@@ -390,32 +333,17 @@
 					"label": "IdiomDialogCompleted",
 					"continue": true,
 					"inCondIds": [
-						2898
+						6339,
+						6340
 					],
 					"outCondIds": [
 						2899
 					],
 					"props": {
-						"name": "C2API_IdiomDialogCompleted",
+						"name": "C2API_TaxiIdiomDialogCompleted",
 						"source": "c2",
 						"rollbackName": "",
 						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2394,
-					"type": 5,
-					"label": "Interact",
-					"continue": false,
-					"inCondIds": [
-						3382
-					],
-					"outCondIds": [],
-					"props": {
-						"id": "driver2",
-						"name": "speak",
-						"secs": -1
 					}
 				},
 				{
@@ -458,10 +386,318 @@
 						5972
 					],
 					"outCondIds": [
-						5970
+						6310
 					],
 					"props": {
 						"text": "\"New kid on the block\" is a newcomer, the newest person in a group"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3963,
+					"type": 1,
+					"label": "I am newcomer",
+					"continue": false,
+					"inCondIds": [
+						6310
+					],
+					"outCondIds": [
+						6311
+					],
+					"props": {
+						"id": "Player",
+						"text": "Yes. I've just arrived here.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3964,
+					"type": 1,
+					"label": "15 coins",
+					"continue": false,
+					"inCondIds": [
+						6312,
+						6338
+					],
+					"outCondIds": [
+						6313
+					],
+					"props": {
+						"id": "driver2",
+						"text": "If you give me 15 coins, I'll drive you to the city center and I'll tell you my favorite idiom about driving",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3965,
+					"type": 10,
+					"label": "InjectTicketCompletion",
+					"continue": false,
+					"inCondIds": [
+						6313
+					],
+					"outCondIds": [
+						6314,
+						6315
+					],
+					"props": {
+						"name": "C2API_InjectTaxiTicketCompletion",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3966,
+					"type": 1,
+					"label": "I don't have",
+					"continue": false,
+					"inCondIds": [
+						6314
+					],
+					"outCondIds": [
+						6339
+					],
+					"props": {
+						"id": "Player",
+						"text": "I don't have 15 coins for now",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3967,
+					"type": 3,
+					"label": "Take the taxi?",
+					"continue": false,
+					"inCondIds": [
+						6315
+					],
+					"outCondIds": [
+						6316,
+						6324
+					],
+					"props": {
+						"id": "Player",
+						"text": "Take the taxi?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL",
+						"ans1": "Yes",
+						"ans2": "No",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3968,
+					"type": 1,
+					"label": "No thank you",
+					"continue": false,
+					"inCondIds": [
+						6316,
+						6329
+					],
+					"outCondIds": [
+						6340
+					],
+					"props": {
+						"id": "Player",
+						"text": "No, thank you.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3969,
+					"type": 1,
+					"label": "Yes, let's go",
+					"continue": false,
+					"inCondIds": [
+						6325,
+						6328
+					],
+					"outCondIds": [
+						6318
+					],
+					"props": {
+						"id": "Player",
+						"text": "Yes. Let's go!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3970,
+					"type": 1,
+					"label": "backseat driver",
+					"continue": false,
+					"inCondIds": [
+						6318
+					],
+					"outCondIds": [
+						6341
+					],
+					"props": {
+						"id": "driver2",
+						"text": "Thanks!\nMy favorite idiom is \"backseat driver\"",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3971,
+					"type": 1,
+					"label": "let's go",
+					"continue": false,
+					"inCondIds": [
+						6321
+					],
+					"outCondIds": [
+						6322
+					],
+					"props": {
+						"id": "driver2",
+						"text": "Now let's go.\nI hope you're not a backseat driver.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3972,
+					"type": 11,
+					"label": "Good job",
+					"continue": false,
+					"inCondIds": [
+						6342
+					],
+					"outCondIds": [
+						6321
+					],
+					"props": {
+						"text": "Good job, Foxy!\nYou've just completed the quest and found hidden \"backseat driver\" idiom."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3973,
+					"type": 10,
+					"label": "CompleteLevel",
+					"continue": false,
+					"inCondIds": [
+						6322
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_CompleteLevel",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3975,
+					"type": 10,
+					"label": "InjectTalkedWithAllNPCs",
+					"continue": false,
+					"inCondIds": [
+						6324
+					],
+					"outCondIds": [
+						6325,
+						6326
+					],
+					"props": {
+						"name": "C2API_InjectTalkedWithAllNPCs",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3976,
+					"type": 11,
+					"label": "Are you sure?",
+					"continue": false,
+					"inCondIds": [
+						6326
+					],
+					"outCondIds": [
+						6327
+					],
+					"props": {
+						"text": "You didn't speak with all people around, so you didn't find all idioms on the level."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3977,
+					"type": 3,
+					"label": "Go or not?",
+					"continue": false,
+					"inCondIds": [
+						6327
+					],
+					"outCondIds": [
+						6328,
+						6329
+					],
+					"props": {
+						"id": "Player",
+						"text": "Do I want to finish the level?",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM",
+						"ans1": "No",
+						"ans2": "Yes",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3980,
+					"type": 12,
+					"label": "Controls Disable",
+					"continue": true,
+					"inCondIds": [
+						6337
+					],
+					"outCondIds": [
+						6338
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3981,
+					"type": 1,
+					"label": "backseat driver",
+					"continue": false,
+					"inCondIds": [
+						6341
+					],
+					"outCondIds": [
+						6342
+					],
+					"props": {
+						"id": "driver2",
+						"text": "Backseat driver is a passenger in a car who comments driver's actions during the ride. They annoy me.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
 					}
 				}
 			],
@@ -538,30 +774,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2110,
-					"type": 2,
-					"props": {
-						"id": "driver2"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2111,
-					"type": 2,
-					"props": {
-						"id": "driver2"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2112,
-					"type": 2,
-					"props": {
-						"id": "driver2"
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2719,
 					"type": 11,
 					"props": {
@@ -571,14 +783,6 @@
 				{
 					"ver": 1,
 					"id": 2720,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2721,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -606,25 +810,9 @@
 				},
 				{
 					"ver": 1,
-					"id": 2898,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 2899,
 					"type": 8,
 					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 3382,
-					"type": 2,
-					"props": {
-						"id": "driver2"
-					}
 				},
 				{
 					"ver": 1,
@@ -664,12 +852,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 5970,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 5971,
 					"type": 8,
 					"props": {}
@@ -679,6 +861,180 @@
 					"id": 5972,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6309,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6310,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6311,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6312,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6313,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6314,
+					"type": 10,
+					"props": {
+						"name": "taxi_ticket_not_complete"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6315,
+					"type": 10,
+					"props": {
+						"name": "taxi_ticket_complete"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6316,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6318,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6321,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6322,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6324,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6325,
+					"type": 10,
+					"props": {
+						"name": "talked_with_all_npcs"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6326,
+					"type": 10,
+					"props": {
+						"name": "not_talked_with_all_npcs"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6327,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6328,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6329,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6337,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_driver2"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6338,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6339,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6340,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6341,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6342,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
 				}
 			]
 		},
@@ -3566,7 +3922,8 @@
 							"Player",
 							"driver"
 						],
-						"objPool": []
+						"objPool": [],
+						"text": ""
 					}
 				},
 				{
@@ -3576,8 +3933,7 @@
 					"label": "Main storyline",
 					"continue": false,
 					"inCondIds": [
-						2856,
-						2881
+						2856
 					],
 					"outCondIds": [
 						2878
@@ -3596,35 +3952,16 @@
 					"label": "Ticket incompl 1",
 					"continue": false,
 					"inCondIds": [
-						2922
+						6277
 					],
 					"outCondIds": [
-						2873
+						6278
 					],
 					"props": {
 						"id": "driver",
-						"text": "You need to have 5 coins to buy a bus ticket",
+						"text": "Yes, it goes.",
 						"phraseType": "SPEAK",
-						"phraseSize": "MEDIUM"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2049,
-					"type": 1,
-					"label": "Ticket complete 1",
-					"continue": false,
-					"inCondIds": [
-						2923
-					],
-					"outCondIds": [
-						2882
-					],
-					"props": {
-						"id": "driver",
-						"text": "I see you have enough coins to buy the ticket",
-						"phraseType": "SPEAK",
-						"phraseSize": "MEDIUM"
+						"phraseSize": "SMALL"
 					}
 				},
 				{
@@ -3637,7 +3974,7 @@
 						2878
 					],
 					"outCondIds": [
-						2921
+						6253
 					],
 					"props": {
 						"enabled": false
@@ -3647,10 +3984,10 @@
 					"ver": 1,
 					"id": 2055,
 					"type": 1,
-					"label": "Ticket incompl 2",
+					"label": "Ticket incompl 3",
 					"continue": false,
 					"inCondIds": [
-						2873
+						6262
 					],
 					"outCondIds": [
 						2880
@@ -3666,13 +4003,15 @@
 					"ver": 1,
 					"id": 2057,
 					"type": 12,
-					"label": "",
+					"label": "Restart dialog 1",
 					"continue": false,
 					"inCondIds": [
-						2880
+						2880,
+						6266,
+						6331
 					],
 					"outCondIds": [
-						2881
+						6279
 					],
 					"props": {
 						"enabled": true
@@ -3682,13 +4021,14 @@
 					"ver": 1,
 					"id": 2058,
 					"type": 1,
-					"label": "Ticket complete 2",
+					"label": "leaving now",
 					"continue": false,
 					"inCondIds": [
-						2882
+						6270,
+						6272
 					],
 					"outCondIds": [
-						2920
+						6267
 					],
 					"props": {
 						"id": "driver",
@@ -3704,14 +4044,15 @@
 					"label": "InjectTicketCompletion",
 					"continue": false,
 					"inCondIds": [
-						2921
+						6278,
+						6280
 					],
 					"outCondIds": [
-						2922,
-						2923
+						6258,
+						6276
 					],
 					"props": {
-						"name": "C2API_InjectTicketCompletion",
+						"name": "C2API_InjectBusTicketCompletion",
 						"source": "c2",
 						"rollbackName": "",
 						"params": []
@@ -3724,7 +4065,7 @@
 					"label": "CompleteLevel",
 					"continue": false,
 					"inCondIds": [
-						2920
+						6267
 					],
 					"outCondIds": [],
 					"props": {
@@ -3732,6 +4073,182 @@
 						"source": "c2",
 						"rollbackName": "",
 						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3923,
+					"type": 1,
+					"label": "Is this bus",
+					"continue": false,
+					"inCondIds": [
+						6253
+					],
+					"outCondIds": [
+						6277
+					],
+					"props": {
+						"id": "Player",
+						"text": "Hello!\nIs this bus goes to the city center?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3926,
+					"type": 3,
+					"label": "Get on the bus?",
+					"continue": false,
+					"inCondIds": [
+						6258
+					],
+					"outCondIds": [
+						6265,
+						6268
+					],
+					"props": {
+						"id": "driver",
+						"text": "5 coins please",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL",
+						"ans1": "Buy the ticket",
+						"ans2": "Don't buy the ticket",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3927,
+					"type": 1,
+					"label": "Ticket incompl 2",
+					"continue": false,
+					"inCondIds": [
+						6276
+					],
+					"outCondIds": [
+						6262
+					],
+					"props": {
+						"id": "driver",
+						"text": "You need to have 5\ncoins to buy a bus ticket.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3928,
+					"type": 1,
+					"label": "No",
+					"continue": false,
+					"inCondIds": [
+						6265
+					],
+					"outCondIds": [
+						6266
+					],
+					"props": {
+						"id": "Player",
+						"text": "No, thank you,",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3929,
+					"type": 10,
+					"label": "InjectTalkedWithAllNPCs",
+					"continue": false,
+					"inCondIds": [
+						6268
+					],
+					"outCondIds": [
+						6270,
+						6273
+					],
+					"props": {
+						"name": "C2API_InjectTalkedWithAllNPCs",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3930,
+					"type": 3,
+					"label": "Go or not?",
+					"continue": false,
+					"inCondIds": [
+						6274
+					],
+					"outCondIds": [
+						6272,
+						6330
+					],
+					"props": {
+						"id": "Player",
+						"text": "Do I want to finish the level?",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM",
+						"ans1": "No",
+						"ans2": "Yes",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3931,
+					"type": 11,
+					"label": "Are you sure?",
+					"continue": false,
+					"inCondIds": [
+						6273
+					],
+					"outCondIds": [
+						6274
+					],
+					"props": {
+						"text": "You didn't speak with all people around, so you didn't find all idioms on the level."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3932,
+					"type": 12,
+					"label": "Restart dialog 2",
+					"continue": true,
+					"inCondIds": [
+						6279
+					],
+					"outCondIds": [
+						6280
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3978,
+					"type": 1,
+					"label": "No thanks",
+					"continue": false,
+					"inCondIds": [
+						6330
+					],
+					"outCondIds": [
+						6331
+					],
+					"props": {
+						"id": "Player",
+						"text": "No, thanks.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
 					}
 				}
 			],
@@ -3741,14 +4258,6 @@
 					"id": 2856,
 					"type": 1,
 					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2873,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
 				},
 				{
 					"ver": 1,
@@ -3768,46 +4277,134 @@
 				},
 				{
 					"ver": 1,
-					"id": 2881,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2882,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2920,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2921,
+					"id": 6253,
 					"type": 8,
 					"props": {}
 				},
 				{
 					"ver": 1,
-					"id": 2922,
+					"id": 6258,
 					"type": 10,
 					"props": {
-						"name": "ticket_not_complete"
+						"name": "bus_ticket_complete"
 					}
 				},
 				{
 					"ver": 1,
-					"id": 2923,
+					"id": 6262,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6265,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6266,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6267,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6268,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6270,
 					"type": 10,
 					"props": {
-						"name": "ticket_complete"
+						"name": "talked_with_all_npcs"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6272,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6273,
+					"type": 10,
+					"props": {
+						"name": "not_talked_with_all_npcs"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6274,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6276,
+					"type": 10,
+					"props": {
+						"name": "bus_ticket_not_complete"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6277,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6278,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6279,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_driver"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6280,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6330,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6331,
+					"type": 11,
+					"props": {
+						"clearStage": true
 					}
 				}
 			]
