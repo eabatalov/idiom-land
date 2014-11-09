@@ -40,6 +40,15 @@
                                 <action id="-9" name="Destroy" sid="7950463541264595" type="LevelsMenuLevelNameText" />
                             </actions>
                             <sub-events>
+                                <comment>XXX temporarely disable showing of levels list because we have only one level now.</comment>
+                                <event-block sid="2230403460694018">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="4617851911626804" type="System">
+                                            <param id="0" name="Layout">&quot;1demo&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="1491879446147798">
                                     <conditions />
                                     <actions>
