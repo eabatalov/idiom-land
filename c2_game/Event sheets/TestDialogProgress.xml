@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TestDialogProgress</name>
+    <events>
+        <event-group description="" sid="7108380131789963" title="Test dialog progress">
+            <sub-events>
+                <event-block sid="7025200270887882">
+                    <conditions>
+                        <condition id="1" name="Guessed idioms changed" sid="1619502197592651" type="LevelIdiomProgressTracker" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5987060133884695">
+                            <conditions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="5992940093554451" type="TestDialogProgressLine">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="4864536636839356" type="TestDialogProgressLine">
+                                    <param id="0" name="Height">TestDialogProgressBackground.Height * (LevelIdiomProgressTracker.getLevelGuessedIdiomsCount / LevelIdiomProgressTracker.getLevelIdiomsCount)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

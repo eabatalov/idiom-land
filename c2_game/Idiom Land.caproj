@@ -7487,193 +7487,209 @@
             </object-folder>
         </object-folder>
         <object-folder name="TestDialog">
+            <object-folder name="Background">
+                <object-type name="TestDialogBackground" sid="8879209475646582">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8889753829348977" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\back.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TestDialogEditor" sid="3060551902344727">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7995525127529052" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\teacher.png">
+                                <collision-poly>
+                                    <point x="0.0714286" y="0.0572917" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.805195" y="0.15625" />
+                                    <point x="0.584416" y="0.666667" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.253247" y="0.796875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TestDialogProjectorLight" sid="5686354537068885">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7436263965967671" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.501139" original-source="C:\Users\Andy\Desktop\dialog\buttons\light.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TestDialogQuestionTextBg" sid="1871912747189171">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6181470904816734" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\sprite-question.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TestDialogQuestionSprite" sid="5465109697721361">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9700926708880331" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\quest-icon.png">
+                                <collision-poly>
+                                    <point x="0.151515" y="0.151515" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.848485" y="0.151515" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.848485" y="0.848485" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.151515" y="0.848485" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Buttons">
+                <object-type name="TestDialogAnswerFalseBtn" sid="5201093056781649">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="401943430504907" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\false-off.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.99375" y="0.0125" />
+                                    <point x="0.99375" y="0.9875" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="3460032212081151" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\false-on.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.99375" y="0.0125" />
+                                    <point x="0.99375" y="0.9875" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TestDialogAnswerTrueBtn" sid="7336944252899537">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="7641521407007852" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-off.png">
+                                <collision-poly>
+                                    <point x="0.00625" y="0.0125" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0.00625" y="0.9875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="6233505507808754" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-on.png">
+                                <collision-poly>
+                                    <point x="0.00625" y="0.0125" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0.00625" y="0.9875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Question">
+                <object-type name="TestDialogQuestionSituationPhoto" sid="9963078062898053">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="1demo_policeman" pingpong="0" repeatcount="1" repeatto="0" sid="3368699911828553" speed="5">
+                            <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\policeman.png">
+                                <collision-poly>
+                                    <point x="0.00744417" y="0.0114068" />
+                                    <point x="0.990074" y="0.0152091" />
+                                    <point x="0.990074" y="0.984791" />
+                                    <point x="0.00744417" y="0.988593" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="1demo_balloons" pingpong="0" repeatcount="1" repeatto="0" sid="2126955758319223" speed="5">
+                            <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\veider.png">
+                                <collision-poly>
+                                    <point x="0.00744417" y="0.0114068" />
+                                    <point x="0.990074" y="0.0152091" />
+                                    <point x="0.990074" y="0.984791" />
+                                    <point x="0.00744417" y="0.988593" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="1demo_captain" pingpong="0" repeatcount="1" repeatto="0" sid="3423601724115761" speed="5">
+                            <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\cap.png">
+                                <collision-poly>
+                                    <point x="0.00744417" y="0.0114068" />
+                                    <point x="0.990074" y="0.0152091" />
+                                    <point x="0.990074" y="0.984791" />
+                                    <point x="0.00744417" y="0.988593" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="1demo_kebab" pingpong="0" repeatcount="1" repeatto="0" sid="1139229419377495" speed="5">
+                            <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\kebab.png">
+                                <collision-poly>
+                                    <point x="0.00744417" y="0.0114068" />
+                                    <point x="0.990074" y="0.0152091" />
+                                    <point x="0.990074" y="0.984791" />
+                                    <point x="0.00744417" y="0.988593" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="1demo_taxi" pingpong="0" repeatcount="1" repeatto="0" sid="5469112983980685" speed="5">
+                            <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\taxi.png">
+                                <collision-poly>
+                                    <point x="0.00744417" y="0.0114068" />
+                                    <point x="0.990074" y="0.0152091" />
+                                    <point x="0.990074" y="0.984791" />
+                                    <point x="0.00744417" y="0.988593" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TestDialogQuestionText" sid="9414488223775853">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Progress">
+                <object-type name="TestDialogProgressBackground" sid="9681577560665341">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4648552953548377" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\progress-line.png">
+                                <collision-poly>
+                                    <point x="0.125" y="0.00742574" />
+                                    <point x="0.875" y="0.00742574" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.875" y="0.992574" />
+                                    <point x="0.125" y="0.992574" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TestDialogProgressLine" sid="8079938375932336">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2602539764824083" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-type name="TestDialogLevelRuntime" sid="9524380120170963">
                 <plugin id="TestDialogLevelRuntimePlugin" />
-            </object-type>
-            <object-type name="TestDialogQuestionText" sid="9414488223775853">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TestDialogQuestionSituationPhoto" sid="9963078062898053">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="1demo_policeman" pingpong="0" repeatcount="1" repeatto="0" sid="3368699911828553" speed="5">
-                        <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\policeman.png">
-                            <collision-poly>
-                                <point x="0.00744417" y="0.0114068" />
-                                <point x="0.990074" y="0.0152091" />
-                                <point x="0.990074" y="0.984791" />
-                                <point x="0.00744417" y="0.988593" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="1demo_balloons" pingpong="0" repeatcount="1" repeatto="0" sid="2126955758319223" speed="5">
-                        <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\veider.png">
-                            <collision-poly>
-                                <point x="0.00744417" y="0.0114068" />
-                                <point x="0.990074" y="0.0152091" />
-                                <point x="0.990074" y="0.984791" />
-                                <point x="0.00744417" y="0.988593" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="1demo_captain" pingpong="0" repeatcount="1" repeatto="0" sid="3423601724115761" speed="5">
-                        <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\cap.png">
-                            <collision-poly>
-                                <point x="0.00744417" y="0.0114068" />
-                                <point x="0.990074" y="0.0152091" />
-                                <point x="0.990074" y="0.984791" />
-                                <point x="0.00744417" y="0.988593" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="1demo_kebab" pingpong="0" repeatcount="1" repeatto="0" sid="1139229419377495" speed="5">
-                        <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\kebab.png">
-                            <collision-poly>
-                                <point x="0.00744417" y="0.0114068" />
-                                <point x="0.990074" y="0.0152091" />
-                                <point x="0.990074" y="0.984791" />
-                                <point x="0.00744417" y="0.988593" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="1demo_taxi" pingpong="0" repeatcount="1" repeatto="0" sid="5469112983980685" speed="5">
-                        <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\taxi.png">
-                            <collision-poly>
-                                <point x="0.00744417" y="0.0114068" />
-                                <point x="0.990074" y="0.0152091" />
-                                <point x="0.990074" y="0.984791" />
-                                <point x="0.00744417" y="0.988593" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TestDialogAnswerFalseBtn" sid="5201093056781649">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="401943430504907" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\false-off.png">
-                            <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="0.99375" y="0.0125" />
-                                <point x="0.99375" y="0.9875" />
-                                <point x="0" y="1" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="3460032212081151" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\false-on.png">
-                            <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="0.99375" y="0.0125" />
-                                <point x="0.99375" y="0.9875" />
-                                <point x="0" y="1" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TestDialogEditor" sid="3060551902344727">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7995525127529052" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\teacher.png">
-                            <collision-poly>
-                                <point x="0.0714286" y="0.0572917" />
-                                <point x="0.5" y="0" />
-                                <point x="0.805195" y="0.15625" />
-                                <point x="0.584416" y="0.666667" />
-                                <point x="0.5" y="1" />
-                                <point x="0.253247" y="0.796875" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TestDialogHelpBtn" sid="5465109697721361">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9700926708880331" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\quest-icon.png">
-                            <collision-poly>
-                                <point x="0.151515" y="0.151515" />
-                                <point x="0.5" y="0" />
-                                <point x="0.848485" y="0.151515" />
-                                <point x="1" y="0.5" />
-                                <point x="0.848485" y="0.848485" />
-                                <point x="0.5" y="1" />
-                                <point x="0.151515" y="0.848485" />
-                                <point x="0" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TestDialogProgressLine" sid="9681577560665341">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4648552953548377" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\progress-line.png">
-                            <collision-poly>
-                                <point x="0.125" y="0.00742574" />
-                                <point x="0.875" y="0.00742574" />
-                                <point x="1" y="0.5" />
-                                <point x="0.875" y="0.992574" />
-                                <point x="0.125" y="0.992574" />
-                                <point x="0" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TestDialogQuestionTextBg" sid="1871912747189171">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6181470904816734" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\sprite-question.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TestDialogAnswerTrueBtn" sid="7336944252899537">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="7641521407007852" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-off.png">
-                            <collision-poly>
-                                <point x="0.00625" y="0.0125" />
-                                <point x="1" y="0" />
-                                <point x="1" y="1" />
-                                <point x="0.00625" y="0.9875" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="6233505507808754" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-on.png">
-                            <collision-poly>
-                                <point x="0.00625" y="0.0125" />
-                                <point x="1" y="0" />
-                                <point x="1" y="1" />
-                                <point x="0.00625" y="0.9875" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TestDialogBackground" sid="8879209475646582">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8889753829348977" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\back.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TestDialogProjectorLight" sid="5686354537068885">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7436263965967671" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.501139" original-source="C:\Users\Andy\Desktop\dialog\buttons\light.png" />
-                    </animation>
-                </animation-folder>
             </object-type>
         </object-folder>
         <object-type name="CameraFocusIndicator" sid="4956490272927455">
@@ -7947,6 +7963,7 @@
             <event-sheet>TestDialogCommon.xml</event-sheet>
             <event-sheet>TestDialogLayoutMain.xml</event-sheet>
             <event-sheet>TestDialogInput.xml</event-sheet>
+            <event-sheet>TestDialogProgress.xml</event-sheet>
         </event-folder>
         <event-sheet>Debug.xml</event-sheet>
     </event-folder>
