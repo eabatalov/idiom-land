@@ -20,61 +20,38 @@
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="7380802923572911" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="0" name="Finalize level idioms progress" sid="9066542529292426" type="LevelIdiomProgressTracker" />
-                        <action id="0" name="Save game" sid="7849873616605395" type="QuestGame" />
-                        <action id="0" name="Call function" sid="9317954635243064" type="Function">
-                            <param id="0" name="Name">&quot;LevelFinished&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Set text" sid="9679877642509217" type="LevelResultsIdiomsFoundText">
-                            <param id="0" name="Text">LevelIdiomProgressTracker.getLevelFoundIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
-                        </action>
-                        <action id="0" name="Set text" sid="7225573258372632" type="LevelResultsIdiomsGuessedText">
-                            <param id="0" name="Text">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
-                        </action>
-                        <action id="0" name="Call function" sid="3674008315126221" type="Function">
-                            <param id="0" name="Name">&quot;GetLevelSecretsCount&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-9" name="Set value" sid="5673064748711863" type="System">
-                            <param id="0" name="Variable">LevelSecretsCount</param>
-                            <param id="1" name="Value">Function.ReturnValue</param>
-                        </action>
-                        <action id="0" name="Call function" sid="7608494891712398" type="Function">
-                            <param id="0" name="Name">&quot;GetFoundLevelSecretsCount&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-9" name="Set value" sid="7386016449546043" type="System">
-                            <param id="0" name="Variable">FoundLevelSecretsCount</param>
-                            <param id="1" name="Value">Function.ReturnValue</param>
-                        </action>
-                        <action id="0" name="Set text" sid="4250065361709224" type="LevelResultsSecretsFoundText">
-                            <param id="0" name="Text">FoundLevelSecretsCount &amp; &quot;/&quot; &amp; LevelSecretsCount</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="6680364648266421">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="470720938343314" type="System">
-                                    <param id="0" name="First value">LevelIdiomProgressTracker.getLevelFoundIdiomsCount</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">LevelIdiomProgressTracker.getLevelIdiomsCount</param>
-                                </condition>
-                            </conditions>
+                        <event-block sid="5142126931258771">
+                            <conditions />
                             <actions>
-                                <action id="4" name="Set font color" sid="4918195580471301" type="LevelResultsIdiomsFoundText">
-                                    <param id="0" name="Color">rgb(SUCCESS_COLOR_R, SUCCESS_COLOR_G, SUCCESS_COLOR_B)</param>
+                                <action id="0" name="Finalize level idioms progress" sid="9066542529292426" type="LevelIdiomProgressTracker" />
+                                <action id="0" name="Save game" sid="7849873616605395" type="QuestGame" />
+                                <action id="0" name="Call function" sid="9317954635243064" type="Function">
+                                    <param id="0" name="Name">&quot;LevelFinished&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3595091074003026">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="9406701255125344" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set font color" sid="9129707345129352" type="LevelResultsIdiomsFoundText">
-                                    <param id="0" name="Color">rgb(FAIL_COLOR_R, FAIL_COLOR_G, FAIL_COLOR_B)</param>
+                                <action id="0" name="Set text" sid="7225573258372632" type="LevelResultsIdiomsGuessedText">
+                                    <param id="0" name="Text">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3674008315126221" type="Function">
+                                    <param id="0" name="Name">&quot;GetLevelSecretsCount&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5673064748711863" type="System">
+                                    <param id="0" name="Variable">LevelSecretsCount</param>
+                                    <param id="1" name="Value">Function.ReturnValue</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7608494891712398" type="Function">
+                                    <param id="0" name="Name">&quot;GetFoundLevelSecretsCount&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7386016449546043" type="System">
+                                    <param id="0" name="Variable">FoundLevelSecretsCount</param>
+                                    <param id="1" name="Value">Function.ReturnValue</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4250065361709224" type="LevelResultsSecretsFoundText">
+                                    <param id="0" name="Text">FoundLevelSecretsCount &amp; &quot;/&quot; &amp; LevelSecretsCount</param>
                                 </action>
                             </actions>
                         </event-block>
