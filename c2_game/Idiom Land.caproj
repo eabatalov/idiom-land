@@ -7500,19 +7500,19 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="TestDialogQuestionTextBg" sid="1871912747189171">
+                <object-type name="TestDialogQuestionBg" sid="1871912747189171">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6181470904816734" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\sprite-question.png" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\sprite-question.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="TestDialogQuestionSprite" sid="5465109697721361">
+                <object-type name="TestDialogQuestionIcon" sid="5465109697721361">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9700926708880331" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\quest-icon.png">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\quest-icon.png">
                                 <collision-poly>
                                     <point x="0.151515" y="0.151515" />
                                     <point x="0.5" y="0" />
@@ -7533,7 +7533,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="401943430504907" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\false-off.png">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\false-off.png">
                                 <collision-poly>
                                     <point x="0" y="0" />
                                     <point x="0.99375" y="0.0125" />
@@ -7543,7 +7543,7 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="3460032212081151" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\false-on.png">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\false-on.png">
                                 <collision-poly>
                                     <point x="0" y="0" />
                                     <point x="0.99375" y="0.0125" />
@@ -7558,7 +7558,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="7641521407007852" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-off.png">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-off.png">
                                 <collision-poly>
                                     <point x="0.00625" y="0.0125" />
                                     <point x="1" y="0" />
@@ -7568,12 +7568,54 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="6233505507808754" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-on.png">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-on.png">
                                 <collision-poly>
                                     <point x="0.00625" y="0.0125" />
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
                                     <point x="0.00625" y="0.9875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TestDialogAnswerTrueBtnAnimBg" sid="5322160244461289">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>questslide</type>
+                        <type>TestDialogQuestionTextBg</type>
+                        <type>TestDialogAnswerTrueBtnAnimBg</type>
+                        <type>TestDialogAnswerFalseBtnAnimBg</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="46269098719347" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\dialogue\quest-slide\true-off.png">
+                                <collision-poly>
+                                    <point x="0.00625" y="0.0125" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0.00625" y="0.9875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TestDialogAnswerFalseBtnAnimBg" sid="2775373298268401">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>questslide</type>
+                        <type>TestDialogQuestionTextBg</type>
+                        <type>TestDialogAnswerTrueBtnAnimBg</type>
+                        <type>TestDialogAnswerFalseBtnAnimBg</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="338405271865556" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\dialogue\quest-slide\false-off.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.99375" y="0.0125" />
+                                    <point x="0.99375" y="0.9875" />
+                                    <point x="0" y="1" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -7639,6 +7681,29 @@
                 <object-type name="TestDialogQuestionText" sid="9414488223775853">
                     <plugin id="Text" />
                 </object-type>
+                <object-type name="TestDialogQuestionTextBg" sid="2186154203171803">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>questslide</type>
+                        <type>TestDialogQuestionTextBg</type>
+                        <type>TestDialogAnswerTrueBtnAnimBg</type>
+                        <type>TestDialogAnswerFalseBtnAnimBg</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703643772704648" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\dialogue\quest-slide\text-blog.png">
+                                <collision-poly>
+                                    <point x="0.26" y="0.304688" />
+                                    <point x="0.5" y="0.421875" />
+                                    <point x="0.773333" y="0.265625" />
+                                    <point x="0.77" y="0.730469" />
+                                    <point x="0.5" y="0.550781" />
+                                    <point x="0.226667" y="0.734375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Progress">
                 <object-type name="TestDialogProgressBackground" sid="9681577560665341">
@@ -7669,6 +7734,15 @@
             </object-folder>
             <object-type name="TestDialogLevelRuntime" sid="9524380120170963">
                 <plugin id="TestDialogLevelRuntimePlugin" />
+            </object-type>
+            <object-type name="questslide" sid="6553081669745594">
+                <plugin id="Spriter" />
+                <container>
+                    <type>questslide</type>
+                    <type>TestDialogQuestionTextBg</type>
+                    <type>TestDialogAnswerTrueBtnAnimBg</type>
+                    <type>TestDialogAnswerFalseBtnAnimBg</type>
+                </container>
             </object-type>
         </object-folder>
         <object-type name="CameraFocusIndicator" sid="4956490272927455">
@@ -7761,6 +7835,13 @@
                 <member>notifyone_entity_000_textblog</member>
                 <member>notifyone_entity_000_texttitle</member>
                 <member>notifyone_entity_000_title</member>
+            </members>
+        </family>
+        <family name="questslideFamily" plugin-id="Sprite" sid="269532284672534">
+            <members>
+                <member>TestDialogAnswerFalseBtnAnimBg</member>
+                <member>TestDialogAnswerTrueBtnAnimBg</member>
+                <member>TestDialogQuestionTextBg</member>
             </members>
         </family>
     </families>
@@ -7943,6 +8024,9 @@
             <event-sheet>TestDialogLayoutMain.xml</event-sheet>
             <event-sheet>TestDialogInput.xml</event-sheet>
             <event-sheet>TestDialogProgress.xml</event-sheet>
+            <event-sheet>TestDialogAnimsInit.xml</event-sheet>
+            <event-sheet>TestDialogUITransitions.xml</event-sheet>
+            <event-sheet>TestDialogUIState.xml</event-sheet>
         </event-folder>
         <event-sheet>Debug.xml</event-sheet>
     </event-folder>
@@ -8016,6 +8100,8 @@
             <file name="animation-result.scon" />
             <file name="notify-one.scml" />
             <file name="notify-one.scon" />
+            <file name="quest-slide.scml" />
+            <file name="quest-slide.scon" />
         </file-folder>
     </files-folder>
 </c2project>
