@@ -6,7 +6,7 @@
         <include>TestDialogCommon</include>
         <event-group description="" sid="823402825228904" title="Test dialog layout main">
             <sub-events>
-                <variable constant="1" name="DEBUG_LAYOUT" sid="7609409351396017" static="0" type="number">0</variable>
+                <variable constant="1" name="DEBUG_LAYOUT" sid="7609409351396017" static="0" type="number">1</variable>
                 <event-block sid="7594948566060325">
                     <conditions>
                         <condition id="0" name="On function" sid="7209007812321857" type="Function">
@@ -86,30 +86,6 @@
                             <actions>
                                 <action id="-2" name="Go to layout" sid="4563287975831315" type="System">
                                     <param id="0" name="Layout">LevelResultsBrief</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="340041905235857">
-                            <conditions>
-                                <condition id="3" name="On touched object" sid="945882177157676" type="Touch">
-                                    <param id="0" name="Object">TestDialogAnswerTrueBtn</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Answer current question" sid="5935389685729279" type="TestDialogLevelRuntime">
-                                    <param id="0" name="Answer &apos;TRUE&apos; | &apos;FALSE&apos;">&quot;TRUE&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="7007996442676378">
-                            <conditions>
-                                <condition id="3" name="On touched object" sid="421415982343413" type="Touch">
-                                    <param id="0" name="Object">TestDialogAnswerFalseBtn</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Answer current question" sid="5399144194651872" type="TestDialogLevelRuntime">
-                                    <param id="0" name="Answer &apos;TRUE&apos; | &apos;FALSE&apos;">&quot;FALSE&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
