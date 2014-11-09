@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TestDialogProgressLineAnimation</name>
+    <events>
+        <event-group description="" sid="2486528225425578" title="Test dialog progress line animation">
+            <sub-events>
+                <comment>param(0): success portion&#x0D;&#x0A;param(1): fail portion</comment>
+                <event-block sid="5391756687211858">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1448607705796406" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogProgressLineSet&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="9370292341049427" type="TestDialogProgressLine">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="6273170003333354" type="TestDialogProgressLine">
+                            <param id="0" name="Height">TestDialogProgressBackground.Height * Function.Param(0)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1127109824045565" type="Function">
+                            <param id="0" name="Name">&quot;onTestDialogProgressLineUpdated&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

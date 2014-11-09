@@ -46,6 +46,9 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
         this.levelIdiomsProgressTracker.events.idiomGuessed.subscribe(this, function() {
             this.runtime.trigger(pluginProto.cnds.guessedIdiomsChanged, this);
         });
+        this.levelIdiomsProgressTracker.events.idiomFailed.subscribe(this, function() {
+            this.runtime.trigger(pluginProto.cnds.failedIdiomsChanged, this);
+        });
 
         this.curIdiomIx = 0;
         this.curIdiom = null;
@@ -144,6 +147,10 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
     };
 
     Cnds.prototype.guessedIdiomsChanged = function() {
+        return true; //cf_trigger was signaled explicitly
+    };
+
+    Cnds.prototype.failedIdiomsChanged = function() {
         return true; //cf_trigger was signaled explicitly
     };
 

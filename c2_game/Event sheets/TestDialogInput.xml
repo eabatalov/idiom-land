@@ -114,8 +114,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="1" name="Answer current question" sid="257598796684474" type="TestDialogLevelRuntime">
-                                            <param id="0" name="Answer &apos;TRUE&apos; | &apos;FALSE&apos;">&quot;TRUE&quot;</param>
+                                        <action id="0" name="Call function" sid="7916867781430133" type="Function">
+                                            <param id="0" name="Name">&quot;onTestDialogAnswered&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;TRUE&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -147,8 +148,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="1" name="Answer current question" sid="3329799672136494" type="TestDialogLevelRuntime">
-                                            <param id="0" name="Answer &apos;TRUE&apos; | &apos;FALSE&apos;">&quot;FALSE&quot;</param>
+                                        <action id="0" name="Call function" sid="911905228687764" type="Function">
+                                            <param id="0" name="Name">&quot;onTestDialogAnswered&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;FALSE&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>

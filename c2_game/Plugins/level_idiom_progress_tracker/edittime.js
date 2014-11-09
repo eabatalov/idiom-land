@@ -62,7 +62,8 @@ AddCondition(1, cf_trigger, "Guessed idioms changed", "General", "Guessed idioms
     "Guessed idioms changed", "guessedIdiomsChanged");
 AddCondition(2, cf_none, "Is level succeeded", "General", "Is level succeeded",
     "Is level succeeded", "isLevelSucceeded");
-
+AddCondition(3, cf_trigger, "Failed idioms changed", "General", "Failed idioms changed",
+    "Failed idioms changed", "failedIdiomsChanged");
 ////////////////////////////////////////
 // Actions
 

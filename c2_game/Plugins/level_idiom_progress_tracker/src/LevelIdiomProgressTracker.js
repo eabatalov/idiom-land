@@ -1,6 +1,7 @@
 function LevelIdiomsProgressTracker() {
     this.events = {
         idiomGuessed : new SEEvent(/*Idiom*/),
+        idiomFailed : new SEEvent(/*Idiom*/)
     };
 
     this.currentLevel = null;
@@ -31,7 +32,9 @@ LevelIdiomsProgressTracker.prototype.onCurrentLevelChanged = function(questLevel
 LevelIdiomsProgressTracker.prototype.onCurrentLevelIdiomStatusChanged = function(idiom) {
    if (idiom.getStatus() === Idiom.STATUS.GUESSED) {
         this.events.idiomGuessed.publish(idiom);
-   } 
+   } else if (idiom.getStatus() === Idiom.STATUS.FAILED){
+        this.events.idiomFailed.publish(idiom);
+   }
 };
 
 LevelIdiomsProgressTracker.prototype.forEachIdiom = function(callback/*(idiomId, idiom)*/) {
