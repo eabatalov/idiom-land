@@ -79,10 +79,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set animation" sid="6864761149131946" type="TestDialogEditor">
-                                    <param id="0" name="Animation">&quot;idle&quot;</param>
-                                    <param id="1" name="Where to start playing this animation">0</param>
-                                    <param id="2" name="Blend Duration">0</param>
+                                <action id="0" name="Call function" sid="603217302235935" type="Function">
+                                    <param id="0" name="Name">&quot;EditorAnimRunIdle&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="0" name="Call function" sid="2998109922220596" type="Function">
                                     <param id="0" name="Name">&quot;onTestDialogEditorShowResultCompleted&quot;</param>
@@ -119,14 +118,45 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set animation" sid="2111278505418448" type="TestDialogEditor">
-                                    <param id="0" name="Animation">&quot;idle&quot;</param>
-                                    <param id="1" name="Where to start playing this animation">0</param>
-                                    <param id="2" name="Blend Duration">0</param>
+                                <action id="0" name="Call function" sid="1795818434989736" type="Function">
+                                    <param id="0" name="Name">&quot;EditorAnimRunIdle&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>For some reason our idle doesn&apos;t loop</comment>
+                <event-block sid="5552078296176114">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9344855325274227" type="Function">
+                            <param id="0" name="Name">&quot;EditorAnimRunIdle&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="9027537274401258" type="TestDialogEditor">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">0</param>
+                        </action>
+                        <action id="3" name="Set animation looping" sid="9441644895669314" type="TestDialogEditor">
+                            <param id="0" name="Loop animation?">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6314517325909178">
+                    <conditions>
+                        <condition id="0" name="On animation finished" sid="7407119319469381" type="TestDialogEditor">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="5023713097779702" type="TestDialogEditor">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

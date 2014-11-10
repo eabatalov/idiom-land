@@ -228,9 +228,9 @@ cr.plugins_.LevelIdiomProgressTrackingPlugin = function(runtime)
         );
 	};
 
-	Exps.prototype.getLevelFoundIdiomsCount = function(ret) {
+	Exps.prototype.getLevelFailedIdiomsCount = function(ret) {
 		ret.set_int(
-            this.levelIdiomsProgressTracker.getFoundIdiomsCount()
+            this.levelIdiomsProgressTracker.getFailedIdiomsCount()
         );
 	};
 

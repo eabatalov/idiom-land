@@ -59,9 +59,6 @@
                                 <event-block sid="4138731360226401">
                                     <conditions />
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="8084181274839571" type="TestDialogQuestionIcon">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
                                         <action id="-15" name="Set visible" sid="4294801708140294" type="TestDialogAnswerFalseBtn">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
@@ -72,6 +69,24 @@
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="6270060298649169" type="TestDialogQuestionText">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5020676740832289" type="TestDialogQuestSlide_questslide_falseoff">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="256079451717058" type="TestDialogQuestSlide_questslide_questicon">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="742999555579934" type="TestDialogQuestSlide_questslide_spritequestion">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5665601453773402" type="TestDialogQuestSlide_questslide_textblog">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="186178288426559" type="TestDialogQuestSlide_questslide_trueoff">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3896291566258925" type="TestDialogQuestionNumber">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="7625259036712889" type="System">
@@ -151,9 +166,6 @@
                                 <event-block sid="250383769768213">
                                     <conditions />
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="1521824738777046" type="TestDialogQuestionIcon">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
                                         <action id="-15" name="Set visible" sid="2187802435053802" type="TestDialogAnswerFalseBtn">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
@@ -164,6 +176,24 @@
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="7139246266290228" type="TestDialogQuestionText">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3628523101198697" type="TestDialogQuestSlide_questslide_falseoff">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1379826797248279" type="TestDialogQuestSlide_questslide_questicon">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="2055450214725273" type="TestDialogQuestSlide_questslide_spritequestion">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="9980305698429035" type="TestDialogQuestSlide_questslide_textblog">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8863650642571" type="TestDialogQuestSlide_questslide_trueoff">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="59671038125497" type="TestDialogQuestionNumber">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="9376668079336089" type="System">
@@ -203,44 +233,48 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="5222236903228576">
-                                    <conditions />
-                                    <actions>
-                                        <action id="-4" name="Set position to another object" sid="8752894079819538" type="TestDialogAnswerFalseBtn">
-                                            <param id="0" name="Object">TestDialogAnswerFalseBtnAnimBg</param>
-                                            <param id="1" name="Image point (optional)">0</param>
-                                        </action>
-                                        <action id="-8" name="Set angle" sid="643732318367199" type="TestDialogAnswerFalseBtn">
-                                            <param id="0" name="Angle">TestDialogAnswerFalseBtnAnimBg.Angle</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="1722051205359171" type="TestDialogAnswerFalseBtn">
-                                            <param id="0" name="Opacity">TestDialogAnswerFalseBtnAnimBg.Opacity</param>
-                                        </action>
-                                        <action id="-4" name="Set position to another object" sid="1614851128905474" type="TestDialogAnswerTrueBtn">
-                                            <param id="0" name="Object">TestDialogAnswerTrueBtnAnimBg</param>
-                                            <param id="1" name="Image point (optional)">0</param>
-                                        </action>
-                                        <action id="-8" name="Set angle" sid="17021210849423" type="TestDialogAnswerTrueBtn">
-                                            <param id="0" name="Angle">TestDialogAnswerTrueBtnAnimBg.Angle</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="6295087087901828" type="TestDialogAnswerTrueBtn">
-                                            <param id="0" name="Opacity">TestDialogAnswerTrueBtnAnimBg.Opacity</param>
-                                        </action>
-                                        <action id="-4" name="Set position to another object" sid="2628770647170651" type="TestDialogQuestionText">
-                                            <param id="0" name="Object">TestDialogQuestionTextBg</param>
-                                            <param id="1" name="Image point (optional)">0</param>
-                                        </action>
-                                        <action id="-8" name="Set angle" sid="365641119183827" type="TestDialogQuestionText">
-                                            <param id="0" name="Angle">TestDialogQuestionTextBg.Angle</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="7668159763243168" type="TestDialogQuestionText">
-                                            <param id="0" name="Opacity">TestDialogQuestionTextBg.Opacity</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="6558867924749206" type="TestDialogAnswerFalseBtn">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_falseoff</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="8096813736279347" type="TestDialogAnswerFalseBtn">
+                                    <param id="0" name="Opacity">TestDialogQuestSlide_questslide_falseoff.Opacity</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="1705928706441972" type="TestDialogAnswerFalseBtn">
+                                    <param id="0" name="Angle">TestDialogQuestSlide_questslide_falseoff.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="8134736817417763" type="TestDialogAnswerTrueBtn">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_trueoff</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="1803707700160779" type="TestDialogAnswerTrueBtn">
+                                    <param id="0" name="Opacity">TestDialogQuestSlide_questslide_trueoff.Opacity</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="1314599252709456" type="TestDialogAnswerTrueBtn">
+                                    <param id="0" name="Angle">TestDialogQuestSlide_questslide_trueoff.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="6823501796705922" type="TestDialogQuestionText">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_textblog</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="8690492011862473" type="TestDialogQuestionText">
+                                    <param id="0" name="Opacity">TestDialogQuestSlide_questslide_textblog.Opacity</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="5866000843299256" type="TestDialogQuestionText">
+                                    <param id="0" name="Angle">TestDialogQuestSlide_questslide_textblog.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="3858666286888762" type="TestDialogQuestionNumber">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_questicon</param>
+                                    <param id="1" name="Image point (optional)">&quot;TextPoint&quot;</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="4396812659602249" type="TestDialogQuestionNumber">
+                                    <param id="0" name="Opacity">TestDialogQuestSlide_questslide_questicon.Opacity</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="1821404788550573" type="TestDialogQuestionNumber">
+                                    <param id="0" name="Angle">TestDialogQuestSlide_questslide_questicon.angle</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>

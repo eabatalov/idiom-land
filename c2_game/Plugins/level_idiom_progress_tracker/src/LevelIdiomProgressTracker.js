@@ -60,9 +60,8 @@ LevelIdiomsProgressTracker.prototype.getGuessedIdiomsCount = function() {
     return this.getIdiomsWithStatusCount(Idiom.STATUS.GUESSED);
 };
 
-LevelIdiomsProgressTracker.prototype.getFoundIdiomsCount = function() {
-    return this.getGuessedIdiomsCount() +
-        this.getIdiomsWithStatusCount(Idiom.STATUS.FAILED);
+LevelIdiomsProgressTracker.prototype.getFailedIdiomsCount = function() {
+    return this.getIdiomsWithStatusCount(Idiom.STATUS.FAILED);
 };
 
 LevelIdiomsProgressTracker.prototype.finalizeProgress = function() {

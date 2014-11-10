@@ -104,8 +104,8 @@ AddExpression(5, ef_return_number, "Level overall idioms count", "Getters", "get
     "Get overall number of idioms on the current level");
 AddExpression(6, ef_return_number, "Level gueesed idioms count", "Getters", "getLevelGuessedIdiomsCount",
     "Get number of guessed idioms on the current level");
-AddExpression(7, ef_return_number, "Level found idioms count", "Getters", "getLevelFoundIdiomsCount",
-    "Get number of found idioms on the current level");
+AddExpression(7, ef_return_number, "Level failed idioms count", "Getters", "getLevelFailedIdiomsCount",
+    "Get number of failed idioms on the current level");
 
 AddExpression(9, ef_return_string, "Level name", "Getters", "getLevelName",
 	"Get level name");

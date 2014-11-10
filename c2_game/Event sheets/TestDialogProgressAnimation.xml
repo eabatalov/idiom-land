@@ -111,6 +111,7 @@
                     </sub-events>
                 </event-block>
                 <variable constant="0" name="RightAnswersCount" sid="8543943252125287" static="0" type="number">0</variable>
+                <variable constant="0" name="WrongAnswersCount" sid="8320496624540189" static="0" type="number">0</variable>
                 <event-block sid="9743979097146476">
                     <conditions>
                         <condition id="0" name="On function" sid="9695289420371468" type="Function">
@@ -163,16 +164,26 @@
                             <param id="0" name="Name">&quot;TestDialogRunProgressLineAnim&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="3761003743236439" type="System">
-                            <param id="0" name="Variable">RightAnswersCount</param>
-                            <param id="1" name="Value">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount</param>
-                        </action>
-                        <action id="0" name="Call function" sid="9134470877399854" type="Function">
-                            <param id="0" name="Name">&quot;TestDialogProgressLineSet&quot;</param>
-                            <param id="1" name="Parameter {n}">(RightAnswersCount / LevelIdiomProgressTracker.getLevelIdiomsCount){###}((LevelIdiomProgressTracker.getLevelIdiomsCount - RightAnswersCount)/ LevelIdiomProgressTracker.getLevelIdiomsCount)</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1629370434423209">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="3761003743236439" type="System">
+                                    <param id="0" name="Variable">RightAnswersCount</param>
+                                    <param id="1" name="Value">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8788620514879969" type="System">
+                                    <param id="0" name="Variable">WrongAnswersCount</param>
+                                    <param id="1" name="Value">LevelIdiomProgressTracker.getLevelFailedIdiomsCount</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9134470877399854" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogProgressLineSet&quot;</param>
+                                    <param id="1" name="Parameter {n}">(RightAnswersCount / LevelIdiomProgressTracker.getLevelIdiomsCount){###}(WrongAnswersCount/ LevelIdiomProgressTracker.getLevelIdiomsCount)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="6121872951334678">
                     <conditions>
