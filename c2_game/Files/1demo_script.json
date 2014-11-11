@@ -279,7 +279,7 @@
 						2722
 					],
 					"outCondIds": [
-						6312
+						6509
 					],
 					"props": {
 						"id": "Player",
@@ -418,8 +418,8 @@
 					"label": "15 coins",
 					"continue": false,
 					"inCondIds": [
-						6312,
-						6338
+						6338,
+						6515
 					],
 					"outCondIds": [
 						6313
@@ -699,6 +699,181 @@
 						"phraseType": "SPEAK",
 						"phraseSize": "LARGE"
 					}
+				},
+				{
+					"ver": 1,
+					"id": 4137,
+					"type": 3,
+					"label": "bargain",
+					"continue": false,
+					"inCondIds": [
+						6509,
+						6517,
+						6520,
+						6524
+					],
+					"outCondIds": [
+						6511,
+						6514,
+						6518,
+						6521
+					],
+					"props": {
+						"id": "Player",
+						"text": "Maybe ask the driver about lowering the price?",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Don't ask the driver",
+						"ans2": "Propose 5 coins",
+						"ans3": "Propose 10 coins",
+						"ans4": "Propose 15 coins"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4139,
+					"type": 12,
+					"label": "Don't bargain",
+					"continue": false,
+					"inCondIds": [
+						6511
+					],
+					"outCondIds": [
+						6516
+					],
+					"props": {
+						"enabled": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4141,
+					"type": 1,
+					"label": "Ask 10 coins",
+					"continue": false,
+					"inCondIds": [
+						6514
+					],
+					"outCondIds": [
+						6515
+					],
+					"props": {
+						"id": "Player",
+						"text": "What about 10 coins for a ride?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4142,
+					"type": 12,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						6516
+					],
+					"outCondIds": [
+						6517
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4143,
+					"type": 1,
+					"label": "5 coins",
+					"continue": false,
+					"inCondIds": [
+						6518
+					],
+					"outCondIds": [
+						6519
+					],
+					"props": {
+						"id": "Player",
+						"text": "I'll give you 5 coins for a ride",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4144,
+					"type": 1,
+					"label": "15 coins",
+					"continue": false,
+					"inCondIds": [
+						6521
+					],
+					"outCondIds": [
+						6522
+					],
+					"props": {
+						"id": "Player",
+						"text": "What if I gave you 15 coins for a ride?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4145,
+					"type": 1,
+					"label": "No",
+					"continue": false,
+					"inCondIds": [
+						6519
+					],
+					"outCondIds": [
+						6520
+					],
+					"props": {
+						"id": "driver2",
+						"text": "This isn't possible!\nYou just make me angry, young lady,",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4146,
+					"type": 1,
+					"label": "17 coins",
+					"continue": false,
+					"inCondIds": [
+						6522
+					],
+					"outCondIds": [
+						6523
+					],
+					"props": {
+						"id": "driver2",
+						"text": "Sorry young lady,  not less then 17 coins for a ride.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4147,
+					"type": 1,
+					"label": "I don't have...",
+					"continue": false,
+					"inCondIds": [
+						6523
+					],
+					"outCondIds": [
+						6524
+					],
+					"props": {
+						"id": "Player",
+						"text": "I don't have 17 coins still...",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
 				}
 			],
 			"conds": [
@@ -888,14 +1063,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 6312,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 6313,
 					"type": 11,
 					"props": {
@@ -1031,6 +1198,100 @@
 				{
 					"ver": 1,
 					"id": 6342,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6509,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6511,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6514,
+					"type": 5,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6515,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6516,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_driver2"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6517,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6518,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6519,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6520,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6521,
+					"type": 6,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6522,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6523,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6524,
 					"type": 11,
 					"props": {
 						"clearStage": true
