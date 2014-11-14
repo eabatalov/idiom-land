@@ -103,6 +103,17 @@
                         <action id="-15" name="Set visible" sid="1335013270755848" type="IdiomCounterHelper">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="3567616822415623" type="IdiomCounterHelper">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="5222262256306017" type="IdiomCounterHelper">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="2313974717274749" type="IdiomCounterHelper">
+                            <param id="0" name="State">1</param>
+                        </action>
                         <action id="0" name="Call function" sid="8110680054011913" type="Function">
                             <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -116,6 +127,13 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action behavior="Flash" id="1" name="Stop flashing" sid="966805173743784" type="IdiomCounterHelper" />
+                        <action behavior="Sine" id="0" name="Set active" sid="7793905939914313" type="IdiomCounterHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="4919437027540777" type="IdiomCounterHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="6927967553255938" type="IdiomCounterHelper">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -131,6 +149,17 @@
                         <action id="-15" name="Set visible" sid="5721626641907052" type="CoinsCounterHelper">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="5967820001213435" type="CoinsCounterHelper">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="3024693674652312" type="CoinsCounterHelper">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="8897830677023814" type="CoinsCounterHelper">
+                            <param id="0" name="State">1</param>
+                        </action>
                         <action id="0" name="Call function" sid="6503222420057646" type="Function">
                             <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -144,6 +173,13 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action behavior="Flash" id="1" name="Stop flashing" sid="7430433051077783" type="CoinsCounterHelper" />
+                        <action behavior="Sine" id="0" name="Set active" sid="5811467413452041" type="CoinsCounterHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="6239365588216433" type="CoinsCounterHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="9670245467069661" type="CoinsCounterHelper">
                             <param id="0" name="Visibility">0</param>
                         </action>
