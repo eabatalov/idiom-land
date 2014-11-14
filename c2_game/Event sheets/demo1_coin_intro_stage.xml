@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>demo1_coin_intro_stage</name>
+    <events>
+        <event-group description="" sid="5363619014824372" title="Demo1 coin_intro stage">
+            <sub-events>
+                <event-block sid="2665446572891371">
+                    <conditions>
+                        <condition id="0" name="On function" sid="252275247551718" type="Function">
+                            <param id="0" name="Name">&quot;C2API_ShowTicketCounterHelper&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="5723783748057148" type="CoinsCounterHelper">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="2637153203303623" type="CoinsCounterHelper">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="8127413072679365" type="CoinsCounterHelper">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="13467639138307" type="CoinsCounterHelper">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8579338478018366" type="Function">
+                            <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1817321585052771">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9838701445756467" type="Function">
+                            <param id="0" name="Name">&quot;C2API_HideTicketCounterHelper&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="1" name="Stop flashing" sid="2573993337641702" type="CoinsCounterHelper" />
+                        <action behavior="Sine" id="0" name="Set active" sid="8827261233384178" type="CoinsCounterHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="5161826979351723" type="CoinsCounterHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7119524458800403" type="CoinsCounterHelper">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
