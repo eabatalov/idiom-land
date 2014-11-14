@@ -3,27 +3,32 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PlatformerLevelCommon</name>
     <events>
-        <include>LevelCommon</include>
-        <include>IdiomLandLevel</include>
-        <include>QuestStageChangers</include>
-        <include>PlatformerLevelAutomaticTalkStarters</include>
-        <include>IdiomDialogCompletion</include>
-        <include>PlatformerLevelPlayerAutoAnim</include>
-        <include>PlatformerLevelRecording</include>
-        <include>PlatformerLevelPlayback</include>
-        <include>PlatformerLevelCamera</include>
-        <include>PlatformerLevelQuestDialogUITransitions</include>
-        <include>PlatformerLevelQuestDialogUIFade</include>
-        <include>PlatformerLevelQuestDialog</include>
-        <include>PlatformerLevelKeyboardHacks</include>
-        <include>PlatformerLevelPlayerFallToHellRecovery</include>
-        <include>PlatformerLevelCollisionCustomEventSender</include>
-        <include>PlatformerLevelDialogF2F</include>
-        <event-group description="" sid="3039776007261733" title="Control">
+        <event-group description="" sid="890701224902969" title="Platformer level engine imports">
             <sub-events>
-                <include>PlatformerLevelGameHelp</include>
-                <include>PlatformerLevelCoinsProgress</include>
-                <include>PlatformerLevelSecretsProgress</include>
+                <include>LevelCommon</include>
+                <include>QuestCommon</include>
+                <include>IdiomLandLevel</include>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="936925039478373" title="Platformer level engine modules">
+            <sub-events>
+                <include>PlatformerLevelBootstrap</include>
+                <include>FoxySimpleSCMLSpritesBinding</include>
+                <include>QuestStageChangers</include>
+                <include>PlatformerLevelAutomaticTalkStarters</include>
+                <include>IdiomDialogCompletion</include>
+                <include>PlatformerLevelPlayerAutoAnim</include>
+                <include>PlatformerLevelRecording</include>
+                <include>PlatformerLevelPlayback</include>
+                <include>PlatformerLevelCamera</include>
+                <include>PlatformerLevelQuestDialogUITransitions</include>
+                <include>PlatformerLevelQuestDialogUIFade</include>
+                <include>PlatformerLevelQuestDialog</include>
+                <include>PlatformerLevelKeyboardHacks</include>
+                <include>PlatformerLevelPlayerFallToHellRecovery</include>
+                <include>PlatformerLevelCollisionCustomEventSender</include>
+                <include>PlatformerLevelDialogF2F</include>
+                <include>PlatformerLevelControls</include>
             </sub-events>
         </event-group>
     </events>

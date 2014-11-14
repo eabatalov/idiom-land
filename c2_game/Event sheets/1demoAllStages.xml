@@ -13,5 +13,26 @@
         <include>demo1_airport_taxi_stage</include>
         <include>demo1_exit_bus_stage</include>
         <include>demo1_coin_intro_stage</include>
+        <event-block sid="8859104883265302">
+            <conditions>
+                <condition id="0" name="On function" sid="7176229399796632" type="Function">
+                    <param id="0" name="Name">&quot;1demoLevelInitAllStages&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="5472207365217076" type="Function">
+                    <param id="0" name="Name">&quot;CarouselInit&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="7973413843764905" type="Function">
+                    <param id="0" name="Name">&quot;ExitBusInit&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="6854631588867131" type="Function">
+                    <param id="0" name="Name">&quot;IntroInit&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -8,7 +8,9 @@
                 <variable constant="0" name="PAUSE_STATE" sid="3232850665019645" static="1" type="text">PLAY</variable>
                 <event-block sid="8242547029496346">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="499162237586719" type="System" />
+                        <condition id="0" name="On function" sid="499162237586719" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="2820693274307047" type="PauseBtn">

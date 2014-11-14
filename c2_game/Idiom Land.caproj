@@ -6735,7 +6735,7 @@
     </layout-folder>
     <event-folder>
         <event-folder name="Levels">
-            <event-folder name="Common">
+            <event-folder name="LevelEngines">
                 <event-folder name="QuestEngine">
                     <event-sheet>QuestCommon.xml</event-sheet>
                     <event-sheet>QuestBootstrap.xml</event-sheet>
@@ -6755,36 +6755,7 @@
                     <event-sheet>QuestDialogUITouchControls.xml</event-sheet>
                     <event-sheet>QuestDialogUIHelpers.xml</event-sheet>
                 </event-folder>
-                <event-folder name="Controls">
-                    <event-folder name="LevelGameplayPlayback">
-                        <event-sheet>LevelGameplayPlaybackControls.xml</event-sheet>
-                    </event-folder>
-                    <event-folder name="SideMenu">
-                        <event-sheet>SideMenu.xml</event-sheet>
-                    </event-folder>
-                    <event-folder name="PauseBtn">
-                        <event-sheet>PauseBtn.xml</event-sheet>
-                    </event-folder>
-                    <event-folder name="LevelProgress">
-                        <event-sheet>IdiomProgress.xml</event-sheet>
-                    </event-folder>
-                    <event-folder name="ResultNotification">
-                        <event-sheet>ResultNotification.xml</event-sheet>
-                    </event-folder>
-                    <event-sheet>LevelControls.xml</event-sheet>
-                </event-folder>
                 <event-folder name="VisualObjects">
-                    <event-folder name="S">
-                        <event-folder name="Scooters" />
-                    </event-folder>
-                    <event-folder name="C">
-                        <event-folder name="Cars" />
-                    </event-folder>
-                    <event-folder name="M">
-                        <event-folder name="Markers">
-                            <event-sheet>IdiomDialogCompletion.xml</event-sheet>
-                        </event-folder>
-                    </event-folder>
                     <event-folder name="F">
                         <event-folder name="Foxy">
                             <event-sheet>FoxySimpleSCMLSpritesBinding.xml</event-sheet>
@@ -6793,10 +6764,14 @@
                 </event-folder>
                 <event-folder name="PlatformerLevel">
                     <event-folder name="Controls">
+                        <event-folder name="LevelProgress">
+                            <event-sheet>PlatformerLevelIdiomProgress.xml</event-sheet>
+                            <event-sheet>PlatformerLevelCoinsProgress.xml</event-sheet>
+                            <event-sheet>PlatformerLevelSecretsProgress.xml</event-sheet>
+                        </event-folder>
                         <event-sheet>PlatformerLevelGameHelp.xml</event-sheet>
-                        <event-sheet>PlatformerLevelCoinsProgress.xml</event-sheet>
-                        <event-sheet>PlatformerLevelSecretsProgress.xml</event-sheet>
                         <event-sheet>PlatformerLevelCollisionCustomEventSender.xml</event-sheet>
+                        <event-sheet>PlatformerLevelControls.xml</event-sheet>
                     </event-folder>
                     <event-sheet>PlatformerLevelCommon.xml</event-sheet>
                     <event-sheet>PlatformerLevelRecording.xml</event-sheet>
@@ -6810,18 +6785,39 @@
                     <event-sheet>PlatformerLevelPlayerFallToHellRecovery.xml</event-sheet>
                     <event-sheet>PlatformerLevelDialogF2F.xml</event-sheet>
                     <event-sheet>PlatformerLevelAutomaticTalkStarters.xml</event-sheet>
+                    <event-sheet>PlatformerLevelBootstrap.xml</event-sheet>
                 </event-folder>
                 <event-folder name="IdiomLandLevel">
                     <event-sheet>IdiomLandLevel.xml</event-sheet>
                     <event-sheet>IdiomLandLevelRecording.xml</event-sheet>
                 </event-folder>
-                <event-folder name="Level">
+                <event-folder name="BasicLevelEngine">
+                    <event-folder name="Controls">
+                        <event-folder name="LevelGameplayPlayback">
+                            <event-sheet>LevelGameplayPlaybackControls.xml</event-sheet>
+                        </event-folder>
+                        <event-folder name="SideMenu">
+                            <event-sheet>SideMenu.xml</event-sheet>
+                        </event-folder>
+                        <event-folder name="PauseBtn">
+                            <event-sheet>PauseBtn.xml</event-sheet>
+                        </event-folder>
+                        <event-folder name="ResultNotification">
+                            <event-sheet>ResultNotification.xml</event-sheet>
+                        </event-folder>
+                        <event-folder name="IdiomDialogCompletion">
+                            <event-sheet>IdiomDialogCompletion.xml</event-sheet>
+                        </event-folder>
+                        <event-sheet>LevelControls.xml</event-sheet>
+                    </event-folder>
                     <event-sheet>LevelCommon.xml</event-sheet>
                     <event-sheet>LevelPlayback.xml</event-sheet>
                     <event-sheet>LevelRecording.xml</event-sheet>
                     <event-sheet>LevelStartFinish.xml</event-sheet>
                     <event-sheet>LevelFade.xml</event-sheet>
-                    <event-sheet>LevelInput.xml</event-sheet>
+                    <event-sheet>LevelInputMode.xml</event-sheet>
+                    <event-sheet>LevelBootstrap.xml</event-sheet>
+                    <event-sheet>LevelAnimationsInit.xml</event-sheet>
                 </event-folder>
             </event-folder>
             <event-folder name="1demo">

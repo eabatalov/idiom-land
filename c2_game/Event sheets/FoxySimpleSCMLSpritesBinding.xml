@@ -3,118 +3,119 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FoxySimpleSCMLSpritesBinding</name>
     <events>
-        <comment>Already loaded SCML file case</comment>
-        <event-block sid="3705880361721988">
-            <conditions>
-                <condition id="0" name="On function" sid="4016498628516764" type="Function">
-                    <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="5262643646919361" title="Foxy CML spriter binding">
             <sub-events>
-                <event-block sid="54660934737665">
+                <variable constant="1" name="FOXY_ANIM_UID" sid="4810679453626018" static="0" type="text">FOXY</variable>
+                <comment>Already loaded SCML file case</comment>
+                <event-block sid="3705880361721988">
                     <conditions>
-                        <condition id="3" name="Has key" sid="1556045891143163" type="InitedAnimsDict">
-                            <param id="0" name="Key">PlayerSCML.entityName</param>
+                        <condition id="0" name="On function" sid="4016498628516764" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
                         </condition>
                     </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="54660934737665">
+                            <conditions>
+                                <condition id="3" name="Has key" sid="1556045891143163" type="InitedAnimsDict">
+                                    <param id="0" name="Key">FOXY_ANIM_UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9318585646409481" type="Function">
+                                    <param id="0" name="Name">&quot;InitPlayerSCML&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>First game load and scml file loaded on layout start case</comment>
+                <event-block any="1" sid="5696395531939232">
+                    <conditions>
+                        <condition id="666" name="On initialised" sid="4830977351397485" type="PlayerSCML" />
+                    </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="9318585646409481" type="Function">
+                        <action id="0" name="Call function" sid="9642173694223748" type="Function">
                             <param id="0" name="Name">&quot;InitPlayerSCML&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="3651580525504251">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3928983191273481" type="Function">
+                            <param id="0" name="Name">&quot;InitPlayerSCML&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="666" name="Associate object type" sid="8863669683046702" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_hand2</param>
+                            <param id="1" name="Name">&quot;foxy_hand2&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="5066652837452835" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_leg2</param>
+                            <param id="1" name="Name">&quot;foxy_leg2&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="8783091881486012" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_leg1</param>
+                            <param id="1" name="Name">&quot;foxy_leg1&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="2019903484902732" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_tail</param>
+                            <param id="1" name="Name">&quot;foxy_tail&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="5852190284906374" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_body</param>
+                            <param id="1" name="Name">&quot;foxy_body&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="6419261898763135" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_ear2</param>
+                            <param id="1" name="Name">&quot;foxy_ear2&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="8710023318453115" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_acc3</param>
+                            <param id="1" name="Name">&quot;foxy_acc3&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="9903206193575355" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_head</param>
+                            <param id="1" name="Name">&quot;foxy_head&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="2195401880518929" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_ear1</param>
+                            <param id="1" name="Name">&quot;foxy_ear1&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="2801070817880721" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_eye1</param>
+                            <param id="1" name="Name">&quot;foxy_eye1&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="7003196986090037" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_mouth1</param>
+                            <param id="1" name="Name">&quot;foxy_mouth1&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="9026714750983605" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_hand1</param>
+                            <param id="1" name="Name">&quot;foxy_hand1&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="739053533806805" type="PlayerSCML">
+                            <param id="0" name="Object">foxy_simple_glass_003</param>
+                            <param id="1" name="Name">&quot;foxy_glass_003&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="6701742387688106" type="Function">
+                            <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Add key" sid="2941282593584218" type="InitedAnimsDict">
+                            <param id="0" name="Key">FOXY_ANIM_UID</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="14" name="Log" sid="6468947144983559" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;FOXY INITED&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
-        </event-block>
-        <comment>First game load and scml file loaded on layout start case</comment>
-        <event-block any="1" sid="5696395531939232">
-            <conditions>
-                <condition id="666" name="On initialised" sid="4830977351397485" type="PlayerSCML" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="9642173694223748" type="Function">
-                    <param id="0" name="Name">&quot;InitPlayerSCML&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3651580525504251">
-            <conditions>
-                <condition id="0" name="On function" sid="3928983191273481" type="Function">
-                    <param id="0" name="Name">&quot;InitPlayerSCML&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="1857409130494137" type="System">
-                    <param id="0" name="Variable">PLAYER_ANIM_SCALING_DEFAULT</param>
-                    <param id="1" name="Value">0.45</param>
-                </action>
-                <action id="666" name="Associate object type" sid="8863669683046702" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_hand2</param>
-                    <param id="1" name="Name">&quot;foxy_hand2&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="5066652837452835" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_leg2</param>
-                    <param id="1" name="Name">&quot;foxy_leg2&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="8783091881486012" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_leg1</param>
-                    <param id="1" name="Name">&quot;foxy_leg1&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="2019903484902732" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_tail</param>
-                    <param id="1" name="Name">&quot;foxy_tail&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="5852190284906374" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_body</param>
-                    <param id="1" name="Name">&quot;foxy_body&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="6419261898763135" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_ear2</param>
-                    <param id="1" name="Name">&quot;foxy_ear2&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="8710023318453115" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_acc3</param>
-                    <param id="1" name="Name">&quot;foxy_acc3&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="9903206193575355" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_head</param>
-                    <param id="1" name="Name">&quot;foxy_head&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="2195401880518929" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_ear1</param>
-                    <param id="1" name="Name">&quot;foxy_ear1&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="2801070817880721" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_eye1</param>
-                    <param id="1" name="Name">&quot;foxy_eye1&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="7003196986090037" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_mouth1</param>
-                    <param id="1" name="Name">&quot;foxy_mouth1&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="9026714750983605" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_hand1</param>
-                    <param id="1" name="Name">&quot;foxy_hand1&quot;</param>
-                </action>
-                <action id="666" name="Associate object type" sid="739053533806805" type="PlayerSCML">
-                    <param id="0" name="Object">foxy_simple_glass_003</param>
-                    <param id="1" name="Name">&quot;foxy_glass_003&quot;</param>
-                </action>
-                <action id="0" name="Add key" sid="2941282593584218" type="InitedAnimsDict">
-                    <param id="0" name="Key">PlayerSCML.entityName</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Call function" sid="6701742387688106" type="Function">
-                    <param id="0" name="Name">&quot;AnimInited&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action id="14" name="Log" sid="6468947144983559" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;FOXY INITED&quot;</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>

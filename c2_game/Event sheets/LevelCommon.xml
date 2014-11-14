@@ -5,14 +5,14 @@
     <events>
         <variable constant="1" name="WINDOW_WIDTH" sid="1295065130285739" static="0" type="number">980</variable>
         <variable constant="1" name="WINDOW_HEIGHT" sid="8561640085275173" static="0" type="number">500</variable>
-        <include>QuestCommon</include>
-        <include>LevelControls</include>
+        <include>LevelBootstrap</include>
         <include>LevelRecording</include>
         <include>LevelPlayback</include>
         <include>LevelFade</include>
         <include>LevelStartFinish</include>
-        <include>LevelInput</include>
-        <include>FoxySimpleSCMLSpritesBinding</include>
+        <include>LevelInputMode</include>
+        <include>LevelControls</include>
+        <include>LevelAnimationsInit</include>
         <event-block sid="5391175458694452">
             <conditions>
                 <condition id="-3" name="On end of layout" sid="9603448931859444" type="System" />

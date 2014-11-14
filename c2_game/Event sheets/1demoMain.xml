@@ -11,45 +11,43 @@
         <event-group description="" sid="460933006001851" title="Local var scope 1">
             <sub-events>
                 <variable constant="1" name="LEVEL_NAME" sid="146390735041057" static="0" type="text">1demo</variable>
-                <variable constant="1" name="LEVEL_NPC_ANIMS_TO_INIT" sid="5379837504000799" static="0" type="number">3</variable>
                 <variable constant="1" name="LEVEL_INITIAL_STAGE" sid="4210704395276113" static="0" type="text">intro</variable>
+                <variable constant="1" name="LEVEL_NPC_ANIMS_TO_INIT" sid="5379837504000799" static="0" type="number">3</variable>
                 <event-block sid="2994783783040874">
                     <conditions>
                         <condition id="0" name="On function" sid="9886935471380511" type="Function">
-                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                            <param id="0" name="Name">&quot;onPlatformerLevelStartReady&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="8930605218157595" type="Function">
-                            <param id="0" name="Name">&quot;StartLevel&quot;</param>
-                            <param id="1" name="Parameter {n}">LEVEL_NAME{###}LEVEL_NPC_ANIMS_TO_INIT {###}LEVEL_INITIAL_STAGE</param>
+                            <param id="0" name="Name">&quot;StartPlatformerLevel&quot;</param>
+                            <param id="1" name="Parameter {n}">LEVEL_NAME{###}LEVEL_INITIAL_STAGE {###}LEVEL_NPC_ANIMS_TO_INIT </param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="5431196656068474">
                     <conditions>
                         <condition id="0" name="On function" sid="6875055154176057" type="Function">
-                            <param id="0" name="Name">&quot;LevelStarted&quot;</param>
+                            <param id="0" name="Name">&quot;onLevelStarted&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="9688480019624415" type="Function">
-                            <param id="0" name="Name">&quot;CarouselInit&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="3499156153788186" type="Function">
-                            <param id="0" name="Name">&quot;ExitBusInit&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="2680688670042512" type="Function">
-                            <param id="0" name="Name">&quot;IntroInit&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="2673037115571879" type="Function">
-                            <param id="0" name="Name">&quot;SetLevelSecretsCount&quot;</param>
-                            <param id="1" name="Parameter {n}">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7516301801037677">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="4272883742543504" type="Function">
+                                    <param id="0" name="Name">&quot;1demoLevelInitAllStages&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="2673037115571879" type="Function">
+                                    <param id="0" name="Name">&quot;SetLevelSecretsCount&quot;</param>
+                                    <param id="1" name="Parameter {n}">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
