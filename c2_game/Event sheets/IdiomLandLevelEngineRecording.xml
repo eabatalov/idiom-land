@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IdiomLandLevelEngineRecording</name>
+    <events>
+        <event-group description="" sid="6236950123704572" title="Local var scope 12">
+            <sub-events>
+                <variable constant="0" name="IS_RECORDING_NOW" sid="781492883616496" static="1" type="number">0</variable>
+                <event-block sid="9707098237478343">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7778765312892712" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4023401071817537" type="System">
+                            <param id="0" name="Variable">IS_RECORDING_NOW</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8980687131319332">
+                    <conditions>
+                        <condition id="0" name="On function" sid="650282355550447" type="Function">
+                            <param id="0" name="Name">&quot;RecordingStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7174253429543005" type="System">
+                            <param id="0" name="Variable">IS_RECORDING_NOW</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6349801966749401">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4792881247030507" type="Function">
+                            <param id="0" name="Name">&quot;RecordingStopped&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2590945117016161" type="System">
+                            <param id="0" name="Variable">IS_RECORDING_NOW</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="100" name="Stop level gameplay recording" sid="7178540831990693" type="IdiomlandLevelRecording" />
+                    </actions>
+                </event-block>
+                <event-block sid="9315247944899188">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="4936619196606826" type="System">
+                            <param id="0" name="First value">IS_RECORDING_NOW</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>No special idiomland level recording for now</comment>
+                        <event-block sid="1910397650206186">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

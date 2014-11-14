@@ -279,7 +279,7 @@
 						2722
 					],
 					"outCondIds": [
-						6509
+						6695
 					],
 					"props": {
 						"id": "Player",
@@ -330,7 +330,7 @@
 					"ver": 1,
 					"id": 2070,
 					"type": 10,
-					"label": "IdiomDialogCompleted",
+					"label": "ShowGoForwardHelper",
 					"continue": true,
 					"inCondIds": [
 						6339,
@@ -340,7 +340,7 @@
 						2899
 					],
 					"props": {
-						"name": "C2API_TaxiIdiomDialogCompleted",
+						"name": "C2API_ShowGoForwardHelper",
 						"source": "c2",
 						"rollbackName": "",
 						"params": []
@@ -707,16 +707,16 @@
 					"label": "bargain",
 					"continue": false,
 					"inCondIds": [
-						6509,
 						6517,
 						6520,
-						6524
+						6524,
+						6696
 					],
 					"outCondIds": [
-						6511,
 						6514,
 						6518,
-						6521
+						6521,
+						6693
 					],
 					"props": {
 						"id": "Player",
@@ -736,7 +736,7 @@
 					"label": "Don't bargain",
 					"continue": false,
 					"inCondIds": [
-						6511
+						6694
 					],
 					"outCondIds": [
 						6516
@@ -832,7 +832,7 @@
 					],
 					"props": {
 						"id": "driver2",
-						"text": "This isn't possible!\nYou just make me angry, young lady,",
+						"text": "This isn't possible!\nYou just make me angry, young lady.",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -873,6 +873,44 @@
 						"text": "I don't have 17 coins still...",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4303,
+					"type": 10,
+					"label": "IdiomDialogCompleted",
+					"continue": true,
+					"inCondIds": [
+						6695
+					],
+					"outCondIds": [
+						6696
+					],
+					"props": {
+						"name": "C2API_IdiomDialogCompletedSilent",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4304,
+					"type": 10,
+					"label": "ShowGoForwardHelper",
+					"continue": true,
+					"inCondIds": [
+						6693
+					],
+					"outCondIds": [
+						6694
+					],
+					"props": {
+						"name": "C2API_ShowGoForwardHelper",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
 					}
 				}
 			],
@@ -1205,20 +1243,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 6509,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 6511,
-					"type": 3,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 6514,
 					"type": 5,
 					"props": {}
@@ -1296,6 +1320,32 @@
 					"props": {
 						"clearStage": true
 					}
+				},
+				{
+					"ver": 1,
+					"id": 6693,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6694,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6695,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6696,
+					"type": 8,
+					"props": {}
 				}
 			]
 		},

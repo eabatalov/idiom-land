@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelUInit</name>
+    <events>
+        <variable constant="0" name="NOTIFICATION_TEXT_TOP_MARGIN" sid="1896060484947539" static="0" type="number">0</variable>
+        <variable constant="0" name="NOTIFICATION_TEXT_LEFT_MARGIN" sid="3628439654136423" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_COCK_HEIGHT" sid="8327119120210498" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_BG_MARGIN_LEFT" sid="7145849639664372" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_BG_MARGIN_TOP" sid="8697885988512202" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_TXT_MARGIN_LEFT" sid="3847839595773115" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_TXT_MARGIN_TOP" sid="8148074933414549" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_TXT_MARGIN_BOTTOM" sid="9574567546357257" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHRASE_BG_MARGIN_BOTTOM" sid="8420926878907876" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_NAME_TXT_MARGIN_LEFT" sid="9389046605015565" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_NAME_TXT_MARGIN_TOP" sid="7812956666867186" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHOTO_MARGIN_LEFT" sid="3333890339544275" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_PHOTO_MARGIN_TOP" sid="3736555117509064" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_ANS_BG_LEFT_MARGIN" sid="1520508369458528" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_ANS_BG_TOP_MARGIN" sid="3695631180500388" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_ANS_TXT_LEFT_MARGIN" sid="8207606161804895" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_ANS_TXT_TOP_MARGIN" sid="6241311482652405" static="0" type="number">0</variable>
+        <variable constant="0" name="DIALOG_ANS_BG_H_SPACING" sid="260846906806031" static="0" type="number">0</variable>
+        <comment>First stage of initialization: init all the visual construct objects&#x0D;&#x0A;XXX: for some reason we can&apos;t call InitUI from InitGame&#x0D;&#x0A;Probably sprite positions change after load of layout and we compute some invalid offsets.</comment>
+        <event-block sid="48741975854135">
+            <conditions>
+                <condition id="0" name="On function" sid="3065375302718294" type="Function">
+                    <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="4618043074624524" type="Function">
+                    <param id="0" name="Name">&quot;ComputeUILayout&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="7496538021365916" type="Function">
+                    <param id="0" name="Name">&quot;ApplyInitialUIState&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4532375172585589">
+            <conditions>
+                <condition id="0" name="On function" sid="8604493366469481" type="Function">
+                    <param id="0" name="Name">&quot;ComputeUILayout&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="8051387559568225" type="Function">
+                    <param id="0" name="Name">&quot;ComputeDialogUILayout&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9904846653411464">
+            <conditions>
+                <condition id="0" name="On function" sid="1782576799532024" type="Function">
+                    <param id="0" name="Name">&quot;ApplyInitialUIState&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5157934007977527">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="2619752139757834" type="Function">
+                            <param id="0" name="Name">&quot;HideStageUI&quot;</param>
+                            <param id="1" name="Parameter {n}">CurrentStageName{###}0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1667944103340569" type="Function">
+                            <param id="0" name="Name">&quot;ApplyInitialDialogUIState&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5509107574002952">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="2623241217821777" type="System">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="7011129363249012" type="PlayerPlatform">
+                            <param id="0" name="Layer">Player.LayerName</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="818532151001473" type="PlayerMiddleMarker">
+                            <param id="0" name="Layer">Player.LayerName</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4143300716619164">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="5024278035628783" type="System">
+                            <param id="0" name="Object">StageChanger</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="957475462372547" type="StageChanger">
+                            <param id="0" name="Y">0</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="4611797907622094" type="StageChanger">
+                            <param id="0" name="Height">LayoutHeight</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1365819667723329">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="2546125422116422" type="System">
+                            <param id="0" name="Object">TalkStartTrigger</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9839607574525604">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8896980307790245" type="TalkStartTrigger">
+                                    <param id="0" name="Instance variable">ExpandToLayoutHeight</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="1372737458980234" type="TalkStartTrigger">
+                                    <param id="0" name="Height">LayoutHeight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5097624920623541">
+                            <conditions />
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="8399902970502837" type="TalkStartHighlight">
+                                    <param id="0" name="Layer">&quot;BackgroundF&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="7353612384074733" type="TalkStartHighlight">
+                                    <param id="0" name="X">TalkStartTrigger.X</param>
+                                    <param id="1" name="Y">TalkStartTrigger.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4404965032536985">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7753632143469906" type="System">
+                                    <param id="0" name="First value">TalkStartTrigger.Highlight</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="529697503491252" type="TalkStartHighlight">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="998019353929911">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="3970298221974455" type="Function">
+                            <param id="0" name="Name">&quot;makeStageChangersTransparent&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="5619437179527673" title="NotificationInit">
+                    <sub-events>
+                        <event-block sid="7009231351450403">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="6738893702675816" type="Function">
+                                    <param id="0" name="Name">&quot;HideNotification&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="9896540851845385" type="NotificationTxt">
+                                    <param id="0" name="Layer">&quot;Notification&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="7222953450595312" title="DialogUInit">
+            <sub-events>
+                <event-block sid="4928173719961111">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1076786603378533" type="Function">
+                            <param id="0" name="Name">&quot;ComputeDialogUILayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3402315017791729">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="4651886017295081" type="System">
+                                    <param id="0" name="Variable">DIALOG_PHRASE_COCK_HEIGHT</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2367658805224515" type="System">
+                                    <param id="0" name="Variable">DIALOG_PHRASE_BG_MARGIN_LEFT</param>
+                                    <param id="1" name="Value">DialogPhraseBg.X - DialogSpeechBg.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1100476348880111" type="System">
+                                    <param id="0" name="Variable">DIALOG_PHRASE_BG_MARGIN_TOP</param>
+                                    <param id="1" name="Value">DialogPhraseBg.Y - DialogSpeechBg.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="21489154554504" type="System">
+                                    <param id="0" name="Variable">DIALOG_PHRASE_BG_MARGIN_BOTTOM</param>
+                                    <param id="1" name="Value">(DialogSpeechBg.Y + DialogSpeechBg.Height) - (DialogPhraseBg.Y + DialogPhraseBg.Height)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3672866360307616" type="System">
+                                    <param id="0" name="Variable">DIALOG_PHRASE_TXT_MARGIN_LEFT</param>
+                                    <param id="1" name="Value">DialogPhraseTxt.X - DialogSpeechBg.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4092575084341254" type="System">
+                                    <param id="0" name="Variable">DIALOG_PHRASE_TXT_MARGIN_TOP</param>
+                                    <param id="1" name="Value">DialogPhraseTxt.Y - DialogSpeechBg.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4991254077986567" type="System">
+                                    <param id="0" name="Variable">DIALOG_PHRASE_TXT_MARGIN_BOTTOM</param>
+                                    <param id="1" name="Value">(DialogSpeechBg.Y + DialogSpeechBg.Height) - (DialogPhraseTxt.Y + DialogPhraseTxt.Height)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3565377046192407" type="System">
+                                    <param id="0" name="Variable">DIALOG_NAME_TXT_MARGIN_LEFT</param>
+                                    <param id="1" name="Value">DialogSpeakerNameTxt.X - DialogSpeechBg.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2879495725990057" type="System">
+                                    <param id="0" name="Variable">DIALOG_NAME_TXT_MARGIN_TOP</param>
+                                    <param id="1" name="Value">DialogSpeakerNameTxt.Y - DialogSpeechBg.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="149850086170187" type="System">
+                                    <param id="0" name="Variable">DIALOG_PHOTO_MARGIN_LEFT</param>
+                                    <param id="1" name="Value">DialogSpeakerPhoto.X - DialogSpeechBg.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7836754945136031" type="System">
+                                    <param id="0" name="Variable">DIALOG_PHOTO_MARGIN_TOP</param>
+                                    <param id="1" name="Value">DialogSpeakerPhoto.Y - DialogSpeechBg.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8910253164485732" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS_BG_LEFT_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns1Bg.X - DialogAnsBg.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4076078531904303" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS_BG_TOP_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns1Bg.Y - DialogAnsBg.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8802392243818429" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS_TXT_LEFT_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns1Txt.X - DialogAns1Bg.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5040261077302272" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS_TXT_TOP_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns1Txt.Y - DialogAns1Bg.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4317821083467986" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS_BG_H_SPACING</param>
+                                    <param id="1" name="Value">DialogAns2Bg.Y - (DialogAns1Bg.Y + DialogAns1Bg.Height)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4414688390595325">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7905056658327076" type="Function">
+                            <param id="0" name="Name">&quot;ApplyInitialDialogUIState&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6454658289611878">
+                            <conditions />
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="3412303639341201" type="DialogAnsBg">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="921864472517263" type="DialogAns1Bg">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="392375829313247" type="DialogAns1Txt">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="1358914273646776" type="DialogAns2Bg">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="2786557048252688" type="DialogAns2Txt">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="7301470108960344" type="DialogAns3Bg">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="1643474301921664" type="DialogAns3Txt">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="6367661816347463" type="DialogAns4Bg">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="1117407887461269" type="DialogAns4Txt">
+                                    <param id="0" name="Layer">&quot;Quizz&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="4389655709412586" type="DialogAnsBg">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="1207998375094256" type="DialogSpeechBg">
+                                    <param id="0" name="Layer">&quot;Speech&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="2075076244940227" type="DialogPhraseTxt">
+                                    <param id="0" name="Layer">&quot;Speech&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="9453625871965062" type="DialogPhraseBg">
+                                    <param id="0" name="Layer">&quot;Speech&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="7513793924214671" type="DialogSpeakerNameTxt">
+                                    <param id="0" name="Layer">&quot;Speech&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="3881902797190921" type="DialogSpeakerPhoto">
+                                    <param id="0" name="Layer">&quot;Speech&quot;</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="376299342451594" type="QuestNavBackBtn">
+                                    <param id="0" name="Object">ControlLeft</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="447902141942948" type="QuestNavNextBtn">
+                                    <param id="0" name="Object">ControlRight</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="1352311924310592" type="QuestNavlClutch">
+                                    <param id="0" name="Object">Clutch</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7878231141728811" type="Function">
+                                    <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

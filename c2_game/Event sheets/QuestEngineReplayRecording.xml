@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>QuestEngineReplayRecording</name>
+    <events>
+        <event-group description="" sid="948492908663676" title="Quest engine replay recording">
+            <sub-events>
+                <variable constant="0" name="IS_RECORDING_NOW" sid="2198030591488888" static="1" type="number">0</variable>
+                <event-block sid="3213393338770905">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9242509523150069" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5611305553015529" type="System">
+                            <param id="0" name="Variable">IS_RECORDING_NOW</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9657653793535486">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2419460912900368" type="Function">
+                            <param id="0" name="Name">&quot;RecordingStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="8914913455080522" type="System">
+                            <param id="0" name="Variable">IS_RECORDING_NOW</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6219862702962609">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4542649069431778" type="Function">
+                            <param id="0" name="Name">&quot;RecordingStopped&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5192951741485355" type="System">
+                            <param id="0" name="Variable">IS_RECORDING_NOW</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

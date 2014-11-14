@@ -4877,7 +4877,6 @@
                         <object-type name="Player" sid="2600527508592514">
                             <plugin id="Sprite" />
                             <instance-variables>
-                                <instance-variable name="CurrentStage" sid="6365041148167288" type="string" />
                                 <instance-variable comment="TRUE when player haven&apos;t recieved any commands to play some specific animation" name="IsCurrentAnimationModeAutomatic" sid="8396278435992456" type="boolean" />
                             </instance-variables>
                             <container>
@@ -5542,10 +5541,8 @@
                                 <frame duration="1" hotspotX="0" hotspotY="0">
                                     <collision-poly>
                                         <point x="0.030303" y="0.00297619" />
-                                        <point x="0.909091" y="0.00892857" />
-                                        <point x="0.151515" y="0.5" />
-                                        <point x="0.151515" y="0.916667" />
-                                        <point x="0.484848" y="0.077381" />
+                                        <point x="1" y="0" />
+                                        <point x="1" y="1" />
                                         <point x="0.030303" y="0.997024" />
                                     </collision-poly>
                                 </frame>
@@ -6736,65 +6733,24 @@
     <event-folder>
         <event-folder name="Levels">
             <event-folder name="LevelEngines">
-                <event-folder name="QuestEngine">
-                    <event-sheet>QuestCommon.xml</event-sheet>
-                    <event-sheet>QuestBootstrap.xml</event-sheet>
-                    <event-sheet>QuestUInit.xml</event-sheet>
-                    <event-sheet>QuestActionProc.xml</event-sheet>
-                    <event-sheet>QuestDialogUIRenderers.xml</event-sheet>
-                    <event-sheet>QuestUIMisc.xml</event-sheet>
-                    <event-sheet>QuestPlayerAnimation.xml</event-sheet>
-                    <event-sheet>QuestUIinput.xml</event-sheet>
-                    <event-sheet>QuestRecording.xml</event-sheet>
-                    <event-sheet>QuestPlayback.xml</event-sheet>
-                    <event-sheet>QuestStageChangers.xml</event-sheet>
-                    <event-sheet>QuestNPCAnimation.xml</event-sheet>
-                    <event-sheet>QuestDialogUIElementsTransitions.xml</event-sheet>
-                    <event-sheet>QuestDialogUIHiding.xml</event-sheet>
-                    <event-sheet>QuestDialog.xml</event-sheet>
-                    <event-sheet>QuestDialogUITouchControls.xml</event-sheet>
-                    <event-sheet>QuestDialogUIHelpers.xml</event-sheet>
+                <event-folder name="QuestLevelEngine">
+                    <event-sheet>QuestEngineCommon.xml</event-sheet>
+                    <event-sheet>QuestEngineBootstrap.xml</event-sheet>
+                    <event-sheet>QuestEngineActionProc.xml</event-sheet>
+                    <event-sheet>QuestEngineReplayRecording.xml</event-sheet>
+                    <event-sheet>QuestEngineReplayPlayback.xml</event-sheet>
+                    <event-sheet>QuestEngineCurrentStage.xml</event-sheet>
+                    <event-sheet>QuestEngineDialogUIHiding.xml</event-sheet>
+                    <event-sheet>QuestEngineDialog.xml</event-sheet>
                 </event-folder>
-                <event-folder name="VisualObjects">
-                    <event-folder name="F">
-                        <event-folder name="Foxy">
-                            <event-sheet>FoxySimpleSCMLSpritesBinding.xml</event-sheet>
-                        </event-folder>
-                    </event-folder>
+                <event-folder name="IdiomLandLevelEngine">
+                    <event-sheet>IdiomLandLevelEngineCommon.xml</event-sheet>
+                    <event-sheet>IdiomLandLevelEngineRecording.xml</event-sheet>
                 </event-folder>
-                <event-folder name="PlatformerLevel">
+                <event-folder name="LevelEngine">
                     <event-folder name="Controls">
-                        <event-folder name="LevelProgress">
-                            <event-sheet>PlatformerLevelIdiomProgress.xml</event-sheet>
-                            <event-sheet>PlatformerLevelCoinsProgress.xml</event-sheet>
-                            <event-sheet>PlatformerLevelSecretsProgress.xml</event-sheet>
-                        </event-folder>
-                        <event-sheet>PlatformerLevelGameHelp.xml</event-sheet>
-                        <event-sheet>PlatformerLevelCollisionCustomEventSender.xml</event-sheet>
-                        <event-sheet>PlatformerLevelControls.xml</event-sheet>
-                    </event-folder>
-                    <event-sheet>PlatformerLevelCommon.xml</event-sheet>
-                    <event-sheet>PlatformerLevelRecording.xml</event-sheet>
-                    <event-sheet>PlatformerLevelPlayback.xml</event-sheet>
-                    <event-sheet>PlatformerLevelPlayerAutoAnim.xml</event-sheet>
-                    <event-sheet>PlatformerLevelCamera.xml</event-sheet>
-                    <event-sheet>PlatformerLevelQuestDialogUITransitions.xml</event-sheet>
-                    <event-sheet>PlatformerLevelQuestDialogUIFade.xml</event-sheet>
-                    <event-sheet>PlatformerLevelQuestDialog.xml</event-sheet>
-                    <event-sheet>PlatformerLevelKeyboardHacks.xml</event-sheet>
-                    <event-sheet>PlatformerLevelPlayerFallToHellRecovery.xml</event-sheet>
-                    <event-sheet>PlatformerLevelDialogF2F.xml</event-sheet>
-                    <event-sheet>PlatformerLevelAutomaticTalkStarters.xml</event-sheet>
-                    <event-sheet>PlatformerLevelBootstrap.xml</event-sheet>
-                </event-folder>
-                <event-folder name="IdiomLandLevel">
-                    <event-sheet>IdiomLandLevel.xml</event-sheet>
-                    <event-sheet>IdiomLandLevelRecording.xml</event-sheet>
-                </event-folder>
-                <event-folder name="BasicLevelEngine">
-                    <event-folder name="Controls">
-                        <event-folder name="LevelGameplayPlayback">
-                            <event-sheet>LevelGameplayPlaybackControls.xml</event-sheet>
+                        <event-folder name="LevelReplayPlayback">
+                            <event-sheet>LevelReplayPlaybackControls.xml</event-sheet>
                         </event-folder>
                         <event-folder name="SideMenu">
                             <event-sheet>SideMenu.xml</event-sheet>
@@ -6840,19 +6796,74 @@
                     <event-folder name="airport_taxi">
                         <event-sheet>demo1_airport_taxi_stage.xml</event-sheet>
                     </event-folder>
-                    <event-folder name="Secret">
-                        <event-sheet>SecretStage.xml</event-sheet>
+                    <event-folder name="secret">
+                        <event-sheet>1demo_secret_stage.xml</event-sheet>
                     </event-folder>
                     <event-folder name="coin_intro">
                         <event-sheet>demo1_coin_intro_stage.xml</event-sheet>
                     </event-folder>
-                    <event-sheet>1demoAllStages.xml</event-sheet>
                     <event-sheet>1demoCoins.xml</event-sheet>
-                    <event-sheet>1demoNPCs.xml</event-sheet>
+                    <event-sheet>1demoAllStages.xml</event-sheet>
                 </event-folder>
                 <event-sheet>1demoMain.xml</event-sheet>
                 <event-sheet>1demoNpcAnimationRunners.xml</event-sheet>
                 <event-sheet>1demoNpcScmlSpritesBindings.xml</event-sheet>
+            </event-folder>
+            <event-folder name="PlatformerLevel">
+                <event-folder name="Controls">
+                    <event-folder name="LevelProgress">
+                        <event-sheet>PlatformerLevelIdiomProgress.xml</event-sheet>
+                        <event-sheet>PlatformerLevelCoinsProgress.xml</event-sheet>
+                        <event-sheet>PlatformerLevelSecretsProgress.xml</event-sheet>
+                    </event-folder>
+                    <event-sheet>PlatformerLevelGameHelp.xml</event-sheet>
+                    <event-sheet>PlatformerLevelCollisionCustomEventSender.xml</event-sheet>
+                    <event-sheet>PlatformerLevelControls.xml</event-sheet>
+                </event-folder>
+                <event-sheet>PlatformerLevelCommon.xml</event-sheet>
+                <event-sheet>PlatformerLevelReplayRecording.xml</event-sheet>
+                <event-sheet>PlatformerLevelReplayPlayback.xml</event-sheet>
+                <event-sheet>PlatformerLevelPlayerAutoAnim.xml</event-sheet>
+                <event-sheet>PlatformerLevelCamera.xml</event-sheet>
+                <event-sheet>PlatformerLevelQuestDialogUITransitions.xml</event-sheet>
+                <event-sheet>PlatformerLevelQuestDialogUIFade.xml</event-sheet>
+                <event-sheet>PlatformerLevelQuestDialog.xml</event-sheet>
+                <event-sheet>PlatformerLevelKeyboardHacks.xml</event-sheet>
+                <event-sheet>PlatformerLevelPlayerFallToHellRecovery.xml</event-sheet>
+                <event-sheet>PlatformerLevelDialogF2F.xml</event-sheet>
+                <event-sheet>PlatformerLevelAutomaticTalkStarters.xml</event-sheet>
+                <event-sheet>PlatformerLevelBootstrap.xml</event-sheet>
+                <event-sheet>PlatformerLevelStageChangers.xml</event-sheet>
+                <event-sheet>PlatformerLevelFindAllIdioms.xml</event-sheet>
+                <event-sheet>PlatformerLevelDialogUIElementsTransitions.xml</event-sheet>
+                <event-sheet>PlatformerLevelDialogUIHelpers.xml</event-sheet>
+                <event-sheet>PlatformerLevelDialogUITouchControls.xml</event-sheet>
+                <event-sheet>PlatformerLevelDialogUIRenderers.xml</event-sheet>
+                <event-sheet>PlatformerLevelNPCAnimation.xml</event-sheet>
+                <event-sheet>PlatformerLevelPlayerAnimation.xml</event-sheet>
+                <event-sheet>PlatformerLevelUIinput.xml</event-sheet>
+                <event-sheet>PlatformerLevelUInit.xml</event-sheet>
+                <event-sheet>PlatformerLevelUIMisc.xml</event-sheet>
+            </event-folder>
+            <event-folder name="TestDialogLevel">
+                <event-sheet>TestDialogLevelBootstrap.xml</event-sheet>
+                <event-sheet>TestDialogLevelCommon.xml</event-sheet>
+                <event-sheet>TestDialogLevelLayoutMain.xml</event-sheet>
+                <event-sheet>TestDialogLevelInput.xml</event-sheet>
+                <event-sheet>TestDialogLevelProgressAnimation.xml</event-sheet>
+                <event-sheet>TestDialogLevelAnimsInit.xml</event-sheet>
+                <event-sheet>TestDialogLevelQuestionAnimation.xml</event-sheet>
+                <event-sheet>TestDialogLevelUIState.xml</event-sheet>
+                <event-sheet>TestDialogLevelEditorAnimation.xml</event-sheet>
+                <event-sheet>TestDialogLevelProgressLineAnimation.xml</event-sheet>
+                <event-sheet>TestDialogLevelQuestionShowAnimation.xml</event-sheet>
+            </event-folder>
+            <event-folder name="VisualObjects">
+                <event-folder name="F">
+                    <event-folder name="Foxy">
+                        <event-sheet>FoxySimpleSCMLSpritesBinding.xml</event-sheet>
+                    </event-folder>
+                </event-folder>
             </event-folder>
         </event-folder>
         <event-folder name="Menus">
@@ -6875,19 +6886,6 @@
                 <event-sheet>InputMethodChoiceMenuMain.xml</event-sheet>
             </event-folder>
             <event-sheet>MenuCommon.xml</event-sheet>
-        </event-folder>
-        <event-folder name="TestDialog">
-            <event-sheet>TestDialogBootstrap.xml</event-sheet>
-            <event-sheet>TestDialogCommon.xml</event-sheet>
-            <event-sheet>TestDialogLayoutMain.xml</event-sheet>
-            <event-sheet>TestDialogInput.xml</event-sheet>
-            <event-sheet>TestDialogProgressAnimation.xml</event-sheet>
-            <event-sheet>TestDialogAnimsInit.xml</event-sheet>
-            <event-sheet>TestDialogQuestionAnimation.xml</event-sheet>
-            <event-sheet>TestDialogUIState.xml</event-sheet>
-            <event-sheet>TestDialogEditorAnimation.xml</event-sheet>
-            <event-sheet>TestDialogProgressLineAnimation.xml</event-sheet>
-            <event-sheet>TestDialogQuestionShowAnimation.xml</event-sheet>
         </event-folder>
         <event-sheet>Debug.xml</event-sheet>
     </event-folder>

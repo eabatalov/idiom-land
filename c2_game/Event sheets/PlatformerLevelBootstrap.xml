@@ -50,24 +50,6 @@
                             <param id="0" name="Variable">BootstrapState</param>
                             <param id="1" name="Value">BOOTSTRAP_STATE_WAIT_QUEST_ENGINE</param>
                         </action>
-                        <action id="0" name="Call function" sid="4674699362598542" type="Function">
-                            <param id="0" name="Name">&quot;PrepareQuestEngine&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3637476620739969">
-                    <conditions>
-                        <condition id="0" name="On function" sid="9401597781971046" type="Function">
-                            <param id="0" name="Name">&quot;onQuestEngineStartReady&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="5432406403530336" type="System">
-                            <param id="0" name="Variable">BootstrapState</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">BOOTSTRAP_STATE_WAIT_QUEST_ENGINE</param>
-                        </condition>
-                    </conditions>
-                    <actions>
                         <action id="0" name="Call function" sid="5941294568579853" type="Function">
                             <param id="0" name="Name">&quot;BlockPlayerInput&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -94,6 +76,10 @@
                         <action id="-9" name="Set value" sid="7858389040206483" type="System">
                             <param id="0" name="Variable">AnimsToInitCount</param>
                             <param id="1" name="Value">Function.Param(2) + 1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1493726481220738" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="514093552340398" type="Function">
                             <param id="0" name="Name">&quot;StartQuestEngine&quot;</param>

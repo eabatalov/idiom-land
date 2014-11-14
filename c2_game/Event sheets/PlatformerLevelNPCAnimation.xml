@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelNPCAnimation</name>
+    <events>
+        <variable constant="1" name="NPC_ANIM_PAUSE_PADDING_PX" sid="7782967329485957" static="0" type="number">100</variable>
+        <comment>Just a simple wrapper for convenience&#x0D;&#x0A;param(0): NPC UID&#x0D;&#x0A;param(1): animation name</comment>
+        <event-block sid="9816332067744781">
+            <conditions>
+                <condition id="0" name="On function" sid="78575615886477" type="Function">
+                    <param id="0" name="Name">&quot;NPCAnim&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="3181924192212778" type="Function">
+                    <param id="0" name="Name">&quot;NPCAnimTimed&quot;</param>
+                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1){###}-1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

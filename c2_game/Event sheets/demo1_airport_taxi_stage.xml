@@ -5,20 +5,6 @@
     <events>
         <event-group description="" sid="3794662281251669" title="demo1 taxi stage">
             <sub-events>
-                <variable constant="0" name="TaxiIdiomDialogCompletedCnt" sid="1202406068801366" static="1" type="number">0</variable>
-                <event-block sid="3135877040917726">
-                    <conditions>
-                        <condition id="0" name="On function" sid="1015499939679878" type="Function">
-                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="1693551705997506" type="System">
-                            <param id="0" name="Variable">TaxiIdiomDialogCompletedCnt</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="2606586952808344">
                     <conditions>
                         <condition id="0" name="On function" sid="3861102472362433" type="Function">
@@ -59,40 +45,6 @@
                                 <action id="0" name="Call function" sid="4068935786784779" type="Function">
                                     <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;taxi_ticket_not_complete&quot;{###}&quot;Player&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="5104913983001653">
-                    <conditions>
-                        <condition id="0" name="On function" sid="711061464706011" type="Function">
-                            <param id="0" name="Name">&quot;C2API_TaxiIdiomDialogCompleted&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="1581150583113803">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="4571355098148929" type="System">
-                                    <param id="0" name="Variable">TaxiIdiomDialogCompletedCnt</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="4548303486441103" type="Function">
-                                    <param id="0" name="Name">&quot;C2API_IdiomDialogCompleted&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6070987713694933">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="9451493717569968" type="System">
-                                    <param id="0" name="Variable">TaxiIdiomDialogCompletedCnt</param>
-                                    <param id="1" name="Value">TaxiIdiomDialogCompletedCnt + 1</param>
                                 </action>
                             </actions>
                         </event-block>

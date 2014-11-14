@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelFindAllIdioms</name>
+    <events>
+        <event-group description="" sid="580857223357128" title="Platformer level find all idioms">
+            <sub-events>
+                <variable constant="0" name="CompletedIdiomDialogCnt" sid="7626967772607628" static="1" type="number">0</variable>
+                <event-block sid="6128971108171664">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9665288177889904" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4366385479588997" type="System">
+                            <param id="0" name="Variable">CompletedIdiomDialogCnt</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6326189244456808">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1429706201574957" type="Function">
+                            <param id="0" name="Name">&quot;C2API_InjectTalkedWithAllNPCs&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7688540496091996">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6434115712918352" type="System">
+                                    <param id="0" name="Variable">CompletedIdiomDialogCnt</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="4685683712050964" type="Function">
+                                    <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;talked_with_all_npcs&quot;{###}&quot;Player&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6436153106524459">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7373785431538767" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5902739460814087" type="Function">
+                                    <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;not_talked_with_all_npcs&quot;{###}&quot;Player&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8677211402572547">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7378092039721674" type="Function">
+                            <param id="0" name="Name">&quot;C2API_IdiomDialogCompleted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3740710793035348" type="Function">
+                            <param id="0" name="Name">&quot;C2API_IdiomDialogCompletedSilent&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2378830369818553">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8128440512270089" type="Function">
+                            <param id="0" name="Name">&quot;C2API_IdiomDialogCompletedSilent&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="8550245480938314" type="System">
+                            <param id="0" name="Variable">CompletedIdiomDialogCnt</param>
+                            <param id="1" name="Value">CompletedIdiomDialogCnt + 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

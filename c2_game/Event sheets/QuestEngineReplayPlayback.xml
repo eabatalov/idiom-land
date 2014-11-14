@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>QuestEngineReplayPlayback</name>
+    <events>
+        <event-group description="" sid="6094464589040204" title="Quest engine replay playback">
+            <sub-events>
+                <event-block sid="8921347511807015">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6293333820991083" type="Function">
+                            <param id="0" name="Name">&quot;PlaybackStart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="1274713355080333" type="QuestLevelPlayback" />
+                    </actions>
+                </event-block>
+                <event-block sid="9992458396558573">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3229164516151491" type="Function">
+                            <param id="0" name="Name">&quot;PlaybackStop&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Stop" sid="1656210383954431" type="QuestLevelPlayback" />
+                    </actions>
+                </event-block>
+                <event-block sid="2733840242138459">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4426417464377087" type="Function">
+                            <param id="0" name="Name">&quot;PlaybackSpeedUp&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Speed up" sid="6154596698573482" type="QuestLevelPlayback" />
+                    </actions>
+                </event-block>
+                <event-block sid="2022738784616823">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7753685975936505" type="Function">
+                            <param id="0" name="Name">&quot;PlaybackSpeedDown&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Speed down" sid="5653658609528732" type="QuestLevelPlayback" />
+                    </actions>
+                </event-block>
+                <event-block sid="7021198944272772">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6452011411476125" type="Function">
+                            <param id="0" name="Name">&quot;PlaybackModeEnable&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1584474655875302" type="Function">
+                            <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

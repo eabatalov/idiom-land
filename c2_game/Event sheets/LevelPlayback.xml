@@ -73,6 +73,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="9208085786557334">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="4261060806820684" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="1234337103363365" type="LevelGameplayPlaybackTimeTxt">
+                            <param id="0" name="Text">QuestLevelPlayback.getPlaybackPosMin &amp; &quot; : &quot; &amp; QuestLevelPlayback.getPlaybackPosSec</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9499459609551166" type="LevelGameplayPlaybackSpeedTxt">
+                            <param id="0" name="Text">QuestLevelPlayback.getPlaybackSpeed</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>
