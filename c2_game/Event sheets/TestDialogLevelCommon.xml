@@ -3,6 +3,14 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>TestDialogLevelCommon</name>
     <events>
+        <event-group description="" sid="2417676176892758" title="Test dialog imports">
+            <sub-events>
+                <include>LevelBootstrap</include>
+                <include>LevelAnimationsInit</include>
+                <include>LevelFade</include>
+                <include>LevelStartFinish</include>
+            </sub-events>
+        </event-group>
         <include>TestDialogLevelQuestionShowAnimation</include>
         <include>TestDialogLevelProgressLineAnimation</include>
         <include>TestDialogLevelUIState</include>

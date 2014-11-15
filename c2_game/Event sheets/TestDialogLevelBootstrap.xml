@@ -7,30 +7,30 @@
             <sub-events>
                 <event-block sid="6583552400081521">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="4695992158240538" type="System" />
+                        <condition id="0" name="On function" sid="4105847471645928" type="Function">
+                            <param id="0" name="Name">&quot;StartLevelSpecificBootstrap&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="6714026078303932" type="Function">
-                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                         <action id="0" name="Call function" sid="3648646126847416" type="Function">
                             <param id="0" name="Name">&quot;onInitUI&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="8184118811573223" type="Function">
-                            <param id="0" name="Name">&quot;onLevelStarted&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="0" name="Call function" sid="1412413833740111" type="Function">
+                            <param id="0" name="Name">&quot;WaitAnimationsInit&quot;</param>
+                            <param id="1" name="Parameter {n}">2</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5574231572762635">
+                <event-block sid="9665124827182957">
                     <conditions>
-                        <condition id="-3" name="On end of layout" sid="7428214885189501" type="System" />
+                        <condition id="0" name="On function" sid="5915951437911736" type="Function">
+                            <param id="0" name="Name">&quot;AnimsInited&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="9060929413625629" type="Function">
-                            <param id="0" name="Name">&quot;onVarsReset&quot;</param>
+                        <action id="0" name="Call function" sid="8184118811573223" type="Function">
+                            <param id="0" name="Name">&quot;onLevelStarted&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
