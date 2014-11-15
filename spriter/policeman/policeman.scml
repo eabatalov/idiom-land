@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r1">
+    <folder id="0" name="body">
+        <file id="0" name="body/body.png" width="78" height="128" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <folder id="1" name="hand">
+        <file id="0" name="hand/hand1.png" width="29" height="69" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="hand/hand2.png" width="32" height="78" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <folder id="2" name="head">
+        <file id="0" name="head/head.png" width="173" height="226" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <folder id="3" name="mouth">
+        <file id="0" name="mouth/smile1.png" width="58" height="21" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="mouth/smile2.png" width="58" height="21" pivot_x="0" pivot_y="1"/>
+        <file id="2" name="mouth/talk1.png" width="58" height="21" pivot_x="0" pivot_y="1"/>
+        <file id="3" name="mouth/talk2.png" width="58" height="21" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <folder id="4" name="eyes">
+        <file id="0" name="eyes/eyes.png" width="67" height="14" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="eyes/eyebrows.png" width="81" height="17" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <entity id="0" name="policeman">
+        <obj_info name="policeman_body" realname="body" type="sprite">
+            <frames>
+                <i folder="0" file="0"/>
+            </frames>
+        </obj_info>
+        <obj_info name="policeman_hand1" realname="hand1" type="sprite">
+            <frames>
+                <i folder="1" file="0"/>
+            </frames>
+        </obj_info>
+        <obj_info name="policeman_hand2" realname="hand2" type="sprite">
+            <frames>
+                <i folder="1" file="1"/>
+            </frames>
+        </obj_info>
+        <obj_info name="policeman_head" realname="head" type="sprite">
+            <frames>
+                <i folder="2" file="0"/>
+            </frames>
+        </obj_info>
+        <obj_info name="policeman_smile1" realname="smile1" type="sprite">
+            <frames>
+                <i folder="3" file="0"/>
+            </frames>
+        </obj_info>
+        <obj_info name="policeman_eyes" realname="eyes" type="sprite">
+            <frames/>
+        </obj_info>
+        <obj_info name="policeman_eyebrows" realname="eyebrows" type="sprite">
+            <frames/>
+        </obj_info>
+        <obj_info name="policeman_eyes_000" realname="eyes_000" type="sprite">
+            <frames>
+                <i folder="4" file="0"/>
+            </frames>
+        </obj_info>
+        <animation id="0" name="idle" length="1000" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" name="hand2" folder="1" file="1" abs_x="6" abs_y="39" abs_angle="48.012788" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="2" key="0" z_index="0"/>
+                    <object_ref id="1" name="hand1" folder="1" file="0" abs_x="-33" abs_y="53" abs_angle="321.009006" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" name="body" folder="0" file="0" abs_x="-37" abs_y="64" abs_angle="360" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="0" key="0" z_index="2"/>
+                    <object_ref id="3" name="head" folder="2" file="0" abs_x="-87" abs_y="271" abs_angle="360" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" name="smile1" folder="3" file="0" abs_x="-41" abs_y="80" abs_angle="360" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="4" key="0" z_index="4"/>
+                    <object_ref id="5" name="eyes_000" folder="4" file="0" abs_x="-51" abs_y="124" abs_angle="360" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="5" key="0" z_index="5"/>
+                </key>
+            </mainline>
+            <timeline id="0" obj="0" name="body">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-37" y="64"/>
+                </key>
+            </timeline>
+            <timeline id="1" obj="1" name="hand1">
+                <key id="0" spin="0">
+                    <object folder="1" file="0" x="-33" y="53" angle="321.009006" scale_y="1"/>
+                </key>
+            </timeline>
+            <timeline id="2" obj="2" name="hand2">
+                <key id="0" spin="0">
+                    <object folder="1" file="1" x="6" y="39" angle="48.012788" scale_y="1"/>
+                </key>
+            </timeline>
+            <timeline id="3" obj="3" name="head">
+                <key id="0" spin="0">
+                    <object folder="2" file="0" x="-87" y="271"/>
+                </key>
+            </timeline>
+            <timeline id="4" obj="4" name="smile1">
+                <key id="0" spin="0">
+                    <object folder="3" file="0" x="-41" y="80"/>
+                </key>
+            </timeline>
+            <timeline id="5" obj="7" name="eyes_000">
+                <key id="0" spin="0">
+                    <object folder="4" file="0" x="-51" y="124"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
