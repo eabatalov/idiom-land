@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>PlatformerLevelDialogUITouchControls</name>
+    <name>QuestEngineUIDialogTouchControls</name>
     <events>
         <event-group description="" sid="1065750602010446" title="Quest dialog UI (touch controls)">
             <sub-events>
@@ -16,6 +16,19 @@
                         <action id="-9" name="Set value" sid="2194398649574656" type="System">
                             <param id="0" name="Variable">IsQuestDialogControlsAllowed</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3854976757086915">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5175562917504832" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8815113866669646" type="Function">
+                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelUICoinsCounter</name>
+    <events>
+        <event-group description="" sid="4633150206078247" title="Platformer level UI coins counter">
+            <sub-events>
+                <event-block sid="1222666188132626">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5134444605596959" type="Function">
+                            <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6460475451931274" type="CoinsCounterTxt">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2817176253668831" type="CoinsCounterBg">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2362203661819418">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5506055687925615" type="Function">
+                            <param id="0" name="Name">&quot;HideCoinsCounter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7752485538987663" type="CoinsCounterTxt">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1506980800180595" type="CoinsCounterBg">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

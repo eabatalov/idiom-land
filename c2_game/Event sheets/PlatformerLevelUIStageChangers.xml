@@ -1,10 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>PlatformerLevelStageChangers</name>
+    <name>PlatformerLevelUIStageChangers</name>
     <events>
         <event-group description="" sid="9895977129453327" title="Platformer level stage changers">
             <sub-events>
+                <event-block sid="2655425038291666">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1688158967637515" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1709813398569792">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="1433168134567993" type="System">
+                                    <param id="0" name="Object">StageChanger</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="776633521462272" type="StageChanger">
+                                    <param id="0" name="Y">0</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="7605040065758594" type="StageChanger">
+                                    <param id="0" name="Height">LayoutHeight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <comment>If changer is solid Player shouldn&apos;t change stage</comment>
                 <event-block sid="3849109825170171">
                     <conditions>
@@ -43,23 +68,30 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>To make &quot;on stage active&quot; events work and don&apos;t block player movement we should make only not current stage changers solid</comment>
                 <event-block sid="6624258732043153">
                     <conditions>
                         <condition id="0" name="On function" sid="3969050479879534" type="Function">
                             <param id="0" name="Name">&quot;makeStageChangersSolid&quot;</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="3165428014626717" type="System">
-                            <param id="0" name="First value">CurrentStageName</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">StageChanger.Stage</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="431726616658198" type="StageChanger">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <comment>To make &quot;on stage active&quot; events work and don&apos;t block player movement we should make only not current stage changers solid</comment>
+                        <event-block sid="7744114014038459">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="795976047441476" type="StageChanger">
+                                    <param id="0" name="Instance variable">Stage</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">CurrentStageName</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="431726616658198" type="StageChanger">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="8617306844721332">
                     <conditions>

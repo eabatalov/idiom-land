@@ -200,16 +200,14 @@
                                 </event-block>
                                 <event-block sid="2457611269634257">
                                     <conditions>
-                                        <condition id="1" name="On any finished" sid="2249154323573507" type="PlayerSCML" />
+                                        <condition id="0" name="On animation finished" sid="2249154323573507" type="PlayerSCML">
+                                            <param id="0" name="Animation">&quot;jumpup&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
                                         <event-block sid="5222641571058778">
-                                            <conditions>
-                                                <condition id="4" name="Compare Current Animation" sid="5415797505409752" type="PlayerSCML">
-                                                    <param id="0" name="Animation">&quot;jumpup&quot;</param>
-                                                </condition>
-                                            </conditions>
+                                            <conditions />
                                             <actions>
                                                 <action id="1" name="Set playback speed ratio" sid="4711562451428271" type="PlayerSCML">
                                                     <param id="0" name="Speed Ratio">1.0</param>
@@ -218,6 +216,99 @@
                                                     <param id="0" name="Animation">&quot;flight&quot;</param>
                                                     <param id="1" name="Where to start playing this animation">0</param>
                                                     <param id="2" name="Blend Duration">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="2833109092947978" title="Falling down">
+                            <sub-events>
+                                <variable constant="1" name="SHOCK_DURATION_MS" sid="2858125560005801" static="0" type="number">1000</variable>
+                                <variable constant="0" name="FALL_HEIGHT_TO_SHOCK" sid="5735450671355272" static="1" type="number">0</variable>
+                                <variable constant="0" name="PlayerFallStartY" sid="8725826739179389" static="1" type="number">0</variable>
+                                <variable constant="0" name="IsPlayerLandingPending" sid="7838596249373106" static="1" type="number">0</variable>
+                                <event-block sid="4183189959594157">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="1709479015584567" type="Function">
+                                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="3244401804736179" type="System">
+                                            <param id="0" name="Variable">PlayerFallStartY</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5228346632558918" type="System">
+                                            <param id="0" name="Variable">IsPlayerLandingPending</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="604757373700208" type="System">
+                                            <param id="0" name="Variable">FALL_HEIGHT_TO_SHOCK</param>
+                                            <param id="1" name="Value">WINDOW_HEIGHT * 1.5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3809972579669077">
+                                    <conditions>
+                                        <condition behavior="Platform" id="6" name="On fall" sid="9663412239955302" type="PlayerPlatform" />
+                                        <condition id="-8" name="Is boolean instance variable set" sid="864351835718719" type="Player">
+                                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="9620416390869602" type="System">
+                                            <param id="0" name="Variable">PlayerFallStartY</param>
+                                            <param id="1" name="Value">PlayerPlatform.Y</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="205437604012839" type="System">
+                                            <param id="0" name="Variable">IsPlayerLandingPending</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="638913726269852">
+                                    <conditions>
+                                        <condition behavior="Platform" id="9" name="On landed" sid="1017229682156828" type="PlayerPlatform" />
+                                        <condition id="-8" name="Is boolean instance variable set" sid="1741498294726826" type="Player">
+                                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="6665085939889901">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="7738225490807593" type="System">
+                                                    <param id="0" name="First value">PlayerPlatform.Y - PlayerFallStartY</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">FALL_HEIGHT_TO_SHOCK</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="5095977045675947" type="System">
+                                                    <param id="0" name="Variable">IsPlayerLandingPending</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="9807750089729425" type="System">
+                                                    <param id="0" name="Variable">IsPlayerLandingPending</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="2534919867419644" type="Function">
+                                                    <param id="0" name="Name">&quot;AnimPlayerRunTimed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;shock&quot;{###}SHOCK_DURATION_MS</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="7500699393856946" type="Function">
+                                                    <param id="0" name="Name">&quot;DisablePlayerAvatarMovement&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="7132628931212938" type="System">
+                                                    <param id="0" name="Seconds">SHOCK_DURATION_MS / 1000</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="6610647853488674" type="Function">
+                                                    <param id="0" name="Name">&quot;EnablePlayerAvatarMovement&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
                                                 </action>
                                             </actions>
                                         </event-block>

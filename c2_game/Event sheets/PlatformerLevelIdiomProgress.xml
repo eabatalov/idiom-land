@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PlatformerLevelIdiomProgress</name>
     <events>
+        <include>PlatformerLevelUIIdiomsCounter</include>
         <event-group description="" sid="9203833697821463" title="Idiom Counter">
             <sub-events>
                 <variable constant="0" name="GuessedIdiomsCount" sid="5659419132445212" static="1" type="number">0</variable>
@@ -33,53 +34,11 @@
                     <actions>
                         <action id="0" name="Call function" sid="6884939111987794" type="Function">
                             <param id="0" name="Name">&quot;UpdateIdiomsCounter&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                            <param id="1" name="Parameter {n}">GuessedIdiomsCount{###}LevelIdiomProgressTracker.getLevelIdiomsCount</param>
                         </action>
                         <action id="0" name="Call function" sid="5376953944407645" type="Function">
                             <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8879515276872887">
-                    <conditions>
-                        <condition id="0" name="On function" sid="2869782477909554" type="Function">
-                            <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="5135175855605868" type="IdiomCounterBg">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="4141376050044942" type="IdiomCounterTxt">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9603477592321399">
-                    <conditions>
-                        <condition id="0" name="On function" sid="1734981569393728" type="Function">
-                            <param id="0" name="Name">&quot;HideIdiomsCounter&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="9211902205698735" type="IdiomCounterBg">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="1096415619501791" type="IdiomCounterTxt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6433860679706399">
-                    <conditions>
-                        <condition id="0" name="On function" sid="4042507624396536" type="Function">
-                            <param id="0" name="Name">&quot;UpdateIdiomsCounter&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="4644203494522885" type="IdiomCounterTxt">
-                            <param id="0" name="Text">GuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
                         </action>
                     </actions>
                 </event-block>
@@ -128,9 +87,9 @@
                                     <param id="0" name="Variable">GuessedIdiomsCount</param>
                                     <param id="1" name="Value">GuessedIdiomsCount + 1</param>
                                 </action>
-                                <action id="0" name="Call function" sid="366225306485366" type="Function">
+                                <action id="0" name="Call function" sid="4115666868354297" type="Function">
                                     <param id="0" name="Name">&quot;UpdateIdiomsCounter&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
+                                    <param id="1" name="Parameter {n}">GuessedIdiomsCount{###}LevelIdiomProgressTracker.getLevelIdiomsCount</param>
                                 </action>
                                 <action id="0" name="Call function" sid="5508571912533973" type="Function">
                                     <param id="0" name="Name">&quot;RunSuccessNotification&quot;</param>

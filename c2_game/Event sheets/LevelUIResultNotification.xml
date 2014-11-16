@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>ResultNotification</name>
+    <name>LevelUIResultNotification</name>
     <events>
         <event-group description="" sid="4882388701730434" title="Result notification">
             <sub-events>
                 <event-block sid="7121955129387895">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="5603050853374208" type="System" />
+                        <condition id="0" name="On function" sid="4081579553018218" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="16" name="Set Visible" sid="7552087110156673" type="animationresult">
@@ -53,6 +55,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Also calls onFuncCallCompleted when finished</comment>
                 <event-block sid="1865452838951086">
                     <conditions>
                         <condition id="0" name="On function" sid="3616108639167081" type="Function">
@@ -79,6 +82,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Also calls onFuncCallCompleted when finished</comment>
                 <event-block sid="3674146306886579">
                     <conditions>
                         <condition id="0" name="On function" sid="1002185689840158" type="Function">

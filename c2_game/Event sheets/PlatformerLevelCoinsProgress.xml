@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PlatformerLevelCoinsProgress</name>
     <events>
+        <include>PlatformerLevelUICoinsCounter</include>
         <variable constant="0" name="COINS_OVERALL" sid="4632593700030734" static="0" type="number">0</variable>
         <variable constant="0" name="COINS_COLLECTED" sid="7852061145548592" static="0" type="number">0</variable>
         <event-group description="" sid="5351671599109888" title="Local var scope 11">
@@ -89,36 +90,6 @@
                         <action id="0" name="Call function" sid="4974442960124215" type="Function">
                             <param id="0" name="Name">&quot;CoinCollected&quot;</param>
                             <param id="1" name="Parameter {n}">Coin.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7274949143533471">
-                    <conditions>
-                        <condition id="0" name="On function" sid="1336694382311913" type="Function">
-                            <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="1260498786217375" type="CoinsCounterTxt">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="2643534583739126" type="CoinsCounterBg">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5782202832791717">
-                    <conditions>
-                        <condition id="0" name="On function" sid="3769686537358707" type="Function">
-                            <param id="0" name="Name">&quot;HideCoinsCounter&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="368602629716394" type="CoinsCounterTxt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="135999759060467" type="CoinsCounterBg">
-                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>

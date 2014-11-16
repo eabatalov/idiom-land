@@ -1,15 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>SideMenu</name>
+    <name>LevelUISideMenu</name>
     <events>
+        <include>LevelUIPauseBtn</include>
         <event-group description="" sid="1748652998169316" title="Slide menu local scope">
             <sub-events>
                 <variable constant="0" name="SLIDE_MENU_SLIDE_STATE" sid="2260206036496435" static="1" type="text">MINI</variable>
                 <variable constant="0" name="SLIDE_MENU_MINI_STATE_X" sid="6161224327066155" static="1" type="number">0</variable>
                 <event-block sid="8761190709050145">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="8450034108531358" type="System" />
+                        <condition id="0" name="On function" sid="8450034108531358" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="4957444163737202" type="GameHelpBtn">

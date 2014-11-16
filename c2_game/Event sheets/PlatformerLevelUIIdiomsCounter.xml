@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelUIIdiomsCounter</name>
+    <events>
+        <event-group description="" sid="958909758345338" title="Platformer level UI idioms counter">
+            <sub-events>
+                <event-block sid="3249904452034459">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4712048022142084" type="Function">
+                            <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7072776077062669" type="IdiomCounterBg">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="461462401950656" type="IdiomCounterTxt">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="916906783892577">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4244389111373622" type="Function">
+                            <param id="0" name="Name">&quot;HideIdiomsCounter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="2125359310386834" type="IdiomCounterBg">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6495805308503898" type="IdiomCounterTxt">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>param(0): guessed idioms count&#x0D;&#x0A;param(1): overall level idioms count</comment>
+                <event-block sid="8384234503392776">
+                    <conditions>
+                        <condition id="0" name="On function" sid="862077598006431" type="Function">
+                            <param id="0" name="Name">&quot;UpdateIdiomsCounter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8445705594135671" type="IdiomCounterTxt">
+                            <param id="0" name="Text">Function.Param(0) &amp; &quot;/&quot; &amp; Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
