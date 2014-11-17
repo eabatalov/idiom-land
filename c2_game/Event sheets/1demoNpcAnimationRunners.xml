@@ -42,6 +42,66 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="9596699759556743">
+                    <conditions>
+                        <condition id="1" name="On any finished" sid="2646909031355205" type="policeman" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="6999491300217782" type="policeman">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1226687185374088">
+                    <conditions>
+                        <condition id="1" name="On any finished" sid="4755963320071118" type="kebab" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="8392951528433247" type="kebab">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4677104915176387">
+                    <conditions>
+                        <condition id="1" name="On any finished" sid="2690844111618911" type="kebabson" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="389502978137835" type="kebabson">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8134900330170799">
+                    <conditions>
+                        <condition id="1" name="On any finished" sid="3716897951353743" type="taxidriver" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="3687294702361791" type="taxidriver">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7674036908638345">
+                    <conditions>
+                        <condition id="1" name="On any finished" sid="3561130484938756" type="busdriver" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="9020348736953897" type="busdriver">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>param(0): NPC UID&#x0D;&#x0A;param(1): animation name&#x0D;&#x0A;param(2): duration. ms, -1 to play once&#x0D;&#x0A;NPCs timed animation is implemented on demand not to create so much copy-paste</comment>
                 <variable constant="0" name="AnimName" sid="1581421603188817" static="0" type="text"></variable>
                 <variable constant="0" name="AnimDuration" sid="2836824778277777" static="0" type="number">0</variable>
@@ -107,6 +167,86 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set animation" sid="6405677206296529" type="veiderSCML">
+                                    <param id="0" name="Animation">AnimName</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5162143295529555">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7816110761708353" type="System">
+                                    <param id="0" name="First value">NPC.UID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">52</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="9117926299115628" type="policeman">
+                                    <param id="0" name="Animation">AnimName</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5615091165673669">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7457079982494163" type="System">
+                                    <param id="0" name="First value">NPC.UID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">56</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="7523153619617485" type="kebab">
+                                    <param id="0" name="Animation">AnimName</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5620603886340769">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7862225379885538" type="System">
+                                    <param id="0" name="First value">NPC.UID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">57</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="3145739792294951" type="kebabson">
+                                    <param id="0" name="Animation">AnimName</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7660200541306997">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3752345833446751" type="System">
+                                    <param id="0" name="First value">NPC.UID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">17</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="8195750397118162" type="taxidriver">
+                                    <param id="0" name="Animation">AnimName</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4579555638225836">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7128333593948947" type="System">
+                                    <param id="0" name="First value">NPC.UID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">276</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="8413111040846683" type="busdriver">
                                     <param id="0" name="Animation">AnimName</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>

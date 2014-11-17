@@ -92,9 +92,7 @@
                         </event-block>
                         <event-block sid="500796624509317">
                             <conditions>
-                                <condition id="0" name="On function" sid="4473430458850128" type="Function">
-                                    <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
-                                </condition>
+                                <condition id="-18" name="On created" sid="4473430458850128" type="veiderSCML" />
                             </conditions>
                             <actions>
                                 <action id="2" name="Set object scale ratio" sid="6354946051970522" type="veiderSCML">
@@ -202,9 +200,7 @@
                         </event-block>
                         <event-block sid="2240015779887386">
                             <conditions>
-                                <condition id="0" name="On function" sid="4353117590764075" type="Function">
-                                    <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
-                                </condition>
+                                <condition id="-18" name="On created" sid="4353117590764075" type="taxiHindiSCML" />
                             </conditions>
                             <actions>
                                 <action id="2" name="Set object scale ratio" sid="9394925404414536" type="taxiHindiSCML">
@@ -236,9 +232,7 @@
                         <variable constant="1" name="CAP_ANIM_UID" sid="5097816240097425" static="0" type="text">CAPTAIN</variable>
                         <event-block sid="9808445706255251">
                             <conditions>
-                                <condition id="0" name="On function" sid="869270672606678" type="Function">
-                                    <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
-                                </condition>
+                                <condition id="-18" name="On created" sid="869270672606678" type="captainSCML" />
                             </conditions>
                             <actions>
                                 <action id="2" name="Set object scale ratio" sid="1215995909160924" type="captainSCML">
@@ -352,6 +346,566 @@
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="0" name="Call function" sid="1465311428060414" type="Function">
+                                            <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="7414426011052743" title="PolicemanSCML">
+                    <sub-events>
+                        <variable constant="1" name="POLICEMAN_ANIM_UID" sid="1856976394010983" static="0" type="text">POLICEMAN</variable>
+                        <event-block sid="1414926124186611">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="4818010805459353" type="policeman" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set object scale ratio" sid="2792477980575553" type="policeman">
+                                    <param id="0" name="Scale Ratio">NPC_SCALING</param>
+                                    <param id="1" name="Flip X Axis">0</param>
+                                    <param id="2" name="Flip Y Axis">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="5233321650359669">
+                                    <conditions>
+                                        <condition id="3" name="Has key" sid="6038739848150447" type="InitedAnimsDict">
+                                            <param id="0" name="Key">POLICEMAN_ANIM_UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="6726933102211292" type="Function">
+                                            <param id="0" name="Name">&quot;InitPolicemanSCML&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3784214884623574">
+                            <conditions>
+                                <condition id="666" name="On initialised" sid="6203679484330682" type="policeman" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9963161928351702" type="Function">
+                                    <param id="0" name="Name">&quot;InitPolicemanSCML&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3140249775630374">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7502056438180653" type="Function">
+                                    <param id="0" name="Name">&quot;InitPolicemanSCML&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="2495385101169116" type="NPC">
+                                    <param id="0" name="Unique ID">52</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2987536739346823">
+                                    <conditions />
+                                    <actions>
+                                        <action id="666" name="Associate object type" sid="8709824484097742" type="policeman">
+                                            <param id="0" name="Object">policeman_policeman_hand2</param>
+                                            <param id="1" name="Name">&quot;policeman_hand2&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="4596117347591136" type="policeman">
+                                            <param id="0" name="Object">policeman_policeman_hand1</param>
+                                            <param id="1" name="Name">&quot;policeman_hand1&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="7517421278727327" type="policeman">
+                                            <param id="0" name="Object">policeman_policeman_body</param>
+                                            <param id="1" name="Name">&quot;policeman_body&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="577890563258467" type="policeman">
+                                            <param id="0" name="Object">policeman_policeman_head</param>
+                                            <param id="1" name="Name">&quot;policeman_head&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="9327413392369483" type="policeman">
+                                            <param id="0" name="Object">policeman_policeman_smile1</param>
+                                            <param id="1" name="Name">&quot;policeman_smile1&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="2619165291904375" type="policeman">
+                                            <param id="0" name="Object">policeman_policeman_eyes_000</param>
+                                            <param id="1" name="Name">&quot;policeman_eyes_000&quot;</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="1827759934739478" type="policeman">
+                                            <param id="0" name="Object">NPC</param>
+                                            <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
+                                        </action>
+                                        <action id="17" name="Set Automatic Pausing" sid="502086824892681" type="policeman">
+                                            <param id="0" name="Automatic Pause Settings">1</param>
+                                            <param id="1" name="Left Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="2" name="Right Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="3" name="Top Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="4" name="Bottom Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="8937730239774905" type="InitedAnimsDict">
+                                            <param id="0" name="Key">POLICEMAN_ANIM_UID</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="522166196493466" type="Function">
+                                            <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="2143159054117587" title="KebabSellerSCML">
+                    <sub-events>
+                        <variable constant="1" name="KEBAB_SELLER_ANIM_UID" sid="9138536945068937" static="0" type="text">KEBAB_SELLER</variable>
+                        <event-block sid="428027467353663">
+                            <conditions>
+                                <condition id="666" name="On initialised" sid="5919728567001642" type="kebab" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7316062926387528" type="Function">
+                                    <param id="0" name="Name">&quot;InitKebabSellerSCML&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3186658767094976">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="3688157386263258" type="kebab" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set object scale ratio" sid="2812336453742752" type="kebab">
+                                    <param id="0" name="Scale Ratio">NPC_SCALING</param>
+                                    <param id="1" name="Flip X Axis">0</param>
+                                    <param id="2" name="Flip Y Axis">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="849743118459017">
+                                    <conditions>
+                                        <condition id="3" name="Has key" sid="247423966531341" type="InitedAnimsDict">
+                                            <param id="0" name="Key">KEBAB_SELLER_ANIM_UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="4751786517475265" type="Function">
+                                            <param id="0" name="Name">&quot;InitKebabSellerSCML&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7962281245535038">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7144976737854242" type="Function">
+                                    <param id="0" name="Name">&quot;InitKebabSellerSCML&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="5638725219229451" type="NPC">
+                                    <param id="0" name="Unique ID">56</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3458274054722277">
+                                    <conditions />
+                                    <actions>
+                                        <action id="666" name="Associate object type" sid="4377203342051187" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_leg2</param>
+                                            <param id="1" name="Name">&quot;kebab_leg2&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="1259399995685631" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_leg1</param>
+                                            <param id="1" name="Name">&quot;kebab_leg1&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="4447217389653299" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_skirt</param>
+                                            <param id="1" name="Name">&quot;kebab_skirt&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="984651448065377" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_hand22</param>
+                                            <param id="1" name="Name">&quot;kebab_hand2-2&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="18719409070501" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_hand3</param>
+                                            <param id="1" name="Name">&quot;kebab_hand3&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="8497735515881329" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_body</param>
+                                            <param id="1" name="Name">&quot;kebab_body&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="2074369897754693" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_hand2</param>
+                                            <param id="1" name="Name">&quot;kebab_hand2&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="2415653081069456" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_hand4</param>
+                                            <param id="1" name="Name">&quot;kebab_hand4&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="9856324698382989" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_head</param>
+                                            <param id="1" name="Name">&quot;kebab_head&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="7927226903091915" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_eyes</param>
+                                            <param id="1" name="Name">&quot;kebab_eyes&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="7266071674363764" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_eyebrows</param>
+                                            <param id="1" name="Name">&quot;kebab_eyebrows&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="431118943923861" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_smile1</param>
+                                            <param id="1" name="Name">&quot;kebab_smile1&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="2924781675427726" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_hand11</param>
+                                            <param id="1" name="Name">&quot;kebab_hand1-1&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="9250163711608285" type="kebab">
+                                            <param id="0" name="Object">kebab_kebab_hand1</param>
+                                            <param id="1" name="Name">&quot;kebab_hand1&quot;</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="4419760209880481" type="kebab">
+                                            <param id="0" name="Object">NPC</param>
+                                            <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
+                                        </action>
+                                        <action id="17" name="Set Automatic Pausing" sid="2402003215428519" type="kebab">
+                                            <param id="0" name="Automatic Pause Settings">1</param>
+                                            <param id="1" name="Left Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="2" name="Right Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="3" name="Top Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="4" name="Bottom Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="7492810444245375" type="InitedAnimsDict">
+                                            <param id="0" name="Key">KEBAB_SELLER_ANIM_UID</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="9859567665204545" type="Function">
+                                            <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="179837953543049" title="KebabSellerSonSCML">
+                    <sub-events>
+                        <variable constant="1" name="KEBAB_SON_ANIM_UID" sid="8836268185844218" static="0" type="text">KEBAB_SON</variable>
+                        <event-block sid="7508847059457299">
+                            <conditions>
+                                <condition id="666" name="On initialised" sid="7904709294902469" type="kebabson" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7344605886420754" type="Function">
+                                    <param id="0" name="Name">&quot;InitKebabSonSCML&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4505860566616506">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="4052737601499649" type="kebabson" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set object scale ratio" sid="937382283201541" type="kebabson">
+                                    <param id="0" name="Scale Ratio">NPC_SCALING</param>
+                                    <param id="1" name="Flip X Axis">0</param>
+                                    <param id="2" name="Flip Y Axis">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1429281684021912">
+                                    <conditions>
+                                        <condition id="3" name="Has key" sid="1460181250317677" type="InitedAnimsDict">
+                                            <param id="0" name="Key">KEBAB_SON_ANIM_UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1610992650114887" type="Function">
+                                            <param id="0" name="Name">&quot;InitKebabSonSCML&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3875788989801216">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9593456985786129" type="Function">
+                                    <param id="0" name="Name">&quot;InitKebabSonSCML&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="5317175698455911" type="NPC">
+                                    <param id="0" name="Unique ID">57</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="13008857309515">
+                                    <conditions />
+                                    <actions>
+                                        <action id="666" name="Associate object type" sid="5166296949875427" type="kebabson">
+                                            <param id="0" name="Object">kebabson_kebabson_hand1</param>
+                                            <param id="1" name="Name">&quot;kebabson_hand1&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="2741607269971615" type="kebabson">
+                                            <param id="0" name="Object">kebabson_kebabson_body</param>
+                                            <param id="1" name="Name">&quot;kebabson_body&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="9840990284580574" type="kebabson">
+                                            <param id="0" name="Object">kebabson_kebabson_head</param>
+                                            <param id="1" name="Name">&quot;kebabson_head&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="6532213845496108" type="kebabson">
+                                            <param id="0" name="Object">kebabson_kebabson_hand2</param>
+                                            <param id="1" name="Name">&quot;kebabson_hand2&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="4708209153860585" type="kebabson">
+                                            <param id="0" name="Object">kebabson_kebabson_smile1</param>
+                                            <param id="1" name="Name">&quot;kebabson_smile1&quot;</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="2956983598557385" type="kebabson">
+                                            <param id="0" name="Object">NPC</param>
+                                            <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
+                                        </action>
+                                        <action id="17" name="Set Automatic Pausing" sid="7593301218975484" type="kebabson">
+                                            <param id="0" name="Automatic Pause Settings">1</param>
+                                            <param id="1" name="Left Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="2" name="Right Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="3" name="Top Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="4" name="Bottom Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="7016045159827687" type="InitedAnimsDict">
+                                            <param id="0" name="Key">KEBAB_SON_ANIM_UID</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="3163948626659333" type="Function">
+                                            <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="2291198383120861" title="TaxiDriverSML">
+                    <sub-events>
+                        <variable constant="1" name="TAXI_DRIVER_ANIM_UID" sid="2585607950456953" static="0" type="text">TAXI_DRIVER</variable>
+                        <event-block sid="8712643565083099">
+                            <conditions>
+                                <condition id="666" name="On initialised" sid="1684578768869483" type="taxidriver" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1919769938874135" type="Function">
+                                    <param id="0" name="Name">&quot;InitTaxiDriverSCML&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9654701976324071">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="7617106425011159" type="taxidriver" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set object scale ratio" sid="1982862459832141" type="taxidriver">
+                                    <param id="0" name="Scale Ratio">NPC_SCALING</param>
+                                    <param id="1" name="Flip X Axis">0</param>
+                                    <param id="2" name="Flip Y Axis">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8849200372154922">
+                                    <conditions>
+                                        <condition id="3" name="Has key" sid="4518038957793266" type="InitedAnimsDict">
+                                            <param id="0" name="Key">TAXI_DRIVER_ANIM_UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3218331203295622" type="Function">
+                                            <param id="0" name="Name">&quot;InitTaxiDriverSCML&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6303995353686942">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8359700096281683" type="Function">
+                                    <param id="0" name="Name">&quot;InitTaxiDriverSCML&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="1276175503459807" type="NPC">
+                                    <param id="0" name="Unique ID">17</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2731384622597996">
+                                    <conditions />
+                                    <actions>
+                                        <action id="666" name="Associate object type" sid="5426362700587873" type="taxidriver">
+                                            <param id="0" name="Object">taxidriver_taxidriver_hand1</param>
+                                            <param id="1" name="Name">&quot;taxidriver_hand1&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="9254776093544359" type="taxidriver">
+                                            <param id="0" name="Object">taxidriver_taxidriver_legs</param>
+                                            <param id="1" name="Name">&quot;taxidriver_legs&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="8611180341442773" type="taxidriver">
+                                            <param id="0" name="Object">taxidriver_taxidriver_hand2</param>
+                                            <param id="1" name="Name">&quot;taxidriver_hand2&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="739310597370529" type="taxidriver">
+                                            <param id="0" name="Object">taxidriver_taxidriver_body</param>
+                                            <param id="1" name="Name">&quot;taxidriver_body&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="9239573974762902" type="taxidriver">
+                                            <param id="0" name="Object">taxidriver_taxidriver_face</param>
+                                            <param id="1" name="Name">&quot;taxidriver_face&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="6584556595177564" type="taxidriver">
+                                            <param id="0" name="Object">taxidriver_taxidriver_eyes</param>
+                                            <param id="1" name="Name">&quot;taxidriver_eyes&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="610651299670256" type="taxidriver">
+                                            <param id="0" name="Object">taxidriver_taxidriver_smile1</param>
+                                            <param id="1" name="Name">&quot;taxidriver_smile1&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="3733617721939328" type="taxidriver">
+                                            <param id="0" name="Object">taxidriver_taxidriver_hair</param>
+                                            <param id="1" name="Name">&quot;taxidriver_hair&quot;</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="1709610943499661" type="taxidriver">
+                                            <param id="0" name="Object">NPC</param>
+                                            <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
+                                        </action>
+                                        <action id="17" name="Set Automatic Pausing" sid="2919533155605315" type="taxidriver">
+                                            <param id="0" name="Automatic Pause Settings">1</param>
+                                            <param id="1" name="Left Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="2" name="Right Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="3" name="Top Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="4" name="Bottom Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="6592953709166495" type="InitedAnimsDict">
+                                            <param id="0" name="Key">TAXI_DRIVER_ANIM_UID</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="9098165354624101" type="Function">
+                                            <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="2420977200556076" title="BusDriverSprites">
+                    <sub-events>
+                        <variable constant="1" name="BUS_DRIVER_ANIM_UID" sid="3830030619536054" static="0" type="text">BUS_DRIVER</variable>
+                        <event-block sid="8577572096803759">
+                            <conditions>
+                                <condition id="666" name="On initialised" sid="4122254493204675" type="busdriver" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8147774058569594" type="Function">
+                                    <param id="0" name="Name">&quot;InitBusDriverSCML&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8317003715291525">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="1713935909195656" type="busdriver" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set object scale ratio" sid="4649258176597113" type="busdriver">
+                                    <param id="0" name="Scale Ratio">NPC_SCALING</param>
+                                    <param id="1" name="Flip X Axis">0</param>
+                                    <param id="2" name="Flip Y Axis">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="948450961176499">
+                                    <conditions>
+                                        <condition id="3" name="Has key" sid="9675556716770602" type="InitedAnimsDict">
+                                            <param id="0" name="Key">BUS_DRIVER_ANIM_UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="791627972282576" type="Function">
+                                            <param id="0" name="Name">&quot;InitBusDriverSCML&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9106140715248348">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7516511789669897" type="Function">
+                                    <param id="0" name="Name">&quot;InitBusDriverSCML&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="2522371445942854" type="NPC">
+                                    <param id="0" name="Unique ID">276</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7684994660197624">
+                                    <conditions />
+                                    <actions>
+                                        <action id="666" name="Associate object type" sid="1461608950551074" type="busdriver">
+                                            <param id="0" name="Object">busdriver_busdriver_hand1</param>
+                                            <param id="1" name="Name">&quot;busdriver_hand1&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="6419560878720098" type="busdriver">
+                                            <param id="0" name="Object">busdriver_busdriver_bodydown</param>
+                                            <param id="1" name="Name">&quot;busdriver_body-down&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="4060696984378365" type="busdriver">
+                                            <param id="0" name="Object">busdriver_busdriver_body</param>
+                                            <param id="1" name="Name">&quot;busdriver_body&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="662658809150588" type="busdriver">
+                                            <param id="0" name="Object">busdriver_busdriver_hand2</param>
+                                            <param id="1" name="Name">&quot;busdriver_hand2&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="8446981928418456" type="busdriver">
+                                            <param id="0" name="Object">busdriver_busdriver_head</param>
+                                            <param id="1" name="Name">&quot;busdriver_head&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="3294348456154467" type="busdriver">
+                                            <param id="0" name="Object">busdriver_busdriver_eyes</param>
+                                            <param id="1" name="Name">&quot;busdriver_eyes&quot;</param>
+                                        </action>
+                                        <action id="666" name="Associate object type" sid="3886685154190123" type="busdriver">
+                                            <param id="0" name="Object">busdriver_busdriver_smile1</param>
+                                            <param id="1" name="Name">&quot;busdriver_smile1&quot;</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="8069383886862418" type="busdriver">
+                                            <param id="0" name="Object">NPC</param>
+                                            <param id="1" name="Image point (optional)">&quot;AnimationPoint&quot;</param>
+                                        </action>
+                                        <action id="17" name="Set Automatic Pausing" sid="6507635455472567" type="busdriver">
+                                            <param id="0" name="Automatic Pause Settings">1</param>
+                                            <param id="1" name="Left Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="2" name="Right Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="3" name="Top Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                            <param id="4" name="Bottom Padding">NPC_ANIM_PAUSE_PADDING_PX</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="4445974265284719" type="InitedAnimsDict">
+                                            <param id="0" name="Key">BUS_DRIVER_ANIM_UID</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8104017027317514" type="Function">
                                             <param id="0" name="Name">&quot;AnimInited&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
