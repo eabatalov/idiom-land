@@ -736,6 +736,115 @@
             <instances />
             <effects />
         </layer>
+        <layer name="Intro" sid="8158769281766936">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="IdiomLandTestDialogIntroBg" uid="397">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>493</x>
+                        <y>242</y>
+                        <z>0</z>
+                        <width>604</width>
+                        <height>304</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="IdiomLandTestDialogIntroTxt" uid="398">
+                    <properties>
+                        <text>Intro text</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>69,70,91</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>-3</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>429</x>
+                        <y>202</y>
+                        <z>0</z>
+                        <width>324</width>
+                        <height>200</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="IdiomLandTestDialogIntroContinueHelpTxt" uid="399">
+                    <properties>
+                        <text>Input mode specific hint to continue...</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="OpacitySine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Opacity</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>50</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>151</x>
+                        <y>420</y>
+                        <z>0</z>
+                        <width>689</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
     </layers>
     <nonworld-instances />
     <effects />
