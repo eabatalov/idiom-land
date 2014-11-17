@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IdiomLandTestDialogLevelDebug</name>
+    <events>
+        <event-group description="" sid="2233533299950752" title="Idiom Land test dialog debug">
+            <sub-events>
+                <event-block sid="8552322482592077">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="9072377178641703" type="Touch">
+                            <param id="0" name="Object">TestDialogEditor_teacher_body</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="6565627650968058" type="System">
+                            <param id="0" name="Variable">IDIOMLAND_TEST_DIALOG_DEBUG</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="4811288171080143" type="System">
+                            <param id="0" name="Layout">IdiomLandTestDialogLevel</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

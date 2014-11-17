@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>TestDialogLevelUIState</name>
+    <name>TestDialogLevelEngineMainLoop</name>
     <events>
-        <event-group description="" sid="527778138977828" title="Test dialog UI state machine">
+        <event-group description="" sid="527778138977828" title="Test dialog level engine main loop">
             <sub-events>
-                <variable constant="0" name="QuestDialogUIState" sid="3411119896356729" static="1" type="number">0</variable>
+                <variable constant="0" name="QuestDialogState" sid="3411119896356729" static="1" type="number">0</variable>
                 <variable constant="0" name="QuestDialogQuestionIsReady" sid="3369481590125779" static="1" type="number">0</variable>
                 <variable constant="0" name="QuestDialogLevelIsFinished" sid="3128404573209406" static="1" type="number">0</variable>
-                <variable constant="1" name="UI_STATE_QUESTION_SHOW_PENDING" sid="8392840156263565" static="0" type="number">0</variable>
-                <variable constant="1" name="UI_STATE_QUESTION_ANS_PENDING" sid="381553559102012" static="0" type="number">1</variable>
-                <variable constant="1" name="UI_STATE_SHOWING_QUESTION" sid="3776962717714324" static="0" type="number">2</variable>
-                <variable constant="1" name="UI_STATE_HIDING_QUESTION" sid="5332383907747587" static="0" type="number">3</variable>
-                <variable constant="1" name="UI_STATE_SHOWING_ANSWER_RESULT" sid="1582637308483067" static="0" type="number">4</variable>
+                <variable constant="1" name="STATE_QUESTION_SHOW_PENDING" sid="8392840156263565" static="0" type="number">0</variable>
+                <variable constant="1" name="STATE_QUESTION_ANS_PENDING" sid="381553559102012" static="0" type="number">1</variable>
+                <variable constant="1" name="STATE_SHOWING_QUESTION" sid="3776962717714324" static="0" type="number">2</variable>
+                <variable constant="1" name="STATE_HIDING_QUESTION" sid="5332383907747587" static="0" type="number">3</variable>
+                <variable constant="1" name="STATE_SHOWING_ANSWER_RESULT" sid="1582637308483067" static="0" type="number">4</variable>
                 <event-block sid="4684221104302112">
                     <conditions>
                         <condition id="0" name="On function" sid="8793254232354885" type="Function">
@@ -25,8 +25,8 @@
                             <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="1604564486233521" type="System">
-                                    <param id="0" name="Variable">QuestDialogUIState</param>
-                                    <param id="1" name="Value">UI_STATE_QUESTION_SHOW_PENDING</param>
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Value">STATE_QUESTION_SHOW_PENDING</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="6902255928265611" type="System">
                                     <param id="0" name="Variable">QuestDialogQuestionIsReady</param>
@@ -52,9 +52,9 @@
                         <event-block sid="8613139278844116">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="7597147860677363" type="System">
-                                    <param id="0" name="Variable">QuestDialogUIState</param>
+                                    <param id="0" name="Variable">QuestDialogState</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">UI_STATE_QUESTION_SHOW_PENDING</param>
+                                    <param id="2" name="Value">STATE_QUESTION_SHOW_PENDING</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -75,9 +75,9 @@
                         <event-block sid="6697791653393371">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="9330505368063254" type="System">
-                                    <param id="0" name="Variable">QuestDialogUIState</param>
+                                    <param id="0" name="Variable">QuestDialogState</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">UI_STATE_QUESTION_SHOW_PENDING</param>
+                                    <param id="2" name="Value">STATE_QUESTION_SHOW_PENDING</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -111,15 +111,15 @@
                         <event-block sid="3985223249075212">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="3036048150591446" type="System">
-                                    <param id="0" name="Variable">QuestDialogUIState</param>
+                                    <param id="0" name="Variable">QuestDialogState</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">UI_STATE_HIDING_QUESTION</param>
+                                    <param id="2" name="Value">STATE_HIDING_QUESTION</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="8802164653949189" type="System">
-                                    <param id="0" name="Variable">QuestDialogUIState</param>
-                                    <param id="1" name="Value">UI_STATE_QUESTION_SHOW_PENDING</param>
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Value">STATE_QUESTION_SHOW_PENDING</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -158,11 +158,11 @@
                             <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="4640348528321612" type="System">
-                                    <param id="0" name="Variable">QuestDialogUIState</param>
-                                    <param id="1" name="Value">UI_STATE_SHOWING_QUESTION</param>
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Value">STATE_SHOWING_QUESTION</param>
                                 </action>
                                 <action id="0" name="Call function" sid="4122984193716037" type="Function">
-                                    <param id="0" name="Name">&quot;RenderCurrentQuestion&quot;</param>
+                                    <param id="0" name="Name">&quot;onRenderCurrentQuestion&quot;</param>
                                     <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getAnswersCount + 1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="2650851625893176" type="Function">
@@ -184,15 +184,15 @@
                         <event-block sid="1586973583028364">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="4274598736568171" type="System">
-                                    <param id="0" name="Variable">QuestDialogUIState</param>
+                                    <param id="0" name="Variable">QuestDialogState</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">UI_STATE_SHOWING_QUESTION</param>
+                                    <param id="2" name="Value">STATE_SHOWING_QUESTION</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="2605947500529864" type="System">
-                                    <param id="0" name="Variable">QuestDialogUIState</param>
-                                    <param id="1" name="Value">UI_STATE_QUESTION_ANS_PENDING</param>
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Value">STATE_QUESTION_ANS_PENDING</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -210,15 +210,15 @@
                         <event-block sid="6890178504767063">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="567072447609173" type="System">
-                                    <param id="0" name="Variable">QuestDialogUIState</param>
+                                    <param id="0" name="Variable">QuestDialogState</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">UI_STATE_QUESTION_ANS_PENDING</param>
+                                    <param id="2" name="Value">STATE_QUESTION_ANS_PENDING</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="2978341564067182" type="System">
-                                    <param id="0" name="Variable">QuestDialogUIState</param>
-                                    <param id="1" name="Value">UI_STATE_SHOWING_ANSWER_RESULT</param>
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Value">STATE_SHOWING_ANSWER_RESULT</param>
                                 </action>
                                 <action id="1" name="Answer current question" sid="7149732804419516" type="TestDialogLevelRuntime">
                                     <param id="0" name="Answer &apos;TRUE&apos; | &apos;FALSE&apos;">Function.Param(0)</param>
@@ -242,9 +242,9 @@
                         <event-block sid="5932285446679229">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="5801499796827448" type="System">
-                                    <param id="0" name="Variable">QuestDialogUIState</param>
+                                    <param id="0" name="Variable">QuestDialogState</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">UI_STATE_SHOWING_ANSWER_RESULT</param>
+                                    <param id="2" name="Value">STATE_SHOWING_ANSWER_RESULT</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -259,8 +259,8 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Set value" sid="8359720877158841" type="System">
-                                            <param id="0" name="Variable">QuestDialogUIState</param>
-                                            <param id="1" name="Value">UI_STATE_HIDING_QUESTION</param>
+                                            <param id="0" name="Variable">QuestDialogState</param>
+                                            <param id="1" name="Value">STATE_HIDING_QUESTION</param>
                                         </action>
                                         <action id="0" name="Call function" sid="6194785339426099" type="Function">
                                             <param id="0" name="Name">&quot;HideQuestion&quot;</param>
@@ -292,9 +292,9 @@
                         <event-block sid="2764667361582496">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="6545576557155011" type="System">
-                                    <param id="0" name="Variable">QuestDialogUIState</param>
+                                    <param id="0" name="Variable">QuestDialogState</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">UI_STATE_SHOWING_ANSWER_RESULT</param>
+                                    <param id="2" name="Value">STATE_SHOWING_ANSWER_RESULT</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -312,36 +312,6 @@
                                 <action id="0" name="Call function" sid="7751477342729536" type="Function">
                                     <param id="0" name="Name">&quot;onCompleteLevel&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="8239058848860348" title="Test dialog UI">
-            <sub-events>
-                <comment>param(0): question number</comment>
-                <event-block sid="9173959606946722">
-                    <conditions>
-                        <condition id="0" name="On function" sid="5938050402157514" type="Function">
-                            <param id="0" name="Name">&quot;RenderCurrentQuestion&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="8572320679914987">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Set text" sid="1992790546613391" type="TestDialogQuestionText">
-                                    <param id="0" name="Text">TestDialogLevelRuntime.getQuestionText</param>
-                                </action>
-                                <action id="0" name="Set text" sid="3053035947720686" type="TestDialogQuestionNumber">
-                                    <param id="0" name="Text">Function.Param(0) &amp; &quot;/&quot; &amp; TestDialogLevelRuntime.getQuestionsCount</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="3625023815467509" type="TestDialogQuestionSituationPhoto">
-                                    <param id="0" name="Animation">LevelIdiomProgressTracker.getLevelName &amp; &quot;_&quot; &amp; TestDialogLevelRuntime.getQuestionSectionPolyProp(&quot;name&quot;)</param>
-                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>

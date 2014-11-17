@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>TestDialogLevelQuestionAnimation</name>
+    <name>TestDialogLevelEngineUIQuestion</name>
     <events>
-        <event-group description="" sid="1196115894866197" title="Test dialog question animation">
+        <event-group description="" sid="1196115894866197" title="Test dialog UI question">
             <sub-events>
                 <comment>XXX SCML plugin does crazy stuff. It sets current animation after &quot;on initialized&quot; event to animation set in properties of SCML object.&#x0D;&#x0A;It does similar thing after creation of new SCML object with already downloaded scml file.</comment>
                 <variable constant="0" name="CurrentAnimName" sid="9354913321365401" static="1" type="text"></variable>
@@ -329,6 +329,32 @@
                                     <param id="1" name="Parameter {n}">CurrentAnimName</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="4999611164947749" title="Test dialog question rendering">
+                    <sub-events>
+                        <comment>param(0): question number</comment>
+                        <event-block sid="3438067833747114">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8960264503965169" type="Function">
+                                    <param id="0" name="Name">&quot;onRenderCurrentQuestion&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3180526520255133">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="4032445172090928" type="TestDialogQuestionText">
+                                            <param id="0" name="Text">TestDialogLevelRuntime.getQuestionText</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="9219914005984554" type="TestDialogQuestionNumber">
+                                            <param id="0" name="Text">Function.Param(0) &amp; &quot;/&quot; &amp; TestDialogLevelRuntime.getQuestionsCount</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>

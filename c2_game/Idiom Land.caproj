@@ -3130,6 +3130,272 @@
                             <plugin id="LevelIdiomProgressTrackingPlugin" />
                         </object-type>
                     </object-folder>
+                    <object-folder name="TestDialogLevelEngine">
+                        <object-folder name="UILib">
+                            <object-folder name="Question">
+                                <object-folder name="SlideAnim">
+                                    <object-type name="TestDialogQuestSlide" sid="6553081669745594">
+                                        <plugin id="Spriter" />
+                                        <container>
+                                            <type>TestDialogQuestSlide</type>
+                                            <type>TestDialogQuestSlide_questslide_spritequestion</type>
+                                            <type>TestDialogQuestSlide_questslide_textblog</type>
+                                            <type>TestDialogQuestSlide_questslide_questicon</type>
+                                            <type>TestDialogQuestSlide_questslide_trueoff</type>
+                                            <type>TestDialogQuestSlide_questslide_falseoff</type>
+                                        </container>
+                                    </object-type>
+                                    <object-type name="TestDialogQuestSlide_questslide_falseoff" sid="4390728603621656">
+                                        <plugin id="Sprite" />
+                                        <container>
+                                            <type>TestDialogQuestSlide</type>
+                                            <type>TestDialogQuestSlide_questslide_spritequestion</type>
+                                            <type>TestDialogQuestSlide_questslide_textblog</type>
+                                            <type>TestDialogQuestSlide_questslide_questicon</type>
+                                            <type>TestDialogQuestSlide_questslide_trueoff</type>
+                                            <type>TestDialogQuestSlide_questslide_falseoff</type>
+                                        </container>
+                                        <animation-folder>
+                                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7749229863352192" speed="0">
+                                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\quest-slide\false-off.png">
+                                                    <collision-poly>
+                                                        <point x="0" y="0" />
+                                                        <point x="0.99375" y="0.0125" />
+                                                        <point x="0.99375" y="0.9875" />
+                                                        <point x="0" y="1" />
+                                                    </collision-poly>
+                                                </frame>
+                                            </animation>
+                                        </animation-folder>
+                                    </object-type>
+                                    <object-type name="TestDialogQuestSlide_questslide_spritequestion" sid="3896669626688">
+                                        <plugin id="Sprite" />
+                                        <container>
+                                            <type>TestDialogQuestSlide</type>
+                                            <type>TestDialogQuestSlide_questslide_spritequestion</type>
+                                            <type>TestDialogQuestSlide_questslide_textblog</type>
+                                            <type>TestDialogQuestSlide_questslide_questicon</type>
+                                            <type>TestDialogQuestSlide_questslide_trueoff</type>
+                                            <type>TestDialogQuestSlide_questslide_falseoff</type>
+                                        </container>
+                                        <animation-folder>
+                                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8032043494726755" speed="0">
+                                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\quest-slide\sprite-question.png" />
+                                            </animation>
+                                        </animation-folder>
+                                    </object-type>
+                                    <object-type name="TestDialogQuestSlide_questslide_questicon" sid="5795294438265643">
+                                        <plugin id="Sprite" />
+                                        <container>
+                                            <type>TestDialogQuestSlide</type>
+                                            <type>TestDialogQuestSlide_questslide_spritequestion</type>
+                                            <type>TestDialogQuestSlide_questslide_textblog</type>
+                                            <type>TestDialogQuestSlide_questslide_questicon</type>
+                                            <type>TestDialogQuestSlide_questslide_trueoff</type>
+                                            <type>TestDialogQuestSlide_questslide_falseoff</type>
+                                        </container>
+                                        <animation-folder>
+                                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7360219203713603" speed="0">
+                                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\quest-slide\quest-icon.png">
+                                                    <image-point name="TextPoint" x="0.602564" y="0.484848" />
+                                                    <collision-poly>
+                                                        <point x="0.0641026" y="0.151515" />
+                                                        <point x="0.5" y="0" />
+                                                        <point x="0.935897" y="0.151515" />
+                                                        <point x="1" y="0.5" />
+                                                        <point x="0.935897" y="0.848485" />
+                                                        <point x="0.5" y="1" />
+                                                        <point x="0.0641026" y="0.848485" />
+                                                        <point x="0" y="0.5" />
+                                                    </collision-poly>
+                                                </frame>
+                                            </animation>
+                                        </animation-folder>
+                                    </object-type>
+                                    <object-type name="TestDialogQuestSlide_questslide_textblog" sid="2808181807195083">
+                                        <plugin id="Sprite" />
+                                        <container>
+                                            <type>TestDialogQuestSlide</type>
+                                            <type>TestDialogQuestSlide_questslide_spritequestion</type>
+                                            <type>TestDialogQuestSlide_questslide_textblog</type>
+                                            <type>TestDialogQuestSlide_questslide_questicon</type>
+                                            <type>TestDialogQuestSlide_questslide_trueoff</type>
+                                            <type>TestDialogQuestSlide_questslide_falseoff</type>
+                                        </container>
+                                        <animation-folder>
+                                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1652294885266842" speed="0">
+                                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\quest-slide\text-blog.png">
+                                                    <collision-poly>
+                                                        <point x="0.26" y="0.304688" />
+                                                        <point x="0.5" y="0.421875" />
+                                                        <point x="0.773333" y="0.265625" />
+                                                        <point x="0.77" y="0.730469" />
+                                                        <point x="0.5" y="0.550781" />
+                                                        <point x="0.226667" y="0.734375" />
+                                                    </collision-poly>
+                                                </frame>
+                                            </animation>
+                                        </animation-folder>
+                                    </object-type>
+                                    <object-type name="TestDialogQuestSlide_questslide_trueoff" sid="7662846737781625">
+                                        <plugin id="Sprite" />
+                                        <container>
+                                            <type>TestDialogQuestSlide</type>
+                                            <type>TestDialogQuestSlide_questslide_spritequestion</type>
+                                            <type>TestDialogQuestSlide_questslide_textblog</type>
+                                            <type>TestDialogQuestSlide_questslide_questicon</type>
+                                            <type>TestDialogQuestSlide_questslide_trueoff</type>
+                                            <type>TestDialogQuestSlide_questslide_falseoff</type>
+                                        </container>
+                                        <animation-folder>
+                                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7056022646033128" speed="0">
+                                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\quest-slide\true-off.png">
+                                                    <collision-poly>
+                                                        <point x="0.00625" y="0.0125" />
+                                                        <point x="1" y="0" />
+                                                        <point x="1" y="1" />
+                                                        <point x="0.00625" y="0.9875" />
+                                                    </collision-poly>
+                                                </frame>
+                                            </animation>
+                                        </animation-folder>
+                                    </object-type>
+                                </object-folder>
+                                <object-type name="TestDialogQuestionNumber" sid="2049565529582945">
+                                    <plugin id="Text" />
+                                </object-type>
+                                <object-type name="TestDialogQuestionText" sid="9414488223775853">
+                                    <plugin id="Text" />
+                                </object-type>
+                            </object-folder>
+                            <object-folder name="ProgressLine">
+                                <object-type name="TestDialogProgressLineSuccess" sid="8079938375932336">
+                                    <plugin id="Sprite" />
+                                    <animation-folder>
+                                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2602539764824083" speed="5">
+                                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                                        </animation>
+                                    </animation-folder>
+                                </object-type>
+                                <object-type name="TestDialogProgressLineFail" sid="5956971862110691">
+                                    <plugin id="Sprite" />
+                                    <animation-folder>
+                                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9870075299381061" speed="5">
+                                            <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                                        </animation>
+                                    </animation-folder>
+                                </object-type>
+                                <object-type name="TestDialogProgressLineBody" sid="24572086040093">
+                                    <plugin id="Sprite" />
+                                    <animation-folder>
+                                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="409445134739132" speed="5">
+                                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\progress-line\body.png">
+                                                <collision-poly>
+                                                    <point x="0.125" y="0.00742574" />
+                                                    <point x="0.875" y="0.00742574" />
+                                                    <point x="1" y="0.5" />
+                                                    <point x="0.875" y="0.992574" />
+                                                    <point x="0.125" y="0.992574" />
+                                                    <point x="0" y="0.5" />
+                                                </collision-poly>
+                                            </frame>
+                                        </animation>
+                                    </animation-folder>
+                                </object-type>
+                                <object-type name="TestDialogProgressLinePointsStarts" sid="8909804324020241">
+                                    <plugin id="Sprite" />
+                                    <animation-folder>
+                                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1868094035423216" speed="5">
+                                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\progress-line\points.png">
+                                                <image-point name="FailStart" x="0.5" y="0.02" />
+                                                <image-point name="SuccessStart" x="0.5" y="0.98" />
+                                                <collision-poly>
+                                                    <point x="0.15" y="0.0075" />
+                                                    <point x="0.85" y="0.0075" />
+                                                    <point x="0.85" y="0.9925" />
+                                                    <point x="0.15" y="0.9925" />
+                                                </collision-poly>
+                                            </frame>
+                                        </animation>
+                                    </animation-folder>
+                                </object-type>
+                                <object-type name="TestDialogProgressLineStars" sid="7137364523440141">
+                                    <plugin id="Sprite" />
+                                    <animation-folder>
+                                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3857578622469652" speed="5">
+                                            <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\progress-line\sters.png">
+                                                <collision-poly>
+                                                    <point x="0.315789" y="0.015" />
+                                                    <point x="0.578947" y="0.02" />
+                                                    <point x="1" y="0.5" />
+                                                    <point x="0.578947" y="0.98" />
+                                                    <point x="0.315789" y="0.985" />
+                                                    <point x="0.368421" y="0.5" />
+                                                </collision-poly>
+                                            </frame>
+                                        </animation>
+                                    </animation-folder>
+                                </object-type>
+                            </object-folder>
+                            <object-folder name="Input">
+                                <object-type name="TestDialogAnswerFalseBtn" sid="5201093056781649">
+                                    <plugin id="Sprite" />
+                                    <animation-folder>
+                                        <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="401943430504907" speed="5">
+                                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\false-off.png">
+                                                <collision-poly>
+                                                    <point x="0" y="0" />
+                                                    <point x="0.99375" y="0.0125" />
+                                                    <point x="0.99375" y="0.9875" />
+                                                    <point x="0" y="1" />
+                                                </collision-poly>
+                                            </frame>
+                                        </animation>
+                                        <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="3460032212081151" speed="5">
+                                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\false-on.png">
+                                                <collision-poly>
+                                                    <point x="0" y="0" />
+                                                    <point x="0.99375" y="0.0125" />
+                                                    <point x="0.99375" y="0.9875" />
+                                                    <point x="0" y="1" />
+                                                </collision-poly>
+                                            </frame>
+                                        </animation>
+                                    </animation-folder>
+                                </object-type>
+                                <object-type name="TestDialogAnswerTrueBtn" sid="7336944252899537">
+                                    <plugin id="Sprite" />
+                                    <animation-folder>
+                                        <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="7641521407007852" speed="5">
+                                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-off.png">
+                                                <collision-poly>
+                                                    <point x="0.00625" y="0.0125" />
+                                                    <point x="1" y="0" />
+                                                    <point x="1" y="1" />
+                                                    <point x="0.00625" y="0.9875" />
+                                                </collision-poly>
+                                            </frame>
+                                        </animation>
+                                        <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="6233505507808754" speed="5">
+                                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-on.png">
+                                                <collision-poly>
+                                                    <point x="0.00625" y="0.0125" />
+                                                    <point x="1" y="0" />
+                                                    <point x="1" y="1" />
+                                                    <point x="0.00625" y="0.9875" />
+                                                </collision-poly>
+                                            </frame>
+                                        </animation>
+                                    </animation-folder>
+                                </object-type>
+                            </object-folder>
+                        </object-folder>
+                        <object-folder name="Logic">
+                            <object-type name="TestDialogLevelRuntime" sid="9524380120170963">
+                                <plugin id="TestDialogLevelRuntimePlugin" />
+                            </object-type>
+                        </object-folder>
+                    </object-folder>
                 </object-folder>
                 <object-folder name="PlatformerLevel">
                     <object-folder name="UILib">
@@ -4046,630 +4312,6 @@
                             <plugin id="PlatformerLevelRecordingPlugin" />
                         </object-type>
                     </object-folder>
-                </object-folder>
-                <object-folder name="TestDialogLevel">
-                    <object-folder name="Background">
-                        <object-folder name="TeacherAnim">
-                            <object-type name="TestDialogEditor" sid="9944387148510453">
-                                <plugin id="Spriter" />
-                                <container>
-                                    <type>TestDialogEditor</type>
-                                    <type>TestDialogEditor_teacher_body</type>
-                                    <type>TestDialogEditor_teacher_halfhand</type>
-                                    <type>TestDialogEditor_teacher_head</type>
-                                    <type>TestDialogEditor_teacher_hand</type>
-                                    <type>TestDialogEditor_teacher_leftbrow</type>
-                                    <type>TestDialogEditor_teacher_rightbrow</type>
-                                    <type>TestDialogEditor_teacher_eyes</type>
-                                    <type>TestDialogEditor_teacher_smile1</type>
-                                </container>
-                            </object-type>
-                            <object-type name="TestDialogEditor_teacher_body" sid="3577781357525932">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogEditor</type>
-                                    <type>TestDialogEditor_teacher_body</type>
-                                    <type>TestDialogEditor_teacher_halfhand</type>
-                                    <type>TestDialogEditor_teacher_head</type>
-                                    <type>TestDialogEditor_teacher_hand</type>
-                                    <type>TestDialogEditor_teacher_leftbrow</type>
-                                    <type>TestDialogEditor_teacher_rightbrow</type>
-                                    <type>TestDialogEditor_teacher_eyes</type>
-                                    <type>TestDialogEditor_teacher_smile1</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="476063030898944" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\body.png">
-                                            <collision-poly>
-                                                <point x="0.23913" y="0.222222" />
-                                                <point x="0.5" y="0.0606061" />
-                                                <point x="0.891304" y="0.10101" />
-                                                <point x="0.891304" y="0.494949" />
-                                                <point x="0.836957" y="0.848485" />
-                                                <point x="0.5" y="1" />
-                                                <point x="0.369565" y="0.656566" />
-                                                <point x="0.184783" y="0.494949" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TestDialogEditor_teacher_halfhand" sid="8232374982678902">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogEditor</type>
-                                    <type>TestDialogEditor_teacher_body</type>
-                                    <type>TestDialogEditor_teacher_halfhand</type>
-                                    <type>TestDialogEditor_teacher_head</type>
-                                    <type>TestDialogEditor_teacher_hand</type>
-                                    <type>TestDialogEditor_teacher_leftbrow</type>
-                                    <type>TestDialogEditor_teacher_rightbrow</type>
-                                    <type>TestDialogEditor_teacher_eyes</type>
-                                    <type>TestDialogEditor_teacher_smile1</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2937084974383455" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\half-hand.png">
-                                            <collision-poly>
-                                                <point x="0.125" y="0.0540541" />
-                                                <point x="0.5" y="0.027027" />
-                                                <point x="0.75" y="0.108108" />
-                                                <point x="0.9375" y="0.486486" />
-                                                <point x="0.75" y="0.891892" />
-                                                <point x="0.5" y="0.972973" />
-                                                <point x="0.1875" y="0.918919" />
-                                                <point x="0" y="0.486486" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TestDialogEditor_teacher_head" sid="609540962405832">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogEditor</type>
-                                    <type>TestDialogEditor_teacher_body</type>
-                                    <type>TestDialogEditor_teacher_halfhand</type>
-                                    <type>TestDialogEditor_teacher_head</type>
-                                    <type>TestDialogEditor_teacher_hand</type>
-                                    <type>TestDialogEditor_teacher_leftbrow</type>
-                                    <type>TestDialogEditor_teacher_rightbrow</type>
-                                    <type>TestDialogEditor_teacher_eyes</type>
-                                    <type>TestDialogEditor_teacher_smile1</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9932038271876098" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\head.png">
-                                            <collision-poly>
-                                                <point x="0.0873016" y="0.0916667" />
-                                                <point x="0.5" y="0.00833333" />
-                                                <point x="0.912698" y="0.0916667" />
-                                                <point x="0.968254" y="0.5" />
-                                                <point x="0.809524" y="0.8" />
-                                                <point x="0.5" y="1" />
-                                                <point x="0.206349" y="0.783333" />
-                                                <point x="0.031746" y="0.5" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TestDialogEditor_teacher_hand" sid="7309328076959123">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogEditor</type>
-                                    <type>TestDialogEditor_teacher_body</type>
-                                    <type>TestDialogEditor_teacher_halfhand</type>
-                                    <type>TestDialogEditor_teacher_head</type>
-                                    <type>TestDialogEditor_teacher_hand</type>
-                                    <type>TestDialogEditor_teacher_leftbrow</type>
-                                    <type>TestDialogEditor_teacher_rightbrow</type>
-                                    <type>TestDialogEditor_teacher_eyes</type>
-                                    <type>TestDialogEditor_teacher_smile1</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="671359774192621" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\hand.png">
-                                            <collision-poly>
-                                                <point x="0.1875" y="0.0810811" />
-                                                <point x="0.5" y="0" />
-                                                <point x="0.8125" y="0.0810811" />
-                                                <point x="0.875" y="0.486486" />
-                                                <point x="0.875" y="0.945946" />
-                                                <point x="0.5" y="1" />
-                                                <point x="0.125" y="0.945946" />
-                                                <point x="0" y="0.486486" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TestDialogEditor_teacher_leftbrow" sid="4839589447988244">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogEditor</type>
-                                    <type>TestDialogEditor_teacher_body</type>
-                                    <type>TestDialogEditor_teacher_halfhand</type>
-                                    <type>TestDialogEditor_teacher_head</type>
-                                    <type>TestDialogEditor_teacher_hand</type>
-                                    <type>TestDialogEditor_teacher_leftbrow</type>
-                                    <type>TestDialogEditor_teacher_rightbrow</type>
-                                    <type>TestDialogEditor_teacher_eyes</type>
-                                    <type>TestDialogEditor_teacher_smile1</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="546483490226903" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\left-brow.png">
-                                            <collision-poly>
-                                                <point x="0.0869565" y="0.4" />
-                                                <point x="0.478261" y="0" />
-                                                <point x="0.956522" y="0.2" />
-                                                <point x="1" y="0.4" />
-                                                <point x="0.956522" y="0.8" />
-                                                <point x="0.478261" y="1" />
-                                                <point x="0.0434783" y="0.8" />
-                                                <point x="0.0434783" y="0.4" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TestDialogEditor_teacher_rightbrow" sid="7794542784183152">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogEditor</type>
-                                    <type>TestDialogEditor_teacher_body</type>
-                                    <type>TestDialogEditor_teacher_halfhand</type>
-                                    <type>TestDialogEditor_teacher_head</type>
-                                    <type>TestDialogEditor_teacher_hand</type>
-                                    <type>TestDialogEditor_teacher_leftbrow</type>
-                                    <type>TestDialogEditor_teacher_rightbrow</type>
-                                    <type>TestDialogEditor_teacher_eyes</type>
-                                    <type>TestDialogEditor_teacher_smile1</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5986407161587753" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\right-brow.png">
-                                            <collision-poly>
-                                                <point x="0.0434783" y="0.2" />
-                                                <point x="0.478261" y="0" />
-                                                <point x="0.869565" y="0.4" />
-                                                <point x="0.869565" y="0.4" />
-                                                <point x="0.478261" y="1" />
-                                                <point x="0.0434783" y="0.8" />
-                                                <point x="0" y="0.4" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TestDialogEditor_teacher_eyes" sid="378906997894873">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogEditor</type>
-                                    <type>TestDialogEditor_teacher_body</type>
-                                    <type>TestDialogEditor_teacher_halfhand</type>
-                                    <type>TestDialogEditor_teacher_head</type>
-                                    <type>TestDialogEditor_teacher_hand</type>
-                                    <type>TestDialogEditor_teacher_leftbrow</type>
-                                    <type>TestDialogEditor_teacher_rightbrow</type>
-                                    <type>TestDialogEditor_teacher_eyes</type>
-                                    <type>TestDialogEditor_teacher_smile1</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713527533413723" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\eyes.png">
-                                            <collision-poly>
-                                                <point x="0.027027" y="0.166667" />
-                                                <point x="0.972973" y="0.166667" />
-                                                <point x="1" y="0.5" />
-                                                <point x="0.972973" y="0.833333" />
-                                                <point x="0.027027" y="0.833333" />
-                                                <point x="0" y="0.5" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TestDialogEditor_teacher_smile1" sid="3499898999049931">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogEditor</type>
-                                    <type>TestDialogEditor_teacher_body</type>
-                                    <type>TestDialogEditor_teacher_halfhand</type>
-                                    <type>TestDialogEditor_teacher_head</type>
-                                    <type>TestDialogEditor_teacher_hand</type>
-                                    <type>TestDialogEditor_teacher_leftbrow</type>
-                                    <type>TestDialogEditor_teacher_rightbrow</type>
-                                    <type>TestDialogEditor_teacher_eyes</type>
-                                    <type>TestDialogEditor_teacher_smile1</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6149289168924498" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\smile1.png">
-                                            <collision-poly>
-                                                <point x="0.173913" y="0.363636" />
-                                                <point x="0.478261" y="0.545455" />
-                                                <point x="0.782609" y="0.454545" />
-                                                <point x="0.869565" y="0.454545" />
-                                                <point x="0.826087" y="0.636364" />
-                                                <point x="0.478261" y="0.727273" />
-                                                <point x="0.217391" y="0.545455" />
-                                                <point x="0.130435" y="0.454545" />
-                                            </collision-poly>
-                                        </frame>
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\smile2.png">
-                                            <collision-poly>
-                                                <point x="0.217391" y="0.454545" />
-                                                <point x="0.478261" y="0" />
-                                                <point x="0.73913" y="0.545455" />
-                                                <point x="0.73913" y="0.454545" />
-                                                <point x="0.73913" y="0.454545" />
-                                                <point x="0.478261" y="1" />
-                                                <point x="0.217391" y="0.545455" />
-                                                <point x="0.217391" y="0.454545" />
-                                            </collision-poly>
-                                        </frame>
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\smile4.png">
-                                            <collision-poly>
-                                                <point x="0.0869565" y="0.181818" />
-                                                <point x="0.478261" y="0" />
-                                                <point x="0.913043" y="0.181818" />
-                                                <point x="1" y="0.454545" />
-                                                <point x="0.869565" y="0.727273" />
-                                                <point x="0.478261" y="1" />
-                                                <point x="0.130435" y="0.727273" />
-                                                <point x="0" y="0.454545" />
-                                            </collision-poly>
-                                        </frame>
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\smile3.png">
-                                            <collision-poly>
-                                                <point x="0.0869565" y="0.181818" />
-                                                <point x="0.478261" y="0.181818" />
-                                                <point x="0.869565" y="0.272727" />
-                                                <point x="0.956522" y="0.454545" />
-                                                <point x="0.782609" y="0.545455" />
-                                                <point x="0.478261" y="0.727273" />
-                                                <point x="0.130435" y="0.727273" />
-                                                <point x="0.0434783" y="0.454545" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                        </object-folder>
-                        <object-folder name="TestDialogSlideAnim">
-                            <object-type name="TestDialogQuestSlide" sid="6553081669745594">
-                                <plugin id="Spriter" />
-                                <container>
-                                    <type>TestDialogQuestSlide</type>
-                                    <type>TestDialogQuestSlide_questslide_spritequestion</type>
-                                    <type>TestDialogQuestSlide_questslide_textblog</type>
-                                    <type>TestDialogQuestSlide_questslide_questicon</type>
-                                    <type>TestDialogQuestSlide_questslide_trueoff</type>
-                                    <type>TestDialogQuestSlide_questslide_falseoff</type>
-                                </container>
-                            </object-type>
-                            <object-type name="TestDialogQuestSlide_questslide_falseoff" sid="4390728603621656">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogQuestSlide</type>
-                                    <type>TestDialogQuestSlide_questslide_spritequestion</type>
-                                    <type>TestDialogQuestSlide_questslide_textblog</type>
-                                    <type>TestDialogQuestSlide_questslide_questicon</type>
-                                    <type>TestDialogQuestSlide_questslide_trueoff</type>
-                                    <type>TestDialogQuestSlide_questslide_falseoff</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7749229863352192" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\quest-slide\false-off.png">
-                                            <collision-poly>
-                                                <point x="0" y="0" />
-                                                <point x="0.99375" y="0.0125" />
-                                                <point x="0.99375" y="0.9875" />
-                                                <point x="0" y="1" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TestDialogQuestSlide_questslide_spritequestion" sid="3896669626688">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogQuestSlide</type>
-                                    <type>TestDialogQuestSlide_questslide_spritequestion</type>
-                                    <type>TestDialogQuestSlide_questslide_textblog</type>
-                                    <type>TestDialogQuestSlide_questslide_questicon</type>
-                                    <type>TestDialogQuestSlide_questslide_trueoff</type>
-                                    <type>TestDialogQuestSlide_questslide_falseoff</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8032043494726755" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\quest-slide\sprite-question.png" />
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TestDialogQuestSlide_questslide_questicon" sid="5795294438265643">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogQuestSlide</type>
-                                    <type>TestDialogQuestSlide_questslide_spritequestion</type>
-                                    <type>TestDialogQuestSlide_questslide_textblog</type>
-                                    <type>TestDialogQuestSlide_questslide_questicon</type>
-                                    <type>TestDialogQuestSlide_questslide_trueoff</type>
-                                    <type>TestDialogQuestSlide_questslide_falseoff</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7360219203713603" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\quest-slide\quest-icon.png">
-                                            <image-point name="TextPoint" x="0.602564" y="0.484848" />
-                                            <collision-poly>
-                                                <point x="0.0641026" y="0.151515" />
-                                                <point x="0.5" y="0" />
-                                                <point x="0.935897" y="0.151515" />
-                                                <point x="1" y="0.5" />
-                                                <point x="0.935897" y="0.848485" />
-                                                <point x="0.5" y="1" />
-                                                <point x="0.0641026" y="0.848485" />
-                                                <point x="0" y="0.5" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TestDialogQuestSlide_questslide_textblog" sid="2808181807195083">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogQuestSlide</type>
-                                    <type>TestDialogQuestSlide_questslide_spritequestion</type>
-                                    <type>TestDialogQuestSlide_questslide_textblog</type>
-                                    <type>TestDialogQuestSlide_questslide_questicon</type>
-                                    <type>TestDialogQuestSlide_questslide_trueoff</type>
-                                    <type>TestDialogQuestSlide_questslide_falseoff</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1652294885266842" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\quest-slide\text-blog.png">
-                                            <collision-poly>
-                                                <point x="0.26" y="0.304688" />
-                                                <point x="0.5" y="0.421875" />
-                                                <point x="0.773333" y="0.265625" />
-                                                <point x="0.77" y="0.730469" />
-                                                <point x="0.5" y="0.550781" />
-                                                <point x="0.226667" y="0.734375" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="TestDialogQuestSlide_questslide_trueoff" sid="7662846737781625">
-                                <plugin id="Sprite" />
-                                <container>
-                                    <type>TestDialogQuestSlide</type>
-                                    <type>TestDialogQuestSlide_questslide_spritequestion</type>
-                                    <type>TestDialogQuestSlide_questslide_textblog</type>
-                                    <type>TestDialogQuestSlide_questslide_questicon</type>
-                                    <type>TestDialogQuestSlide_questslide_trueoff</type>
-                                    <type>TestDialogQuestSlide_questslide_falseoff</type>
-                                </container>
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7056022646033128" speed="0">
-                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\quest-slide\true-off.png">
-                                            <collision-poly>
-                                                <point x="0.00625" y="0.0125" />
-                                                <point x="1" y="0" />
-                                                <point x="1" y="1" />
-                                                <point x="0.00625" y="0.9875" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                        </object-folder>
-                        <object-type name="TestDialogBackground" sid="8879209475646582">
-                            <plugin id="Sprite" />
-                            <animation-folder>
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8889753829348977" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\back.png" />
-                                </animation>
-                            </animation-folder>
-                        </object-type>
-                        <object-type name="TestDialogProjectorLight" sid="5686354537068885">
-                            <plugin id="Sprite" />
-                            <animation-folder>
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7436263965967671" speed="5">
-                                    <frame duration="1" hotspotX="0.5" hotspotY="0.501139" original-source="C:\Users\Andy\Desktop\dialog\buttons\light.png" />
-                                </animation>
-                            </animation-folder>
-                        </object-type>
-                    </object-folder>
-                    <object-folder name="Buttons">
-                        <object-type name="TestDialogAnswerFalseBtn" sid="5201093056781649">
-                            <plugin id="Sprite" />
-                            <animation-folder>
-                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="401943430504907" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\false-off.png">
-                                        <collision-poly>
-                                            <point x="0" y="0" />
-                                            <point x="0.99375" y="0.0125" />
-                                            <point x="0.99375" y="0.9875" />
-                                            <point x="0" y="1" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="3460032212081151" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\false-on.png">
-                                        <collision-poly>
-                                            <point x="0" y="0" />
-                                            <point x="0.99375" y="0.0125" />
-                                            <point x="0.99375" y="0.9875" />
-                                            <point x="0" y="1" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                            </animation-folder>
-                        </object-type>
-                        <object-type name="TestDialogAnswerTrueBtn" sid="7336944252899537">
-                            <plugin id="Sprite" />
-                            <animation-folder>
-                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="7641521407007852" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-off.png">
-                                        <collision-poly>
-                                            <point x="0.00625" y="0.0125" />
-                                            <point x="1" y="0" />
-                                            <point x="1" y="1" />
-                                            <point x="0.00625" y="0.9875" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="6233505507808754" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-on.png">
-                                        <collision-poly>
-                                            <point x="0.00625" y="0.0125" />
-                                            <point x="1" y="0" />
-                                            <point x="1" y="1" />
-                                            <point x="0.00625" y="0.9875" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                            </animation-folder>
-                        </object-type>
-                    </object-folder>
-                    <object-folder name="Question">
-                        <object-type name="TestDialogQuestionSituationPhoto" sid="9963078062898053">
-                            <plugin id="Sprite" />
-                            <animation-folder>
-                                <animation framecount="1" loop="0" name="1demo_policeman" pingpong="0" repeatcount="1" repeatto="0" sid="3368699911828553" speed="5">
-                                    <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\policeman.png">
-                                        <collision-poly>
-                                            <point x="0.00744417" y="0.0114068" />
-                                            <point x="0.990074" y="0.0152091" />
-                                            <point x="0.990074" y="0.984791" />
-                                            <point x="0.00744417" y="0.988593" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                                <animation framecount="1" loop="0" name="1demo_balloons" pingpong="0" repeatcount="1" repeatto="0" sid="2126955758319223" speed="5">
-                                    <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\veider.png">
-                                        <collision-poly>
-                                            <point x="0.00744417" y="0.0114068" />
-                                            <point x="0.990074" y="0.0152091" />
-                                            <point x="0.990074" y="0.984791" />
-                                            <point x="0.00744417" y="0.988593" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                                <animation framecount="1" loop="0" name="1demo_captain" pingpong="0" repeatcount="1" repeatto="0" sid="3423601724115761" speed="5">
-                                    <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\cap.png">
-                                        <collision-poly>
-                                            <point x="0.00744417" y="0.0114068" />
-                                            <point x="0.990074" y="0.0152091" />
-                                            <point x="0.990074" y="0.984791" />
-                                            <point x="0.00744417" y="0.988593" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                                <animation framecount="1" loop="0" name="1demo_kebab" pingpong="0" repeatcount="1" repeatto="0" sid="1139229419377495" speed="5">
-                                    <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\kebab.png">
-                                        <collision-poly>
-                                            <point x="0.00744417" y="0.0114068" />
-                                            <point x="0.990074" y="0.0152091" />
-                                            <point x="0.990074" y="0.984791" />
-                                            <point x="0.00744417" y="0.988593" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                                <animation framecount="1" loop="0" name="1demo_taxi" pingpong="0" repeatcount="1" repeatto="0" sid="5469112983980685" speed="5">
-                                    <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\taxi.png">
-                                        <collision-poly>
-                                            <point x="0.00744417" y="0.0114068" />
-                                            <point x="0.990074" y="0.0152091" />
-                                            <point x="0.990074" y="0.984791" />
-                                            <point x="0.00744417" y="0.988593" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                            </animation-folder>
-                        </object-type>
-                        <object-type name="TestDialogQuestionText" sid="9414488223775853">
-                            <plugin id="Text" />
-                        </object-type>
-                        <object-type name="TestDialogQuestionNumber" sid="2049565529582945">
-                            <plugin id="Text" />
-                        </object-type>
-                    </object-folder>
-                    <object-folder name="Progress">
-                        <object-type name="TestDialogProgressLineSuccess" sid="8079938375932336">
-                            <plugin id="Sprite" />
-                            <animation-folder>
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2602539764824083" speed="5">
-                                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                                </animation>
-                            </animation-folder>
-                        </object-type>
-                        <object-type name="TestDialogProgressLineFail" sid="5956971862110691">
-                            <plugin id="Sprite" />
-                            <animation-folder>
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9870075299381061" speed="5">
-                                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
-                                </animation>
-                            </animation-folder>
-                        </object-type>
-                        <object-type name="TestDialogProgressLineBody" sid="24572086040093">
-                            <plugin id="Sprite" />
-                            <animation-folder>
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="409445134739132" speed="5">
-                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\progress-line\body.png">
-                                        <collision-poly>
-                                            <point x="0.125" y="0.00742574" />
-                                            <point x="0.875" y="0.00742574" />
-                                            <point x="1" y="0.5" />
-                                            <point x="0.875" y="0.992574" />
-                                            <point x="0.125" y="0.992574" />
-                                            <point x="0" y="0.5" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                            </animation-folder>
-                        </object-type>
-                        <object-type name="TestDialogProgressLinePointsStarts" sid="8909804324020241">
-                            <plugin id="Sprite" />
-                            <animation-folder>
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1868094035423216" speed="5">
-                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\progress-line\points.png">
-                                        <image-point name="FailStart" x="0.5" y="0.02" />
-                                        <image-point name="SuccessStart" x="0.5" y="0.98" />
-                                        <collision-poly>
-                                            <point x="0.15" y="0.0075" />
-                                            <point x="0.85" y="0.0075" />
-                                            <point x="0.85" y="0.9925" />
-                                            <point x="0.15" y="0.9925" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                            </animation-folder>
-                        </object-type>
-                        <object-type name="TestDialogProgressLineStars" sid="7137364523440141">
-                            <plugin id="Sprite" />
-                            <animation-folder>
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3857578622469652" speed="5">
-                                    <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\dialog\buttons\progress-line\sters.png">
-                                        <collision-poly>
-                                            <point x="0.315789" y="0.015" />
-                                            <point x="0.578947" y="0.02" />
-                                            <point x="1" y="0.5" />
-                                            <point x="0.578947" y="0.98" />
-                                            <point x="0.315789" y="0.985" />
-                                            <point x="0.368421" y="0.5" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                            </animation-folder>
-                        </object-type>
-                    </object-folder>
-                    <object-type name="TestDialogLevelRuntime" sid="9524380120170963">
-                        <plugin id="TestDialogLevelRuntimePlugin" />
-                    </object-type>
                 </object-folder>
                 <object-folder name="VisualObjects">
                     <object-folder name="B">
@@ -6646,6 +6288,372 @@
                     <object-folder name="E" />
                 </object-folder>
             </object-folder>
+            <object-folder name="IdiomLandTestDialogLevel">
+                <object-folder name="Background">
+                    <object-folder name="TeacherAnim">
+                        <object-type name="TestDialogEditor" sid="9944387148510453">
+                            <plugin id="Spriter" />
+                            <container>
+                                <type>TestDialogEditor</type>
+                                <type>TestDialogEditor_teacher_body</type>
+                                <type>TestDialogEditor_teacher_halfhand</type>
+                                <type>TestDialogEditor_teacher_head</type>
+                                <type>TestDialogEditor_teacher_hand</type>
+                                <type>TestDialogEditor_teacher_leftbrow</type>
+                                <type>TestDialogEditor_teacher_rightbrow</type>
+                                <type>TestDialogEditor_teacher_eyes</type>
+                                <type>TestDialogEditor_teacher_smile1</type>
+                            </container>
+                        </object-type>
+                        <object-type name="TestDialogEditor_teacher_body" sid="3577781357525932">
+                            <plugin id="Sprite" />
+                            <container>
+                                <type>TestDialogEditor</type>
+                                <type>TestDialogEditor_teacher_body</type>
+                                <type>TestDialogEditor_teacher_halfhand</type>
+                                <type>TestDialogEditor_teacher_head</type>
+                                <type>TestDialogEditor_teacher_hand</type>
+                                <type>TestDialogEditor_teacher_leftbrow</type>
+                                <type>TestDialogEditor_teacher_rightbrow</type>
+                                <type>TestDialogEditor_teacher_eyes</type>
+                                <type>TestDialogEditor_teacher_smile1</type>
+                            </container>
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="476063030898944" speed="0">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\body.png">
+                                        <collision-poly>
+                                            <point x="0.23913" y="0.222222" />
+                                            <point x="0.5" y="0.0606061" />
+                                            <point x="0.891304" y="0.10101" />
+                                            <point x="0.891304" y="0.494949" />
+                                            <point x="0.836957" y="0.848485" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.369565" y="0.656566" />
+                                            <point x="0.184783" y="0.494949" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="TestDialogEditor_teacher_halfhand" sid="8232374982678902">
+                            <plugin id="Sprite" />
+                            <container>
+                                <type>TestDialogEditor</type>
+                                <type>TestDialogEditor_teacher_body</type>
+                                <type>TestDialogEditor_teacher_halfhand</type>
+                                <type>TestDialogEditor_teacher_head</type>
+                                <type>TestDialogEditor_teacher_hand</type>
+                                <type>TestDialogEditor_teacher_leftbrow</type>
+                                <type>TestDialogEditor_teacher_rightbrow</type>
+                                <type>TestDialogEditor_teacher_eyes</type>
+                                <type>TestDialogEditor_teacher_smile1</type>
+                            </container>
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2937084974383455" speed="0">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\half-hand.png">
+                                        <collision-poly>
+                                            <point x="0.125" y="0.0540541" />
+                                            <point x="0.5" y="0.027027" />
+                                            <point x="0.75" y="0.108108" />
+                                            <point x="0.9375" y="0.486486" />
+                                            <point x="0.75" y="0.891892" />
+                                            <point x="0.5" y="0.972973" />
+                                            <point x="0.1875" y="0.918919" />
+                                            <point x="0" y="0.486486" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="TestDialogEditor_teacher_head" sid="609540962405832">
+                            <plugin id="Sprite" />
+                            <container>
+                                <type>TestDialogEditor</type>
+                                <type>TestDialogEditor_teacher_body</type>
+                                <type>TestDialogEditor_teacher_halfhand</type>
+                                <type>TestDialogEditor_teacher_head</type>
+                                <type>TestDialogEditor_teacher_hand</type>
+                                <type>TestDialogEditor_teacher_leftbrow</type>
+                                <type>TestDialogEditor_teacher_rightbrow</type>
+                                <type>TestDialogEditor_teacher_eyes</type>
+                                <type>TestDialogEditor_teacher_smile1</type>
+                            </container>
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9932038271876098" speed="0">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\head.png">
+                                        <collision-poly>
+                                            <point x="0.0873016" y="0.0916667" />
+                                            <point x="0.5" y="0.00833333" />
+                                            <point x="0.912698" y="0.0916667" />
+                                            <point x="0.968254" y="0.5" />
+                                            <point x="0.809524" y="0.8" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.206349" y="0.783333" />
+                                            <point x="0.031746" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="TestDialogEditor_teacher_hand" sid="7309328076959123">
+                            <plugin id="Sprite" />
+                            <container>
+                                <type>TestDialogEditor</type>
+                                <type>TestDialogEditor_teacher_body</type>
+                                <type>TestDialogEditor_teacher_halfhand</type>
+                                <type>TestDialogEditor_teacher_head</type>
+                                <type>TestDialogEditor_teacher_hand</type>
+                                <type>TestDialogEditor_teacher_leftbrow</type>
+                                <type>TestDialogEditor_teacher_rightbrow</type>
+                                <type>TestDialogEditor_teacher_eyes</type>
+                                <type>TestDialogEditor_teacher_smile1</type>
+                            </container>
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="671359774192621" speed="0">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\hand.png">
+                                        <collision-poly>
+                                            <point x="0.1875" y="0.0810811" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.8125" y="0.0810811" />
+                                            <point x="0.875" y="0.486486" />
+                                            <point x="0.875" y="0.945946" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.125" y="0.945946" />
+                                            <point x="0" y="0.486486" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="TestDialogEditor_teacher_leftbrow" sid="4839589447988244">
+                            <plugin id="Sprite" />
+                            <container>
+                                <type>TestDialogEditor</type>
+                                <type>TestDialogEditor_teacher_body</type>
+                                <type>TestDialogEditor_teacher_halfhand</type>
+                                <type>TestDialogEditor_teacher_head</type>
+                                <type>TestDialogEditor_teacher_hand</type>
+                                <type>TestDialogEditor_teacher_leftbrow</type>
+                                <type>TestDialogEditor_teacher_rightbrow</type>
+                                <type>TestDialogEditor_teacher_eyes</type>
+                                <type>TestDialogEditor_teacher_smile1</type>
+                            </container>
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="546483490226903" speed="0">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\left-brow.png">
+                                        <collision-poly>
+                                            <point x="0.0869565" y="0.4" />
+                                            <point x="0.478261" y="0" />
+                                            <point x="0.956522" y="0.2" />
+                                            <point x="1" y="0.4" />
+                                            <point x="0.956522" y="0.8" />
+                                            <point x="0.478261" y="1" />
+                                            <point x="0.0434783" y="0.8" />
+                                            <point x="0.0434783" y="0.4" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="TestDialogEditor_teacher_rightbrow" sid="7794542784183152">
+                            <plugin id="Sprite" />
+                            <container>
+                                <type>TestDialogEditor</type>
+                                <type>TestDialogEditor_teacher_body</type>
+                                <type>TestDialogEditor_teacher_halfhand</type>
+                                <type>TestDialogEditor_teacher_head</type>
+                                <type>TestDialogEditor_teacher_hand</type>
+                                <type>TestDialogEditor_teacher_leftbrow</type>
+                                <type>TestDialogEditor_teacher_rightbrow</type>
+                                <type>TestDialogEditor_teacher_eyes</type>
+                                <type>TestDialogEditor_teacher_smile1</type>
+                            </container>
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5986407161587753" speed="0">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\right-brow.png">
+                                        <collision-poly>
+                                            <point x="0.0434783" y="0.2" />
+                                            <point x="0.478261" y="0" />
+                                            <point x="0.869565" y="0.4" />
+                                            <point x="0.869565" y="0.4" />
+                                            <point x="0.478261" y="1" />
+                                            <point x="0.0434783" y="0.8" />
+                                            <point x="0" y="0.4" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="TestDialogEditor_teacher_eyes" sid="378906997894873">
+                            <plugin id="Sprite" />
+                            <container>
+                                <type>TestDialogEditor</type>
+                                <type>TestDialogEditor_teacher_body</type>
+                                <type>TestDialogEditor_teacher_halfhand</type>
+                                <type>TestDialogEditor_teacher_head</type>
+                                <type>TestDialogEditor_teacher_hand</type>
+                                <type>TestDialogEditor_teacher_leftbrow</type>
+                                <type>TestDialogEditor_teacher_rightbrow</type>
+                                <type>TestDialogEditor_teacher_eyes</type>
+                                <type>TestDialogEditor_teacher_smile1</type>
+                            </container>
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713527533413723" speed="0">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\eyes.png">
+                                        <collision-poly>
+                                            <point x="0.027027" y="0.166667" />
+                                            <point x="0.972973" y="0.166667" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.972973" y="0.833333" />
+                                            <point x="0.027027" y="0.833333" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="TestDialogEditor_teacher_smile1" sid="3499898999049931">
+                            <plugin id="Sprite" />
+                            <container>
+                                <type>TestDialogEditor</type>
+                                <type>TestDialogEditor_teacher_body</type>
+                                <type>TestDialogEditor_teacher_halfhand</type>
+                                <type>TestDialogEditor_teacher_head</type>
+                                <type>TestDialogEditor_teacher_hand</type>
+                                <type>TestDialogEditor_teacher_leftbrow</type>
+                                <type>TestDialogEditor_teacher_rightbrow</type>
+                                <type>TestDialogEditor_teacher_eyes</type>
+                                <type>TestDialogEditor_teacher_smile1</type>
+                            </container>
+                            <animation-folder>
+                                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6149289168924498" speed="0">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\smile1.png">
+                                        <collision-poly>
+                                            <point x="0.173913" y="0.363636" />
+                                            <point x="0.478261" y="0.545455" />
+                                            <point x="0.782609" y="0.454545" />
+                                            <point x="0.869565" y="0.454545" />
+                                            <point x="0.826087" y="0.636364" />
+                                            <point x="0.478261" y="0.727273" />
+                                            <point x="0.217391" y="0.545455" />
+                                            <point x="0.130435" y="0.454545" />
+                                        </collision-poly>
+                                    </frame>
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\smile2.png">
+                                        <collision-poly>
+                                            <point x="0.217391" y="0.454545" />
+                                            <point x="0.478261" y="0" />
+                                            <point x="0.73913" y="0.545455" />
+                                            <point x="0.73913" y="0.454545" />
+                                            <point x="0.73913" y="0.454545" />
+                                            <point x="0.478261" y="1" />
+                                            <point x="0.217391" y="0.545455" />
+                                            <point x="0.217391" y="0.454545" />
+                                        </collision-poly>
+                                    </frame>
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\smile4.png">
+                                        <collision-poly>
+                                            <point x="0.0869565" y="0.181818" />
+                                            <point x="0.478261" y="0" />
+                                            <point x="0.913043" y="0.181818" />
+                                            <point x="1" y="0.454545" />
+                                            <point x="0.869565" y="0.727273" />
+                                            <point x="0.478261" y="1" />
+                                            <point x="0.130435" y="0.727273" />
+                                            <point x="0" y="0.454545" />
+                                        </collision-poly>
+                                    </frame>
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="\\vmware-host\Shared Folders\egp-win\teacher\smile3.png">
+                                        <collision-poly>
+                                            <point x="0.0869565" y="0.181818" />
+                                            <point x="0.478261" y="0.181818" />
+                                            <point x="0.869565" y="0.272727" />
+                                            <point x="0.956522" y="0.454545" />
+                                            <point x="0.782609" y="0.545455" />
+                                            <point x="0.478261" y="0.727273" />
+                                            <point x="0.130435" y="0.727273" />
+                                            <point x="0.0434783" y="0.454545" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                    </object-folder>
+                    <object-type name="TestDialogBackground" sid="8879209475646582">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8889753829348977" speed="5">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\back.png" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="TestDialogProjectorLight" sid="5686354537068885">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7436263965967671" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.501139" original-source="C:\Users\Andy\Desktop\dialog\buttons\light.png" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-folder name="Question">
+                    <object-type name="TestDialogQuestionSituationPhoto" sid="9963078062898053">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="1demo_policeman" pingpong="0" repeatcount="1" repeatto="0" sid="3368699911828553" speed="5">
+                                <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\policeman.png">
+                                    <collision-poly>
+                                        <point x="0.00744417" y="0.0114068" />
+                                        <point x="0.990074" y="0.0152091" />
+                                        <point x="0.990074" y="0.984791" />
+                                        <point x="0.00744417" y="0.988593" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="1demo_balloons" pingpong="0" repeatcount="1" repeatto="0" sid="2126955758319223" speed="5">
+                                <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\veider.png">
+                                    <collision-poly>
+                                        <point x="0.00744417" y="0.0114068" />
+                                        <point x="0.990074" y="0.0152091" />
+                                        <point x="0.990074" y="0.984791" />
+                                        <point x="0.00744417" y="0.988593" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="1demo_captain" pingpong="0" repeatcount="1" repeatto="0" sid="3423601724115761" speed="5">
+                                <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\cap.png">
+                                    <collision-poly>
+                                        <point x="0.00744417" y="0.0114068" />
+                                        <point x="0.990074" y="0.0152091" />
+                                        <point x="0.990074" y="0.984791" />
+                                        <point x="0.00744417" y="0.988593" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="1demo_kebab" pingpong="0" repeatcount="1" repeatto="0" sid="1139229419377495" speed="5">
+                                <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\kebab.png">
+                                    <collision-poly>
+                                        <point x="0.00744417" y="0.0114068" />
+                                        <point x="0.990074" y="0.0152091" />
+                                        <point x="0.990074" y="0.984791" />
+                                        <point x="0.00744417" y="0.988593" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="1demo_taxi" pingpong="0" repeatcount="1" repeatto="0" sid="5469112983980685" speed="5">
+                                <frame duration="1" hotspotX="0.501241" hotspotY="0.501901" original-source="Y:\quizy\taxi.png">
+                                    <collision-poly>
+                                        <point x="0.00744417" y="0.0114068" />
+                                        <point x="0.990074" y="0.0152091" />
+                                        <point x="0.990074" y="0.984791" />
+                                        <point x="0.00744417" y="0.988593" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+            </object-folder>
         </object-folder>
     </object-folder>
     <families>
@@ -6726,8 +6734,8 @@
             <layout-folder name="1demo">
                 <layout>1demo.xml</layout>
             </layout-folder>
-            <layout-folder name="TestDialog">
-                <layout>TestDialog.xml</layout>
+            <layout-folder name="IdiomLandTestDialogLevel">
+                <layout>IdiomLandTestDialogLevel.xml</layout>
             </layout-folder>
         </layout-folder>
         <layout-folder name="Menus">
@@ -6835,6 +6843,21 @@
                         </event-folder>
                         <event-sheet>LevelEngine.xml</event-sheet>
                     </event-folder>
+                    <event-folder name="TestDialogLevelEngine">
+                        <event-folder name="Logic">
+                            <event-sheet>TestDialogLevelEngineBootstrap.xml</event-sheet>
+                            <event-sheet>TestDialogLevelEngineProgressAnimation.xml</event-sheet>
+                            <event-sheet>TestDialogLevelEngineMainLoop.xml</event-sheet>
+                            <event-sheet>TestDialogLevelEngineLogic.xml</event-sheet>
+                        </event-folder>
+                        <event-folder name="UILib">
+                            <event-sheet>TestDialogLevelEngineUIInput.xml</event-sheet>
+                            <event-sheet>TestDialogLevelEngineUIProgressLine.xml</event-sheet>
+                            <event-sheet>TestDialogLevelEngineUIQuestion.xml</event-sheet>
+                            <event-sheet>TestDialogLevelEngineUILib.xml</event-sheet>
+                        </event-folder>
+                        <event-sheet>TestDialogLevelEngine.xml</event-sheet>
+                    </event-folder>
                 </event-folder>
                 <event-folder name="PlatformerLevel">
                     <event-folder name="UILib">
@@ -6873,19 +6896,6 @@
                     </event-folder>
                     <event-sheet>PlatformerLevel.xml</event-sheet>
                 </event-folder>
-                <event-folder name="TestDialogLevel">
-                    <event-sheet>TestDialogLevelBootstrap.xml</event-sheet>
-                    <event-sheet>TestDialogLevelCommon.xml</event-sheet>
-                    <event-sheet>TestDialogLevelLayoutMain.xml</event-sheet>
-                    <event-sheet>TestDialogLevelInput.xml</event-sheet>
-                    <event-sheet>TestDialogLevelProgressAnimation.xml</event-sheet>
-                    <event-sheet>TestDialogLevelAnimsInit.xml</event-sheet>
-                    <event-sheet>TestDialogLevelQuestionAnimation.xml</event-sheet>
-                    <event-sheet>TestDialogLevelUIState.xml</event-sheet>
-                    <event-sheet>TestDialogLevelEditorAnimation.xml</event-sheet>
-                    <event-sheet>TestDialogLevelProgressLineAnimation.xml</event-sheet>
-                    <event-sheet>TestDialogLevelQuestionShowAnimation.xml</event-sheet>
-                </event-folder>
                 <event-folder name="VisualObjects">
                     <event-folder name="F">
                         <event-folder name="Foxy">
@@ -6893,6 +6903,17 @@
                         </event-folder>
                     </event-folder>
                 </event-folder>
+            </event-folder>
+            <event-folder name="IdiomLandTestDialogLevel">
+                <event-sheet>IdiomLandTestDialogLevelLayoutMain.xml</event-sheet>
+                <event-sheet>IdiomLandTestDialogLevelAnimsInit.xml</event-sheet>
+                <event-sheet>IdiomLandTestDialogLevelUIEditorAnimation.xml</event-sheet>
+                <event-sheet>IdiomLandTestDialogLevelUIQuestionShowAnimation.xml</event-sheet>
+                <event-sheet>IdiomLandTestDialogLevelBootstrap.xml</event-sheet>
+                <event-sheet>IdiomLandTestDialogLevelDebug.xml</event-sheet>
+                <event-sheet>IdiomLandTestDialogLevelFinish.xml</event-sheet>
+                <event-sheet>IdiomLandTestDialogLevelProgressAnimation.xml</event-sheet>
+                <event-sheet>IdiomLandTestDialogLevelUIQuestion.xml</event-sheet>
             </event-folder>
         </event-folder>
         <event-folder name="Menus">
