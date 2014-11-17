@@ -5,7 +5,6 @@
     <events>
         <event-group description="" sid="527778138977828" title="Test dialog UI state machine">
             <sub-events>
-                <variable constant="0" name="QuestDialogCurrentQuestionNumber" sid="721161426110808" static="1" type="number">0</variable>
                 <variable constant="0" name="QuestDialogUIState" sid="3411119896356729" static="1" type="number">0</variable>
                 <variable constant="0" name="QuestDialogQuestionIsReady" sid="3369481590125779" static="1" type="number">0</variable>
                 <variable constant="0" name="QuestDialogLevelIsFinished" sid="3128404573209406" static="1" type="number">0</variable>
@@ -25,10 +24,6 @@
                         <event-block sid="6466525087324778">
                             <conditions />
                             <actions>
-                                <action id="-9" name="Set value" sid="5561847768155702" type="System">
-                                    <param id="0" name="Variable">QuestDialogCurrentQuestionNumber</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="1604564486233521" type="System">
                                     <param id="0" name="Variable">QuestDialogUIState</param>
                                     <param id="1" name="Value">UI_STATE_QUESTION_SHOW_PENDING</param>
@@ -166,13 +161,9 @@
                                     <param id="0" name="Variable">QuestDialogUIState</param>
                                     <param id="1" name="Value">UI_STATE_SHOWING_QUESTION</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="1292578205258496" type="System">
-                                    <param id="0" name="Variable">QuestDialogCurrentQuestionNumber</param>
-                                    <param id="1" name="Value">QuestDialogCurrentQuestionNumber + 1</param>
-                                </action>
                                 <action id="0" name="Call function" sid="4122984193716037" type="Function">
                                     <param id="0" name="Name">&quot;RenderCurrentQuestion&quot;</param>
-                                    <param id="1" name="Parameter {n}">QuestDialogCurrentQuestionNumber</param>
+                                    <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getAnswersCount + 1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="2650851625893176" type="Function">
                                     <param id="0" name="Name">&quot;RunShowQuestionAnimation&quot;</param>
@@ -346,10 +337,10 @@
                                     <param id="0" name="Text">TestDialogLevelRuntime.getQuestionText</param>
                                 </action>
                                 <action id="0" name="Set text" sid="3053035947720686" type="TestDialogQuestionNumber">
-                                    <param id="0" name="Text">Function.Param(0) &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
+                                    <param id="0" name="Text">Function.Param(0) &amp; &quot;/&quot; &amp; TestDialogLevelRuntime.getQuestionsCount</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="3625023815467509" type="TestDialogQuestionSituationPhoto">
-                                    <param id="0" name="Animation">LevelIdiomProgressTracker.getLevelName &amp; &quot;_&quot; &amp; TestDialogLevelRuntime.getQuestionSituation</param>
+                                    <param id="0" name="Animation">LevelIdiomProgressTracker.getLevelName &amp; &quot;_&quot; &amp; TestDialogLevelRuntime.getQuestionSectionPolyProp(&quot;name&quot;)</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>

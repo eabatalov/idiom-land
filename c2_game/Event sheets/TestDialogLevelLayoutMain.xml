@@ -6,7 +6,7 @@
         <include>TestDialogLevelCommon</include>
         <event-group description="" sid="823402825228904" title="Test dialog layout main">
             <sub-events>
-                <variable constant="1" name="DEBUG_LAYOUT" sid="7609409351396017" static="0" type="number">1</variable>
+                <variable constant="1" name="DEBUG_LAYOUT" sid="7609409351396017" static="0" type="number">0</variable>
                 <event-block sid="7594948566060325">
                     <conditions>
                         <condition id="0" name="On function" sid="7209007812321857" type="Function">
@@ -51,13 +51,20 @@
                                 <action id="200" name="Start level" sid="7871709681654558" type="QuestLevelRuntime">
                                     <param id="0" name="Level name">&quot;1demo&quot;</param>
                                 </action>
+                                <action id="0" name="Run test dialog" sid="7303015563181591" type="TestDialogLevelRuntime">
+                                    <param id="0" name="Dialog name">LevelIdiomProgressTracker.getLevelName</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8930557742040403">
-                            <conditions />
+                        <event-block sid="7949028624667018">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1466461091313662" type="System" />
+                            </conditions>
                             <actions>
                                 <action id="0" name="Run test dialog" sid="8885087498331405" type="TestDialogLevelRuntime">
                                     <param id="0" name="Dialog name">LevelIdiomProgressTracker.getLevelName</param>
+                                    <param id="1" name="Mode">0</param>
                                 </action>
                             </actions>
                         </event-block>

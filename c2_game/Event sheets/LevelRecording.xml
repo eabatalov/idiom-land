@@ -11,17 +11,24 @@
                 <event-block sid="5506964562092859">
                     <conditions>
                         <condition id="0" name="On function" sid="7282551356636508" type="Function">
-                            <param id="0" name="Name">&quot;LevelFinished&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="2306040793315326" type="System">
-                            <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="0" name="Name">&quot;onLevelFinished&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="2" name="Save replay" sid="4538762154531736" type="QuestLevelRecording" />
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5915928868026825">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2306040793315326" type="System">
+                                    <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Save replay" sid="4538762154531736" type="QuestLevelRecording" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="9657653793535486">
                     <conditions>
