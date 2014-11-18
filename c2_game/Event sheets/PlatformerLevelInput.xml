@@ -236,12 +236,7 @@
                                     <param id="0" name="Name">&quot;ProcInputEvent&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action disabled="1" id="14" name="Log" sid="8353999779040817" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">Function.Param(0)</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block sid="4000807565093725">
                                     <conditions>
@@ -271,6 +266,15 @@
                                             </actions>
                                         </event-block>
                                     </sub-events>
+                                </event-block>
+                                <event-block disabled="1" sid="261882945899131">
+                                    <conditions />
+                                    <actions>
+                                        <action id="14" name="Log" sid="8353999779040817" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">Function.Param(0) &amp; &quot; : &quot;  &amp; INPUT_STATE</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -836,6 +840,7 @@
                                     <sub-events>
                                         <event-block sid="8643459047021705">
                                             <conditions>
+                                                <condition id="-9" name="Is visible" sid="123840139868874" type="DialogAns1Bg" />
                                                 <condition id="-7" name="Compare instance variable" sid="5986664478543017" type="DialogAns1Bg">
                                                     <param id="0" name="Instance variable">IsEnabled</param>
                                                     <param id="1" name="Comparison">0</param>
@@ -862,6 +867,7 @@
                                         <event-block sid="6479926500845121">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="4318101038481918" type="System" />
+                                                <condition id="-9" name="Is visible" sid="5549725956441863" type="DialogAns2Bg" />
                                                 <condition id="-7" name="Compare instance variable" sid="7024879830066541" type="DialogAns2Bg">
                                                     <param id="0" name="Instance variable">IsEnabled</param>
                                                     <param id="1" name="Comparison">0</param>
@@ -888,6 +894,7 @@
                                         <event-block sid="959957178170244">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="6063791727695763" type="System" />
+                                                <condition id="-9" name="Is visible" sid="2688355569485604" type="DialogAns3Bg" />
                                                 <condition id="-7" name="Compare instance variable" sid="1135530950554876" type="DialogAns3Bg">
                                                     <param id="0" name="Instance variable">IsEnabled</param>
                                                     <param id="1" name="Comparison">0</param>
@@ -914,6 +921,7 @@
                                         <event-block sid="7694966533423802">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="460432422063451" type="System" />
+                                                <condition id="-9" name="Is visible" sid="1163791010885283" type="DialogAns4Bg" />
                                                 <condition id="-7" name="Compare instance variable" sid="7375820396984767" type="DialogAns4Bg">
                                                     <param id="0" name="Instance variable">IsEnabled</param>
                                                     <param id="1" name="Comparison">0</param>
