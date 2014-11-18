@@ -172,13 +172,22 @@
                                     <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS_BG_LEFT_MARGIN</param>
                                     <param id="1" name="Y">DialogAnsBg.Y + DIALOG_ANS_BG_TOP_MARGIN</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="7891724737693395" type="DialogAns1Bg">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="9100007970311506">
                             <conditions>
                                 <condition id="-22" name="Else" sid="8020382381665858" type="System" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="1566698615366169" type="DialogAns1Bg">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="8961221977889807">
                             <conditions>
@@ -193,6 +202,10 @@
                                     <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS_BG_LEFT_MARGIN</param>
                                     <param id="1" name="Y">DialogAns1Bg.Y + DialogAns1Bg.Height + DIALOG_ANS_BG_H_SPACING</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="1697954081643341" type="DialogAns2Bg">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="5201446443252018">
@@ -203,6 +216,10 @@
                                 <action id="-4" name="Set position to another object" sid="2817865621590642" type="DialogAns2Bg">
                                     <param id="0" name="Object">DialogAns1Bg</param>
                                     <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9542450648406161" type="DialogAns2Bg">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -219,6 +236,10 @@
                                     <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS_BG_LEFT_MARGIN</param>
                                     <param id="1" name="Y">DialogAns2Bg.Y + DialogAns2Bg.Height + DIALOG_ANS_BG_H_SPACING</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="5532303801299828" type="DialogAns3Bg">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="9558382879269219">
@@ -229,6 +250,10 @@
                                 <action id="-4" name="Set position to another object" sid="8257993739373187" type="DialogAns3Bg">
                                     <param id="0" name="Object">DialogAns2Bg</param>
                                     <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7846939033876167" type="DialogAns3Bg">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -245,6 +270,10 @@
                                     <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS_BG_LEFT_MARGIN</param>
                                     <param id="1" name="Y">DialogAns3Bg.Y + DialogAns3Bg.Height + DIALOG_ANS_BG_H_SPACING</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="1253952509436933" type="DialogAns4Bg">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="6420121189502341">
@@ -255,6 +284,10 @@
                                 <action id="-4" name="Set position to another object" sid="7826137305027343" type="DialogAns4Bg">
                                     <param id="0" name="Object">DialogAns3Bg</param>
                                     <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5566835023979749" type="DialogAns4Bg">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
