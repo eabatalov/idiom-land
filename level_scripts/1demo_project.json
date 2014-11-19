@@ -107,7 +107,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "Hi, I need to go downtown",
+							"text": "Hi, I need to go downtown.",
 							"phraseType": "SPEAK",
 							"phraseSize": "MEDIUM"
 						}
@@ -126,7 +126,7 @@
 						],
 						"props": {
 							"id": "driver2",
-							"text": "No problem.\nThat will be 20 coins, please",
+							"text": "No problem.\nThat will be 20 coins, please.",
 							"phraseType": "SPEAK",
 							"phraseSize": "MEDIUM"
 						}
@@ -246,7 +246,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "Oh. I think  that’s too expensive for me",
+							"text": "Oh. I think  that’s too expensive for me.",
 							"phraseType": "SPEAK",
 							"phraseSize": "MEDIUM"
 						}
@@ -390,7 +390,7 @@
 							6310
 						],
 						"props": {
-							"text": "\"New kid on the block\" is a newcomer, the newest person in a group"
+							"text": "\"New kid on the block\" is a newcomer, the newest person in a group."
 						}
 					},
 					{
@@ -427,7 +427,7 @@
 						],
 						"props": {
 							"id": "driver2",
-							"text": "If you give me 15 coins, I'll drive you to the city center and I'll tell you my favorite idiom about driving",
+							"text": "If you give me 15 coins, I'll drive you to the city center and I'll tell you my favorite idiom about driving.",
 							"phraseType": "SPEAK",
 							"phraseSize": "LARGE"
 						}
@@ -549,7 +549,7 @@
 						],
 						"props": {
 							"id": "driver2",
-							"text": "Thanks!\nMy favorite idiom is \"backseat driver\"",
+							"text": "Thanks!\nMy favorite idiom is \"backseat driver\".",
 							"phraseType": "SPEAK",
 							"phraseSize": "MEDIUM"
 						}
@@ -580,7 +580,7 @@
 						"label": "Good job",
 						"continue": false,
 						"inCondIds": [
-							6342
+							6864
 						],
 						"outCondIds": [
 							6321
@@ -692,11 +692,11 @@
 							6341
 						],
 						"outCondIds": [
-							6342
+							6863
 						],
 						"props": {
 							"id": "driver2",
-							"text": "Backseat driver is a passenger in a car who comments about the driver's actions during the ride. They annoy me.",
+							"text": "Backseat driver is a passenger in a car who comments about the driver's actions during the ride.",
 							"phraseType": "SPEAK",
 							"phraseSize": "LARGE"
 						}
@@ -795,7 +795,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "I'll give you 5 coins for a ride",
+							"text": "I'll give you 5 coins for a ride.",
 							"phraseType": "SPEAK",
 							"phraseSize": "MEDIUM"
 						}
@@ -852,9 +852,9 @@
 						],
 						"props": {
 							"id": "driver2",
-							"text": "Sorry young lady, I won’t accept anything less than 17 coins for a ride.",
+							"text": "Sorry young lady, I won’t accept anything less than 17 coins\nfor a ride.",
 							"phraseType": "SPEAK",
-							"phraseSize": "MEDIUM"
+							"phraseSize": "LARGE"
 						}
 					},
 					{
@@ -873,7 +873,7 @@
 							"id": "Player",
 							"text": "I don't have 17 coins...",
 							"phraseType": "SPEAK",
-							"phraseSize": "MEDIUM"
+							"phraseSize": "SMALL"
 						}
 					},
 					{
@@ -912,6 +912,25 @@
 							"rollbackName": null,
 							"source": "c2",
 							"params": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 4460,
+						"type": 1,
+						"label": "They annoy me",
+						"continue": false,
+						"inCondIds": [
+							6863
+						],
+						"outCondIds": [
+							6864
+						],
+						"props": {
+							"id": "driver2",
+							"text": "They annoy me.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
 						}
 					}
 				],
@@ -1236,14 +1255,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 6342,
-						"type": 11,
-						"props": {
-							"clearStage": true
-						}
-					},
-					{
-						"ver": 1,
 						"id": 6514,
 						"type": 5,
 						"props": {}
@@ -1347,6 +1358,22 @@
 						"id": 6696,
 						"type": 8,
 						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6863,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6864,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
 					}
 				]
 			},
@@ -1447,7 +1474,7 @@
 						],
 						"props": {
 							"id": "veider",
-							"text": "Hey!\nI'm pulling your leg.\nIt's just a costume",
+							"text": "Hey!\nI'm pulling your leg.\nIt's just a costume.",
 							"phraseType": "SPEAK",
 							"phraseSize": "MEDIUM"
 						}
@@ -1616,7 +1643,7 @@
 						],
 						"props": {
 							"id": "veider",
-							"text": "I'm saving money to build another\nDeath Star",
+							"text": "I'm saving money to build another\nDeath Star.",
 							"phraseType": "SPEAK",
 							"phraseSize": "MEDIUM"
 						}
@@ -2102,7 +2129,7 @@
 						],
 						"props": {
 							"id": "child",
-							"text": "Mommy told me you make it from cats sometimes",
+							"text": "Mommy told me you make it from cats sometimes.",
 							"phraseType": "SPEAK",
 							"phraseSize": "MEDIUM"
 						}
@@ -2231,7 +2258,7 @@
 						],
 						"props": {
 							"id": "seller",
-							"text": "Fresh kebab!\nIt’s made from the best lamb meat",
+							"text": "Fresh kebab!\nIt’s made from the best lamb meat.",
 							"phraseType": "SPEAK",
 							"phraseSize": "MEDIUM"
 						}
@@ -2414,7 +2441,7 @@
 							5976
 						],
 						"props": {
-							"text": "\"Put a sock in it\" is a request to be quiet"
+							"text": "\"Put a sock in it\" is a request to be quiet."
 						}
 					}
 				],
@@ -4463,7 +4490,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "No, thank you,",
+							"text": "No, thank you.",
 							"phraseType": "SPEAK",
 							"phraseSize": "SMALL"
 						}
@@ -5701,7 +5728,7 @@
 					{
 						"ver": 1,
 						"nodeId": 3970,
-						"x": 2117.5000215122295,
+						"x": 2115.000021512229,
 						"y": 2259.979428028929
 					},
 					{
@@ -5749,8 +5776,8 @@
 					{
 						"ver": 1,
 						"nodeId": 3981,
-						"x": 2280.0000215122295,
-						"y": 2034.9794280289302
+						"x": 2127.5000215122286,
+						"y": 1989.97942802893
 					},
 					{
 						"ver": 1,
@@ -5817,6 +5844,12 @@
 						"nodeId": 4304,
 						"x": 60.000021512230205,
 						"y": 224.979428028931
+					},
+					{
+						"ver": 1,
+						"nodeId": 4460,
+						"x": 2375.0000215122286,
+						"y": 1907.4794280289302
 					}
 				],
 				"nodeIds": [
@@ -5867,7 +5900,8 @@
 					4146,
 					4147,
 					4303,
-					4304
+					4304,
+					4460
 				],
 				"condViews": [
 					{
@@ -6299,7 +6333,7 @@
 								"y": 2664.9794280289298
 							},
 							"dst": {
-								"x": 2197.5000215122295,
+								"x": 2195.000021512229,
 								"y": 2339.979428028929
 							}
 						}
@@ -6477,26 +6511,12 @@
 						"condId": 6341,
 						"points": {
 							"src": {
-								"x": 2197.5000215122295,
+								"x": 2195.000021512229,
 								"y": 2339.979428028929
 							},
 							"dst": {
-								"x": 2360.0000215122295,
-								"y": 2114.97942802893
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 6342,
-						"points": {
-							"src": {
-								"x": 2360.0000215122295,
-								"y": 2114.97942802893
-							},
-							"dst": {
-								"x": 2635.00002151223,
-								"y": 2147.4794280289307
+								"x": 2207.5000215122286,
+								"y": 2069.9794280289298
 							}
 						}
 					},
@@ -6709,6 +6729,34 @@
 								"y": 412.479428028931
 							}
 						}
+					},
+					{
+						"ver": 1,
+						"condId": 6863,
+						"points": {
+							"src": {
+								"x": 2207.5000215122286,
+								"y": 2069.9794280289298
+							},
+							"dst": {
+								"x": 2455.0000215122286,
+								"y": 1987.4794280289302
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6864,
+						"points": {
+							"src": {
+								"x": 2455.0000215122286,
+								"y": 1987.4794280289302
+							},
+							"dst": {
+								"x": 2635.00002151223,
+								"y": 2147.4794280289307
+							}
+						}
 					}
 				],
 				"condIds": [
@@ -6756,7 +6804,6 @@
 					6339,
 					6340,
 					6341,
-					6342,
 					6514,
 					6515,
 					6516,
@@ -6771,12 +6818,14 @@
 					6693,
 					6694,
 					6695,
-					6696
+					6696,
+					6863,
+					6864
 				],
 				"scale": 0.40000000000000013,
 				"pos": {
-					"x": 196.9999913951079,
-					"y": -187.99177121157234
+					"x": -55.00000860489209,
+					"y": -247.99177121157234
 				}
 			},
 			{

@@ -106,7 +106,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "Hi, I need to go to the downtown",
+						"text": "Hi, I need to go downtown.",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -125,7 +125,7 @@
 					],
 					"props": {
 						"id": "driver2",
-						"text": "No problem.\nThat will be 20 coins, please",
+						"text": "No problem.\nThat will be 20 coins, please.",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -245,7 +245,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "Oh. I think  that’s too expensive for me",
+						"text": "Oh. I think  that’s too expensive for me.",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -264,7 +264,7 @@
 					],
 					"props": {
 						"id": "driver2",
-						"text": "You're a new kid on the block, right?\nIt's the lowest price around",
+						"text": "You're the new kid on the block, right?\nIt's the lowest price around.",
 						"phraseType": "SPEAK",
 						"phraseSize": "LARGE"
 					}
@@ -389,7 +389,7 @@
 						6310
 					],
 					"props": {
-						"text": "\"New kid on the block\" is a newcomer, the newest person in a group"
+						"text": "\"New kid on the block\" is a newcomer, the newest person in a group."
 					}
 				},
 				{
@@ -426,7 +426,7 @@
 					],
 					"props": {
 						"id": "driver2",
-						"text": "If you give me 15 coins, I'll drive you to the city center and I'll tell you my favorite idiom about driving",
+						"text": "If you give me 15 coins, I'll drive you to the city center and I'll tell you my favorite idiom about driving.",
 						"phraseType": "SPEAK",
 						"phraseSize": "LARGE"
 					}
@@ -465,7 +465,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "I don't have 15 coins for now",
+						"text": "I don't have 15 coins now",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -485,7 +485,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "Take the taxi?",
+						"text": "Will I take the taxi?",
 						"phraseType": "THINK",
 						"phraseSize": "SMALL",
 						"ans1": "Yes",
@@ -548,7 +548,7 @@
 					],
 					"props": {
 						"id": "driver2",
-						"text": "Thanks!\nMy favorite idiom is \"backseat driver\"",
+						"text": "Thanks!\nMy favorite idiom is \"backseat driver\".",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -579,13 +579,13 @@
 					"label": "Good job",
 					"continue": false,
 					"inCondIds": [
-						6342
+						6864
 					],
 					"outCondIds": [
 						6321
 					],
 					"props": {
-						"text": "Good job, Foxy!\nYou've just completed the quest and found hidden \"backseat driver\" idiom."
+						"text": "Good job, Foxy!\nYou've just completed the quest and found a hidden \"backseat driver\" idiom."
 					}
 				},
 				{
@@ -691,11 +691,11 @@
 						6341
 					],
 					"outCondIds": [
-						6342
+						6863
 					],
 					"props": {
 						"id": "driver2",
-						"text": "Backseat driver is a passenger in a car who comments driver's actions during the ride. They annoy me.",
+						"text": "Backseat driver is a passenger in a car who comments about the driver's actions during the ride.",
 						"phraseType": "SPEAK",
 						"phraseSize": "LARGE"
 					}
@@ -794,7 +794,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "I'll give you 5 coins for a ride",
+						"text": "I'll give you 5 coins for a ride.",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -851,9 +851,9 @@
 					],
 					"props": {
 						"id": "driver2",
-						"text": "Sorry young lady,  not less then 17 coins for a ride.",
+						"text": "Sorry young lady, I won’t accept anything less than 17 coins\nfor a ride.",
 						"phraseType": "SPEAK",
-						"phraseSize": "MEDIUM"
+						"phraseSize": "LARGE"
 					}
 				},
 				{
@@ -870,9 +870,9 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "I don't have 17 coins still...",
+						"text": "I don't have 17 coins...",
 						"phraseType": "SPEAK",
-						"phraseSize": "MEDIUM"
+						"phraseSize": "SMALL"
 					}
 				},
 				{
@@ -911,6 +911,25 @@
 						"rollbackName": null,
 						"source": "c2",
 						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4460,
+					"type": 1,
+					"label": "They annoy me",
+					"continue": false,
+					"inCondIds": [
+						6863
+					],
+					"outCondIds": [
+						6864
+					],
+					"props": {
+						"id": "driver2",
+						"text": "They annoy me.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
 					}
 				}
 			],
@@ -1235,14 +1254,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 6342,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 6514,
 					"type": 5,
 					"props": {}
@@ -1346,6 +1357,22 @@
 					"id": 6696,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6863,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6864,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
 				}
 			]
 		},
@@ -1446,7 +1473,7 @@
 					],
 					"props": {
 						"id": "veider",
-						"text": "Hey!\nI'm pulling your leg.\nIt's just a costume",
+						"text": "Hey!\nI'm pulling your leg.\nIt's just a costume.",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -1615,7 +1642,7 @@
 					],
 					"props": {
 						"id": "veider",
-						"text": "I'm saving money to build another\nDeath Star",
+						"text": "I'm saving money to build another\nDeath Star.",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -1808,7 +1835,7 @@
 						5973
 					],
 					"props": {
-						"text": "\"To pull someone's leg\" means to joke with it!"
+						"text": "\"To pull someone's leg\" means to joke with someone!"
 					}
 				}
 			],
@@ -2101,7 +2128,7 @@
 					],
 					"props": {
 						"id": "child",
-						"text": "Mommy told me you made it from cats sometimes",
+						"text": "Mommy told me you make it from cats sometimes.",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -2145,7 +2172,7 @@
 						"ans1": "Put a sock in the kebab!",
 						"ans2": "Wear a sock!",
 						"ans3": "It’s true!",
-						"ans4": "Shut up!",
+						"ans4": "Be quite!",
 						"phraseSize": "SMALL"
 					}
 				},
@@ -2230,7 +2257,7 @@
 					],
 					"props": {
 						"id": "seller",
-						"text": "Fresh kebab!\nIt’s made from the best lamb meat",
+						"text": "Fresh kebab!\nIt’s made from the best lamb meat.",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -2413,7 +2440,7 @@
 						5976
 					],
 					"props": {
-						"text": "\"Put a sock in it\" means a request to be quiet"
+						"text": "\"Put a sock in it\" is a request to be quiet."
 					}
 				}
 			],
@@ -2649,7 +2676,7 @@
 						6130
 					],
 					"props": {
-						"text": "Foxy is a journalist. She’s arrived in London to collect English idioms and slang words"
+						"text": "Foxy is a journalist. She’s arrived in London to collect English idioms."
 					}
 				},
 				{
@@ -2665,7 +2692,7 @@
 						5139
 					],
 					"props": {
-						"text": "Talk to London people and when they use an idiom or a slang word, try to guess the right meaning of it!"
+						"text": "Talk to London people and when they use an idiom, try to guess the right meaning of it!"
 					}
 				},
 				{
@@ -3370,7 +3397,7 @@
 						6131
 					],
 					"props": {
-						"text": "Foxy is a journalist. She’s arrived in London to collect English idioms and slang words. Now press the right arrow to continue."
+						"text": "Foxy is a journalist. She’s arrived in London to collect English idioms. Now press the right arrow to continue."
 					}
 				},
 				{
@@ -3793,7 +3820,7 @@
 					],
 					"props": {
 						"id": "cap",
-						"text": "..and it can take your breath away!",
+						"text": "... and it can take your breath away!",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -4400,7 +4427,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "Hello!\nIs this bus goes to the city center?",
+						"text": "Hello!\nDoes this bus go to the city center?",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
@@ -4462,7 +4489,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "No, thank you,",
+						"text": "No, thank you.",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -4842,7 +4869,7 @@
 							{
 								"type": "str",
 								"name": "hint",
-								"value": "Ask for a taxi to the city center",
+								"value": "Try to speak with the taxi driver",
 								"$$hashKey": "029"
 							}
 						]
@@ -4880,7 +4907,7 @@
 							{
 								"type": "str",
 								"name": "meaning",
-								"value": "To joke with it",
+								"value": "To joke with someone",
 								"$$hashKey": "026"
 							},
 							{
@@ -4918,13 +4945,13 @@
 							{
 								"type": "str",
 								"name": "title",
-								"value": "Take someone's breath away",
+								"value": "Take your breath away",
 								"$$hashKey": "02A"
 							},
 							{
 								"type": "str",
 								"name": "meaning",
-								"value": "To extremely surprise and amaze someone",
+								"value": "To extremely surprise and amaze you",
 								"$$hashKey": "02C"
 							},
 							{
@@ -4968,13 +4995,13 @@
 							{
 								"type": "str",
 								"name": "meaning",
-								"value": "Request to be quiet",
+								"value": "A request to be quiet",
 								"$$hashKey": "02I"
 							},
 							{
 								"type": "str",
 								"name": "hint",
-								"value": "Try to buy a kebab",
+								"value": "Try to speak with the kebab seller",
 								"$$hashKey": "024"
 							}
 						]
@@ -5092,7 +5119,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "But look...\nHere are the brand new glasses!",
+						"text": "But look...\nHere are brand new glasses!",
 						"phraseType": "SPEAK",
 						"phraseSize": "MEDIUM"
 					}
