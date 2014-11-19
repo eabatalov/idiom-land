@@ -82,7 +82,7 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8577882762291108" speed="5">
-                                <frame duration="1" hotspotX="0.501014" hotspotY="0.5">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\show-idioms.png">
                                     <collision-poly>
                                         <point x="0.0263692" y="0.147727" />
                                         <point x="0.498986" y="0" />
@@ -123,7 +123,7 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5063521196171061" speed="5">
-                                <frame duration="1" hotspotX="0.502618" hotspotY="0.502732">
+                                <frame duration="1" hotspotX="0.502664" hotspotY="0.501779" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\result-tile.png">
                                     <collision-poly>
                                         <point x="0.120419" y="0.125683" />
                                         <point x="0.497382" y="0.0273224" />
@@ -138,11 +138,11 @@
                             </animation>
                         </animation-folder>
                     </object-type>
-                    <object-type name="LevelResultsSecretsFoundBg" sid="4730141979413307">
+                    <object-type name="LevelResultsStars" sid="4730141979413307">
                         <plugin id="Sprite" />
                         <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9375760314624475" speed="5">
-                                <frame duration="1" hotspotX="0.502618" hotspotY="0.502732">
+                            <animation framecount="1" loop="0" name="Perfect" pingpong="0" repeatcount="1" repeatto="0" sid="9375760314624475" speed="5">
+                                <frame duration="1" hotspotX="0.502381" hotspotY="0.505263" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\stars1.png">
                                     <collision-poly>
                                         <point x="0.240838" y="0.251366" />
                                         <point x="0.497382" y="0.136612" />
@@ -155,7 +155,52 @@
                                     </collision-poly>
                                 </frame>
                             </animation>
+                            <animation framecount="1" loop="0" name="VeryGood" pingpong="0" repeatcount="1" repeatto="0" sid="4371243757916267" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\stars2.png">
+                                    <collision-poly>
+                                        <point x="0.109524" y="0.242105" />
+                                        <point x="0.5" y="0.0210526" />
+                                        <point x="0.890476" y="0.242105" />
+                                        <point x="0.988095" y="0.5" />
+                                        <point x="0.897619" y="0.773684" />
+                                        <point x="0.5" y="0.984211" />
+                                        <point x="0.102381" y="0.773684" />
+                                        <point x="0.00952381" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="Good" pingpong="0" repeatcount="1" repeatto="0" sid="9449754473685224" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\stars3.png">
+                                    <collision-poly>
+                                        <point x="0.111905" y="0.247368" />
+                                        <point x="0.5" y="0.0210526" />
+                                        <point x="0.890476" y="0.242105" />
+                                        <point x="0.990476" y="0.5" />
+                                        <point x="0.897619" y="0.773684" />
+                                        <point x="0.5" y="0.936842" />
+                                        <point x="0.102381" y="0.773684" />
+                                        <point x="0.00714286" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="Fail" pingpong="0" repeatcount="1" repeatto="0" sid="7318544824155418" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\stars4.png">
+                                    <collision-poly>
+                                        <point x="0.109524" y="0.242105" />
+                                        <point x="0.5" y="0.0157895" />
+                                        <point x="0.890476" y="0.242105" />
+                                        <point x="0.990476" y="0.5" />
+                                        <point x="0.897619" y="0.773684" />
+                                        <point x="0.5" y="0.936842" />
+                                        <point x="0.102381" y="0.773684" />
+                                        <point x="0.00714286" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
                         </animation-folder>
+                    </object-type>
+                    <object-type name="LevelResultsCoinsFoundText" sid="8002558030475972">
+                        <plugin id="Text" />
                     </object-type>
                 </object-folder>
                 <object-folder name="Detailed">
@@ -340,9 +385,14 @@
             <object-folder name="MainMenu">
                 <object-type name="MainMenuIdiomLandLogo" sid="9581819859871193">
                     <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="5145792682268273">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5045722772803119" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.501475">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\start-screen-logo.png">
                                 <collision-poly>
                                     <point x="0.182653" y="0.528024" />
                                     <point x="0.5" y="0.451327" />
@@ -643,7 +693,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3036000267293591" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\new\touch.png">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\button1.png">
                                 <collision-poly>
                                     <point x="0.0285714" y="0.0209059" />
                                     <point x="0.5" y="0" />
@@ -662,7 +712,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8558082035380682" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\new\keyboard.png">
+                            <frame duration="1" hotspotX="1" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\button2.png">
                                 <collision-poly>
                                     <point x="0.0285714" y="0.0209059" />
                                     <point x="0.5" y="0" />
@@ -681,7 +731,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3448780165017424" speed="5">
-                            <frame duration="1" hotspotX="0.501044" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\new\title.png">
+                            <frame duration="1" hotspotX="0.501044" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\title.png">
                                 <collision-poly>
                                     <point x="0.0375783" y="0.409091" />
                                     <point x="0.498956" y="0.25" />
@@ -739,7 +789,7 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7475867165205389" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\retry.png">
                                     <collision-poly>
                                         <point x="0.147727" y="0.147727" />
                                         <point x="0.5" y="0" />
@@ -758,7 +808,7 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2918720804750634" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\next-button.png">
                                     <collision-poly>
                                         <point x="0.147727" y="0.147727" />
                                         <point x="0.5" y="0" />
@@ -771,6 +821,30 @@
                                     </collision-poly>
                                 </frame>
                             </animation>
+                            <animation framecount="1" loop="0" name="New" pingpong="0" repeatcount="1" repeatto="0" sid="163460420327213" speed="5">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\next-button-new.png">
+                                    <collision-poly>
+                                        <point x="0.003125" y="0.00632911" />
+                                        <point x="0.996875" y="0.00632911" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.978125" y="0.955696" />
+                                        <point x="0.5" y="0.981013" />
+                                        <point x="0.015625" y="0.968354" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="Disable" pingpong="0" repeatcount="1" repeatto="0" sid="410460825789662" speed="5">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\next-button-passive.png">
+                                    <collision-poly>
+                                        <point x="0.003125" y="0.00632911" />
+                                        <point x="0.996875" y="0.00632911" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.978125" y="0.955696" />
+                                        <point x="0.5" y="0.981013" />
+                                        <point x="0.015625" y="0.968354" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
                         </animation-folder>
                     </object-type>
                 </object-folder>
@@ -778,7 +852,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="575029500892355" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\start-screen-bg.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -814,6 +888,37 @@
                                     <point x="0.00982318" y="0.5" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MainMenuFade" sid="8099469323447232">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="8719906209516597">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8384547434133972" speed="5">
+                            <frame duration="1" hotspotX="0.500709" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\start-screen-fade.png">
+                                <collision-poly>
+                                    <point x="0.465248" y="0.656" />
+                                    <point x="0.499291" y="0" />
+                                    <point x="0.67234" y="0.462" />
+                                    <point x="0.714894" y="0.5" />
+                                    <point x="0.693617" y="0.568" />
+                                    <point x="0.499291" y="0.764" />
+                                    <point x="0.619858" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SecondMenuBg" sid="671350344182262">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4165716557120304" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\second-screen-bg.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -3901,7 +4006,7 @@
                                             </frame>
                                         </animation>
                                         <animation framecount="1" loop="0" name="ThinkLarge" pingpong="0" repeatcount="1" repeatto="0" sid="5903252620591473" speed="5">
-                                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\bubble\think-large.png">
+                                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\big.png">
                                                 <image-point name="Cock" x="0.191429" y="0.990625" />
                                                 <collision-poly>
                                                     <point x="0.075" y="0.0774194" />
@@ -3944,7 +4049,7 @@
                                             </frame>
                                         </animation>
                                         <animation framecount="1" loop="0" name="ThinkMedium" pingpong="0" repeatcount="1" repeatto="0" sid="1023183153443301" speed="5">
-                                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\bubble\think-medium.png">
+                                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\mrdium.png">
                                                 <image-point name="Cock" x="0.191429" y="0.992" />
                                                 <collision-poly>
                                                     <point x="0.075" y="0.0774194" />
@@ -3959,7 +4064,7 @@
                                             </frame>
                                         </animation>
                                         <animation framecount="1" loop="0" name="ThinkSmall" pingpong="0" repeatcount="1" repeatto="0" sid="1842734800220872" speed="5">
-                                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\bubble\think-small.png">
+                                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\small.png">
                                                 <image-point name="Cock" x="0.191429" y="0.988889" />
                                                 <collision-poly>
                                                     <point x="0.075" y="0.0774194" />
@@ -4322,7 +4427,7 @@
                                     </behaviors>
                                     <animation-folder>
                                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2426169192141205" speed="5">
-                                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                            <frame duration="1" hotspotX="1" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\home.png">
                                                 <collision-poly>
                                                     <point x="0.147727" y="0.147727" />
                                                     <point x="0.5" y="0" />
