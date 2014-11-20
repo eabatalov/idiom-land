@@ -14,15 +14,15 @@
 					"continue": false,
 					"inCondIds": [],
 					"outCondIds": [
-						0
+						0,
+						7031
 					],
 					"props": {
 						"name": "airport_taxi",
 						"objs": [
 							"Player",
-							"driver1",
 							"driver2",
-							"driver3"
+							"aguy"
 						],
 						"objPool": []
 					}
@@ -38,17 +38,13 @@
 					],
 					"outCondIds": [
 						1440,
-						1459,
-						1460,
 						1719,
 						5470
 					],
 					"props": {
 						"objs": [
 							"Player",
-							"driver1",
-							"driver2",
-							"driver3"
+							"driver2"
 						]
 					}
 				},
@@ -156,35 +152,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 952,
-					"type": -1,
-					"label": "driver1 clicked",
-					"continue": true,
-					"inCondIds": [
-						1459,
-						1461
-					],
-					"outCondIds": [
-						1738
-					],
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 953,
-					"type": -1,
-					"label": "driver3 clicked",
-					"continue": true,
-					"inCondIds": [
-						1460
-					],
-					"outCondIds": [
-						1461
-					],
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 1124,
 					"type": 12,
 					"label": "Controls disable",
@@ -223,7 +190,6 @@
 					"label": "driver2 clicked",
 					"continue": true,
 					"inCondIds": [
-						1738,
 						5470
 					],
 					"outCondIds": [
@@ -931,6 +897,58 @@
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
+				},
+				{
+					"ver": 1,
+					"id": 4616,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7031,
+						7032
+					],
+					"outCondIds": [
+						7034
+					],
+					"props": {
+						"objs": [
+							"aguy"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4617,
+					"type": 1,
+					"label": "Waiting for bus",
+					"continue": false,
+					"inCondIds": [
+						7034
+					],
+					"outCondIds": [
+						7033
+					],
+					"props": {
+						"id": "aguy",
+						"text": "Waiting for the bus...",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4618,
+					"type": -1,
+					"label": "Connection",
+					"continue": false,
+					"inCondIds": [
+						7033
+					],
+					"outCondIds": [
+						7032
+					],
+					"props": {}
 				}
 			],
 			"conds": [
@@ -958,28 +976,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 1459,
-					"type": 2,
-					"props": {
-						"id": "driver1"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 1460,
-					"type": 2,
-					"props": {
-						"id": "driver3"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 1461,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 1718,
 					"type": 8,
 					"props": {}
@@ -991,12 +987,6 @@
 					"props": {
 						"name": "auto_talk_start_driver2"
 					}
-				},
-				{
-					"ver": 1,
-					"id": 1738,
-					"type": 8,
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -1372,6 +1362,32 @@
 					"type": 11,
 					"props": {
 						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7031,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7032,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7033,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7034,
+					"type": 2,
+					"props": {
+						"id": "aguy"
 					}
 				}
 			]
@@ -2172,7 +2188,7 @@
 						"ans1": "Put a sock in the kebab!",
 						"ans2": "Wear a sock!",
 						"ans3": "It’s true!",
-						"ans4": "Be quite!",
+						"ans4": "Be quiet!",
 						"phraseSize": "SMALL"
 					}
 				},
