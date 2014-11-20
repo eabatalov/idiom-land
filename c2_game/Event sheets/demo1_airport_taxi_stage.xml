@@ -21,11 +21,25 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <variable constant="0" name="CoinsCollected" sid="3220579881315255" static="0" type="number">0</variable>
+                        <event-block sid="4931226130161265">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="9954694574443297" type="Function">
+                                    <param id="0" name="Name">&quot;GetLevelCollectedCoinsCount&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1764068817820476" type="System">
+                                    <param id="0" name="Variable">CoinsCollected</param>
+                                    <param id="1" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>Call non blocking because this function is called from quest script and all actions are blocked already</comment>
                         <event-block sid="9272142818716139">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="9538419679326632" type="System">
-                                    <param id="0" name="First value">COINS_COLLECTED</param>
+                                    <param id="0" name="First value">CoinsCollected</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Second value">15</param>
                                 </condition>

@@ -3,9 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>LevelResultsBriefMain</name>
     <events>
-        <include>PlatformerLevelSecretsProgress</include>
+        <include>MenuCommon</include>
         <include>LevelResultsCommon</include>
         <include>LevelRecording</include>
+        <include>PlatformerLevelSecretsProgress</include>
+        <include>PlatformerLevelCoinsProgress</include>
         <event-group description="" sid="8501800471470332" title="Level results brief group">
             <sub-events>
                 <variable constant="1" name="SUCCESS_COLOR_R" sid="8384096303547795" static="0" type="number">71</variable>
@@ -14,14 +16,16 @@
                 <variable constant="1" name="FAIL_COLOR_R" sid="5500309230561139" static="0" type="number">240</variable>
                 <variable constant="1" name="FAIL_COLOR_G" sid="7408969497604845" static="0" type="number">51</variable>
                 <variable constant="1" name="FAIL_COLOR_B" sid="9454082368479114" static="0" type="number">29</variable>
-                <variable constant="0" name="LevelSecretsCount" sid="9880319576464606" static="0" type="number">0</variable>
-                <variable constant="0" name="FoundLevelSecretsCount" sid="9718755377816614" static="0" type="number">0</variable>
                 <event-block sid="6071663212213">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="7380802923572911" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
+                        <variable constant="0" name="LevelSecretsCount" sid="9880319576464606" static="0" type="number">0</variable>
+                        <variable constant="0" name="FoundLevelSecretsCount" sid="9718755377816614" static="0" type="number">0</variable>
+                        <variable constant="0" name="CollectedCoinsCount" sid="9179536492371078" static="0" type="number">0</variable>
+                        <variable constant="0" name="OverallCoinsCount" sid="8352841826334338" static="0" type="number">0</variable>
                         <event-block sid="5142126931258771">
                             <conditions />
                             <actions>
@@ -52,6 +56,25 @@
                                 </action>
                                 <action id="0" name="Set text" sid="4250065361709224" type="LevelResultsSecretsFoundText">
                                     <param id="0" name="Text">FoundLevelSecretsCount &amp; &quot;/&quot; &amp; LevelSecretsCount</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7167645460694046" type="Function">
+                                    <param id="0" name="Name">&quot;GetLevelCollectedCoinsCount&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7177639679873122" type="System">
+                                    <param id="0" name="Variable">CollectedCoinsCount</param>
+                                    <param id="1" name="Value">Function.ReturnValue</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5609947841959617" type="Function">
+                                    <param id="0" name="Name">&quot;GetLevelOverallCoinsCount&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3236920144632542" type="System">
+                                    <param id="0" name="Variable">OverallCoinsCount</param>
+                                    <param id="1" name="Value">Function.ReturnValue</param>
+                                </action>
+                                <action id="0" name="Set text" sid="5037981188652737" type="LevelResultsCoinsFoundText">
+                                    <param id="0" name="Text">CollectedCoinsCount &amp; &quot;/&quot; &amp; OverallCoinsCount</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -102,6 +125,100 @@
                                     <param id="0" name="Color">rgb(FAIL_COLOR_R, FAIL_COLOR_G, FAIL_COLOR_B)</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <comment>Current neutral grey is ok for coins</comment>
+                        <event-block disabled="1" sid="2426989897488591">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="1757222701849028" type="System">
+                                    <param id="0" name="First value">CollectedCoinsCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">OverallCoinsCount</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="8281495228386914" type="LevelResultsCoinsFoundText">
+                                    <param id="0" name="Color">rgb(SUCCESS_COLOR_R, SUCCESS_COLOR_G, SUCCESS_COLOR_B)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="9024201998619281">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="865251400570835" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="487442869315424" type="LevelResultsCoinsFoundText">
+                                    <param id="0" name="Color">rgb(FAIL_COLOR_R, FAIL_COLOR_G, FAIL_COLOR_B)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7183535531726794">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2584539948342046">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="1385691497615874" type="System">
+                                            <param id="0" name="First value">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">LevelIdiomProgressTracker.getLevelIdiomsCount  * 4 / 4</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="2737286555476256" type="System">
+                                            <param id="0" name="First value">FoundLevelSecretsCount</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">LevelSecretsCount</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="6977032322954247" type="LevelResultsStars">
+                                            <param id="0" name="Animation">&quot;Perfect&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4797247765835928">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7562797735163774" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="3540276195062742" type="System">
+                                            <param id="0" name="First value">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">LevelIdiomProgressTracker.getLevelIdiomsCount  * 3 / 4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="4640743685248135" type="LevelResultsStars">
+                                            <param id="0" name="Animation">&quot;VeryGood&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="890596134490252">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1887743992201658" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="3771920697803739" type="System">
+                                            <param id="0" name="First value">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">LevelIdiomProgressTracker.getLevelIdiomsCount  * 4 / 10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8561917473999286" type="LevelResultsStars">
+                                            <param id="0" name="Animation">&quot;Good&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7898662874921184">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6181975964153841" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9432217041324909" type="LevelResultsStars">
+                                            <param id="0" name="Animation">&quot;Fail&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -173,6 +290,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <include>MenuCommon</include>
     </events>
 </c2eventsheet>

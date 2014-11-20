@@ -4426,20 +4426,6 @@
                                         </behavior-type>
                                     </behaviors>
                                     <animation-folder>
-                                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2426169192141205" speed="5">
-                                            <frame duration="1" hotspotX="1" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\home.png">
-                                                <collision-poly>
-                                                    <point x="0.147727" y="0.147727" />
-                                                    <point x="0.5" y="0" />
-                                                    <point x="0.852273" y="0.147727" />
-                                                    <point x="1" y="0.5" />
-                                                    <point x="0.852273" y="0.852273" />
-                                                    <point x="0.5" y="1" />
-                                                    <point x="0.147727" y="0.852273" />
-                                                    <point x="0" y="0.5" />
-                                                </collision-poly>
-                                            </frame>
-                                        </animation>
                                         <animation framecount="1" loop="0" name="Level" pingpong="0" repeatcount="1" repeatto="0" sid="8694425997035304" speed="5">
                                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                                 <collision-poly>
@@ -4450,6 +4436,20 @@
                                                     <point x="0.857143" y="0.857143" />
                                                     <point x="0.5" y="1" />
                                                     <point x="0.142857" y="0.857143" />
+                                                    <point x="0" y="0.5" />
+                                                </collision-poly>
+                                            </frame>
+                                        </animation>
+                                        <animation framecount="1" loop="0" name="Menu" pingpong="0" repeatcount="1" repeatto="0" sid="2426169192141205" speed="5">
+                                            <frame duration="1" hotspotX="1" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\home.png">
+                                                <collision-poly>
+                                                    <point x="0.147727" y="0.147727" />
+                                                    <point x="0.5" y="0" />
+                                                    <point x="0.852273" y="0.147727" />
+                                                    <point x="1" y="0.5" />
+                                                    <point x="0.852273" y="0.852273" />
+                                                    <point x="0.5" y="1" />
+                                                    <point x="0.147727" y="0.852273" />
                                                     <point x="0" y="0.5" />
                                                 </collision-poly>
                                             </frame>
@@ -5246,7 +5246,7 @@
                             <object-type name="CoinsCounterTxt" sid="7143920015409264">
                                 <plugin id="Text" />
                                 <instance-variables>
-                                    <instance-variable name="DontAutoShow" sid="519622648829588" type="number" />
+                                    <instance-variable name="AutoShow" sid="519622648829588" type="number" />
                                 </instance-variables>
                             </object-type>
                         </object-folder>
@@ -5273,7 +5273,7 @@
                             <object-type name="IdiomCounterTxt" sid="5244611748275736">
                                 <plugin id="Text" />
                                 <instance-variables>
-                                    <instance-variable name="DontAutoShow" sid="2031901322407462" type="number" />
+                                    <instance-variable name="AutoShow" sid="2031901322407462" type="number" />
                                 </instance-variables>
                             </object-type>
                         </object-folder>

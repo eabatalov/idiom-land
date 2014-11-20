@@ -7,10 +7,10 @@
         <event-group description="" sid="9203833697821463" title="Idiom Counter">
             <sub-events>
                 <variable constant="0" name="GuessedIdiomsCount" sid="5659419132445212" static="1" type="number">0</variable>
-                <event-block sid="2197912717260677">
+                <event-block sid="6444847767648665">
                     <conditions>
-                        <condition id="0" name="On function" sid="4173280160141289" type="Function">
-                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        <condition id="0" name="On function" sid="1137678234623631" type="Function">
+                            <param id="0" name="Name">&quot;InitIdiomsCounter&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -18,29 +18,28 @@
                             <param id="0" name="Variable">GuessedIdiomsCount</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6444847767648665">
-                    <conditions>
-                        <condition id="0" name="On function" sid="1137678234623631" type="Function">
-                            <param id="0" name="Name">&quot;onLevelStarted&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="9886288227668308" type="IdiomCounterTxt">
-                            <param id="0" name="Instance variable">DontAutoShow</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
                         <action id="0" name="Call function" sid="6884939111987794" type="Function">
                             <param id="0" name="Name">&quot;UpdateIdiomsCounter&quot;</param>
                             <param id="1" name="Parameter {n}">GuessedIdiomsCount{###}LevelIdiomProgressTracker.getLevelIdiomsCount</param>
                         </action>
-                        <action id="0" name="Call function" sid="5376953944407645" type="Function">
-                            <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="1821288639442812">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9886288227668308" type="IdiomCounterTxt">
+                                    <param id="0" name="Instance variable">AutoShow</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5376953944407645" type="Function">
+                                    <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-group description="" sid="124552956827044" title="Idiom counter value change transitions">
                     <sub-events>
