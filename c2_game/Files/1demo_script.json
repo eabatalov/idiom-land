@@ -2854,7 +2854,7 @@
 						1678
 					],
 					"outCondIds": [
-						2925
+						7201
 					],
 					"props": {
 						"enabled": false
@@ -2956,7 +2956,7 @@
 					"label": "Show next helper",
 					"continue": true,
 					"inCondIds": [
-						2925
+						7202
 					],
 					"outCondIds": [
 						5915
@@ -3432,6 +3432,22 @@
 					"props": {
 						"text": "\"Piece of cake\" means something very easy!"
 					}
+				},
+				{
+					"ver": 1,
+					"id": 4774,
+					"type": 6,
+					"label": "Wait player to see stage",
+					"continue": true,
+					"inCondIds": [
+						7201
+					],
+					"outCondIds": [
+						7202
+					],
+					"props": {
+						"secs": 2
+					}
 				}
 			],
 			"conds": [
@@ -3470,12 +3486,6 @@
 					"props": {
 						"id": "policeman"
 					}
-				},
-				{
-					"ver": 1,
-					"id": 2925,
-					"type": 8,
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -3736,6 +3746,18 @@
 					"props": {
 						"id": "policeman"
 					}
+				},
+				{
+					"ver": 1,
+					"id": 7201,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7202,
+					"type": 8,
+					"props": {}
 				}
 			]
 		},
