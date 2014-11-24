@@ -82,7 +82,7 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8577882762291108" speed="5">
-                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\show-idioms.png">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\show-idioms.png">
                                     <collision-poly>
                                         <point x="0.0263692" y="0.147727" />
                                         <point x="0.498986" y="0" />
@@ -822,7 +822,7 @@
                                 </frame>
                             </animation>
                             <animation framecount="1" loop="0" name="New" pingpong="0" repeatcount="1" repeatto="0" sid="163460420327213" speed="5">
-                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\next-button-new.png">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\we.png">
                                     <collision-poly>
                                         <point x="0.003125" y="0.00632911" />
                                         <point x="0.996875" y="0.00632911" />
@@ -835,6 +835,18 @@
                             </animation>
                             <animation framecount="1" loop="0" name="Disable" pingpong="0" repeatcount="1" repeatto="0" sid="410460825789662" speed="5">
                                 <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\next-button-passive.png">
+                                    <collision-poly>
+                                        <point x="0.003125" y="0.00632911" />
+                                        <point x="0.996875" y="0.00632911" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.978125" y="0.955696" />
+                                        <point x="0.5" y="0.981013" />
+                                        <point x="0.015625" y="0.968354" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="NextLevel" pingpong="0" repeatcount="1" repeatto="0" sid="8244179168967266" speed="5">
+                                <frame duration="1" hotspotX="0" hotspotY="0">
                                     <collision-poly>
                                         <point x="0.003125" y="0.00632911" />
                                         <point x="0.996875" y="0.00632911" />
@@ -7817,86 +7829,11 @@
                             </object-type>
                         </object-folder>
                         <object-folder name="AirGate">
-                            <object-type name="AirGateCanterDown" sid="5728762885267485">
-                                <plugin id="Sprite" />
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6783476416597701" speed="5">
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\london\tilemaps\aeroport\avia-trap-1.png" />
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="AirGateDiagonalCenter" sid="93674676046944">
-                                <plugin id="Sprite" />
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5718392204007874" speed="5">
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\london\tilemaps\aeroport\avia-trap-4.png">
-                                            <collision-poly>
-                                                <point x="0" y="0" />
-                                                <point x="1" y="0" />
-                                                <point x="1" y="1" />
-                                                <point x="0.5" y="0.514286" />
-                                                <point x="0.5" y="0.5" />
-                                                <point x="0.5" y="0.5" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="AirGateDiagonalDown" sid="2747999924104373">
-                                <plugin id="Sprite" />
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1102528289012979" speed="5">
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\london\tilemaps\aeroport\avia-trap-3.png">
-                                            <collision-poly>
-                                                <point x="0" y="0" />
-                                                <point x="0.5" y="0.5" />
-                                                <point x="0.514286" y="0.5" />
-                                                <point x="1" y="1" />
-                                                <point x="0" y="1" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="AirGateDiagonalUp" sid="8783369887762092">
-                                <plugin id="Sprite" />
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8204882194645872" speed="5">
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\london\tilemaps\aeroport\avia-trap-3.png">
-                                            <collision-poly>
-                                                <point x="0" y="0" />
-                                                <point x="0.5" y="0.5" />
-                                                <point x="0.514286" y="0.5" />
-                                                <point x="1" y="1" />
-                                                <point x="0" y="1" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
-                            <object-type name="AirGateDown" sid="111420570905364">
-                                <plugin id="Sprite" />
-                                <animation-folder>
-                                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5121099919877898" speed="5">
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\london\tilemaps\aeroport\avia-trap-2.png">
-                                            <collision-poly>
-                                                <point x="0" y="0" />
-                                                <point x="0.5" y="0.257143" />
-                                                <point x="0.614286" y="0.385714" />
-                                                <point x="0.757143" y="0.5" />
-                                                <point x="0.971429" y="0.971429" />
-                                                <point x="0.5" y="1" />
-                                                <point x="0" y="1" />
-                                            </collision-poly>
-                                        </frame>
-                                    </animation>
-                                </animation-folder>
-                            </object-type>
                             <object-type name="AirGateStart" sid="5145937865690937">
                                 <plugin id="Sprite" />
                                 <animation-folder>
                                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3171684166045069" speed="5">
-                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\london\tilemaps\aeroport\avia-trap-5.png">
+                                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\london\tilemaps\airport-gate.png">
                                             <collision-poly>
                                                 <point x="0.0285714" y="0.0285714" />
                                                 <point x="0.5" y="0" />
