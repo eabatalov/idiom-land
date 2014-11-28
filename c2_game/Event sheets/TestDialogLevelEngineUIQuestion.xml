@@ -61,10 +61,10 @@
                                 <event-block sid="4138731360226401">
                                     <conditions />
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="4294801708140294" type="TestDialogAnswerFalseBtn">
+                                        <action id="-15" name="Set visible" sid="6984516144286269" type="TestDialogAnswerTrueBtn">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="4634138563645176" type="TestDialogAnswerTrueBtn">
+                                        <action id="-15" name="Set visible" sid="8726771651706304" type="TestDialogAnswerFalseBtn">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="2401111692153728" type="TestDialogQuestionSituationPhoto">
@@ -93,6 +93,10 @@
                                         </action>
                                         <action id="16" name="Set Visible" sid="9428300518927615" type="TestDialogQuestSlide">
                                             <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6386132367206073" type="Function">
+                                            <param id="0" name="Name">&quot;TestDialogQuestionInputEnable&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                         <action id="-9" name="Set value" sid="7625259036712889" type="System">
                                             <param id="0" name="Variable">IsPinningQuestionSprites</param>
@@ -172,10 +176,10 @@
                                 <event-block sid="250383769768213">
                                     <conditions />
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="2187802435053802" type="TestDialogAnswerFalseBtn">
+                                        <action id="-15" name="Set visible" sid="5873825007715341" type="TestDialogAnswerTrueBtn">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="5954444583175959" type="TestDialogAnswerTrueBtn">
+                                        <action id="-15" name="Set visible" sid="8364352895073177" type="TestDialogAnswerFalseBtn">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="8877517753550157" type="TestDialogQuestionSituationPhoto">
@@ -204,6 +208,10 @@
                                         </action>
                                         <action id="16" name="Set Visible" sid="2940343160080854" type="TestDialogQuestSlide">
                                             <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6686343048817049" type="Function">
+                                            <param id="0" name="Name">&quot;TestDialogQuestionInputDisable&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                         <action id="-9" name="Set value" sid="9376668079336089" type="System">
                                             <param id="0" name="Variable">IsPinningQuestionSprites</param>

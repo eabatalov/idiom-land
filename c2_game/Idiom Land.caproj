@@ -5042,6 +5042,16 @@
                                                 </collision-poly>
                                             </frame>
                                         </animation>
+                                        <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="7659398186760274" speed="5">
+                                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                                <collision-poly>
+                                                    <point x="0" y="0" />
+                                                    <point x="0.99375" y="0.0125" />
+                                                    <point x="0.99375" y="0.9875" />
+                                                    <point x="0" y="1" />
+                                                </collision-poly>
+                                            </frame>
+                                        </animation>
                                     </animation-folder>
                                 </object-type>
                                 <object-type name="TestDialogAnswerTrueBtn" sid="7336944252899537">
@@ -5059,6 +5069,16 @@
                                         </animation>
                                         <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="6233505507808754" speed="5">
                                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\dialog\buttons\true-on.png">
+                                                <collision-poly>
+                                                    <point x="0.00625" y="0.0125" />
+                                                    <point x="1" y="0" />
+                                                    <point x="1" y="1" />
+                                                    <point x="0.00625" y="0.9875" />
+                                                </collision-poly>
+                                            </frame>
+                                        </animation>
+                                        <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="1469879471883731" speed="5">
+                                            <frame duration="1" hotspotX="0" hotspotY="0">
                                                 <collision-poly>
                                                     <point x="0.00625" y="0.0125" />
                                                     <point x="1" y="0" />
@@ -8552,7 +8572,7 @@
                             <event-sheet>TestDialogLevelEngineLogic.xml</event-sheet>
                         </event-folder>
                         <event-folder name="UILib">
-                            <event-sheet>TestDialogLevelEngineUIInput.xml</event-sheet>
+                            <event-sheet>TestDialogLevelEngineUIQuestionInput.xml</event-sheet>
                             <event-sheet>TestDialogLevelEngineUIProgressLine.xml</event-sheet>
                             <event-sheet>TestDialogLevelEngineUIQuestion.xml</event-sheet>
                             <event-sheet>TestDialogLevelEngineUILib.xml</event-sheet>
