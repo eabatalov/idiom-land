@@ -5535,11 +5535,10 @@
 					"label": "main",
 					"continue": false,
 					"inCondIds": [
-						7272,
-						7275
+						7272
 					],
 					"outCondIds": [
-						7273
+						7277
 					],
 					"props": {
 						"objs": [
@@ -5555,7 +5554,8 @@
 					"label": "Waiting for bus...",
 					"continue": false,
 					"inCondIds": [
-						7273
+						7280,
+						7282
 					],
 					"outCondIds": [
 						7274
@@ -5571,13 +5571,60 @@
 					"ver": 1,
 					"id": 4844,
 					"type": -1,
-					"label": "Connection",
+					"label": "Loop",
 					"continue": false,
 					"inCondIds": [
 						7274
 					],
 					"outCondIds": [
-						7275
+						7279
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4846,
+					"type": 1,
+					"label": "What a beaut girl!",
+					"continue": true,
+					"inCondIds": [
+						7277
+					],
+					"outCondIds": [
+						7281
+					],
+					"props": {
+						"id": "aguy",
+						"text": "What a beautiful girl!",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4847,
+					"type": -1,
+					"label": "Loop",
+					"continue": false,
+					"inCondIds": [
+						7279
+					],
+					"outCondIds": [
+						7280
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 4848,
+					"type": -1,
+					"label": "Don't repeat",
+					"continue": false,
+					"inCondIds": [
+						7281
+					],
+					"outCondIds": [
+						7282
 					],
 					"props": {}
 				}
@@ -5591,7 +5638,27 @@
 				},
 				{
 					"ver": 1,
-					"id": 7273,
+					"id": 7274,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7277,
+					"type": 10,
+					"props": {
+						"name": "stage_greeting"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7279,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7280,
 					"type": 2,
 					"props": {
 						"id": "aguy"
@@ -5599,15 +5666,17 @@
 				},
 				{
 					"ver": 1,
-					"id": 7274,
-					"type": 1,
+					"id": 7281,
+					"type": 8,
 					"props": {}
 				},
 				{
 					"ver": 1,
-					"id": 7275,
-					"type": 1,
-					"props": {}
+					"id": 7282,
+					"type": 2,
+					"props": {
+						"id": "aguy"
+					}
 				}
 			]
 		}

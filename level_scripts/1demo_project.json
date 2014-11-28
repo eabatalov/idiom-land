@@ -5536,11 +5536,10 @@
 						"label": "main",
 						"continue": false,
 						"inCondIds": [
-							7272,
-							7275
+							7272
 						],
 						"outCondIds": [
-							7273
+							7277
 						],
 						"props": {
 							"objs": [
@@ -5556,7 +5555,8 @@
 						"label": "Waiting for bus...",
 						"continue": false,
 						"inCondIds": [
-							7273
+							7280,
+							7282
 						],
 						"outCondIds": [
 							7274
@@ -5572,13 +5572,60 @@
 						"ver": 1,
 						"id": 4844,
 						"type": -1,
-						"label": "Connection",
+						"label": "Loop",
 						"continue": false,
 						"inCondIds": [
 							7274
 						],
 						"outCondIds": [
-							7275
+							7279
+						],
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 4846,
+						"type": 1,
+						"label": "What a beaut girl!",
+						"continue": true,
+						"inCondIds": [
+							7277
+						],
+						"outCondIds": [
+							7281
+						],
+						"props": {
+							"id": "aguy",
+							"text": "What a beautiful girl!",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 4847,
+						"type": -1,
+						"label": "Loop",
+						"continue": false,
+						"inCondIds": [
+							7279
+						],
+						"outCondIds": [
+							7280
+						],
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 4848,
+						"type": -1,
+						"label": "Don't repeat",
+						"continue": false,
+						"inCondIds": [
+							7281
+						],
+						"outCondIds": [
+							7282
 						],
 						"props": {}
 					}
@@ -5592,7 +5639,27 @@
 					},
 					{
 						"ver": 1,
-						"id": 7273,
+						"id": 7274,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 7277,
+						"type": 10,
+						"props": {
+							"name": "stage_greeting"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 7279,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 7280,
 						"type": 2,
 						"props": {
 							"id": "aguy"
@@ -5600,15 +5667,17 @@
 					},
 					{
 						"ver": 1,
-						"id": 7274,
-						"type": 1,
+						"id": 7281,
+						"type": 8,
 						"props": {}
 					},
 					{
 						"ver": 1,
-						"id": 7275,
-						"type": 1,
-						"props": {}
+						"id": 7282,
+						"type": 2,
+						"props": {
+							"id": "aguy"
+						}
 					}
 				]
 			}
@@ -6815,7 +6884,7 @@
 				"scale": 0.40000000000000013,
 				"pos": {
 					"x": 249.9999913951079,
-					"y": 248.00822878842766
+					"y": 244.00822878842766
 				}
 			},
 			{
@@ -10527,33 +10596,54 @@
 					{
 						"ver": 1,
 						"nodeId": 4841,
-						"x": 400,
-						"y": 100
+						"x": 434,
+						"y": 69
 					},
 					{
 						"ver": 1,
 						"nodeId": 4842,
-						"x": 392,
-						"y": 390
+						"x": 337,
+						"y": 355
 					},
 					{
 						"ver": 1,
 						"nodeId": 4843,
-						"x": 737,
-						"y": 540
+						"x": 804,
+						"y": 702
 					},
 					{
 						"ver": 1,
 						"nodeId": 4844,
-						"x": 450,
-						"y": 689
+						"x": 333,
+						"y": 834
+					},
+					{
+						"ver": 1,
+						"nodeId": 4846,
+						"x": 718,
+						"y": 234
+					},
+					{
+						"ver": 1,
+						"nodeId": 4847,
+						"x": 331,
+						"y": 605
+					},
+					{
+						"ver": 1,
+						"nodeId": 4848,
+						"x": 960,
+						"y": 376
 					}
 				],
 				"nodeIds": [
 					4841,
 					4842,
 					4843,
-					4844
+					4844,
+					4846,
+					4847,
+					4848
 				],
 				"condViews": [
 					{
@@ -10561,26 +10651,12 @@
 						"condId": 7272,
 						"points": {
 							"src": {
-								"x": 480,
-								"y": 180
+								"x": 514,
+								"y": 149
 							},
 							"dst": {
-								"x": 472,
-								"y": 470
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 7273,
-						"points": {
-							"src": {
-								"x": 472,
-								"y": 470
-							},
-							"dst": {
-								"x": 817,
-								"y": 620
+								"x": 417,
+								"y": 435
 							}
 						}
 					},
@@ -10589,40 +10665,99 @@
 						"condId": 7274,
 						"points": {
 							"src": {
-								"x": 817,
-								"y": 620
+								"x": 884,
+								"y": 782
 							},
 							"dst": {
-								"x": 530,
-								"y": 769
+								"x": 413,
+								"y": 914
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 7275,
+						"condId": 7277,
 						"points": {
 							"src": {
-								"x": 530,
-								"y": 769
+								"x": 417,
+								"y": 435
 							},
 							"dst": {
-								"x": 472,
-								"y": 470
+								"x": 798,
+								"y": 314
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7279,
+						"points": {
+							"src": {
+								"x": 413,
+								"y": 914
+							},
+							"dst": {
+								"x": 411,
+								"y": 685
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7280,
+						"points": {
+							"src": {
+								"x": 411,
+								"y": 685
+							},
+							"dst": {
+								"x": 884,
+								"y": 782
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7281,
+						"points": {
+							"src": {
+								"x": 798,
+								"y": 314
+							},
+							"dst": {
+								"x": 1040,
+								"y": 456
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7282,
+						"points": {
+							"src": {
+								"x": 1040,
+								"y": 456
+							},
+							"dst": {
+								"x": 884,
+								"y": 782
 							}
 						}
 					}
 				],
 				"condIds": [
 					7272,
-					7273,
 					7274,
-					7275
+					7277,
+					7279,
+					7280,
+					7281,
+					7282
 				],
 				"scale": 1,
 				"pos": {
-					"x": 0,
-					"y": 0
+					"x": 23,
+					"y": -98
 				}
 			}
 		],
