@@ -6,23 +6,44 @@
         <event-group description="" sid="857788555022791" title="Platformer level keyboard hacks">
             <sub-events>
                 <variable constant="0" name="IsKeyboardHackActive" sid="9368902701736042" static="1" type="number">0</variable>
-                <variable constant="0" name="IsDialogModeActive" sid="6799701820293859" static="1" type="number">0</variable>
+                <variable constant="0" name="IsPlayerAvatarControlsEnabled" sid="5656422759866622" static="1" type="number">0</variable>
+                <variable constant="0" name="IsQuizzControlsEnabled" sid="4938312221818307" static="1" type="number">0</variable>
+                <variable constant="0" name="IsDialogModeNextEnabled" sid="217115756632679" static="1" type="number">0</variable>
+                <variable constant="0" name="IsDialogModeBackEnabled" sid="5241405696926377" static="1" type="number">0</variable>
                 <event-block sid="5172640110417845">
                     <conditions>
                         <condition id="0" name="On function" sid="5520235693501905" type="Function">
                             <param id="0" name="Name">&quot;VarsReset&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="5254804460532784" type="System">
-                            <param id="0" name="Variable">IsKeyboardHackActive</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="1081790909427201" type="System">
-                            <param id="0" name="Variable">IsDialogModeActive</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7925819692724125">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="5254804460532784" type="System">
+                                    <param id="0" name="Variable">IsKeyboardHackActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6696484183304563" type="System">
+                                    <param id="0" name="Variable">IsPlayerAvatarControlsEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8735187960389755" type="System">
+                                    <param id="0" name="Variable">IsQuizzControlsEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5050286862683485" type="System">
+                                    <param id="0" name="Variable">IsDialogModeNextEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2751816926776292" type="System">
+                                    <param id="0" name="Variable">IsDialogModeBackEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="801764243601828">
                     <conditions>
@@ -116,6 +137,10 @@
                                 <action id="-15" name="Set visible" sid="8035284685165549" type="KbdQuestQuizzHelper">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="31807471981033" type="System">
+                                    <param id="0" name="Variable">IsQuizzControlsEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -144,6 +169,10 @@
                                 <action id="-15" name="Set visible" sid="5604228376368338" type="KbdQuestQuizzHelper">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="3399925928088404" type="System">
+                                    <param id="0" name="Variable">IsQuizzControlsEnabled</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -171,6 +200,14 @@
                                 <action id="-15" name="Set visible" sid="8356026404092008" type="KbdQuestNavBackHelper">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="8981087144404121" type="System">
+                                    <param id="0" name="Variable">IsDialogModeNextEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1728998990145732" type="System">
+                                    <param id="0" name="Variable">IsDialogModeBackEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -194,6 +231,10 @@
                             <actions>
                                 <action id="-15" name="Set visible" sid="1902631028405201" type="KbdQuestNavNextHelper">
                                     <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9668932446366858" type="System">
+                                    <param id="0" name="Variable">IsDialogModeNextEnabled</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -219,6 +260,10 @@
                                 <action id="-15" name="Set visible" sid="7891867651021789" type="KbdQuestNavBackHelper">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="5742737248458484" type="System">
+                                    <param id="0" name="Variable">IsDialogModeBackEnabled</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -242,6 +287,10 @@
                             <actions>
                                 <action id="-15" name="Set visible" sid="3422218522493404" type="KbdPlayerMoveHelper">
                                     <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2078208750538918" type="System">
+                                    <param id="0" name="Variable">IsPlayerAvatarControlsEnabled</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -267,42 +316,8 @@
                                 <action id="-15" name="Set visible" sid="2134248592355581" type="KbdPlayerMoveHelper">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="2869618282486309">
-                    <conditions>
-                        <condition id="0" name="On function" sid="8272377294459675" type="Function">
-                            <param id="0" name="Name">&quot;onDialogModeEnter&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="8587724575720457">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="4921606669758303" type="System">
-                                    <param id="0" name="Variable">IsDialogModeActive</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="5836258672037741">
-                    <conditions>
-                        <condition id="0" name="On function" sid="136373413705642" type="Function">
-                            <param id="0" name="Name">&quot;onDialogModeExit&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="6762957664428062">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="1561094151800313" type="System">
-                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                <action id="-9" name="Set value" sid="5737411757831744" type="System">
+                                    <param id="0" name="Variable">IsPlayerAvatarControlsEnabled</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
@@ -329,7 +344,7 @@
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
                                                 <condition id="-14" name="Compare variable" sid="4157044363634925" type="System">
-                                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                                    <param id="0" name="Variable">IsQuizzControlsEnabled</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
@@ -359,7 +374,7 @@
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
                                                 <condition id="-14" name="Compare variable" sid="7878369162913329" type="System">
-                                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                                    <param id="0" name="Variable">IsQuizzControlsEnabled</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
@@ -384,7 +399,7 @@
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                         <condition id="-14" name="Compare variable" sid="5471769466557325" type="System">
-                                            <param id="0" name="Variable">IsDialogModeActive</param>
+                                            <param id="0" name="Variable">IsDialogModeNextEnabled</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
@@ -407,7 +422,7 @@
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                         <condition id="-14" name="Compare variable" sid="6998073561631538" type="System">
-                                            <param id="0" name="Variable">IsDialogModeActive</param>
+                                            <param id="0" name="Variable">IsDialogModeBackEnabled</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
@@ -435,7 +450,7 @@
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
                                                 <condition id="-14" name="Compare variable" sid="8494635786236116" type="System">
-                                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                                    <param id="0" name="Variable">IsQuizzControlsEnabled</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
@@ -470,9 +485,9 @@
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
                                                 <condition id="-14" name="Compare variable" sid="5689522469176385" type="System">
-                                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                                    <param id="0" name="Variable">IsPlayerAvatarControlsEnabled</param>
                                                     <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -499,10 +514,10 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
-                                                <condition id="-14" name="Compare variable" sid="2856155065763342" type="System">
-                                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                                <condition id="-14" name="Compare variable" sid="8181248844531414" type="System">
+                                                    <param id="0" name="Variable">IsPlayerAvatarControlsEnabled</param>
                                                     <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -529,10 +544,10 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
-                                                <condition id="-14" name="Compare variable" sid="2847409436930212" type="System">
-                                                    <param id="0" name="Variable">IsDialogModeActive</param>
+                                                <condition id="-14" name="Compare variable" sid="2179101627984829" type="System">
+                                                    <param id="0" name="Variable">IsPlayerAvatarControlsEnabled</param>
                                                     <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
