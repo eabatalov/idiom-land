@@ -3515,7 +3515,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>airport_taxi</Stage>
+                        <Stage>taxi1</Stage>
                         <NpcID>driver2</NpcID>
                         <AnimUID>104</AnimUID>
                         <NpcName>Taxi driver</NpcName>
@@ -4999,7 +4999,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>airport_taxi</Stage>
+                        <Stage>taxi2</Stage>
                         <NpcID>aguy</NpcID>
                         <AnimUID>380</AnimUID>
                         <NpcName>A guy</NpcName>
@@ -5744,7 +5744,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>airport_taxi</Stage>
+                        <Stage>taxi1</Stage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -5756,8 +5756,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5884</x>
-                        <y>642</y>
+                        <x>5390</x>
+                        <y>630</y>
                         <z>0</z>
                         <width>33</width>
                         <height>336</height>
@@ -5840,7 +5840,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>airport_taxi</Stage>
+                        <Stage>taxi1</Stage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -6224,6 +6224,70 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="StageChanger" uid="403">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>taxi2</Stage>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5530</x>
+                        <y>630</y>
+                        <z>0</z>
+                        <width>33</width>
+                        <height>336</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="StageChanger" uid="404">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>taxi2</Stage>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5985</x>
+                        <y>630</y>
+                        <z>0</z>
+                        <width>33</width>
+                        <height>336</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

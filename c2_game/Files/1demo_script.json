@@ -10,19 +10,17 @@
 					"ver": 1,
 					"id": 8,
 					"type": 9,
-					"label": "Airport taxi",
+					"label": "taxi1",
 					"continue": false,
 					"inCondIds": [],
 					"outCondIds": [
-						0,
-						7031
+						0
 					],
 					"props": {
-						"name": "airport_taxi",
+						"name": "taxi1",
 						"objs": [
 							"Player",
-							"driver2",
-							"aguy"
+							"driver2"
 						],
 						"objPool": []
 					}
@@ -897,58 +895,6 @@
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
-				},
-				{
-					"ver": 1,
-					"id": 4616,
-					"type": 8,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						7031,
-						7032
-					],
-					"outCondIds": [
-						7034
-					],
-					"props": {
-						"objs": [
-							"aguy"
-						]
-					}
-				},
-				{
-					"ver": 1,
-					"id": 4617,
-					"type": 1,
-					"label": "Waiting for bus",
-					"continue": false,
-					"inCondIds": [
-						7034
-					],
-					"outCondIds": [
-						7033
-					],
-					"props": {
-						"id": "aguy",
-						"text": "Waiting for the bus...",
-						"phraseType": "THINK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 4618,
-					"type": -1,
-					"label": "Connection",
-					"continue": false,
-					"inCondIds": [
-						7033
-					],
-					"outCondIds": [
-						7032
-					],
-					"props": {}
 				}
 			],
 			"conds": [
@@ -1362,32 +1308,6 @@
 					"type": 11,
 					"props": {
 						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 7031,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 7032,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 7033,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 7034,
-					"type": 2,
-					"props": {
-						"id": "aguy"
 					}
 				}
 			]
@@ -5582,6 +5502,112 @@
 					"props": {
 						"clearStage": true
 					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 4841,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 4841,
+					"type": 9,
+					"label": "taxi2",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						7272
+					],
+					"props": {
+						"name": "taxi2",
+						"objs": [
+							"Player",
+							"aguy"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4842,
+					"type": 8,
+					"label": "main",
+					"continue": false,
+					"inCondIds": [
+						7272,
+						7275
+					],
+					"outCondIds": [
+						7273
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"aguy"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4843,
+					"type": 1,
+					"label": "Waiting for bus...",
+					"continue": false,
+					"inCondIds": [
+						7273
+					],
+					"outCondIds": [
+						7274
+					],
+					"props": {
+						"id": "aguy",
+						"text": "Waiting for the bus...",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4844,
+					"type": -1,
+					"label": "Connection",
+					"continue": false,
+					"inCondIds": [
+						7274
+					],
+					"outCondIds": [
+						7275
+					],
+					"props": {}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 7272,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7273,
+					"type": 2,
+					"props": {
+						"id": "aguy"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7274,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7275,
+					"type": 1,
+					"props": {}
 				}
 			]
 		}
