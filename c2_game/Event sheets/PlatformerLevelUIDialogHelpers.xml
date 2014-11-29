@@ -248,10 +248,26 @@
                     <sub-events>
                         <comment>Special handling. Manual API call requires &apos;instant&apos; showing of quizz helper. Our quizz fades in so we still need to wait for ~3 seconds</comment>
                         <variable constant="0" name="PrevQuizzAutoShowAfterSecVal" sid="1952271562895553" static="1" type="number">0</variable>
+                        <variable constant="0" name="QuizzHelperShowMode" sid="5426980818766492" static="1" type="text">QUIZZ</variable>
+                        <variable constant="1" name="QUIZZ_HELPER_SHOW_MODE_QUIZZ" sid="7887583007658937" static="0" type="text">QUIZZ</variable>
+                        <variable constant="1" name="QUIZZ_HELPER_SHOW_MODE_IDIOM" sid="9027915206693415" static="0" type="text">IDIOM</variable>
+                        <event-block sid="6197306468749258">
+                            <conditions>
+                                <condition id="0" name="On function" sid="510279608219592" type="Function">
+                                    <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8355493221768457" type="System">
+                                    <param id="0" name="Variable">QuizzHelperShowMode</param>
+                                    <param id="1" name="Value">QUIZZ_HELPER_SHOW_MODE_QUIZZ</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="6129252256923267">
                             <conditions>
                                 <condition id="0" name="On function" sid="5183353983049356" type="Function">
-                                    <param id="0" name="Name">&quot;C2API_ShowQuizzHelper&quot;</param>
+                                    <param id="0" name="Name">&quot;C2API_ShowGuessIdiomHelper&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -259,6 +275,10 @@
                                 <event-block sid="3875275066523262">
                                     <conditions />
                                     <actions>
+                                        <action id="-9" name="Set value" sid="7339479384577036" type="System">
+                                            <param id="0" name="Variable">QuizzHelperShowMode</param>
+                                            <param id="1" name="Value">QUIZZ_HELPER_SHOW_MODE_IDIOM</param>
+                                        </action>
                                         <action id="-9" name="Set value" sid="4144697569626519" type="System">
                                             <param id="0" name="Variable">PrevQuizzAutoShowAfterSecVal</param>
                                             <param id="1" name="Value">QuizzHelperAutoShowAfterSec</param>
@@ -274,7 +294,7 @@
                         <event-block sid="7222601871468376">
                             <conditions>
                                 <condition id="0" name="On function" sid="8239451794893499" type="Function">
-                                    <param id="0" name="Name">&quot;C2API_HideQuizzHelper&quot;</param>
+                                    <param id="0" name="Name">&quot;C2API_HideGuessIdiomHelper&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -282,6 +302,10 @@
                                 <event-block sid="2597167027229935">
                                     <conditions />
                                     <actions>
+                                        <action id="-9" name="Set value" sid="1153832224748958" type="System">
+                                            <param id="0" name="Variable">QuizzHelperShowMode</param>
+                                            <param id="1" name="Value">QUIZZ_HELPER_SHOW_MODE_QUIZZ</param>
+                                        </action>
                                         <action id="-9" name="Set value" sid="5995747872442775" type="System">
                                             <param id="0" name="Variable">QuizzHelperAutoShowAfterSec</param>
                                             <param id="1" name="Value">PrevQuizzAutoShowAfterSecVal</param>
@@ -309,16 +333,51 @@
                                             <param id="0" name="Variable">IsQuizzShowScheduled</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="-26" name="Move to layer" sid="4165782264564682" type="TapQuizzHelper">
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9494164137039296">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5191844858089747" type="System">
+                                            <param id="0" name="Variable">QuizzHelperShowMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">QUIZZ_HELPER_SHOW_MODE_QUIZZ</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-26" name="Move to layer" sid="4165782264564682" type="QuizzHelper">
                                             <param id="0" name="Layer">DialogAnsBg.LayerName</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="7776851116341494" type="TapQuizzHelper">
+                                        <action id="-15" name="Set visible" sid="7776851116341494" type="QuizzHelper">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action behavior="Sine" id="0" name="Set active" sid="2705283871893323" type="TapQuizzHelper">
+                                        <action behavior="Sine" id="0" name="Set active" sid="2705283871893323" type="QuizzHelper">
                                             <param id="0" name="State">1</param>
                                         </action>
-                                        <action behavior="Sine2" id="0" name="Set active" sid="6049474344525201" type="TapQuizzHelper">
+                                        <action behavior="Sine2" id="0" name="Set active" sid="6049474344525201" type="QuizzHelper">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="682271400878802">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1116413258719278" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="5141713072829495" type="System">
+                                            <param id="0" name="Variable">QuizzHelperShowMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">QUIZZ_HELPER_SHOW_MODE_IDIOM</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-26" name="Move to layer" sid="9725341274492231" type="GuessIdiomHelper">
+                                            <param id="0" name="Layer">DialogAnsBg.LayerName</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="6835244368610586" type="GuessIdiomHelper">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="6836486616804321" type="GuessIdiomHelper">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="Sine2" id="0" name="Set active" sid="2732702392213011" type="GuessIdiomHelper">
                                             <param id="0" name="State">1</param>
                                         </action>
                                     </actions>
@@ -336,13 +395,22 @@
                                 <event-block sid="1239382632829786">
                                     <conditions />
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="9144500870421726" type="TapQuizzHelper">
+                                        <action id="-15" name="Set visible" sid="9144500870421726" type="QuizzHelper">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
-                                        <action behavior="Sine" id="0" name="Set active" sid="8154170619567631" type="TapQuizzHelper">
+                                        <action behavior="Sine" id="0" name="Set active" sid="8154170619567631" type="QuizzHelper">
                                             <param id="0" name="State">0</param>
                                         </action>
-                                        <action behavior="Sine2" id="0" name="Set active" sid="5945153360296675" type="TapQuizzHelper">
+                                        <action behavior="Sine2" id="0" name="Set active" sid="5945153360296675" type="QuizzHelper">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5903188043302537" type="GuessIdiomHelper">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="2563327459307101" type="GuessIdiomHelper">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Sine2" id="0" name="Set active" sid="9475682055995595" type="GuessIdiomHelper">
                                             <param id="0" name="State">0</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="3284831295043991" type="System">
@@ -361,7 +429,7 @@
                                         <condition id="0" name="On function" sid="3170931726700172" type="Function">
                                             <param id="0" name="Name">&quot;SchedQuizzHelperShow&quot;</param>
                                         </condition>
-                                        <condition id="-9" inverted="1" name="Is visible" sid="6117150340107912" type="TapQuizzHelper" />
+                                        <condition id="-9" inverted="1" name="Is visible" sid="6117150340107912" type="QuizzHelper" />
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Set value" sid="8428271516685692" type="System">
