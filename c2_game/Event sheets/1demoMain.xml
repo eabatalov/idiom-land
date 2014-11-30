@@ -20,16 +20,20 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="2673037115571879" type="Function">
+                            <param id="0" name="Name">&quot;SetLevelSecretsCount&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
+                        </action>
                         <action id="0" name="Call function" sid="8930605218157595" type="Function">
                             <param id="0" name="Name">&quot;StartPlatformerLevel&quot;</param>
                             <param id="1" name="Parameter {n}">LEVEL_NAME{###}LEVEL_INITIAL_STAGE {###}LEVEL_NPC_ANIMS_TO_INIT </param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5431196656068474">
+                <event-block sid="7992040032857145">
                     <conditions>
-                        <condition id="0" name="On function" sid="6875055154176057" type="Function">
-                            <param id="0" name="Name">&quot;onLevelStarted&quot;</param>
+                        <condition id="0" name="On function" sid="4507575217954968" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -41,21 +45,17 @@
                                     <param id="0" name="Name">&quot;1demoLevelInitAllStages&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="0" name="Call function" sid="2673037115571879" type="Function">
-                                    <param id="0" name="Name">&quot;SetLevelSecretsCount&quot;</param>
-                                    <param id="1" name="Parameter {n}">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="9272798754307836" type="Function">
-                                    <param id="0" name="Name">&quot;InitIdiomsCounter&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="0" name="Call function" sid="44123678595575" type="Function">
-                                    <param id="0" name="Name">&quot;InitCoinsCounter&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="5431196656068474">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6875055154176057" type="Function">
+                            <param id="0" name="Name">&quot;onLevelStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

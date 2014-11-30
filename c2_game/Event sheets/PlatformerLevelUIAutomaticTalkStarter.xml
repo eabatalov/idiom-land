@@ -36,23 +36,13 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="9832955107718362">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="9999064463361638" type="TalkStartTrigger">
-                                            <param id="0" name="Instance variable">ExpandToLayoutHeight</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-6" name="Set height" sid="2883629222233506" type="TalkStartTrigger">
-                                            <param id="0" name="Height">LayoutHeight</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                                 <event-block sid="1315789792934667">
                                     <conditions />
                                     <actions>
+                                        <action id="0" name="Call function" sid="3513390993373517" type="Function">
+                                            <param id="0" name="Name">&quot;AutoTalkStarterSetExpand&quot;</param>
+                                            <param id="1" name="Parameter {n}">TalkStartTrigger.UID{###}TalkStartTrigger.ExpandToLayoutHeight</param>
+                                        </action>
                                         <action id="-26" name="Move to layer" sid="6344855186359902" type="TalkStartHighlight">
                                             <param id="0" name="Layer">&quot;BackgroundF&quot;</param>
                                         </action>
@@ -158,6 +148,49 @@
                                 <action id="0" name="Call function" sid="8331897433132196" type="Function">
                                     <param id="0" name="Name">&quot;EnablePlayerAvatarMovement&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>param(0): UID of talk starter&#x0D;&#x0A;param(1): 1 to expand, 0 to not</comment>
+                <event-block sid="7411785564364579">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2846038066186457" type="Function">
+                            <param id="0" name="Name">&quot;AutoTalkStarterSetExpand&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1452641651163999" type="TalkStartTrigger">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2904069152217805" type="TalkStartTrigger">
+                            <param id="0" name="Instance variable">ExpandToLayoutHeight</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5883343446342123">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="1130031158114428" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="2093103561566204" type="TalkStartTrigger">
+                                    <param id="0" name="Height">LayoutHeight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1844277798858789">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8729963772724412" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="3960865209021913" type="TalkStartTrigger">
+                                    <param id="0" name="Scale">1</param>
                                 </action>
                             </actions>
                         </event-block>

@@ -2590,7 +2590,7 @@
 						574
 					],
 					"outCondIds": [
-						1678
+						7287
 					],
 					"props": {
 						"objs": [
@@ -2771,7 +2771,7 @@
 					"label": "Disable controls",
 					"continue": true,
 					"inCondIds": [
-						1678
+						7288
 					],
 					"outCondIds": [
 						7201
@@ -3066,7 +3066,7 @@
 					"label": "Hide new idiom",
 					"continue": true,
 					"inCondIds": [
-						5086
+						7284
 					],
 					"outCondIds": [
 						5155
@@ -3088,7 +3088,7 @@
 						4980
 					],
 					"outCondIds": [
-						5085
+						7284
 					],
 					"props": {
 						"name": "C2API_IdiomDialogCompleted",
@@ -3177,32 +3177,14 @@
 					"label": "Controls enable",
 					"continue": false,
 					"inCondIds": [
-						5156
+						7286,
+						7305
 					],
 					"outCondIds": [
 						6194
 					],
 					"props": {
 						"enabled": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 3078,
-					"type": 10,
-					"label": "Policeman talk fin",
-					"continue": true,
-					"inCondIds": [
-						5085
-					],
-					"outCondIds": [
-						5086
-					],
-					"props": {
-						"name": "C2API_PolicemanTalkFinished",
-						"rollbackName": null,
-						"source": "c2",
-						"params": []
 					}
 				},
 				{
@@ -3253,7 +3235,7 @@
 						5155
 					],
 					"outCondIds": [
-						5156
+						7285
 					],
 					"props": {
 						"name": "C2API_HideNextHelper",
@@ -3368,6 +3350,289 @@
 					"props": {
 						"secs": 2
 					}
+				},
+				{
+					"ver": 1,
+					"id": 4850,
+					"type": 10,
+					"label": "IsTutorialCompleted",
+					"continue": false,
+					"inCondIds": [
+						7287
+					],
+					"outCondIds": [
+						7288,
+						7306
+					],
+					"props": {
+						"name": "C2API_InjectIsTutorialCompleted",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4851,
+					"type": 10,
+					"label": "TutorialIsComplited",
+					"continue": true,
+					"inCondIds": [
+						7285
+					],
+					"outCondIds": [
+						7286
+					],
+					"props": {
+						"name": "C2API_TutorialIsCompleted",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4853,
+					"type": 1,
+					"label": "Hello, Policeman!",
+					"continue": false,
+					"inCondIds": [
+						7294
+					],
+					"outCondIds": [
+						7295
+					],
+					"props": {
+						"id": "Player",
+						"text": "Hello, Mr. Policeman!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4854,
+					"type": 12,
+					"label": "Enable controls",
+					"continue": false,
+					"inCondIds": [
+						7309
+					],
+					"outCondIds": [
+						7293
+					],
+					"props": {
+						"enabled": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4855,
+					"type": 1,
+					"label": "How help you?",
+					"continue": false,
+					"inCondIds": [
+						7295
+					],
+					"outCondIds": [
+						7296
+					],
+					"props": {
+						"id": "policeman",
+						"text": "How may I help you?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4856,
+					"type": 1,
+					"label": "How to center?",
+					"continue": false,
+					"inCondIds": [
+						7296
+					],
+					"outCondIds": [
+						7297
+					],
+					"props": {
+						"id": "Player",
+						"text": "Could you tell me how can I get to the city center?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4857,
+					"type": 1,
+					"label": "Piece of cake",
+					"continue": false,
+					"inCondIds": [
+						7297
+					],
+					"outCondIds": [
+						7298
+					],
+					"props": {
+						"id": "policeman",
+						"text": "It's a piece of cake. Just go forward...",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4858,
+					"type": 1,
+					"label": "Looks idiom",
+					"continue": false,
+					"inCondIds": [
+						7298
+					],
+					"outCondIds": [
+						7299
+					],
+					"props": {
+						"id": "Player",
+						"text": "Looks like an idiom!",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4859,
+					"type": 3,
+					"label": "\"Piece of cake\"",
+					"continue": false,
+					"inCondIds": [
+						7299
+					],
+					"outCondIds": [
+						7300,
+						7301
+					],
+					"props": {
+						"id": "Player",
+						"text": "What could\n\"piece of cake\"\nmean?",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Go away",
+						"ans2": "I don't know",
+						"ans3": "Very easy",
+						"ans4": "I'm busy"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4861,
+					"type": 12,
+					"label": "Disable controls",
+					"continue": true,
+					"inCondIds": [
+						7293
+					],
+					"outCondIds": [
+						7294
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4862,
+					"type": 10,
+					"label": "idiomFailed",
+					"continue": true,
+					"inCondIds": [
+						7301
+					],
+					"outCondIds": [
+						7303
+					],
+					"props": {
+						"name": "C2API_IdiomFailed",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4863,
+					"type": 10,
+					"label": "idiomGuessed",
+					"continue": true,
+					"inCondIds": [
+						7300
+					],
+					"outCondIds": [
+						7302
+					],
+					"props": {
+						"name": "C2API_IdiomGuessed",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4864,
+					"type": 11,
+					"label": "\"PieceCake\" is",
+					"continue": false,
+					"inCondIds": [
+						7302,
+						7303
+					],
+					"outCondIds": [
+						7304
+					],
+					"props": {
+						"text": "\"Piece of cake\" means something very easy!"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4865,
+					"type": 10,
+					"label": "IdiomDialogCompleted",
+					"continue": true,
+					"inCondIds": [
+						7304
+					],
+					"outCondIds": [
+						7305
+					],
+					"props": {
+						"name": "C2API_IdiomDialogCompleted",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4866,
+					"type": 10,
+					"label": "Show idioms counter",
+					"continue": true,
+					"inCondIds": [
+						7306
+					],
+					"outCondIds": [
+						7309
+					],
+					"props": {
+						"name": "C2API_ShowIdiomsCounter",
+						"rollbackName": "",
+						"source": "c2",
+						"params": []
+					}
 				}
 			],
 			"conds": [
@@ -3376,14 +3641,6 @@
 					"id": 574,
 					"type": 1,
 					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 1678,
-					"type": 10,
-					"props": {
-						"name": "stage_activate"
-					}
 				},
 				{
 					"ver": 1,
@@ -3464,18 +3721,6 @@
 					"props": {
 						"clearStage": true
 					}
-				},
-				{
-					"ver": 1,
-					"id": 5085,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 5086,
-					"type": 8,
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -3570,12 +3815,6 @@
 				{
 					"ver": 1,
 					"id": 5155,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 5156,
 					"type": 8,
 					"props": {}
 				},
@@ -3676,6 +3915,146 @@
 				{
 					"ver": 1,
 					"id": 7202,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7284,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7285,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7286,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7287,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7288,
+					"type": 10,
+					"props": {
+						"name": "tutorial_not_completed"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7293,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_policeman"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7294,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7295,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7296,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7297,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7298,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7299,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7300,
+					"type": 5,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7301,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7302,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7303,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7304,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7305,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7306,
+					"type": 10,
+					"props": {
+						"name": "tutorial_was_completed"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7309,
 					"type": 8,
 					"props": {}
 				}
@@ -5297,7 +5676,7 @@
 						6183
 					],
 					"outCondIds": [
-						6185
+						7388
 					],
 					"props": {
 						"objs": [
@@ -5312,7 +5691,7 @@
 					"label": "First coin collect",
 					"continue": true,
 					"inCondIds": [
-						6185
+						7389
 					],
 					"outCondIds": [
 						6186
@@ -5366,7 +5745,7 @@
 						6197
 					],
 					"outCondIds": [
-						6190
+						7386
 					],
 					"props": {
 						"name": "C2API_HideTicketCounterHelper",
@@ -5382,7 +5761,7 @@
 					"label": "ShowGoForward",
 					"continue": true,
 					"inCondIds": [
-						6190
+						7387
 					],
 					"outCondIds": [
 						6196
@@ -5417,7 +5796,8 @@
 					"label": "idle",
 					"continue": false,
 					"inCondIds": [
-						6193
+						6193,
+						7390
 					],
 					"outCondIds": [],
 					"props": {}
@@ -5440,6 +5820,45 @@
 						"phraseType": "THINK",
 						"phraseSize": "MEDIUM"
 					}
+				},
+				{
+					"ver": 1,
+					"id": 4940,
+					"type": 10,
+					"label": "CoinIntroCompleted",
+					"continue": true,
+					"inCondIds": [
+						7386
+					],
+					"outCondIds": [
+						7387
+					],
+					"props": {
+						"name": "C2API_CoinIntroCompleted",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4941,
+					"type": 10,
+					"label": "InjectIsCoinIntroCompleted",
+					"continue": false,
+					"inCondIds": [
+						7388
+					],
+					"outCondIds": [
+						7389,
+						7390
+					],
+					"props": {
+						"name": "C2API_InjectIsCoinIntroCompleted",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
 				}
 			],
 			"conds": [
@@ -5451,21 +5870,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 6185,
-					"type": 10,
-					"props": {
-						"name": "coin_collected"
-					}
-				},
-				{
-					"ver": 1,
 					"id": 6186,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 6190,
 					"type": 8,
 					"props": {}
 				},
@@ -5501,6 +5906,42 @@
 					"type": 11,
 					"props": {
 						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7386,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7387,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7388,
+					"type": 10,
+					"props": {
+						"name": "coin_collected"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7389,
+					"type": 10,
+					"props": {
+						"name": "coin_intro_not_completed"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7390,
+					"type": 10,
+					"props": {
+						"name": "coin_intro_was_completed"
 					}
 				}
 			]

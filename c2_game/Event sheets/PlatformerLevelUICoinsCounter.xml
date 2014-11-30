@@ -35,6 +35,31 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="3133314459372311">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8317022161582381" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3146120186570856">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3924422761236037" type="CoinsCounterTxt">
+                                    <param id="0" name="Instance variable">AutoShow</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7906464268284841" type="Function">
+                                    <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

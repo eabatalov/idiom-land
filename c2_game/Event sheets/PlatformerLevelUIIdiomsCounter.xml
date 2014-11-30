@@ -48,6 +48,47 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="4849792200082632">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9628211642743039" type="Function">
+                            <param id="0" name="Name">&quot;C2API_ShowIdiomsCounter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8204330376951405" type="Function">
+                            <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="1" name="Set return value" sid="8397652345986552" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5208151410558767">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5294120511791507" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3474280347107846">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8696427070242995" type="IdiomCounterTxt">
+                                    <param id="0" name="Instance variable">AutoShow</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3642054093413145" type="Function">
+                                    <param id="0" name="Name">&quot;ShowIdiomsCounter&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

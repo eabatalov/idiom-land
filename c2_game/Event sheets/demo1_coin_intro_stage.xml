@@ -5,6 +5,7 @@
     <events>
         <event-group description="" sid="5363619014824372" title="Demo1 coin_intro stage">
             <sub-events>
+                <variable constant="1" name="COIN_TUTORIAL_COMPLETED_KEY" sid="9599920313336914" static="0" type="text">plat_lvl_coin_intro_cmlt</variable>
                 <event-block sid="2665446572891371">
                     <conditions>
                         <condition id="0" name="On function" sid="252275247551718" type="Function">
@@ -50,6 +51,80 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="2491243623056107">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4591364401106296" type="Function">
+                            <param id="0" name="Name">&quot;CoinIntroInit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8650992942540736">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3342414472111167" type="System">
+                                    <param id="0" name="First value">QuestPersistentStorage.get(COIN_TUTORIAL_COMPLETED_KEY)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5589519309686787" type="Function">
+                                    <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="224027276224047">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7395904309307866" type="Function">
+                            <param id="0" name="Name">&quot;C2API_CoinIntroCompleted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Put" sid="2895102699035514" type="QuestPersistentStorage">
+                            <param id="0" name="Name">COIN_TUTORIAL_COMPLETED_KEY</param>
+                            <param id="1" name="Value">&quot;true&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4834877041104455">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4776792480719025" type="Function">
+                            <param id="0" name="Name">&quot;C2API_InjectIsCoinIntroCompleted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7132413869429642">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4814907263523038" type="System">
+                                    <param id="0" name="First value">QuestPersistentStorage.get(COIN_TUTORIAL_COMPLETED_KEY)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8823443451953297" type="Function">
+                                    <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;coin_intro_was_completed&quot;{###}&quot;Player&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9537917620484541">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1341506966925728" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="4310223051482099" type="Function">
+                                    <param id="0" name="Name">&quot;ProcNonBlockingPlayerCustomEvent&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;coin_intro_not_completed&quot;{###}&quot;Player&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

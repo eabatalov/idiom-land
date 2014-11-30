@@ -12,7 +12,7 @@
                 <event-block sid="4093737274702246">
                     <conditions>
                         <condition id="0" name="On function" sid="7583269899174511" type="Function">
-                            <param id="0" name="Name">&quot;InitCoinsCounter&quot;</param>
+                            <param id="0" name="Name">&quot;PlatformerLevelInitCoinsCounter&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -43,21 +43,6 @@
                                 </action>
                                 <action id="0" name="Set text" sid="9920624997865343" type="CoinsCounterTxt">
                                     <param id="0" name="Text">CoinsCollected &amp; &quot;/&quot; &amp; CoinsOverall</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1769648810230721">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1549395916819256" type="CoinsCounterTxt">
-                                    <param id="0" name="Instance variable">AutoShow</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="2846376237254982" type="Function">
-                                    <param id="0" name="Name">&quot;ShowCoinsCounter&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
