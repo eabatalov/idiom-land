@@ -5,6 +5,20 @@
     <events>
         <event-group description="" sid="6094464589040204" title="Quest engine replay playback">
             <sub-events>
+                <variable constant="0" name="IsPlaybackEnabled" sid="7927095098663223" static="1" type="number">0</variable>
+                <event-block sid="1896566625272485">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3045717574304229" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3983245828172051" type="System">
+                            <param id="0" name="Variable">IsPlaybackEnabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="8921347511807015">
                     <conditions>
                         <condition id="0" name="On function" sid="6293333820991083" type="Function">
@@ -52,9 +66,74 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="1584474655875302" type="Function">
-                            <param id="0" name="Name">&quot;LockUIActionsINProcessing&quot;</param>
+                        <action id="0" name="Call function" sid="6066480448007305" type="Function">
+                            <param id="0" name="Name">&quot;QuestActionsInPlaybackModeEnable&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3232896537763424">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2597258130961699" type="Function">
+                            <param id="0" name="Name">&quot;QuestLevelPlaybackInit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="320428351596623">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7529163460192301" type="System">
+                                    <param id="0" name="First value">QuestPersistentStorage.get(PLAYBACK_MODE_KEY)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">PLAYBACK_MODE_ENABLED</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7841082373688721" type="System">
+                                    <param id="0" name="Variable">IsPlaybackEnabled</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="917808228716861" type="Function">
+                                    <param id="0" name="Name">&quot;StopRecording&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="6893224030786092" type="Function">
+                                    <param id="0" name="Name">&quot;PlaybackModeEnable&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="5" name="Load" sid="1287125878317193" type="QuestLevelPlayback" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8819171713584048">
+                    <conditions>
+                        <condition id="1" name="Level gameplay history loaded" sid="6205144124443606" type="QuestLevelPlayback" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9665065393783623" type="Function">
+                            <param id="0" name="Name">&quot;LevelPlaybackButtonsShow&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1082879930642306">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="3361192128390476" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="3816084322165036" type="System">
+                            <param id="0" name="Variable">IsPlaybackEnabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="2252858176041636" type="LevelGameplayPlaybackTimeTxt">
+                            <param id="0" name="Text">QuestLevelPlayback.getPlaybackPosMin &amp; &quot; : &quot; &amp; QuestLevelPlayback.getPlaybackPosSec</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2321335675882442" type="LevelGameplayPlaybackSpeedTxt">
+                            <param id="0" name="Text">QuestLevelPlayback.getPlaybackSpeed</param>
                         </action>
                     </actions>
                 </event-block>
