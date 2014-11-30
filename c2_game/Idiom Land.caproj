@@ -689,10 +689,13 @@
                 </object-type>
             </object-folder>
             <object-folder name="InputMethodChoiceMenu">
-                <object-type name="InputMethodChoiceTouch" sid="9579634466253522">
+                <object-type name="InputMethodChoiceBtn" sid="9579634466253522">
                     <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Value" sid="8891073647121851" type="string" />
+                    </instance-variables>
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3036000267293591" speed="5">
+                        <animation framecount="1" loop="0" name="Touch" pingpong="0" repeatcount="1" repeatto="0" sid="3036000267293591" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\button1.png">
                                 <collision-poly>
                                     <point x="0.0285714" y="0.0209059" />
@@ -703,6 +706,16 @@
                                     <point x="0.5" y="0.968641" />
                                     <point x="0.366667" y="0.731707" />
                                     <point x="0" y="0.498258" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Keyboard" pingpong="0" repeatcount="1" repeatto="0" sid="4609204684241863" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\c2_game\Animations\InputMethodChoiceKbd\Default\000.png">
+                                <collision-poly>
+                                    <point x="0.00378788" y="0.00396825" />
+                                    <point x="0.996212" y="0.00396825" />
+                                    <point x="0.992424" y="0.992063" />
+                                    <point x="0.00378788" y="0.996032" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -744,22 +757,28 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="or" sid="6875236939398456">
+                <object-type name="InputMethodChoiceMenuOk" sid="126659798534723">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8885706234979093" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.514286" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\new\or.png">
-                                <collision-poly>
-                                    <point x="0.323529" y="0.314286" />
-                                    <point x="0.5" y="0.428571" />
-                                    <point x="0.529412" y="0.457143" />
-                                    <point x="0.794118" y="0.485714" />
-                                    <point x="0.764706" y="0.771429" />
-                                    <point x="0.5" y="0.685714" />
-                                    <point x="0.205882" y="0.8" />
-                                    <point x="0.0294118" y="0.485714" />
-                                </collision-poly>
-                            </frame>
+                        <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="2191637931377417" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="3667468308835663" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="InputMethodChoiceRadioBtn" sid="9867699357298195">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Value" sid="17494525366324" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="6913480500139656" speed="5">
+                            <frame duration="1" hotspotX="0.504" hotspotY="0.504" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="8296331552919545" speed="5">
+                            <frame duration="1" hotspotX="0.504" hotspotY="0.504" />
                         </animation>
                     </animation-folder>
                 </object-type>

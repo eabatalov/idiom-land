@@ -6,38 +6,297 @@
         <include>LevelInputMode</include>
         <event-group description="" sid="8590854983368419" title="Input method choice menu main">
             <sub-events>
-                <event-block sid="583776957201899">
+                <event-block sid="2279693553644283">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="968522224188121" type="Touch">
-                            <param id="0" name="Object">InputMethodChoiceKbd</param>
+                        <condition id="-2" name="On start of layout" sid="7726440349426606" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="73729822437597" type="Function">
+                            <param id="0" name="Name">&quot;GetInputMode&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4096744120742422">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8528201319545834" type="System">
+                                    <param id="0" name="Variable">CurrentInputMode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">INPUT_MODE_KEYBOARD</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="4291610388830758" type="InputMethodChoiceRadioBtn">
+                                    <param id="0" name="Instance variable">Value</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;KEYBOARD&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="486944578523211" type="InputMethodChoiceRadioBtn">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1024953961808229">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1410071832922026" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="1996854886863686" type="InputMethodChoiceRadioBtn">
+                                    <param id="0" name="Instance variable">Value</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;TOUCH&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="1123475090644811">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="3778700121645725" type="System">
+                                            <param id="0" name="Variable">CurrentInputMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">INPUT_MODE_TOUCH</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="6055797839406121" type="System">
+                                            <param id="0" name="Variable">CurrentInputMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">INPUT_MODE_UNDEFINED</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="1693308398679372" type="InputMethodChoiceRadioBtn">
+                                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="819477448352283">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="5375951170233793" type="Touch">
+                            <param id="0" name="Object">InputMethodChoiceRadioBtn</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="649480675725842">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3712304796646402" type="InputMethodChoiceRadioBtn">
+                                    <param id="0" name="Instance variable">Value</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;TOUCH&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3624059370956779" type="Function">
+                                    <param id="0" name="Name">&quot;InputMethodChoiceTriggerTouch&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3228830038464136">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2519776746584188" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="6306092795041971" type="InputMethodChoiceRadioBtn">
+                                    <param id="0" name="Instance variable">Value</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;KEYBOARD&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3672927460720091" type="Function">
+                                    <param id="0" name="Name">&quot;InputMethodChoiceTriggerKbd&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2878902206889373">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="5938865178788222" type="Touch">
+                            <param id="0" name="Object">InputMethodChoiceBtn</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6411729000016106">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7817165085447169" type="InputMethodChoiceBtn">
+                                    <param id="0" name="Instance variable">Value</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;TOUCH&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1502443681241978" type="Function">
+                                    <param id="0" name="Name">&quot;InputMethodChoiceTriggerTouch&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9187542364825518">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1749503242355417" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="1020610874711443" type="InputMethodChoiceBtn">
+                                    <param id="0" name="Instance variable">Value</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;KEYBOARD&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2599423500774091" type="Function">
+                                    <param id="0" name="Name">&quot;InputMethodChoiceTriggerKbd&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7153908070084309">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9521470571179632" type="Function">
+                            <param id="0" name="Name">&quot;InactivateAllInputMethodChoiceRadioBtns&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="195762062203148" type="Function">
-                            <param id="0" name="Name">&quot;SetInputMode&quot;</param>
-                            <param id="1" name="Parameter {n}">INPUT_MODE_KEYBOARD</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="4868449855813382" type="System">
-                            <param id="0" name="Layout">LevelsMenu</param>
+                        <action id="4" name="Set animation" sid="2937078932005731" type="InputMethodChoiceRadioBtn">
+                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2684320875063277">
+                <event-block sid="4398649924964371">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="1324032896174412" type="Touch">
-                            <param id="0" name="Object">InputMethodChoiceTouch</param>
+                        <condition id="0" name="On function" sid="441685634547457" type="Function">
+                            <param id="0" name="Name">&quot;InputMethodChoiceTriggerTouch&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1563162606240601" type="InputMethodChoiceRadioBtn">
+                            <param id="0" name="Instance variable">Value</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;TOUCH&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="7443573954342839" type="Function">
-                            <param id="0" name="Name">&quot;SetInputMode&quot;</param>
-                            <param id="1" name="Parameter {n}">INPUT_MODE_TOUCH</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="2562512611920731" type="System">
-                            <param id="0" name="Layout">LevelsMenu</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3785182253516114">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="8649028433652311" type="Function">
+                                    <param id="0" name="Name">&quot;InactivateAllInputMethodChoiceRadioBtns&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9481368062938764" type="InputMethodChoiceRadioBtn">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2061185084640896" type="Function">
+                                    <param id="0" name="Name">&quot;SetInputMode&quot;</param>
+                                    <param id="1" name="Parameter {n}">INPUT_MODE_TOUCH</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
+                <event-block sid="7316850009066849">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3872738706955279" type="Function">
+                            <param id="0" name="Name">&quot;InputMethodChoiceTriggerKbd&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6500878855732325" type="InputMethodChoiceRadioBtn">
+                            <param id="0" name="Instance variable">Value</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;KEYBOARD&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4134829795798018">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="3227796520265267" type="Function">
+                                    <param id="0" name="Name">&quot;InactivateAllInputMethodChoiceRadioBtns&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="6834604779327805" type="InputMethodChoiceRadioBtn">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6409308091678338" type="Function">
+                                    <param id="0" name="Name">&quot;SetInputMode&quot;</param>
+                                    <param id="1" name="Parameter {n}">INPUT_MODE_KEYBOARD</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="1453276010195737" title="Input method choice menu ok btn">
+                    <sub-events>
+                        <variable constant="0" name="IsTouchingOkBtn" sid="6011367419480668" static="1" type="number">0</variable>
+                        <event-block sid="4521991464353012">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4149049999951321" type="Function">
+                                    <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8396435195981249" type="System">
+                                    <param id="0" name="Variable">IsTouchingOkBtn</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="405092152166746">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="1697689431084821" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="2600949344348031" type="Touch">
+                                    <param id="0" name="Object">InputMethodChoiceMenuOk</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="185372307311403" type="System">
+                                    <param id="0" name="Variable">IsTouchingOkBtn</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="5611405685717961" type="InputMethodChoiceMenuOk">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5043881460793209">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="5951096770049587" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="4614380284457479" type="System">
+                                    <param id="0" name="Variable">IsTouchingOkBtn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8848171788448193" type="InputMethodChoiceMenuOk">
+                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1977164569431423">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="7878235224484146" type="Touch">
+                                            <param id="0" name="Object">InputMethodChoiceMenuOk</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="4868449855813382" type="System">
+                                            <param id="0" name="Layout">LevelsMenu</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>
