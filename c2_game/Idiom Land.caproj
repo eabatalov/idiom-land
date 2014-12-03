@@ -696,26 +696,26 @@
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Touch" pingpong="0" repeatcount="1" repeatto="0" sid="3036000267293591" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\button1.png">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Desktop\method-input\touchscreen.png">
                                 <collision-poly>
-                                    <point x="0.0285714" y="0.0209059" />
+                                    <point x="0.0285714" y="0" />
                                     <point x="0.5" y="0" />
-                                    <point x="0.971429" y="0.0209059" />
-                                    <point x="1" y="0.498258" />
-                                    <point x="0.633333" y="0.731707" />
-                                    <point x="0.5" y="0.968641" />
-                                    <point x="0.366667" y="0.731707" />
-                                    <point x="0" y="0.498258" />
+                                    <point x="0.971429" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.984848" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0" y="0.984848" />
+                                    <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Keyboard" pingpong="0" repeatcount="1" repeatto="0" sid="4609204684241863" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\c2_game\Animations\InputMethodChoiceKbd\Default\000.png">
+                            <frame duration="1" hotspotX="-0.0406504" hotspotY="0.00431034" original-source="C:\Users\Andy\Desktop\method-input\keyboard.png">
                                 <collision-poly>
-                                    <point x="0.00378788" y="0.00396825" />
-                                    <point x="0.996212" y="0.00396825" />
-                                    <point x="0.992424" y="0.992063" />
-                                    <point x="0.00378788" y="0.996032" />
+                                    <point x="0" y="0.00436681" />
+                                    <point x="0.987681" y="0.00436681" />
+                                    <point x="0.983766" y="0.992451" />
+                                    <point x="0" y="1" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -761,10 +761,32 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="2191637931377417" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\method-input\method-input.png">
+                                <collision-poly>
+                                    <point x="0.0485075" y="0.147727" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.951493" y="0.147727" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.951493" y="0.852273" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0485075" y="0.852273" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="3667468308835663" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\method-input\method-input-push.png">
+                                <collision-poly>
+                                    <point x="0.0485075" y="0.147727" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.951493" y="0.147727" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.951493" y="0.852273" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0485075" y="0.852273" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -773,12 +795,38 @@
                     <instance-variables>
                         <instance-variable name="Value" sid="17494525366324" type="string" />
                     </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Sine" sid="9049378598929011">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="6913480500139656" speed="5">
-                            <frame duration="1" hotspotX="0.504" hotspotY="0.504" />
+                            <frame duration="1" hotspotX="0.506329" hotspotY="0.506329" original-source="C:\Users\Andy\Desktop\method-input\but-off.png">
+                                <collision-poly>
+                                    <point x="0.191928" y="0.101941" />
+                                    <point x="0.609705" y="0.014346" />
+                                    <point x="0.923366" y="0.222447" />
+                                    <point x="0.986328" y="0.577721" />
+                                    <point x="0.816236" y="0.897384" />
+                                    <point x="0.449367" y="0.987342" />
+                                    <point x="0.114308" y="0.837637" />
+                                    <point x="0" y="0.4427" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="8296331552919545" speed="5">
-                            <frame duration="1" hotspotX="0.504" hotspotY="0.504" />
+                            <frame duration="1" hotspotX="0.506329" hotspotY="0.506329" original-source="C:\Users\Andy\Desktop\method-input\but-on.png">
+                                <collision-poly>
+                                    <point x="0.0685243" y="0.27443" />
+                                    <point x="0.508439" y="0" />
+                                    <point x="0.931476" y="0.23173" />
+                                    <point x="0.963916" y="0.690633" />
+                                    <point x="0.672996" y="0.967595" />
+                                    <point x="0.268152" y="0.943798" />
+                                    <point x="0.0412625" y="0.645232" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -8370,6 +8418,28 @@
                 </object-folder>
             </object-folder>
         </object-folder>
+        <object-type name="LightArrow" sid="5407333979406966">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="4077136619709281">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116466492839819" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.514286" original-source="C:\Users\Andy\Desktop\method-input\push-etc.png">
+                        <collision-poly>
+                            <point x="0.0131579" y="0.0285714" />
+                            <point x="0.907895" y="0.2" />
+                            <point x="1" y="0.485714" />
+                            <point x="0.907895" y="0.8" />
+                            <point x="0.0131579" y="0.971429" />
+                            <point x="0.105263" y="0.485714" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Levels_Common_VisualObjects_F_Foxy_FoxySimpleFamily" plugin-id="Sprite" sid="3940617487415505">

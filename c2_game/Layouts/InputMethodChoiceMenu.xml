@@ -72,31 +72,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="InputMethodChoiceBtn" uid="18">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Value>TOUCH</Value>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>264</x>
-                        <y>134</y>
-                        <z>0</z>
-                        <width>264</width>
-                        <height>96</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="InputMethodChoiceMenuHeader" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -129,11 +104,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>501</x>
-                        <y>435</y>
+                        <x>799</x>
+                        <y>243</y>
                         <z>0</z>
-                        <width>200</width>
-                        <height>100</height>
+                        <width>188</width>
+                        <height>88</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -151,17 +126,32 @@
                     <instance-variables>
                         <Value>TOUCH</Value>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Size</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>152</x>
-                        <y>181</y>
+                        <x>194</x>
+                        <y>245</y>
                         <z>0</z>
-                        <width>125</width>
-                        <height>125</height>
+                        <width>237</width>
+                        <height>237</height>
                         <depth>0</depth>
-                        <hotspotX>0.504000008</hotspotX>
-                        <hotspotY>0.504000008</hotspotY>
+                        <hotspotX>0.506329119</hotspotX>
+                        <hotspotY>0.506329119</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -176,17 +166,32 @@
                     <instance-variables>
                         <Value>KEYBOARD</Value>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Size</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>150</x>
-                        <y>321</y>
+                        <x>510</x>
+                        <y>245</y>
                         <z>0</z>
-                        <width>125</width>
-                        <height>125</height>
+                        <width>237</width>
+                        <height>237</height>
                         <depth>0</depth>
-                        <hotspotX>0.504000008</hotspotX>
-                        <hotspotY>0.504000008</hotspotY>
+                        <hotspotX>0.506329119</hotspotX>
+                        <hotspotY>0.506329119</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -204,14 +209,76 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>264</x>
-                        <y>274</y>
+                        <x>443</x>
+                        <y>206</y>
                         <z>0</z>
-                        <width>264</width>
-                        <height>96</height>
+                        <width>123</width>
+                        <height>232</height>
+                        <depth>0</depth>
+                        <hotspotX>-0.040650405</hotspotX>
+                        <hotspotY>0.004310345</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="InputMethodChoiceBtn" uid="18">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Value>TOUCH</Value>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>124</x>
+                        <y>199</y>
+                        <z>0</z>
+                        <width>141</width>
+                        <height>213</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LightArrow" uid="410">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Opacity</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>100</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>2</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>802.704345703</x>
+                        <y>243.370605469</y>
+                        <z>0</z>
+                        <width>76</width>
+                        <height>35</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.514285743</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
