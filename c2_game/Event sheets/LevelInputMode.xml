@@ -71,6 +71,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <variable constant="0" name="DefaultInputMode" sid="2747646596095196" static="0" type="text"></variable>
                 <event-block sid="1838393264849703">
                     <conditions>
                         <condition id="0" name="On function" sid="3956981488705642" type="Function">
@@ -79,6 +80,15 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="8971262092776875">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="4762786987754966" type="System">
+                                    <param id="0" name="Variable">DefaultInputMode</param>
+                                    <param id="1" name="Value">INPUT_MODE_UNDEFINED</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="4319517936360159">
                             <conditions>
                                 <condition id="0" name="Is avaliable" sid="4093815406502854" type="QuestPersistentStorage" />
@@ -96,7 +106,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="7584876171689068" type="System">
                                             <param id="0" name="Variable">CurrentInputMode</param>
-                                            <param id="1" name="Value">INPUT_MODE_UNDEFINED</param>
+                                            <param id="1" name="Value">DefaultInputMode</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -124,9 +134,9 @@
                                 <condition id="-22" name="Else" sid="1333463482606077" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="875207182581787" type="System">
+                                <action id="-9" name="Set value" sid="6941150129818965" type="System">
                                     <param id="0" name="Variable">CurrentInputMode</param>
-                                    <param id="1" name="Value">INPUT_MODE_UNDEFINED</param>
+                                    <param id="1" name="Value">DefaultInputMode</param>
                                 </action>
                             </actions>
                         </event-block>

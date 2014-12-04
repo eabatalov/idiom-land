@@ -4,7 +4,7 @@ var REPLAY_CLIENT_CONFIG = {
 };
 
 // === START THE GAME ===
-QuestGame.bootstrap({   
+QuestGame.bootstrap({
     game : { 
         className : 'IdiomLandGame',
         name : 'IdiomLand quest 1',
@@ -13,7 +13,7 @@ QuestGame.bootstrap({
 
     persistentStorage : {
         className : 'HTML5PersistentStorage',
-        params : []
+        params : ['"game2pre.1"']
     },
 
     levelReplayLoader : {
