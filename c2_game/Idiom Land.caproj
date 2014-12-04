@@ -830,6 +830,28 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="LightArrow" sid="5407333979406966">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="4077136619709281">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116466492839819" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.514286" original-source="C:\Users\Andy\Desktop\method-input\push-etc.png">
+                                <collision-poly>
+                                    <point x="0.0131579" y="0.0285714" />
+                                    <point x="0.907895" y="0.2" />
+                                    <point x="1" y="0.485714" />
+                                    <point x="0.907895" y="0.8" />
+                                    <point x="0.0131579" y="0.971429" />
+                                    <point x="0.105263" y="0.485714" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Common">
                 <object-folder name="Navigation">
@@ -8418,28 +8440,6 @@
                 </object-folder>
             </object-folder>
         </object-folder>
-        <object-type name="LightArrow" sid="5407333979406966">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="4077136619709281">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116466492839819" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.514286" original-source="C:\Users\Andy\Desktop\method-input\push-etc.png">
-                        <collision-poly>
-                            <point x="0.0131579" y="0.0285714" />
-                            <point x="0.907895" y="0.2" />
-                            <point x="1" y="0.485714" />
-                            <point x="0.907895" y="0.8" />
-                            <point x="0.0131579" y="0.971429" />
-                            <point x="0.105263" y="0.485714" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="Levels_Common_VisualObjects_F_Foxy_FoxySimpleFamily" plugin-id="Sprite" sid="3940617487415505">
