@@ -4,7 +4,6 @@
     <name>LevelResultsBriefMain</name>
     <events>
         <include>LevelResultsCommon</include>
-        <include>LevelRecording</include>
         <include>PlatformerLevelSecretsProgress</include>
         <include>PlatformerLevelCoinsProgress</include>
         <event-group description="" sid="8501800471470332" title="Level results brief group">
@@ -15,6 +14,7 @@
                 <variable constant="1" name="FAIL_COLOR_R" sid="5500309230561139" static="0" type="number">240</variable>
                 <variable constant="1" name="FAIL_COLOR_G" sid="7408969497604845" static="0" type="number">51</variable>
                 <variable constant="1" name="FAIL_COLOR_B" sid="9454082368479114" static="0" type="number">29</variable>
+                <variable constant="0" name="IsPopupActive" sid="7423836955213398" static="1" type="number">0</variable>
                 <event-block sid="6071663212213">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="7380802923572911" type="System" />
@@ -30,10 +30,6 @@
                             <actions>
                                 <action id="0" name="Finalize level idioms progress" sid="9066542529292426" type="LevelIdiomProgressTracker" />
                                 <action id="0" name="Save game" sid="7849873616605395" type="QuestGame" />
-                                <action id="0" name="Call function" sid="9317954635243064" type="Function">
-                                    <param id="0" name="Name">&quot;onLevelFinished&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
                                 <action id="0" name="Set text" sid="7225573258372632" type="LevelResultsIdiomsGuessedText">
                                     <param id="0" name="Text">LevelIdiomProgressTracker.getLevelGuessedIdiomsCount &amp; &quot;/&quot; &amp; LevelIdiomProgressTracker.getLevelIdiomsCount</param>
                                 </action>
@@ -227,51 +223,81 @@
                             <param id="0" name="Object">LevelNextBtn</param>
                         </condition>
                         <condition id="-9" name="Is visible" sid="5391992012039003" type="LevelNextBtn" />
+                        <condition id="-14" name="Compare variable" sid="7386954451565772" type="System">
+                            <param id="0" name="Variable">IsPopupActive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="8730350578672433">
+                        <event-block sid="5409839862677707">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="360642262469873" type="Function">
+                                    <param id="0" name="Name">&quot;ShowPopupIfNeeded&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8189600599869268">
                             <conditions>
-                                <condition id="2" name="Is level succeeded" sid="5965373000315623" type="LevelIdiomProgressTracker" />
+                                <condition id="-8" name="Compare two values" sid="3899384284234853" type="System">
+                                    <param id="0" name="First value">Function.ReturnValue</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="2010406503643612">
+                                <event-block sid="8730350578672433">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="9406768795089482" type="System">
-                                            <param id="0" name="First value">LevelIdiomProgressTracker.getNextLevelName</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Second value">&quot;&quot;</param>
-                                        </condition>
+                                        <condition id="2" name="Is level succeeded" sid="5965373000315623" type="LevelIdiomProgressTracker" />
                                     </conditions>
-                                    <actions>
-                                        <action id="-25" name="Go to layout (by name)" sid="7134485946036635" type="System">
-                                            <param id="0" name="Layout">LevelIdiomProgressTracker.getNextLevelName</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="2010406503643612">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="9406768795089482" type="System">
+                                                    <param id="0" name="First value">LevelIdiomProgressTracker.getNextLevelName</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="5150309339472747" type="Function">
+                                                    <param id="0" name="Name">&quot;onGoToLevel&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="-25" name="Go to layout (by name)" sid="7134485946036635" type="System">
+                                                    <param id="0" name="Layout">LevelIdiomProgressTracker.getNextLevelName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>TODO: game finished!</comment>
+                                        <event-block sid="5979640010454225">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="861198748816813" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-2" name="Go to layout" sid="1628906960763652" type="System">
+                                                    <param id="0" name="Layout">LevelsMenu</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
-                                <comment>TODO: game finished!</comment>
-                                <event-block sid="5979640010454225">
+                                <event-block sid="8352613407998035">
                                     <conditions>
-                                        <condition id="-22" name="Else" sid="861198748816813" type="System" />
+                                        <condition id="-22" name="Else" sid="4153544823653079" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-2" name="Go to layout" sid="1628906960763652" type="System">
-                                            <param id="0" name="Layout">LevelsMenu</param>
+                                        <action id="-2" name="Go to layout" sid="4723239989644491" type="System">
+                                            <param id="0" name="Layout">LevelResultsNeedAllIdioms</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="8352613407998035">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="4153544823653079" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="4723239989644491" type="System">
-                                    <param id="0" name="Layout">LevelResultsNeedAllIdioms</param>
-                                </action>
-                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -280,13 +306,83 @@
                         <condition id="3" name="On touched object" sid="4574369218737592" type="Touch">
                             <param id="0" name="Object">LevelResultsBriefViewIdiomsButton</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="5711112355856089" type="LevelResultsBriefViewIdiomsButton" />
+                        <condition id="-14" name="Compare variable" sid="2941298316986237" type="System">
+                            <param id="0" name="Variable">IsPopupActive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="4229479487183978" type="System">
-                            <param id="0" name="Layout">LevelResultsDetailed</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5324985905120207">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="3547566884559923" type="Function">
+                                    <param id="0" name="Name">&quot;ShowPopupIfNeeded&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="909326185170513">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="243044191616444" type="System">
+                                    <param id="0" name="First value">Function.ReturnValue</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="4229479487183978" type="System">
+                                    <param id="0" name="Layout">LevelResultsDetailed</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
+                <event-group description="" sid="9805860923443649" title="Level results brief popup handling">
+                    <sub-events>
+                        <event-block sid="393401933983163">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8375637056932051" type="Function">
+                                    <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3974977265764213" type="System">
+                                    <param id="0" name="Variable">IsPopupActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3985360384050321">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9736082352793984" type="Function">
+                                    <param id="0" name="Name">&quot;onPopupShown&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2507813834143186" type="System">
+                                    <param id="0" name="Variable">IsPopupActive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1288573461706937">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2892841624707721" type="Function">
+                                    <param id="0" name="Name">&quot;onPopupHidden&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4093065004514744" type="System">
+                                    <param id="0" name="Variable">IsPopupActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>

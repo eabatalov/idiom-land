@@ -75,6 +75,110 @@
         <object-folder name="Menus">
             <object-folder name="LevelResults">
                 <object-folder name="Brief">
+                    <object-folder name="Popup">
+                        <object-type name="LevelResultsPopupBackground" sid="513349771590011">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4898235038092991" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Eugene\Desktop\finalpopup\background.png">
+                                        <collision-poly>
+                                            <point x="0.00576369" y="0.0102564" />
+                                            <point x="0.994236" y="0.0102564" />
+                                            <point x="0.994236" y="0.989744" />
+                                            <point x="0.00576369" y="0.989744" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="LevelResultsPopupHeader" sid="2190073816392384">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2298571033012879" speed="5">
+                                    <frame duration="1" hotspotX="0.50077" hotspotY="0.506849" original-source="C:\Users\Eugene\Desktop\finalpopup\flag.png">
+                                        <collision-poly>
+                                            <point x="0.0539291" y="0.479452" />
+                                            <point x="0.49923" y="0.136986" />
+                                            <point x="0.967643" y="0.287671" />
+                                            <point x="0.983051" y="0.849315" />
+                                            <point x="0.49923" y="0.616438" />
+                                            <point x="0.0200308" y="0.821918" />
+                                            <point x="0.00770416" y="0.493151" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="LevelResultsPopupBtnNo" sid="3945021884186308">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="9739193193989818" speed="5">
+                                    <frame duration="1" hotspotX="0.503067" hotspotY="0.5" original-source="C:\Users\Eugene\Desktop\finalpopup\no.png">
+                                        <collision-poly>
+                                            <point x="0.0797546" y="0.147727" />
+                                            <point x="0.496933" y="0" />
+                                            <point x="0.920245" y="0.147727" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.920245" y="0.852273" />
+                                            <point x="0.496933" y="1" />
+                                            <point x="0.0797546" y="0.852273" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="1745230792987487" speed="5">
+                                    <frame duration="1" hotspotX="0.503067" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.0797546" y="0.147727" />
+                                            <point x="0.496933" y="0" />
+                                            <point x="0.920245" y="0.147727" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.920245" y="0.852273" />
+                                            <point x="0.496933" y="1" />
+                                            <point x="0.0797546" y="0.852273" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="LevelResultsPopupBtnYes" sid="6109788188211813">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="1462279475751155" speed="5">
+                                    <frame duration="1" hotspotX="0.503067" hotspotY="0.5" original-source="C:\Users\Eugene\Desktop\finalpopup\yes.png">
+                                        <collision-poly>
+                                            <point x="0.0797546" y="0.147727" />
+                                            <point x="0.496933" y="0" />
+                                            <point x="0.920245" y="0.147727" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.920245" y="0.852273" />
+                                            <point x="0.496933" y="1" />
+                                            <point x="0.0797546" y="0.852273" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="9470125626173065" speed="5">
+                                    <frame duration="1" hotspotX="0.503067" hotspotY="0.5">
+                                        <collision-poly>
+                                            <point x="0.0797546" y="0.147727" />
+                                            <point x="0.496933" y="0" />
+                                            <point x="0.920245" y="0.147727" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.920245" y="0.852273" />
+                                            <point x="0.496933" y="1" />
+                                            <point x="0.0797546" y="0.852273" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="LevelResultsPopupText" sid="9666782739369366">
+                            <plugin id="Text" />
+                        </object-type>
+                    </object-folder>
                     <object-type name="LevelResultsIdiomsGuessedText" sid="591804687404442">
                         <plugin id="Text" />
                     </object-type>
@@ -99,25 +203,6 @@
                     </object-type>
                     <object-type name="LevelResultsSecretsFoundText" sid="8324317963687748">
                         <plugin id="Text" />
-                    </object-type>
-                    <object-type name="LevelResultsBriefHeader" sid="666875728150185">
-                        <plugin id="Sprite" />
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4168159947328503" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.506329">
-                                    <collision-poly>
-                                        <point x="0.0479115" y="0.493671" />
-                                        <point x="0.5" y="0.177215" />
-                                        <point x="0.969287" y="0.316456" />
-                                        <point x="0.985258" y="0.493671" />
-                                        <point x="0.972973" y="0.721519" />
-                                        <point x="0.5" y="0.835443" />
-                                        <point x="0.0479115" y="0.506329" />
-                                        <point x="0.0479115" y="0.493671" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                        </animation-folder>
                     </object-type>
                     <object-type name="LevelResultsIdiomsGuessedBg" sid="7561690392124775">
                         <plugin id="Sprite" />
@@ -8776,6 +8861,7 @@
                 <event-sheet>LevelResultsDetailedMain.xml</event-sheet>
                 <event-sheet>LevelResultsCommon.xml</event-sheet>
                 <event-sheet>LevelResultsNeedAllIdiomsMain.xml</event-sheet>
+                <event-sheet>LevelResultsBriefMainPopup.xml</event-sheet>
             </event-folder>
             <event-folder name="MainMenu">
                 <event-sheet>MainMenuMain.xml</event-sheet>
