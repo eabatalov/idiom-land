@@ -80,65 +80,77 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="8971262092776875">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="4762786987754966" type="System">
-                                    <param id="0" name="Variable">DefaultInputMode</param>
-                                    <param id="1" name="Value">INPUT_MODE_UNDEFINED</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4319517936360159">
+                        <event-block sid="5115388367991001">
                             <conditions>
-                                <condition id="0" name="Is avaliable" sid="4093815406502854" type="QuestPersistentStorage" />
+                                <condition id="-14" name="Compare variable" sid="4332039895397184" type="System">
+                                    <param id="0" name="Variable">CurrentInputMode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">INPUT_MODE_UNDEFINED</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="4179117634227505">
+                                <event-block sid="8971262092776875">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="4762786987754966" type="System">
+                                            <param id="0" name="Variable">DefaultInputMode</param>
+                                            <param id="1" name="Value">INPUT_MODE_UNDEFINED</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4319517936360159">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="4987787124678731" type="System">
-                                            <param id="0" name="First value">QuestPersistentStorage.get(STORAGE_KEY_INPUT)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">&quot;&quot;</param>
-                                        </condition>
+                                        <condition id="0" name="Is avaliable" sid="4093815406502854" type="QuestPersistentStorage" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="4179117634227505">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="4987787124678731" type="System">
+                                                    <param id="0" name="First value">QuestPersistentStorage.get(STORAGE_KEY_INPUT)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="7584876171689068" type="System">
+                                                    <param id="0" name="Variable">CurrentInputMode</param>
+                                                    <param id="1" name="Value">DefaultInputMode</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="1228594308472342">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="5578818582677264" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="8006014612139704">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="5960662371562133" type="System">
+                                                            <param id="0" name="Variable">CurrentInputMode</param>
+                                                            <param id="1" name="Value">QuestPersistentStorage.get(STORAGE_KEY_INPUT)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="8841442847440736">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1333463482606077" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="7584876171689068" type="System">
+                                        <action id="-9" name="Set value" sid="6941150129818965" type="System">
                                             <param id="0" name="Variable">CurrentInputMode</param>
                                             <param id="1" name="Value">DefaultInputMode</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="1228594308472342">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="5578818582677264" type="System" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="8006014612139704">
-                                            <conditions />
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="5960662371562133" type="System">
-                                                    <param id="0" name="Variable">CurrentInputMode</param>
-                                                    <param id="1" name="Value">QuestPersistentStorage.get(STORAGE_KEY_INPUT)</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="8841442847440736">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="1333463482606077" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="6941150129818965" type="System">
-                                    <param id="0" name="Variable">CurrentInputMode</param>
-                                    <param id="1" name="Value">DefaultInputMode</param>
-                                </action>
-                            </actions>
                         </event-block>
                         <event-block sid="700754410248729">
                             <conditions />
