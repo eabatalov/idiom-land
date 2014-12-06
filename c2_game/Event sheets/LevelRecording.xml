@@ -3,8 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>LevelRecording</name>
     <events>
+        <include>PlayerId</include>
         <comment>Also included by level results brief because it finishes the replay</comment>
-        <event-group description="" sid="3260674428638226" title="Local var group 6">
+        <event-group description="" sid="3260674428638226" title="Level recording">
             <sub-events>
                 <variable constant="1" name="CONFIG_IS_RECORDING_ENABLED" sid="4974372175168924" static="1" type="number">1</variable>
                 <variable constant="0" name="IS_RECORDING_ENABLED" sid="6244777087061597" static="1" type="number">0</variable>
@@ -38,6 +39,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <variable constant="0" name="playerId" sid="8515459346232434" static="0" type="text"></variable>
                         <event-block sid="952660290480979">
                             <conditions />
                             <actions>
@@ -49,6 +51,18 @@
                                 <action id="-9" name="Set value" sid="5276580579234256" type="System">
                                     <param id="0" name="Variable">IS_RECORDING_ENABLED</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="1700331802647662" type="Function">
+                                    <param id="0" name="Name">&quot;getPlayerId&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2435456504707083" type="System">
+                                    <param id="0" name="Variable">playerId</param>
+                                    <param id="1" name="Value">Function.ReturnValue</param>
+                                </action>
+                                <action id="5" name="Custom record" sid="9081921311406686" type="QuestLevelRecording">
+                                    <param id="0" name="Custom type">&quot;PLAYER_ID&quot;</param>
+                                    <param id="1" name="Custom data">playerId</param>
                                 </action>
                                 <action id="14" name="Log" sid="2721675147438611" type="Browser">
                                     <param id="0" name="Type">0</param>
