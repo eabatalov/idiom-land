@@ -16,11 +16,17 @@
     <link href="css.min.css" rel="stylesheet" media="screen">
     <!--<link rel="subresource" href="js.min.js">-->
     <script type="text/javascript">
-        function nonBlockingScriptByURL(url) {
+        function nonBlockingScriptByURL(url, props) {
+            props = props || {};
             var script = document.createElement('script');
             script.type = 'text/javascript';
             script.src = url;
             script.async = false;
+            for (var propName in props) {
+                if (props.hasOwnProperty(propName)) {
+                    script.setAttribute(propName, props[propName]);
+                }
+            }
             document.head.appendChild(script);
         }
         function nonBlockingScript(scriptText) {
@@ -78,8 +84,11 @@
                         <form action="sendmail.php" method="post" class="subscribe-form subscribe-form-home"
                               id="subscribe-form">
                             <input type="email" name="email" class="subscribe-input subscribe-input-home"
-                                   placeholder="Email:" required>
-                            <button type="submit" class="subscribe-submit subscribe-submit-home">Notify&nbspme</button>
+                                data-untorch-element="email"
+                                placeholder="Email:" required>
+                            <button type="submit"
+                                data-untorch-element="submit"
+                                class="subscribe-submit subscribe-submit-home">Notify&nbspme</button>
                         </form>
                     </div>
                     <div id="preview" class="subscribe-form-home subscribe-form-success"></div>
@@ -310,10 +319,13 @@
 
                 <div id="newsletter_form">
                     <form action="sendmail.php" method="post" class="subscribe-form subscribe-form-footer"
-                          id="subscribe-form">
+                        id="subscribe-form">
                         <input type="email" name="email" class="subscribe-input subscribe-input-footer"
-                               placeholder="Email:" required>
-                        <button type="submit" class="subscribe-submit subscribe-submit-footer">Notify&nbspme</button>
+                            data-untorch-element="email"
+                            placeholder="Email:" required>
+                        <button type="submit"
+                            data-untorch-element="submit"
+                            class="subscribe-submit subscribe-submit-footer">Notify&nbspme</button>
                     </form>
                 </div>
                 <div id="preview" class="subscribe-form-footer subscribe-form-success"></div>

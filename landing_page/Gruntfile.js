@@ -19,7 +19,8 @@ module.exports = function(grunt) {
         //main should be here because it uses upper scripts
         '<%= dirs.in.js %>main.js',
         '<%= dirs.in.share %>share.js',
-        '<%= dirs.in.js %>analytics.js'
+        '<%= dirs.in.js %>analytics.js',
+        '<%= dirs.in.js %>referral.js'
     ];
 
     var cssFilesToProc = [
@@ -32,6 +33,7 @@ module.exports = function(grunt) {
         '<%= dirs.in.css %>nivo_lightbox_themes/default/default.css',
         '<%= dirs.in.css %>colors.css',
         '<%= dirs.in.css %>responsive.css',
+        '<%= dirs.in.css %>referral.css',
         '<%= dirs.in.share %>share.css'
     ];
 
