@@ -8768,6 +8768,7 @@
                             <event-folder name="SideMenu">
                                 <event-sheet>LevelUISideMenu.xml</event-sheet>
                                 <event-sheet>LevelUIPauseBtn.xml</event-sheet>
+                                <event-sheet>LevelUISideMenuSound.xml</event-sheet>
                             </event-folder>
                             <event-sheet>LevelEngineUILib.xml</event-sheet>
                             <event-sheet>LevelUIReplayPlaybackControls.xml</event-sheet>
@@ -8797,6 +8798,7 @@
                             <event-sheet>TestDialogLevelEngineUIProgressLine.xml</event-sheet>
                             <event-sheet>TestDialogLevelEngineUIQuestion.xml</event-sheet>
                             <event-sheet>TestDialogLevelEngineUILib.xml</event-sheet>
+                            <event-sheet>TestDialogLevelEngineUIQuestionSound.xml</event-sheet>
                         </event-folder>
                         <event-sheet>TestDialogLevelEngine.xml</event-sheet>
                     </event-folder>
@@ -8847,15 +8849,18 @@
                 </event-folder>
             </event-folder>
             <event-folder name="IdiomLandTestDialogLevel">
+                <event-folder name="UI">
+                    <event-sheet>IdiomLandTestDialogLevelUIEditorAnimation.xml</event-sheet>
+                    <event-sheet>IdiomLandTestDialogLevelUIQuestion.xml</event-sheet>
+                    <event-sheet>IdiomLandTestDialogLevelUIQuestionShowAnimation.xml</event-sheet>
+                    <event-sheet>IdiomLandTestDialogLevelUIEditorSound.xml</event-sheet>
+                </event-folder>
                 <event-sheet>IdiomLandTestDialogLevelLayoutMain.xml</event-sheet>
                 <event-sheet>IdiomLandTestDialogLevelAnimsInit.xml</event-sheet>
-                <event-sheet>IdiomLandTestDialogLevelUIEditorAnimation.xml</event-sheet>
-                <event-sheet>IdiomLandTestDialogLevelUIQuestionShowAnimation.xml</event-sheet>
                 <event-sheet>IdiomLandTestDialogLevelBootstrap.xml</event-sheet>
                 <event-sheet>IdiomLandTestDialogLevelDebug.xml</event-sheet>
                 <event-sheet>IdiomLandTestDialogLevelFinish.xml</event-sheet>
                 <event-sheet>IdiomLandTestDialogLevelProgressAnimation.xml</event-sheet>
-                <event-sheet>IdiomLandTestDialogLevelUIQuestion.xml</event-sheet>
                 <event-sheet>IdiomLandTestDialogLevelIntro.xml</event-sheet>
             </event-folder>
         </event-folder>
@@ -8935,6 +8940,11 @@
     </global-instances>
     <sounds-folder>
         <file name="switch25.ogg" />
+        <file name="bookFlip2.ogg" />
+        <file name="creak3.ogg" />
+        <file name="Chpok.m4a" />
+        <file name="Chpok.ogg" />
+        <file name="switch19.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

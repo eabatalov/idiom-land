@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TestDialogLevelEngineUIQuestionSound</name>
+    <events>
+        <event-group description="" sid="1746365212666308" title="Test dialog UI question sound">
+            <sub-events>
+                <event-block sid="9384930837164418">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1884300737805887" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogLevelQuestionPlayHideSound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="2087391749707814" type="Audio">
+                            <param id="0" name="Audio file">bookFlip2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5790193525176229">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4084658484072985" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogLevelQuestionStopHideSound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="7263236966231982">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3948468694582244" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogLevelQuestionPlayShowSound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="9011769261386964" type="Audio">
+                            <param id="0" name="Audio file">bookFlip2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3149203852191018">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8515601092219059" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogLevelQuestionStopShowSound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

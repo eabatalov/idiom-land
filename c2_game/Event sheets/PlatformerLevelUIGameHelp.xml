@@ -74,6 +74,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="1895286693968847" type="Function">
+                                            <param id="0" name="Name">&quot;LevelHelpSwitchPlaySound&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                         <action id="-15" name="Set visible" sid="8943880971199881" type="GameHelpBg">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
@@ -140,6 +144,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="6013666655081846" type="Function">
+                                    <param id="0" name="Name">&quot;LevelHelpSwitchPlaySound&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="0" name="Set text" sid="6344967101229111" type="GameHelpTxt">
                                     <param id="0" name="Text">&quot;Talk to London people and find a way to the city center.&quot; &amp; newline &amp; &quot;You can buy a bus ticket or take a taxi. Find some coins for that.&quot;</param>
                                 </action>
@@ -168,6 +176,21 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="9330668321499976">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2635095268757742" type="Function">
+                            <param id="0" name="Name">&quot;LevelHelpSwitchPlaySound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="7615428944880569" type="Audio">
+                            <param id="0" name="Audio file">bookFlip2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

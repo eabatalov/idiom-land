@@ -17,6 +17,10 @@
                         <event-block sid="2519827198606203">
                             <conditions />
                             <actions>
+                                <action id="0" name="Call function" sid="8915553666229226" type="Function">
+                                    <param id="0" name="Name">&quot;PlayQuestionSituationPhotoChangeSound&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="4" name="Set animation" sid="875810868366905" type="TestDialogQuestionSituationPhoto">
                                     <param id="0" name="Animation">LevelIdiomProgressTracker.getLevelName &amp; &quot;_&quot; &amp; TestDialogLevelRuntime.getQuestionSectionPolyProp(&quot;name&quot;)</param>
                                     <param id="1" name="From">1</param>
@@ -24,6 +28,21 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="5694010220039567">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6842847736665843" type="Function">
+                            <param id="0" name="Name">&quot;PlayQuestionSituationPhotoChangeSound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="7019019938352652" type="Audio">
+                            <param id="0" name="Audio file">switch19</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

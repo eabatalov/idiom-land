@@ -97,6 +97,36 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="5454355166852941">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="1407331924743039" type="System">
+                                    <param id="0" name="First value">abs(SuccessTargetHeight - TestDialogProgressLineSuccess.Height)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">PROGRESS_LINE_CHANGE_PRECISION</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="349018347885239" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogProgressLinePlaySuccessGrowSound&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9979604223685523">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9735131495294031" type="System">
+                                    <param id="0" name="First value">abs(FailTargetHeight - TestDialogProgressLineFail.Height)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">PROGRESS_LINE_CHANGE_PRECISION</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2297841237019452" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogProgressLinePlayFailGrowSound&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="2085901158119251">
@@ -141,6 +171,10 @@
                                     <param id="0" name="Variable">ProgressLineState</param>
                                     <param id="1" name="Value">PROGRESS_LINE_STABLE</param>
                                 </action>
+                                <action id="0" name="Call function" sid="1974874233947091" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogProgressLineChangeSoundStop&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="0" name="Call function" sid="1127109824045565" type="Function">
                                     <param id="0" name="Name">&quot;onTestDialogProgressLineUpdated&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -149,6 +183,57 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-group description="" sid="8448552444709393" title="Test dialog progress line animation sound">
+                    <sub-events>
+                        <variable constant="1" name="PROGRESS_LINE_CHANGE_SUCCESS_SOUND_TAG" sid="1078694684508949" static="0" type="text">PROGRESS_LINE_CHANGE_SUCCESS</variable>
+                        <variable constant="1" name="PROGRESS_LINE_CHANGE_FAIL_SOUND_TAG" sid="8799759050624943" static="0" type="text">PROGRESS_LINE_CHANGE_FAIL</variable>
+                        <event-block sid="4445830201494158">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2463348730517843" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogProgressLinePlaySuccessGrowSound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="4955949638370099" type="Audio">
+                                    <param id="0" name="Audio file">Chpok</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">PROGRESS_LINE_CHANGE_SUCCESS_SOUND_TAG</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4277006821084627">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9252625469586362" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogProgressLinePlayFailGrowSound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="4116546870818616" type="Audio">
+                                    <param id="0" name="Audio file">creak3</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">PROGRESS_LINE_CHANGE_FAIL_SOUND_TAG</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5104800215135257">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9666929185408212" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogProgressLineChangeSoundStop&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="508012446669636" type="Audio">
+                                    <param id="0" name="Tag">PROGRESS_LINE_CHANGE_SUCCESS_SOUND_TAG</param>
+                                </action>
+                                <action id="6" name="Stop" sid="5055694569134833" type="Audio">
+                                    <param id="0" name="Tag">PROGRESS_LINE_CHANGE_FAIL_SOUND_TAG</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>
