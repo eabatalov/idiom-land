@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="b11">
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r2">
     <folder id="0">
         <file id="0" name="body.png" width="92" height="99" pivot_x="0" pivot_y="1"/>
         <file id="1" name="half-hand.png" width="16" height="37" pivot_x="0" pivot_y="1"/>
@@ -12,6 +12,9 @@
         <file id="8" name="smile1.png" width="23" height="11" pivot_x="0" pivot_y="1"/>
         <file id="9" name="smile3.png" width="23" height="11" pivot_x="0" pivot_y="1"/>
         <file id="10" name="smile4.png" width="23" height="11" pivot_x="0" pivot_y="1"/>
+        <file id="11" name="talk.wav" type="sound"/>
+        <file id="12" name="no.wav" type="sound"/>
+        <file id="13" name="yes.wav" type="sound"/>
     </folder>
     <entity id="0" name="teacher">
         <obj_info name="teacher_body" realname="body" type="sprite">
@@ -1402,25 +1405,25 @@
                 </key>
             </timeline>
             <timeline id="5" obj="5" name="right-brow">
-                <key id="0" spin="0">
-                    <object folder="0" file="5" x="-0.050594" y="1.74827" angle="0"/>
+                <key id="0">
+                    <object folder="0" file="5" x="-0.050594" y="1.74827"/>
                 </key>
-                <key id="1" time="1426" spin="0">
+                <key id="1" time="1426">
                     <object folder="0" file="5" x="-0.050594" y="1.74827" angle="0"/>
                 </key>
                 <key id="2" time="1830" spin="0">
-                    <object folder="0" file="5" x="-0.050594" y="1.74827" angle="0"/>
+                    <object folder="0" file="5" x="-0.050594" y="1.74827"/>
                 </key>
             </timeline>
             <timeline id="6" obj="6" name="eyes">
-                <key id="0" spin="0">
-                    <object folder="0" file="6" x="0.448278" y="1.8372" angle="0"/>
+                <key id="0">
+                    <object folder="0" file="6" x="0.448278" y="1.8372"/>
                 </key>
-                <key id="1" time="1426" spin="0">
+                <key id="1" time="1426">
                     <object folder="0" file="6" x="0.448278" y="1.8372" angle="0"/>
                 </key>
                 <key id="2" time="1830" spin="0">
-                    <object folder="0" file="6" x="0.448278" y="1.8372" angle="0"/>
+                    <object folder="0" file="6" x="0.448278" y="1.8372"/>
                 </key>
             </timeline>
             <timeline id="7" obj="7" name="smile1">
@@ -1573,6 +1576,23 @@
                     <bone x="4.871884" y="10.018221" angle="272.546405"/>
                 </key>
             </timeline>
+            <soundline id="-1" name="no">
+                <key id="0" time="2">
+                    <object folder="0" file="12"/>
+                </key>
+                <key id="1" time="307">
+                    <object folder="0" file="12"/>
+                </key>
+                <key id="2" time="615">
+                    <object folder="0" file="12"/>
+                </key>
+                <key id="3" time="924">
+                    <object folder="0" file="12"/>
+                </key>
+                <key id="4" time="1233">
+                    <object folder="0" file="12"/>
+                </key>
+            </soundline>
         </animation>
         <animation id="3" name="right" length="2000" interval="100" looping="false">
             <mainline>
@@ -1861,6 +1881,14 @@
                     <bone x="4.871884" y="10.018221" angle="272.546405"/>
                 </key>
             </timeline>
+            <soundline id="-1" name="yes">
+                <key id="0" time="312">
+                    <object folder="0" file="13"/>
+                </key>
+                <key id="1" time="1011">
+                    <object folder="0" file="13"/>
+                </key>
+            </soundline>
         </animation>
         <animation id="4" name="talk" length="3000" interval="100" looping="false">
             <mainline>
@@ -2285,18 +2313,18 @@
             </timeline>
             <timeline id="5" obj="5" name="right-brow">
                 <key id="0" spin="0">
-                    <object folder="0" file="5" x="-0.050594" y="1.74827" angle="0"/>
+                    <object folder="0" file="5" x="-0.050594" y="1.74827"/>
                 </key>
                 <key id="1" time="2626" spin="0">
-                    <object folder="0" file="5" x="-0.050594" y="1.74827" angle="0"/>
+                    <object folder="0" file="5" x="-0.050594" y="1.74827"/>
                 </key>
             </timeline>
             <timeline id="6" obj="6" name="eyes">
-                <key id="0" spin="0">
+                <key id="0" spin="-1">
                     <object folder="0" file="6" x="0.448278" y="1.8372" angle="0"/>
                 </key>
-                <key id="1" time="2626" spin="0">
-                    <object folder="0" file="6" x="0.448278" y="1.8372" angle="0"/>
+                <key id="1" time="2626">
+                    <object folder="0" file="6" x="0.448278" y="1.8372" angle="360"/>
                 </key>
             </timeline>
             <timeline id="7" obj="7" name="smile1">
@@ -2476,6 +2504,26 @@
                     <bone x="4.871884" y="10.018221" angle="272.546405"/>
                 </key>
             </timeline>
+            <soundline id="-1" name="talk">
+                <key id="0" time="223">
+                    <object folder="0" file="11"/>
+                </key>
+                <key id="1" time="538">
+                    <object folder="0" file="11"/>
+                </key>
+                <key id="2" time="851">
+                    <object folder="0" file="11"/>
+                </key>
+                <key id="3" time="1169">
+                    <object folder="0" file="11"/>
+                </key>
+                <key id="4" time="1488">
+                    <object folder="0" file="11"/>
+                </key>
+                <key id="5" time="1805">
+                    <object folder="0" file="11"/>
+                </key>
+            </soundline>
         </animation>
     </entity>
 </spriter_data>
