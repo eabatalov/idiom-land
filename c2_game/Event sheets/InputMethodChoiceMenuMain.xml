@@ -79,7 +79,12 @@
                             <param id="0" name="Object">InputMethodChoiceRadioBtn</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Call function" sid="3470987118698021" type="Function">
+                            <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="649480675725842">
                             <conditions>
@@ -120,7 +125,12 @@
                             <param id="0" name="Object">InputMethodChoiceBtn</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Call function" sid="4883524322435897" type="Function">
+                            <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="6411729000016106">
                             <conditions>
@@ -264,6 +274,10 @@
                                     <param id="0" name="Animation">&quot;Active&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="7291576786530583" type="Function">
+                                    <param id="0" name="Name">&quot;onMenuBtnDown&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="5043881460793209">
@@ -289,6 +303,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="4849272114596522" type="Function">
+                                            <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                         <action id="-2" name="Go to layout" sid="4868449855813382" type="System">
                                             <param id="0" name="Layout">LevelsMenu</param>
                                         </action>

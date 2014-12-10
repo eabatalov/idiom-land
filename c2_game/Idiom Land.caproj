@@ -11,6 +11,7 @@
     <saved-with-version>19000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
@@ -4567,6 +4568,9 @@
                             <object-type name="Touch" sid="3923997852658944">
                                 <plugin id="Touch" />
                             </object-type>
+                            <object-type name="Audio" sid="3113653099756406">
+                                <plugin id="Audio" />
+                            </object-type>
                         </object-folder>
                         <object-folder name="UILib">
                             <object-folder name="SideMenu">
@@ -8877,6 +8881,7 @@
             </event-folder>
             <event-folder name="Common">
                 <event-sheet>MenuCommon.xml</event-sheet>
+                <event-sheet>MenuSound.xml</event-sheet>
             </event-folder>
         </event-folder>
         <event-folder name="Common">
@@ -8911,8 +8916,26 @@
                 <runtimecontollerclassname>TestDialogRuntimeController</runtimecontollerclassname>
             </properties>
         </global-instance>
+        <global-instance type="Audio" uid="416">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>None</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="switch25.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

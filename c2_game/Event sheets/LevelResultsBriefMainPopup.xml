@@ -271,6 +271,10 @@
                                         <condition id="-9" name="Is visible" sid="8606526274370644" type="LevelResultsPopupBtnYes" />
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="9728105799056976" type="Function">
+                                            <param id="0" name="Name">&quot;onMenuBtnDown&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                         <action id="4" name="Set animation" sid="4298748240506995" type="LevelResultsPopupBtnYes">
                                             <param id="0" name="Animation">&quot;Active&quot;</param>
                                             <param id="1" name="From">1</param>
@@ -290,6 +294,10 @@
                                         <condition id="-9" name="Is visible" sid="4267892912469859" type="LevelResultsPopupBtnNo" />
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="8903271602464817" type="Function">
+                                            <param id="0" name="Name">&quot;onMenuBtnDown&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                         <action id="4" name="Set animation" sid="7600165606515768" type="LevelResultsPopupBtnNo">
                                             <param id="0" name="Animation">&quot;Active&quot;</param>
                                             <param id="1" name="From">1</param>
@@ -335,6 +343,10 @@
                                                 <condition id="-9" name="Is visible" sid="2707087947479685" type="LevelResultsPopupBtnYes" />
                                             </conditions>
                                             <actions>
+                                                <action id="0" name="Call function" sid="4497146435857455" type="Function">
+                                                    <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
                                                 <action id="0" name="Call function" sid="7672554497501421" type="Function">
                                                     <param id="0" name="Name">&quot;PromoPopupYesBtnClicked&quot;</param>
                                                     <param id="1" name="Parameter {n}"></param>
@@ -370,13 +382,16 @@
                                                 <condition id="-9" name="Is visible" sid="2904497927745506" type="LevelResultsPopupBtnNo" />
                                             </conditions>
                                             <actions>
+                                                <action id="0" name="Call function" sid="7042261155255014" type="Function">
+                                                    <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
                                                 <action id="0" name="Call function" sid="6461252423887035" type="Function">
                                                     <param id="0" name="Name">&quot;PromoPopupNoBtnClicked&quot;</param>
                                                     <param id="1" name="Parameter {n}"></param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <include>PlayerId</include>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
