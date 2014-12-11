@@ -215,6 +215,22 @@
 						]
 					},
 					"name": "start",
+					"soundline": [
+						{
+							"id": -1,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 0,
+										"folder": 5
+									},
+									"time": 1
+								}
+							],
+							"name": "notification_show"
+						}
+					],
 					"timeline": [
 						{
 							"id": 0,
@@ -861,6 +877,22 @@
 						]
 					},
 					"name": "cross",
+					"soundline": [
+						{
+							"id": -1,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 2,
+										"folder": 5
+									},
+									"time": 2
+								}
+							],
+							"name": "notification_cross"
+						}
+					],
 					"timeline": [
 						{
 							"id": 0,
@@ -1304,6 +1336,22 @@
 						]
 					},
 					"name": "end",
+					"soundline": [
+						{
+							"id": -1,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 1,
+										"folder": 5
+									},
+									"time": 2
+								}
+							],
+							"name": "notification_hide"
+						}
+					],
 					"timeline": [
 						{
 							"id": 0,
@@ -1690,9 +1738,29 @@
 			],
 			"id": 4,
 			"name": "text-title"
+		},
+		{
+			"file": [
+				{
+					"id": 0,
+					"name": "notification_show.wav",
+					"type": "sound"
+				},
+				{
+					"id": 1,
+					"name": "notification_hide.wav",
+					"type": "sound"
+				},
+				{
+					"id": 2,
+					"name": "notification_cross.wav",
+					"type": "sound"
+				}
+			],
+			"id": 5
 		}
 	],
 	"generator": "BrashMonkey Spriter",
-	"generator_version": "b11",
+	"generator_version": "r2",
 	"scon_version": "1.0"
 }

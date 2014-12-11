@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="b11">
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r2">
     <folder id="0" name="body">
         <file id="0" name="body/body.png" width="604" height="304" pivot_x="0" pivot_y="1"/>
     </folder>
@@ -17,6 +17,11 @@
     </folder>
     <folder id="4" name="text-title">
         <file id="0" name="text-title/text-title.png" width="101" height="33" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <folder id="5">
+        <file id="0" name="notification_show.wav" type="sound"/>
+        <file id="1" name="notification_hide.wav" type="sound"/>
+        <file id="2" name="notification_cross.wav" type="sound"/>
     </folder>
     <entity id="0" name="entity_000">
         <obj_info name="entity_000_body" realname="body" type="sprite">
@@ -136,6 +141,11 @@
                     <object folder="4" file="0" x="-50" y="138" angle="0"/>
                 </key>
             </timeline>
+            <soundline id="-1" name="notification_show">
+                <key id="0" time="1">
+                    <object folder="5" file="0"/>
+                </key>
+            </soundline>
         </animation>
         <animation id="1" name="idle" length="1000" interval="100">
             <mainline>
@@ -262,6 +272,11 @@
                     <object folder="4" file="0" x="-50" y="138" angle="0"/>
                 </key>
             </timeline>
+            <soundline id="-1" name="notification_cross">
+                <key id="0" time="2">
+                    <object folder="5" file="2"/>
+                </key>
+            </soundline>
         </animation>
         <animation id="3" name="end" length="1000" interval="100" looping="false">
             <mainline>
@@ -352,6 +367,11 @@
                     <object folder="4" file="0" x="4.95935" y="58.597931" angle="0" a="0"/>
                 </key>
             </timeline>
+            <soundline id="-1" name="notification_hide">
+                <key id="0" time="2">
+                    <object folder="5" file="1"/>
+                </key>
+            </soundline>
         </animation>
     </entity>
 </spriter_data>

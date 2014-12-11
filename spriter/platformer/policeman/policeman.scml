@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r1">
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r2">
     <folder id="0" name="body">
         <file id="0" name="body/body.png" width="78" height="128" pivot_x="0" pivot_y="1"/>
     </folder>
@@ -20,6 +20,9 @@
     <folder id="4" name="eyes">
         <file id="0" name="eyes/eyes.png" width="67" height="14" pivot_x="0" pivot_y="1"/>
         <file id="1" name="eyes/eyebrows.png" width="81" height="17" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <folder id="5">
+        <file id="0" name="npc_speach.wav" type="sound"/>
     </folder>
     <entity id="0" name="policeman">
         <obj_info name="policeman_body" realname="body" type="sprite">
@@ -849,6 +852,20 @@
                     <bone x="10.179787" y="24.64449" angle="19.884129"/>
                 </key>
             </timeline>
+            <soundline id="-1" name="npc_speach">
+                <key id="0" time="365">
+                    <object folder="5" file="0"/>
+                </key>
+                <key id="1" time="868">
+                    <object folder="5" file="0"/>
+                </key>
+                <key id="2" time="1373">
+                    <object folder="5" file="0"/>
+                </key>
+                <key id="3" time="1879">
+                    <object folder="5" file="0"/>
+                </key>
+            </soundline>
         </animation>
     </entity>
 </spriter_data>

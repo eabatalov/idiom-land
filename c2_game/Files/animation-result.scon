@@ -5,6 +5,7 @@
 				{
 					"gline": [],
 					"id": 0,
+					"interval": 100,
 					"length": 2000,
 					"looping": "false",
 					"mainline": {
@@ -15,11 +16,11 @@
 								"object_ref": [
 									{
 										"abs_a": 1,
-										"abs_angle": 360,
+										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": 0.367816091954023,
-										"abs_scale_y": 0.36781609195402337,
+										"abs_scale_x": 0.367816,
+										"abs_scale_y": 0.367816,
 										"abs_x": 0,
 										"abs_y": 0,
 										"file": 0,
@@ -32,11 +33,11 @@
 									},
 									{
 										"abs_a": 1,
-										"abs_angle": 360,
+										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": 0.6964285714285717,
-										"abs_scale_y": 0.6964285714285715,
+										"abs_scale_x": 0.696429,
+										"abs_scale_y": 0.696429,
 										"abs_x": 0,
 										"abs_y": 0,
 										"file": 0,
@@ -49,11 +50,11 @@
 									},
 									{
 										"abs_a": 0,
-										"abs_angle": 360,
+										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": 0.526785714285714,
-										"abs_scale_y": 0.526785714285714,
+										"abs_scale_x": 0.526786,
+										"abs_scale_y": 0.526786,
 										"abs_x": 0,
 										"abs_y": -1,
 										"file": 1,
@@ -194,6 +195,22 @@
 						]
 					},
 					"name": "win",
+					"soundline": [
+						{
+							"id": -1,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 0,
+										"folder": 3
+									},
+									"time": 2
+								}
+							],
+							"name": "result_success"
+						}
+					],
 					"timeline": [
 						{
 							"id": 0,
@@ -201,16 +218,18 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 0,
-										"scale_x": 0.367816091954023,
-										"scale_y": 0.36781609195402337
+										"scale_x": 0.367816,
+										"scale_y": 0.367816
 									},
 									"spin": 0
 								},
 								{
 									"id": 1,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 0
 									},
@@ -221,11 +240,11 @@
 									"id": 2,
 									"object": {
 										"a": 0.5,
-										"angle": 270.2552467385139,
+										"angle": 270.255247,
 										"file": 0,
 										"folder": 0,
-										"scale_x": 1.1490162871771112,
-										"scale_y": 1.149016287177111
+										"scale_x": 1.149016,
+										"scale_y": 1.149016
 									},
 									"spin": -1,
 									"time": 1116
@@ -234,11 +253,11 @@
 									"id": 3,
 									"object": {
 										"a": 0,
-										"angle": 220.8394781622235,
+										"angle": 220.839478,
 										"file": 0,
 										"folder": 0,
-										"scale_x": 0.8062589950819612,
-										"scale_y": 0.8062589950819612
+										"scale_x": 0.806259,
+										"scale_y": 0.806259
 									},
 									"spin": -1,
 									"time": 1600
@@ -250,9 +269,10 @@
 										"angle": 180,
 										"file": 0,
 										"folder": 0,
-										"scale_x": 0.5229885057471265,
-										"scale_y": 0.5229885057471267
+										"scale_x": 0.522989,
+										"scale_y": 0.522989
 									},
+									"spin": -1,
 									"time": 2000
 								}
 							],
@@ -265,16 +285,18 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1,
-										"scale_x": 0.6964285714285717,
-										"scale_y": 0.6964285714285715
+										"scale_x": 0.696429,
+										"scale_y": 0.696429
 									},
 									"spin": 0
 								},
 								{
 									"id": 1,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -284,6 +306,7 @@
 								{
 									"id": 2,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1,
 										"scale_x": 0.6,
@@ -296,11 +319,12 @@
 								{
 									"id": 3,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1,
 										"scale_x": 0.6,
 										"scale_y": 0.6,
-										"x": 0.6567607726597327
+										"x": 0.656761
 									},
 									"spin": 0,
 									"time": 1116
@@ -309,11 +333,12 @@
 									"id": 4,
 									"object": {
 										"a": 0,
+										"angle": 0,
 										"file": 0,
 										"folder": 1,
 										"scale_x": 0.6,
 										"scale_y": 0.6,
-										"x": 0.29717682020802383
+										"x": 0.297177
 									},
 									"spin": 0,
 									"time": 1600
@@ -322,6 +347,7 @@
 									"id": 5,
 									"object": {
 										"a": 0,
+										"angle": 0,
 										"file": 0,
 										"folder": 1,
 										"scale_x": 0.6,
@@ -341,10 +367,11 @@
 									"id": 0,
 									"object": {
 										"a": 0,
+										"angle": 0,
 										"file": 1,
 										"folder": 2,
-										"scale_x": 0.526785714285714,
-										"scale_y": 0.526785714285714,
+										"scale_x": 0.526786,
+										"scale_y": 0.526786,
 										"y": 1
 									},
 									"spin": 0
@@ -352,6 +379,7 @@
 								{
 									"id": 1,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 2,
 										"y": 1
@@ -362,6 +390,7 @@
 								{
 									"id": 2,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 2,
 										"scale_x": 0.4,
@@ -374,6 +403,7 @@
 								{
 									"id": 3,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 2,
 										"scale_x": 0.6,
@@ -387,6 +417,7 @@
 									"id": 4,
 									"object": {
 										"a": 0,
+										"angle": 0,
 										"file": 1,
 										"folder": 2,
 										"scale_x": 0.4,
@@ -405,6 +436,7 @@
 				{
 					"gline": [],
 					"id": 1,
+					"interval": 100,
 					"length": 2000,
 					"looping": "false",
 					"mainline": {
@@ -415,11 +447,11 @@
 								"object_ref": [
 									{
 										"abs_a": 1,
-										"abs_angle": 360,
+										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": 0.367816091954023,
-										"abs_scale_y": 0.36781609195402337,
+										"abs_scale_x": 0.367816,
+										"abs_scale_y": 0.367816,
 										"abs_x": 0,
 										"abs_y": 0,
 										"file": 0,
@@ -432,11 +464,11 @@
 									},
 									{
 										"abs_a": 1,
-										"abs_angle": 360,
+										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": 0.6964285714285717,
-										"abs_scale_y": 0.6964285714285715,
+										"abs_scale_x": 0.696429,
+										"abs_scale_y": 0.696429,
 										"abs_x": 0,
 										"abs_y": 0,
 										"file": 1,
@@ -449,11 +481,11 @@
 									},
 									{
 										"abs_a": 0,
-										"abs_angle": 360,
+										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": 0.526785714285714,
-										"abs_scale_y": 0.526785714285714,
+										"abs_scale_x": 0.526786,
+										"abs_scale_y": 0.526786,
 										"abs_x": 0,
 										"abs_y": -1,
 										"file": 0,
@@ -594,406 +626,22 @@
 						]
 					},
 					"name": "fail",
-					"timeline": [
+					"soundline": [
 						{
-							"id": 0,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"file": 0,
-										"folder": 0,
-										"scale_x": 0.367816091954023,
-										"scale_y": 0.36781609195402337
-									},
-									"spin": 0
-								},
-								{
-									"id": 1,
-									"object": {
-										"file": 0,
-										"folder": 0
-									},
-									"spin": -1,
-									"time": 237
-								},
-								{
-									"id": 2,
-									"object": {
-										"a": 0.5,
-										"angle": 270.2552467385139,
-										"file": 0,
-										"folder": 0,
-										"scale_x": 1.1490162871771112,
-										"scale_y": 1.149016287177111
-									},
-									"spin": -1,
-									"time": 1116
-								},
-								{
-									"id": 3,
-									"object": {
-										"a": 0,
-										"angle": 220.8394781622235,
-										"file": 0,
-										"folder": 0,
-										"scale_x": 0.8062589950819612,
-										"scale_y": 0.8062589950819612
-									},
-									"spin": -1,
-									"time": 1600
-								},
-								{
-									"id": 4,
-									"object": {
-										"a": 0,
-										"angle": 180,
-										"file": 0,
-										"folder": 0,
-										"scale_x": 0.5229885057471265,
-										"scale_y": 0.5229885057471267
-									},
-									"time": 2000
-								}
-							],
-							"name": "star",
-							"obj": 0
-						},
-						{
-							"id": 1,
+							"id": -1,
 							"key": [
 								{
 									"id": 0,
 									"object": {
 										"file": 1,
-										"folder": 1,
-										"scale_x": 0.6964285714285717,
-										"scale_y": 0.6964285714285715
+										"folder": 3
 									},
-									"spin": 0
-								},
-								{
-									"id": 1,
-									"object": {
-										"file": 1,
-										"folder": 1
-									},
-									"spin": 0,
-									"time": 237
-								},
-								{
-									"id": 2,
-									"object": {
-										"file": 1,
-										"folder": 1,
-										"scale_x": 0.6,
-										"scale_y": 0.6,
-										"x": 1
-									},
-									"spin": 0,
-									"time": 654
-								},
-								{
-									"id": 3,
-									"object": {
-										"file": 1,
-										"folder": 1,
-										"scale_x": 0.6,
-										"scale_y": 0.6,
-										"x": 0.6567607726597327
-									},
-									"spin": 0,
-									"time": 1116
-								},
-								{
-									"id": 4,
-									"object": {
-										"a": 0,
-										"file": 1,
-										"folder": 1,
-										"scale_x": 0.6,
-										"scale_y": 0.6,
-										"x": 0.29717682020802383
-									},
-									"spin": 0,
-									"time": 1600
-								},
-								{
-									"id": 5,
-									"object": {
-										"a": 0,
-										"file": 1,
-										"folder": 1,
-										"scale_x": 0.6,
-										"scale_y": 0.6
-									},
-									"spin": 0,
-									"time": 2000
+									"time": 1
 								}
 							],
-							"name": "point0",
-							"obj": 1
-						},
-						{
-							"id": 2,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"a": 0,
-										"file": 0,
-										"folder": 2,
-										"scale_x": 0.526785714285714,
-										"scale_y": 0.526785714285714,
-										"y": 1
-									},
-									"spin": 0
-								},
-								{
-									"id": 1,
-									"object": {
-										"file": 0,
-										"folder": 2,
-										"y": 1
-									},
-									"spin": 0,
-									"time": 237
-								},
-								{
-									"id": 2,
-									"object": {
-										"file": 0,
-										"folder": 2,
-										"scale_x": 0.4,
-										"scale_y": 0.4,
-										"y": 1
-									},
-									"spin": 0,
-									"time": 654
-								},
-								{
-									"id": 3,
-									"object": {
-										"file": 0,
-										"folder": 2,
-										"scale_x": 0.6,
-										"scale_y": 0.6,
-										"y": 1
-									},
-									"spin": 0,
-									"time": 1600
-								},
-								{
-									"id": 4,
-									"object": {
-										"a": 0,
-										"file": 0,
-										"folder": 2,
-										"scale_x": 0.4,
-										"scale_y": 0.4,
-										"y": 1
-									},
-									"spin": 0,
-									"time": 2000
-								}
-							],
-							"name": "result1",
-							"obj": 2
+							"name": "result_fail"
 						}
-					]
-				},
-				{
-					"gline": [],
-					"id": 2,
-					"length": 2000,
-					"looping": "false",
-					"mainline": {
-						"key": [
-							{
-								"bone_ref": [],
-								"id": 0,
-								"object_ref": [
-									{
-										"abs_a": 1,
-										"abs_angle": 360,
-										"abs_pivot_x": 0.5,
-										"abs_pivot_y": 0.5,
-										"abs_scale_x": 0.367816091954023,
-										"abs_scale_y": 0.36781609195402337,
-										"abs_x": 0,
-										"abs_y": 0,
-										"file": 0,
-										"folder": 0,
-										"id": 0,
-										"key": 0,
-										"name": "star",
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"abs_a": 1,
-										"abs_angle": 360,
-										"abs_pivot_x": 0.5,
-										"abs_pivot_y": 0.5,
-										"abs_scale_x": 0.6964285714285717,
-										"abs_scale_y": 0.6964285714285715,
-										"abs_x": 0,
-										"abs_y": 0,
-										"file": 1,
-										"folder": 1,
-										"id": 1,
-										"key": 0,
-										"name": "point0",
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"abs_a": 0,
-										"abs_angle": 360,
-										"abs_pivot_x": 0.5,
-										"abs_pivot_y": 0.5,
-										"abs_scale_x": 0.526785714285714,
-										"abs_scale_y": 0.526785714285714,
-										"abs_x": 0,
-										"abs_y": -1,
-										"file": 0,
-										"folder": 2,
-										"id": 2,
-										"key": 0,
-										"name": "result1",
-										"timeline": "2",
-										"z_index": "2"
-									}
-								]
-							},
-							{
-								"bone_ref": [],
-								"id": 1,
-								"object_ref": [
-									{
-										"id": 0,
-										"key": 1,
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"id": 1,
-										"key": 1,
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"id": 2,
-										"key": 1,
-										"timeline": "2",
-										"z_index": "2"
-									}
-								],
-								"time": 237
-							},
-							{
-								"bone_ref": [],
-								"id": 2,
-								"object_ref": [
-									{
-										"id": 0,
-										"key": 1,
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"id": 1,
-										"key": 2,
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"id": 2,
-										"key": 2,
-										"timeline": "2",
-										"z_index": "2"
-									}
-								],
-								"time": 654
-							},
-							{
-								"bone_ref": [],
-								"id": 3,
-								"object_ref": [
-									{
-										"id": 0,
-										"key": 2,
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"id": 1,
-										"key": 3,
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"id": 2,
-										"key": 2,
-										"timeline": "2",
-										"z_index": "2"
-									}
-								],
-								"time": 1116
-							},
-							{
-								"bone_ref": [],
-								"id": 4,
-								"object_ref": [
-									{
-										"id": 0,
-										"key": 3,
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"id": 1,
-										"key": 4,
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"id": 2,
-										"key": 3,
-										"timeline": "2",
-										"z_index": "2"
-									}
-								],
-								"time": 1600
-							},
-							{
-								"bone_ref": [],
-								"id": 5,
-								"object_ref": [
-									{
-										"id": 0,
-										"key": 4,
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"id": 1,
-										"key": 5,
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"id": 2,
-										"key": 4,
-										"timeline": "2",
-										"z_index": "2"
-									}
-								],
-								"time": 2000
-							}
-						]
-					},
-					"name": "coin",
+					],
 					"timeline": [
 						{
 							"id": 0,
@@ -1001,16 +649,18 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 0,
-										"scale_x": 0.367816091954023,
-										"scale_y": 0.36781609195402337
+										"scale_x": 0.367816,
+										"scale_y": 0.367816
 									},
 									"spin": 0
 								},
 								{
 									"id": 1,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 0
 									},
@@ -1021,11 +671,11 @@
 									"id": 2,
 									"object": {
 										"a": 0.5,
-										"angle": 270.2552467385139,
+										"angle": 270.255247,
 										"file": 0,
 										"folder": 0,
-										"scale_x": 1.1490162871771112,
-										"scale_y": 1.149016287177111
+										"scale_x": 1.149016,
+										"scale_y": 1.149016
 									},
 									"spin": -1,
 									"time": 1116
@@ -1034,11 +684,11 @@
 									"id": 3,
 									"object": {
 										"a": 0,
-										"angle": 220.8394781622235,
+										"angle": 220.839478,
 										"file": 0,
 										"folder": 0,
-										"scale_x": 0.8062589950819612,
-										"scale_y": 0.8062589950819612
+										"scale_x": 0.806259,
+										"scale_y": 0.806259
 									},
 									"spin": -1,
 									"time": 1600
@@ -1050,9 +700,10 @@
 										"angle": 180,
 										"file": 0,
 										"folder": 0,
-										"scale_x": 0.5229885057471265,
-										"scale_y": 0.5229885057471267
+										"scale_x": 0.522989,
+										"scale_y": 0.522989
 									},
+									"spin": -1,
 									"time": 2000
 								}
 							],
@@ -1065,16 +716,18 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1,
-										"scale_x": 0.6964285714285717,
-										"scale_y": 0.6964285714285715
+										"scale_x": 0.696429,
+										"scale_y": 0.696429
 									},
 									"spin": 0
 								},
 								{
 									"id": 1,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -1084,6 +737,7 @@
 								{
 									"id": 2,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1,
 										"scale_x": 0.6,
@@ -1096,11 +750,12 @@
 								{
 									"id": 3,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1,
 										"scale_x": 0.6,
 										"scale_y": 0.6,
-										"x": 0.6567607726597327
+										"x": 0.656761
 									},
 									"spin": 0,
 									"time": 1116
@@ -1109,11 +764,12 @@
 									"id": 4,
 									"object": {
 										"a": 0,
+										"angle": 0,
 										"file": 1,
 										"folder": 1,
 										"scale_x": 0.6,
 										"scale_y": 0.6,
-										"x": 0.29717682020802383
+										"x": 0.297177
 									},
 									"spin": 0,
 									"time": 1600
@@ -1122,6 +778,7 @@
 									"id": 5,
 									"object": {
 										"a": 0,
+										"angle": 0,
 										"file": 1,
 										"folder": 1,
 										"scale_x": 0.6,
@@ -1141,10 +798,11 @@
 									"id": 0,
 									"object": {
 										"a": 0,
+										"angle": 0,
 										"file": 0,
 										"folder": 2,
-										"scale_x": 0.526785714285714,
-										"scale_y": 0.526785714285714,
+										"scale_x": 0.526786,
+										"scale_y": 0.526786,
 										"y": 1
 									},
 									"spin": 0
@@ -1152,6 +810,7 @@
 								{
 									"id": 1,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 2,
 										"y": 1
@@ -1162,6 +821,7 @@
 								{
 									"id": 2,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 2,
 										"scale_x": 0.4,
@@ -1174,6 +834,7 @@
 								{
 									"id": 3,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 2,
 										"scale_x": 0.6,
@@ -1187,6 +848,7 @@
 									"id": 4,
 									"object": {
 										"a": 0,
+										"angle": 0,
 										"file": 0,
 										"folder": 2,
 										"scale_x": 0.4,
@@ -1309,9 +971,24 @@
 			],
 			"id": 2,
 			"name": "result"
+		},
+		{
+			"file": [
+				{
+					"id": 0,
+					"name": "result_success.wav",
+					"type": "sound"
+				},
+				{
+					"id": 1,
+					"name": "result_fail.wav",
+					"type": "sound"
+				}
+			],
+			"id": 3
 		}
 	],
 	"generator": "BrashMonkey Spriter",
-	"generator_version": "b10",
+	"generator_version": "r2",
 	"scon_version": "1.0"
 }

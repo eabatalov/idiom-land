@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelUINotificationSound</name>
+    <events>
+        <event-group description="" sid="2286605613480624" title="Platformer Level UI Notification Sound">
+            <sub-events>
+                <event-block sid="798376303983393">
+                    <conditions>
+                        <condition id="7" name="On sound triggered" sid="9582507825370549" type="notifyone" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="8908695375330682" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">notifyone.triggeredSoundTag</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

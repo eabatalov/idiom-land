@@ -109,9 +109,19 @@
                             <param id="0" name="Key">FOXY_ANIM_UID</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="14" name="Log" sid="6468947144983559" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;FOXY INITED&quot;</param>
+                    </actions>
+                </event-block>
+                <event-block sid="9219842628530692">
+                    <conditions>
+                        <condition id="7" name="On sound triggered" sid="8842599655469492" type="PlayerSCML" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="5881949569699289" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">PlayerSCML.triggeredSoundTag</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>

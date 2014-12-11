@@ -24,37 +24,37 @@
                                 <event-block sid="3430542087311799">
                                     <conditions />
                                     <actions>
-                                        <action id="666" name="Associate object type" sid="7524834984544806" type="veiderSCML">
-                                            <param id="0" name="Object">veider_body</param>
-                                            <param id="1" name="Name">&quot;body&quot;</param>
+                                        <action id="666" name="Associate object type" sid="8809591013669355" type="veiderSCML">
+                                            <param id="0" name="Object">veiderSCML_entity_000_body</param>
+                                            <param id="1" name="Name">&quot;entity_000_body&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="5697909055825983" type="veiderSCML">
-                                            <param id="0" name="Object">veider_head</param>
-                                            <param id="1" name="Name">&quot;head&quot;</param>
+                                        <action id="666" name="Associate object type" sid="4125406435241164" type="veiderSCML">
+                                            <param id="0" name="Object">veiderSCML_entity_000_head</param>
+                                            <param id="1" name="Name">&quot;entity_000_head&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="7141855755339671" type="veiderSCML">
-                                            <param id="0" name="Object">veider_eye2</param>
-                                            <param id="1" name="Name">&quot;eye2&quot;</param>
+                                        <action id="666" name="Associate object type" sid="2999320314790821" type="veiderSCML">
+                                            <param id="0" name="Object">veiderSCML_entity_000_eye2</param>
+                                            <param id="1" name="Name">&quot;entity_000_eye2&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="4677873697488636" type="veiderSCML">
-                                            <param id="0" name="Object">veider_eye1</param>
-                                            <param id="1" name="Name">&quot;eye1&quot;</param>
+                                        <action id="666" name="Associate object type" sid="5538416798559968" type="veiderSCML">
+                                            <param id="0" name="Object">veiderSCML_entity_000_eye1</param>
+                                            <param id="1" name="Name">&quot;entity_000_eye1&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="8337441324505902" type="veiderSCML">
-                                            <param id="0" name="Object">veider_balloons</param>
-                                            <param id="1" name="Name">&quot;balloons&quot;</param>
+                                        <action id="666" name="Associate object type" sid="2157223495586103" type="veiderSCML">
+                                            <param id="0" name="Object">veiderSCML_entity_000_balloons</param>
+                                            <param id="1" name="Name">&quot;entity_000_balloons&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="4024226229850499" type="veiderSCML">
-                                            <param id="0" name="Object">veider_hand2</param>
-                                            <param id="1" name="Name">&quot;hand2&quot;</param>
+                                        <action id="666" name="Associate object type" sid="7314138041791964" type="veiderSCML">
+                                            <param id="0" name="Object">veiderSCML_entity_000_hand2</param>
+                                            <param id="1" name="Name">&quot;entity_000_hand2&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="3301890229314846" type="veiderSCML">
-                                            <param id="0" name="Object">veider_hand1</param>
-                                            <param id="1" name="Name">&quot;hand1&quot;</param>
+                                        <action id="666" name="Associate object type" sid="2252605597706152" type="veiderSCML">
+                                            <param id="0" name="Object">veiderSCML_entity_000_hand1</param>
+                                            <param id="1" name="Name">&quot;entity_000_hand1&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="7423161854816458" type="veiderSCML">
-                                            <param id="0" name="Object">veider_mouth4</param>
-                                            <param id="1" name="Name">&quot;mouth4&quot;</param>
+                                        <action id="666" name="Associate object type" sid="20795456533553" type="veiderSCML">
+                                            <param id="0" name="Object">veiderSCML_entity_000_mouth4</param>
+                                            <param id="1" name="Name">&quot;entity_000_mouth4&quot;</param>
                                         </action>
                                         <action id="-4" name="Set position to another object" sid="9465450781200583" type="veiderSCML">
                                             <param id="0" name="Object">NPC</param>
@@ -117,6 +117,20 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="1263041883215557">
+                            <conditions>
+                                <condition id="7" name="On sound triggered" sid="6457257877088827" type="veiderSCML" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="4546525504618461" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">veiderSCML.triggeredSoundTag</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="548113854466863" title="HindiSCML">
@@ -136,33 +150,33 @@
                                 <event-block sid="6436190674785935">
                                     <conditions />
                                     <actions>
-                                        <action id="666" name="Associate object type" sid="80923873426539" type="taxiHindiSCML">
-                                            <param id="0" name="Object">hindu_hand</param>
-                                            <param id="1" name="Name">&quot;hand&quot;</param>
+                                        <action id="666" name="Associate object type" sid="2715720862354688" type="taxiHindiSCML">
+                                            <param id="0" name="Object">taxiHindiSCML_entity_000_hand</param>
+                                            <param id="1" name="Name">&quot;entity_000_hand&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="4518216508167966" type="taxiHindiSCML">
-                                            <param id="0" name="Object">hindu_eye1_000</param>
-                                            <param id="1" name="Name">&quot;eye1_000&quot;</param>
+                                        <action id="666" name="Associate object type" sid="9420967301790705" type="taxiHindiSCML">
+                                            <param id="0" name="Object">taxiHindiSCML_entity_000_eye1_000</param>
+                                            <param id="1" name="Name">&quot;entity_000_eye1_000&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="8449269901775349" type="taxiHindiSCML">
-                                            <param id="0" name="Object">hindu_body</param>
-                                            <param id="1" name="Name">&quot;body&quot;</param>
+                                        <action id="666" name="Associate object type" sid="4738924962377641" type="taxiHindiSCML">
+                                            <param id="0" name="Object">taxiHindiSCML_entity_000_body</param>
+                                            <param id="1" name="Name">&quot;entity_000_body&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="5159645524763994" type="taxiHindiSCML">
-                                            <param id="0" name="Object">hindu_head</param>
-                                            <param id="1" name="Name">&quot;head&quot;</param>
+                                        <action id="666" name="Associate object type" sid="4009187663849457" type="taxiHindiSCML">
+                                            <param id="0" name="Object">taxiHindiSCML_entity_000_head</param>
+                                            <param id="1" name="Name">&quot;entity_000_head&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="2753475262271382" type="taxiHindiSCML">
-                                            <param id="0" name="Object">hindu_mustache</param>
-                                            <param id="1" name="Name">&quot;mustache&quot;</param>
+                                        <action id="666" name="Associate object type" sid="158265642869782" type="taxiHindiSCML">
+                                            <param id="0" name="Object">taxiHindiSCML_entity_000_mustache</param>
+                                            <param id="1" name="Name">&quot;entity_000_mustache&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="9715099512249428" type="taxiHindiSCML">
-                                            <param id="0" name="Object">hindu_eye1</param>
-                                            <param id="1" name="Name">&quot;eye1&quot;</param>
+                                        <action id="666" name="Associate object type" sid="4969510592225432" type="taxiHindiSCML">
+                                            <param id="0" name="Object">taxiHindiSCML_entity_000_eye1</param>
+                                            <param id="1" name="Name">&quot;entity_000_eye1&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="3005510325834714" type="taxiHindiSCML">
-                                            <param id="0" name="Object">hindu_brows</param>
-                                            <param id="1" name="Name">&quot;brows&quot;</param>
+                                        <action id="666" name="Associate object type" sid="3956971583562538" type="taxiHindiSCML">
+                                            <param id="0" name="Object">taxiHindiSCML_entity_000_brows</param>
+                                            <param id="1" name="Name">&quot;entity_000_brows&quot;</param>
                                         </action>
                                         <action id="-4" name="Set position to another object" sid="3971297747776503" type="taxiHindiSCML">
                                             <param id="0" name="Object">NPC</param>
@@ -225,6 +239,20 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="7296348579149962">
+                            <conditions>
+                                <condition id="7" name="On sound triggered" sid="8560933164404637" type="taxiHindiSCML" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="1284421410669412" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">taxiHindiSCML.triggeredSoundTag</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="3953168523223821" title="CaptainSCML">
@@ -282,53 +310,53 @@
                                 <event-block sid="3575568560533311">
                                     <conditions />
                                     <actions>
-                                        <action id="666" name="Associate object type" sid="2445906481043113" type="captainSCML">
-                                            <param id="0" name="Object">captain_feet1</param>
-                                            <param id="1" name="Name">&quot;feet1&quot;</param>
+                                        <action id="666" name="Associate object type" sid="5751193335515763" type="captainSCML">
+                                            <param id="0" name="Object">captainSCML_entity_000_feet1</param>
+                                            <param id="1" name="Name">&quot;entity_000_feet1&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="3307163986931435" type="captainSCML">
-                                            <param id="0" name="Object">captain_eye1_000</param>
-                                            <param id="1" name="Name">&quot;eye1_000&quot;</param>
+                                        <action id="666" name="Associate object type" sid="7084100869593898" type="captainSCML">
+                                            <param id="0" name="Object">captainSCML_entity_000_eye1_000</param>
+                                            <param id="1" name="Name">&quot;entity_000_eye1_000&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="7546557403314718" type="captainSCML">
-                                            <param id="0" name="Object">captain_broun_000</param>
-                                            <param id="1" name="Name">&quot;broun_000&quot;</param>
+                                        <action id="666" name="Associate object type" sid="4628966897842372" type="captainSCML">
+                                            <param id="0" name="Object">captainSCML_entity_000_broun_000</param>
+                                            <param id="1" name="Name">&quot;entity_000_broun_000&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="3747294592812786" type="captainSCML">
-                                            <param id="0" name="Object">captain_head</param>
-                                            <param id="1" name="Name">&quot;head&quot;</param>
+                                        <action id="666" name="Associate object type" sid="6824890478468731" type="captainSCML">
+                                            <param id="0" name="Object">captainSCML_entity_000_head</param>
+                                            <param id="1" name="Name">&quot;entity_000_head&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="6624072301255303" type="captainSCML">
-                                            <param id="0" name="Object">captain_body</param>
-                                            <param id="1" name="Name">&quot;body&quot;</param>
+                                        <action id="666" name="Associate object type" sid="9448142260282127" type="captainSCML">
+                                            <param id="0" name="Object">captainSCML_entity_000_body</param>
+                                            <param id="1" name="Name">&quot;entity_000_body&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="9804943275759049" type="captainSCML">
-                                            <param id="0" name="Object">captain_mustache</param>
-                                            <param id="1" name="Name">&quot;mustache&quot;</param>
+                                        <action id="666" name="Associate object type" sid="9587010468042491" type="captainSCML">
+                                            <param id="0" name="Object">captainSCML_entity_000_mustache</param>
+                                            <param id="1" name="Name">&quot;entity_000_mustache&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="2191759606034371" type="captainSCML">
-                                            <param id="0" name="Object">captain_feet2</param>
-                                            <param id="1" name="Name">&quot;feet2&quot;</param>
+                                        <action id="666" name="Associate object type" sid="1968458275305214" type="captainSCML">
+                                            <param id="0" name="Object">captainSCML_entity_000_feet2</param>
+                                            <param id="1" name="Name">&quot;entity_000_feet2&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="2772428932974408" type="captainSCML">
-                                            <param id="0" name="Object">captain_tube</param>
-                                            <param id="1" name="Name">&quot;tube&quot;</param>
+                                        <action id="666" name="Associate object type" sid="3345975436902154" type="captainSCML">
+                                            <param id="0" name="Object">captainSCML_entity_000_tube</param>
+                                            <param id="1" name="Name">&quot;entity_000_tube&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="2931545436545084" type="captainSCML">
-                                            <param id="0" name="Object">captain_hand</param>
-                                            <param id="1" name="Name">&quot;hand&quot;</param>
+                                        <action id="666" name="Associate object type" sid="2578780082909814" type="captainSCML">
+                                            <param id="0" name="Object">captainSCML_entity_000_hand</param>
+                                            <param id="1" name="Name">&quot;entity_000_hand&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="3809800793025821" type="captainSCML">
-                                            <param id="0" name="Object">captain_hat</param>
-                                            <param id="1" name="Name">&quot;hat&quot;</param>
+                                        <action id="666" name="Associate object type" sid="556475319232491" type="captainSCML">
+                                            <param id="0" name="Object">captainSCML_entity_000_hat</param>
+                                            <param id="1" name="Name">&quot;entity_000_hat&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="7134463797187824" type="captainSCML">
-                                            <param id="0" name="Object">captain_eye1</param>
-                                            <param id="1" name="Name">&quot;eye1&quot;</param>
+                                        <action id="666" name="Associate object type" sid="6003497628777946" type="captainSCML">
+                                            <param id="0" name="Object">captainSCML_entity_000_eye1</param>
+                                            <param id="1" name="Name">&quot;entity_000_eye1&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="9419692908819134" type="captainSCML">
-                                            <param id="0" name="Object">captain_broun</param>
-                                            <param id="1" name="Name">&quot;broun&quot;</param>
+                                        <action id="666" name="Associate object type" sid="6286733937686154" type="captainSCML">
+                                            <param id="0" name="Object">captainSCML_entity_000_broun</param>
+                                            <param id="1" name="Name">&quot;entity_000_broun&quot;</param>
                                         </action>
                                         <action id="-4" name="Set position to another object" sid="3583274039794135" type="captainSCML">
                                             <param id="0" name="Object">NPC</param>
@@ -352,6 +380,20 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="5883186066068827">
+                            <conditions>
+                                <condition id="7" name="On sound triggered" sid="3032726472865647" type="captainSCML" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="4696104978844772" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">captainSCML.triggeredSoundTag</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -456,6 +498,20 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="5544907801503671">
+                            <conditions>
+                                <condition id="7" name="On sound triggered" sid="607494614476719" type="policeman" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="6257765994824768" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">policeman.triggeredSoundTag</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -593,6 +649,20 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="772978417339005">
+                            <conditions>
+                                <condition id="7" name="On sound triggered" sid="7375892823207062" type="kebab" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="7541480274533336" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">kebab.triggeredSoundTag</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="179837953543049" title="KebabSellerSonSCML">
@@ -692,6 +762,20 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="506347105209436">
+                            <conditions>
+                                <condition id="7" name="On sound triggered" sid="8231669973602905" type="kebabson" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="2170460492359124" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">kebabson.triggeredSoundTag</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -805,6 +889,20 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="7487712736549714">
+                            <conditions>
+                                <condition id="7" name="On sound triggered" sid="409993809416033" type="taxidriver" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="2579403731957286" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">taxidriver.triggeredSoundTag</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="2420977200556076" title="BusDriverSprites">
@@ -912,6 +1010,20 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="641390101518202">
+                            <conditions>
+                                <condition id="7" name="On sound triggered" sid="1688039852354439" type="busdriver" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="3226567482253796" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">busdriver.triggeredSoundTag</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
