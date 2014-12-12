@@ -711,7 +711,12 @@
                                             <param id="2" name="Value">&quot;TRANSITION_RUNNING&quot;</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="14" name="Log" sid="1846122096865694" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;onPhraseVisible&quot;</param>
+                                        </action>
+                                    </actions>
                                     <sub-events>
                                         <event-block sid="6315603385097093">
                                             <conditions>
@@ -796,7 +801,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <comment>Do nothing</comment>
+                                                <comment>Just play default sound</comment>
                                                 <event-block any="1" sid="5574627166599601">
                                                     <conditions>
                                                         <condition id="-14" name="Compare variable" sid="597680896854104" type="System">
@@ -810,7 +815,14 @@
                                                             <param id="2" name="Value">&quot;NPCQ&quot;</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions />
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="371631227125403" type="Audio">
+                                                            <param id="0" name="Audio file">npc_think</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                    </actions>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
