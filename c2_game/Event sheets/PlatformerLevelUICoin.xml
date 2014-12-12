@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelUICoin</name>
+    <events>
+        <event-group description="" sid="6491312233386046" title="Platformer level UI coin">
+            <sub-events>
+                <comment>param(0): coin UID</comment>
+                <event-block sid="1217291925406877">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3232255109405394" type="Function">
+                            <param id="0" name="Name">&quot;CoinCollected&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="2788271432529139" type="Audio">
+                            <param id="0" name="Audio file">coin_collect</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

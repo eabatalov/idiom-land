@@ -115,6 +115,12 @@
                                 <action behavior="Platform" id="8" name="Set vector X" sid="8764182261220218" type="PlayerPlatform">
                                     <param id="0" name="Vector X">0</param>
                                 </action>
+                                <action id="0" name="Play" sid="4795899720852366" type="Audio">
+                                    <param id="0" name="Audio file">talk_start</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="0" name="Call function" sid="8550995941394823" type="Function">
                                     <param id="0" name="Name">&quot;ProcPlayerCustomEvent&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;auto_talk_start_&quot;  &amp; TalkStartTrigger.NpcIDInStage{###}&quot;Player&quot;</param>

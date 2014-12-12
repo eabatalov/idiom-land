@@ -181,58 +181,6 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="8729737796026696">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="871492439537766" type="System">
-                                                    <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;SPEAK&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block any="1" sid="8714790120493444">
-                                                    <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="1861425947278133" type="System">
-                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;PLAYERP&quot;</param>
-                                                        </condition>
-                                                        <condition id="-14" name="Compare variable" sid="8537748953435691" type="System">
-                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;PLAYERQ&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Call function" sid="1898750177009081" type="Function">
-                                                            <param id="0" name="Name">&quot;AnimPlayerSay&quot;</param>
-                                                            <param id="1" name="Parameter {n}">CurrentDialogStepTargetUID</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block any="1" sid="1563015195017663">
-                                                    <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="4837692167995263" type="System">
-                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;NPCP&quot;</param>
-                                                        </condition>
-                                                        <condition id="-14" name="Compare variable" sid="2098305995275195" type="System">
-                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;NPCQ&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Call function" sid="5853039491860597" type="Function">
-                                                            <param id="0" name="Name">&quot;NPCAnim&quot;</param>
-                                                            <param id="1" name="Parameter {n}">CurrentDialogStepTargetUID{###}&quot;speak&quot;</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
                                         <event-block sid="2709686245962297">
                                             <conditions />
                                             <actions>
@@ -616,7 +564,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>param(0): func name&#x0D;&#x0A;param(1): func param 4</comment>
+                        <comment>param(0): func name&#x0D;&#x0A;param(1): 4th func param</comment>
                         <event-block sid="5331855320623979">
                             <conditions>
                                 <condition id="0" name="On function" sid="2306550232031034" type="Function">
@@ -744,6 +692,129 @@
                                             <param id="0" name="Value">Function.ReturnValue</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7187286841125951">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7276484645931701" type="Function">
+                                    <param id="0" name="Name">&quot;onPhraseVisible&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2435211279943078">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4332586416036312" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TRANSITION_RUNNING&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="6315603385097093">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="8370223171471751" type="System">
+                                                    <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;SPEAK&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block any="1" sid="1853048365181812">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="5481603696364291" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;PLAYERP&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="9995278665039933" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;PLAYERQ&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="6701244441706779" type="Function">
+                                                            <param id="0" name="Name">&quot;AnimPlayerSay&quot;</param>
+                                                            <param id="1" name="Parameter {n}">CurrentDialogStepTargetUID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block any="1" sid="5191654844386688">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="5027969514068066" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NPCP&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="3898000489685818" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NPCQ&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="8602256126347749" type="Function">
+                                                            <param id="0" name="Name">&quot;NPCAnim&quot;</param>
+                                                            <param id="1" name="Parameter {n}">CurrentDialogStepTargetUID{###}&quot;speak&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="8912830875612797">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="9551650377487034" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="317911055355482" type="System">
+                                                    <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;THINK&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block any="1" sid="3142375558602023">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="6485427382474569" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;PLAYERP&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="5399176871071795" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;PLAYERQ&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="5948742795514897" type="Function">
+                                                            <param id="0" name="Name">&quot;AnimPlayerThink&quot;</param>
+                                                            <param id="1" name="Parameter {n}">CurrentDialogStepTargetUID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <comment>Do nothing</comment>
+                                                <event-block any="1" sid="5574627166599601">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="597680896854104" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NPCP&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="1846749681866872" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NPCQ&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>

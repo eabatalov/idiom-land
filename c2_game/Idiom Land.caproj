@@ -8773,6 +8773,7 @@
                         <event-sheet>PlatformerLevelUIStageChangers.xml</event-sheet>
                         <event-sheet>PlatformerLevelUIDialogHelpers.xml</event-sheet>
                         <event-sheet>PlatformerLevelUINotificationSound.xml</event-sheet>
+                        <event-sheet>PlatformerLevelUICoin.xml</event-sheet>
                     </event-folder>
                     <event-folder name="Logic">
                         <event-sheet>PlatformerLevelBootstrap.xml</event-sheet>
@@ -8911,31 +8912,50 @@
             </sound-folder>
         </sound-folder>
         <sound-folder name="Platformer">
-            <sound-folder name="Foxy">
-                <file name="foxy_jump.m4a" />
-                <file name="foxy_jump.ogg" />
-                <file name="foxy_shock.m4a" />
-                <file name="foxy_shock.ogg" />
-                <file name="foxy_speach.m4a" />
-                <file name="foxy_speach.ogg" />
+            <sound-folder name="Common">
+                <sound-folder name="Coins">
+                    <file name="coin_collect.m4a" />
+                    <file name="coin_collect.ogg" />
+                </sound-folder>
+                <sound-folder name="AnimResult">
+                    <file name="result_fail.m4a" />
+                    <file name="result_fail.ogg" />
+                    <file name="result_success.m4a" />
+                    <file name="result_success.ogg" />
+                </sound-folder>
+                <sound-folder name="Foxy">
+                    <file name="foxy_jump.m4a" />
+                    <file name="foxy_jump.ogg" />
+                    <file name="foxy_shock.m4a" />
+                    <file name="foxy_shock.ogg" />
+                    <file name="foxy_speach.m4a" />
+                    <file name="foxy_speach.ogg" />
+                    <file name="foxy_think.m4a" />
+                    <file name="foxy_think.ogg" />
+                </sound-folder>
+                <sound-folder name="Notification">
+                    <file name="notification_hide.m4a" />
+                    <file name="notification_hide.ogg" />
+                    <file name="notification_show.m4a" />
+                    <file name="notification_show.ogg" />
+                    <file name="notification_cross.m4a" />
+                    <file name="notification_cross.ogg" />
+                </sound-folder>
+                <sound-folder name="NPC">
+                    <file name="npc_speach.m4a" />
+                    <file name="npc_speach.ogg" />
+                </sound-folder>
+                <sound-folder name="TalkStarter">
+                    <file name="talk_start.ogg" />
+                </sound-folder>
             </sound-folder>
-            <sound-folder name="Notification">
-                <file name="notification_hide.m4a" />
-                <file name="notification_hide.ogg" />
-                <file name="notification_show.m4a" />
-                <file name="notification_show.ogg" />
-                <file name="notification_cross.m4a" />
-                <file name="notification_cross.ogg" />
-            </sound-folder>
-            <sound-folder name="AnimResult">
-                <file name="result_fail.m4a" />
-                <file name="result_fail.ogg" />
-                <file name="result_success.m4a" />
-                <file name="result_success.ogg" />
-            </sound-folder>
-            <sound-folder name="NPC">
-                <file name="npc_speach.m4a" />
-                <file name="npc_speach.ogg" />
+            <sound-folder name="demo1">
+                <sound-folder name="Carousel">
+                    <file name="carousel_spin.ogg" />
+                </sound-folder>
+                <sound-folder name="Secret">
+                    <file name="dumpster_fall_in.ogg" />
+                </sound-folder>
             </sound-folder>
         </sound-folder>
         <file name="switch25.ogg" />
