@@ -73,11 +73,10 @@
 					"continue": false,
 					"inCondIds": [
 						1440,
-						1739,
-						5627
+						1739
 					],
 					"outCondIds": [
-						5626
+						7411
 					],
 					"props": {
 						"id": "driver2",
@@ -156,7 +155,7 @@
 					"continue": true,
 					"inCondIds": [
 						1719,
-						5625
+						7411
 					],
 					"outCondIds": [
 						1718
@@ -309,35 +308,6 @@
 						"rollbackName": "",
 						"params": []
 					}
-				},
-				{
-					"ver": 1,
-					"id": 3435,
-					"type": -1,
-					"label": "Connect",
-					"continue": false,
-					"inCondIds": [
-						5626
-					],
-					"outCondIds": [
-						5625,
-						5628
-					],
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 3436,
-					"type": -1,
-					"label": "connect",
-					"continue": true,
-					"inCondIds": [
-						5628
-					],
-					"outCondIds": [
-						5627
-					],
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -992,34 +962,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 5625,
-					"type": 10,
-					"props": {
-						"name": "auto_talk_start_driver2"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 5626,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 5627,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 5628,
-					"type": 10,
-					"props": {
-						"name": "stage_activate"
-					}
-				},
-				{
-					"ver": 1,
 					"id": 5971,
 					"type": 8,
 					"props": {}
@@ -1309,6 +1251,14 @@
 					"props": {
 						"clearStage": true
 					}
+				},
+				{
+					"ver": 1,
+					"id": 7411,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_driver2"
+					}
 				}
 			]
 		},
@@ -1367,7 +1317,7 @@
 						1743
 					],
 					"outCondIds": [
-						5782
+						7412
 					],
 					"props": {
 						"id": "veider",
@@ -1486,7 +1436,7 @@
 					"continue": true,
 					"inCondIds": [
 						1721,
-						5785
+						7412
 					],
 					"outCondIds": [
 						1722
@@ -1518,8 +1468,7 @@
 					"label": "Connection",
 					"continue": true,
 					"inCondIds": [
-						1744,
-						5786
+						1744
 					],
 					"outCondIds": [
 						1743
@@ -1533,7 +1482,8 @@
 					"label": "I've got the pwr!",
 					"continue": false,
 					"inCondIds": [
-						2001
+						2001,
+						7413
 					],
 					"outCondIds": [
 						2002
@@ -1574,7 +1524,7 @@
 						2102
 					],
 					"outCondIds": [
-						3248
+						7413
 					],
 					"props": {
 						"id": "veider",
@@ -1638,22 +1588,6 @@
 						"source": "c2",
 						"rollbackName": "",
 						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2265,
-					"type": 5,
-					"label": "Interact",
-					"continue": false,
-					"inCondIds": [
-						3248
-					],
-					"outCondIds": [],
-					"props": {
-						"id": "veider",
-						"name": "speak",
-						"secs": -1
 					}
 				},
 				{
@@ -1739,21 +1673,6 @@
 					],
 					"outCondIds": [
 						5340
-					],
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 3585,
-					"type": -1,
-					"label": "connect",
-					"continue": false,
-					"inCondIds": [
-						5782
-					],
-					"outCondIds": [
-						5785,
-						5786
 					],
 					"props": {}
 				},
@@ -1870,12 +1789,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 3248,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 3541,
 					"type": 11,
 					"props": {
@@ -1942,28 +1855,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 5782,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 5785,
-					"type": 10,
-					"props": {
-						"name": "auto_talk_start_veider"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 5786,
-					"type": 10,
-					"props": {
-						"name": "stage_activate"
-					}
-				},
-				{
-					"ver": 1,
 					"id": 5973,
 					"type": 11,
 					"props": {
@@ -1981,6 +1872,22 @@
 					"id": 5975,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7412,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_veider"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7413,
+					"type": 2,
+					"props": {
+						"id": "veider"
+					}
 				}
 			]
 		},
@@ -2041,7 +1948,7 @@
 						1741
 					],
 					"outCondIds": [
-						5787
+						7418
 					],
 					"props": {
 						"id": "seller",
@@ -2139,7 +2046,7 @@
 					"continue": true,
 					"inCondIds": [
 						1726,
-						5788
+						7418
 					],
 					"outCondIds": [
 						1745
@@ -2171,8 +2078,7 @@
 					"label": "Connection",
 					"continue": true,
 					"inCondIds": [
-						1742,
-						5789
+						1742
 					],
 					"outCondIds": [
 						1741
@@ -2205,7 +2111,8 @@
 					"label": "Best meat",
 					"continue": false,
 					"inCondIds": [
-						2009
+						2009,
+						7415
 					],
 					"outCondIds": [
 						2106
@@ -2265,7 +2172,7 @@
 						2109
 					],
 					"outCondIds": [
-						3383
+						7415
 					],
 					"props": {
 						"id": "seller",
@@ -2330,37 +2237,6 @@
 						"rollbackName": "",
 						"params": []
 					}
-				},
-				{
-					"ver": 1,
-					"id": 2395,
-					"type": 5,
-					"label": "Interact",
-					"continue": false,
-					"inCondIds": [
-						3383
-					],
-					"outCondIds": [],
-					"props": {
-						"id": "seller",
-						"name": "speak",
-						"secs": -1
-					}
-				},
-				{
-					"ver": 1,
-					"id": 3587,
-					"type": -1,
-					"label": "Connect",
-					"continue": false,
-					"inCondIds": [
-						5787
-					],
-					"outCondIds": [
-						5788,
-						5789
-					],
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -2507,36 +2383,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 3383,
-					"type": 2,
-					"props": {
-						"id": "seller"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 5787,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 5788,
-					"type": 10,
-					"props": {
-						"name": "auto_talk_start_seller"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 5789,
-					"type": 10,
-					"props": {
-						"name": "stage_activate"
-					}
-				},
-				{
-					"ver": 1,
 					"id": 5976,
 					"type": 11,
 					"props": {
@@ -2554,6 +2400,22 @@
 					"id": 5978,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7415,
+					"type": 2,
+					"props": {
+						"id": "seller"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7418,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_seller"
+					}
 				}
 			]
 		},
@@ -2819,7 +2681,8 @@
 					"label": "Policeman idle 1",
 					"continue": false,
 					"inCondIds": [
-						6194
+						6194,
+						7419
 					],
 					"outCondIds": [
 						2099
@@ -2860,7 +2723,7 @@
 						2100
 					],
 					"outCondIds": [
-						3384
+						7419
 					],
 					"props": {
 						"id": "policeman",
@@ -3095,22 +2958,6 @@
 						"source": "c2",
 						"rollbackName": "",
 						"params": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 2396,
-					"type": 5,
-					"label": "Interact",
-					"continue": false,
-					"inCondIds": [
-						3384
-					],
-					"outCondIds": [],
-					"props": {
-						"id": "policeman",
-						"name": "speak",
-						"secs": -1
 					}
 				},
 				{
@@ -3678,14 +3525,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 3384,
-					"type": 2,
-					"props": {
-						"id": "policeman"
-					}
-				},
-				{
-					"ver": 1,
 					"id": 4903,
 					"type": 8,
 					"props": {}
@@ -4057,6 +3896,14 @@
 					"id": 7309,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7419,
+					"type": 2,
+					"props": {
+						"id": "policeman"
+					}
 				}
 			]
 		},
@@ -4115,7 +3962,7 @@
 						1736
 					],
 					"outCondIds": [
-						5791
+						7421
 					],
 					"props": {
 						"id": "cap",
@@ -4193,7 +4040,8 @@
 					"label": "Try a carousel!",
 					"continue": false,
 					"inCondIds": [
-						3223
+						3223,
+						7420
 					],
 					"outCondIds": [
 						1999
@@ -4213,7 +4061,7 @@
 					"continue": true,
 					"inCondIds": [
 						1729,
-						5790
+						7421
 					],
 					"outCondIds": [
 						1730
@@ -4245,8 +4093,7 @@
 					"label": "Connection",
 					"continue": true,
 					"inCondIds": [
-						1737,
-						5792
+						1737
 					],
 					"outCondIds": [
 						1736
@@ -4301,7 +4148,7 @@
 						2105
 					],
 					"outCondIds": [
-						3385
+						7420
 					],
 					"props": {
 						"id": "cap",
@@ -4366,37 +4213,6 @@
 						"rollbackName": "",
 						"params": []
 					}
-				},
-				{
-					"ver": 1,
-					"id": 2397,
-					"type": 5,
-					"label": "Interact",
-					"continue": false,
-					"inCondIds": [
-						3385
-					],
-					"outCondIds": [],
-					"props": {
-						"id": "cap",
-						"name": "speak",
-						"secs": -1
-					}
-				},
-				{
-					"ver": 1,
-					"id": 3588,
-					"type": -1,
-					"label": "Connect",
-					"continue": false,
-					"inCondIds": [
-						5791
-					],
-					"outCondIds": [
-						5790,
-						5792
-					],
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -4519,40 +4335,10 @@
 				},
 				{
 					"ver": 1,
-					"id": 3385,
-					"type": 2,
-					"props": {
-						"id": "cap"
-					}
-				},
-				{
-					"ver": 1,
 					"id": 3875,
 					"type": 11,
 					"props": {
 						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 5790,
-					"type": 10,
-					"props": {
-						"name": "auto_talk_start_cap"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 5791,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 5792,
-					"type": 10,
-					"props": {
-						"name": "stage_activate"
 					}
 				},
 				{
@@ -4573,6 +4359,22 @@
 					"type": 11,
 					"props": {
 						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7420,
+					"type": 2,
+					"props": {
+						"id": "cap"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7421,
+					"type": 10,
+					"props": {
+						"name": "auto_talk_start_cap"
 					}
 				}
 			]
@@ -6043,7 +5845,7 @@
 					"id": 4843,
 					"type": 1,
 					"label": "Waiting for bus...",
-					"continue": false,
+					"continue": true,
 					"inCondIds": [
 						7280,
 						7282
@@ -6130,7 +5932,7 @@
 				{
 					"ver": 1,
 					"id": 7274,
-					"type": 1,
+					"type": 8,
 					"props": {}
 				},
 				{
