@@ -6078,12 +6078,15 @@
                                     </animation>
                                 </animation-folder>
                             </object-type>
+                            <object-type global="1" name="RunningNPCAnimsOnCurUIActSeq" sid="9189467658925863">
+                                <plugin id="Dictionary" />
+                            </object-type>
                         </object-folder>
                         <object-folder name="Player">
                             <object-type name="Player" sid="2600527508592514">
                                 <plugin id="Sprite" />
                                 <instance-variables>
-                                    <instance-variable comment="TRUE when player haven&apos;t recieved any commands to play some specific animation" name="IsCurrentAnimationModeAutomatic" sid="8396278435992456" type="boolean" />
+                                    <instance-variable name="CurrentAnimMode" sid="3016375855466488" type="number" />
                                 </instance-variables>
                                 <container>
                                     <type>Player</type>
@@ -8796,6 +8799,8 @@
                         <event-sheet>PlatformerLevelDebug.xml</event-sheet>
                         <event-sheet>PlatformerLevelInput.xml</event-sheet>
                         <event-sheet>PlatformerLevelLogicLib.xml</event-sheet>
+                        <event-sheet>PlatformerLevelStageAudio.xml</event-sheet>
+                        <event-sheet>PlatformerLevelStageAnimation.xml</event-sheet>
                     </event-folder>
                     <event-sheet>PlatformerLevel.xml</event-sheet>
                 </event-folder>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlatformerLevelStageAnimation</name>
+    <events>
+        <event-group description="" sid="2406545456199476" title="Platformer level UI animation">
+            <sub-events>
+                <variable constant="0" name="IsPlayerAnimOnCurUIActSeqRunning" sid="1837632987385056" static="1" type="number">0</variable>
+                <event-block sid="8767085723729547">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1394025598650391" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9289260343120797">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="7710119413154193" type="System">
+                                    <param id="0" name="Variable">IsPlayerAnimOnCurUIActSeqRunning</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="3" name="Clear" sid="5948358236172256" type="RunningNPCAnimsOnCurUIActSeq" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="3962862942222681" title="Platformer level UI animation (interface)">
+                    <sub-events>
+                        <event-group description="" sid="824034486656737" title="Platformer level UI animation (player interface)">
+                            <sub-events>
+                                <comment>param(0): Anim name</comment>
+                                <event-block sid="9063310589885986">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="1560987749203352" type="Function">
+                                            <param id="0" name="Name">&quot;AnimPlayerRunOnCurUIActSeq&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7002579560647883">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="8870654133954774" type="System">
+                                                    <param id="0" name="Variable">IsPlayerAnimOnCurUIActSeqRunning</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="600321826045379" type="Function">
+                                                    <param id="0" name="Name">&quot;AnimPlayerRunPreemptable&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="9788254951129384">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="8545764723246342" type="Function">
+                                            <param id="0" name="Name">&quot;AnimPlayerSay&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="5139397172378679">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="6399140726322442" type="Function">
+                                                    <param id="0" name="Name">&quot;AnimPlayerRunOnCurUIActSeq&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;speak&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="5997468643776288">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="8144754283786896" type="Function">
+                                            <param id="0" name="Name">&quot;AnimPlayerThink&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>When Foxy thinks it actually can be in any animation. So we need to play sound manually.</comment>
+                                        <event-block sid="6331606264284136">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="9847765385083932" type="Function">
+                                                    <param id="0" name="Name">&quot;AnimPlayerRunOnCurUIActSeq&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;think&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="9321516523106611" type="Function">
+                                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;foxy_think&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="8028442225239039">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="3968065360438117" type="Function">
+                                            <param id="0" name="Name">&quot;onAnimPlayerCanceled&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="9410893551968725" type="System">
+                                            <param id="0" name="Variable">IsPlayerAnimOnCurUIActSeqRunning</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="782105193995463" title="Platformer level UI animation (NPC interface)">
+                            <sub-events>
+                                <comment>param(0): NPC UID&#x0D;&#x0A;param(1): Anim name</comment>
+                                <event-block sid="6850347490793732">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="3992353632720559" type="Function">
+                                            <param id="0" name="Name">&quot;AnimNPCRunOnCurUIActSeq&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="6091202655873945">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="5169942377453534" type="Function">
+                                                    <param id="0" name="Name">&quot;NPCAnim&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1)</param>
+                                                </action>
+                                                <action id="0" name="Add key" sid="3402190521993691" type="RunningNPCAnimsOnCurUIActSeq">
+                                                    <param id="0" name="Key">str(Function.Param(0))</param>
+                                                    <param id="1" name="Value">Function.Param(0)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>param(0): NPC UID</comment>
+                                <event-block sid="5704018148704383">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="3046872737374404" type="Function">
+                                            <param id="0" name="Name">&quot;AnimNPCSay&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="4563590292208811">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="4276358107344903" type="Function">
+                                                    <param id="0" name="Name">&quot;AnimNPCRunOnCurUIActSeq&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Function.Param(0){###}&quot;speak&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>param(0): NPC UID</comment>
+                                <comment>Just play default sound for now.</comment>
+                                <event-block sid="6299712345618872">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="9242273516642024" type="Function">
+                                            <param id="0" name="Name">&quot;AnimNPCThink&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="5466902158814333">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="8451314305863926" type="Function">
+                                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;npc_think&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="4170179361253822" title="Platformer level UI animation (implementation)">
+                    <sub-events>
+                        <event-block sid="7482608281702864">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7119836388720271" type="Function">
+                                    <param id="0" name="Name">&quot;HideStageUI&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7241037634808867">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5896624348329322" type="System">
+                                            <param id="0" name="Variable">IsPlayerAnimOnCurUIActSeqRunning</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7081328193302887" type="Function">
+                                            <param id="0" name="Name">&quot;AnimPlayerCancel&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6187701791039374">
+                                    <conditions>
+                                        <condition id="1" name="For each key" sid="1037835815231796" type="RunningNPCAnimsOnCurUIActSeq" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="5629080763033079" type="Function">
+                                            <param id="0" name="Name">&quot;NPCAnim&quot;</param>
+                                            <param id="1" name="Parameter {n}">RunningNPCAnimsOnCurUIActSeq.CurrentValue{###}&quot;idle&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

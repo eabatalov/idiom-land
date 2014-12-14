@@ -483,19 +483,55 @@
                                 <event-block sid="4413154926201069">
                                     <conditions />
                                     <actions>
-                                        <action id="0" name="Call function" sid="3503117888222338" type="Function">
-                                            <param id="0" name="Name">&quot;onBeforeQuestUICmdProcessing&quot;</param>
+                                        <action id="0" name="Call function" sid="5402584328597654" type="Function">
+                                            <param id="0" name="Name">&quot;ProcEndOfUICmdSequence&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;UI_CMD_SEQUENCE_FINISHED&quot;</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="9389501615221153" type="Function">
-                                            <param id="0" name="Name">&quot;UnlockUIActionsINProcessing&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;ProcAfterUIActionOut&quot;</param>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1314048152235586">
+                            <conditions>
+                                <condition id="10" name="onNoUIActionRequired" sid="8474655224572932" type="QuestLevelRuntime" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5767724087035366">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="4228403035599813" type="Function">
+                                            <param id="0" name="Name">&quot;ProcEndOfUICmdSequence&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;NO_UI_ACTION_REQUIRED&quot;</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="3878402638119488" type="Function">
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="789221393072072">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3233118025932086" type="Function">
+                                    <param id="0" name="Name">&quot;ProcEndOfUICmdSequence&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3938140196698725">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9804936707980947" type="Function">
+                                            <param id="0" name="Name">&quot;onBeforeQuestUICmdProcessing&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="2891094696793049" type="Function">
+                                            <param id="0" name="Name">&quot;UnlockUIActionsINProcessing&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="2470263615283569" type="Function">
                                             <param id="0" name="Name">&quot;onAfterQuestUICmdProcessing&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
-                                        <action id="0" name="Call function" sid="5065150163748434" type="Function">
+                                        <action id="0" name="Call function" sid="8453219625987824" type="Function">
                                             <param id="0" name="Name">&quot;onAfterUICmdSeqProc&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>

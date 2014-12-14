@@ -5,7 +5,6 @@
     <events>
         <comment>NOTE: Code in this file may be separated to quest engine and level UI specific parts if needed</comment>
         <comment>XXX leave it not in QuestDialog because dependencies will break on var deletetion</comment>
-        <variable constant="0" name="CURRENT_TALKING_CHAR_ID_ON_STAGE" sid="8827647186199187" static="0" type="text"></variable>
         <event-group description="" sid="969413197294685" title="Quest dialog UI">
             <sub-events>
                 <comment>&quot;STOPPED&quot; - no dialog step transitions are running&#x0D;&#x0A;&quot;STOPPED&quot; -&gt; &quot;TRANSITION_PENDING&quot; -&gt; &quot;TRANSITION_RUNNING&quot; -&gt; &quot;STEP_SHOW&quot; -&gt; &quot;STOPPED&quot;...</comment>
@@ -763,8 +762,8 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="8602256126347749" type="Function">
-                                                            <param id="0" name="Name">&quot;NPCAnim&quot;</param>
-                                                            <param id="1" name="Parameter {n}">CurrentDialogStepTargetUID{###}&quot;speak&quot;</param>
+                                                            <param id="0" name="Name">&quot;AnimNPCSay&quot;</param>
+                                                            <param id="1" name="Parameter {n}">CurrentDialogStepTargetUID</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -801,7 +800,6 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <comment>Just play default sound</comment>
                                                 <event-block any="1" sid="5574627166599601">
                                                     <conditions>
                                                         <condition id="-14" name="Compare variable" sid="597680896854104" type="System">
@@ -816,11 +814,9 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="0" name="Play" sid="371631227125403" type="Audio">
-                                                            <param id="0" name="Audio file">npc_think</param>
-                                                            <param id="2" name="Loop">0</param>
-                                                            <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        <action id="0" name="Call function" sid="3358952245057313" type="Function">
+                                                            <param id="0" name="Name">&quot;AnimNPCThink&quot;</param>
+                                                            <param id="1" name="Parameter {n}">CurrentDialogStepTargetUID</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>

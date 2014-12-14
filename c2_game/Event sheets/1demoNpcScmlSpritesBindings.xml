@@ -122,12 +122,9 @@
                                 <condition id="7" name="On sound triggered" sid="6457257877088827" type="veiderSCML" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Play (by name)" sid="4546525504618461" type="Audio">
-                                    <param id="0" name="Folder">0</param>
-                                    <param id="1" name="Audio file name">veiderSCML.triggeredSoundTag</param>
-                                    <param id="3" name="Loop">0</param>
-                                    <param id="4" name="Volume">0</param>
-                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                <action id="0" name="Call function" sid="3469583665399905" type="Function">
+                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                    <param id="1" name="Parameter {n}">veiderSCML.triggeredSoundTag</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -244,12 +241,9 @@
                                 <condition id="7" name="On sound triggered" sid="8560933164404637" type="taxiHindiSCML" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Play (by name)" sid="1284421410669412" type="Audio">
-                                    <param id="0" name="Folder">0</param>
-                                    <param id="1" name="Audio file name">taxiHindiSCML.triggeredSoundTag</param>
-                                    <param id="3" name="Loop">0</param>
-                                    <param id="4" name="Volume">0</param>
-                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                <action id="0" name="Call function" sid="3844815177649288" type="Function">
+                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                    <param id="1" name="Parameter {n}">taxiHindiSCML.triggeredSoundTag</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -386,12 +380,9 @@
                                 <condition id="7" name="On sound triggered" sid="3032726472865647" type="captainSCML" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Play (by name)" sid="4696104978844772" type="Audio">
-                                    <param id="0" name="Folder">0</param>
-                                    <param id="1" name="Audio file name">captainSCML.triggeredSoundTag</param>
-                                    <param id="3" name="Loop">0</param>
-                                    <param id="4" name="Volume">0</param>
-                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                <action id="0" name="Call function" sid="9343354753990977" type="Function">
+                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                    <param id="1" name="Parameter {n}">captainSCML.triggeredSoundTag</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -504,16 +495,9 @@
                                 <condition id="7" name="On sound triggered" sid="607494614476719" type="policeman" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Play (by name)" sid="6257765994824768" type="Audio">
-                                    <param id="0" name="Folder">0</param>
-                                    <param id="1" name="Audio file name">policeman.triggeredSoundTag</param>
-                                    <param id="3" name="Loop">0</param>
-                                    <param id="4" name="Volume">0</param>
-                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action id="14" name="Log" sid="1712520439622839" type="Browser">
-                                    <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Policeman sound triggered&quot;</param>
+                                <action id="0" name="Call function" sid="747318882715614" type="Function">
+                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                    <param id="1" name="Parameter {n}">policeman.triggeredSoundTag</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -658,12 +642,9 @@
                                 <condition id="7" name="On sound triggered" sid="7375892823207062" type="kebab" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Play (by name)" sid="7541480274533336" type="Audio">
-                                    <param id="0" name="Folder">0</param>
-                                    <param id="1" name="Audio file name">kebab.triggeredSoundTag</param>
-                                    <param id="3" name="Loop">0</param>
-                                    <param id="4" name="Volume">0</param>
-                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                <action id="0" name="Call function" sid="7846362765398134" type="Function">
+                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                    <param id="1" name="Parameter {n}">kebab.triggeredSoundTag</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -772,12 +753,9 @@
                                 <condition id="7" name="On sound triggered" sid="8231669973602905" type="kebabson" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Play (by name)" sid="2170460492359124" type="Audio">
-                                    <param id="0" name="Folder">0</param>
-                                    <param id="1" name="Audio file name">kebabson.triggeredSoundTag</param>
-                                    <param id="3" name="Loop">0</param>
-                                    <param id="4" name="Volume">0</param>
-                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                <action id="0" name="Call function" sid="3183204641044352" type="Function">
+                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                    <param id="1" name="Parameter {n}">kebabson.triggeredSoundTag</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -898,18 +876,15 @@
                                 <condition id="7" name="On sound triggered" sid="409993809416033" type="taxidriver" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Play (by name)" sid="2579403731957286" type="Audio">
-                                    <param id="0" name="Folder">0</param>
-                                    <param id="1" name="Audio file name">taxidriver.triggeredSoundTag</param>
-                                    <param id="3" name="Loop">0</param>
-                                    <param id="4" name="Volume">0</param>
-                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                <action id="0" name="Call function" sid="8935486338773985" type="Function">
+                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                    <param id="1" name="Parameter {n}">taxidriver.triggeredSoundTag</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="2420977200556076" title="BusDriverSprites">
+                <event-group description="" sid="2420977200556076" title="BusDriverSCML">
                     <sub-events>
                         <variable constant="1" name="BUS_DRIVER_ANIM_UID" sid="3830030619536054" static="0" type="text">BUS_DRIVER</variable>
                         <event-block sid="8577572096803759">
@@ -1020,12 +995,9 @@
                                 <condition id="7" name="On sound triggered" sid="1688039852354439" type="busdriver" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Play (by name)" sid="3226567482253796" type="Audio">
-                                    <param id="0" name="Folder">0</param>
-                                    <param id="1" name="Audio file name">busdriver.triggeredSoundTag</param>
-                                    <param id="3" name="Loop">0</param>
-                                    <param id="4" name="Volume">0</param>
-                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                <action id="0" name="Call function" sid="6162412200229878" type="Function">
+                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                    <param id="1" name="Parameter {n}">busdriver.triggeredSoundTag</param>
                                 </action>
                             </actions>
                         </event-block>

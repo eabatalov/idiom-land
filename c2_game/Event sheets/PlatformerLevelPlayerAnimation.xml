@@ -7,6 +7,9 @@
             <sub-events>
                 <variable constant="1" name="PLAYER_ANIM_SCALING_DEFAULT" sid="4744348570009192" static="0" type="number">0.45</variable>
                 <variable comment="Leave it zero. != condition will force recomputation of this var." constant="0" name="PlayerAnimScalingCurrent" sid="7409917232449734" static="1" type="number">0</variable>
+                <variable constant="1" name="PLAYER_ANIM_MODE_AUTO" sid="216310390478447" static="0" type="number">0</variable>
+                <variable constant="1" name="PLAYER_ANIM_MODE_PREEMTABLE" sid="7267223231210247" static="0" type="number">1</variable>
+                <variable constant="1" name="PLAYER_ANIM_MODE_MANUAL" sid="2247299768342533" static="0" type="number">2</variable>
                 <event-group description="" sid="5020068825746262" title="Initialization">
                     <sub-events>
                         <event-block sid="9016563247743718">
@@ -76,8 +79,10 @@
                                 <variable constant="0" name="IsInDialogMode" sid="2365980698197659" static="1" type="number">0</variable>
                                 <event-block sid="9751026908280847">
                                     <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="4039202312754226" type="Player">
-                                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
+                                        <condition id="-7" name="Compare instance variable" sid="4039202312754226" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PLAYER_ANIM_MODE_AUTO</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -220,8 +225,10 @@
                                 <event-block sid="9573781634401534">
                                     <conditions>
                                         <condition behavior="Platform" id="5" name="On jump" sid="6025160277107431" type="PlayerPlatform" />
-                                        <condition id="-8" name="Is boolean instance variable set" sid="1549861636287261" type="Player">
-                                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
+                                        <condition id="-7" name="Compare instance variable" sid="7761395112412015" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PLAYER_ANIM_MODE_AUTO</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -290,8 +297,10 @@
                                 <event-block sid="3809972579669077">
                                     <conditions>
                                         <condition behavior="Platform" id="6" name="On fall" sid="9663412239955302" type="PlayerPlatform" />
-                                        <condition id="-8" name="Is boolean instance variable set" sid="864351835718719" type="Player">
-                                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
+                                        <condition id="-7" name="Compare instance variable" sid="1799543289128934" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PLAYER_ANIM_MODE_AUTO</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -308,8 +317,10 @@
                                 <event-block sid="638913726269852">
                                     <conditions>
                                         <condition behavior="Platform" id="9" name="On landed" sid="1017229682156828" type="PlayerPlatform" />
-                                        <condition id="-8" name="Is boolean instance variable set" sid="1741498294726826" type="Player">
-                                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
+                                        <condition id="-7" name="Compare instance variable" sid="7016498030331662" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PLAYER_ANIM_MODE_AUTO</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -357,19 +368,36 @@
                 </event-group>
                 <event-group description="Animation logic which can be enabled/disabled on external demand." sid="8278518111259733" title="Dynamic">
                     <sub-events>
-                        <event-group description="" sid="6327924177304405" title="Base">
+                        <comment>param(0): animation name</comment>
+                        <event-block sid="8945119670845163">
+                            <conditions>
+                                <condition id="0" name="On function" sid="668738160881023" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
                             <sub-events>
-                                <comment>param(0): animation name</comment>
-                                <event-block sid="8945119670845163">
+                                <event-block sid="8751598374983928">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8993994882193705" type="Function">
+                                            <param id="0" name="Name">&quot;AnimPlayerCancel&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5954033545624438">
                                     <conditions>
-                                        <condition id="0" name="On function" sid="668738160881023" type="Function">
-                                            <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
+                                        <condition id="1" name="Compare parameter" sid="6201551725988024" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;idle&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="5614522424529324" type="Player">
-                                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
-                                            <param id="1" name="Value">0</param>
+                                        <action id="-10" name="Set value" sid="3277854596472515" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Value">PLAYER_ANIM_MODE_MANUAL</param>
                                         </action>
                                         <action id="1" name="Set playback speed ratio" sid="6874471233467473" type="PlayerSCML">
                                             <param id="0" name="Speed Ratio">1.0</param>
@@ -381,53 +409,19 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="9783851033608358">
-                                    <conditions>
-                                        <condition id="0" name="On function" sid="1437120769221381" type="Function">
-                                            <param id="0" name="Name">&quot;AnimPlayerCancel&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="837843564603048" type="Player">
-                                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="1" name="Set playback speed ratio" sid="5078019635920668" type="PlayerSCML">
-                                            <param id="0" name="Speed Ratio">1.0</param>
-                                        </action>
-                                        <action id="0" name="Set animation" sid="7518854742748734" type="PlayerSCML">
-                                            <param id="0" name="Animation">&quot;idle&quot;</param>
-                                            <param id="1" name="Where to start playing this animation">0</param>
-                                            <param id="2" name="Blend Duration">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3478046881652599">
-                                    <conditions>
-                                        <condition id="1" name="On any finished" sid="6849471902486559" type="PlayerSCML" />
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7054054359084409" type="Player">
-                                            <param id="0" name="Instance variable">IsCurrentAnimationModeAutomatic</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="2755231291215201" type="Function">
-                                            <param id="0" name="Name">&quot;AnimPlayerCancel&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                             </sub-events>
-                        </event-group>
-                        <event-group description="" sid="9056376712737083" title="Extensions">
+                        </event-block>
+                        <comment>param(0): animation name&#x0D;&#x0A;param(1): time duration to play in msecs&#x0D;&#x0A;Explicitly stop animation when duration is passed because spriter can&apos;t generate anim finished when duration is longer then animation</comment>
+                        <event-block sid="279668896230396">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2533048029894537" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerRunTimed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
                             <sub-events>
-                                <comment>param(0): animation name&#x0D;&#x0A;param(1): time duration to play in msecs</comment>
-                                <comment>Explicitly stop animation when duration is passed because spriter can&apos;t generate anim finished when duration is longer then animation</comment>
-                                <event-block sid="279668896230396">
-                                    <conditions>
-                                        <condition id="0" name="On function" sid="2533048029894537" type="Function">
-                                            <param id="0" name="Name">&quot;AnimPlayerRunTimed&quot;</param>
-                                        </condition>
-                                    </conditions>
+                                <event-block sid="1010559911981107">
+                                    <conditions />
                                     <actions>
                                         <action id="0" name="Call function" sid="8211802956268283" type="Function">
                                             <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
@@ -442,34 +436,124 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="795346902549655">
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): animation name</comment>
+                        <event-block sid="3882349336432462">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9115592515697681" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerRunPreemptable&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="5796515181192117">
                                     <conditions>
-                                        <condition id="0" name="On function" sid="4040829790392709" type="Function">
-                                            <param id="0" name="Name">&quot;AnimPlayerSay&quot;</param>
+                                        <condition id="-7" name="Compare instance variable" sid="6726983274584543" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PLAYER_ANIM_MODE_AUTO</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="195873295121447" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PLAYER_ANIM_MODE_PREEMTABLE</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="7509874760591553" type="Function">
+                                        <action id="0" name="Call function" sid="2977323008305829" type="Function">
                                             <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;speak&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1487213003554225" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Value">PLAYER_ANIM_MODE_PREEMTABLE</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="753258020041523">
+                                <event-block sid="5097812094664072">
                                     <conditions>
-                                        <condition id="0" name="On function" sid="9368411148312285" type="Function">
-                                            <param id="0" name="Name">&quot;AnimPlayerThink&quot;</param>
-                                        </condition>
+                                        <condition id="-22" name="Else" sid="3634505762417939" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="7635814578089396" type="Function">
-                                            <param id="0" name="Name">&quot;AnimPlayerRun&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;think&quot;</param>
+                                        <action id="0" name="Call function" sid="6472285693497558" type="Function">
+                                            <param id="0" name="Name">&quot;onAnimPlayerCanceled&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-group>
+                        </event-block>
+                        <event-block sid="9783851033608358">
+                            <conditions>
+                                <condition id="0" name="On function" sid="1437120769221381" type="Function">
+                                    <param id="0" name="Name">&quot;AnimPlayerCancel&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="8350461873047605">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="4231468158863711" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PLAYER_ANIM_MODE_PREEMTABLE</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="3375277265138064" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PLAYER_ANIM_MODE_MANUAL</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="9834614041208531" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Value">PLAYER_ANIM_MODE_AUTO</param>
+                                        </action>
+                                        <action id="1" name="Set playback speed ratio" sid="5078019635920668" type="PlayerSCML">
+                                            <param id="0" name="Speed Ratio">1.0</param>
+                                        </action>
+                                        <action id="0" name="Set animation" sid="7518854742748734" type="PlayerSCML">
+                                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">0</param>
+                                            <param id="2" name="Blend Duration">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="4979884516819502" type="Function">
+                                            <param id="0" name="Name">&quot;onAnimPlayerCanceled&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3478046881652599">
+                            <conditions>
+                                <condition id="1" name="On any finished" sid="6849471902486559" type="PlayerSCML" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="9353086367847277">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1174925284477462" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PLAYER_ANIM_MODE_PREEMTABLE</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="4468698025031028" type="Player">
+                                            <param id="0" name="Instance variable">CurrentAnimMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PLAYER_ANIM_MODE_MANUAL</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="2755231291215201" type="Function">
+                                            <param id="0" name="Name">&quot;AnimPlayerCancel&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-group>
             </sub-events>
