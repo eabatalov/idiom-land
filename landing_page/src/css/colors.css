@@ -10,7 +10,7 @@ p {
 }
 
 .cta1 {
-    border-color: white;
+    border-color: #474849;
 }
 
 
@@ -19,9 +19,8 @@ p {
 
 .spinner > div,
 .cta2 {
-    background-color: white;
+    background-color: #13BDCE;
 }
-
 
 
 
@@ -38,7 +37,7 @@ p {
 
 .subscribe-submit, 
 .subscribe-submit:active {
-    background-color: #FB8B7A;
+    background-color: #13BDCE;
 }
 
 
@@ -75,280 +74,31 @@ p {
 
 #preview,
 #home {
-    background-color: rgb(130, 200, 170);
-    -webkit-animation: change-color-home 40s infinite;
-    -moz-animation: change-color-home 40s infinite;
-    -o-animation: change-color-home 40s infinite;
-    animation: change-color-home 40s infinite;
+    background-image: url(images/home-bg.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-@-webkit-keyframes change-color-home {
-    0% {
-        background-color: rgb(130, 200, 170);
-    }
-    20% {
-        background-color: rgb(130, 200, 170);
-    }
-    40% {
-        background-color: rgb(130, 200, 200);
-    }
-    60% {
-        background-color: rgb(130, 200, 170);
-    }
-    80% {
-        background-color: rgb(130, 200, 120);
-    }
-    100% {
-        background-color: rgb(130, 200, 170);
-    }
-}
-@-moz-keyframes change-color-home {
-    0% {
-        background-color: rgb(130, 200, 170);
-    }
-    20% {
-        background-color: rgb(130, 200, 170);
-    }
-    40% {
-        background-color: rgb(130, 200, 200);
-    }
-    60% {
-        background-color: rgb(130, 200, 170);
-    }
-    80% {
-        background-color: rgb(130, 200, 120);
-    }
-    100% {
-        background-color: rgb(130, 200, 170);
-    }
-}
-@-o-keyframes change-color-home {
-    0% {
-        background-color: rgb(130, 200, 170);
-    }
-    20% {
-        background-color: rgb(130, 200, 170);
-    }
-    40% {
-        background-color: rgb(130, 200, 200);
-    }
-    60% {
-        background-color: rgb(130, 200, 170);
-    }
-    80% {
-        background-color: rgb(130, 200, 120);
-    }
-    100% {
-        background-color: rgb(130, 200, 170);
-    }
-}
-@keyframes change-color-home {
-    0% {
-        background-color: rgb(130, 200, 170);
-    }
-    20% {
-        background-color: rgb(130, 200, 170);
-    }
-    40% {
-        background-color: rgb(130, 200, 200);
-    }
-    60% {
-        background-color: rgb(130, 200, 170);
-    }
-    80% {
-        background-color: rgb(130, 200, 120);
-    }
-    100% {
-        background-color: rgb(130, 200, 170);
-    }
+#slogan {
+    color: #474849;
 }
 
-#features_3{
-    background-color: rgb(250, 140, 120);
-    -webkit-animation: change-color-features 40s infinite;
-    -moz-animation: change-color-features 40s infinite;
-    -o-animation: change-color-features 40s infinite;
-    animation: change-color-features 40s infinite;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.containersolid {
+    background-color:#474849;
+    color:#13BDCE;
+    background: url(images/bgcontainer.gif) center center repeat-x;
 }
-@-webkit-keyframes change-color-features {
-    0% {
-        background-color: rgb(250, 140, 120);
-    }
-    20% {
-        background-color: rgb(250, 140, 120);
-    }
-    40% {
-        background-color: rgb(250, 160, 50);
-    }
-    60% {
-        background-color: rgb(250, 140, 120);
-    }
-    80% {
-        background-color: rgb(250, 160, 50);
-    }
-    100% {
-        background-color: rgb(250, 140, 120);
-    }
+.containersolid p{
+    color:#f1f2f3;
+    text-align: center;
 }
-@-moz-keyframes change-color-features {
-    0% {
-        background-color: rgb(250, 140, 120);
-    }
-    20% {
-        background-color: rgb(250, 140, 120);
-    }
-    40% {
-        background-color: rgb(250, 160, 50);
-    }
-    60% {
-        background-color: rgb(250, 140, 120);
-    }
-    80% {
-        background-color: rgb(250, 160, 50);
-    }
-    100% {
-        background-color: rgb(250, 140, 120);
-    }
-}
-@-o-keyframes change-color-features {
-    0% {
-        background-color: rgb(250, 140, 120);
-    }
-    20% {
-        background-color: rgb(250, 140, 120);
-    }
-    40% {
-        background-color: rgb(250, 160, 50);
-    }
-    60% {
-        background-color: rgb(250, 140, 120);
-    }
-    80% {
-        background-color: rgb(250, 160, 50);
-    }
-    100% {
-        background-color: rgb(250, 140, 120);
-    }
-}
-@keyframes change-color-features {
-    0% {
-        background-color: rgb(250, 140, 120);
-    }
-    20% {
-        background-color: rgb(250, 160, 120);
-    }
-    40% {
-        background-color: rgb(250, 160, 50);
-    }
-    60% {
-        background-color: rgb(250, 140, 120);
-    }
-    80% {
-        background-color: rgb(250, 160, 50);
-    }
-    100% {
-        background-color: rgb(250, 140, 120);
-    }
+.containersolid h3{
+    color:#13BDCE;
+    text-align: center;
 }
 
-#footer {
-    background-color: rgb(120, 140, 170);
-    -webkit-animation: change-color-footer 40s infinite;
-    -moz-animation: change-color-footer 40s infinite;
-    -o-animation: change-color-footer 40s infinite;
-    animation: change-color-footer 40s infinite;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-@-webkit-keyframes change-color-footer {
-    0% {
-        background-color: rgb(120, 140, 170);
-    }
-    20% {
-        background-color: rgb(120, 140, 170);
-    }
-    40% {
-        background-color: rgb(170, 140, 110);
-    }
-    60% {
-        background-color: rgb(120, 140, 170);
-    }
-    80% {
-        background-color: rgb(80, 140, 140);
-    }
-    100% {
-        background-color: rgb(120, 140, 170);
-    }
-}
-@-moz-keyframes change-color-footer {
-    0% {
-        background-color: rgb(120, 140, 170);
-    }
-    20% {
-        background-color: rgb(120, 140, 170);
-    }
-    40% {
-        background-color: rgb(170, 140, 110);
-    }
-    60% {
-        background-color: rgb(120, 140, 170);
-    }
-    80% {
-        background-color: rgb(80, 140, 140);
-    }
-    100% {
-        background-color: rgb(120, 140, 170);
-    }
-}
-@-o-keyframes change-color-footer {
-    0% {
-        background-color: rgb(120, 140, 170);
-    }
-    20% {
-        background-color: rgb(120, 140, 170);
-    }
-    40% {
-        background-color: rgb(170, 140, 110);
-    }
-    60% {
-        background-color: rgb(120, 140, 170);
-    }
-    80% {
-        background-color: rgb(80, 140, 140);
-    }
-    100% {
-        background-color: rgb(120, 140, 170);
-    }
-}
-@keyframes change-color-footer {
-    0% {
-        background-color: rgb(120, 140, 170);
-    }
-    20% {
-        background-color: rgb(120, 140, 170);
-    }
-    40% {
-        background-color: rgb(170, 140, 110);
-    }
-    60% {
-        background-color: rgb(120, 140, 170);
-    }
-    80% {
-        background-color: rgb(80, 140, 140);
-    }
-    100% {
-        background-color: rgb(120, 140, 170);
-    }
-}
+
 h3 {
     color:black;
 }
@@ -368,24 +118,29 @@ h4 {
 }
 
 .feature h4 {
-    color: #81CCA9;
+    color: #13BDCE;
 }
 
 .feature_3 h4 {
-    color: white;
+    color: #f1f2f3;
 }
 
 .home_p {
-    color: white;
+    color: #474849;
 }
 
 #features_3 p {
-    color: white;
+    color: #f1f2f3;
 }
 
 #features_3 h2 {
-    color: white;
+    color: #f1f2f3;
 }
+
+#features_3 h3 {
+    color: #f1f2f3;
+}
+
 
 .owl-theme .owl-controls .owl-page span{
 	background-color: #d8d8d8;

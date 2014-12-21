@@ -1,6 +1,6 @@
 jQuery(window).load(function() {
     var alertContainer = $(
-        '<div class="referral-alert" '
+        '<div class="referral-alert shake animated" '
         + 'data-untorch-element="alert">'
         + '</div>')
     jQuery(document.body).append(alertContainer);

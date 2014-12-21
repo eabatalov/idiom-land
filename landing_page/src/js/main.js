@@ -14,10 +14,10 @@
     */
     Carousel: function() {
         $('#owl-gallery').owlCarousel({
-            items : 5,
-            itemsDesktop : [1199,5],
-            itemsDesktopSmall : [980,5],
-            itemsTablet: [768,5],
+            items : 4,
+            itemsDesktop : [1199,4],
+            itemsDesktopSmall : [980,4],
+            itemsTablet: [768,4],
             itemsTabletSmall: [550,2],
             itemsMobile : [480,2],
         });
@@ -28,7 +28,16 @@
     */
     Lightbox: function() {
         $('#owl-gallery a').nivoLightbox({
-            effect: 'fall',                             // The effect to use when showing the lightbox
+            effect: 'fade',                 // The effect to use when showing the lightbox
+            keyboardNav: true,              // Enable/Disable keyboard navigation (left/right/escape)
+        });
+        $('#home-image a').nivoLightbox({
+            effect: 'fade',                 // The effect to use when showing the lightbox
+            keyboardNav: true,              // Enable/Disable keyboard navigation (left/right/escape)
+        });
+        $('#iphone-image a').nivoLightbox({
+            effect: 'fade',                 // The effect to use when showing the lightbox
+            keyboardNav: true,              // Enable/Disable keyboard navigation (left/right/escape)
         });
     }
 

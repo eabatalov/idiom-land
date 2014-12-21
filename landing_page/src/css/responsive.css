@@ -1,92 +1,43 @@
 @media (min-width: 1200px) {
     html {
-        font-size: 120%;
+        font-size: 118.75%;
     }
-    #home_image {
-        top: 5rem;
-    }
-    #features_3_content_center .img-responsive {
-        display: block;
-        max-width: 170%;
-        height: auto;
-        left: -7.3rem;
-        top: -6.4rem;
-        position: relative;
-    }
-    .icon-social{
-        position: inherit;
-        display: inline-table;
-    }
-    .social-img{
-        width: 52px;
+        .social-img{
+        width: 100px;
         height: auto;
     }
-    #social_icons_home {
-        text-align: center;
-        margin-bottom: -3.6rem;
-        margin-top: 4rem;
-    }
-    #social_icons{
-        text-align: center;
-    }
-    .share-button-facebook .button,
-    .share-button-twitter .button,
-    .share-button-gplus .button,
-    .share-button-vkontakte .button {
-        width: 52px;
-        height: 52px;
-        background-size: 52px;
-    }
+
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 991px) {
     html {
-        font-size: 100%;
+        font-size: 81.25%;
     }
-    #logo {
-        margin-top: 2rem;
-    }
-    #home_image {
-        top: 5rem;
-    }
-    .icon-social{
-        width: 3.4rem;
-        position: inherit;
-        display: inline-table;
-    }
-    #social_icons_home {
-        text-align: center;
-        margin-bottom: -3.6rem;
-        margin-top: 3.2rem;
-    }
-    .icon-social{
-        position: inherit;
-        display: inline-table;
-    }
-    .social-img{
+        .social-img{
         width: 40px;
         height: auto;
     }
-    .share-button-facebook .button,
-    .share-button-twitter .button,
-    .share-button-gplus .button,
-    .share-button-vkontakte .button {
-        width: 43px;
-        height: 43px;
-        background-size: 43px;
-    }
-
 }
 
 @media (max-width: 767px) {
     html {
         font-size: 81.25%;
     }
-
+    
+    #home_content {
+    text-align:center;
+    position:fixed;
+    top: 2em;
+    left: 0;
+    margin: 0;
+    height:auto;
+    width:auto;
+    }
+    
     #features_1, #features_2 {
     text-align:center;
     }
-
+    
 
     .feature_icon {
     float:none;
@@ -96,11 +47,11 @@
     margin-right:0;
     }
 
-
+    
     #about {
     margin-bottom:4.568em;
     }
-
+    
     p {
         font-size: 1.5rem;
     }
@@ -127,163 +78,25 @@
         margin-left:auto;
         margin-right:auto;
     }
-
-    #logo {
-        margin-top: 1rem;
-    }
-
-    #home_image {
-        top: 10rem;
-        right: -2rem;
-    }
-
-    #blog_header {
-        text-align:center;
-        height:auto;
-        width:auto;
-    }
-
-    #title, #logo_blog {
-        text-align: center;
-    }
-
-    #button_back {float:none;}
-    .icon-social{
-        width: 3.4rem;
-        position: inherit;
-        display: inline-table;
-    }
-    #social_icons_home {
-        text-align: left;
-        margin-bottom: -3.6rem;
-        margin-top: 3.2rem;
-    }
-    .icon-social{
-        position: inherit;
-        display: inline-table;
-    }
-    .social-img{
+        .social-img{
         width: 32px;
         height: auto;
     }
-    .share-button-facebook .button,
-    .share-button-twitter .button,
-    .share-button-gplus .button,
-    .share-button-vkontakte .button {
-        width: 34px;
-        height: 34px;
-        background-size: 34px;
-    }
-
 }
 
 @media (max-width: 480px) {
     html {
-        font-size: 66%;
+        font-size: 62.5%;
     }
     p {
         font-size: 1.5rem;
     }
 
     h1 {font-size:3rem;}
-    h2 {margin-top: 2rem;}
     #logo_header {margin-bottom:2em }
-    
-    #logo {
-        margin-top: 1rem;
-        text-align: center;
+
+    #counter_box {
+        margin-bottom:2em;
     }
-    #home_image {
-        top: 8rem;
-        max-width: 185%;
-        right: -2rem;
-    }
-    #slogan {
-    text-align: center;
-    top:28rem;
-    }
-    #features_3_content_center .img-responsive {
-        max-width: 34.5rem;
-        left: -6rem;
-        top: -5rem;
-    }
-    #social_icons_home {
-        text-align: center;
-        margin-bottom: -3.6rem;
-        margin-top: 22.8rem;
-    }
-    #social_icons{
-        text-align: center;
-    }
-    #newsletter_form {
-        text-align: center;
-        display: flex;
-        position: inherit;
-    }
-    .home_p{
-        text-align: center;
-        top: 28rem;
-        position: inherit;
-    }
-    .subscribe-form-home {
-        width: 19rem;
-        text-align: center;
-        float: none;
-    }
-    .subscribe-form{
-        float: inherit;
-    }
-    .feature_3_icon {
-        margin-bottom: 1.6rem;
-    }
-    .feature_icon {
-        margin-bottom: 2rem;
-    }
-    .contact-us-input{
-        border-radius: 16px;
-    }
-    .icon-social{
-        width: 3.4rem;
-        position: inherit;
-        display: inline-table;
-    }
-    .share-container {
-        line-height: 27px;
-        position: inherit;
-        z-index: 20;
-        text-align: center;
-    }
-    .share-button {
-        padding: 0 10px 0 0;
-    }
-    .button{
-        width: 10%;
-        height: 2.8rem;
-        padding: 6px 10px;
-    }
-    .icon-social{
-        position: inherit;
-        display: inline-table;
-        overflow: hidden;
-    }
-    .share-button-facebook .button {
-        width: 28px;
-        height: 28px;
-        background-size: 28px;
-    }
-    .share-button-twitter .button {
-        width: 28px;
-        height: 28px;
-        background-size: 28px;
-    }
-    .share-button-gplus .button {
-        width: 28px;
-        height: 28px;
-        background-size: 28px;
-    }
-    .share-button-vkontakte .button {
-        width: 28px;
-        height: 28px;
-        background-size: 28px;
-    }
+
 }
