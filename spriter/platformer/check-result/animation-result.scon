@@ -6,18 +6,65 @@
 					"gline": [],
 					"id": 0,
 					"interval": 100,
-					"length": 0,
+					"length": 100,
+					"looping": "false",
 					"mainline": {
 						"key": [
 							{
-								"bone_ref": [],
+								"bone_ref": [
+									{
+										"id": 0,
+										"key": 0,
+										"timeline": 0
+									}
+								],
 								"id": 0,
 								"object_ref": []
+							},
+							{
+								"bone_ref": [
+									{
+										"id": 0,
+										"key": 1,
+										"timeline": 0
+									}
+								],
+								"id": 1,
+								"object_ref": [],
+								"time": 100
 							}
 						]
 					},
 					"name": "idle",
-					"timeline": []
+					"timeline": [
+						{
+							"id": 0,
+							"key": [
+								{
+									"bone": {
+										"angle": 67.11936282358232,
+										"x": -24,
+										"y": -83
+									},
+									"id": 0,
+									"spin": 0
+								},
+								{
+									"bone": {
+										"angle": 67.11936282358232,
+										"x": -24,
+										"y": -83
+									},
+									"id": 1,
+									"spin": 0,
+									"time": 100
+								}
+							],
+							"name": "bone_fake_idle_dont_del",
+							"obj": 4,
+							"object_type": "bone"
+						}
+					]
 				},
 				{
 					"gline": [],
@@ -926,6 +973,20 @@
 					"name": "animation-result_result1",
 					"realname": "result1",
 					"type": "sprite"
+				},
+				{
+					"h": 10,
+					"name": "animation-result_bone_000",
+					"realname": "bone_000",
+					"type": "bone",
+					"w": 110.05453193758083
+				},
+				{
+					"h": 10,
+					"name": "animation-result_bone_fake_idle_dont_del",
+					"realname": "bone_fake_idle_dont_del",
+					"type": "bone",
+					"w": 118.30891766895681
 				}
 			]
 		}

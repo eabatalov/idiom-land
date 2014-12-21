@@ -11,6 +11,10 @@
         <file id="0" name="result/result0.png" width="223" height="223" pivot_x="0.5" pivot_y="0.5"/>
         <file id="1" name="result/result1.png" width="223" height="223" pivot_x="0.5" pivot_y="0.5"/>
     </folder>
+    <folder id="3">
+        <file id="0" name="result_success.wav" type="sound"/>
+        <file id="1" name="result_fail.wav" type="sound"/>
+    </folder>
     <entity id="0" name="animation-result">
         <obj_info name="animation-result_star" realname="star" type="sprite">
             <frames>
@@ -29,7 +33,22 @@
                 <i folder="2" file="0"/>
             </frames>
         </obj_info>
-        <animation id="0" name="win" length="2000" interval="100" looping="false">
+        <obj_info name="animation-result_bone_000" realname="bone_000" type="bone" w="110.055" h="10"/>
+        <obj_info name="animation-result_bone_001" realname="bone_001" type="bone" w="118.309" h="10"/>
+        <animation id="0" name="idle" length="100" interval="100">
+            <mainline>
+                <key id="0">
+                    <bone_ref id="0" timeline="0" key="0"/>
+                </key>
+                <key id="1" time="83"/>
+            </mainline>
+            <timeline id="0" obj="4" name="bone_001" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-24" y="-83" angle="67.119363"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="1" name="win" length="2000" interval="100" looping="false">
             <mainline>
                 <key id="0">
                     <object_ref id="0" name="star" folder="0" file="0" abs_x="-63.816076" abs_y="73.5632" abs_angle="0" abs_scale_x="0.367816" abs_scale_y="0.367816" abs_a="1" timeline="0" key="0" z_index="0"/>
@@ -116,8 +135,13 @@
                     <object folder="2" file="1" y="1" angle="0" scale_x="0.4" scale_y="0.4" a="0"/>
                 </key>
             </timeline>
+            <soundline id="-1" name="result_success">
+                <key id="0" time="2">
+                    <object folder="3" file="0"/>
+                </key>
+            </soundline>
         </animation>
-        <animation id="1" name="fail" length="2000" interval="100" looping="false">
+        <animation id="2" name="fail" length="2000" interval="100" looping="false">
             <mainline>
                 <key id="0">
                     <object_ref id="0" name="star" folder="0" file="0" abs_x="-63.816076" abs_y="73.5632" abs_angle="0" abs_scale_x="0.367816" abs_scale_y="0.367816" abs_a="1" timeline="0" key="0" z_index="0"/>
@@ -204,6 +228,11 @@
                     <object folder="2" file="0" y="1" angle="0" scale_x="0.4" scale_y="0.4" a="0"/>
                 </key>
             </timeline>
+            <soundline id="-1" name="result_fail">
+                <key id="0" time="1">
+                    <object folder="3" file="1"/>
+                </key>
+            </soundline>
         </animation>
     </entity>
 </spriter_data>

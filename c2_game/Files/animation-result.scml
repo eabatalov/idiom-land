@@ -33,10 +33,25 @@
                 <i folder="2" file="0"/>
             </frames>
         </obj_info>
-        <animation id="0" name="idle" length="0" interval="100">
+        <obj_info name="animation-result_bone_000" realname="bone_000" type="bone" w="110.055" h="10"/>
+        <obj_info name="animation-result_bone_fake_idle_dont_del" realname="bone_fake_idle_dont_del" type="bone" w="118.309" h="10"/>
+        <animation id="0" name="idle" length="100" interval="100" looping="false">
             <mainline>
-                <key id="0"/>
+                <key id="0">
+                    <bone_ref id="0" timeline="0" key="0"/>
+                </key>
+                <key id="1" time="100">
+                    <bone_ref id="0" timeline="0" key="1"/>
+                </key>
             </mainline>
+            <timeline id="0" obj="4" name="bone_fake_idle_dont_del" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-24" y="-83" angle="67.119363"/>
+                </key>
+                <key id="1" time="100" spin="0">
+                    <bone x="-24" y="-83" angle="67.119363"/>
+                </key>
+            </timeline>
         </animation>
         <animation id="1" name="win" length="2000" interval="100" looping="false">
             <mainline>
