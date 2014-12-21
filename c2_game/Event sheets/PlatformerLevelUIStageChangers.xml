@@ -60,6 +60,7 @@
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Second value">CrankyStageChanger.Stage</param>
                         </condition>
+                        <condition behavior="Solid" id="0" inverted="1" name="Is enabled" sid="8469893166284417" type="CrankyStageChanger" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="7257736906377214" type="Function">
@@ -91,6 +92,20 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="3653959353065775">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6982149267588177" type="CrankyStageChanger">
+                                    <param id="0" name="Instance variable">Stage</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">CurrentStageName</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="4786959208168831" type="CrankyStageChanger">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="8617306844721332">
@@ -103,7 +118,57 @@
                         <action behavior="Solid" id="0" name="Set enabled" sid="4347426648835528" type="StageChanger">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="9936964016991817" type="CrankyStageChanger">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <comment>if Player collides with stage changer already, it&apos;s &quot;on collision&quot; event won&apos;t be fired</comment>
+                        <event-block sid="1999852189839146">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="4977406647016161" type="System">
+                                    <param id="0" name="Object">StageChanger</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="2939042482876156" type="System">
+                                    <param id="0" name="First value">CurrentStageName</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">StageChanger.Stage</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="4441838393280502" type="StageChanger">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1908479107818691" type="Function">
+                                    <param id="0" name="Name">&quot;QuestEngineChangeStage&quot;</param>
+                                    <param id="1" name="Parameter {n}">StageChanger.Stage</param>
+                                </action>
+                                <action id="-24" name="Stop loop" sid="2929443715162548" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="1132115815785683">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="9873859952281459" type="System">
+                                    <param id="0" name="Object">CrankyStageChanger</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="4328133300714098" type="System">
+                                    <param id="0" name="First value">CurrentStageName</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">CrankyStageChanger.Stage</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="6118198191913344" type="CrankyStageChanger">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5642452387320765" type="Function">
+                                    <param id="0" name="Name">&quot;QuestEngineChangeStage&quot;</param>
+                                    <param id="1" name="Parameter {n}">CrankyStageChanger.Stage</param>
+                                </action>
+                                <action id="-24" name="Stop loop" sid="3045461983427548" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="8235537195292395">
                     <conditions>
