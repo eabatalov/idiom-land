@@ -13,13 +13,23 @@ jQuery(window).load(function() {
 
     
     function makeSubmitEmailsToOurServerHook() {
+        function onSubmitBtnClick(jqForm, jqButton, event) {
+            jqForm.ajaxSubmit();
+
+            setTimeout(function() {
+                var alertContainer =
+                    jQuery("[data-untorch-element=\"alert\"]");
+                    alertContainer.slideUp(500);
+            }, 4000);
+        }
+
         $('.subscribe-form').each(function(formIx, form) {
             var jqForm = $(form);
             jqForm.find("button").each(function(btnIx, button) {
                 var jqButton = $(button);
-                jqButton.click(function(event) {
-                    jqForm.ajaxSubmit();
-                });
+                jqButton.click(
+                    onSubmitBtnClick.bind(null, jqForm, jqButton)
+                );
             });
         });
     }
