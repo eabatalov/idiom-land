@@ -151,7 +151,7 @@
         processContent: function(content, link){
             var $this = this,
                 href = link.attr('href'),
-                video = href.match(/(youtube|youtu|vimeo)\.(com|be)\/(watch\?v=([\w-]+)|([\w-]+))/);
+                video = href.match(/(youtube|youtu|vimeo)\.(com|be)\/(watch\?v=(.+)|(.+))/);
 
             content.html('').addClass('nivo-lightbox-loading');
 
