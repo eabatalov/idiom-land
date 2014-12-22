@@ -88,20 +88,24 @@ $(function() {
     */
     var websiteIsShown = false;
     var preloaderImages = $('.show-preloader');
-    var preloaderImagesLoaded = 0;
 
-    preloaderImages.each(function(imgIx, img) {
-        var jqImg = $(img);
-        jqImg.imagesLoaded(function() {
-            ++preloaderImagesLoaded;
-            if (preloaderImagesLoaded === preloaderImages.length) {
-                showWebsite();
-            }
+    if (preloaderImages.length) {
+        var preloaderImagesLoaded = 0;
+        preloaderImages.each(function(imgIx, img) {
+            var jqImg = $(img);
+            jqImg.imagesLoaded(function() {
+                ++preloaderImagesLoaded;
+                if (preloaderImagesLoaded === preloaderImages.length) {
+                    showWebsite();
+                }
+            });
         });
-    });
-
-    /* 7 seconds fallback if some of the images couldn't be loaded */
-    setTimeout(showWebsite, 7000);
+        /* 7 seconds fallback if some of the
+         * images couldn't be loaded */
+        setTimeout(showWebsite, 7000);
+    } else {
+        showWebsite();
+    }
 
     function showWebsite() {
         if (websiteIsShown)
