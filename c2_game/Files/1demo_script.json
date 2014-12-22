@@ -1355,7 +1355,7 @@
 						5210
 					],
 					"outCondIds": [
-						3548
+						7601
 					],
 					"props": {
 						"id": "veider",
@@ -1371,7 +1371,7 @@
 					"label": "Where is Trafalgar square?",
 					"continue": false,
 					"inCondIds": [
-						3548
+						7602
 					],
 					"outCondIds": [
 						3682
@@ -1692,6 +1692,24 @@
 					"props": {
 						"text": "\"To pull someone's leg\" means to joke with someone!"
 					}
+				},
+				{
+					"ver": 1,
+					"id": 4961,
+					"type": 5,
+					"label": "Foxy recover",
+					"continue": true,
+					"inCondIds": [
+						7601
+					],
+					"outCondIds": [
+						7602
+					],
+					"props": {
+						"id": "Player",
+						"name": "idle",
+						"secs": -1
+					}
 				}
 			],
 			"conds": [
@@ -1797,14 +1815,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 3548,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 3682,
 					"type": 11,
 					"props": {
@@ -1888,6 +1898,20 @@
 					"props": {
 						"id": "veider"
 					}
+				},
+				{
+					"ver": 1,
+					"id": 7601,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7602,
+					"type": 8,
+					"props": {}
 				}
 			]
 		},
