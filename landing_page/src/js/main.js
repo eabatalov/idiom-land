@@ -71,14 +71,14 @@ $(function() {
             }
         });
     });
-    $('#contact-us').ajaxForm({
+    $('#contact-us-form').ajaxForm({
         success: function () {
-            $('#contact-us').slideUp('slow');
+            $('#contact-us-container').slideUp('slow');
             $("#contact-preview").text("Thank you!");
             $('#contact-preview').css({"opacity": "1"});
         },
         error: function () {
-            $('#contact-us').slideUp('slow');
+            $('#contact-us-container').slideUp('slow');
             $("#contact-preview").text("Sorry. Error occurred.");
             $('#contact-preview').css({"opacity": "1"});
         }
