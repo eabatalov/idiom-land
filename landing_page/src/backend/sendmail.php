@@ -1,5 +1,5 @@
 <?php
-$EMAIL_FILE_PATH = '/idiom_land/emails.txt';
+$EMAIL_FILE_PATH = '/idiom_land_testing/emails.txt';
 $MB40 = 41943040; //40 Mb in bytes
 
 /* Protect from DDOS */
