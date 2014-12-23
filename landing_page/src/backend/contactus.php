@@ -1,5 +1,5 @@
 <?php
-$CONTACTUS_FILE_PATH = '/idiom_land/contactus.txt';
+$CONTACTUS_FILE_PATH = '/idiom_land_testing/contactus.txt';
 $MB40 = 41943040; //40 Mb in bytes
 
 /* Protect from DDOS */
