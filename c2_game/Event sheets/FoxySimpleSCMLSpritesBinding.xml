@@ -6,6 +6,7 @@
         <event-group description="" sid="5262643646919361" title="Foxy CML spriter binding">
             <sub-events>
                 <variable constant="1" name="FOXY_ANIM_UID" sid="4810679453626018" static="0" type="text">FOXY</variable>
+                <variable constant="1" name="FOXY_ANIM_SOUND_TAG" sid="9233284951026873" static="0" type="text">FOXY_ANIM_SOUND_TAG</variable>
                 <comment>Already loaded SCML file case</comment>
                 <event-block sid="3705880361721988">
                     <conditions>
@@ -121,7 +122,17 @@
                             <param id="1" name="Audio file name">PlayerSCML.triggeredSoundTag</param>
                             <param id="3" name="Loop">0</param>
                             <param id="4" name="Volume">0</param>
-                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="2" name="Tag (optional)">FOXY_ANIM_SOUND_TAG</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="836624537619931">
+                    <conditions>
+                        <condition id="1" name="On any finished" sid="915318680366556" type="PlayerSCML" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="6251582184867237" type="Audio">
+                            <param id="0" name="Tag">FOXY_ANIM_SOUND_TAG</param>
                         </action>
                     </actions>
                 </event-block>

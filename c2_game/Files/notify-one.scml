@@ -20,8 +20,7 @@
     </folder>
     <folder id="5">
         <file id="0" name="notification_show.wav" type="sound"/>
-        <file id="1" name="notification_hide.wav" type="sound"/>
-        <file id="2" name="notification_cross.wav" type="sound"/>
+        <file id="1" name="notification_cross.wav" type="sound"/>
     </folder>
     <entity id="0" name="entity_000">
         <obj_info name="entity_000_body" realname="body" type="sprite">
@@ -274,7 +273,7 @@
             </timeline>
             <soundline id="-1" name="notification_cross">
                 <key id="0" time="2">
-                    <object folder="5" file="2"/>
+                    <object folder="5" file="1"/>
                 </key>
             </soundline>
         </animation>
@@ -367,11 +366,6 @@
                     <object folder="4" file="0" x="4.95935" y="58.597931" angle="0" a="0"/>
                 </key>
             </timeline>
-            <soundline id="-1" name="notification_hide">
-                <key id="0" time="2">
-                    <object folder="5" file="1"/>
-                </key>
-            </soundline>
         </animation>
     </entity>
 </spriter_data>

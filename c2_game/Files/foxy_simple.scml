@@ -63,6 +63,7 @@
         <file id="0" name="foxy_jump.wav" type="sound"/>
         <file id="1" name="foxy_speach.wav" type="sound"/>
         <file id="2" name="foxy_shock.wav" type="sound"/>
+        <file id="3" name="foxy_think.wav" type="sound"/>
     </folder>
     <entity id="0" name="foxy">
         <obj_info name="foxy_bone_000" realname="bone_000" type="bone" w="126.264" h="10"/>
@@ -968,13 +969,7 @@
                 </key>
             </timeline>
             <soundline id="-1" name="foxy_speach">
-                <key id="0" time="169">
-                    <object folder="13" file="1"/>
-                </key>
-                <key id="1" time="478">
-                    <object folder="13" file="1"/>
-                </key>
-                <key id="2" time="786">
+                <key id="0" time="45">
                     <object folder="13" file="1"/>
                 </key>
             </soundline>
@@ -1370,30 +1365,6 @@
             </timeline>
             <soundline id="-1" name="foxy_shock">
                 <key id="0" time="5">
-                    <object folder="13" file="2"/>
-                </key>
-                <key id="1" time="446">
-                    <object folder="13" file="2"/>
-                </key>
-                <key id="2" time="889">
-                    <object folder="13" file="2"/>
-                </key>
-                <key id="3" time="1344">
-                    <object folder="13" file="2"/>
-                </key>
-                <key id="4" time="1796">
-                    <object folder="13" file="2"/>
-                </key>
-                <key id="5" time="2238">
-                    <object folder="13" file="2"/>
-                </key>
-                <key id="6" time="2681">
-                    <object folder="13" file="2"/>
-                </key>
-                <key id="7" time="3121">
-                    <object folder="13" file="2"/>
-                </key>
-                <key id="8" time="3564">
                     <object folder="13" file="2"/>
                 </key>
             </soundline>
@@ -1974,6 +1945,11 @@
                     <object folder="5" file="1" x="-72.774592" y="21.573615" pivot_x="0" pivot_y="1" angle="349.517145" scale_x="1.875581" scale_y="0.264"/>
                 </key>
             </timeline>
+            <soundline id="-1" name="foxy_think">
+                <key id="0" time="6">
+                    <object folder="13" file="3"/>
+                </key>
+            </soundline>
         </animation>
         <animation id="5" name="jumpup" length="256" interval="100" looping="false">
             <mainline>

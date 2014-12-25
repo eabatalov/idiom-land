@@ -23,9 +23,6 @@
         <file id="2" name="mouth/mouth2.png" width="88" height="48" pivot_x="0" pivot_y="1"/>
         <file id="3" name="mouth/mouth1.png" width="88" height="48" pivot_x="0" pivot_y="1"/>
     </folder>
-    <folder id="6">
-        <file id="0" name="npc_speach.wav" type="sound"/>
-    </folder>
     <entity id="0" name="entity_000">
         <obj_info name="entity_000_body" realname="body" type="sprite">
             <frames>
@@ -398,20 +395,6 @@
                     <bone x="80.870153" y="22.057952" angle="290.882358"/>
                 </key>
             </timeline>
-            <soundline id="-1" name="npc_speach">
-                <key id="0" time="210">
-                    <object folder="6" file="0"/>
-                </key>
-                <key id="1" time="376">
-                    <object folder="6" file="0"/>
-                </key>
-                <key id="2" time="554">
-                    <object folder="6" file="0"/>
-                </key>
-                <key id="3" time="689">
-                    <object folder="6" file="0"/>
-                </key>
-            </soundline>
         </animation>
     </entity>
 </spriter_data>

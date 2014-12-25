@@ -81,17 +81,12 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <comment>When Foxy thinks it actually can be in any animation. So we need to play sound manually.</comment>
                                         <event-block sid="6331606264284136">
                                             <conditions />
                                             <actions>
                                                 <action id="0" name="Call function" sid="9847765385083932" type="Function">
                                                     <param id="0" name="Name">&quot;AnimPlayerRunOnCurUIActSeq&quot;</param>
                                                     <param id="1" name="Parameter {n}">&quot;think&quot;</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="9321516523106611" type="Function">
-                                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;foxy_think&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -159,7 +154,6 @@
                                     </sub-events>
                                 </event-block>
                                 <comment>param(0): NPC UID</comment>
-                                <comment>Just play default sound for now.</comment>
                                 <event-block sid="6299712345618872">
                                     <conditions>
                                         <condition id="0" name="On function" sid="9242273516642024" type="Function">
@@ -171,9 +165,9 @@
                                         <event-block sid="5466902158814333">
                                             <conditions />
                                             <actions>
-                                                <action id="0" name="Call function" sid="8451314305863926" type="Function">
-                                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;npc_think&quot;</param>
+                                                <action id="0" name="Call function" sid="3041933194107231" type="Function">
+                                                    <param id="0" name="Name">&quot;AnimNPCRunOnCurUIActSeq&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Function.Param(0){###}&quot;think&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
