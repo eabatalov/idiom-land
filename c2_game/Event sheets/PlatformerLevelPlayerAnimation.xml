@@ -114,15 +114,25 @@
                                                         <condition behavior="Platform" id="2" name="Is on floor" sid="4378791190020036" type="PlayerPlatform" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="0" name="Set animation" sid="1351177413420692" type="PlayerSCML">
-                                                            <param id="0" name="Animation">&quot;main&quot;</param>
-                                                            <param id="1" name="Where to start playing this animation">2</param>
-                                                            <param id="2" name="Blend Duration">0</param>
-                                                        </action>
                                                         <action id="1" name="Set playback speed ratio" sid="8099747811586332" type="PlayerSCML">
                                                             <param id="0" name="Speed Ratio">PlayerPlatform.Platform.VectorX/PlayerPlatform.Platform.MaxSpeed</param>
                                                         </action>
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="8048707176950317">
+                                                            <conditions>
+                                                                <condition id="4" inverted="1" name="Compare Current Animation" sid="1072538335535117" type="PlayerSCML">
+                                                                    <param id="0" name="Animation">&quot;main&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="9543559034202681" type="Function">
+                                                                    <param id="0" name="Name">&quot;PlayerSCMLRunAnim&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;main&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -152,15 +162,25 @@
                                                         <condition behavior="Platform" id="2" name="Is on floor" sid="8001881969512536" type="PlayerPlatform" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="0" name="Set animation" sid="204193904746895" type="PlayerSCML">
-                                                            <param id="0" name="Animation">&quot;main&quot;</param>
-                                                            <param id="1" name="Where to start playing this animation">2</param>
-                                                            <param id="2" name="Blend Duration">0</param>
-                                                        </action>
                                                         <action id="1" name="Set playback speed ratio" sid="9458531368943897" type="PlayerSCML">
                                                             <param id="0" name="Speed Ratio">PlayerPlatform.Platform.VectorX/PlayerPlatform.Platform.MaxSpeed</param>
                                                         </action>
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="7106678018051771">
+                                                            <conditions>
+                                                                <condition id="4" inverted="1" name="Compare Current Animation" sid="6502759005317774" type="PlayerSCML">
+                                                                    <param id="0" name="Animation">&quot;main&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="7556135822295909" type="Function">
+                                                                    <param id="0" name="Name">&quot;PlayerSCMLRunAnim&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;main&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -183,10 +203,9 @@
                                                 <action id="1" name="Set playback speed ratio" sid="2292650369148249" type="PlayerSCML">
                                                     <param id="0" name="Speed Ratio">1.0</param>
                                                 </action>
-                                                <action id="0" name="Set animation" sid="8836428975748409" type="PlayerSCML">
-                                                    <param id="0" name="Animation">&quot;idle&quot;</param>
-                                                    <param id="1" name="Where to start playing this animation">0</param>
-                                                    <param id="2" name="Blend Duration">0</param>
+                                                <action id="0" name="Call function" sid="3857993456229872" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerSCMLRunAnim&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;idle&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -235,10 +254,9 @@
                                         <action id="1" name="Set playback speed ratio" sid="1859870101974852" type="PlayerSCML">
                                             <param id="0" name="Speed Ratio">1.0</param>
                                         </action>
-                                        <action id="0" name="Set animation" sid="2055527444399265" type="PlayerSCML">
-                                            <param id="0" name="Animation">&quot;jumpup&quot;</param>
-                                            <param id="1" name="Where to start playing this animation">0</param>
-                                            <param id="2" name="Blend Duration">0</param>
+                                        <action id="0" name="Call function" sid="2254056113723505" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerSCMLRunAnim&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;jumpup&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -256,10 +274,9 @@
                                                 <action id="1" name="Set playback speed ratio" sid="4711562451428271" type="PlayerSCML">
                                                     <param id="0" name="Speed Ratio">1.0</param>
                                                 </action>
-                                                <action id="0" name="Set animation" sid="3787437544699612" type="PlayerSCML">
-                                                    <param id="0" name="Animation">&quot;flight&quot;</param>
-                                                    <param id="1" name="Where to start playing this animation">0</param>
-                                                    <param id="2" name="Blend Duration">0</param>
+                                                <action id="0" name="Call function" sid="1967830208952801" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerSCMLRunAnim&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;flight&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -402,10 +419,9 @@
                                         <action id="1" name="Set playback speed ratio" sid="6874471233467473" type="PlayerSCML">
                                             <param id="0" name="Speed Ratio">1.0</param>
                                         </action>
-                                        <action id="0" name="Set animation" sid="8710489600858434" type="PlayerSCML">
-                                            <param id="0" name="Animation">Function.Param(0)</param>
-                                            <param id="1" name="Where to start playing this animation">0</param>
-                                            <param id="2" name="Blend Duration">0</param>
+                                        <action id="0" name="Call function" sid="6661591700667053" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerSCMLRunAnim&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -513,10 +529,9 @@
                                         <action id="1" name="Set playback speed ratio" sid="5078019635920668" type="PlayerSCML">
                                             <param id="0" name="Speed Ratio">1.0</param>
                                         </action>
-                                        <action id="0" name="Set animation" sid="7518854742748734" type="PlayerSCML">
-                                            <param id="0" name="Animation">&quot;idle&quot;</param>
-                                            <param id="1" name="Where to start playing this animation">0</param>
-                                            <param id="2" name="Blend Duration">0</param>
+                                        <action id="0" name="Call function" sid="159384977253025" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerSCMLRunAnim&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;idle&quot;</param>
                                         </action>
                                         <action id="0" name="Call function" sid="4979884516819502" type="Function">
                                             <param id="0" name="Name">&quot;onAnimPlayerCanceled&quot;</param>

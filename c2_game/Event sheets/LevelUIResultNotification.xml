@@ -5,6 +5,7 @@
     <events>
         <event-group description="" sid="4882388701730434" title="Result notification">
             <sub-events>
+                <variable constant="1" name="RESULT_NOTIF_ANIM_SOUND_TAG" sid="818913488175506" static="0" type="text">RESULT_NOTIF_ANIM_SOUND_TAG</variable>
                 <event-block sid="7121955129387895">
                     <conditions>
                         <condition id="0" name="On function" sid="4081579553018218" type="Function">
@@ -78,6 +79,12 @@
                                 <action id="3" name="Set animation looping" sid="9588581667237146" type="animationresult">
                                     <param id="0" name="Loop animation?">0</param>
                                 </action>
+                                <action id="0" name="Play" sid="6204175302287955" type="Audio">
+                                    <param id="0" name="Audio file">result_success</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">RESULT_NOTIF_ANIM_SOUND_TAG</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -105,6 +112,12 @@
                                 <action id="3" name="Set animation looping" sid="6685708788166632" type="animationresult">
                                     <param id="0" name="Loop animation?">0</param>
                                 </action>
+                                <action id="0" name="Play" sid="5639499909708788" type="Audio">
+                                    <param id="0" name="Audio file">result_fail</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">RESULT_NOTIF_ANIM_SOUND_TAG</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -116,6 +129,9 @@
                     <actions>
                         <action id="16" name="Set Visible" sid="834058534610264" type="animationresult">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="6" name="Stop" sid="60919701183731" type="Audio">
+                            <param id="0" name="Tag">RESULT_NOTIF_ANIM_SOUND_TAG</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -146,20 +162,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="6016533489951287">
-                    <conditions>
-                        <condition id="7" name="On sound triggered" sid="1419241489131451" type="animationresult" />
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Play (by name)" sid="2237339931755327" type="Audio">
-                            <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">animationresult.triggeredSoundTag</param>
-                            <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
-                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

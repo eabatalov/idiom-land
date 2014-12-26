@@ -5,7 +5,6 @@
     <events>
         <event-group description="" sid="4263596023615472" title="Automatic start talk">
             <sub-events>
-                <comment>Player should stop on the talk starter. We block Player avatar movement for this purpose.</comment>
                 <variable constant="0" name="IsBlockedPlayerMovement" sid="8203916342468839" static="1" type="number">0</variable>
                 <event-block sid="3450361924505571">
                     <conditions>
@@ -80,10 +79,16 @@
                     </sub-events>
                 </event-block>
                 <comment>Inject custom event with name &quot;auto_talk_start_&quot; + NPC id to start talking</comment>
+                <comment>Player should stop on the talk starter. We block Player avatar movement for this purpose.&#x0D;&#x0A;We should also forbid &gt; 1 &quot;collision&quot; event generation until player hasn&apos;t completely stopped.</comment>
                 <event-block sid="7124879317616865">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="7991193214109111" type="TalkStartTrigger">
                             <param id="0" name="Object">PlayerMiddleMarker</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7264599785044743" type="System">
+                            <param id="0" name="Variable">IsBlockedPlayerMovement</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions />

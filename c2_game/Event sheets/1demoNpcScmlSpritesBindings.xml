@@ -117,16 +117,64 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="1263041883215557">
+                        <event-block sid="2534472716996102">
                             <conditions>
-                                <condition id="7" name="On sound triggered" sid="6457257877088827" type="veiderSCML" />
+                                <condition id="1" name="On any finished" sid="4725148543790284" type="veiderSCML" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="3469583665399905" type="Function">
-                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
-                                    <param id="1" name="Parameter {n}">veiderSCML.triggeredSoundTag</param>
+                                <action id="0" name="Call function" sid="7491125608466105" type="Function">
+                                    <param id="0" name="Name">&quot;VeiderSCMLAnimRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;idle&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <comment>param(0): anim name</comment>
+                        <event-block sid="583384646418194">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7482844736168718" type="Function">
+                                    <param id="0" name="Name">&quot;VeiderSCMLAnimRun&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="8464071877083269" type="veiderSCML">
+                                    <param id="0" name="Animation">Function.Param(0)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1533178126291141">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="9106354804364248" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;speak&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="5621473843303236" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_speach_robot&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6396669592310184">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2754422201466954" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="8257622567331792" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;think&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3469583665399905" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_think_robot&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -236,16 +284,67 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="7296348579149962">
+                        <event-block sid="4892734707698338">
                             <conditions>
-                                <condition id="7" name="On sound triggered" sid="8560933164404637" type="taxiHindiSCML" />
+                                <condition id="1" name="On any finished" sid="9518080588751836" type="taxiHindiSCML" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="3844815177649288" type="Function">
-                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
-                                    <param id="1" name="Parameter {n}">taxiHindiSCML.triggeredSoundTag</param>
+                                <action id="0" name="Call function" sid="4046477402585165" type="Function">
+                                    <param id="0" name="Name">&quot;HindiSCMLAnimRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;idle&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <comment>param(0): anim name</comment>
+                        <event-block sid="139905057022733">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3114227025067979" type="Function">
+                                    <param id="0" name="Name">&quot;HindiSCMLAnimRun&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="7459926505795003" type="taxiHindiSCML">
+                                    <param id="0" name="Animation">Function.Param(0)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="2455324404381823">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="1975438745125647" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;speak&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="287373211020024" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_speach_man&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4480107325324004">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4203696851011476" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="3518907013344184" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;think&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="3131757746332446" type="System">
+                                            <param id="0" name="Seconds">0.110</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="3178846199430499" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_think_man&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -375,16 +474,67 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="5883186066068827">
+                        <event-block sid="2832246489587293">
                             <conditions>
-                                <condition id="7" name="On sound triggered" sid="3032726472865647" type="captainSCML" />
+                                <condition id="1" name="On any finished" sid="3625108735107551" type="captainSCML" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="9343354753990977" type="Function">
-                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
-                                    <param id="1" name="Parameter {n}">captainSCML.triggeredSoundTag</param>
+                                <action id="0" name="Call function" sid="806851432961698" type="Function">
+                                    <param id="0" name="Name">&quot;CaptainSCMLAnimRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;idle&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <comment>param(0): anim name</comment>
+                        <event-block sid="3389637696184617">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7728405871577875" type="Function">
+                                    <param id="0" name="Name">&quot;CaptainSCMLAnimRun&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="4490239751662075" type="captainSCML">
+                                    <param id="0" name="Animation">Function.Param(0)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4551517286446194">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="4420914564502305" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;speak&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="4681885824754633" type="System">
+                                            <param id="0" name="Seconds">0.03</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="5773007205452144" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_speach_man&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2898558314024375">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1616141103349233" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="1415837077668221" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;think&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3862414735820339" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_think_man&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -490,16 +640,67 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="5544907801503671">
+                        <event-block sid="4007285383398314">
                             <conditions>
-                                <condition id="7" name="On sound triggered" sid="607494614476719" type="policeman" />
+                                <condition id="1" name="On any finished" sid="8479170224815471" type="policeman" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="747318882715614" type="Function">
-                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
-                                    <param id="1" name="Parameter {n}">policeman.triggeredSoundTag</param>
+                                <action id="0" name="Call function" sid="5914371274585783" type="Function">
+                                    <param id="0" name="Name">&quot;PolicemanSCMLAnimRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;idle&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <comment>param(0): anim name</comment>
+                        <event-block sid="6587273821350681">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8523229122634373" type="Function">
+                                    <param id="0" name="Name">&quot;PolicemanSCMLAnimRun&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="796538029020376" type="policeman">
+                                    <param id="0" name="Animation">Function.Param(0)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8563411804793905">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="8997172917489803" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;speak&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="1814152552915649" type="System">
+                                            <param id="0" name="Seconds">0.26</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="1477925978872896" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_speach_man&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2303597890825981">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2825416650050396" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="1809818888553411" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;think&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3164993370445965" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_think_man&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -637,16 +838,64 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="772978417339005">
+                        <event-block sid="9627892475034219">
                             <conditions>
-                                <condition id="7" name="On sound triggered" sid="7375892823207062" type="kebab" />
+                                <condition id="1" name="On any finished" sid="1575543065322538" type="kebab" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="7846362765398134" type="Function">
-                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
-                                    <param id="1" name="Parameter {n}">kebab.triggeredSoundTag</param>
+                                <action id="0" name="Call function" sid="5814334876383478" type="Function">
+                                    <param id="0" name="Name">&quot;KebabSellerSCMLAnimRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;idle&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <comment>param(0): anim name</comment>
+                        <event-block sid="2935414641145362">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7392438204699513" type="Function">
+                                    <param id="0" name="Name">&quot;KebabSellerSCMLAnimRun&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="3211676527649479" type="kebab">
+                                    <param id="0" name="Animation">Function.Param(0)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8048452430367623">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="3595274851415737" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;speak&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="5332812578436224" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_speach_man&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8394981008367622">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9037508352589107" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="839159253494432" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;think&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9937648675432715" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_think_man&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -748,20 +997,68 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="506347105209436">
+                        <event-block sid="8329287556363536">
                             <conditions>
-                                <condition id="7" name="On sound triggered" sid="8231669973602905" type="kebabson" />
+                                <condition id="1" name="On any finished" sid="4522940600146597" type="kebabson" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="3183204641044352" type="Function">
-                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
-                                    <param id="1" name="Parameter {n}">kebabson.triggeredSoundTag</param>
+                                <action id="0" name="Call function" sid="4157600838273456" type="Function">
+                                    <param id="0" name="Name">&quot;KebabSellerSonSCMLAnimRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;idle&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>param(0): anim name</comment>
+                        <event-block sid="933344332841125">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2272955593889322" type="Function">
+                                    <param id="0" name="Name">&quot;KebabSellerSonSCMLAnimRun&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="4224848666123915" type="kebabson">
+                                    <param id="0" name="Animation">Function.Param(0)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="5723958566354446">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="6181793390903315" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;speak&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="2092848664262676" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_speach_boy&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="61322487834498">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1239461615552973" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="8287031378362155" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;think&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8907723792475077" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_think_boy&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="2291198383120861" title="TaxiDriverSML">
+                <event-group description="" sid="2291198383120861" title="TaxiDriverSCML">
                     <sub-events>
                         <variable constant="1" name="TAXI_DRIVER_ANIM_UID" sid="2585607950456953" static="0" type="text">TAXI_DRIVER</variable>
                         <event-block sid="8712643565083099">
@@ -871,16 +1168,64 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="7487712736549714">
+                        <event-block sid="1226779682454364">
                             <conditions>
-                                <condition id="7" name="On sound triggered" sid="409993809416033" type="taxidriver" />
+                                <condition id="1" name="On any finished" sid="2461491309689912" type="taxidriver" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="8935486338773985" type="Function">
-                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
-                                    <param id="1" name="Parameter {n}">taxidriver.triggeredSoundTag</param>
+                                <action id="0" name="Call function" sid="7589215874158878" type="Function">
+                                    <param id="0" name="Name">&quot;TaxiDriverSCMLAnimRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;idle&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <comment>param(0): anim name</comment>
+                        <event-block sid="8011879448806225">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2234117615608533" type="Function">
+                                    <param id="0" name="Name">&quot;TaxiDriverSCMLAnimRun&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="9943667293231298" type="taxidriver">
+                                    <param id="0" name="Animation">Function.Param(0)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4821228223277018">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="8787328958144926" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;speak&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7892677558575773" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_speach_man&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="783339404736419">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2113067268797538" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="5166659713549113" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;think&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8324404833755943" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_think_man&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -990,16 +1335,67 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="641390101518202">
+                        <event-block sid="7741063500897155">
                             <conditions>
-                                <condition id="7" name="On sound triggered" sid="1688039852354439" type="busdriver" />
+                                <condition id="1" name="On any finished" sid="8632061509642245" type="busdriver" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="6162412200229878" type="Function">
-                                    <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
-                                    <param id="1" name="Parameter {n}">busdriver.triggeredSoundTag</param>
+                                <action id="0" name="Call function" sid="9989882113228358" type="Function">
+                                    <param id="0" name="Name">&quot;BusDriverSCMLAnimRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;idle&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <comment>param(0): anim name</comment>
+                        <event-block sid="3922390041443873">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8705726598126384" type="Function">
+                                    <param id="0" name="Name">&quot;BusDriverSCMLAnimRun&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="4619164756987819" type="busdriver">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">ANIM_BLEND_MS</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="2977948870952716">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="7070931387569595" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;speak&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="9919651119776009" type="System">
+                                            <param id="0" name="Seconds">0.31</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="3269870692441979" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_speach_man&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2377592959846466">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5267607721738856" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="9678639488944904" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;think&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1097503239086598" type="Function">
+                                            <param id="0" name="Name">&quot;SoundPlayOnceOnCurUIActSeq&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;npc_think_man&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>

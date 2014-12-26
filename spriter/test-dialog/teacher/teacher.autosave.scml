@@ -14,6 +14,7 @@
         <file id="10" name="smile4.png" width="23" height="11" pivot_x="0" pivot_y="1"/>
         <file id="11" name="teacher_talk.wav" type="sound"/>
         <file id="12" name="teacher_yes.wav" type="sound"/>
+        <file id="13" name="teacher_no.wav" type="sound"/>
     </folder>
     <entity id="0" name="teacher">
         <obj_info name="teacher_body" realname="body" type="sprite">
@@ -1404,25 +1405,25 @@
                 </key>
             </timeline>
             <timeline id="5" obj="5" name="right-brow">
-                <key id="0">
-                    <object folder="0" file="5" x="-0.050594" y="1.74827" angle="360"/>
+                <key id="0" spin="0">
+                    <object folder="0" file="5" x="-0.050594" y="1.74827" angle="0"/>
                 </key>
-                <key id="1" time="1426" spin="-1">
+                <key id="1" time="1426" spin="0">
                     <object folder="0" file="5" x="-0.050594" y="1.74827" angle="0"/>
                 </key>
                 <key id="2" time="1830" spin="0">
-                    <object folder="0" file="5" x="-0.050594" y="1.74827" angle="360"/>
+                    <object folder="0" file="5" x="-0.050594" y="1.74827" angle="0"/>
                 </key>
             </timeline>
             <timeline id="6" obj="6" name="eyes">
-                <key id="0">
-                    <object folder="0" file="6" x="0.448278" y="1.8372" angle="360"/>
+                <key id="0" spin="0">
+                    <object folder="0" file="6" x="0.448278" y="1.8372" angle="0"/>
                 </key>
-                <key id="1" time="1426" spin="-1">
+                <key id="1" time="1426" spin="0">
                     <object folder="0" file="6" x="0.448278" y="1.8372" angle="0"/>
                 </key>
                 <key id="2" time="1830" spin="0">
-                    <object folder="0" file="6" x="0.448278" y="1.8372" angle="360"/>
+                    <object folder="0" file="6" x="0.448278" y="1.8372" angle="0"/>
                 </key>
             </timeline>
             <timeline id="7" obj="7" name="smile1">
@@ -1575,6 +1576,11 @@
                     <bone x="4.871884" y="10.018221" angle="272.546405"/>
                 </key>
             </timeline>
+            <soundline id="-1" name="teacher_no">
+                <key id="0" time="3">
+                    <object folder="0" file="13"/>
+                </key>
+            </soundline>
         </animation>
         <animation id="3" name="right" length="2000" interval="100" looping="false">
             <mainline>
@@ -1722,10 +1728,10 @@
             </timeline>
             <timeline id="6" obj="6" name="eyes">
                 <key id="0" spin="0">
-                    <object folder="0" file="6" x="0.401754" y="-0.786528" scale_y="0.248178"/>
+                    <object folder="0" file="6" x="0.401754" y="-0.786528" angle="0" scale_y="0.248178"/>
                 </key>
                 <key id="1" time="1330" spin="0">
-                    <object folder="0" file="6" x="0.401754" y="-0.786528" scale_y="0.248178"/>
+                    <object folder="0" file="6" x="0.401754" y="-0.786528" angle="0" scale_y="0.248178"/>
                 </key>
             </timeline>
             <timeline id="7" obj="7" name="smile1">
@@ -2212,11 +2218,11 @@
                 </key>
             </timeline>
             <timeline id="6" obj="6" name="eyes">
-                <key id="0">
+                <key id="0" spin="0">
                     <object folder="0" file="6" x="0.448278" y="1.8372" angle="0"/>
                 </key>
-                <key id="1" time="1998">
-                    <object folder="0" file="6" x="0.448278" y="1.8372"/>
+                <key id="1" time="1998" spin="0">
+                    <object folder="0" file="6" x="0.448278" y="1.8372" angle="0"/>
                 </key>
             </timeline>
             <timeline id="7" obj="7" name="smile1">

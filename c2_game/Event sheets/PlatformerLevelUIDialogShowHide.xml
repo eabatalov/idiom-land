@@ -396,6 +396,7 @@
                 <event-group description="" sid="1330620094831934" title="Platformer level UI (notification show)">
                     <sub-events>
                         <variable constant="0" name="IsShowingNotification" sid="5410530306975319" static="1" type="number">0</variable>
+                        <variable constant="1" name="NOTIF_ANIM_SOUND_TAG" sid="5248137793115537" static="0" type="text">NOTIF_ANIM_SOUND_TAG</variable>
                         <event-block sid="6064175908203845">
                             <conditions>
                                 <condition id="666" name="On initialised" sid="2969112698293005" type="notifyone" />
@@ -481,11 +482,6 @@
                                             <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
-                                        <action id="0" name="Set animation" sid="2455874160087352" type="notifyone">
-                                            <param id="0" name="Animation">&quot;cross&quot;</param>
-                                            <param id="1" name="Where to start playing this animation">0</param>
-                                            <param id="2" name="Blend Duration">0</param>
-                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="6063809543185167">
@@ -496,7 +492,19 @@
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="0" name="Set animation" sid="2455874160087352" type="notifyone">
+                                            <param id="0" name="Animation">&quot;cross&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">0</param>
+                                            <param id="2" name="Blend Duration">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="7203743632575537" type="Audio">
+                                            <param id="0" name="Audio file">notification_cross</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">NOTIF_ANIM_SOUND_TAG</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                                 <event-block sid="4503757305648">
                                     <conditions>
@@ -513,6 +521,12 @@
                                             <param id="0" name="Animation">&quot;start&quot;</param>
                                             <param id="1" name="Where to start playing this animation">0</param>
                                             <param id="2" name="Blend Duration">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="1561043503254988" type="Audio">
+                                            <param id="0" name="Audio file">notification_show</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">NOTIF_ANIM_SOUND_TAG</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="8867740511839762" type="System">
                                             <param id="0" name="Variable">IsShowingNotification</param>
@@ -666,6 +680,9 @@
                                         <action id="-9" name="Set value" sid="1414001541024697" type="System">
                                             <param id="0" name="Variable">IsShowingNotification</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="6" name="Stop" sid="3278936105655964" type="Audio">
+                                            <param id="0" name="Tag">NOTIF_ANIM_SOUND_TAG</param>
                                         </action>
                                         <action id="0" name="Call function" sid="8441232818130833" type="Function">
                                             <param id="0" name="Name">&quot;onNotificationVisibleChanged&quot;</param>

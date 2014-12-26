@@ -28,6 +28,12 @@
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
+                                <action id="0" name="Play" sid="5079926655870955" type="Audio">
+                                    <param id="0" name="Audio file">teacher_no</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="3580309697338949">
@@ -39,6 +45,24 @@
                                     <param id="0" name="Animation">&quot;right&quot;</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="8368935598644457" type="System">
+                                    <param id="0" name="Seconds">0.285</param>
+                                </action>
+                                <action id="0" name="Play" sid="2167164848348388" type="Audio">
+                                    <param id="0" name="Audio file">teacher_yes</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5967515542736365" type="System">
+                                    <param id="0" name="Seconds">0.715</param>
+                                </action>
+                                <action id="0" name="Play" sid="9656337453594291" type="Audio">
+                                    <param id="0" name="Audio file">teacher_yes</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -102,6 +126,12 @@
                             <param id="0" name="Animation">&quot;talk&quot;</param>
                             <param id="1" name="Where to start playing this animation">0</param>
                             <param id="2" name="Blend Duration">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="7646909221859104" type="Audio">
+                            <param id="0" name="Audio file">teacher_talk</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>

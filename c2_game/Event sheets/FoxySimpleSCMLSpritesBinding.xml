@@ -3,10 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FoxySimpleSCMLSpritesBinding</name>
     <events>
-        <event-group description="" sid="5262643646919361" title="Foxy CML spriter binding">
+        <event-group description="" sid="5262643646919361" title="Foxy SCML binding">
             <sub-events>
                 <variable constant="1" name="FOXY_ANIM_UID" sid="4810679453626018" static="0" type="text">FOXY</variable>
-                <variable constant="1" name="FOXY_ANIM_SOUND_TAG" sid="9233284951026873" static="0" type="text">FOXY_ANIM_SOUND_TAG</variable>
                 <comment>Already loaded SCML file case</comment>
                 <event-block sid="3705880361721988">
                     <conditions>
@@ -49,93 +48,181 @@
                             <param id="0" name="Name">&quot;InitPlayerSCML&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="666" name="Associate object type" sid="8863669683046702" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_hand2</param>
-                            <param id="1" name="Name">&quot;foxy_hand2&quot;</param>
-                        </action>
-                        <action id="666" name="Associate object type" sid="5066652837452835" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_leg2</param>
-                            <param id="1" name="Name">&quot;foxy_leg2&quot;</param>
-                        </action>
-                        <action id="666" name="Associate object type" sid="8783091881486012" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_leg1</param>
-                            <param id="1" name="Name">&quot;foxy_leg1&quot;</param>
-                        </action>
-                        <action id="666" name="Associate object type" sid="2019903484902732" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_tail</param>
-                            <param id="1" name="Name">&quot;foxy_tail&quot;</param>
-                        </action>
-                        <action id="666" name="Associate object type" sid="5852190284906374" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_body</param>
-                            <param id="1" name="Name">&quot;foxy_body&quot;</param>
-                        </action>
-                        <action id="666" name="Associate object type" sid="6419261898763135" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_ear2</param>
-                            <param id="1" name="Name">&quot;foxy_ear2&quot;</param>
-                        </action>
-                        <action id="666" name="Associate object type" sid="8710023318453115" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_acc3</param>
-                            <param id="1" name="Name">&quot;foxy_acc3&quot;</param>
-                        </action>
-                        <action id="666" name="Associate object type" sid="9903206193575355" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_head</param>
-                            <param id="1" name="Name">&quot;foxy_head&quot;</param>
-                        </action>
-                        <action id="666" name="Associate object type" sid="2195401880518929" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_ear1</param>
-                            <param id="1" name="Name">&quot;foxy_ear1&quot;</param>
-                        </action>
-                        <action id="666" name="Associate object type" sid="2801070817880721" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_eye1</param>
-                            <param id="1" name="Name">&quot;foxy_eye1&quot;</param>
-                        </action>
-                        <action id="666" name="Associate object type" sid="7003196986090037" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_mouth1</param>
-                            <param id="1" name="Name">&quot;foxy_mouth1&quot;</param>
-                        </action>
-                        <action id="666" name="Associate object type" sid="9026714750983605" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_hand1</param>
-                            <param id="1" name="Name">&quot;foxy_hand1&quot;</param>
-                        </action>
-                        <action id="666" name="Associate object type" sid="739053533806805" type="PlayerSCML">
-                            <param id="0" name="Object">foxy_simple_glass_003</param>
-                            <param id="1" name="Name">&quot;foxy_glass_003&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="6701742387688106" type="Function">
-                            <param id="0" name="Name">&quot;AnimInited&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Add key" sid="2941282593584218" type="InitedAnimsDict">
-                            <param id="0" name="Key">FOXY_ANIM_UID</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5897276353654324">
+                            <conditions />
+                            <actions>
+                                <action id="666" name="Associate object type" sid="8863669683046702" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_hand2</param>
+                                    <param id="1" name="Name">&quot;foxy_hand2&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="5066652837452835" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_leg2</param>
+                                    <param id="1" name="Name">&quot;foxy_leg2&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="8783091881486012" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_leg1</param>
+                                    <param id="1" name="Name">&quot;foxy_leg1&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="2019903484902732" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_tail</param>
+                                    <param id="1" name="Name">&quot;foxy_tail&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="5852190284906374" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_body</param>
+                                    <param id="1" name="Name">&quot;foxy_body&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="6419261898763135" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_ear2</param>
+                                    <param id="1" name="Name">&quot;foxy_ear2&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="8710023318453115" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_acc3</param>
+                                    <param id="1" name="Name">&quot;foxy_acc3&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="9903206193575355" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_head</param>
+                                    <param id="1" name="Name">&quot;foxy_head&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="2195401880518929" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_ear1</param>
+                                    <param id="1" name="Name">&quot;foxy_ear1&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="2801070817880721" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_eye1</param>
+                                    <param id="1" name="Name">&quot;foxy_eye1&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="7003196986090037" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_mouth1</param>
+                                    <param id="1" name="Name">&quot;foxy_mouth1&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="9026714750983605" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_hand1</param>
+                                    <param id="1" name="Name">&quot;foxy_hand1&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="739053533806805" type="PlayerSCML">
+                                    <param id="0" name="Object">foxy_simple_glass_003</param>
+                                    <param id="1" name="Name">&quot;foxy_glass_003&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6701742387688106" type="Function">
+                                    <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Add key" sid="2941282593584218" type="InitedAnimsDict">
+                                    <param id="0" name="Key">FOXY_ANIM_UID</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="9219842628530692">
-                    <conditions>
-                        <condition id="7" name="On sound triggered" sid="8842599655469492" type="PlayerSCML" />
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Play (by name)" sid="5881949569699289" type="Audio">
-                            <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">PlayerSCML.triggeredSoundTag</param>
-                            <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
-                            <param id="2" name="Tag (optional)">FOXY_ANIM_SOUND_TAG</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="836624537619931">
-                    <conditions>
-                        <condition id="1" name="On any finished" sid="915318680366556" type="PlayerSCML" />
-                    </conditions>
-                    <actions>
-                        <action id="6" name="Stop" sid="6251582184867237" type="Audio">
-                            <param id="0" name="Tag">FOXY_ANIM_SOUND_TAG</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" sid="1763150934108454" title="FOXY SCML sound">
+                    <sub-events>
+                        <variable constant="1" name="FOXY_ANIM_SOUND_TAG" sid="9233284951026873" static="0" type="text">FOXY_ANIM_SOUND_TAG</variable>
+                        <comment>param(0): anim name</comment>
+                        <event-block sid="1564481813806647">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6747866784592605" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerSCMLRunAnim&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="9490964906550912" type="PlayerSCML">
+                                    <param id="0" name="Animation">Function.Param(0)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7432821515880274">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="6165630877839916" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;speak&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="8386453937654023" type="System">
+                                            <param id="0" name="Seconds">0.04</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="1264080307972009" type="Audio">
+                                            <param id="0" name="Audio file">foxy_speach</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">FOXY_ANIM_SOUND_TAG</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="152557970943388">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5028442618775164" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="1621615960698364" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;shock&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="3449852824362288" type="Audio">
+                                            <param id="0" name="Audio file">foxy_shock</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">FOXY_ANIM_SOUND_TAG</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="24072705613743">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6001060704381429" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="2851529374938551" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;think&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="9332803082131986" type="Audio">
+                                            <param id="0" name="Audio file">foxy_think</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">FOXY_ANIM_SOUND_TAG</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9204707088515628">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2548157203577242" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="7637918718878423" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;jumpup&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="1957951173444606" type="Audio">
+                                            <param id="0" name="Audio file">foxy_jump</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">FOXY_ANIM_SOUND_TAG</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="836624537619931">
+                            <conditions>
+                                <condition id="1" name="On any finished" sid="915318680366556" type="PlayerSCML" />
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="6251582184867237" type="Audio">
+                                    <param id="0" name="Tag">FOXY_ANIM_SOUND_TAG</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>
