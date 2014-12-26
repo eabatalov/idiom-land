@@ -6,6 +6,7 @@
         <include>LevelResultsCommon</include>
         <include>PlatformerLevelSecretsProgress</include>
         <include>PlatformerLevelCoinsProgress</include>
+        <include>LevelResultsBriefSound</include>
         <event-group description="" sid="8501800471470332" title="Level results brief group">
             <sub-events>
                 <variable constant="1" name="SUCCESS_COLOR_R" sid="8384096303547795" static="0" type="number">71</variable>
@@ -168,6 +169,10 @@
                                             <param id="0" name="Animation">&quot;Perfect&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="1443338960580124" type="Function">
+                                            <param id="0" name="Name">&quot;LvlResultsPlayLevelSuccessSound&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="4797247765835928">
@@ -183,6 +188,10 @@
                                         <action id="4" name="Set animation" sid="4640743685248135" type="LevelResultsStars">
                                             <param id="0" name="Animation">&quot;VeryGood&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="5433310604686044" type="Function">
+                                            <param id="0" name="Name">&quot;LvlResultsPlayLevelSuccessSound&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -200,6 +209,10 @@
                                             <param id="0" name="Animation">&quot;Good&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="3081469328415479" type="Function">
+                                            <param id="0" name="Name">&quot;LvlResultsPlayLevelSuccessSound&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="7898662874921184">
@@ -210,6 +223,10 @@
                                         <action id="4" name="Set animation" sid="9432217041324909" type="LevelResultsStars">
                                             <param id="0" name="Animation">&quot;Fail&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="9212924022246887" type="Function">
+                                            <param id="0" name="Name">&quot;LvlResultsPlayLevelFailedSound&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
