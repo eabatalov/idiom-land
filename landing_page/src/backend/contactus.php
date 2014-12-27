@@ -8,6 +8,17 @@ if ($currentFileSize !== FALSE && $currentFileSize > $MB40) {
     exit("Error occurred!");
 }
 
+$CAPTCHA_FIELD = "cpt";
+$CAPTCHA_SECRET = "G6UexKe6XL";
+
+if (!isset($_POST[$CAPTCHA_FIELD])) {
+    exit("Captcha wasn't filled");
+}
+
+if ($_POST[$CAPTCHA_FIELD] !== $CAPTCHA_SECRET) {
+    exit("Captcha error");
+}
+
 $contactData = sprintf("name: %s %semail: %s %smessage: %s %s%s",
     $_POST['name'], PHP_EOL,
     $_POST['email'], PHP_EOL,

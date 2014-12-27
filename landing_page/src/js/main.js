@@ -81,6 +81,10 @@ $(function() {
             $('#contact-us-container').slideUp('slow');
             $("#contact-preview").text("Sorry. Error occurred.");
             $('#contact-preview').css({"opacity": "1"});
+        },
+        //simple "c-p-t-ch-a"
+        data : {
+            "cpt" : "G6UexKe6XL"
         }
     });
     /**
