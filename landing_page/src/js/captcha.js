@@ -1,5 +1,5 @@
 var CONTACT_US_SUBMIT_ENABLED_CLASSES = ['sm', 'cta2'];
-var CONTACT_US_SUBMIT_DISABLED_CLASSES = ['sm', 'cta3'];
+var CONTACT_US_SUBMIT_DISABLED_CLASSES = ['cta3'];
 var CONTACT_US_SUBMIT_ID = '#contact-us-submit';
 
 function onReCaptchaLoaded() {
