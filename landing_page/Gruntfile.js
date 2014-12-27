@@ -20,8 +20,7 @@ module.exports = function(grunt) {
         '<%= dirs.in.js %>main.js',
         //'<%= dirs.in.share %>share.js',
         '<%= dirs.in.js %>analytics.js',
-        '<%= dirs.in.js %>referral.js',
-        '<%= dirs.in.js %>captcha.js'
+        '<%= dirs.in.js %>referral.js'
     ];
 
     var cssFilesToProc = [
