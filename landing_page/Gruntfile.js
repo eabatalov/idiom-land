@@ -18,7 +18,6 @@ module.exports = function(grunt) {
         '<%= dirs.in.js %>nicescroll.js',
         //main should be here because it uses upper scripts
         '<%= dirs.in.js %>main.js',
-        //'<%= dirs.in.share %>share.js',
         '<%= dirs.in.js %>analytics.js',
         '<%= dirs.in.js %>referral.js'
     ];
@@ -34,7 +33,6 @@ module.exports = function(grunt) {
         '<%= dirs.in.css %>colors.css',
         '<%= dirs.in.css %>responsive.css',
         '<%= dirs.in.css %>referral.css'
-        //'<%= dirs.in.share %>share.css'
     ];
 
     /* Don't use dirs.in.dir prefixes from here */
@@ -49,9 +47,9 @@ module.exports = function(grunt) {
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>css/nivo_lightbox_themes/default/*.png', dest: '<%= dirs.out %>' },
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>css/nivo_lightbox_themes/default/*.gif', dest: '<%= dirs.out %>' },
         /* Preserve relative paths */
+        { expand: true, flatten: false, cwd: '<%= dirs.in.dir %>', src: 'files/**', dest: '<%= dirs.out %>' },
         { expand: true, flatten: false, cwd: '<%= dirs.in.css %>', src: 'fonts/**', dest: '<%= dirs.out %>' },
-        { expand: true, flatten: false, cwd: '<%= dirs.in.dir %>', src: 'images/**', dest: '<%= dirs.out %>' },
-        { expand: true, flatten: false, cwd: '<%= dirs.in.dir %>share', src: 'addthis_social_icon_pack/*', dest: '<%= dirs.out %>' }
+        { expand: true, flatten: false, cwd: '<%= dirs.in.dir %>', src: 'images/**', dest: '<%= dirs.out %>' }
     ];
 
     grunt.initConfig({
@@ -62,8 +60,7 @@ module.exports = function(grunt) {
             'in': {
                 dir: 'src/',
                 css: '<%= dirs.in.dir %>css/',
-                js: '<%= dirs.in.dir %>js/',
-                share: '<%= dirs.in.dir %>share/'
+                js: '<%= dirs.in.dir %>js/'
             }
         },
 
