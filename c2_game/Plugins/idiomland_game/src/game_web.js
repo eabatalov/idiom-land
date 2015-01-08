@@ -13,7 +13,7 @@ QuestGame.bootstrap({
 
     persistentStorage : {
         className : 'HTML5PersistentStorage',
-        params : ['"game2pre.1"']
+        params : ['"game2"']
     },
 
     levelReplayLoader : {
