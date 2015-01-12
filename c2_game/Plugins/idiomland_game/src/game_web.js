@@ -1,6 +1,6 @@
 var GAME_PRODUCTION_SERVER_URL = "http://idiomland.com";
 var GAME_PRODUCTION_SERVER_URL_REGEX =
-     /https?:\/\/(www\.)?idiomland\.com.*/
+     /https?:\/\/(www\.)?idiomland\.com.*/;
 
 // === CONFIGURE THE REPLAYS ===
 var REPLAY_CLIENT_CONFIG = {
