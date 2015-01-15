@@ -55,7 +55,7 @@ $(function() {
         event.preventDefault();
     });
     //Forms
-    $('.subscribe-form').each(function (formIx, form) {
+    /*$('.subscribe-form').each(function (formIx, form) {
         var jqForm = $(form);
         var jqFormSuccess = $($(".subscribe-form-success").get(formIx))
         jqForm.ajaxForm({
@@ -70,7 +70,7 @@ $(function() {
                 jqFormSuccess.css({"opacity": "1"});
             }
         });
-    });
+    });*/
     $('#contact-us-form').ajaxForm({
         success: function () {
             $('#contact-us-container').slideUp('slow');
