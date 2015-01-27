@@ -255,13 +255,13 @@
                                     <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="0" name="Call function" sid="360642262469873" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="360642262469873" type="Function">
                                     <param id="0" name="Name">&quot;ShowPopupIfNeeded&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8189600599869268">
+                        <event-block disabled="1" sid="8189600599869268">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="3899384284234853" type="System">
                                     <param id="0" name="First value">Function.ReturnValue</param>
@@ -271,13 +271,13 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="8730350578672433">
+                                <event-block disabled="1" sid="8730350578672433">
                                     <conditions>
                                         <condition id="2" name="Is level succeeded" sid="5965373000315623" type="LevelIdiomProgressTracker" />
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="2010406503643612">
+                                        <event-block disabled="1" sid="2010406503643612">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="9406768795089482" type="System">
                                                     <param id="0" name="First value">LevelIdiomProgressTracker.getNextLevelName</param>
@@ -296,7 +296,7 @@
                                             </actions>
                                         </event-block>
                                         <comment>TODO: game finished!</comment>
-                                        <event-block sid="5979640010454225">
+                                        <event-block disabled="1" sid="5979640010454225">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="861198748816813" type="System" />
                                             </conditions>
@@ -308,7 +308,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="8352613407998035">
+                                <event-block disabled="1" sid="8352613407998035">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="4153544823653079" type="System" />
                                     </conditions>
@@ -319,6 +319,15 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="5723125772113956">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="4731783503416053" type="Function">
+                                    <param id="0" name="Name">&quot;PromoPopupYesBtnClicked&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
