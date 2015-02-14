@@ -181,6 +181,27 @@
                             <plugin id="Text" />
                         </object-type>
                     </object-folder>
+                    <object-folder name="PopupBuyGame">
+                        <object-type name="LevelResultsBriefBuyGamePopupBg" sid="2244521958588894">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4971239097700864" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\vmware-host\Shared Folders\egp-win\buy.jpg" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="LevelResultsBriefBuyGamePopupBuyBtn" sid="1255495318519152">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="3141800919105646" speed="5">
+                                    <frame duration="1" hotspotX="0.489437" hotspotY="0.0190476" original-source="\\vmware-host\Shared Folders\egp-win\buy.jpg" />
+                                </animation>
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="8417051657708019" speed="5">
+                                    <frame duration="1" hotspotX="0.489437" hotspotY="0.0190476" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                    </object-folder>
                     <object-type name="LevelResultsIdiomsGuessedText" sid="591804687404442">
                         <plugin id="Text" />
                     </object-type>
@@ -9170,6 +9191,7 @@
                 <event-sheet>LevelResultsNeedAllIdiomsMain.xml</event-sheet>
                 <event-sheet>LevelResultsPromoPopup.xml</event-sheet>
                 <event-sheet>LevelResultsBriefSound.xml</event-sheet>
+                <event-sheet>LevelResultsPromoBuyGame.xml</event-sheet>
             </event-folder>
             <event-folder name="MainMenu">
                 <event-sheet>MainMenuMain.xml</event-sheet>
