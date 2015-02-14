@@ -1,0 +1,160 @@
+{
+	"ver": 1,
+	"name": "0intro",
+	"stages": [
+		{
+			"ver": 1,
+			"stageNodeId": 11,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 9,
+					"label": "intro",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						0
+					],
+					"props": {
+						"name": "intro",
+						"objs": [
+							"Player",
+							"editor"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						0
+					],
+					"outCondIds": [
+						3
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"editor"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 1,
+					"label": "Hello!",
+					"continue": false,
+					"inCondIds": [
+						4
+					],
+					"outCondIds": [
+						2
+					],
+					"props": {
+						"id": "Player",
+						"text": "Hello!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 14,
+					"type": 1,
+					"label": "Hi!",
+					"continue": false,
+					"inCondIds": [
+						2
+					],
+					"outCondIds": [
+						5
+					],
+					"props": {
+						"id": "editor",
+						"text": "Hi!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 15,
+					"type": 12,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						3
+					],
+					"outCondIds": [
+						4
+					],
+					"props": {
+						"enabled": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 16,
+					"type": 10,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						5
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_EndIntro",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 0,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 2,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 3,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		}
+	]
+}

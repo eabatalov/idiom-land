@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>0introNpcAnimationRunners</name>
+    <events>
+        <event-group description="" sid="2358233884024468" title="0demo NPC animation runners">
+            <sub-events>
+                <comment>param(0): NPC UID&#x0D;&#x0A;param(1): animation name&#x0D;&#x0A;param(2): duration. ms, -1 to play once&#x0D;&#x0A;NPCs timed animation is implemented on demand not to create so much copy-paste</comment>
+                <variable constant="0" name="AnimName" sid="1581421603188817" static="0" type="text"></variable>
+                <variable constant="0" name="AnimDuration" sid="2836824778277777" static="0" type="number">0</variable>
+                <event-block sid="4868196413119031">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9581007049566467" type="Function">
+                            <param id="0" name="Name">&quot;NPCAnimTimed&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="3621518036507127" type="NPC">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="401862134294397" type="System">
+                            <param id="0" name="Variable">AnimName</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7499833133428187" type="System">
+                            <param id="0" name="Variable">AnimDuration</param>
+                            <param id="1" name="Value">Function.Param(2)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6029021131133303">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4337997012038744" type="System">
+                                    <param id="0" name="First value">NPC.UID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">438</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3893671352449878" type="Function">
+                                    <param id="0" name="Name">&quot;EditorSCMLAnimRun&quot;</param>
+                                    <param id="1" name="Parameter {n}">AnimName</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

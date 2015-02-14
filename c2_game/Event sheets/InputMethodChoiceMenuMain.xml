@@ -25,11 +25,6 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">INPUT_MODE_KEYBOARD</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="4291610388830758" type="InputMethodChoiceRadioBtn">
-                                    <param id="0" name="Instance variable">Value</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;KEYBOARD&quot;</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="6196819791903311" type="Function">
@@ -41,30 +36,48 @@
                         <event-block sid="1024953961808229">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1410071832922026" type="System" />
-                                <condition id="-7" name="Compare instance variable" sid="1996854886863686" type="InputMethodChoiceRadioBtn">
-                                    <param id="0" name="Instance variable">Value</param>
+                                <condition id="-14" name="Compare variable" sid="3778700121645725" type="System">
+                                    <param id="0" name="Variable">CurrentInputMode</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;TOUCH&quot;</param>
+                                    <param id="2" name="Value">INPUT_MODE_TOUCH</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5500149413343669" type="Function">
+                                    <param id="0" name="Name">&quot;InputMethodChoiceTriggerTouch&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8845959128654445">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="368584008426338" type="System" />
+                                <condition id="-14" name="Compare variable" sid="8114884082771424" type="System">
+                                    <param id="0" name="Variable">CurrentInputMode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">INPUT_MODE_UNDEFINED</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block any="1" sid="1123475090644811">
+                                <event-block any="1" sid="5741590353152448">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="3778700121645725" type="System">
-                                            <param id="0" name="Variable">CurrentInputMode</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">INPUT_MODE_TOUCH</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="6055797839406121" type="System">
-                                            <param id="0" name="Variable">CurrentInputMode</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">INPUT_MODE_UNDEFINED</param>
-                                        </condition>
+                                        <condition id="-20" name="Is on mobile device" sid="8966729757150858" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="5500149413343669" type="Function">
+                                        <action id="0" name="Call function" sid="4885422544857294" type="Function">
                                             <param id="0" name="Name">&quot;InputMethodChoiceTriggerTouch&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5444695432472097">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4511618689511984" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="6583700526500532" type="Function">
+                                            <param id="0" name="Name">&quot;InputMethodChoiceTriggerKbd&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>

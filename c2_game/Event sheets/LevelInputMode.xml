@@ -17,6 +17,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="1" name="Set return value" sid="5498844982673092" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
                         <action id="0" name="Call function" sid="481107380971616" type="Function">
                             <param id="0" name="Name">&quot;GetInputMode&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -36,6 +39,9 @@
                                 <action id="0" name="Call function" sid="4993724748928467" type="Function">
                                     <param id="0" name="Name">&quot;_ShowInputModeChoiceDialog&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="9721474773301672" type="Function">
+                                    <param id="0" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>

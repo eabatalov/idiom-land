@@ -21,11 +21,24 @@
                                     <param id="0" name="Name">&quot;LoadInputMode&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="0" name="Call function" sid="745836655437822" type="Function">
-                                    <param id="0" name="Name">&quot;ShowLevelsMenu&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="9517609517681342">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="3716105069702113" type="System">
+                                            <param id="0" name="First value">Function.ReturnValue</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="745836655437822" type="Function">
+                                            <param id="0" name="Name">&quot;ShowLevelsMenu&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <variable constant="0" name="ITERATING_LEVELS" sid="5875633521619151" static="1" type="number">0</variable>
                         <variable constant="1" name="LEVEL_BUTTONS_H_SPACING" sid="3524638623812518" static="0" type="number">60</variable>
@@ -42,10 +55,30 @@
                             <sub-events>
                                 <comment>XXX temporarely disable showing of levels list because we have only one level now.</comment>
                                 <event-block sid="2230403460694018">
-                                    <conditions />
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="139564177402734" type="System">
+                                            <param id="0" name="First value">QuestPersistentStorage.get(&quot;is_intro_shown&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;true&quot;</param>
+                                        </condition>
+                                    </conditions>
                                     <actions>
-                                        <action id="-25" name="Go to layout (by name)" sid="4617851911626804" type="System">
-                                            <param id="0" name="Layout">&quot;1demo&quot;</param>
+                                        <action id="-2" name="Go to layout" sid="1577641900342924" type="System">
+                                            <param id="0" name="Layout">1demo</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4672764904677894">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6801496726592742" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Put" sid="3013415739869127" type="QuestPersistentStorage">
+                                            <param id="0" name="Name">&quot;is_intro_shown&quot;</param>
+                                            <param id="1" name="Value">&quot;true&quot;</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="4617851911626804" type="System">
+                                            <param id="0" name="Layout">0intro</param>
                                         </action>
                                     </actions>
                                 </event-block>

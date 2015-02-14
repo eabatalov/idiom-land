@@ -6085,6 +6085,13 @@
                                             </collision-poly>
                                         </frame>
                                     </animation>
+                                    <animation framecount="1" loop="0" name="editor" pingpong="0" repeatcount="1" repeatto="0" sid="3288796810037421" speed="5">
+                                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                            <image-point name="SpeechOrigin" x="0.07" y="-0.0933333" />
+                                            <image-point name="EyeSight" x="0.48" y="0.206667" />
+                                            <image-point name="AnimationPoint" x="0.05" y="1.04" />
+                                        </frame>
+                                    </animation>
                                 </animation-folder>
                             </object-type>
                             <object-type global="1" name="RunningNPCAnimsOnCurUIActSeq" sid="9189467658925863">
@@ -8544,6 +8551,305 @@
                     </object-type>
                 </object-folder>
             </object-folder>
+            <object-folder name="0intro">
+                <object-folder name="teacher_platformer sprites">
+                    <object-type name="teacher_platformer_teacher_platformer_body" sid="4391841393078197">
+                        <plugin id="Sprite" />
+                        <container>
+                            <type>teacher_platformer</type>
+                            <type>teacher_platformer_teacher_platformer_body</type>
+                            <type>teacher_platformer_teacher_platformer_halfhand</type>
+                            <type>teacher_platformer_teacher_platformer_head</type>
+                            <type>teacher_platformer_teacher_platformer_hand</type>
+                            <type>teacher_platformer_teacher_platformer_leftbrow</type>
+                            <type>teacher_platformer_teacher_platformer_rightbrow</type>
+                            <type>teacher_platformer_teacher_platformer_eyes</type>
+                            <type>teacher_platformer_teacher_platformer_smile1</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4086211367604631" speed="0">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\spriter\platformer\teacher\body.png">
+                                    <collision-poly>
+                                        <point x="0.23913" y="0.222222" />
+                                        <point x="0.5" y="0.0606061" />
+                                        <point x="0.891304" y="0.10101" />
+                                        <point x="0.891304" y="0.494949" />
+                                        <point x="0.836957" y="0.848485" />
+                                        <point x="0.5" y="1" />
+                                        <point x="0.369565" y="0.656566" />
+                                        <point x="0.184783" y="0.494949" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="teacher_platformer_teacher_platformer_halfhand" sid="7087227638060723">
+                        <plugin id="Sprite" />
+                        <container>
+                            <type>teacher_platformer</type>
+                            <type>teacher_platformer_teacher_platformer_body</type>
+                            <type>teacher_platformer_teacher_platformer_halfhand</type>
+                            <type>teacher_platformer_teacher_platformer_head</type>
+                            <type>teacher_platformer_teacher_platformer_hand</type>
+                            <type>teacher_platformer_teacher_platformer_leftbrow</type>
+                            <type>teacher_platformer_teacher_platformer_rightbrow</type>
+                            <type>teacher_platformer_teacher_platformer_eyes</type>
+                            <type>teacher_platformer_teacher_platformer_smile1</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2833226899948296" speed="0">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\spriter\platformer\teacher\half-hand.png">
+                                    <collision-poly>
+                                        <point x="0.125" y="0.0540541" />
+                                        <point x="0.5" y="0.027027" />
+                                        <point x="0.75" y="0.108108" />
+                                        <point x="0.9375" y="0.486486" />
+                                        <point x="0.75" y="0.891892" />
+                                        <point x="0.5" y="0.972973" />
+                                        <point x="0.1875" y="0.918919" />
+                                        <point x="0" y="0.486486" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="teacher_platformer_teacher_platformer_head" sid="3362692544491185">
+                        <plugin id="Sprite" />
+                        <container>
+                            <type>teacher_platformer</type>
+                            <type>teacher_platformer_teacher_platformer_body</type>
+                            <type>teacher_platformer_teacher_platformer_halfhand</type>
+                            <type>teacher_platformer_teacher_platformer_head</type>
+                            <type>teacher_platformer_teacher_platformer_hand</type>
+                            <type>teacher_platformer_teacher_platformer_leftbrow</type>
+                            <type>teacher_platformer_teacher_platformer_rightbrow</type>
+                            <type>teacher_platformer_teacher_platformer_eyes</type>
+                            <type>teacher_platformer_teacher_platformer_smile1</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2496189805152506" speed="0">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\spriter\platformer\teacher\head.png">
+                                    <collision-poly>
+                                        <point x="0.0873016" y="0.0916667" />
+                                        <point x="0.5" y="0.00833333" />
+                                        <point x="0.912698" y="0.0916667" />
+                                        <point x="0.968254" y="0.5" />
+                                        <point x="0.809524" y="0.8" />
+                                        <point x="0.5" y="1" />
+                                        <point x="0.206349" y="0.783333" />
+                                        <point x="0.031746" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="teacher_platformer_teacher_platformer_hand" sid="706434711664361">
+                        <plugin id="Sprite" />
+                        <container>
+                            <type>teacher_platformer</type>
+                            <type>teacher_platformer_teacher_platformer_body</type>
+                            <type>teacher_platformer_teacher_platformer_halfhand</type>
+                            <type>teacher_platformer_teacher_platformer_head</type>
+                            <type>teacher_platformer_teacher_platformer_hand</type>
+                            <type>teacher_platformer_teacher_platformer_leftbrow</type>
+                            <type>teacher_platformer_teacher_platformer_rightbrow</type>
+                            <type>teacher_platformer_teacher_platformer_eyes</type>
+                            <type>teacher_platformer_teacher_platformer_smile1</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9478116703837696" speed="0">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\spriter\platformer\teacher\hand.png">
+                                    <collision-poly>
+                                        <point x="0.1875" y="0.0810811" />
+                                        <point x="0.5" y="0" />
+                                        <point x="0.8125" y="0.0810811" />
+                                        <point x="0.875" y="0.486486" />
+                                        <point x="0.875" y="0.945946" />
+                                        <point x="0.5" y="1" />
+                                        <point x="0.125" y="0.945946" />
+                                        <point x="0" y="0.486486" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="teacher_platformer_teacher_platformer_leftbrow" sid="7064318468090655">
+                        <plugin id="Sprite" />
+                        <container>
+                            <type>teacher_platformer</type>
+                            <type>teacher_platformer_teacher_platformer_body</type>
+                            <type>teacher_platformer_teacher_platformer_halfhand</type>
+                            <type>teacher_platformer_teacher_platformer_head</type>
+                            <type>teacher_platformer_teacher_platformer_hand</type>
+                            <type>teacher_platformer_teacher_platformer_leftbrow</type>
+                            <type>teacher_platformer_teacher_platformer_rightbrow</type>
+                            <type>teacher_platformer_teacher_platformer_eyes</type>
+                            <type>teacher_platformer_teacher_platformer_smile1</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5335349310772763" speed="0">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\spriter\platformer\teacher\left-brow.png">
+                                    <collision-poly>
+                                        <point x="0.0869565" y="0.4" />
+                                        <point x="0.478261" y="0" />
+                                        <point x="0.956522" y="0.2" />
+                                        <point x="1" y="0.4" />
+                                        <point x="0.956522" y="0.8" />
+                                        <point x="0.478261" y="1" />
+                                        <point x="0.0434783" y="0.8" />
+                                        <point x="0.0434783" y="0.4" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="teacher_platformer_teacher_platformer_rightbrow" sid="2269631863289133">
+                        <plugin id="Sprite" />
+                        <container>
+                            <type>teacher_platformer</type>
+                            <type>teacher_platformer_teacher_platformer_body</type>
+                            <type>teacher_platformer_teacher_platformer_halfhand</type>
+                            <type>teacher_platformer_teacher_platformer_head</type>
+                            <type>teacher_platformer_teacher_platformer_hand</type>
+                            <type>teacher_platformer_teacher_platformer_leftbrow</type>
+                            <type>teacher_platformer_teacher_platformer_rightbrow</type>
+                            <type>teacher_platformer_teacher_platformer_eyes</type>
+                            <type>teacher_platformer_teacher_platformer_smile1</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4787380937926226" speed="0">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\spriter\platformer\teacher\right-brow.png">
+                                    <collision-poly>
+                                        <point x="0.0434783" y="0.2" />
+                                        <point x="0.478261" y="0" />
+                                        <point x="0.869565" y="0.4" />
+                                        <point x="0.869565" y="0.4" />
+                                        <point x="0.478261" y="1" />
+                                        <point x="0.0434783" y="0.8" />
+                                        <point x="0" y="0.4" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="teacher_platformer_teacher_platformer_eyes" sid="5267453455018088">
+                        <plugin id="Sprite" />
+                        <container>
+                            <type>teacher_platformer</type>
+                            <type>teacher_platformer_teacher_platformer_body</type>
+                            <type>teacher_platformer_teacher_platformer_halfhand</type>
+                            <type>teacher_platformer_teacher_platformer_head</type>
+                            <type>teacher_platformer_teacher_platformer_hand</type>
+                            <type>teacher_platformer_teacher_platformer_leftbrow</type>
+                            <type>teacher_platformer_teacher_platformer_rightbrow</type>
+                            <type>teacher_platformer_teacher_platformer_eyes</type>
+                            <type>teacher_platformer_teacher_platformer_smile1</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="979949034888429" speed="0">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\spriter\platformer\teacher\eyes.png">
+                                    <collision-poly>
+                                        <point x="0.027027" y="0.166667" />
+                                        <point x="0.972973" y="0.166667" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.972973" y="0.833333" />
+                                        <point x="0.027027" y="0.833333" />
+                                        <point x="0" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="teacher_platformer_teacher_platformer_smile1" sid="1759685767437284">
+                        <plugin id="Sprite" />
+                        <container>
+                            <type>teacher_platformer</type>
+                            <type>teacher_platformer_teacher_platformer_body</type>
+                            <type>teacher_platformer_teacher_platformer_halfhand</type>
+                            <type>teacher_platformer_teacher_platformer_head</type>
+                            <type>teacher_platformer_teacher_platformer_hand</type>
+                            <type>teacher_platformer_teacher_platformer_leftbrow</type>
+                            <type>teacher_platformer_teacher_platformer_rightbrow</type>
+                            <type>teacher_platformer_teacher_platformer_eyes</type>
+                            <type>teacher_platformer_teacher_platformer_smile1</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="449976391405667" speed="0">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\spriter\platformer\teacher\smile1.png">
+                                    <collision-poly>
+                                        <point x="0.173913" y="0.363636" />
+                                        <point x="0.478261" y="0.545455" />
+                                        <point x="0.782609" y="0.454545" />
+                                        <point x="0.869565" y="0.454545" />
+                                        <point x="0.826087" y="0.636364" />
+                                        <point x="0.478261" y="0.727273" />
+                                        <point x="0.217391" y="0.545455" />
+                                        <point x="0.130435" y="0.454545" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\spriter\platformer\teacher\smile2.png">
+                                    <collision-poly>
+                                        <point x="0.217391" y="0.454545" />
+                                        <point x="0.478261" y="0" />
+                                        <point x="0.73913" y="0.545455" />
+                                        <point x="0.73913" y="0.454545" />
+                                        <point x="0.73913" y="0.454545" />
+                                        <point x="0.478261" y="1" />
+                                        <point x="0.217391" y="0.545455" />
+                                        <point x="0.217391" y="0.454545" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\spriter\platformer\teacher\smile4.png">
+                                    <collision-poly>
+                                        <point x="0.0869565" y="0.181818" />
+                                        <point x="0.478261" y="0" />
+                                        <point x="0.913043" y="0.181818" />
+                                        <point x="1" y="0.454545" />
+                                        <point x="0.869565" y="0.727273" />
+                                        <point x="0.478261" y="1" />
+                                        <point x="0.130435" y="0.727273" />
+                                        <point x="0" y="0.454545" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="Z:\idiom-land\spriter\platformer\teacher\smile3.png">
+                                    <collision-poly>
+                                        <point x="0.0869565" y="0.181818" />
+                                        <point x="0.478261" y="0.181818" />
+                                        <point x="0.869565" y="0.272727" />
+                                        <point x="0.956522" y="0.454545" />
+                                        <point x="0.782609" y="0.545455" />
+                                        <point x="0.478261" y="0.727273" />
+                                        <point x="0.130435" y="0.727273" />
+                                        <point x="0.0434783" y="0.454545" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-type name="teacher_platformer" sid="3811414025063278">
+                    <plugin id="Spriter" />
+                    <container>
+                        <type>teacher_platformer</type>
+                        <type>teacher_platformer_teacher_platformer_body</type>
+                        <type>teacher_platformer_teacher_platformer_halfhand</type>
+                        <type>teacher_platformer_teacher_platformer_head</type>
+                        <type>teacher_platformer_teacher_platformer_hand</type>
+                        <type>teacher_platformer_teacher_platformer_leftbrow</type>
+                        <type>teacher_platformer_teacher_platformer_rightbrow</type>
+                        <type>teacher_platformer_teacher_platformer_eyes</type>
+                        <type>teacher_platformer_teacher_platformer_smile1</type>
+                    </container>
+                </object-type>
+                <object-type name="IntroEndButton" sid="4826806308827477">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3663602932134313" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
         </object-folder>
     </object-folder>
     <families>
@@ -8639,6 +8945,18 @@
                 <member>busdriver_busdriver_smile1</member>
             </members>
         </family>
+        <family name="teacher_platformerFamily" plugin-id="Sprite" sid="2427375264873486">
+            <members>
+                <member>teacher_platformer_teacher_platformer_body</member>
+                <member>teacher_platformer_teacher_platformer_eyes</member>
+                <member>teacher_platformer_teacher_platformer_halfhand</member>
+                <member>teacher_platformer_teacher_platformer_hand</member>
+                <member>teacher_platformer_teacher_platformer_head</member>
+                <member>teacher_platformer_teacher_platformer_leftbrow</member>
+                <member>teacher_platformer_teacher_platformer_rightbrow</member>
+                <member>teacher_platformer_teacher_platformer_smile1</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout-folder name="Levels">
@@ -8648,6 +8966,10 @@
             <layout-folder name="IdiomLandTestDialogLevel">
                 <layout>IdiomLandTestDialogLevel.xml</layout>
             </layout-folder>
+            <layout-folder name="0Intro">
+                <layout>0intro.xml</layout>
+            </layout-folder>
+            <layout>level_template.xml</layout>
         </layout-folder>
         <layout-folder name="Menus">
             <layout-folder name="LevelResults">
@@ -8834,6 +9156,11 @@
                 <event-sheet>IdiomLandTestDialogLevelProgressAnimation.xml</event-sheet>
                 <event-sheet>IdiomLandTestDialogLevelIntro.xml</event-sheet>
             </event-folder>
+            <event-folder name="0intro">
+                <event-sheet>0introMain.xml</event-sheet>
+                <event-sheet>0introNpcAnimationRunners.xml</event-sheet>
+                <event-sheet>0introNpcScmlSpriterBindings.xml</event-sheet>
+            </event-folder>
         </event-folder>
         <event-folder name="Menus">
             <event-folder name="LevelResults">
@@ -8970,6 +9297,8 @@
                         <file name="npc_think_robot.ogg" />
                         <file name="npc_think_woman.m4a" />
                         <file name="npc_think_woman.ogg" />
+                        <file name="npc_speach_old_man.m4a" />
+                        <file name="npc_speach_old_man.ogg" />
                     </sound-folder>
                     <sound-folder name="TalkStarter">
                         <file name="talk_start.ogg" />
@@ -9084,6 +9413,9 @@
             <file name="taxidriver.scon" />
             <file name="busdriver.scml" />
             <file name="busdriver.scon" />
+            <file name="teacher_platformer.scml" />
+            <file name="teacher_platformer.scon" />
         </file-folder>
+        <file name="0intro_script.json" />
     </files-folder>
 </c2project>
