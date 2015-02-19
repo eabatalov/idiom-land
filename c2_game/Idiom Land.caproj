@@ -8864,14 +8864,74 @@
                 </object-type>
                 <object-type name="IntroEndButton" sid="4826806308827477">
                     <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="3916333337237626">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3663602932134313" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.50237" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\skipintro.png">
+                                <collision-poly>
+                                    <point x="0.0710901" y="0.15" />
+                                    <point x="0.49763" y="0.14" />
+                                    <point x="0.919431" y="0.17" />
+                                    <point x="0.919431" y="0.83" />
+                                    <point x="0.49763" y="0.85" />
+                                    <point x="0.0758294" y="0.84" />
+                                    <point x="0.0616114" y="0.5" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
             </object-folder>
         </object-folder>
+        <object-type name="office" sid="9537829948090923">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4935851050416836" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\office.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tabel" sid="8552196126140496">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5356681402133474" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\tabel.png">
+                        <collision-poly>
+                            <point x="0.202073" y="0.464286" />
+                            <point x="0.5" y="0.464286" />
+                            <point x="0.930052" y="0.160714" />
+                            <point x="0.994819" y="0.5" />
+                            <point x="0.997409" y="0.994048" />
+                            <point x="0" y="1" />
+                            <point x="0.00259067" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="apple_logo_by_benredepd4v2wk" sid="7622536922928028">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3505992811577245" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\apple_logo_by_benredep-d4v2wk3.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.495327" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.495327" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Levels_Common_VisualObjects_F_Foxy_FoxySimpleFamily" plugin-id="Sprite" sid="3940617487415505">

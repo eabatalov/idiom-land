@@ -54,11 +54,11 @@
 						4
 					],
 					"outCondIds": [
-						2
+						7
 					],
 					"props": {
-						"id": "Player",
-						"text": "Hello!",
+						"id": "editor",
+						"text": "Well, Foxy, where have you been?",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -67,19 +67,19 @@
 					"ver": 1,
 					"id": 14,
 					"type": 1,
-					"label": "Hi!",
+					"label": "Editor",
 					"continue": false,
 					"inCondIds": [
-						2
+						20
 					],
 					"outCondIds": [
-						5
+						28
 					],
 					"props": {
 						"id": "editor",
-						"text": "Hi!",
+						"text": "It was an idiom. \"Kill two birds with one stone\" means \"to complete two tasks at one time with a single action\".",
 						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
+						"phraseSize": "LARGE"
 					}
 				},
 				{
@@ -105,7 +105,7 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						5
+						29
 					],
 					"outCondIds": [],
 					"props": {
@@ -115,6 +115,348 @@
 						"params": [],
 						"isPure": false
 					}
+				},
+				{
+					"ver": 1,
+					"id": 19,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7
+					],
+					"outCondIds": [
+						8
+					],
+					"props": {
+						"id": "Player",
+						"text": "I was trying to catch squirrels in the woods, but couldn't make it, they're too fast.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 20,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						8
+					],
+					"outCondIds": [
+						9
+					],
+					"props": {
+						"id": "editor",
+						"text": "Stop doing childish things. It's time for you to grow up, niece. I have a serious task for you.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 21,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						9
+					],
+					"outCondIds": [
+						10
+					],
+					"props": {
+						"id": "Player",
+						"text": "Ugh?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 22,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						10
+					],
+					"outCondIds": [
+						21
+					],
+					"props": {
+						"id": "editor",
+						"text": "To become a good journalist you need to know English very well. You learned English, but it's not enough.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 23,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						22
+					],
+					"outCondIds": [
+						12
+					],
+					"props": {
+						"id": "Player",
+						"text": "I know! It's a stupid person.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 24,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						12
+					],
+					"outCondIds": [
+						13
+					],
+					"props": {
+						"id": "editor",
+						"text": "Not \"idiot\". I said \"idiom\". It’s a combination of words that have a figurative meaning.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 25,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						13
+					],
+					"outCondIds": [
+						14
+					],
+					"props": {
+						"id": "Player",
+						"text": "Ugh?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 26,
+					"type": 1,
+					"label": "Editor",
+					"continue": false,
+					"inCondIds": [
+						14
+					],
+					"outCondIds": [
+						23
+					],
+					"props": {
+						"id": "editor",
+						"text": "Don't worry, you will know when you hear an idiom.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 27,
+					"type": 1,
+					"label": "Foxy",
+					"continue": false,
+					"inCondIds": [
+						25
+					],
+					"outCondIds": [
+						16
+					],
+					"props": {
+						"id": "Player",
+						"text": "Hooray! (Foxy jumps) I've always wanted to visit England.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 28,
+					"type": 1,
+					"label": "Editor",
+					"continue": false,
+					"inCondIds": [
+						16
+					],
+					"outCondIds": [
+						26
+					],
+					"props": {
+						"id": "editor",
+						"text": "It's not just for fun. We want to publish an idiom dictionary. Your job is to collect idioms for the dictionary.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 29,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						27
+					],
+					"outCondIds": [
+						18
+					],
+					"props": {
+						"id": "Player",
+						"text": "Thank you, uncle! I will be able to buy a new dress. Or several new dresses…",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 30,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						18
+					],
+					"outCondIds": [
+						19
+					],
+					"props": {
+						"id": "editor",
+						"text": "You will learn idioms and collect them for the dictionary. You will kill two birds with one stone.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 31,
+					"type": 1,
+					"label": "Foxy",
+					"continue": false,
+					"inCondIds": [
+						19
+					],
+					"outCondIds": [
+						20
+					],
+					"props": {
+						"id": "Player",
+						"text": "I never could catch even one bird.\nThey always fly away from me.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 32,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						21
+					],
+					"outCondIds": [
+						22
+					],
+					"props": {
+						"id": "editor",
+						"text": "I bet you don't know what idiom is.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 33,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						23
+					],
+					"outCondIds": [
+						24
+					],
+					"props": {
+						"id": "editor",
+						"text": "So, I need you to go to London and collect English idioms from local people.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 34,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						24
+					],
+					"outCondIds": [
+						25
+					],
+					"props": {
+						"id": "editor",
+						"text": "You will never be able to speak as good as native speakers until you know idioms.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 35,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						26
+					],
+					"outCondIds": [
+						27
+					],
+					"props": {
+						"id": "editor",
+						"text": "For every idiom I'll pay you 5 golden coins, but only if you know the right meaning of it.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 36,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						28
+					],
+					"outCondIds": [
+						29
+					],
+					"props": {
+						"id": "editor",
+						"text": "Now go to London and find more idioms.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
 				}
 			],
 			"conds": [
@@ -123,14 +465,6 @@
 					"id": 0,
 					"type": 1,
 					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 2,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
 				},
 				{
 					"ver": 1,
@@ -148,7 +482,159 @@
 				},
 				{
 					"ver": 1,
-					"id": 5,
+					"id": 7,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 8,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 9,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 10,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 14,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 16,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 18,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 19,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 20,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 21,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 22,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 23,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 24,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 25,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 26,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 27,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 28,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 29,
 					"type": 11,
 					"props": {
 						"clearStage": true
