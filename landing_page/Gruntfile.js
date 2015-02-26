@@ -43,6 +43,7 @@ module.exports = function(grunt) {
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>backend/replay_save.php', dest: '<%= dirs.out %>' },
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>favicon.ico', dest: '<%= dirs.out %>' },
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>index.html', dest: '<%= dirs.out %>' },
+        { expand: true, flatten: true, src: '<%= dirs.in.dir%>thankyou.html', dest: '<%= dirs.out %>' },
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>thumbnail.png', dest: '<%= dirs.out %>' },
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>css/nivo_lightbox_themes/default/*.png', dest: '<%= dirs.out %>' },
         { expand: true, flatten: true, src: '<%= dirs.in.dir%>css/nivo_lightbox_themes/default/*.gif', dest: '<%= dirs.out %>' },
@@ -86,7 +87,8 @@ module.exports = function(grunt) {
             main: [
                 '<%= dirs.out %>*',
                 '!<%= dirs.out %>game*/**',
-                '!<%= dirs.out %>quiz/**'
+                '!<%= dirs.out %>quiz/**',
+                '!<%= dirs.out %>demo/**'
             ]
         },
 
